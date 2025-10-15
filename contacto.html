@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto - Envía tu Opinión | NintendoManía</title>
+    <meta name="description" content="Formulario de contacto para enviar opiniones, sugerencias o propuestas de colaboración a NintendoManía.">
+    <link rel="icon" href="../assets/imgs/icono_pag.png">
+</head>
+<body>
+    <header>
+        <a href="./index.html">
+            <img src="./assets/imgs/nintendo_mania_logo.webp" alt="Logo principal">
+        </a>    
+            <nav>
+                <h2>Barra de acceso rápido</h2>
+                <ul>
+                    <li><a href="./sagas/splatoon.html">Splatoon</a></li>
+                    <li><a href="./sagas/mario.html">Mario</a></li>
+                    <li><a href="./sagas/kirby.html">Kirby</a></li>
+                    <li><a href="./comparativas.html">Comparativas</a></li>
+                </ul>
+            </nav>
+            <nav>
+                <form name="buscador" method="post">
+                    <label>Buscador
+                        <input type="search" name="buscador" placeholder="Buscar...">
+                    </label>
+                    <button type="submit">
+                        <img src="./assets/imgs/lupa.png" alt="Enviar búsqueda">
+                    </button>
+                </form>
+            </nav>
+    </header>
+    <main>
+        <h1>Envíanos un Mensaje o Propuesta de Colaboración</h1>
+        <p>¡Queremos escuchar tu opinión! Usa este formulario para consultas, sugerencias de contenido o si deseas unirte a nuestro equipo de frikis de Nintendo.</p>
+        <section> <!--Formulario principal-->
+            <h2>Formulario de Contacto NintendoManía</h2>
+            <form name="contacto" method="post">
+                <fieldset>
+                    <legend>Datos Personales</legend>
+                        <label>Nombre Completo:<sup>*</sup>
+                            <input type="text" name="nombre" required placeholder="Tu nombre">
+                        </label>
+                        <label>Correo Electrónico:<sup>*</sup>
+                            <input type="email" name="email" required placeholder="ejemplo@correo.com">
+                        </label>
+                        <label>Teléfono de Contacto (Opcional):
+                            <input type="tel" name="telefono" placeholder="Ej: 696 123 456">
+                        </label>        
+                </fieldset>
+                <fieldset>
+                    <legend>Detalles de tu Petición</legend> 
+                        <label>Asunto Principal:<sup>*</sup>
+                            <select name="asunto" required>
+                                <option  value="" disabled selected>-- Selecciona un tema --</option>
+                                <option value="sugerencia_contenido">Sugerencia/Corrección de Contenido</option>
+                                <option value="colaboracion">Propuesta de Colaboración (Escritor/Diseñador)</option>
+                                <option value="opinion_general">Opinión General de la Web</option>
+                                <option value="reporte_error">Reporte de Error/Fallo Técnico</option>
+                            </select>
+                        </label>
+                        <label>Enlace de Referencia (Opcional):
+                            <input type="url" name="url_referencia" placeholder="https://www.nintendomania.com">
+                        </label>
+                </fieldset>
+                <fieldset>
+                    <legend>¡Queremos saber más sobre ti!</legend>
+                        <label>Saga favorita:<sup>*</sup></label>
+                        <label>
+                            <input type="radio" name="saga_favorita" value="mario" required> Mario Bros.
+                        </label>
+                        <label>
+                            <input type="radio" name="saga_favorita" value="splatoon" required> Splatoon
+                        </label>
+                        <label>
+                            <input type="radio" name="saga_favorita" value="kirby" required > Kirby
+                        </label>
+                        <label>
+                            <input type="radio" name="saga_favorita" value="otro" required> Otra/No aplica
+                        </label>
+                        <label>Tu Mensaje: <sup>*</sup>
+                            <textarea name="mensaje" rows="6" cols="50" minlength="30" required placeholder="Escribe al menos 30 caracteres..."></textarea>
+                        </label>
+                </fieldset>
+                        <label>Acepto política de privacidad <sup>*</sup>
+                            <input type="checkbox" name="acepta_privacidad" value="si" required> 
+                        </label>
+                <button type="submit">Enviar formulario a NintendoManía</button>
+                <button type="reset">Borrar Formulario</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <h2>CONTACTO</h2>
+        <address>
+            <a href="./contacto.html">Formulario de Contacto</a>
+            <a href="mailto:ifonlob1108.geducaand.es">Correo electrónico</a>
+            <a href="tel:123456789">Teléfono</a>
+        </address>
+        <section>
+            <h2>Información legal</h2>
+            <p>Irene Foncubierta Lobatón 1ºDAW — Proyecto trimestral. El contenido es fan-made. &copy; 2025 NintendoManía.</p>
+        </section>
+    </footer>
+</body>
+</html>
