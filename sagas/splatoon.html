@@ -13,8 +13,8 @@
                 <img src="../assets/imgs/nintendo_mania_logo.webp" alt="Logo principal">
         </a>
         <nav>
+            <h2>Barra de acceso rápido</h2>
             <ul>
-                <p>Barra de acceso rápido</p>
                 <li><a href="./mario.html">Mario</a></li>
                 <li><a href="./kirby.html">Kirby</a></li>
                 <li><a href="../comparativas.html">Comparativas</a></li>
@@ -26,17 +26,15 @@
                     <input type="search" name="buscador" placeholder="Buscar...">
                 </label>
                 <button type="submit">
-                    <img src="./assets/imgs/lupa.png" alt="Icono lupa para buscar">
+                    <img src="../assets/imgs/lupa.png" alt="Enviar búsqueda">
                 </button>
             </form>
         </nav>
     </header>
     <main>
-        <section>
-            <h1>Splatoon - La saga que revolucionó la tinta</h1>
-            <img src="../assets/imgs/nintendo_mania_splatoon.png" alt="Logo NintendoManía Splatoon">
-        </section>
-        <section>
+        <h1>Splatoon - La saga que revolucionó la tinta</h1>
+        <img src="../assets/imgs/nintendo_mania_splatoon.png" alt="Logo NintendoManía Splatoon">
+        <section>  <!--Sección introductoria de la saga-->
             <article>
             <h2>¡Prepárate para sumergirte en tinta!</h2>
             <p>Splatoon no solo revolucionó los shooters con su estilo colorido y frenético, también 
@@ -44,14 +42,13 @@
             <img src="../assets/imgs/splatoon4k.jpg" alt="Ciudad futurista Splatoon">    
             </article>
         </section>
-        <section>
-            <h2>Desarrollo de la saga a lo largo del tiempo</h2>
+        <section id="timeline"> <!--Sección dedicada a la línea del tiempo posteriormente con CSS-->
+            <h2>Desarrollo de la saga a lo largo del tiempo</h2> 
             <article>
                 <figure>
                     <img src="../assets/imgs/splatoon1_portada.jpeg" alt="Carátula Splatoon">
                     <figcaption> Splatoon (2015) | El origen: el primer combate territorial.</figcaption>
                 </figure>
-
             </article>
             <article>
                 <figure>
@@ -81,96 +78,158 @@
                     <img src="../assets/imgs/splatoon3_portada.jpg" alt="Carátula Splatoon 3">
                     <figcaption>Splatoon 3 (2022) | Consolidación de la fórmula con nuevos movimientos y armas especiales. </figcaption>
                 </figure>
-            </article>  
-        </section>
-        <section>
-            <h2></h2>
+            </article>
+        </section> 
+        <section id="cronologia"> <!--Sección dedicada a explicar cada juego de forma independiente junto con sus novedades--> 
+            <h2>Cronología</h2>
             <article>
                 <h3>2015: Splatoon (Wii U)</h3>
-                <img src="../assets/imgs/splatoon1_cronologia.png" alt="">
+                <img src="../assets/imgs/splatoon1_cronologia.png" alt="Batalla territorial">
+                <p>Splatoon nació dentro de Nintendo como el intento deliberado de crear una franquicia totalmente nueva, distinta de Mario o Zelda, y que ofreciera una experiencia multijugador competitiva en la que la acción principal no fuera matar sino reclamar territorio pintando con tinta.<br>
+                    Esa idea de buscar algo original y jugar con la pintura como mecánica central la impulsó el equipo liderado por Hisashi Nogami junto a desarrolladores clave.
+                    <br>
+                    Asimismo, cabe recalcar un detalle concreto sobre el concepto de “pintar el suelo” surgió cuando un programador estaba experimentando con un sistema de dibujo de texturas y pensó que, si en vez de sombras se permitiera repintar superficies con color, podría convertirse en una forma novedosa de jugar. 
+                    De la misma forma, Shintaro Sato es citado como responsable de la idea técnica del “inking” que terminó siendo la base jugable.
+                </p>
+                <h4>Ideas novedosas que trajo Splatoon</h4>
+                <ul>
+                    <li>Mecánica innovadora: pintar el terreno para conquistar zonas, no acumular bajas.</li>
+                    <li>Modo principal Turf War (Guerra Territorial) en batallas 4 vs 4.</li>
+                    <li>Armas originales como los rodillos, pistolas de tinta y lanzadores especiales.</li>
+                    <li>Campaña individual donde el Agente 3 combate al ejército Octariano.</li>
+                    <li>Primeros Splatfests, eventos en línea que enfrentan a jugadores según su equipo favorito.</li>          
+                </ul>
             </article>
             <article>
                 <h3> 2017: Splatoon 2 (Nintendo Switch)</h3>
-                <img src="../assets/imgs/splatoon2_cronologia.jpg" alt="">
+                <img src="../assets/imgs/splatoon2_cronologia.jpg" alt="Grupo de 4 Inklings preparados para empezar una batalla territorial.">
+                <p>Splatoon 2, desarrollado por Nintendo y producido por Hisashi Nogami, es la secuela directa del exitoso Splatoon de Wii U.<br>
+                    Lanzado para Nintendo Switch en 2017, su objetivo fue llevar la acción de tinta al nuevo hardware y consolidar la saga como una de las grandes franquicias modernas de Nintendo.<br>
+                    El juego mantiene la fórmula original de pintar territorio en batallas 4 vs 4 pero introduce mejoras, más modos y una estética renovada.</p>
+                    <h4>Ideas novedosas del juego</h4>
+                    <ul>
+                        <li>Batallas territoriales más fluidas con nuevos escenarios, armas y estilos de tinta.</li>
+                        <li>Novedoso modo cooperativo Salmon Run, donde los jugadores recolectan huevos dorados enfrentando hordas de enemigos.</li>
+                        <li>Introducción de nuevos tipos de armas, como los dualies, que permiten rodar y disparar a la vez.</li>
+                        <li>Modo historia renovado con el Agente 4, enfrentándose al regreso del malvado DJ Octavio.</li>
+                    </ul>
             </article>
             <article>
                 <h3>2018: Octo Expansion (DLC de Splatoon 2)</h3>
-                <img src="../assets/imgs/octoexpansion_cronologia.jpg" alt="">
+                <img src="../assets/imgs/octoexpansion_cronologia.jpg" alt="Imagen de la Agente 7 en la Octo Expansión.">
+                <p>La Octo Expansion es la gran expansión de pago de Splatoon 2, creada por Nintendo bajo la supervisión de Hisashi Nogami. Su propósito fue ampliar el universo del juego y ofrecer un desafío más profundo para los jugadores experimentados.<br>
+                    Por primera vez, los jugadores pueden ponerse en la piel de un Octoling, un personaje del bando enemigo, y descubrir su historia en un ambiente mucho más oscuro y misterioso.</p>
+                <h3>Novedades esenciales</h3>
+                <ul>
+                    <li>Nuevo protagonista: el Agente 8, un Octoling sin recuerdos que debe escapar del metro subterráneo.</li>
+                    <li>Más de 80 niveles únicos con retos técnicos, armas y condiciones variadas.</li>
+                    <li>Historia más profunda y narrativa, con temas de identidad y superación.</li>
+                    <li>Mantuvo la esencia de Splatoon pero con un tono más serio y una ambientación cyberpunk.</li>
+                </ul>
             </article>
             <article>
                 <h3> 2022: Splatoon 3 (Nintendo Switch)</h3>
-                <img src="../assets/imgs/splatoon3_cronologia.jpg" alt="">
+                <img src="../assets/imgs/splatoon3_cronologia.jpg" alt="Imagen promocional de Inklings y Octolings de Splatoon 3.">
+                <p>Splatoon 3, desarrollado por Nintendo y producido nuevamente por Hisashi Nogami, es la tercera entrega de la exitosa saga de acción y pintura de Nintendo. <br>
+                    Lanzado en 2022 para Nintendo Switch, lleva el universo de Splatoon a un nuevo nivel, con más personalización, modos de juego y una historia más elaborada.
+                    Ambientado en Tintelia, una ciudad inspirada en el estilo del desierto y la cultura urbana postapocalíptica, el juego muestra una sociedad donde inklings y octolings conviven en armonía tras los eventos de Splatoon 2.</p>
+                    <h4>Novedades esenciales</h4>
+                    <ul>
+                        <li>Sistema de personalización ampliado: vestimenta, tarjetas de jugador, decoraciones y más.</li>
+                        <li>Nuevas armas, como el Arco Tri-stringer y el Cangrejobot, además de la vuelta de las favoritas de entregas anteriores.</li>
+                        <li>Movimiento mejorado con nuevas habilidades como el salto calamar y el salto propulsor.</li>
+                        <li>Nueva región: Tintelia, con entornos más abiertos y explorables.</li>
+                    </ul>
             </article>
             <article>
                 <h3> Próximamente: Splatoon Raiders (Nintendo Switch 2)</h3>
-                <img src="../assets/imgs/Splatoon_raiders.webp" alt="">
+                <figure>
+                    <img src="../assets/imgs/Splatoon_raiders.webp" alt="Splatoon Raiders imagen tráiler">
+                    <figcaption>Splatoon Raiders es el primer spin-off confirmado de la saga Splatoon, anunciado por Nintendo</figcaption>
+                </figure>
+                <h4>Lo que se sabe hasta ahora</h4>
+                <ul>
+                    <li>Será exclusivo para Nintendo Switch 2, y aunque no haya fecha de lanzamiento confirmada aún, algunos rumores apuntan<br>
+                         a 2025 o principios de 2026, pero todavía no es seguro</li>
+                    <li>La ambientación será en las Islas Espiralita, un archipiélago misterioso, en donde el jugador interpretará a un mecánico con un pasado misterioso, junto con miembros del clan Surimi</li>
+                    <li>Se aleja del enfoque competitivo multijugador ya que se centra exclusivamente en pintar territorio frente a frente, es decir, <br>
+                        tiende hacia una experiencia de aventura y de exploración con mayor componente narrativo junto con gráficos y rendimiento mejorados aprovechando el hardware de Switch 2</li>
+                </ul>
             </article>            
         </section>
-        <section>
+        <section id="curiosidades"> <!--Sección dedicada a las mejores curiosidades de la saga-->
             <h2>Easter Eggs y Curiosidades</h2>
             <article>
                 <h3>Concepción y Desarrollo del Juego</h3>
-                <h4>Origen del Equipo</h4>
-                <p>El equipo que diseñó el primer Splatoon provino del equipo de Animal Crossing, junto con el director de Star Fox 3D y uno de los directores de Nintendo Land</p>
-                <img src="../assets/imgs/animalcrossing.jpeg" alt="Carátula Animal Crossing">
-                <img src="../assets/imgs/starfox.jpeg" alt="Carátula StarFox">
-                <img src="../assets/imgs/nintendoland.jpeg" alt="Carátula NintendoLand">
-                <h4>Protagonistas originales</h4>
-                <p>Los Inklings se plantearon originalmente como conejos. Esto se debía a que su color blanco facilitaba ver si habían sido manchados de pintura y sus orejas largas permitirían rastrear fácilmente la dirección de los personajes</p>
-                <img src="../assets/imgs/conejos_inkling.jpeg" alt="Concepto inicial conejos Splatoon">
-                <h4>Elección entre calamares y pulpos</h4>
-                <p>Una vez descartados los conejos, se eligieron calamares en lugar de pulpos porque la forma de flecha de la cabeza de los calamares ayuda a los jugadores a saber a qué dirección miran sus oponentes, algo más difícil con los pulpos</p>
-                <img src="../assets/imgs/calamares_pulpos.jpeg" alt="Dibujo de calamar y pulpo Splatoon">
+                <figure>
+                    <figcaption>Origen del Equipo:El primer Splatoon provino del equipo de Animal Crossing, junto con el director de Star Fox 3D y uno de los directores de Nintendo Land.</figcaption>
+                    <img src="../assets/imgs/animalcrossing.jpeg" alt="Carátula Animal Crossing">
+                    <img src="../assets/imgs/starfox.jpeg" alt="Carátula StarFox">
+                    <img src="../assets/imgs/nintendoland.jpeg" alt="Carátula NintendoLand">
+                </figure>
+                <figure>
+                    <figcaption>Protagonistas originales: Los Inklings se plantearon originalmente como conejos.<br> Esto se debía a que su color blanco facilitaba ver si habían sido manchados de pintura y sus orejas largas permitirían rastrear fácilmente la dirección de los personajes</figcaption>
+                    <img src="../assets/imgs/conejos_inkling.jpeg" alt="Concepto inicial de Splatoon con personajes conejos en lugar de Inklings.">
+                </figure>
+                
+                <figure>
+                    <figcaption>Elección de Calamares:Una vez descartados los conejos, se eligieron calamares en lugar de pulpos porque la forma de flecha de la cabeza de los calamares ayuda a los jugadores a saber a qué dirección miran sus oponentes, algo más difícil con los pulpos</figcaption>
+                    <img src="../assets/imgs/calamares_pulpos.jpeg" alt="Dibujo de calamar y pulpo Splatoon">
+                </figure>
             </article>
             <article>
                 <h3>Lore y Referencias Ocultas</h3>
-                <h4>Vandalismo y estética</h4>
-                <p> La elección del diseño de manchar todo de tinta se relaciona con el vandalismo, lo que encaja con la mezcla de estética underground de los 80 y 90 y el entorno post-apocalíptico</p>
-                <img src="../assets/imgs/splatoon_underground.webp" alt="Splatoon Temática Underground">
-                <h4>Referencias a marcas reales</h4>
-                <p>Hay referencias a marcas reales en el juego, como ESPN, Gatorade y Game On</p>
-                <img src="../assets/imgs/gatorade.png" alt="Logo Gatorade">
-                <img src="../assets/imgs/espn.png" alt="Logo ESPN">
-                <h4>Los gritos octarianos</h4>
-                <p>Después de derrotar al jefe final, si te quedas en la sala, se escuchan extraños ruidos y gritos que, según la teoría más establecida, son la civilización Octariana en pánico por haberles quitado los siluros eléctricos<br>
-                Aunque, lo más impactante es que el director del juego no sabía de la existencia de estos gritos; fueron insertados por un desarrollador durante los últimos días de desarrollo</p>
-                <img src="../assets/imgs/octarianos.jpeg" alt="Imagen de octarianos">
+                <figure>
+                    <figcaption>Vandalismo y estética:La elección del diseño de manchar todo de tinta se relaciona con el vandalismo, lo que encaja con la mezcla de estética underground de los 80 y 90 y el entorno post-apocalíptico</figcaption>
+                    <img src="../assets/imgs/splatoon_underground.webp" alt="Diseño de arte conceptual de Splatoon con temática underground.">
+                </figure>
+                <figure>
+                    <figcaption>Referencias a marcas reales: Existen alusiones a Gatorade, ESPN y Game On.</figcaption>
+                    <img src="../assets/imgs/gatorade.png" alt="Logo Gatorade">
+                    <img src="../assets/imgs/espn.png" alt="Logo ESPN">
+                </figure>
+                <figure>
+                    <img src="../assets/imgs/octarianos.jpeg" alt="Imagen de octarianos en el modo historia de Splatoon.">
+                    <figcaption>Los gritos octarianos:Después de derrotar al jefe final, si te quedas en la sala, se escuchan extraños ruidos y gritos que, según la teoría más establecida, son la civilización Octariana en pánico por haberles quitado los siluros eléctricos<br>
+                Aunque, lo más impactante es que el director del juego no sabía de la existencia de estos gritos; fueron insertados por un desarrollador durante los últimos días de desarrollo</figcaption>
+                </figure>
             </article>
             <article>
                 <h3>Personajes y Referencias a la Cultura Pop</h3>
-                <h4>Las Calamarciñas</h4>
-                <p>En el juego se revela que Mar y Tina (las Calamarciñas) en realidad son primas, a pesar de que en inglés el nombre se traduce como "Hermanas Calamar" (Squid Sisters), lo que indica que el nombre es una fachada</p>
-                <img src="../assets/imgs/calamarciñas.jpeg" alt="Imagen de las Calamarciñas">
-                <h4>Referencias a Pokémon</h4>
-                <p>En varios ocasiones durante el modo campaña del juego se pueden apreciar varias referencias a la saga de Pokémon, como un diálogo con el capitán Jibión en Torres Merluzas en el cual aparece la expresión: "“Rollers are perfect like chargers are the very best, like no one ever was" referencia al opening de Pokémon</p>
-                <img src="../assets/imgs/splatpoke.jpeg" alt="Splatoon y Pokémon">
-                <h4>Céfalo Pop y Rap</h4>
-                <p>La estética de Céfalo Pop (Perla y Marina) en la Octo Expansion hace referencia a dos raperos: la corona y la bandana son referencias a Notorious B.I.G. y Tupac Shakur, respectivamente</p>
-                <img src="../assets/imgs/notoriousbig.jpeg" alt="Imagen del rapero Notorious B.I.G">
-                <img src="../assets/imgs/tupacshakur.jpeg" alt="Imagen del rapero Tupac Shakur">
+                <figure>
+                    <figcaption>Las Calamarciñas:En el juego se revela que Mar y Tina (las Calamarciñas) en realidad son primas, a pesar de que en inglés el nombre se traduce como "Hermanas Calamar" (Squid Sisters), lo que indica que el nombre es una fachada</figcaption>
+                    <img src="../assets/imgs/calamarciñas.jpeg" alt="Imagen de las Calamarciñas">
+                </figure>
+
+                <figure>
+                    <figcaption>Referencias a Pokémon:En varios ocasiones durante el modo campaña del juego se pueden apreciar varias referencias a la saga de Pokémon, como un diálogo con el capitán Jibión en Torres Merluzas en el cual aparece la expresión:<br> "“Rollers are perfect like chargers are the very best, like no one ever was" referencia al opening de Pokémon</figcaption>
+                    <img src="../assets/imgs/splatpoke.jpeg" alt="Splatoon y Pokémon">
+                </figure>
+                <figure>
+                    <img src="../assets/imgs/notoriousbig.jpeg" alt="Imagen del rapero Notorious B.I.G.">
+                    <figcaption>Céfalo Pop y Rap:La estética de Céfalo Pop (Perla y Marina) en la Octo Expansion hace referencia a dos raperos:<br> la corona y la bandana son referencias a Notorious B.I.G. y Tupac Shakur, respectivamente.</figcaption>
+                </figure>
                 <p>Asimismo, en el juego hay muchas referencias a la música y cultura urbana de los 80 y 90: grafitis, ropa, rap, e incluso los nombres de las estaciones en el modo Octo Expansion hacen alusión a grupos musicales o frases famosas.</p>
             </article>
         </section>
-
-        <aside>
+        <aside id="imagenes_destacadas">
             <h3>Imágenes destacadas</h3>
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
-            <img src="" alt="">
+            <figure><img src="../assets/imgs/artwork-squid-vs-octopus.png" alt="Arte promocional de Inkling y un Octoling en un Splatfest."></figure>
+            <figure><img src="../assets/imgs/tintazuca.webp" alt="Diseño de un arma especial, el Rayo Tintazuca."></figure>
+            <figure><img src="../assets/imgs/lobbysplatoon3.png" alt="Captura de pantalla del Lobby de Splatoon 3."></figure>
+            <figure><img src="../assets/imgs/jibion_octoling.jpg" alt="Agente 8 con el capitán Jibión en la Octo Expansión."></figure>
         </aside>
     </main>
     <footer>
+        <h2>CONTACTO</h2>
         <address>
-            <h2>CONTACTO</h2>
-            <a href="../contacto.html">Formulario de Contacto</a>
-            <a href="mailto:ifonlob1108.geducaand.es">Correo electrónico</a>
+            <a href="../contacto.html">Formulario de Contacto</a> |
+            <a href="mailto:ifonlob1108.geducaand.es">Correo electrónico</a> |
             <a href="tel:123456789">Teléfono</a>
         </address>
         <section>
             <h2>Información legal</h2>
-            <p>Irene Foncubierta Lobatón 1ºDAW — Proyecto trimestral. El contenido es fan-made. &copy; 2025 NintendoManía.</p>
+            <p><small>Irene Foncubierta Lobatón 1ºDAW — Proyecto trimestral. El contenido es fan-made. &copy; 2025 NintendoManía.</small></p>
         </section>
     </footer>
 </body>
