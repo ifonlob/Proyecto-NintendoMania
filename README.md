@@ -20,7 +20,7 @@ La elección de la temática de NintendoManía fue estratégica ya que buscamos 
 
 A lo largo del proyecto hemos empleado una estructura totalmente semántica, demostrando un dominio de HTML5 puro:
 
-- Semántica Avanzada: Hemos estructurado la totalidad del sitio utilizando exclusivamente etiquetas semánticas `(<section>, <article>, <figure>, <aside>)`, demostrando el dominio de HTML5 puro.
+- Semántica Avanzada: Hemos estructurado la totalidad del sitio utilizando exclusivamente etiquetas semánticas `<section>, <article>, <figure>, <aside>`, demostrando el dominio de HTML5 puro.
 
 - Uso Moderno: Hemos empleado etiquetas modernas como `<details>` y `<summary>` en `contacto.html` y `index.html` para aportar dinamismo e interactividad al usuario sin recurrir a JavaScript aún.
 
@@ -45,22 +45,30 @@ El proyecto consta de las 6 páginas obligatorias más una opcional, cada una co
 
 ## Decisiones de diseño estructural tomadas
 
-### - `index.html`
+### Cabecera `<header>` (Sin cambios relevantes entre páginas.)
 
-#### Estructura general
-
-Esta página sigue la estructura semántica estándar de HTML5, basada en las etiquetas principales `<header>, <main>, <aside> y <footer>`, delimitando secciones con significado específico para mejorar la accesibilidad, legibilidad y SEO.
-
-##### Cabecera <header>
 Contiene dos elementos clave:
 
 - El logotipo enlazado a la página principal.
 
 - Dos bloques de navegación nav: el menú principal con enlaces a las sagas y secciones del sitio, y un segundo menú que aloja el formulario de búsqueda.
 
+- En cada una de las sagas además incluye otra barra de navegación entre secciones de la misma.
+
 Según las buenas prácticas de HTML5, el header debe englobar los encabezados introductorios y los elementos de navegación principales, de modo que los usuarios y los motores de búsqueda identifiquen esta área como el bloque superior común del sitio.
 
-##### Contenido principal <main>
+### Pie de página `<footer>`
+Agrupa información de contacto (address), enlaces legales y atribuciones del proyecto dentro de dos secciones section.
+
+El footer contiene información común y recurrente en todas las páginas y su uso refuerza la coherencia estructural del sitio.
+
+### - `index.html`
+
+#### Estructura general
+
+Esta página sigue la estructura semántica estándar de HTML5, basada en las etiquetas principales `<header>, <main>, <aside> y <footer>`, delimitando secciones con significado específico para mejorar la accesibilidad, legibilidad y SEO.
+
+##### Contenido principal `<main>`
 Se divide en varias secciones `<section>` que diferencian los distintos propósitos del contenido:
 
 - Primera sección: presenta la bienvenida e imagen principal, actuando como sección introductoria.
@@ -74,7 +82,7 @@ Cada article contiene su propio subtítulo h3, una figura `<figure>` con imagen 
 
 El contenido está distribuido jerárquicamente por secciones temáticas que agrupan información coherente entre sí, reforzando la mantenibilidad y la comprensión del código.
 
-##### Barras laterales <aside>
+##### Barras laterales `<aside>`
 Incluye dos bloques:
 
 - El primero muestra noticias destacadas con `<article>` y `<figure>` dentro, permitiendo separar el contenido complementario.
@@ -83,22 +91,58 @@ Incluye dos bloques:
 
 El uso del elemento `<aside>` facilita destacar información relacionada pero no central, lo que mejora la jerarquía visual y semántica del documento.
 
-##### Pie de página <footer>
-Agrupa información de contacto (address), enlaces legales y atribuciones del proyecto dentro de dos secciones section.
-
-El footer contiene información común y recurrente en todas las páginas y su uso refuerza la coherencia estructural del sitio.
-
 Buenas prácticas aplicadas en esta página:
-- Indentación: todo el código está correctamente indentado para máxima legibilidad.
 
-- Comentarios: cada bloque estructural está comentado para facilitar mantenimiento.
+- **Indentación**: todo el código está correctamente indentado para máxima legibilidad.
 
-- Semántica: solo se usan etiquetas con propósito semántico, evitando div innecesarios.
+- **Comentarios**: cada bloque estructural está comentado para facilitar mantenimiento.
 
-- Validación: el documento es conforme al W3C Markup Validator sin errores.
+- **Semántica**: solo se usan etiquetas con propósito semántico, evitando div innecesarios.
+
+- **Validación**: el documento es conforme al W3C Markup Validator sin errores.
 
 ![W3C Validator index](./assets/imgs/w3cvalidator_index.png)
 
-
 - Accesibilidad: todos los elementos multimedia incluyen atributos `alt`, los formularios poseen `<label>`, y se aplican patrones de marcado claros para lectores de pantalla.
 
+### - `about.html`
+
+#### Estructura general
+
+La página **sigue la estructura semántica de HTML5**, con las etiquetas `header`, `nav`, `section`, `article`, `aside` y `footer`.
+Cada una cumple una función específica dentro de la jerarquía del documento, garantizando una arquitectura limpia, comprensible, accesible y conforme a los estándares del W3C.
+
+###### Secciones principales `<section>`
+
+El contenido principal está dividido en cuatro bloques temáticos mediante `<section>`:
+
+1. **Sobre nosotros:**
+Expone la historia y misión con subtítulos y párrafos organizados en artículos (`<article>`). Incluye imágenes con atributos `alt` descriptivos.
+2. **Pilares:**
+Usa una lista no ordenada (`<ul>`) con subtítulos y descripciones para explicar los principios del proyecto, facilitando lectura estructurada y accesible.
+3. **Equipo:**
+Se compone de tres artículos (`<article>`) independientes con encabezados, figuras e información personal.
+Cada bloque es autocontenible, permitiendo que el contenido pueda reutilizarse o presentarse fuera del contexto principal.
+4. **Trayectoria:**
+Presenta los hitos del proyecto mediante una lista ordenada (`<ol>`), lo que transmite una secuencia cronológica clara y lógica.
+
+El uso de `<section>` y `<article>` permite organizar cada parte del contenido de manera semántica y coherente, siguiendo una jerarquía clara y comprendida tanto por el usuario como por los motores de búsqueda, mejorando el SEO.
+
+##### Barra lateral `<aside>`
+
+Incluye una llamada para los fans que quieran contribuir con el proyecto con imagen, pie de figura y un enlace para unirse al proyecto.
+Sirve como elemento complementario al contenido principal, destacando información que mejora la experiencia pero sin interrumpir la narrativa característica de NintendoManía.
+
+`<aside>` se usa adecuadamente para contenido tangencial o secundario en relación con el tema principal de la página. Mejora la accesibilidad y refuerza el diseño informativo.
+
+Buenas prácticas aplicadas
+
+- **Indentación correcta:** se mantiene el formato consistente y jerárquico del HTML.
+- **Semántica pura:** solo se emplean etiquetas con propósito específico, evitando `div` sin contexto.
+- **Accesibilidad:** todas las imágenes poseen un `alt` descriptivo y los formularios están correctamente etiquetados con `label`.
+- **Jerarquía visual:** uso coherente de `h1` a `h3` según nivel de contenido.
+- **Validación:** el documento es conforme al W3C Markup Validator sin errores.
+
+![W3C](./assets/imgs/W3CValidator_about.png)
+
+- **Comentarios útiles:** cada bloque estructural está comentado (por ejemplo, `<!-- Sección equipo -->`) para favorecer mantenimiento y escalabilidad a largo plazo.
