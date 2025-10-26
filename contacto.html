@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!-- 
+    =========================================================================
+    NintendoManía | Contacto
+    =========================================================================
+    Página de contacto principal. Permite enviar opiniones, sugerencias o propuestas
+    de colaboración. Formulario diseñado acorde accesibilidad, validación y uso
+    semántico avanzado.
+    Irene Foncubierta Lobatón, 1ºDAW | Proyecto trimestral 2025.
+    =========================================================================
+    -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Contacto - Envía tu Opinión | NintendoManía</title>
@@ -10,10 +20,12 @@
 </head>
 <body>
     <header>
-        <a href="./index.html">
+        <!-- Logotipo principal - acceso rápido a inicio -->
+        <a href="./index.html"> 
             <img src="./assets/imgs/nintendo_mania_logo.webp" alt="Logo principal">
         </a>    
             <nav>
+                <!-- Navegación global del sitio -->
                 <ul>
                     <li><a href="./sagas/splatoon.html">Splatoon</a></li>
                     <li><a href="./sagas/mario.html">Mario</a></li>
@@ -23,6 +35,7 @@
                 </ul>
             </nav>
             <nav>
+                <!-- Formulario de búsqueda accesible y semántico -->
                 <form name="buscador" method="post">
                     <label>Buscador
                         <input type="search" name="buscador" placeholder="Buscar...">
@@ -34,10 +47,11 @@
             </nav>
     </header>
     <main>
+        <!-- Introducción a propuesta de colaboración -->
         <h1>Envíanos un Mensaje o Propuesta de Colaboración</h1>
         <p>¡Queremos escuchar tu opinión! Usa este formulario para consultas, sugerencias de contenido o si deseas unirte a nuestro equipo de frikis de Nintendo.</p>
         <img src="./assets/imgs/queremos_escucharte.jpg" alt="Imagen ilustrativa de afiliación con fans">
-        <section>
+        <section> <!-- SECTION: Formulario de contacto -->
             <h2>Formulario de Contacto NintendoManía</h2>
             <form name="contacto" method="post">
                 <fieldset>
@@ -67,7 +81,7 @@
                             <input type="url" name="url_referencia" placeholder="https://www.nintendomania.com">
                         </label>
                 </fieldset>
-                <fieldset>
+                <fieldset>  <!-- Sección informativa y estadística -->
                     <legend>¡Queremos saber más sobre ti!</legend>
                         <label>Saga favorita (Para informes estadísticos exclusivamente):<sup>*</sup></label>
                         <label>
@@ -93,7 +107,7 @@
                 <button type="reset">Borrar Formulario</button>
             </form>
         </section>
-        <section id="faq-contacto">
+        <section id="faq-contacto"> <!-- SECTION: FAQ accesible mediante detalles/summary -->
             <h2>Preguntas Frecuentes sobre Colaboración</h2>
             <p>Consulta esta sección si tu interés es unirte al equipo o reportar un error grave.</p>
             <details>
@@ -112,7 +126,7 @@
     </main>
     <footer>
         <h2>Contacto</h2>
-        <address>
+        <address> <!-- Enlaces de contacto semántico y accesible -->
             <a href="./contacto.html">Formulario de Contacto</a>
             <a href="mailto:nintendomania@info.es">Correo electrónico</a>
             <a href="tel:123456789">Teléfono</a>
