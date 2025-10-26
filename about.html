@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!--
+    =========================================================================
+    NintendoManía | Sobre Nosotros
+    =========================================================================
+    Página de presentación, estructura y equipo del proyecto NintendoManía.
+    Estructura semántica avanzada: sections temáticas, artículos autónomos,
+    aside para llamada a colaborador y footer accesible con créditos claros.
+    Proyecto trimestral - Irene Foncubierta Lobatón, 1ºDAW, 2025
+    =========================================================================
+    -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>NintendoManía - Sobre Nosotros</title>
@@ -10,10 +20,12 @@
 </head>
 <body>
     <header>
+        <!-- Logotipo principal enlazando al index -->
         <a href="./index.html">
             <img src="./assets/imgs/nintendo_mania_logo.webp" alt="Logo principal">
         </a>    
         <nav>
+            <!-- Menú global entre todas las secciones clave de la web -->
             <ul>
                 <li><a href="./sagas/splatoon.html">Splatoon</a></li>
                 <li><a href="./sagas/mario.html">Mario</a></li>
@@ -23,6 +35,7 @@
             </ul>
         </nav>
         <nav>
+            <!-- Formulario de búsqueda semántico y accesible -->
             <form name="buscador">
                 <label>Buscador
                     <input type="search" name="buscador" placeholder="Buscar...">
@@ -33,6 +46,7 @@
             </form>
         </nav>
         <nav>
+            <!-- Índice interno para navegación rápida dentro de la página -->
             <h2>Índice de contenidos</h2>
             <ul>
                 <li><a href="#sobre_nosotros">Sobre nosotros</a></li>
@@ -42,7 +56,7 @@
             </ul>      
         </nav>
     </header>
-    <section id = "sobre_nosotros">
+    <section id = "sobre_nosotros"> <!-- ========== SECTION: Historia y misión del proyecto ========== -->
         <h1>Sobre NintendoManía: La Pasión por los Videojuegos Hecha Web</h1>
         <article>
             <h2>Nuestra Historia: El Origen de la Manía</h2>
@@ -56,9 +70,11 @@
             <img src="./assets/imgs/nuestra_mision.jpg" alt="Imagen ilustrativa de la misión de NintendoManía">
         </article>
     </section>
-    <section id = "pilares">
+    <section id = "pilares"> <!-- ========== SECTION: Pilares y principios clave del sitio ========== -->
+    <section id="pilares">
+        <h2>Nuestros Pilares</h2>
         <article>
-            <h2>Nuestros Pilares: Cómo Aseguramos la Calidad</h2>
+            <h3>Siempre asegurando la calidad</h3>
             <p>La calidad de NintendoManía se basa en ser superdetallistas con los datos del juego y obsesivos con la experiencia del lector.
             A continuación te explicamos cómo trabajamos:</p>
             <ul>
@@ -77,7 +93,7 @@
             </ul>
         </article>
     </section>
-    <section id = "equipo">
+    <section id = "equipo"> <!-- ========== SECTION: Equipo y roles ========== -->
     <h2>Conoce al Equipo: Los Maníacos Tras la Web</h2>
     <p>Somos profesionales que aplicamos nuestros superpoderes de programación y diseño a documentar las mejores sagas del mundo. </p>
     <article>
@@ -108,7 +124,7 @@
             Hago que la navegación sea tan suave y placentera como el vuelo de Kirby.</p>
     </article>
     </section>
-    <section>
+    <section>  <!-- ========== SECTION: Trayectoria y hitos clave del proyecto ========== -->
         <h2>Nuestra Trayectoria: Hitos Clave del Proyecto</h2>
         <p>Aunque somos un proyecto de fans, nos tomamos muy en serio la documentación. Estos son algunos de los pasos importantes que hemos dado para construir NintendoManía:</p>
         <ol>
@@ -117,7 +133,7 @@
             <li>Próximo Lanzamiento: Finalización de la maquetación CSS y el diseño responsive (Fase 2).</li>
         </ol>
     </section>
-    <aside id="cuestionario">
+    <aside id="cuestionario"> <!-- ========== ASIDE: Invitación a colaborar ========== -->
         <h3>¡Únete a la Causa! Necesitamos tu Talento</h3>
         <p>Si eres un apasionado de Nintendo y quieres contribuir a mejorar la mejor documentación de esta página web, ¡necesitamos tu talento! Buscamos fans con ojo crítico y precisión histórica.</p>
         <figure>
@@ -128,7 +144,7 @@
     </aside>
     <footer>
         <h2>Contacto</h2>
-        <address>
+        <address> <!-- Enlaces de contacto semántico y accesible -->
             <a href="./contacto.html">Formulario de Contacto</a>
             <a href="mailto:nintendomania@info.es">Correo electrónico</a>
             <a href="tel:123456789">Teléfono</a>
