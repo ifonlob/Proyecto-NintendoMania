@@ -1,6 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+    <!--
+    =========================================================================
+    NintendoManía | Mario Bros
+    =========================================================================
+    Página dedicada a la cronología, historia, personajes y curiosidades de la saga Mario.
+    Estructura semántica avanzada, navegación propia, artículos autónomos, análisis de personajes
+    y aside temático. Optimizada para accesibilidad y mantenibilidad. 
+    Proyecto trimestral - Irene Foncubierta Lobatón, 1ºDAW, 2025.
+    =========================================================================
+    -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mario Bros - NintendoManía</title>
@@ -10,10 +20,12 @@
 </head>
 <body>
     <header>
+        <!-- Logotipo principal, acceso rápido a index -->
         <a href="../index.html">
             <img src="../assets/imgs/nintendo_mania_logo.webp" alt="Logo principal">
         </a>
         <nav>
+            <!-- Menú global y específico de sagas -->
             <ul>
                 <li><a href="./splatoon.html">Splatoon</a></li>
                 <li><a href="./kirby.html">Kirby</a></li>
@@ -22,8 +34,7 @@
                 <li><a href="../about.html">Sobre nosotros</a></li>
             </ul>
         </nav>
-        <h1>Mario Bros - El icono del Reino Champiñón</h1>
-        <nav>
+        <nav>  <!-- Formulario de búsqueda semántico -->
             <form name="buscador">
                 <label>Buscador
                     <input type="search" name="buscador" placeholder="Buscar...">
@@ -34,6 +45,7 @@
             </form>
         </nav>
         <nav>
+            <!-- Índice temático interno para navegación por secciones de Mario -->
             <h2>Índice de Mario</h2>
             <ul>
                 <li><a href="#hitos_2d">Hitos 2D Clásicos</a></li>
@@ -50,7 +62,7 @@
         <p>Mario, creado por Shigeru Miyamoto, no es solo el rostro de Nintendo, sino el personaje más reconocido en la historia de los videojuegos.</p>
              <img src="../assets/imgs/mario_banner.png" alt="Banner saga Mario Bros">
        <section id="hitos_2d">
-            <h2>Hitos Clásicos: La Era de las Plataformas 2D</h2>
+            <h2>Hitos Clásicos: La Era de las Plataformas 2D</h2> <!-- SECTION: Hitos Clásicos 2D -->
             <p>La base de la saga, donde se establecieron las reglas del plataformeo, los power-ups y el diseño de niveles. Cada juego redefinió el género.</p>
             <article>
                 <h3>Super Mario Bros. (1985)</h3>
@@ -85,7 +97,7 @@
                 <p>Aunque técnicamente es una secuela, este título centró la jugabilidad en Yoshi (el protector del bebé Mario). Su estilo artístico de crayones fue una ruptura visual y consolidó la mecánica de los huevos de Yoshi.</p>
             </article>
         </section>
-        <section id="hitos_3d">
+        <section id="hitos_3d"> <!-- SECTION: Revolución 3D -->
             <h2>La Revolución 3D: El Salto Dimensional (1996)</h2>
             <p>El lanzamiento de Super Mario 64 en 1996 no fue solo el salto gráfico de Mario sino que fue la reinvención del género de plataformas. El juego definió cómo debían funcionar la cámara, el movimiento y la interacción en un espacio tridimensional. Esta sección muestra los títulos que han redefinido esta perspectiva.</p>
             <article>
@@ -139,7 +151,7 @@
                 <p>Este título se enfocó en la exploración de grandes mundos abiertos. Su gran novedad fue el compañero Cappy, que permite a Mario "capturar" a la mayoría de los enemigos y objetos, adquiriendo sus habilidades de forma temporal.</p>
             </article>
         </section>
-        <section id="personajes">
+        <section id="personajes"> <!-- SECTION: Personajes -->
             <h2>Análisis de Personajes Clave y su Evolución</h2>
             <p>Más allá de Mario, el Reino Champiñón está definido por sus habitantes, aliados y antagonistas. Analizamos el rol semántico de los personajes más importantes de la saga.</p>
             <article>
@@ -187,7 +199,7 @@
                 <p>Yoshi (introducido en Super Mario World) y Toad representan la lealtad en la saga. Yoshi es el aliado animal clave para la movilidad y el gameplay alternativo (como se ve en su propia saga), mientras que Toad es el ciudadano común y vital para la administración del Reino Champiñón (como se ve en Captain Toad: Treasure Tracker).</p>
             </article>
         </section>
-        <section id="curiosidades">
+        <section id="curiosidades"> <!-- SECTION: Curiosidades y Lore -->
             <h2>Curiosidades y Secretos del Reino Champiñón</h2>
             <p>El juego que definió una industria está lleno de secretos de desarrollo, decisiones creativas icónicas y lore oculto.</p>
             <article>
@@ -225,7 +237,7 @@
                 <p>La idea de los power-ups también tiene una base sombría: los bloques que Mario golpea y de donde salen champiñones son, según una teoría no confirmada por Nintendo, los restos de los ciudadanos del Reino transformados por Bowser.</p>
             </article>
         </section>
-        <aside id="personajes_secundarios">
+        <aside id="personajes_secundarios">  <!-- ASIDE: Personajes secundarios y aliados -->
             <h3>Personajes Clave y Aliados del Reino Champiñón</h3>
             <p>Estos personajes han definido el universo de Mario, ya sea como rivales, aliados esenciales o protagonistas de sus propias sagas:</p>
             <figure>
@@ -268,7 +280,7 @@
                 </figcaption>
             </figure>
         </aside>
-        <aside id ="imagenes_destacadas">
+        <aside id ="imagenes_destacadas"> <!-- ASIDE: Galería de momentos icónicos -->
             <h3>Galería de Momentos Icónicos</h3>
             <p>Capturas y arte oficial que ilustran los momentos clave y diseño de la saga Super Mario Bros.</p>
             <figure>
@@ -299,7 +311,7 @@
     <footer>
         <section>
             <h2>Contacto</h2>
-            <address>
+            <address> <!-- Enlaces de contacto semántico y accesible -->
                 <a href="./contacto.html">Formulario de contacto</a> |
                 <a href="mailto:nintendomania@info.es">Correo electrónico</a> |
                 <a href="tel:123456789">Teléfono</a>
