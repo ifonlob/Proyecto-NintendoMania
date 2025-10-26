@@ -1,5 +1,20 @@
 # NintendoManía
 
+## Índice detallado del contenido
+
+- [Justificación de la temática](#justificación-de-la-temática)
+  - [Decisiones clave y rigor técnico](#decisiones-clave-y-rigor-técnico)
+- [Estructura de NintendoManía](#estructura-de-nintendomanía)
+- [Decisiones de diseño estructural tomadas](#decisiones-de-diseño-estructural-tomadas)
+  - [Página principal (index)](#--indexhtml)
+  - [Sobre nosotros](#--abouthtml)
+  - [Formulario de contacto](#--contactohtml)
+  - [Comparativas entre sagas](#--comparativashtml)
+  - [Nuestras sagas](#--sagas-splatoonhtmlmariohtml-y-kirbyhtml)
+    - [Splatoon](#sección-de-splatoon)
+    - [Kirby](#sección-de-kirby)
+    - [Mario](#sección-de-mario)
+
 Somos NintendoManía, un grupo de  profesionales independientes unidos por la pasión y el rigor histórico. Nuestro objetivo es crear una revista digital especializada que documente el lore, la cronología de desarrollo y las curiosidades de las sagas principales de Nintendo: Super Mario Bros, Splatoon y Kirby.
 
 La temática friki se aborda con una metodología de desarrollo profesional, garantizando que el producto final cumpla con los estándares más altos de accesibilidad y estructura web.
@@ -57,7 +72,7 @@ Contiene dos elementos clave:
 
 Según las buenas prácticas de HTML5, el header debe englobar los encabezados introductorios y los elementos de navegación principales, de modo que los usuarios y los motores de búsqueda identifiquen esta área como el bloque superior común del sitio.
 
-### Pie de página `<footer>`
+### Pie de página `<footer>` (Sin cambios relevantes entre páginas.)
 Agrupa información de contacto (address), enlaces legales y atribuciones del proyecto dentro de dos secciones section.
 
 El footer contiene información común y recurrente en todas las páginas y su uso refuerza la coherencia estructural del sitio.
@@ -146,3 +161,165 @@ Buenas prácticas aplicadas
 ![W3C](./assets/imgs/W3CValidator_about.png)
 
 - **Comentarios útiles:** cada bloque estructural está comentado (por ejemplo, `<!-- Sección equipo -->`) para favorecer mantenimiento y escalabilidad a largo plazo.
+
+### - `contacto.html`
+
+#### Estructura general
+
+Esta página aplica las **etiquetas semánticas de HTML5** (`header`, `main`, `section`, `fieldset`, `footer`) para organizar intuitivamente los contenidos con el objetivo de  facilitar la **usabilidad, accesibilidad y validación semántica** de ésta.
+
+##### Contenido principal `<main>`
+
+El cuerpo central de la página se divide en tres secciones principales:
+
+###### 1. Presentación inicial
+
+Encabezado principal `h1` que introduce la finalidad de la página junto con un breve párrafo explicativo y una imagen decorativa.
+Lo hemos diseñado de esta forma con el propósito de establecer un contexto emocional para el usuario, de acuerdo con los estándares de comunicación visual y semántica.
+
+###### 2. Formulario de contacto
+
+El formulario está contenido dentro de una única etiqueta `<form>` y estructurado semánticamente en tres conjuntos de campos (`fieldset`) con sus respectivas leyendas (`legend`):
+
+- **Datos personales:** Campos de texto, correo y teléfono.
+- **Detalles de la petición:** Selector desplegable (`<select>`) y campo opcional de URL.
+- **Información adicional:** Grupo de botones de radio y área de texto (`<textarea>`).
+
+Cada bloque de información se agrupa mediante `fieldset` con el fin de dar contexto a los controles de entrada y mejorar la experiencia de quienes utilizan lectores de pantalla. Asimismo, las etiquetas `label` y los tipos de input (`email`, `tel`, `url`, `radio`, `checkbox`) se seleccionan precisamente según su función, garantizando **accesibilidad total según W3C**.
+
+También se emplean atributos de validación:
+
+- `required` para campos obligatorios. 
+- `placeholder` como guía de uso.
+- `minlength` y `pattern` para garantizar la corrección de los datos.
+
+Por último hemos incluido dos botones con funciones diferentes (`submit` y `reset`) con textos descriptivos para reforzar la claridad.
+
+###### 3. Sección de preguntas frecuentes (FAQ)
+
+La hemos estructurado mediante `section` y elementos `details` y `summary` para mostrar respuestas interactivas sin depender de JavaScript aún puesto que estos elementos semánticos favorecen la interactividad, ya que son interpretados correctamente por los lectores de pantalla y mantienen una jerarquía lógica.
+
+###### Buenas prácticas aplicadas
+
+- **Semántica correcta:** Cada etiqueta cumple una función lógica y estructural según HTML5.
+- **Accesibilidad mejorada:** Atributos y etiquetas `label`, `alt`, `legend` y `required` correctamente implementados.
+- **Validación y mantenibilidad:** El documento pasa sin errores por el validador W3C y presenta indentación consistente.
+
+![W3C](./assets/imgs/W3C_contacto.png)
+
+- **Organización modular:** Uso de `fieldset` por tema y estructura visual jerárquica que favorece el mantenimiento y la escalabilidad a largo plazo.
+- **Comentarios significativos:** Cada bloque principal del formulario está comentado en el código para facilitar actualizaciones futuras.
+
+### - `comparativas.html`
+
+#### Estructura general
+
+La página está organizada igualmente utilizando las etiquetas semánticas de **HTML5**: `header`, `main`, `section`, `article`, `aside` y `footer` con el objetivo de reforzar la accesibilidad, la jerarquía y el análisis de datos mediante tablas semánticas, cumpliendo las mejores prácticas reconocidas por el W3C.
+
+El objetivo de este documento es*presentar comparativas entre sagas de Nintendo, combinando texto, tablas estructuradas y elementos de interacción para el usuario.
+
+##### Contenido principal `<main>`
+
+El cuerpo principal se organiza en diversas secciones temáticas, cada una identificada mediante atributos `id` descriptivos (`#hitos`, `#evolucion_splat`, `#evolucion_mario`, `#evolucion_kirby`, `#analisis`, `#voto`).
+De la misma forma, cada `section` contiene encabezados claros (`h2`, `h3`) que refuerzan la jerarquía de lectura y comprensión semántica del documento, ya que están ordenados en orden de decreciente (de mayor importancia a menos).
+
+### 1. Sección “Hitos”
+
+Hemos decidido que la mejor etiqueta para la temática de esta página era indudablemente una tabla `<table>` estructurada con `<caption>`, `<thead>`, `<tbody>` y `<th>` para mostrar información comparativa entre las diferentes sagas (Mario, Kirby y Splatoon).  
+
+
+Esto nos permitía una mejor lectura de datos facilitando la interpretación de estos y de las fechas clave.
+Asimismo, el uso de `scope="col"` y `scope="row"` mejora la interpretación accesible por lectores de pantalla.
+
+### 2. Secciones de evolución (“Splatoon”, “Mario”, “Kirby”)
+
+Cada bloque presenta:
+
+- Título (`<h2>`) que introduce la temática.
+- Descripción en texto explicativo.
+- Tablas `<table>` con leyendas (`<caption>`) y estructura diferenciada dentro de cada una con el uso de las etiquetas semánticas `<thead>`,`<tbody>` y `<tfooter>`
+
+Agrupar cada saga en su propia sección resalta la independencia temática, que es un principio clave en HTML5.
+
+### 3. Análisis comparativo
+
+Se compone de tres `<article>` en donde se exponen de forma individual el por qué del exito de cada saga basándose en los datos recogidos en las tablas.
+
+## Barra lateral `<aside>`
+
+El bloque lateral (`#voto`) permite la interacción del usuario mediante un **formulario de votación** (`<form>` y `<fieldset>`) puesto que la etiqueta `<aside>` encierra contenido relacionado, pero complementario, en este caso, la participación del usuario.
+
+## Buenas prácticas aplicadas
+
+- **Semántica avanzada:** Uso correcto de elementos `table`, `thead`, `tbody`, `tfoot`, `caption` y `scope`.
+- **Jerarquía tipográfica y lectora:** Encabezados secuenciales y coherentes (`h1` → `h2` → `h3`).
+- **Accesibilidad:** Formularios etiquetados, tablas interpretables por lectores de pantalla, navegación ordenada.
+- **Validación completa:** Código verificado sin errores en el validador del W3C.
+
+![W3C](./assets/imgs/W3C_comparativas.png)
+
+- **Reutilización y mantenibilidad:** Secciones y artículos autónomos que pueden migrarse o ampliarse sin pérdida semántica.
+- **Comentarios internos:** Segmentos explicativos dentro del HTML para guiar futuras ediciones y mantenimientos.
+
+### - Sagas (splatoon.html,mario.html y kirby.html)
+
+#### Estructura general
+
+Cada una de las páginas de las diferentes sagas están organizadass con etiquetas semánticas de **HTML5**: `header`, `main`, `section`, `article`, `aside` y `footer`, en donde en cada bloque se distinguen claramente contenidos, reforzando la accesibilidad y la organización jerárquica.
+
+##### Contenido principal `<main>`
+
+Se divide en tres grandes secciones, cada una dedicada a una de las sagas principales: Mario, Splatoon y Kirby.
+Cada sección utiliza `section` agrupando artículos (`article`) con información clave sobre historia, personajes, hitos, jugabilidad y datos curiosos, acompañada por imágenes con atributos descriptivos `alt`.
+
+###### Sección de Mario
+
+- **Historia y evolución:** Explicada en artículos con subtítulos por época (2D, 3D, innovaciones).
+- **Personajes icónicos:** Artículos dedicados a Mario, Luigi, Peach y Bowser, con imágenes representativas.
+- **Curiosidades:** Se expone el lore y secretos, como el origen del bigote de Mario o el papel de los Goombas.
+
+
+###### Sección de Splatoon
+
+- **Línea de tiempo:** Artículos cronológicos con imágenes de portadas, avances y mecánicas.
+- **Jugabilidad y armas:** Artículos cuya misión es diferenciar cómo sus armas y modos online evolucionan la experiencia.
+- **Personajes principales:** Presentación de Idols, personajes y el mundo subacuático, destacando el rol social y las referencias culturales.
+
+###### Sección de Kirby
+
+- **Historia y jugabilidad:** Evolución a través de generaciones, con énfasis en mecánicas y habilidades de copia únicas.
+- **Personajes y amigos:** Artículos sobre aliados y enemigos recurrentes como Meta Knight, Rey Dedede y aliados secundarios.
+- **Curiosidades y lore:** Breves artículos sobre el origen de Kirby, su poder cósmico y hechos curiosos del desarrollo.
+
+La organización modular por secciones y artículos permite la **autonomía semántica** de cada bloque, reforzando la cohesión y facilita la ampliación o actualización del contenido.
+
+##### Bloque lateral `<aside>`
+
+Incluye:
+
+- Destacados y curiosidades de cada saga (ranking, anécdotas, easter eggs).
+- Enlaces rápidos a galerías de imágenes históricas de cada franquicia.
+
+El aside facilita acceso a contenido complementario, diferenciando información secundaria del flujo principal, sin perder relevancia temática, lo que se aplica en cada uno de los casos en las respectivas sagas.
+
+##### Buenas prácticas aplicadas
+
+- **Semántica avanzada:** Uso correcto de etiquetas `section`, `article`, `figure`, `aside`, `nav`, `footer`.
+- **Jerarquía lectora:** Encabezados (`h1`, `h2`, `h3`) y estructura visual lógica según importancia del contenido.
+- **Accesibilidad:** Imágenes con atributo `alt` descriptivo, formularios correctamente etiquetados, estructura modular para lectores de pantalla.
+- **Validación completa:** Código conforme al W3C HTML Validator.
+
+**Splatoon**
+
+![W3C](./assets/imgs/W3C_splatoon.png)
+
+**Mario**
+
+![W3C](./assets/imgs/W3C_mario.png)
+
+**Kirby**
+
+![W3C](./assets/imgs/W3C_kirby.png)
+
+- **Reutilización y mantenibilidad:** Cada bloque se puede ampliar o modificar sin perder contexto ni romper la semántica.
+- **Comentarios en HTML:** Código anotado explicando secciones clave para facilitar mantenimiento.
