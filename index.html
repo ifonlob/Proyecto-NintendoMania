@@ -16,47 +16,49 @@
             <meta name="description" content="NintendoManía: Cronología, juegos y curiosidades de tus sagas de Nintendo favoritas.">
             <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
             <link rel="icon" href="./assets/imgs/icono_pag.png">
+            <link rel="stylesheet" href ="styles.css">
         </head>
     <body>
-        <header> <!-- Logotipo principal y acceso rápido al inicio -->
-            
-            <a href="./index.html">
+        <header class = "cabecera"> 
+            <!-- Logotipo principal y acceso rápido al inicio -->
+            <a class = "cabecera__logo" href="./index.html">
                 <img src="./assets/imgs/nintendo_mania_logo.webp" alt="Logo principal">
-            </a>    
-            <nav> <!-- Menú principal de navegación entre sagas y páginas destacado -->
-                <ul>
-                    <li><a href="./sagas/splatoon.html">Splatoon</a></li>
-                    <li><a href="./sagas/mario.html">Mario</a></li>
-                    <li><a href="./sagas/kirby.html">Kirby</a></li>
-                    <li><a href="./comparativas.html">Comparativas</a></li>
-                    <li><a href="./contacto.html">Contacto y sugerencias</a></li>
-                    <li><a href="./about.html">Sobre nosotros</a></li>
-                </ul>
-            </nav> <!-- Formulario de búsqueda semántico -->
-            <nav>
+            </a>
+            <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
                 <form name="buscador">
                     <label>Buscador
                          <input type="search" name="buscador" placeholder="Buscar...">
                     </label>
-                    <button type="submit">
-                        <img src="./assets/imgs/lupa.png" alt="Enviar búsqueda">
-                    </button>
                 </form>
-            </nav>
+            </nav>    
+            <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
+                <ul class = "cabecera__menu-superior">
+                    <li><a href="./sagas/splatoon.html">Splatoon</a></li>
+                    <li><a href="./sagas/mario.html">Mario</a></li>
+                    <li><a href="./sagas/kirby.html">Kirby</a></li>
+                </ul>
+                <ul class = "cabecera__menu-inferior">
+                    <li><a href="./comparativas.html">Comparativas</a></li>
+                    <li><a href="./contacto.html">Contacto y sugerencias</a></li>
+                    <li><a href="./about.html">Sobre nosotros</a></li>
+                </ul>
+            </nav> 
         </header>
     <main> 
-        <section> <!-- SECTION 1: Banner y bienvenida -->
-            <h1>¡Bienvenido a NintendoManía, tu página web friki de confianza!</h1>
-            <figure>
+        <section class = "introduccion"> <!-- SECTION 1: Banner y bienvenida -->
+            <h1 class = "introduccion__titulo">¡Bienvenido a NintendoManía, tu página web friki de confianza!</h1>
+            <figure class = "introduccion__banner">
                 <img src="./assets/imgs/nintendo_mania_banner.png" alt="NintendoManía Banner">
             </figure>
-            <p>Somos la web definitiva para fans que buscan el análisis más profundo y la cronología más precisa del universo Nintendo. Máximo rigor, 100% pasión.</p>
+            <p class = "introduccion__descripcion">Somos la web definitiva para fans que buscan el análisis más profundo y la cronología más precisa del universo Nintendo. Máximo rigor, 100% pasión.</p>
         </section>
-        <section> <!-- SECTION 2: Sagas principales con imágenes representativas -->
-            <h2>Nintendo Manía | Nuestras sagas favoritas<img src="./assets/imgs/logo_switch.png" alt="Logo de Nintendo Switch"></h2>
-            <img src="./assets/imgs/letra_m.png" alt="Letra M de Mario Bros">
-            <img src="./assets/imgs/splatoon_logo.png" alt="Inkling de Splatoon">
-            <img src="./assets/imgs/kirby.png" alt="Kirby">
+        <section class = "sagas-principales"> <!-- SECTION 2: Sagas principales con imágenes representativas -->
+            <h2 class = "sagas-principales__titulo">Nintendo Manía. Las mejores sagas al alcance de tu mano</h2>
+            <figure class = "sagas-principales__imagenes">
+                <img src="./assets/imgs/letra_m.png" alt="Letra M de Mario Bros">
+                <img src="./assets/imgs/splatoon_logo.png" alt="Inkling de Splatoon">
+                <img src="./assets/imgs/kirby.png" alt="Kirby">
+            </figure>
         </section>
         <section> <!-- SECTION 3: Artículos destacados por sagas -->
             <h2>Sagas principales</h2>
@@ -64,7 +66,7 @@
                 <h3>Mario Bros</h3>
                 <figure>
                     <a href="./sagas/mario.html">
-                        <img src="./assets/imgs/mario_party.jpg" alt="Imagen saga Mario Bros">
+                        <img src="./assets/imgs/mario_party.webp" alt="Imagen saga Mario Bros">
                     </a>
                 </figure>
                 <p>Explora el salto que revolucionó los videojuegos y sigue cada paso
@@ -155,7 +157,7 @@
                 <ul>
                     <li><a href="./sagas/kirby.html#cronologia">Cronología</a></li>
                     <li><a href="./sagas/kirby.html#habilidades">Habilidades</a></li>
-                    <li><a href="./sagas/kirby.html#jefes"></a>Jefes</li>
+                    <li><a href="./sagas/kirby.html#jefes">Jefes</a></li>
                     <li><a href="./sagas/kirby.html#curiosidades">Curiosidades</a></li>
                     <li><a href="./sagas/kirby.html#personajes">Personajes secundarios</a></li>
                     <li><a href="./sagas/kirby.html#galeria">Galería de imágenes</a></li>
