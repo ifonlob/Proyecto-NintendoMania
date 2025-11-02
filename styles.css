@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+  outline: 0;
+  list-style: none;
+}
+
+:root{
+  --color-fondo: #85807A;
+  --color-principal: #e6362c;
+  --fuente-base: 'Montserrat', Arial, sans-serif;
+  --fuente-secundaria: 'Press Start 2P', monospace;
+  --color-texto: #232323;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-base);
+  font-size: 1rem;
+}
+
+main, section, aside {
+  padding: 1rem;
+  
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+a {
+  color: #232323; 
+  text-decoration: none;
+}
+
+footer {
+  width: 100%;
+  padding: 1rem 0.6rem;
+  color: #fff;
+  background-color: #D1CFCD;
+}
+
+h1, h2 {
+  font-family: var(--fuente-secundaria);
+  font-size: 2rem;
+  margin: 1rem 0;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+h3, h4, h5, h6 {
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+  text-align: center;
+}
+
+
+.cabecera {
+  display: flex;
+  flex-direction: column;    
+  padding: 1rem;
+  background: var(--color-principal);
+  gap: 0.8rem;
+}
+
+.cabecera__logo,.cabecera__buscador{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.cabecera__logo img {   
+  width:10rem;       
+  height: auto;
+  display: block;
+  border-radius: 6rem;
+       
+}
+
+.cabecera__menu-superior, .cabecera__menu-inferior {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.cabecera__menu-superior li, .cabecera__menu-inferior li {
+  flex: 1;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}               
+
+.introduccion{
+  padding-left: 0;
+  padding-right: 0;
+  margin: 0;
+}
+
+.introduccion__banner {
+  width: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+  box-sizing: border-box;
+}
+
+
+.introduccion__banner img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0;
+}
+
+
+
+.sagas-principales__imagenes{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;               
+  max-width: none;           
+  margin: auto;
+  max-width: 30%;
+}
+
+
