@@ -25,6 +25,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
 footer {
   display: flex;
   width: 100%;
@@ -86,6 +92,7 @@ footer {
   justify-content: center;
 }
 
+
 .menu__titulo img{
   margin-top: 2rem;
   width: 20%;
@@ -109,50 +116,122 @@ footer {
   width:100%;
   padding: 0.6rem 1.2rem;
   border-radius: 1.5rem;
-  background: rgba(255,255,255,0.75);
+  background: white;
   font-size: 1rem;
-}
-.menu__lista{
-  display:flex;
-  justify-content: space-between;
 }
 
 .introduccion{
-  padding-left: 0;
-  padding-right: 0;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin:2rem;
 }
 
-.introduccion__banner {
+.introduccion__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
   width: 100%;
-  max-width: 100%;
-  margin: 0;
-  padding: 0;
-  display: block;
-  box-sizing: border-box;
+  text-align: center;
 }
 
-
-.introduccion__banner img {
-  width: 100%;
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin-bottom: 0;
+.introduccion__descripcion{
+  margin-top: 2rem;
+  font-family: var(--fuente-base);
+  font-weight: 600;
 }
 
+.mejores-sagas {
+  background: rgba(255,255,255,0.7);
+  padding: 2.5rem 2rem;
+  border-radius: 4rem;
+  max-width: 720px;
+  margin: 0 auto;
+  transition: box-shadow 0.35s, transform 0.25s;
+  cursor: pointer;
+}
 
-.sagas-principales__imagenes{
+.mejores-sagas:hover{
+  transform: translateY(-6px);
+}
+
+.mejores-sagas__imagenes img:hover {
+  transform: scale(1) rotate(-3deg);
+}
+.mejores-sagas__titulo {
+  font-family: var(--fuente-base);
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--color-texto);
+  padding-bottom: 2rem ;
+  text-align: center;
+}
+
+.mejores-sagas__imagenes {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.mejores-sagas__imagenes img {
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 18px;
+  border: none;
+  background: rgba(255,255,255,0.3);
+  transition: transform 0.2s, box-shadow 0.22s;
+}
+
+.mejores-sagas__imagenes img[alt="Letra M de Mario Bros"]{
+  background-color:#2773F5;
+}
+
+.mejores-sagas__imagenes img[alt="Inkling de Splatoon"]{
+  background-color: #666565;
+}
+
+.mejores-sagas__imagenes img[alt="Kirby"]{
+  background-color: #FF2626;
+}
+
+.sagas-principales {
+  display: flex;
+  flex-direction: column;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 2rem;
+}
+
+.sagas-principales:hover{
+  transform: translateY(-6px);
+}
+
+.sagas-principales__titulo{
+  font-family: var(--fuente-secundaria);
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.sagas-principales__contenido{
+  font-family: var(--fuente-base);
   display: flex;
   flex-direction: row;
-  justify-content: center;               
-  max-width: none;           
-  margin: auto;
-  max-width: 30%;
+  gap: 2rem;
+  background: rgba(255,255,255,0.7);
+  border-radius: 6rem;
+  text-align: center;
+
 }
 
-.pie-pagina__contacto h2, .pie-pagina__info h2{
-  margin-bottom: 1rem;
-  color: white
 
+.sagas-principales img{
+  background: rgba(255,255,255,0.7);
+  border-radius: 4rem;
+  max-width: 720px;
+  margin: 0 auto;
+  transition: box-shadow 0.35s, transform 0.25s;
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
 }
