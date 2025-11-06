@@ -58,13 +58,13 @@
             <figure class = "mejores-sagas__imagenes">
                 <img src="./assets/imgs/letra_m.png" alt="Letra M de Mario Bros">
                 <img src="./assets/imgs/splatoon_logo.png" alt="Inkling de Splatoon">
-                <img src="./assets/imgs/kirby.png" alt="Kirby">
+                <img src="./assets/imgs/icono_kirby.webp" alt="Kirby">
             </figure>
         </section>
         <section class = "sagas-principales"> <!-- SECTION 3: Artículos destacados por sagas -->
             <h2 class = "sagas-principales__titulo">Sagas principales</h2>
             <div class = "sagas-principales__contenido">
-            <article class = "sagas-principales__mario"> <!-- MARIO -->
+            <article> <!-- MARIO -->
                 <h3>Mario Bros</h3>
                 <figure>
                     <a href="./sagas/mario.html">
@@ -73,7 +73,7 @@
                 </figure>
                 <p>Explora el salto que revolucionó los videojuegos y sigue cada paso
                     del héroe del Reino Champiñón.</p>
-            </article class ="sagas-principales__splatoon">
+            </article>
             <article> <!-- SPLATOON -->
                 <h3>Splatoon</h3>
                 <figure>
@@ -84,7 +84,7 @@
                 <p>Sumérgete en la tinta y conoce como esta saga tan colorida se convirtió
                     en un fenómeno mundial.
                 </p>
-            </article class = "sagas-principales__kirby">
+            </article>
             <article> <!-- KIRBY -->
                 <h3>Kirby</h3>
                 <figure>
@@ -98,18 +98,17 @@
             </article>
             </div>
         </section>
-        <section> <!-- SECTION 4: Formulario de suscripción a newsletter -->
-            <h2>¿Quieres ser el primero en enterarte de las noticias de tus sagas favoritas? ¡Suscríbete!</h2>
-            <p>Únete a nuestra NintendoManía News para recibir las últimas noticias de tus sagas favoritas directamente en tu correo. ¡No te pierdas los nuevos lanzamientos de Mario, los Splatfests de Splatoon o los secretos de Kirby!</p>
-            
-            <form action="/subscribe" method="post">
-                    <label>Introduce tu email para suscribirte:
+        <section class = "newsletter"> <!-- SECTION 4: Formulario de suscripción a newsletter -->
+            <h2 class = "newsletter__titulo">¿Quieres ser el primero en enterarte de las noticias de tus sagas favoritas? ¡Suscríbete!</h2>
+            <p class = "newsletter__descripcion">Únete a nuestra NintendoManía News para recibir las últimas noticias de tus sagas favoritas directamente en tu correo. ¡No te pierdas los nuevos lanzamientos de Mario, los Splatfests de Splatoon o los secretos de Kirby!</p>
+            <form class = "newsletter__formulario" action="/subscribe" method="post">
+                    <label class="newsletter__label">Introduce tu email para suscribirte:
                         <input type="email" name="email" placeholder="ejemplo@correo.es" required>
                     </label>
                     <label>He leído y acepto la política de privacidad
                         <input type="checkbox" name="privacidad" required>
-                    </label>
-                <button type="submit">¡Suscribirme al newsletter!</button>
+                    </label class="newsletter__label">
+                <button class ="newsletter__boton" type="submit">¡Suscribirme al newsletter!</button>
             </form>
         </section>
         <aside> <!-- Noticias destacadas de las sagas (Posible ampliación futura) -->
