@@ -17,7 +17,7 @@
 }
 
 body{
-  background: url(./assets/imgs/fondo_index.png);
+  background: url(./assets/imgs/fondo_index.png)
 }
 
 a {
@@ -33,8 +33,12 @@ img {
 
 footer {
   display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2rem;
+  word-break: break-word;
   width: 100%;
-  padding: 1rem 0.6rem;
+  gap:2rem;
   background: url(./assets/imgs/fondo_footer.png);
   background-position-y: 20px;
   font-family: var(--fuente-secundaria);
@@ -56,7 +60,7 @@ footer {
 }
 
 .cabecera__logo{
- width: 15%;
+ width: 20%;
  transition: box-shadow 0.35s, transform 0.25s;
 }
 
@@ -92,6 +96,21 @@ footer {
   place-items: center;
 }
 
+
+.cabecera__menu ul li a {
+  color: #fff;
+  font-weight: 500;
+  font-family: var(--fuente-base);
+  padding: 1rem;
+}
+
+.cabecera__menu ul li a:hover,
+.cabecera__menu ul li a:focus-visible {
+  color: #ffcdf3;
+  text-decoration: underline;
+}
+
+
 .menu__titulo{
   display:flex;
   justify-content: center;
@@ -102,7 +121,6 @@ footer {
   margin-top: 2rem;
   width: 20%;
 }
-
 
 .buscador__formulario{
   display: flex;
@@ -128,8 +146,11 @@ footer {
 .introduccion{
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  margin:2rem;
+  margin: 2rem auto;
+  padding: 2rem;
+  word-break: break-word; 
 }
 
 .introduccion__titulo{
@@ -146,11 +167,14 @@ footer {
 }
 
 .mejores-sagas {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 2rem auto;
   background: rgba(255,255,255,0.7);
-  padding: 2.5rem 2rem;
+  padding: 2rem;
   border-radius: 4rem;
   max-width: 720px;
-  margin: 0 auto;
   transition: box-shadow 0.35s, transform 0.25s;
   border: 3px solid white;
   cursor: pointer;
@@ -164,6 +188,7 @@ footer {
   transform: scale(1) rotate(-3deg);
 }
 .mejores-sagas__titulo {
+  width: 100%;
   font-family: var(--fuente-base);
   font-weight: 800;
   font-size: 1.2rem;
@@ -174,6 +199,7 @@ footer {
 
 .mejores-sagas__imagenes {
   display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
   justify-content: center;
   margin: 0 auto;
@@ -202,50 +228,44 @@ footer {
 
 .sagas-principales {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   max-width: 1200px;
+  width: 80%;
   margin: 2rem auto;
-  padding: 0 2rem;
+  justify-content: center;
+  text-align: center;
+  transition: box-shadow 0.35s, transform 0.25s;
+  gap: 2rem;
+}
+
+.sagas-principales:hover{
+  transform: translateY(-6px);
 }
 
 .sagas-principales__titulo{
   font-family: var(--fuente-secundaria);
   text-align: center;
   margin: 2rem 0;
+  width: 80%;
+  padding: 2rem;
+  word-break: break-word; 
 }
 
-.sagas-principales__contenido {
-  display: flex;
-  flex-direction: row;
-  background: rgba(255,255,255,0.7);
-  border-radius: 6rem;
-  text-align: center;
-  transition: box-shadow 0.35s, transform 0.25s;
-  border: 3px solid white;
-  gap: 2rem;
-  justify-content: center; 
-  align-items: flex-start;
-}
 
-.sagas-principales__contenido:hover{
-  transform: translateY(-6px);
-}
-
-.sagas-principales__contenido p{
+.sagas-principales p{
+  padding-top: 1rem;
   max-width: 260px;
   margin: 0 auto;
   text-align: center;
   font-weight: 600;
+  word-break: break-word; 
   
 }
 
-.sagas-principales__contenido h3{
+.sagas-principales h3{
   padding:2.5rem;
   font-size: 2rem;
 
- }
- .sagas-principales__contenido:hover{
-  transform: translateY(-6px);
  }
 
 .sagas-principales img{
@@ -257,22 +277,68 @@ footer {
   object-fit: cover;
 }
 
-.sagas-principales__contenido img:hover {
+.sagas-principales img:hover {
   transform: scale(1) rotate(-3deg);
+}
+
+.sagas-principales__mario,.sagas-principales__splatoon,.sagas-principales__kirby{
+  padding:2rem;
+  background: rgba(255,255,255,0.7);
+  border-radius: 6rem;
+  border: 3px solid white;
+}
+
+.extra{
+  display: flex;
+}
+
+.noticias-destacadas{
+  display: flex;
+  flex-direction: column;
+  width:25%;
+  margin: 2rem;
+  padding: 2rem;
+  word-break: break-word; 
+}
+
+.noticias-destacadas img{
+  border-radius: 6rem;
+  width: 260px;               
+  height: 160px;                          
+  margin-bottom: 1rem;
+  object-fit: cover;
+  
+}
+
+.noticias-destacadas__titulo{
+  text-align: center;
+  font-family: var(--fuente-secundaria);
+}
+
+.noticias-destacadas__splatoon,.noticias-destacadas__kirby,.noticias-destacadas__mario{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding:2rem;
+  gap:1rem;
 }
 
 .newsletter{
   display: flex;
   flex-direction: column;
+  width: 50%;
   align-items: center;
-  gap:2rem;
+  margin: 2rem auto;
+  word-break: break-word;
 }
 
 .newsletter__titulo{
   font-family: var(--fuente-secundaria);
+  margin: 2.5rem;
   font-size: 1.5rem;
   width: 100%;
   text-align: center;
+  
 }
 
 .newsletter__descripcion{
@@ -282,12 +348,13 @@ footer {
 }
 
 .newsletter__formulario {
-  background: rgba(255,255,255,0.7);
-  border: 3px solid white;
-  border-radius: 1rem;
-  padding: 2rem;
   display: flex;
   flex-direction: column;
+  background: rgba(255,255,255,0.7);
+  border: 3px solid white;
+  border-radius: 2rem;
+  margin-top:5rem;
+  padding: 2rem;
   gap: 1.5rem;
   max-width: 400px;
   width: 100%;
@@ -299,31 +366,31 @@ footer {
   transform: translateY(-6px);
 }
 .newsletter__label {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    font-size: 1.4rem;
-    gap: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-size: 1.4rem;
+  gap: 1rem;
 }
 
 .newsletter__input {
-    padding: 1rem;
-    border: 1.5px solid #BDBDBD;
-    border-radius: 0.7rem;
-    font-size: 1rem;
-    background: #fff;
-    transition: border 0.18s;
+  padding: 1rem;
+  border: 1.5px solid #BDBDBD;
+  border-radius: 0.7rem;
+  font-size: 1rem;
+  background: #fff;
+  transition: border 0.18s;
 }
 
 .newsletter__boton {
-    background: #C7A9C6;
-    color: #fff;
-    font-weight: bold;
-    border: none;
-    border-radius: 1rem;
-    padding: 1rem;
-    font-size: 1rem;
-    cursor: pointer;
+  background: #C7A9C6;
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 1rem;
+  padding: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
 }
 
 .newsletter__boton:hover{
@@ -332,20 +399,95 @@ footer {
 
 }
 
-
-.noticias-destacadas{
+.puntos-destacados{
   display: flex;
   flex-direction: column;
+  width:25%;
+  margin: 2rem;
+  word-break: break-word; 
 }
 
-.noticias-destacadas__titulo{
-  text-align: center;
+
+.puntos-destacados__titulo{
   font-family: var(--fuente-secundaria);
   margin: 2.5rem;
+  font-size: 1.5rem;
+  text-align: center;
+  word-break: break-word;
 }
 
-.noticias-destacadas article{
-  display:flex;
-  justify-content: end;
-
+.puntos-destacados__splatoon,
+.puntos-destacados__kirby,
+.puntos-destacados__mario{
+  margin-bottom: 2rem;
 }
+
+
+
+.puntos-destacados__splatoon summary,
+.puntos-destacados__kirby summary,
+.puntos-destacados__mario summary {
+  font-family: var(--fuente-secundaria);
+  font-size: 1.2rem;
+  text-align: center;
+  color: #fff;
+  background: #3bc7e6;
+  border-radius: 2rem;
+  padding: 1.2rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.puntos-destacados__splatoon a:active,
+.puntos-destacados__kirby a:active,
+.puntos-destacados__mario a:active
+{
+  background: #ffa0e5;
+  color: var(--color-texto);
+  transform: scale(1);
+}
+
+.puntos-destacados__splatoon a,
+.puntos-destacados__kirby a,
+.puntos-destacados__mario a
+{
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--color-texto);
+  background: #d3ffe8;
+  border-radius: 1.25rem;
+  font-weight: bold;
+  font-family: var(--fuente-secundaria);
+}
+
+.puntos-destacados__splatoon a:hover,
+.puntos-destacados__kirby a:hover,
+.puntos-destacados__mario a:hover,
+.puntos-destacados__splatoon a:focus-visible,
+.puntos-destacados__kirby a:focus-visible,
+.puntos-destacados__mario a:focus-visible{
+  background: #97f542;
+  transform: translateX(6px) scale(1)
+}
+
+.puntos-destacados__splatoon summary:hover,
+.puntos-destacados__kirby summary:hover,
+.puntos-destacados__mario summary:hover,
+.puntos-destacados__splatoon summary:focus,
+.puntos-destacados__kirby summary:focus,
+.puntos-destacados__mario summary:focus,
+.puntos-destacados__splatoon summary:focus-visible,
+.puntos-destacados__kirby summary:focus-visible,
+.puntos-destacados__mario summary:focus-visible {
+  background: #ff78b4;
+  color: #232323;
+}
+
+.puntos-destacados__splatoon ul,
+.puntos-destacados__kirby ul,
+.puntos-destacados__mario ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
