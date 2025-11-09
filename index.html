@@ -21,8 +21,8 @@
     <body>
         <header class = "cabecera"> 
             <!-- Logotipo principal y acceso rápido al inicio -->
-            <a class = "cabecera__logo">
-                <img href="./index.html" src="./assets/imgs/logo_principal.png" alt="Logo principal">
+            <a class = "cabecera__logo" href = "./index.html">
+                <img src="./assets/imgs/logo_principal.png" alt="Logo principal">
             </a>
 
             <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
@@ -63,8 +63,7 @@
         </section>
         <section class = "sagas-principales"> <!-- SECTION 3: Artículos destacados por sagas -->
             <h2 class = "sagas-principales__titulo">Sagas principales</h2>
-            <div class = "sagas-principales__contenido">
-            <article> <!-- MARIO -->
+            <article class="sagas-principales__mario"> <!-- MARIO -->
                 <h3>Mario Bros</h3>
                 <figure>
                     <a href="./sagas/mario.html">
@@ -74,7 +73,7 @@
                 <p>Explora el salto que revolucionó los videojuegos y sigue cada paso
                     del héroe del Reino Champiñón.</p>
             </article>
-            <article> <!-- SPLATOON -->
+            <article class ="sagas-principales__splatoon"> <!-- SPLATOON -->
                 <h3>Splatoon</h3>
                 <figure>
                     <a href="./sagas/splatoon.html">
@@ -85,7 +84,7 @@
                     en un fenómeno mundial.
                 </p>
             </article>
-            <article> <!-- KIRBY -->
+            <article class = "sagas-principales__kirby"> <!-- KIRBY -->
                 <h3>Kirby</h3>
                 <figure>
                     <a href="./sagas/kirby.html">
@@ -96,86 +95,88 @@
                     como conquistó el espacio...¡Y nuestras consolas!
                 </p>
             </article>
-            </div>
         </section>
-        <section class = "newsletter"> <!-- SECTION 4: Formulario de suscripción a newsletter -->
-            <h2 class = "newsletter__titulo">¿Quieres ser el primero en enterarte de las noticias de tus sagas favoritas? ¡Suscríbete!</h2>
-            <p class = "newsletter__descripcion">Únete a nuestra NintendoManía News para recibir las últimas noticias de tus sagas favoritas directamente en tu correo. ¡No te pierdas los nuevos lanzamientos de Mario, los Splatfests de Splatoon o los secretos de Kirby!</p>
-            <form class = "newsletter__formulario" action="/subscribe" method="post">
-                    <label class="newsletter__label">Introduce tu email para suscribirte:
-                        <input type="email" name="email" placeholder="ejemplo@correo.es" required>
-                    </label>
-                    <label>He leído y acepto la política de privacidad
-                        <input type="checkbox" name="privacidad" required>
-                    </label class="newsletter__label">
-                <button class ="newsletter__boton" type="submit">¡Suscribirme al newsletter!</button>
-            </form>
-        </section>
-        <aside class = "noticias-destacadas"> <!-- Noticias destacadas de las sagas (Posible ampliación futura) -->
-            <h2 class = "noticias-destacadas__titulo">Noticias destacadas</h2>
-            <article>
-                <h3>Splatoween</h3>
-                <figure>
-                    <a href="https://www.nintenderos.com/2025/09/splatoween-regresa-a-splatoon-3-con-este-splatfest-espeluznante">
-                        <img src="./assets/imgs/splatoon_halloween.jpeg" alt="Foto Splatfest temática Halloween">
-                    </a>
-                    <figcaption>Splatoween regresa a Splatoon 3 con este Splatfest espeluznante</figcaption>
-                </figure>
+        <aside class = "extra">
+            <article class = "noticias-destacadas"> <!-- Noticias destacadas de las sagas (Posible ampliación futura) -->
+                <h2 class = "noticias-destacadas__titulo">Noticias destacadas</h2>
+                <article class = "noticias-destacadas__splatoon">
+                    <h3>Splatoween</h3>
+                    <figure>
+                        <a href="https://www.nintenderos.com/2025/09/splatoween-regresa-a-splatoon-3-con-este-splatfest-espeluznante">
+                            <img src="./assets/imgs/splatoon_halloween.jpeg" alt="Foto Splatfest temática Halloween">
+                        </a>
+                        <figcaption>Splatoween regresa a Splatoon 3 con este Splatfest espeluznante</figcaption>
+                    </figure>
+                </article>
+                <article class = "noticias-destacadas__kirby">
+                    <h3>Nuevo pack Kirby Air Riders</h3>
+                    <figure>
+                        <a href="https://es.ign.com/compras/222040/news/el-pack-mas-irresistible-de-kirby-air-riders-se-encuentra-en-my-nintendo-store">
+                            <img src="./assets/imgs/kirby_noticia.webp" alt="Foto Kirby Air Riders">
+                        </a>
+                        <figcaption>El pack más irresistible de Kirby Air Riders se encuentra en My Nintendo Store</figcaption>
+                    </figure>
+                </article>
+                <article class = "noticias-destacadas__mario">
+                    <h3>40 Aniversario Mario Bros</h3>
+                    <figure>
+                        <a href="https://www.rtve.es/noticias/20250913/super-mario-bros-40-anos-videojuego/16726271.shtml">
+                            <img src="./assets/imgs/mariobros_aniversario.jpg" alt="Foto 40 aniversario Mario Bros">
+                        </a>
+                        <figcaption>Super Mario Bros cumple 40 años: el videojuego que inició la saga con más ventas de la historia</figcaption>
+                    </figure>
+                </article>
             </article>
-            <article>
-                <h3>Nuevo pack Kirby Air Riders</h3>
-                <figure>
-                    <a href="https://es.ign.com/compras/222040/news/el-pack-mas-irresistible-de-kirby-air-riders-se-encuentra-en-my-nintendo-store">
-                        <img src="./assets/imgs/kirby_noticia.webp" alt="Foto Kirby Air Riders">
-                    </a>
-                    <figcaption>El pack más irresistible de Kirby Air Riders se encuentra en My Nintendo Store</figcaption>
-                </figure>
+            <article class = "newsletter"> <!-- SECTION 4: Formulario de suscripción a newsletter -->
+                <h2 class = "newsletter__titulo">¿Quieres ser el primero en enterarte de las noticias de tus sagas favoritas? ¡Suscríbete!</h2>
+                <p class = "newsletter__descripcion">Únete a nuestra NintendoManía News para recibir las últimas noticias de tus sagas favoritas directamente en tu correo. ¡No te pierdas los nuevos lanzamientos de Mario, los Splatfests de Splatoon o los secretos de Kirby!</p>
+                <form class = "newsletter__formulario" action="/subscribe" method="post">
+                        <label class="newsletter__label">Introduce tu email para suscribirte:
+                            <input type="email" name="email" placeholder="ejemplo@correo.es" required>
+                        </label>
+                        <label class="newsletter__label">He leído y acepto la política de privacidad
+                            <input type="checkbox" name="privacidad" required>
+                        </label>
+                    <button class ="newsletter__boton" type="submit">¡Suscribirme al newsletter!</button>
+                </form>
+                <img src="./assets/imgs/personajes_sagas.png" alt="Kirby,Mario e Inkling juntos.">
             </article>
-            <article>
-                <h3>40 Aniversario Mario Bros</h3>
-                <figure>
-                    <a href="https://www.rtve.es/noticias/20250913/super-mario-bros-40-anos-videojuego/16726271.shtml">
-                        <img src="./assets/imgs/mariosbros_aniversario.jpeg" alt="Foto 40 aniversario Mario Bros">
-                    </a>
-                    <figcaption>Super Mario Bros cumple 40 años: el videojuego que inició la saga con más ventas de la historia</figcaption>
-                </figure>
+            <article class = "puntos-destacados">
+                <h3 class = "puntos-destacados__titulo">Puntos destacados por sagas:</h3>
+                <details class = "puntos-destacados__splatoon">
+                    <summary>Splatoon</summary>
+                    <ul>
+                        <li><a href="./sagas/splatoon.html#timeline">Línea del Tiempo</a></li>
+                        <li><a href="./sagas/splatoon.html#cronologia">Cronología</a></li>
+                        <li><a href="./sagas/splatoon.html#armas_splatoon">Armas destacadas</a></li>
+                        <li><a href="./sagas/splatoon.html#idols_splatoon">Idols</a></li>
+                        <li><a href="./sagas/splatoon.html#curiosidades">Secretos y Curiosidades</a></li>
+                        <li><a href="./sagas/splatoon.html#imagenes_destacadas">Galería de imágenes</a></li>
+                    </ul>
+                </details>
+                <details class = "puntos-destacados__kirby">
+                    <summary>Kirby</summary>
+                    <ul>
+                        <li><a href="./sagas/kirby.html#cronologia">Cronología</a></li>
+                        <li><a href="./sagas/kirby.html#habilidades">Habilidades</a></li>
+                        <li><a href="./sagas/kirby.html#jefes">Jefes</a></li>
+                        <li><a href="./sagas/kirby.html#curiosidades">Curiosidades</a></li>
+                        <li><a href="./sagas/kirby.html#personajes">Personajes secundarios</a></li>
+                        <li><a href="./sagas/kirby.html#galeria">Galería de imágenes</a></li>
+                    </ul>
+                </details>
+                <details class = "puntos-destacados__mario">
+                    <summary>Mario Bros</summary>
+                    <ul>
+                        <li><a href="./sagas/mario.html#hitos_2d">Hitos 2D Clásicos</a></li>
+                        <li><a href="./sagas/mario.html#hitos_3d">Revolución 3D</a></li>
+                        <li><a href="./sagas/mario.html#personajes">Análisis de Personajes</a></li>
+                        <li><a href="./sagas/mario.html#curiosidades">Curiosidades y Lore</a></li>
+                        <li><a href="./sagas/mario.html#personajes_secundarios">Personajes secundarios</a></li>
+                        <li><a href="./sagas/mario.html#imagenes_destacadas">Galería de imágenes</a></li>
+                    </ul>
+                </details>
             </article>
-        </aside>
-        <aside> <!-- Navegación semántica por detalles/sagas-->
-            <h3>Puntos destacados por sagas:</h3>
-            <details>
-                <summary>Splatoon</summary>
-                <ul>
-                    <li><a href="./sagas/splatoon.html#timeline">Línea del Tiempo</a></li>
-                    <li><a href="./sagas/splatoon.html#cronologia">Cronología</a></li>
-                    <li><a href="./sagas/splatoon.html#armas_splatoon">Armas destacadas</a></li>
-                    <li><a href="./sagas/splatoon.html#idols_splatoon">Idols</a></li>
-                    <li><a href="./sagas/splatoon.html#curiosidades">Secretos y Curiosidades</a></li>
-                    <li><a href="./sagas/splatoon.html#imagenes_destacadas">Galería de imágenes</a></li>
-                </ul>
-            </details>
-            <details>
-                <summary>Kirby</summary>
-                <ul>
-                    <li><a href="./sagas/kirby.html#cronologia">Cronología</a></li>
-                    <li><a href="./sagas/kirby.html#habilidades">Habilidades</a></li>
-                    <li><a href="./sagas/kirby.html#jefes">Jefes</a></li>
-                    <li><a href="./sagas/kirby.html#curiosidades">Curiosidades</a></li>
-                    <li><a href="./sagas/kirby.html#personajes">Personajes secundarios</a></li>
-                    <li><a href="./sagas/kirby.html#galeria">Galería de imágenes</a></li>
-                </ul>
-            </details>
-            <details>
-                <summary>Mario Bros</summary>
-                <ul>
-                    <li><a href="./sagas/mario.html#hitos_2d">Hitos 2D Clásicos</a></li>
-                    <li><a href="./sagas/mario.html#hitos_3d">Revolución 3D</a></li>
-                    <li><a href="./sagas/mario.html#personajes">Análisis de Personajes</a></li>
-                    <li><a href="./sagas/mario.html#curiosidades">Curiosidades y Lore</a></li>
-                    <li><a href="./sagas/mario.html#personajes_secundarios">Personajes secundarios</a></li>
-                    <li><a href="./sagas/mario.html#imagenes_destacadas">Galería de imágenes</a></li>
-                </ul>
-            </details>
         </aside>
     </main>
     <footer>
