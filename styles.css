@@ -1,4 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
+
+/* FORMATEO CSS */
+
 *{
   margin: 0;
   padding: 0;
@@ -8,6 +11,8 @@
   list-style: none;
 }
 
+/* VARIABLES */
+
 :root{
   --color-principal: #800E13;
   --color-secundario: #464D77;
@@ -15,6 +20,8 @@
   --fuente-base: 'Montserrat', Arial, sans-serif;
   --fuente-secundaria: 'Press Start 2P', monospace;
 }
+
+/* ESTILOS GENERALES */
 
 body{
   background: url(./assets/imgs/fondo_index.png)
@@ -39,19 +46,24 @@ footer {
   word-break: break-word;
   width: 100%;
   gap:2rem;
+  max-width: 100%;
   background: url(./assets/imgs/fondo_footer.png);
   background-position-y: 20px;
   font-family: var(--fuente-secundaria);
 }
 
+/* CABECERA */
+
 .cabecera {
-  height: auto;
-  min-height: 4rem;
-  background: url(./assets/imgs/fondo_header.png);
+  top:0;
+  left:0;
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: center;
-  padding: 1.5rem;
+  min-height: 2rem;
+  background: url(./assets/imgs/fondo_header.png);
+  padding: 0.75rem 1rem;
 }
 
 .cabecera__buscador {
@@ -68,44 +80,50 @@ footer {
   transform: translateY(-6px);
 }
 
-.cabecera__logo img{
-  width: 60%;
+.cabecera__logo--imagen{
+  width: 45%;
   border-radius: 8rem;
-  margin:1rem;
+  margin:0.5rem;
 }
 
 .cabecera__menu{
-  width: 60%;
+  display: flex;
+  flex-direction: column;
   align-content: center;
+  gap:2rem;
   font-family: var(--fuente-secundaria);
 }
 
-.cabecera__menu ul{
-  padding: 1rem;
+.cabecera__menu--lista{
+  font-family: var(--fuente-base);
   width:100%;
   display: flex;
   justify-content: space-between;
-  gap:2rem;
   font-size: 1.2rem;
   font-weight: bolder;
-  font-family: var(--fuente-base);
+  margin-bottom: 1rem;
+  
 }
 
-.cabecera__menu h1{
-  display: grid;
-  place-items: center;
+.cabecera__menu--titulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
+.cabecera__menu--titulo img{
+  width: 10%;
+  margin-right: 2rem;
+}
 
 .cabecera__menu ul li a {
+  font-family: var(--fuente-base);
   color: #fff;
   font-weight: 500;
-  font-family: var(--fuente-base);
-  padding: 1rem;
 }
 
 .cabecera__menu ul li a:hover,
-.cabecera__menu ul li a:focus-visible {
+.cabecera__menu ul li a:focus {
   color: #ffcdf3;
   text-decoration: underline;
 }
@@ -114,6 +132,9 @@ footer {
 .menu__titulo{
   display:flex;
   justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 1.5rem;
 }
 
 
@@ -142,6 +163,8 @@ footer {
   background: white;
   font-size: 1rem;
 }
+
+/* INDEX */
 
 .introduccion{
   display: flex;
@@ -234,13 +257,9 @@ footer {
   margin: 2rem auto;
   justify-content: center;
   text-align: center;
-  transition: box-shadow 0.35s, transform 0.25s;
   gap: 2rem;
 }
 
-.sagas-principales:hover{
-  transform: translateY(-6px);
-}
 
 .sagas-principales__titulo{
   font-family: var(--fuente-secundaria);
@@ -286,6 +305,11 @@ footer {
   background: rgba(255,255,255,0.7);
   border-radius: 6rem;
   border: 3px solid white;
+  transition: box-shadow 0.35s, transform 0.25s;
+}
+
+.sagas-principales__mario:hover,.sagas-principales__splatoon:hover,.sagas-principales__kirby:hover{
+  transform: translateY(-6px);
 }
 
 .extra{
@@ -297,7 +321,6 @@ footer {
   flex-direction: column;
   width:25%;
   margin: 2rem;
-  padding: 2rem;
   word-break: break-word; 
 }
 
@@ -310,9 +333,15 @@ footer {
   
 }
 
+.noticias-destacadas figcaption{
+  font-size: 1.5rem;
+}
+
 .noticias-destacadas__titulo{
-  text-align: center;
   font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
+  width: 100%;
+  text-align: center;
 }
 
 .noticias-destacadas__splatoon,.noticias-destacadas__kirby,.noticias-destacadas__mario{
@@ -334,7 +363,6 @@ footer {
 
 .newsletter__titulo{
   font-family: var(--fuente-secundaria);
-  margin: 2.5rem;
   font-size: 1.5rem;
   width: 100%;
   text-align: center;
@@ -409,8 +437,8 @@ footer {
 
 
 .puntos-destacados__titulo{
+  margin-bottom: 1.5rem;
   font-family: var(--fuente-secundaria);
-  margin: 2.5rem;
   font-size: 1.5rem;
   text-align: center;
   word-break: break-word;
@@ -491,3 +519,143 @@ footer {
   gap: 0.5rem;
 }
 
+.pie-pagina__contacto a:hover{
+  color: #ff78b4;
+}
+
+
+/* CONTACTO */
+
+.colaboracion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap:1rem;
+}
+
+.colaboracion__titulo{
+  text-align: center;
+}
+
+.colaboracion__descripcion{
+  text-align: center;
+  font-weight: 500;
+}
+
+.colaboracion__imagen{
+  max-width: 300px;
+  margin:0 auto;
+  border-radius: 3rem;
+}
+
+.contacto{
+  display: flex;
+  flex-direction: column;
+  margin:1rem;
+}
+
+.contacto__titulo{
+  text-align: center;
+}
+
+
+.contacto__formulario{
+  font-family: var(--fuente-base);
+  background: white;
+  border-radius: 2rem;
+  padding: 2.5rem;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+ .contacto__formulario fieldset {
+  border: none;
+  margin-bottom: 1.5rem;
+  padding: 0;
+}
+
+.contacto__formulario legend {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #3178f0;
+  margin-bottom: 1rem;
+}
+
+.contacto__formulario label {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--color-texto)
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="url"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 3px solid #b3c5f6;
+  border-radius: 1rem;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: #3178f0;
+  outline: none;
+}
+
+input[type="radio"] {
+  margin-right: 0.5rem;
+}
+
+button[type="submit"],
+button[type="reset"] {
+  background:#0ccad8;
+  border: none;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.75rem;
+  transition: background 0.2s, transform 0.15s;
+}
+
+button[type="submit"]:hover,
+button[type="reset"]:hover{
+  transform: translateY(-6px);
+}
+
+.faq-contacto{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap:1rem;
+}
+
+.faq-contacto details{
+  width: 40%;
+  text-align: center;
+  background:#0ccad8;
+  padding: 1rem;
+  border-radius: 2rem;
+  font-size: rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0.75rem;
+}
+
+.faq-contacto__titulo{
+  text-align: center;
+}
+
+.faq-contacto__descripcion{
+  text-align: center;
+}
