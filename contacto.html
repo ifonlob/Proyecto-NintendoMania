@@ -17,43 +17,48 @@
     <meta name="description" content="Formulario de contacto para enviar opiniones, sugerencias o propuestas de colaboración a NintendoManía.">
     <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
     <link rel="icon" href="./assets/imgs/icono_pag.png">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header>
-        <!-- Logotipo principal - acceso rápido a inicio -->
-        <a href="./index.html"> 
-            <img src="./assets/imgs/nintendo_mania_logo.webp" alt="Logo principal">
-        </a>    
-            <nav>
-                <!-- Navegación global del sitio -->
+    <header class = "cabecera"> 
+            <!-- Logotipo principal y acceso rápido al inicio -->
+            <a class = "cabecera__logo" href = "./index.html">
+                <img src="./assets/imgs/logo_principal.png" alt="Logo principal">
+            </a>
+
+            <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
+                <article class = "menu__titulo">
+                    <h1>Nintendo Manía</h1>
+                    <img src="./assets/imgs/logo_switch.png" alt="Logo Switch">
+                </article>
                 <ul>
                     <li><a href="./sagas/splatoon.html">Splatoon</a></li>
                     <li><a href="./sagas/mario.html">Mario</a></li>
                     <li><a href="./sagas/kirby.html">Kirby</a></li>
                     <li><a href="./comparativas.html">Comparativas</a></li>
+                    <li><a href="./contacto.html">Contacto y sugerencias</a></li>
                     <li><a href="./about.html">Sobre nosotros</a></li>
                 </ul>
             </nav>
-            <nav>
-                <!-- Formulario de búsqueda accesible y semántico -->
-                <form name="buscador" method="post">
-                    <label>Buscador
-                        <input type="search" name="buscador" placeholder="Buscar...">
+            <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
+                <form name="buscador">
+                    <label class = "buscador__formulario">
+                         <img src="./assets/imgs/lupa.png" alt="Lupa">
+                         <input type="search" name="buscador" placeholder="Buscar...">
                     </label>
-                    <button type="submit">
-                        <img src="./assets/imgs/lupa.png" alt="Enviar búsqueda">
-                    </button>
                 </form>
-            </nav>
-    </header>
+            </nav> 
+        </header>
     <main>
         <!-- Introducción a propuesta de colaboración -->
-        <h1>Envíanos un Mensaje o Propuesta de Colaboración</h1>
-        <p>¡Queremos escuchar tu opinión! Usa este formulario para consultas, sugerencias de contenido o si deseas unirte a nuestro equipo de frikis de Nintendo.</p>
-        <img src="./assets/imgs/queremos_escucharte.jpg" alt="Imagen ilustrativa de afiliación con fans">
-        <section> <!-- SECTION: Formulario de contacto -->
-            <h2>Formulario de Contacto NintendoManía</h2>
-            <form name="contacto" method="post">
+        <section class = "colaboracion">
+            <h1 class = "colaboracion__titulo">Envíanos un Mensaje o Propuesta de Colaboración</h1>
+            <p class = "colaboracion__descripcion">¡Queremos escuchar tu opinión! Usa este formulario para consultas, sugerencias de contenido o si deseas unirte a nuestro equipo de frikis de Nintendo.</p>
+            <img class = "colaboracion__imagen" src="./assets/imgs/queremos_escucharte.jpg" alt="Imagen ilustrativa de afiliación con fans">
+        </section>
+        <section class = "contacto"> <!-- SECTION: Formulario de contacto -->
+            <h2 class = "contacto__titulo">Formulario de Contacto NintendoManía</h2>
+            <form class = "contacto__formulario" name="contacto" method="post">
                 <fieldset>
                     <legend>Datos Personales</legend>
                         <label>Nombre Completo:<sup>*</sup>
@@ -107,9 +112,9 @@
                 <button type="reset">Borrar Formulario</button>
             </form>
         </section>
-        <section id="faq-contacto"> <!-- SECTION: FAQ accesible mediante detalles/summary -->
-            <h2>Preguntas Frecuentes sobre Colaboración</h2>
-            <p>Consulta esta sección si tu interés es unirte al equipo o reportar un error grave.</p>
+        <section class="faq-contacto"> <!-- SECTION: FAQ accesible mediante detalles/summary -->
+            <h2 class = "faq-contacto__titulo">Preguntas Frecuentes sobre Colaboración</h2>
+            <p class = "faq-contacto__descripcion">Consulta esta sección si tu interés es unirte al equipo o reportar un error grave.</p>
             <details>
                 <summary>¿Puedo reportar errores del sitio web aquí?</summary>
                 <p>Sí, por favor, utiliza la opción "Reporte de Error/Fallo Técnico" en el menú desplegable. Necesitamos saber qué navegador estás utilizando para poder solucionarlo.</p>
@@ -125,16 +130,22 @@
         </section>
     </main>
     <footer>
+    <section class ="pie-pagina__contacto">
         <h2>Contacto</h2>
         <address> <!-- Enlaces de contacto semántico y accesible -->
-            <a href="./contacto.html">Formulario de Contacto</a>
-            <a href="mailto:nintendomania@info.es">Correo electrónico</a>
+            <a href="./contacto.html">Formulario de contacto</a> |
+            <a href="mailto:nintendomania@info.es">Correo electrónico</a> |
             <a href="tel:123456789">Teléfono</a>
         </address>
-        <section>
-            <h2>Información legal</h2>
-            <p>Irene Foncubierta Lobatón 1ºDAW — Proyecto trimestral. El contenido es fan-made. &copy; 2025 NintendoManía.</p>
-        </section>
+    </section>
+    <section class = "pie-pagina__info">
+        <h2>Información legal</h2>
+        <p>
+            Irene Foncubierta Lobatón 1ºDAW — Proyecto trimestral.
+            El contenido es fan-made y sin fines comerciales.
+            &copy; 2025 NintendoManía.
+        </p>
+    </section>
     </footer>
 </body>
 </html>
