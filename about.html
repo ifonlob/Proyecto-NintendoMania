@@ -17,110 +17,102 @@
     <meta name="description" content="NintendoManía: Sobre nosotros">
     <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
     <link rel="icon" href="./assets/imgs/icono_pag.png">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header>
-        <!-- Logotipo principal enlazando al index -->
-        <a href="./index.html">
-            <img src="./assets/imgs/nintendo_mania_logo.webp" alt="Logo principal">
-        </a>    
-        <nav>
-            <!-- Menú global entre todas las secciones clave de la web -->
-            <ul>
-                <li><a href="./sagas/splatoon.html">Splatoon</a></li>
-                <li><a href="./sagas/mario.html">Mario</a></li>
-                <li><a href="./sagas/kirby.html">Kirby</a></li>
-                <li><a href="./comparativas.html">Comparativas</a></li>
-                <li><a href="./contacto.html">Contacto y sugerencias</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <!-- Formulario de búsqueda semántico y accesible -->
-            <form name="buscador">
-                <label>Buscador
-                    <input type="search" name="buscador" placeholder="Buscar...">
-                </label>
-                <button type="submit">
-                    <img src="./assets/imgs/lupa.png" alt="Enviar búsqueda">
-                </button>
-            </form>
-        </nav>
-        <nav>
-            <!-- Índice interno para navegación rápida dentro de la página -->
-            <h2>Índice de contenidos</h2>
-            <ul>
-                <li><a href="#sobre_nosotros">Sobre nosotros</a></li>
-                <li><a href="#pilares">Pilares</a></li>
-                <li><a href="#equipo">Nuestro Equipo</a></li>
-                <li><a href="#cuestionario">Colaboración</a></li>
-            </ul>      
-        </nav>
-    </header>
-    <section id = "sobre_nosotros"> <!-- ========== SECTION: Historia y misión del proyecto ========== -->
-        <h1>Sobre NintendoManía: La Pasión por los Videojuegos Hecha Web</h1>
-        <article>
-            <h2>Nuestra Historia: El Origen de la Manía</h2>
-            <p>NintendoManía nació en 2025 de un grupo de fans y profesionales que nos frustramos buscando análisis realmente profundos y bien organizados sobre el lore de nuestras sagas favoritas (Mario, Splatoon y Kirby).
+    <header class = "cabecera"> 
+            <!-- Logotipo principal y acceso rápido al inicio -->
+            <a class = "cabecera__logo" href = "./index.html">
+                <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Logo principal">
+            </a>
+            <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
+                    <h1 class = "cabecera__menu--titulo"><img src="./assets/imgs/logo_switch.svg" alt="Logo Switch" >Nintendo Manía</h1>
+                <ul class = "cabecera__menu--lista">
+                    <li><a href="./sagas/splatoon.html">Splatoon</a></li>
+                    <li><a href="./sagas/mario.html">Mario</a></li>
+                    <li><a href="./sagas/kirby.html">Kirby</a></li>
+                    <li><a href="./comparativas.html">Comparativas</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./about.html">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+            <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
+                <form name="buscador">
+                    <label class = "buscador__formulario">
+                         <img src="./assets/imgs/lupa.png" alt="Lupa">
+                         <input type="search" name="buscador" placeholder="Buscar...">
+                    </label>
+                </form>
+            </nav> 
+        </header>
+    <section class = "sobre-nosotros"> <!-- ========== SECTION: Historia y misión del proyecto ========== -->
+        <h1 class = "sobre-nosotros__titulo">Sobre NintendoManía: La Pasión por los Videojuegos Hecha Web</h1>
+        <article class = "sobre-nosotros__historia">
+            <h2 class = "historia__titulo">Nuestra Historia: El Origen de la Manía</h2>
+            <p class = "historia__descripcion">NintendoManía nació en 2025 de un grupo de fans y profesionales que nos frustramos buscando análisis realmente profundos y bien organizados sobre el lore de nuestras sagas favoritas (Mario, Splatoon y Kirby).
             Como estábamos hartos de la información a medias. Así que dijimos: "Si no existe la web perfecta, la construimos nosotros." Y así fue como hemos aplicado todo nuestro rigor profesional a la pasión friki.</p>
+            <img class = "historia__imagen" src="./assets/imgs/tres_sagas.png" alt="Mario,Kirby y un Inkling sonriendo.">
         </article>
-        <article>
-            <h2>Nuestro Juramento de Calidad</h2>
-            <p>Creemos que las historias de los videojuegos merecen una tener una buena página web dedicada la cual esté bien estructurada y sea accesible como el mejor juego de la historia.
+        <article class = "sobre-nosotros__juramento">
+            <h2 class = "juramento__titulo">Nuestro Juramento de Calidad</h2>
+            <p class = "juramento__descripcion">Creemos que las historias de los videojuegos merecen una tener una buena página web dedicada la cual esté bien estructurada y sea accesible como el mejor juego de la historia.
             Nuestro juramento es simple: máxima precisión en cada dato y 100% amor por Nintendo.</p>
-            <img src="./assets/imgs/nuestra_mision.jpg" alt="Imagen ilustrativa de la misión de NintendoManía">
+            <img class = "juramento__imagen" src="./assets/imgs/nuestra_mision.jpg" alt="Imagen ilustrativa de la misión de NintendoManía">
         </article>
-    </section>
-    <section id = "pilares"> <!-- ========== SECTION: Pilares y principios clave del sitio ========== -->
-    <section id="pilares">
-        <h2>Nuestros Pilares</h2>
-        <article>
-            <h3>Siempre asegurando la calidad</h3>
-            <p>La calidad de NintendoManía se basa en ser superdetallistas con los datos del juego y obsesivos con la experiencia del lector.
+    </section><!-- ========== SECTION: Pilares y principios clave del sitio ========== -->
+    <section class="pilares">
+        <h2 class = "pilares__titulo">Nuestros Pilares</h2>
+        <article class = "calidad">
+            <h3 class = "calidad__titulo">Siempre asegurando la calidad</h3>
+            <p class = "calidad__descripcion">La calidad de NintendoManía se basa en ser superdetallistas con los datos del juego y obsesivos con la experiencia del lector.
             A continuación te explicamos cómo trabajamos:</p>
-            <ul>
-                <li>
+            <ul class = "calidad__lista">
+                <li class = "calidad__lista--mario">
                     Rigor Cronológico:
                     <p>Cada dato del lore se verifica con fuentes originales de Nintendo. Si no es canon o está mal, ¡no se añade! Ofrecemos el lore más digno en nuestras cronologías.</p>
+                    <img src="./assets/imgs/mario_demostracion.png" alt="Mario golpeando a un bloque ?">
                 </li>
-                <li>
+                <li class = "calidad__lista--kirby">
                     Estructura Clara y Mantenible:
                     <p>Organizamos todo el contenido de forma lógica y modular. Esto significa que la información está siempre donde esperas encontrarla, facilitando la lectura y la búsqueda de datos específicos de cada saga.</p>
+                    <img src="./assets/imgs/kirby_demostracion.png" alt="Kirby con varita estrellada">
                 </li>
-                <li>
+                <li class = "calidad__lista--splatoon">
                     Diseño Universal y Funcional:
                     <p>Nos aseguramos de que el sitio sea completamente accesible para todos y que funcione de manera fluida en cualquier dispositivo, ya sean dispositivos móviles, tablets o apps de escritorio.</p>
+                    <img src="./assets/imgs/splatoon_demostracion.png" alt="Inkling pintando una pared">
                 </li>
             </ul>
         </article>
     </section>
-    <section id = "equipo"> <!-- ========== SECTION: Equipo y roles ========== -->
-    <h2>Conoce al Equipo: Los Maníacos Tras la Web</h2>
-    <p>Somos profesionales que aplicamos nuestros superpoderes de programación y diseño a documentar las mejores sagas del mundo. </p>
-    <article>
-        <h3> Miembro 1 (Irene F.L) - La Arquitecta y Jefa de Contenido</h3>
-        <figure>
+    <section class = "equipo"> <!-- ========== SECTION: Equipo y roles ========== -->
+    <h2 class = "equipo__titulo">Conoce al Equipo: Los Maníacos Tras la Web</h2>
+    <p class = "equipo__descripcion">Somos profesionales que aplicamos nuestros superpoderes de programación y diseño a documentar las mejores sagas del mundo. </p>
+    <article class = "equipo__miembro1">
+        <h3 class = "miembro1__titulo"> Miembro 1 (Irene F.L) - La Arquitecta y Jefa de Contenido</h3>
+        <figure class = "miembro1__figura">
             <figcaption>Saga Favorita: Splatoon.</figcaption>
             <img src="./assets/imgs/obsesión_splatoon.jpg" alt="Imagen representativa de Splatoon">
         </figure>
-        <p>Mi trabajo es el esqueleto de esta web, soy la responsable de que la estructura sea perfecta y funcione.
+        <p class = "miembro1__descripcion">Mi trabajo es el esqueleto de esta web, soy la responsable de que la estructura sea perfecta y funcione.
              Siempre he sido fanática de Splatoon y por ello he puesto mucho empeño en este proyecto web.</p>
     </article>
-    <article>
-        <h3>Miembro 2 (David) - El Historiador y Experto en Lore</h3>
-        <figure>
+    <article class = "equipo__miembro2">
+        <h3 class = "miembro2__titulo">Miembro 2 (David) - El Historiador y Experto en Lore</h3>
+        <figure class = "miembro2__figura">
             <figcaption>Saga Favorita: Super Mario Bros.</figcaption>   
             <img src="./assets/imgs/david_mariobros.jpg" alt="Imagen representativa de Mario">
         </figure>
-        <p>Soy el guardián de las cronologías ya que me he asegurado de que cada salto de Mario sea históricamente preciso.
+        <p class = "miembro2__descripcion">Soy el guardián de las cronologías ya que me he asegurado de que cada salto de Mario sea históricamente preciso.
             Mi objetivo es que la página esté lo más completa posible en cuanto a información y curiosidades se refiere.</p>
     </article>
-    <article>
-        <h3>Miembro 3 (Lucía) - La Maestra del Diseño y la Experiencia</h3>
-        <figure>
+    <article class = "equipo__miembro3">
+        <h3 class = "miembro3__titulo">Miembro 3 (Lucía) - La Maestra del Diseño y la Experiencia</h3>
+        <figure class = "miembro3__figura">
             <figcaption>Saga Favorita: Kirby.</figcaption>
             <img src="./assets/imgs/imagen_lucia.jpg" alt="Imagen de Kirby volando con globos de fondo">
         </figure>
-        <p>Yo me encargo de que todo luzca bien en tu móvil, tu tablet y tu escritorio sin que exista ningún fallo.
+        <p class = "miembro3__descripcion">Yo me encargo de que todo luzca bien en tu móvil, tu tablet y tu escritorio sin que exista ningún fallo.
             Hago que la navegación sea tan suave y placentera como el vuelo de Kirby.</p>
     </article>
     </section>
