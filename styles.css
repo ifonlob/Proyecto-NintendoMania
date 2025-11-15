@@ -466,7 +466,7 @@ footer {
   font-size: 1.2rem;
   text-align: center;
   color: #fff;
-  background: #3bc7e6;
+  background: var(--color-principal);
   border-radius: 2rem;
   padding: 1.2rem;
   margin-bottom: 1rem;
@@ -477,7 +477,7 @@ footer {
 .puntos-destacados__kirby a:active,
 .puntos-destacados__mario a:active
 {
-  background: #ffa0e5;
+  background: var(--color-secundario);
   color: var(--color-texto);
   transform: scale(1);
 }
@@ -514,7 +514,7 @@ footer {
 .puntos-destacados__splatoon summary:focus-visible,
 .puntos-destacados__kirby summary:focus-visible,
 .puntos-destacados__mario summary:focus-visible {
-  background: #ff78b4;
+  background: var(--color-secundario);
   color: #232323;
 }
 
@@ -527,7 +527,7 @@ footer {
 }
 
 .pie-pagina__contacto a:hover{
-  color: #ff78b4;
+  color: var(--color-secundario-);
 }
 
 
@@ -547,6 +547,7 @@ footer {
 }
 
 .colaboracion__descripcion{
+  font-family: var(--fuente-base);
   text-align: center;
   font-weight: 600;
   font-size: larger;
@@ -557,6 +558,7 @@ footer {
  flex-direction: column;
  gap:2rem;
  text-align: center;
+ font-family: var(--fuente-base);
  font-size: larger;
  font-weight: 600;
 }
@@ -627,7 +629,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  border-color: #3178f0;
+  border-color: var(--color-secundario);
   outline: none;
 }
 
@@ -676,6 +678,13 @@ button[type="reset"]:hover{
   font-size: 1.3rem;
   cursor: pointer;
   margin: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+}
+
+.faq-contacto summary:hover{
+  background-color: var(--color-secundario); 
+  transform: translateY(-6px)
 }
 
 .faq-contacto__titulo{
@@ -691,6 +700,7 @@ button[type="reset"]:hover{
 }
 
 /* ABOUT US*/
+
 .sobre-nosotros{
   display: flex;
   flex-direction: column;
@@ -702,6 +712,7 @@ button[type="reset"]:hover{
   font-family: var(--fuente-secundaria);
   font-size: 1.5rem;
   margin: 2rem;
+  text-align: center;
 }
 
 .sobre-nosotros__historia{
@@ -719,6 +730,7 @@ button[type="reset"]:hover{
 
 .historia__descripcion{
   font-family: var(--fuente-base);
+  text-align: center;
   font-weight: 600;
 }
 
@@ -743,6 +755,7 @@ button[type="reset"]:hover{
 
 .juramento__descripcion{
   font-family: var(--fuente-base);
+  text-align: center;
   font-weight: 600;
 }
 
@@ -787,7 +800,6 @@ button[type="reset"]:hover{
 .calidad__lista{
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
   gap:2rem;
 }
 
@@ -808,6 +820,7 @@ button[type="reset"]:hover{
 .calidad__lista--kirby,.calidad__lista--mario,.calidad__lista--splatoon{
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-family: var(--fuente-base);
   gap:2rem;
   width: 33%;
@@ -831,7 +844,7 @@ button[type="reset"]:hover{
 .equipo__descripcion{
   font-family: var(--fuente-base);
   width: 100%;
-  text-align: center  ;
+  text-align: center;
   font-weight: 600;
   margin-bottom: 2rem;
 }
@@ -856,4 +869,62 @@ button[type="reset"]:hover{
   font-family: var(--fuente-base);
   font-weight: 600;
   margin-bottom: 2rem;
+}
+
+.cuestionario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  margin:2rem;
+}
+
+.cuestionario__titulo{
+  font-family: var(--fuente-secundaria);
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 2rem;
+}
+
+.cuestionario__descripcion{
+  font-family: var(--fuente-base);
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 2rem;
+}
+
+.cuestionario__figura{
+  font-family: var(--fuente-base);
+  width: 100%;
+  text-align: center ;
+  font-weight: 600;
+}
+
+.cuestionario__figura--imagen{
+  border-radius: 5rem;
+}
+
+.cuestionario__figura--descripcion{
+  margin-top: 2rem;
+}
+
+.cuestionario__enlace{
+  display: block;
+  color:white;
+  margin:2rem;
+  padding:1rem 2rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  background-color: var(--color-principal);
+  font-family: var(--fuente-base);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+
+}
+
+.cuestionario__enlace:hover, 
+.cuestionario__enlace:focus {
+  background-color: var(--color-secundario); 
+  transform: translateY(-6px)
 }
