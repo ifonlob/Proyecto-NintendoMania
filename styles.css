@@ -15,7 +15,7 @@
 
 :root{
   --color-principal: #800E13;
-  --color-secundario: #464D77;
+  --color-secundario: #0074D9 ;
   --color-texto: #232323;
   --fuente-base: 'Montserrat', Arial, sans-serif;
   --fuente-secundaria: 'Press Start 2P', monospace;
@@ -308,7 +308,7 @@ footer {
   background: rgba(255,255,255,0.7);
   border-radius: 6rem;
   border: 3px solid white;
-  transition: box-shadow 0.35s, transform 0.25s;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .sagas-principales__mario:hover,.sagas-principales__splatoon:hover,.sagas-principales__kirby:hover{
@@ -390,7 +390,7 @@ footer {
   gap: 1.5rem;
   max-width: 400px;
   width: 100%;
-  transition: box-shadow 0.35s, transform 0.25s;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
 
@@ -430,7 +430,7 @@ footer {
 
 .newsletter__boton:hover{
   transform: translateY(-6px);
-  transition: box-shadow 0.65s, transform 0.45s;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 
 }
 
@@ -479,7 +479,7 @@ footer {
 {
   background: var(--color-secundario);
   color: var(--color-texto);
-  transform: scale(1);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 .puntos-destacados__splatoon a,
@@ -927,4 +927,157 @@ button[type="reset"]:hover{
 .cuestionario__enlace:focus {
   background-color: var(--color-secundario); 
   transform: translateY(-6px)
+}
+
+/* COMPARATIVAS */
+
+.comparativas__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 2rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+.hitos,.evolucion-kirby,.evolucion-mario,.evolucion-splat{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  margin:2rem;
+}
+
+.hitos__titulo,.evolucion-kirby__titulo,.evolucion-mario__titulo,.evolucion-splat__titulo{
+  font-family: var(--fuente-secundaria);
+  width: 100%;
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.hitos__descripcion,.evolucion-kirby__descripcion,.evolucion-mario__descripcion,.evolucion-splat__descripcion{
+  font-family: var(--fuente-base);
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.hitos__tabla,.evolucion-kirby__tabla,.evolucion-mario__tabla,.evolucion-splat__tabla{
+  width: 100%;
+  max-width: 800px;
+  border-collapse: collapse;
+  font-family: var(--fuente-base);
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  background: #fff;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.hitos__tabla--titulo,.evolucion-kirby__tabla--titulo,.evolucion-splat__tabla--titulo,.evolucion-mario__tabla--titulo{
+  font-family: var(--fuente-secundaria);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  background-color: var(--color-principal);
+  color: #fff;
+}
+
+.hitos__tabla--head th,.evolucion-kirby__tabla--head th,.evolucion-mario__tabla--head th,.evolucion-splat__tabla--head th {
+  font-family: var(--fuente-base);
+  font-weight: 600;
+  color: var(--color-texto);
+  background: var(--color-secundario);
+  padding: 1rem;
+  border-bottom: 3px solid var(--color-principal);
+  text-align: center;
+}
+
+.hitos__tabla--body th,
+.hitos__tabla--body td,
+.evolucion-kirby__tabla--body th,
+.evolucion-kirby__tabla--body td,
+.evolucion-mario__tabla--body th,
+.evolucion-mario__tabla--body td,
+.evolucion-splat__tabla--body th,
+.evolucion-splat__tabla--body td,
+.evolucion-splat__tabla--footer td,
+.evolucion-kirby__tabla--footer td,
+.evolucion-mario__tabla--footer td{
+  font-family: var(--fuente-base);
+  padding: 1rem;
+  text-align: center;
+  border-bottom: 1px solid #e7e7e7;
+  transition: background 0.3s ease;
+}
+
+.hitos__tabla--body th,.evolucion-kirby__tabla--body th,.evolucion-mario__tabla--body th,.evolucion-splat__tabla--body th {
+  font-weight: 600;
+  color: var(--color-principal);
+  background: #faf7f7;
+}
+
+.hitos__tabla--body tr:hover td,
+.hitos__tabla--body tr:hover th,
+.evolucion-splat__tabla--body tr:hover td,
+.evolucion-splat__tabla--body tr:hover th,
+.evolucion-splat__tabla--footer td:hover,
+.evolucion-mario__tabla--body tr:hover td,
+.evolucion-mario__tabla--body tr:hover th,
+.evolucion-mario__tabla--footer td:hover,
+.evolucion-kirby__tabla--body tr:hover td,
+.evolucion-kirby__tabla--body tr:hover th,
+.evolucion-kirby__tabla--footer td:hover {
+  background: #f7f5ff;
+}
+
+.analisis{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap:1.2rem;
+}
+
+.analisis__titulo{
+  width: 100%;
+  text-align: center;
+  font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
+  margin:2rem;
+}
+
+.analisis__descripcion{
+  width: 100%;
+  text-align: center;
+  font-family: var(--fuente-base);
+  margin:2rem;
+}
+
+.analisis__splatoon--titulo,.analisis__mario--titulo,.analisis__kirby--titulo{
+  text-align: center;
+  font-family: var(--fuente-secundaria);
+
+}
+
+.analisis__splatoon--descripcion,.analisis__mario--descripcion,.analisis__kirby--descripcion{
+  text-align: center;
+  font-family: var(--fuente-base);
+}
+
+
+.analisis__splatoon,.analisis__kirby,.analisis__mario{
+  display: flex;
+  flex-direction: column;
+  gap:1rem;
+  align-items: center;
+  min-width: 280px;
+  width: 30%;
+  margin:2rem;
+}
+
+.analisis__splatoon--imagen,.analisis__mario--imagen,.analisis__kirby--imagen{
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 3rem;
 }
