@@ -251,35 +251,42 @@
                 <h3 class = analisis__kirby--titulo>Kirby y la Consistencia del Diseño Accesible</h3>
                 <p class = "analisis__kirby--descripcion">Kirby representa la consistencia y el perfeccionamiento. Su alta puntuación (88/100) es un testimonio de la calidad constante, centrada en la evolución de su mecánica central: las Habilidades de Copia.</p>
                 <p class = "analisis__kirby--descripcion">La saga ha evolucionado su arte y ha dado grandes saltos (como la introducción de las habilidades o la transición al 3D en Tierra Olvidada), pero siempre priorizando la jugabilidad accesible y la exploración de las habilidades de copia, lo que garantiza una base de fans leal a través de los años.</p>
-                <img class = "analisis__kirby--imagen" src="./assets/imgs/analisis-kirby.jpeg" alt="Kirby y Waddle Dee decorando una pared">
+                <img class = "analisis__kirby--imagen" src="./assets/imgs/analisis_kirby.jpg" alt="Kirby y Waddle Dee decorando una pared">
             </article>
         </section>
         <aside class="voto"> <!-- ASIDE: Formulario de votación y llamada a la acción -->
             <h3 class = "voto__titulo">El gran dilema... ¿Quién es el Campeón?</h3>
             <p class = "voto__descripcion">Hemos analizado los datos, pero ahora te toca a ti. ¿Cuál de estas sagas crees que tiene el mejor lore y novedades más impactantes?</p>
-            <form  method="post">
-                <fieldset>
-                    <legend>Vota por tu Saga Favorita (Una opción):</legend>
+            <figure class = "voto__figura">
+                <img class = "voto__figura--imagen" src="./assets/imgs/voto_incentivo.png" alt="Imagen de una urna">
+                <figcaption>¡Tu voto cuenta!</figcaption>
+            </figure>
+            <form class = "voto__formulario" method="post">
+                <fieldset class = "voto__formulario--campo">
+                    <legend class = "voto__formulario--leyenda">Vota por tu Saga Favorita:</legend>
                     <p>
                     <label>
                         <input type="radio" name="voto-campeon" value="mario" required> Super Mario Bros
+                        <img src="./assets/imgs/letra_m.png" alt="Letra M de Mario Bros">
                     </label>
                     </p>
                     <p>
                     <label>
                         <input type="radio" name="voto-campeon" value="kirby"> Kirby
+                        <img src="./assets/imgs/icono_kirby.webp" alt="Kirby saltando">
                     </label>
                     </p>
                     <p>
                     <label>
                         <input type="radio" name="voto-campeon" value="splatoon"> Splatoon
+                        <img src="./assets/imgs/splatoon_logo.png" alt="Logo Splatoon">
                     </label>
                     </p>
-                    <button type="submit">Votar</button>
+                    <button class = "voto__formulario--boton type="submit">Votar</button>
                 </fieldset>
             </form>
-            <figure>
-                <img src="./assets/imgs/copa_nintendomania.png" alt="Icono de una copa dorada del ganador.">
+            <figure class = "voto__figura">
+                <img class = "voto__figura--imagen" src="./assets/imgs/copa_nintendomania.jpg" alt="Icono de una copa dorada del ganador.">
                 <figcaption>¡Demuestra tu lealtad a la saga que más te impactó!</figcaption>
             </figure>
         </aside>
