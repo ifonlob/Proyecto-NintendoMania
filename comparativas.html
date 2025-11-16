@@ -17,52 +17,42 @@
     <meta name="description" content="Comparativa de datos, géneros y rendimiento de nuestras sagas">
     <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
     <link rel="icon" href="./assets/imgs/icono_pag.png">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <header>
-        <!-- Logotipo principal, enlazando al inicio -->
-        <a href="./index.html">
-            <img src="./assets/imgs/nintendo_mania_logo.webp" alt="Logo principal">
-        </a>    
-        <nav>
-            <!-- Menú global de navegación entre sagas y páginas principales -->
-            <ul>
-                <li><a href="./sagas/splatoon.html">Splatoon</a></li>
-                <li><a href="./sagas/mario.html">Mario</a></li>
-                <li><a href="./sagas/kirby.html">Kirby</a></li>
-                <li><a href="./contacto.html">Contacto y sugerencias</a></li>
-                <li><a href="./about.html">Sobre nosotros</a></li>
-            </ul>
-        </nav>
-        <nav>
-            <!-- Formulario semántico de búsqueda -->
-            <form name="buscador">
-                <label>Buscador
-                    <input type="search" name="buscador" placeholder="Buscar...">
-                </label>
-                <button type="submit">
-                    <img src="./assets/imgs/lupa.png" alt="Enviar búsqueda">
-                </button>
-            </form>
-        </nav>
-        <h2>Índice de Contenidos</h2> <!-- Índice interno para navegación rápida por secciones -->
-        <ul>
-            <li><a href="#hitos">Principales Hitos</a></li>
-            <li><a href="#evolucion_splat">Evolución Splatoon</a></li>
-            <li><a href="#evolucion_kirby">Evolución Kirby</a></li>
-            <li><a href="#evolucion_mario">Evolución Mario</a></li>
-            <li><a href="#analisis">Breve Análisis</a></li>
-            <li><a href="#voto">¡Vota a tu favorito!</a></li>
-        </ul>
-    </header>
+    <header class = "cabecera"> 
+            <!-- Logotipo principal y acceso rápido al inicio -->
+            <a class = "cabecera__logo" href = "./index.html">
+                <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Logo principal">
+            </a>
+            <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
+                    <h1 class = "cabecera__menu--titulo"><img src="./assets/imgs/logo_switch.svg" alt="Logo Switch" >Nintendo Manía</h1>
+                <ul class = "cabecera__menu--lista">
+                    <li><a href="./sagas/splatoon.html">Splatoon</a></li>
+                    <li><a href="./sagas/mario.html">Mario</a></li>
+                    <li><a href="./sagas/kirby.html">Kirby</a></li>
+                    <li><a href="./comparativas.html">Comparativas</a></li>
+                    <li><a href="./contacto.html">Contacto</a></li>
+                    <li><a href="./about.html">Sobre nosotros</a></li>
+                </ul>
+            </nav>
+            <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
+                <form name="buscador">
+                    <label class = "buscador__formulario">
+                         <img src="./assets/imgs/lupa.png" alt="Lupa">
+                         <input type="search" name="buscador" placeholder="Buscar...">
+                    </label>
+                </form>
+            </nav>
+        </header>
     <main>
-        <h1>Comparativas y Datos Clave de las Sagas</h1>  <!-- SECTION: Tabla comparativa de hitos principales entre sagas -->
-        <section id ="hitos">
-            <h2>Comparativa I: Hitos de las Sagas Principales</h2>
-            <p>Análisis de los lanzamientos, plataformas y métricas de los títulos más representativos de cada saga.</p>
-            <table>
-                <caption>Datos clave: Primeros lanzamientos y rendimiento de las sagas.</caption>
-                <thead>
+        <h1 class = "comparativas__titulo">Comparativas y Datos Clave de las Sagas</h1>  <!-- SECTION: Tabla comparativa de hitos principales entre sagas -->
+        <section class ="hitos">
+            <h2 class = "hitos__titulo">Comparativa I: Hitos de las Sagas Principales</h2>
+            <p class = "hitos__descripcion">Análisis de los lanzamientos, plataformas y métricas de los títulos más representativos de cada saga.</p>
+            <table class = "hitos__tabla">
+                <caption class = "hitos__tabla--titulo">Datos clave: Primeros lanzamientos y rendimiento de las sagas.</caption>
+                <thead class = "hitos__tabla--head">
                     <tr>
                         <th scope="col">Saga</th>
                         <th scope="col">Primer Título</th>
@@ -71,7 +61,7 @@
                         <th scope="col">Puntuación media</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class = "hitos__tabla--body">
                     <tr>
                         <th scope="row">Super Mario Bros.</th>
                         <td>Super Mario Bros.</td>
@@ -96,12 +86,12 @@
                 </tbody>
             </table>
         </section>
-        <section id ="evolucion_splat"> <!-- SECTION: Evolución técnica de Splatoon -->
-            <h2>Comparativa II: Evolución Técnica de la Saga Splatoon</h2>
-            <p>Detalle de las principales novedades de jugabilidad y rendimiento introducidas por cada título de Splatoon.</p>
-            <table>
-                <caption>Detalles técnicos y de rendimiento de los juegos de Splatoon.</caption>
-                <thead>
+        <section class ="evolucion-splat"> <!-- SECTION: Evolución técnica de Splatoon -->
+            <h2 class = "evolucion-splat__titulo">Comparativa II: Evolución Técnica de la Saga Splatoon</h2>
+            <p class = "evolucion-splat__descripcion">Detalle de las principales novedades de jugabilidad y rendimiento introducidas por cada título de Splatoon.</p>
+            <table class = "evolucion-splat__tabla">
+                <caption class = "evolucion-splat__tabla--titulo">Detalles técnicos y de rendimiento de los juegos de Splatoon.</caption>
+                <thead class = "evolucion-splat__tabla--head">
                     <tr>
                         <th scope="col">Título</th>
                         <th scope="col">Lanzamiento</th>
@@ -110,8 +100,7 @@
                         <th scope="col">Ventas (Aprox.)</th>
                     </tr>
                 </thead>
-                
-                <tbody>
+                <tbody class = "evolucion-splat__tabla--body">
                     <tr>
                         <th scope="row">Splatoon (Wii U)</th>
                         <td>2015</td>
@@ -134,19 +123,19 @@
                         <td>12.70 millones</td>
                     </tr>
                 </tbody>
-                <tfoot>
+                <tfoot class = "evolucion-splat__tabla--footer">
                     <tr>
                         <td colspan="5">Ventas basadas en informes de Nintendo hasta 2024. La puntuación media es un promedio de la consulta de varias fuentes.</td>
                     </tr>
                 </tfoot>
             </table>
         </section>
-        <section id="evolucion_mario"> <!-- SECTION: Hitos Mario y evolución -->
-            <h2>Comparativa II: Hitos de la Evolución de la Saga Mario</h2>
-            <p>Detalle de las principales innovaciones de jugabilidad e impacto introducidas por los títulos clave de Mario.</p>
-            <table>
-                <caption>Detalles de innovación y ventas de títulos seleccionados de Super Mario Bros.</caption>
-                <thead>
+        <section class="evolucion-mario"> <!-- SECTION: Hitos Mario y evolución -->
+            <h2 class = "evolucion-mario__titulo">Comparativa III: Hitos de la Evolución de la Saga Mario</h2>
+            <p class = "evolucion-mario__descripcion">Detalle de las principales innovaciones de jugabilidad e impacto introducidas por los títulos clave de Mario.</p>
+            <table class = "evolucion-mario__tabla">
+                <caption class = "evolucion-mario__tabla--titulo">Detalles de innovación y ventas de títulos seleccionados de Super Mario Bros.</caption>
+                <thead class = "evolucion-mario__tabla--head">
                     <tr>
                         <th scope="col">Título</th>
                         <th scope="col">Lanzamiento</th>
@@ -155,7 +144,7 @@
                         <th scope="col">Ventas (Aprox.)</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class = "evolucion-mario__tabla--body">
                     <tr>
                         <th scope="row">Super Mario Bros.</th>
                         <td>1985</td>
@@ -185,19 +174,19 @@
                         <td>26.00 millones</td>
                     </tr>
                 </tbody>
-                <tfoot>
+                <tfoot class = "evolucion-mario__tabla--footer">
                     <tr>
                         <td colspan="5">Ventas basadas en informes de Nintendo hasta 2024. Se incluyen títulos que marcaron un antes y un después en la jugabilidad.</td>
                     </tr>
                 </tfoot>
             </table>
         </section>
-        <section id="evolucion_kirby"> <!-- SECTION: Hitos Kirby y evolución -->
-            <h2>Comparativa II: Hitos de la Evolución de la Saga Kirby</h2>
-            <p>Detalle de las principales innovaciones de jugabilidad e impacto introducidas por los títulos clave de Kirby.</p>
-            <table>
-                <caption>Detalles de innovación y rendimiento de títulos seleccionados de Kirby.</caption>    
-                <thead>
+        <section class="evolucion-kirby"> <!-- SECTION: Hitos Kirby y evolución -->
+            <h2 class="evolucion-kirby__titulo">Comparativa IV: Hitos de la Evolución de la Saga Kirby</h2>
+            <p class="evolucion-kirby__descripcion">Detalle de las principales innovaciones de jugabilidad e impacto introducidas por los títulos clave de Kirby.</p>
+            <table class="evolucion-kirby__tabla">
+                <caption class="evolucion-kirby__tabla--titulo">Detalles de innovación y rendimiento de títulos seleccionados de Kirby.</caption>    
+                <thead class="evolucion-kirby__tabla--head">
                     <tr>
                         <th scope="col">Título</th>
                         <th scope="col">Lanzamiento</th>
@@ -206,7 +195,7 @@
                         <th scope="col">Ventas (Aprox.)</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody class="evolucion-kirby__tabla--body">
                     <tr>
                         <th scope="row">Kirby's Dream Land</th>
                         <td>1992</td>
@@ -236,35 +225,38 @@
                         <td>6.46 millones</td>
                     </tr>
                 </tbody>
-                <tfoot>
+                <tfoot class="evolucion-kirby__tabla--footer">
                     <tr>
                         <td colspan="5">Ventas basadas en informes de Nintendo hasta 2024. Se incluyen títulos que marcaron la introducción de una mecánica fundamental de la saga.</td>
                     </tr>
                 </tfoot>
             </table>
         </section>
-        <section id="analisis">  <!-- SECTION: Análisis de los resultados y tendencias de los datos -->
-            <h2>Análisis de Tendencias: Conclusiones de las diferentes sagas</h2>
-            <p>El estudio de los datos revela patrones clave en la estrategia de Nintendo: la coexistencia exitosa de la innovación con la maestría de los géneros clásicos.</p>
-            <article>
-                <h3>El Fenómeno Splatoon: Éxito a base de ruptura</h3>
-                <p>Splatoon ejemplifica el éxito a través de la ruptura total. La tabla confirma su alto rendimiento crítico (89/100) a pesar de debutar en una consola menos popular (Wii U), demostrando el poder de su mecánica central (Guerra Territorial)</p>
-                <p>El salto a Switch consolidó su base, con ventas que superan los 12 millones, impulsadas por las novedades constantes como Salmon Run y los movimientos avanzados de Splatoon 3.</p>
+        <section class="analisis">  <!-- SECTION: Análisis de los resultados y tendencias de los datos -->
+            <h2 class = "analisis__titulo">Análisis de Tendencias: Conclusiones de las diferentes sagas</h2>
+            <p class = "analisis__descripcion">El estudio de los datos revela patrones clave en la estrategia de Nintendo: la coexistencia exitosa de la innovación con la maestría de los géneros clásicos.</p>
+            <article class = "analisis__splatoon">
+                <h3 class = "analisis__splatoon--titulo">El Fenómeno Splatoon: Éxito a base de ruptura</h3>
+                <p class = "analisis__splatoon--descripcion">Splatoon ejemplifica el éxito a través de la ruptura total. La tabla confirma su alto rendimiento crítico (89/100) a pesar de debutar en una consola menos popular (Wii U), demostrando el poder de su mecánica central (Guerra Territorial)</p>
+                <p class = "analisis__splatoon--descripcion">El salto a Switch consolidó su base, con ventas que superan los 12 millones, impulsadas por las novedades constantes como Salmon Run y los movimientos avanzados de Splatoon 3.</p>
+                <img class = "analisis__splatoon--imagen" src="./assets/imgs/artwork-splatoon.webp" alt="Artwork de Splatoon">
             </article>
-            <article>
-                <h3>Mario: La Maestría de la Reinvención 3D</h3>
-                <p>La saga Mario demuestra la clave de la longevidad: la reinvención constante sobre una base sólida. La tabla de hitos muestra que cada título 3D introduce un concepto que redefine la exploración, desde el salto dimensional de Mario 64 hasta la mecánica de captura de Odyssey.</p>
-                <p>Sus altas puntuaciones críticas (93/100) y las ventas masivas demuestran que el público recompensa esta estrategia de innovación controlada donde el salto y el diseño de niveles siguen siendo la prioridad.</p>
+            <article class = "analisis__mario">
+                <h3 class = "analisis__mario--titulo">Mario: La Maestría de la Reinvención 3D</h3>
+                <p class = "analisis__mario--descripcion">La saga Mario demuestra la clave de la longevidad: la reinvención constante sobre una base sólida. La tabla de hitos muestra que cada título 3D introduce un concepto que redefine la exploración, desde el salto dimensional de Mario 64 hasta la mecánica de captura de Odyssey.</p>
+                <p class = "analisis__mario--descripcion">Sus altas puntuaciones críticas (93/100) y las ventas masivas demuestran que el público recompensa esta estrategia de innovación controlada donde el salto y el diseño de niveles siguen siendo la prioridad.</p>
+                <img class = "analisis__mario--imagen" src="./assets/imgs/mario-bros-movie-mario-luigi.jpg" alt="Mario y Luigi en la película">
             </article>
-            <article>
-                <h3>Kirby y la Consistencia del Diseño Accesible</h3>
-                <p>Kirby representa la consistencia y el perfeccionamiento. Su alta puntuación (88/100) es un testimonio de la calidad constante, centrada en la evolución de su mecánica central: las Habilidades de Copia.</p>
-                <p>La saga ha evolucionado su arte y ha dado grandes saltos (como la introducción de las habilidades o la transición al 3D en Tierra Olvidada), pero siempre priorizando la jugabilidad accesible y la exploración de las habilidades de copia, lo que garantiza una base de fans leal a través de los años.</p>
+            <article class = "analisis__kirby">
+                <h3 class = analisis__kirby--titulo>Kirby y la Consistencia del Diseño Accesible</h3>
+                <p class = "analisis__kirby--descripcion">Kirby representa la consistencia y el perfeccionamiento. Su alta puntuación (88/100) es un testimonio de la calidad constante, centrada en la evolución de su mecánica central: las Habilidades de Copia.</p>
+                <p class = "analisis__kirby--descripcion">La saga ha evolucionado su arte y ha dado grandes saltos (como la introducción de las habilidades o la transición al 3D en Tierra Olvidada), pero siempre priorizando la jugabilidad accesible y la exploración de las habilidades de copia, lo que garantiza una base de fans leal a través de los años.</p>
+                <img class = "analisis__kirby--imagen" src="./assets/imgs/analisis-kirby.jpeg" alt="Kirby y Waddle Dee decorando una pared">
             </article>
         </section>
-        <aside id="voto"> <!-- ASIDE: Formulario de votación y llamada a la acción -->
-            <h3>El gran dilema... ¿Quién es el Campeón?</h3>
-            <p>Hemos analizado los datos, pero ahora te toca a ti. ¿Cuál de estas sagas crees que tiene el mejor lore y novedades más impactantes?</p>
+        <aside class="voto"> <!-- ASIDE: Formulario de votación y llamada a la acción -->
+            <h3 class = "voto__titulo">El gran dilema... ¿Quién es el Campeón?</h3>
+            <p class = "voto__descripcion">Hemos analizado los datos, pero ahora te toca a ti. ¿Cuál de estas sagas crees que tiene el mejor lore y novedades más impactantes?</p>
             <form  method="post">
                 <fieldset>
                     <legend>Vota por tu Saga Favorita (Una opción):</legend>
