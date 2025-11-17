@@ -27,8 +27,7 @@ body{
   background: url(./assets/imgs/fondo_index.png)
 }
 
-a {
-  color: var(--color-texto); 
+a,a:hover,a:focus{
   text-decoration: none;
 }
 
@@ -37,20 +36,6 @@ img {
   height: auto;
 }
 
-
-footer {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding: 2rem;
-  word-break: break-word;
-  width: 100%;
-  gap:2rem;
-  max-width: 100%;
-  background: url(./assets/imgs/fondo_footer.png);
-  background-position-y: 20px;
-  font-family: var(--fuente-secundaria);
-}
 
 /* CABECERA */
 
@@ -74,8 +59,8 @@ footer {
 .cabecera__logo{
   display: flex;
   justify-content: center;
- width: 15%;
- transition: box-shadow 0.35s, transform 0.25s;
+  width: 15%;
+  transition: box-shadow 0.35s, transform 0.25s;
 }
 
 .cabecera__logo:hover{
@@ -167,6 +152,96 @@ footer {
   font-size: 1rem;
 }
 
+/* FOOTER */
+
+.pie-pagina{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap:2rem;
+  max-width: 100%;
+  background: url(./assets/imgs/fondo_footer.png);
+  background-position-y: 20px;
+}
+
+.pie-pagina__contacto,.pie-pagina__info{
+  width: 50%;
+}
+
+.pie-pagina__contacto--titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+
+.pie-pagina__info--titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.8rem;
+  text-align: center;
+  padding-top:1.2rem;
+}
+
+.pie-pagina__contacto--informacion,.pie-pagina__info--descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.footer-extra {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 20%;
+  padding-left: 1rem;
+}
+
+.footer-extra__imagen {
+  max-width: 50%; 
+  height: auto;
+  border-radius: 50%;
+  padding:0.5rem 0;
+  transition: transform 0.3s ease;
+}
+
+.footer-extra__imagen:hover{
+  transform: translateY(-6px);
+}
+.footer-extra__boton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; 
+  bottom: 30px;    
+  right: 30px;     
+  z-index: 2;
+  background-color: var(--color-principal);
+  color:white;
+  font-size: 2rem;
+  text-decoration: none;
+  text-align: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid var(--color-secundario);
+  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+}
+
+.footer-extra__boton::after {
+  content: '↑';
+  font-weight: 9000;
+  line-height: 1;
+}
+
+.footer-extra__boton:hover {
+  color:var(--color-principal);
+  background-color: var(--color-secundario); 
+  border-color: var(--color-principal);
+  transform: translateY(-4px) scale(1.05);
+
+}
+
 /* INDEX */
 
 .introduccion{
@@ -176,7 +251,6 @@ footer {
   align-items: center;
   margin: 2rem auto;
   padding: 2rem;
-  word-break: break-word; 
 }
 
 .introduccion__titulo{
@@ -210,7 +284,7 @@ footer {
   transform: translateY(-6px);
 }
 
-.mejores-sagas__imagenes img:hover {
+.mejores-sagas__figura--imagen:hover {
   transform: scale(1) rotate(-3deg);
 }
 .mejores-sagas__titulo {
@@ -223,7 +297,7 @@ footer {
   text-align: center;
 }
 
-.mejores-sagas__imagenes {
+.mejores-sagas__figura{
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -231,25 +305,24 @@ footer {
   margin: 0 auto;
 }
 
-.mejores-sagas__imagenes img {
+.mejores-sagas__figura--imagen{
   width: 140px;
   height: 140px;
   object-fit: cover;
   border-radius: 18px;
-  background: rgba(255,255,255,0.3);
   transition: transform 0.2s, box-shadow 0.22s;
 }
 
-.mejores-sagas__imagenes img[alt="Letra M de Mario Bros"]{
-  background-color:#2773F5;
+.mejores-sagas__figura--imagen[alt="Letra M de Mario Bros"]{
+  background-color:#2773F598;
 }
 
-.mejores-sagas__imagenes img[alt="Inkling de Splatoon"]{
-  background-color: #666565;
+.mejores-sagas__figura--imagen[alt="Inkling de Splatoon"]{
+  background-color: #66656598;
 }
 
-.mejores-sagas__imagenes img[alt="Kirby"]{
-  background-color: #FF2626;
+.mejores-sagas__figura--imagen[alt="Kirby"]{
+  background-color: #FF262698;
 }
 
 .sagas-principales {
@@ -267,30 +340,28 @@ footer {
 .sagas-principales__titulo{
   font-family: var(--fuente-secundaria);
   text-align: center;
-  margin: 2rem 0;
   width: 80%;
   padding: 2rem;
-  word-break: break-word; 
 }
 
 
-.sagas-principales p{
+.sagas-principales__mario--descripcion,.sagas-principales__splatoon--descripcion,.sagas-principales__kirby--descripcion{
+  font-family: var(--fuente-base);
   padding-top: 1rem;
   max-width: 260px;
   margin: 0 auto;
   text-align: center;
   font-weight: 600;
-  word-break: break-word; 
   
 }
 
-.sagas-principales h3{
+.sagas-principales__mario--titulo,.sagas-principales__splatoon--titulo,.sagas-principales__kirby--titulo{
   padding:2.5rem;
-  font-size: 2rem;
-
+  font-size: 1.4rem;
+  font-family: var(--fuente-secundaria);
  }
 
-.sagas-principales img{
+.sagas-principales__mario--imagen,.sagas-principales__splatoon--imagen,.sagas-principales__kirby--imagen{
   background: rgba(255,255,255,0.7);
   border-radius: 4rem;
   transition: box-shadow 0.35s, transform 0.25s;
@@ -299,7 +370,7 @@ footer {
   object-fit: cover;
 }
 
-.sagas-principales img:hover {
+.sagas-principales__mario--imagen:hover,.sagas-principales__splatoon--imagen:hover,.sagas-principales__kirby--imagen:hover{
   transform: scale(1) rotate(-3deg);
 }
 
@@ -324,10 +395,9 @@ footer {
   flex-direction: column;
   width:25%;
   margin: 2rem;
-  word-break: break-word; 
 }
 
-.noticias-destacadas img{
+.noticias-destacadas__mario--imagen,.noticias-destacadas__splatoon--imagen,.noticias-destacadas__kirby--imagen{
   border-radius: 6rem;
   width: 260px;               
   height: 160px;                          
@@ -336,17 +406,22 @@ footer {
   
 }
 
-.noticias-destacadas figcaption{
-  font-size: 1.5rem;
+.noticias-destacadas__mario--descripcion,.noticias-destacadas__splatoon--descripcion,.noticias-destacadas__kirby--descripcion{
+  font-size: 1.2rem;
+  font-family: var(--fuente-base);
 }
 
 .noticias-destacadas__titulo{
   font-family: var(--fuente-secundaria);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   width: 100%;
   text-align: center;
 }
 
+.noticias-destacadas__kirby--titulo,.noticias-destacadas__mario--titulo,.noticias-destacadas__splatoon--titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1rem;
+}
 .noticias-destacadas__splatoon,.noticias-destacadas__kirby,.noticias-destacadas__mario{
   display: flex;
   flex-direction: column;
@@ -375,13 +450,15 @@ footer {
 .newsletter__descripcion{
   font-size: 1.2rem;
   font-weight: 400;
+  font-family: var(--fuente-base);
   margin:2rem;
 }
 
 .newsletter__formulario {
   display: flex;
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 1.15rem;
+  font-family: var(--fuente-base);
   background: rgba(255,255,255,0.7);
   border: 3px solid white;
   border-radius: 2rem;
@@ -402,7 +479,7 @@ footer {
   display: flex;
   align-items: center;
   width: 100%;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
   gap:1rem;
   white-space: nowrap;
 
@@ -418,8 +495,6 @@ footer {
 }
 
 .newsletter__boton {
-  background: #C7A9C6;
-  color: #fff;
   font-weight: bold;
   border: none;
   border-radius: 1rem;
@@ -429,6 +504,8 @@ footer {
 }
 
 .newsletter__boton:hover{
+  background-color: var(--color-secundario);
+  border: 4px solid var(--color-principal);
   transform: translateY(-6px);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 
@@ -439,7 +516,6 @@ footer {
   flex-direction: column;
   width:25%;
   margin: 2rem;
-  word-break: break-word; 
 }
 
 
@@ -631,10 +707,6 @@ select:focus,
 textarea:focus {
   border-color: var(--color-secundario);
   outline: none;
-}
-
-input[type="radio"] {
-  margin-right: 0.5rem;
 }
 
 button[type="submit"],
@@ -1131,7 +1203,6 @@ button[type="reset"]:hover{
   width: 100%;
   display: flex;
   flex-direction: column;
-  align-items: ;
   font-weight: 600;
   gap:2rem;
 }
