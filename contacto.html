@@ -19,7 +19,7 @@
     <link rel="icon" href="./assets/imgs/icono_pag.png">
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body id="inicio">
     <header class="cabecera">
         <!-- Logotipo principal y acceso rápido al inicio -->
         <a class="cabecera__logo" href="./index.html">
@@ -55,7 +55,7 @@
             <p class="colaboracion__descripcion">¡Queremos escuchar tu opinión! Usa este formulario para consultas, sugerencias de contenido o si deseas unirte a nuestro equipo de frikis de Nintendo.</p>
             <figure class="colaboracion__figura">
                 <img class="colaboracion__figura--imagen" src="./assets/imgs/queremos_escucharte.jpg" alt="Imagen ilustrativa de afiliación con fans">
-                <figcaption>Tu voz es clave para construir la mejor comunidad NintendoManía.</figcaption>
+                <figcaption class = "colaboracion__figura--descripcion">Tu voz es clave para construir la mejor comunidad NintendoManía.</figcaption>
             </figure>
         </section>
         <section class="contacto">
@@ -156,23 +156,26 @@
             </article>
         </section>
     </main>
-    <footer>
-        <section class="pie-pagina__contacto">
-            <h2>Contacto</h2>
-            <address>
-                <!-- Enlaces de contacto semántico y accesible -->
+    <footer class = "pie-pagina">
+        <section class ="pie-pagina__contacto">
+            <h2 class = "pie-pagina__contacto--titulo">Contacto</h2>
+            <address class = "pie-pagina__contacto--informacion"> <!-- Enlaces de contacto semántico y accesible -->
                 <a href="./contacto.html">Formulario de contacto</a> |
                 <a href="mailto:nintendomania@info.es">Correo electrónico</a> |
                 <a href="tel:123456789">Teléfono</a>
             </address>
         </section>
-        <section class="pie-pagina__info">
-            <h2>Información legal</h2>
-            <p>
+        <section class = "pie-pagina__info">
+            <h2 class = "pie-pagina__info--titulo">Información legal</h2>
+            <p class = "pie-pagina__info--descripcion">
                 Irene Foncubierta Lobatón 1ºDAW — Proyecto trimestral.
                 El contenido es fan-made y sin fines comerciales.
                 &copy; 2025 NintendoManía.
             </p>
+        </section>
+        <section class = "footer-extra">
+            <img class = "footer-extra__imagen" src="./assets/imgs/logo_principal.png" alt="Logo de NintendoManía">
+            <a href="#inicio" class = "footer-extra__boton"></a>
         </section>
     </footer>
 </body>
