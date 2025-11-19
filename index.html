@@ -123,20 +123,6 @@
                     </figure>
                 </article>
             </article>
-            <article class = "newsletter"> <!-- SECTION 4: Formulario de suscripción a newsletter -->
-                <h2 class = "newsletter__titulo">¿Quieres ser el primero en enterarte de las noticias de tus sagas favoritas? ¡Suscríbete!</h2>
-                <p class = "newsletter__descripcion">Únete a nuestra NintendoManía News para recibir las últimas noticias de tus sagas favoritas directamente en tu correo. ¡No te pierdas los nuevos lanzamientos de Mario, los Splatfests de Splatoon o los secretos de Kirby!</p>
-                <form class = "newsletter__formulario" action="/subscribe" method="post">
-                        <label class="newsletter__label--email">Introduce tu email para suscribirte:
-                            <input type="email" name="email" placeholder="ejemplo@correo.es" required>
-                        </label>
-                        <label class="newsletter__label--checkbox">He leído y acepto la política de privacidad
-                            <input type="checkbox" name="privacidad" required>
-                        </label>
-                    <button class ="newsletter__boton" type="submit">¡Suscribirme al newsletter!</button>
-                </form>
-                <img src="./assets/imgs/personajes_sagas.png" alt="Kirby,Mario e Inkling juntos.">
-            </article>
             <article class = "puntos-destacados">
                 <h3 class = "puntos-destacados__titulo">Puntos destacados por sagas:</h3>
                 <details class = "puntos-destacados__splatoon">
@@ -173,6 +159,20 @@
                     </ul>
                 </details>
             </article>
+        </aside>
+        <aside class = "newsletter"> <!-- SECTION 4: Formulario de suscripción a newsletter -->
+            <h2 class = "newsletter__titulo">¿Quieres ser el primero en enterarte de las noticias de tus sagas favoritas? ¡Suscríbete!</h2>
+            <p class = "newsletter__descripcion">Únete a nuestra NintendoManía News para recibir las últimas noticias de tus sagas favoritas directamente en tu correo. ¡No te pierdas los nuevos lanzamientos de Mario, los Splatfests de Splatoon o los secretos de Kirby!</p>
+            <form class = "newsletter__formulario" action="/subscribe" method="post">
+                    <label class="newsletter__label--email">Introduce tu email para suscribirte:
+                        <input type="email" name="email" placeholder="ejemplo@correo.es" required>
+                    </label>
+                    <label class="newsletter__label--checkbox">He leído y acepto la política de privacidad
+                        <input type="checkbox" name="privacidad" required>
+                    </label>
+                <button class ="newsletter__boton" type="submit">¡Suscribirme al newsletter!</button>
+            </form>
+            <img src="./assets/imgs/personajes_sagas.png" alt="Kirby,Mario e Inkling juntos.">
         </aside>
     </main>
     <footer class = "pie-pagina">
