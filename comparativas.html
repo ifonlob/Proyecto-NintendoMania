@@ -19,7 +19,7 @@
     <link rel="icon" href="./assets/imgs/icono_pag.png">
     <link rel="stylesheet" href="./styles.css">
 </head>
-<body>
+<body id="inicio">
     <header class = "cabecera"> 
             <!-- Logotipo principal y acceso rápido al inicio -->
             <a class = "cabecera__logo" href = "./index.html">
@@ -244,7 +244,7 @@
             <article class = "analisis__mario">
                 <h3 class = "analisis__mario--titulo">Mario: La Maestría de la Reinvención 3D</h3>
                 <p class = "analisis__mario--descripcion">La saga Mario demuestra la clave de la longevidad: la reinvención constante sobre una base sólida. La tabla de hitos muestra que cada título 3D introduce un concepto que redefine la exploración, desde el salto dimensional de Mario 64 hasta la mecánica de captura de Odyssey.</p>
-                <p class = "analisis__mario--descripcion">Sus altas puntuaciones críticas (93/100) y las ventas masivas demuestran que el público recompensa esta estrategia de innovación controlada donde el salto y el diseño de niveles siguen siendo la prioridad.</p>
+                <p class = "analisis__mario--descripcion">Sus altas puntuaciones críticas (93/100) y las ventas masivas demuestran que el público recompensa esta estrategia de innovación donde el salto y el diseño de niveles siguen siendo la prioridad.</p>
                 <img class = "analisis__mario--imagen" src="./assets/imgs/mario-bros-movie-mario-luigi.jpg" alt="Mario y Luigi en la película">
             </article>
             <article class = "analisis__kirby">
@@ -265,20 +265,20 @@
                 <fieldset class = "voto__formulario--campo">
                     <legend class = "voto__formulario--leyenda">Vota por tu Saga Favorita:</legend>
                     <p>
-                    <label>
-                        <input type="radio" name="voto-campeon" value="mario" required> Super Mario Bros
+                    <label class = "voto__formulario--etiqueta">
+                        <input class = "voto__formulario--checkbox" type="radio" name="voto-campeon" value="mario" required> Super Mario Bros
                         <img src="./assets/imgs/letra_m.png" alt="Letra M de Mario Bros">
                     </label>
                     </p>
                     <p>
-                    <label>
-                        <input type="radio" name="voto-campeon" value="kirby"> Kirby
+                    <label class = "voto__formulario--etiqueta">
+                        <input class = "voto__formulario--checkbox" type="radio" name="voto-campeon" value="kirby"> Kirby
                         <img src="./assets/imgs/icono_kirby.webp" alt="Kirby saltando">
                     </label>
                     </p>
                     <p>
-                    <label>
-                        <input type="radio" name="voto-campeon" value="splatoon"> Splatoon
+                    <label class = "voto__formulario--etiqueta">
+                        <input class = "voto__formulario--checkbox" type="radio" name="voto-campeon" value="splatoon"> Splatoon
                         <img src="./assets/imgs/splatoon_logo.png" alt="Logo Splatoon">
                     </label>
                     </p>
@@ -291,25 +291,27 @@
             </figure>
         </aside>
     </main>
-    <footer>
-    <section>
-        <h2>Contacto</h2>
-        <address>
-            <a href="./contacto.html">Formulario de contacto</a> |
-            <a href="mailto:nintendomania@info.es">Correo electrónico</a> |
-            <a href="tel:123456789">Teléfono</a>
-        </address>
-    </section>
-    <section>
-        <h2>Información legal</h2>
-        <p>
-        <small>
-            Irene Foncubierta Lobatón 1ºDAW — Proyecto trimestral.<br>
-            El contenido es fan-made y sin fines comerciales.<br>
-            &copy; 2025 NintendoManía.
-        </small>
-        </p>
-    </section>
-</footer>
+    <footer class = "pie-pagina">
+        <section class ="pie-pagina__contacto">
+            <h2 class = "pie-pagina__contacto--titulo">Contacto</h2>
+            <address class = "pie-pagina__contacto--informacion"> <!-- Enlaces de contacto semántico y accesible -->
+                <a href="./contacto.html">Formulario de contacto</a> |
+                <a href="mailto:nintendomania@info.es">Correo electrónico</a> |
+                <a href="tel:123456789">Teléfono</a>
+            </address>
+        </section>
+        <section class = "pie-pagina__info">
+            <h2 class = "pie-pagina__info--titulo">Información legal</h2>
+            <p class = "pie-pagina__info--descripcion">
+                Irene Foncubierta Lobatón 1ºDAW — Proyecto trimestral.
+                El contenido es fan-made y sin fines comerciales.
+                &copy; 2025 NintendoManía.
+            </p>
+        </section>
+        <section class = "footer-extra">
+            <img class = "footer-extra__imagen" src="./assets/imgs/logo_principal.png" alt="Logo de NintendoManía">
+            <a href="#inicio" class = "footer-extra__boton"></a>
+        </section>
+    </footer>
 </body>
 </html>
