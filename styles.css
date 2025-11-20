@@ -784,66 +784,55 @@ button[type="reset"]:hover{
 .sobre-nosotros{
   display: flex;
   flex-wrap: wrap;
-  margin:2rem;
 }
 
-.sobre-nosotros__titulo{
+.sobre-nosotros__titulo,.juramento__titulo{
   font-family: var(--fuente-secundaria);
   font-size: 1.5rem;
-  margin: 2rem;
   text-align: center;
   width: 100%;
+  padding: 2rem;
 }
 
-.sobre-nosotros__historia{
+.sobre-nosotros__historia,.sobre-nosotros__juramento{
   display: flex;
   flex-direction: column;
   align-items: center;
   gap:2rem;
   width: 50%;
+  padding:2rem;
+  min-width: 300px;
 }
 
-.historia__titulo{
+@media (max-width: 900px){
+  .sobre-nosotros{
+    flex-direction: column;
+    align-items: center;
+  }
+  .sobre-nosotros__historia,
+  .sobre-nosotros__juramento {
+    width: 100%;
+    padding: 1rem;
+  }
+}
+
+
+.historia__titulo,.juramento__titulo{
   font-family: var(--fuente-secundaria);
   font-size: 1.2rem;
+  padding:2rem;
 }
 
-.historia__descripcion{
+.historia__descripcion,.juramento__descripcion{
   font-family: var(--fuente-base);
   text-align: center;
   font-weight: 600;
 }
 
-.sobre-nosotros__juramento{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap:2rem;
-  margin-bottom: 2rem;
-  width: 50%;
-}
-
-.historia__imagen{
+.historia__imagen,.juramento__imagen{
   max-width: 400px;
   width: 400px;
   border-radius: 5rem;
-}
-
-.juramento__titulo{
-  font-family: var(--fuente-secundaria);
-  font-size: 1.2rem;
-}
-
-.juramento__descripcion{
-  font-family: var(--fuente-base);
-  text-align: center;
-  font-weight: 600;
-}
-
-.juramento__imagen{
-  max-width: 400px;
-  width:400px;
-  border-radius:5rem;
 }
 
 .pilares{
@@ -851,37 +840,39 @@ button[type="reset"]:hover{
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  margin:2rem
 }
 
 .pilares__titulo{
   font-family: var(--fuente-secundaria);
   font-size: 1.5rem;
-  margin: 2rem;
+  padding:2rem;
 }
 
 .calidad{
   display: flex;
   flex-direction: column;
   align-items: center;
+  flex-wrap: wrap;
+  gap:2rem;
 }
 
 .calidad__titulo{
   font-family: var(--fuente-secundaria);
   font-size: 1.2rem;
-  margin: 2rem;
+  padding:2rem;
 }
 
 .calidad__descripcion{
   font-family: var(--fuente-base);
   font-weight: 600;
-  margin-bottom: 2rem;
+  padding:2rem;
 }
 
 .calidad__lista{
   display: flex;
   justify-content: space-between;
   gap:2rem;
+  padding:2rem;
 }
 
 .calidad__lista li{
@@ -909,9 +900,8 @@ button[type="reset"]:hover{
 
 .equipo{
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
-  margin:2rem
+  justify-content: center;
 }
 
 .equipo__titulo{
@@ -919,7 +909,7 @@ button[type="reset"]:hover{
   width: 100%;
   font-size: 1.5rem;
   text-align: center;
-  margin: 2rem;
+  padding:2rem;
 }
 
 .equipo__descripcion{
@@ -927,7 +917,7 @@ button[type="reset"]:hover{
   width: 100%;
   text-align: center;
   font-weight: 600;
-  margin-bottom: 2rem;
+  padding:2rem;
 }
 
 .equipo__miembro1,.equipo__miembro2,.equipo__miembro3{
@@ -937,9 +927,25 @@ button[type="reset"]:hover{
   background-color: #800E1397;
   border-radius: 2rem;
   padding: 1.5rem;
-  width: 33%;
+  width: 30%;
+  max-width: 100%;
   gap:3rem;
+  margin:1rem 1.2rem;
 }
+
+@media (max-width: 900px){
+  .equipo {
+    flex-direction: column;
+    align-items: center; /* centra en vertical */
+  }
+  .equipo__miembro1,
+  .equipo__miembro2,
+  .equipo__miembro3 {
+    width: 90%;
+    margin: 1rem 0;
+  }
+}
+
 
 .miembro1__titulo,.miembro2__titulo,.miembro3__titulo{
   font-family: var(--fuente-secundaria);
@@ -957,7 +963,6 @@ button[type="reset"]:hover{
 .miembro1__descripcion,.miembro2__descripcion,.miembro3__descripcion{
   font-family: var(--fuente-base);
   font-weight: 600;
-  margin-bottom: 2rem;
 }
 
 .cuestionario{
@@ -965,7 +970,6 @@ button[type="reset"]:hover{
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  margin:2rem;
 }
 
 .cuestionario__titulo{
@@ -973,7 +977,6 @@ button[type="reset"]:hover{
   width: 100%;
   font-size: 1.5rem;
   text-align: center;
-  margin: 2rem;
 }
 
 .cuestionario__descripcion{
@@ -981,7 +984,6 @@ button[type="reset"]:hover{
   width: 100%;
   text-align: center;
   font-weight: 600;
-  margin-bottom: 2rem;
 }
 
 .cuestionario__figura{
@@ -997,13 +999,12 @@ button[type="reset"]:hover{
 }
 
 .cuestionario__figura--descripcion{
-  margin-top: 2rem;
+  padding-top: 2rem;
 }
 
 .cuestionario__enlace{
   display: block;
   color:white;
-  margin:2rem;
   padding:1rem 2rem;
   border-radius: 2rem;
   font-weight: 600;
@@ -1026,8 +1027,8 @@ button[type="reset"]:hover{
 .comparativas__titulo{
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
-  margin: 2rem;
   text-align: center;
+  padding:2rem;
 }
 
 .hitos,.evolucion-kirby,.evolucion-mario,.evolucion-splat{
@@ -1036,7 +1037,6 @@ button[type="reset"]:hover{
   align-items: center;
   flex-wrap: wrap;
   gap:1.5rem;
-  margin:2rem;
 }
 
 .hitos__titulo,.evolucion-kirby__titulo,.evolucion-mario__titulo,.evolucion-splat__titulo{
@@ -1044,6 +1044,7 @@ button[type="reset"]:hover{
   width: 100%;
   font-size: 1.4rem;
   text-align: center;
+  padding:1.5rem;
 }
 
 .hitos__descripcion,.evolucion-kirby__descripcion,.evolucion-mario__descripcion,.evolucion-splat__descripcion{
@@ -1058,7 +1059,6 @@ button[type="reset"]:hover{
   max-width: 800px;
   border-collapse: collapse;
   font-family: var(--fuente-base);
-  margin-bottom: 2rem;
   font-size: 1rem;
   background: #fff;
   border-radius: 1rem;
@@ -1187,14 +1187,16 @@ button[type="reset"]:hover{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap:2rem;
+  padding-bottom: 2rem;
 }
 
 .voto__titulo{
   width: 100%;
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
-  margin: 2rem;
   text-align: center;
+  padding-top: 2rem;
 }
 
 .voto__descripcion{
@@ -1202,7 +1204,7 @@ button[type="reset"]:hover{
   width: 100%;
   text-align: center;
   font-weight: 600;
-  margin-bottom: 2rem;
+  padding:1rem;
 }
 
 .voto__formulario{
@@ -1211,7 +1213,6 @@ button[type="reset"]:hover{
   align-items: center;
   max-width: 400px;
   min-width: 260px; 
-  margin:2rem;
   padding:2rem;
   font-family: var(--fuente-base);
   background-color: #800E1397;
@@ -1235,7 +1236,6 @@ button[type="reset"]:hover{
 .voto__formulario--leyenda{
   font-family: var(--fuente-secundaria);
   text-align: center;
-  margin-bottom: 2rem;
 }
 
 .voto__formulario--etiqueta{
@@ -1275,11 +1275,9 @@ button[type="reset"]:hover{
   max-width: 50px;
   width: 50px;
   min-width: 30px;
-  margin-left: 2rem;
 }
 
 .voto__figura{
-  margin:2rem;
   align-self: center;
   text-align: center;
   font-family: var(--fuente-base);
