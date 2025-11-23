@@ -44,9 +44,8 @@ img {
   left:0;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   align-items: center;
-  min-height: 2rem;
+  min-height: 1.5rem;
   background: url(./assets/imgs/fondo_header.png);
   padding: 0.75rem 1rem;
 }
@@ -59,7 +58,7 @@ img {
 .cabecera__logo{
   display: flex;
   justify-content: center;
-  width: 15%;
+  width: 20%;
   transition: box-shadow 0.35s, transform 0.25s;
 }
 
@@ -145,7 +144,7 @@ img {
     padding: 1rem;
   }
   .cabecera__logo {
-    width: 30%;
+    width: 25%;
     justify-content: center;
     margin: 0 auto;
   }
@@ -154,12 +153,17 @@ img {
     width: 100%;
     gap: 1rem;
   }
+
+  .cabecera__menu--imagen{
+    width: 80px;
+  }
+
   .cabecera__menu--lista {
-    justify-content: space-between;
+    justify-content: space-evenly;
     gap: 1rem;
     width: 100%;
     font-size:1rem;
-    padding: 2rem;
+    padding: 1rem;
   }
   .cabecera__buscador {
     width: 40%;
@@ -167,7 +171,8 @@ img {
     margin-right: auto;
   }
   .buscador__formulario {
-    width: 100%;
+    width: 70%;
+    margin: 0 auto;
   }
 }
 
@@ -185,12 +190,17 @@ img {
   .cabecera__menu {
     width: 100%;
     gap: 0.5rem;
-    padding:2rem;
+    padding:1rem;
   }
 
   .cabecera__menu--titulo{
     font-size: 1.2rem;
   }
+
+  .cabecera__menu--imagen{
+    width: 55px;
+  }
+
   .cabecera__menu--lista {
     width: 100%;
     font-size: 0.95rem;
@@ -202,9 +212,8 @@ img {
     padding:1rem;
   }
   .buscador__formulario {
-    width: 100%;
-    flex-direction: column;
-    gap: 0.25rem;
+    width: 50%;
+    margin: 0 auto;
   }
 }
 
@@ -221,8 +230,10 @@ img {
     padding:1rem;
   }
   .cabecera__menu--titulo{
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+
   }
+
   .cabecera__menu--lista {
     flex-direction: column;
     align-items: center;
@@ -230,7 +241,7 @@ img {
   }
   .cabecera__buscador {
     display: flex;
-    width: 50%;
+    width: 100%;
     margin: 0.25rem auto 0 auto;
   }
   .buscador__formulario input {
@@ -429,9 +440,7 @@ img {
   font-family: var(--fuente-secundaria);
   text-align: center;
   width: 80%;
-  padding: 1rem;
-  max-width: 100%;
-  overflow-wrap: break-word;
+  padding: 2rem;
 }
 
 
@@ -455,7 +464,8 @@ img {
   background: rgba(255,255,255,0.7);
   border-radius: 4rem;
   transition: box-shadow 0.35s, transform 0.25s;
-  width: 100%;
+  width: 300px;
+  height: 300px;
   object-fit: cover;
 }
 
@@ -494,8 +504,7 @@ img {
   .sagas-principales__mario--imagen,
   .sagas-principales__splatoon--imagen,
   .sagas-principales__kirby--imagen {
-    width: 100%;
-    max-width: 350px;
+    width: 90%;
     height: auto;
     margin: 0 auto 1rem auto;
     border-radius: 3rem;
