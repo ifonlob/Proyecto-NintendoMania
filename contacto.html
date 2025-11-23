@@ -60,22 +60,22 @@
             <article>
                 <h2 class="contacto__titulo">Formulario de Contacto NintendoManía</h2>
                 <form class="contacto__formulario" name="contacto" method="post">
-                    <fieldset>
-                        <legend>Datos Personales</legend>
+                    <fieldset class = "contacto__formulario--campo">
+                        <legend class = "contacto__formulario--leyenda">Datos Personales</legend>
                         <label>Nombre Completo:<sup>*</sup>
-                            <input type="text" name="nombre" required placeholder="Tu nombre">
+                            <input class = "contacto__formulario--input" type="text" name="nombre" required placeholder="Tu nombre">
                         </label>
                         <label>Correo Electrónico:<sup>*</sup>
-                            <input type="email" name="email" required placeholder="ejemplo@correo.com">
+                            <input class = "contacto__formulario--input" type="email" name="email" required placeholder="ejemplo@correo.com">
                         </label>
                         <label>Teléfono de Contacto (Opcional):
-                            <input type="tel" name="telefono" placeholder="Ej: 696 123 456">
+                            <input class = "contacto__formulario--input" type="tel" name="telefono" placeholder="Ej: 696 123 456">
                         </label>
                     </fieldset>
-                    <fieldset>
-                        <legend>Detalles de tu Petición</legend>
+                    <fieldset class = "contacto__formulario--campo">
+                        <legend class = "contacto__formulario--leyenda">Detalles de tu Petición</legend>
                         <label>Asunto Principal:<sup>*</sup>
-                            <select name="asunto" required>
+                            <select class = "contacto__formulario--select" name="asunto" required>
                                 <option value="" disabled selected>-- Selecciona un tema --</option>
                                 <option value="sugerencia_contenido">Sugerencia/Corrección de Contenido</option>
                                 <option value="colaboracion">Propuesta de Colaboración (Escritor/Diseñador)</option>
@@ -84,12 +84,12 @@
                             </select>
                         </label>
                         <label>Enlace de Referencia (Opcional):
-                            <input type="url" name="url_referencia" placeholder="https://www.nintendomania.com">
+                            <input class = "contacto__formulario--input" type="url" name="url_referencia" placeholder="https://www.nintendomania.com">
                         </label>
-                    </fieldset>
-                    <fieldset>
+                    </fieldset class = "contacto__formulario--campo">
+                    <fieldset class = "contacto__formulario--campo">
                         <!-- Sección informativa y estadística -->
-                        <legend>¡Queremos saber más sobre ti!</legend>
+                        <legend class = "contacto__formulario--leyenda">¡Queremos saber más sobre ti!</legend>
                         <label>Saga favorita (Para informes estadísticos exclusivamente):<sup>*</sup></label>
                         <label>
                             <input type="radio" name="saga_favorita" value="mario" required> Mario Bros.
@@ -104,48 +104,48 @@
                             <input type="radio" name="saga_favorita" value="otro" required> Otra/No aplica
                         </label>
                         <label>Tu Mensaje: <sup>*</sup>
-                            <textarea name="mensaje" rows="6" cols="50" minlength="30" required placeholder="Escribe al menos 30 caracteres..."></textarea>
+                            <textarea class = "contacto__formulario--textarea" name="mensaje" rows="6" cols="50" minlength="30" required placeholder="Escribe al menos 30 caracteres..."></textarea>
                         </label>
                     </fieldset>
-                    <label>Acepto política de privacidad <sup>*</sup>
-                        <input type="checkbox" name="acepta_privacidad" value="si" required>
+                    <label class = "contacto__formulario--etiqueta" = >Acepto política de privacidad <sup>*</sup>
+                        <inputtype="checkbox" name="acepta_privacidad" value="si" required>
                     </label>
-                    <button type="submit">Enviar formulario a NintendoManía</button>
-                    <button type="reset">Borrar Formulario</button>
+                    <button class = "contacto__formulario--boton" type="submit">Enviar formulario a NintendoManía</button>
+                    <button class = "contacto__formulario--boton" type="reset">Borrar Formulario</button>
                 </form>
             </article>
             <article class="faq-contacto">
                 <h2 class="faq-contacto__titulo">Preguntas Frecuentes sobre Colaboración</h2>
                 <p class="faq-contacto__descripcion">Consulta esta sección si tu interés es unirte al equipo o reportar un error grave.</p>
                 <details>
-                    <summary>¿Puedo reportar errores del sitio web aquí?</summary>
-                    <p>Sí, por favor, utiliza la opción "Reporte de Error/Fallo Técnico" en el menú desplegable.<br> Necesitamos saber qué navegador estás utilizando para poder solucionarlo.</p>
+                    <summary class = "faq-contacto__sumario">¿Puedo reportar errores del sitio web aquí?</summary>
+                    <p class = "faq-contacto__sumario--descripcion">Sí, por favor, utiliza la opción "Reporte de Error/Fallo Técnico" en el menú desplegable.<br> Necesitamos saber qué navegador estás utilizando para poder solucionarlo.</p>
                 </details>
                 <details>
-                    <summary>¿Cómo puedo enviar sugerencias de lore o curiosidades?</summary>
-                    <p>Puedes usar el campo de "Mensaje" principal y seleccionar "Sugerencia/Corrección de Contenido" en el asunto.<br> Nuestro equipo revisará tu dato para verificar su rigor cronológico.</p>
+                    <summary class = "faq-contacto__sumario">¿Cómo puedo enviar sugerencias de lore o curiosidades?</summary>
+                    <p class = "faq-contacto__sumario--descripcion">Puedes usar el campo de "Mensaje" principal y seleccionar "Sugerencia/Corrección de Contenido" en el asunto.<br> Nuestro equipo revisará tu dato para verificar su rigor cronológico.</p>
                 </details>
                 <details>
-                    <summary>¿Existe un proceso de selección para colaboradores?</summary>
-                    <p>Sí. Si seleccionas "Propuesta de Colaboración" te contactaremos por correo para discutir tus habilidades<br> (redacción, diseño, investigación) y asignarte una prueba de contenido.</p>
+                    <summary class = "faq-contacto__sumario">¿Existe un proceso de selección para colaboradores?</summary>
+                    <p class = "faq-contacto__sumario--descripcion">Sí. Si seleccionas "Propuesta de Colaboración" te contactaremos por correo para discutir tus habilidades<br> (redacción, diseño, investigación) y asignarte una prueba de contenido.</p>
                 </details>
                 <details>
-                    <summary>¿Por qué recibo un error al enviar el formulario?</summary>
-                    <p>
+                    <summary class = "faq-contacto__sumario">¿Por qué recibo un error al enviar el formulario?</summary>
+                    <p class = "faq-contacto__sumario--descripcion">
                         Asegúrate de haber rellenado todos los campos obligatorios (<sup>*</sup>). <br>El formulario no se enviará si falta algún dato requerido, si el correo electrónico no es válido, o si el mensaje tiene menos de 30 caracteres.<br>
                         Si el problema persiste, revisa tu conexión o inténtalo desde otro navegador.
                     </p>
                 </details>
                 <details>
-                    <summary>He enviado el formulario pero no recibo respuesta</summary>
-                    <p>
+                    <summary class = "faq-contacto__sumario">He enviado el formulario pero no recibo respuesta</summary>
+                    <p class = "faq-contacto__sumario--descripcion">
                         Nuestro equipo trata de contestar en un plazo de 72 horas hábiles.<br>
                         Si tras ese tiempo no tienes noticias, revisa tu bandeja de spam o contacta por correo directo a nintendomania@info.es.
                     </p>
                 </details>
                 <details>
-                    <summary>¿Qué hago si veo un error de diseño o la web no carga bien?</summary>
-                    <p>
+                    <summary class = "faq-contacto__sumario">¿Qué hago si veo un error de diseño o la web no carga bien?</summary>
+                    <p class = "faq-contacto__sumario--descripcion">
                         Indícanos el navegador y dispositivo que usas (por ejemplo, Chrome en móvil Android o Firefox en PC).<br>
                         Las capturas de pantalla o un enlace al problema nos ayudarán a solucionarlo más rápido.
                     </p>
