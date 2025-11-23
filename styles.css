@@ -950,7 +950,7 @@ img {
   }
 
   .newsletter__boton {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.8rem 1.6rem;
   }
 }
@@ -1429,6 +1429,7 @@ button[type="reset"]:hover{
   font-size: 2rem;
   text-align: center;
   padding:2rem;
+  overflow-wrap: break-word;
 }
 
 .hitos,.evolucion-kirby,.evolucion-mario,.evolucion-splat{
@@ -1437,14 +1438,15 @@ button[type="reset"]:hover{
   align-items: center;
   flex-wrap: wrap;
   gap:1.5rem;
+  width: 100%;
 }
 
 .hitos__titulo,.evolucion-kirby__titulo,.evolucion-mario__titulo,.evolucion-splat__titulo{
   font-family: var(--fuente-secundaria);
-  width: 100%;
   font-size: 1.4rem;
   text-align: center;
   padding:1.5rem;
+  overflow-wrap: break-word;
 }
 
 .hitos__descripcion,.evolucion-kirby__descripcion,.evolucion-mario__descripcion,.evolucion-splat__descripcion{
@@ -1452,16 +1454,18 @@ button[type="reset"]:hover{
   width: 100%;
   text-align: center;
   font-weight: 600;
+  padding:1.5rem;
 }
 
 .hitos__tabla,.evolucion-kirby__tabla,.evolucion-mario__tabla,.evolucion-splat__tabla{
   width: 100%;
   max-width: 800px;
+  margin: 0 auto;
   border-collapse: collapse;
   font-family: var(--fuente-base);
   font-size: 1rem;
   background: #fff;
-  border-radius: 1rem;
+  border-radius: 2rem;
   overflow: hidden;
 }
 
@@ -1470,12 +1474,13 @@ button[type="reset"]:hover{
   text-align: center;
   font-size: 1.2rem;
   font-weight: bold;
-  padding: 1rem;
+  padding: 1.5rem;
   background-color: var(--color-principal);
   color: #fff;
 }
 
-.hitos__tabla--head th,.evolucion-kirby__tabla--head th,.evolucion-mario__tabla--head th,.evolucion-splat__tabla--head th {
+
+.tabla__head--titulo{
   font-family: var(--fuente-base);
   font-weight: 600;
   color: var(--color-texto);
@@ -1485,17 +1490,9 @@ button[type="reset"]:hover{
   text-align: center;
 }
 
-.hitos__tabla--body th,
-.hitos__tabla--body td,
-.evolucion-kirby__tabla--body th,
-.evolucion-kirby__tabla--body td,
-.evolucion-mario__tabla--body th,
-.evolucion-mario__tabla--body td,
-.evolucion-splat__tabla--body th,
-.evolucion-splat__tabla--body td,
-.evolucion-splat__tabla--footer td,
-.evolucion-kirby__tabla--footer td,
-.evolucion-mario__tabla--footer td{
+.tabla__body--titulo,
+.tabla__body--celda,
+.tabla__footer--celda{
   font-family: var(--fuente-base);
   padding: 1rem;
   text-align: center;
@@ -1503,23 +1500,15 @@ button[type="reset"]:hover{
   transition: background 0.3s ease;
 }
 
-.hitos__tabla--body th,.evolucion-kirby__tabla--body th,.evolucion-mario__tabla--body th,.evolucion-splat__tabla--body th {
+.tabla__body--titulo{
   font-weight: 600;
   color: var(--color-principal);
   background: #faf7f7;
 }
 
-.hitos__tabla--body tr:hover td,
-.hitos__tabla--body tr:hover th,
-.evolucion-splat__tabla--body tr:hover td,
-.evolucion-splat__tabla--body tr:hover th,
-.evolucion-splat__tabla--footer td:hover,
-.evolucion-mario__tabla--body tr:hover td,
-.evolucion-mario__tabla--body tr:hover th,
-.evolucion-mario__tabla--footer td:hover,
-.evolucion-kirby__tabla--body tr:hover td,
-.evolucion-kirby__tabla--body tr:hover th,
-.evolucion-kirby__tabla--footer td:hover {
+.tabla__body--linea:hover .tabla__body--celda,
+.tabla__body--linea:hover .tabla__body--titulo,
+.tabla__footer--celda:hover{
   background: #f7f5ff;
 }
 
@@ -1594,7 +1583,7 @@ button[type="reset"]:hover{
 .voto__titulo{
   width: 100%;
   font-family: var(--fuente-secundaria);
-  font-size: 2rem;
+  font-size: 1.4rem;
   text-align: center;
   padding-top: 2rem;
 }
@@ -1695,4 +1684,8 @@ button[type="reset"]:hover{
 
 .voto__figura--imagen:hover{
   transform: translateY(-6px);
+}
+
+.voto__figura--descripcion{
+  padding:2rem;
 }
