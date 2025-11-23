@@ -18,44 +18,31 @@
     <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
     <link rel="icon" href="../assets/imgs/letra_m.png">
 </head>
-<body>
-    <header>
-        <!-- Logotipo principal, acceso rápido a index -->
-        <a href="../index.html">
-            <img src="../assets/imgs/nintendo_mania_logo.webp" alt="Logo principal">
+<body id="inicio">
+    <header class = "cabecera"> 
+        <!-- Logotipo principal y acceso rápido al inicio -->
+        <a class = "cabecera__logo" href = "./index.html">
+            <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Logo principal">
         </a>
-        <nav>
-            <!-- Menú global y específico de sagas -->
-            <ul>
-                <li><a href="./splatoon.html">Splatoon</a></li>
-                <li><a href="./kirby.html">Kirby</a></li>
-                <li><a href="../comparativas.html">Comparativas</a></li>
-                <li><a href="../contacto.html">Contacto y sugerencias</a></li>
-                <li><a href="../about.html">Sobre nosotros</a></li>
+        <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
+                <h1 class = "cabecera__menu--titulo"><img class = "cabecera__menu--imagen" src="./assets/imgs/logo_switch.svg" alt="Logo Switch" >Nintendo Manía</h1>
+            <ul class = "cabecera__menu--lista">
+                <li><a class = "cabecera__menu--enlace" href="./sagas/splatoon.html">Splatoon</a></li>
+                <li><a class = "cabecera__menu--enlace"  href="./sagas/mario.html">Mario</a></li>
+                <li><a  class = "cabecera__menu--enlace" href="./sagas/kirby.html">Kirby</a></li>
+                <li><a  class = "cabecera__menu--enlace" href="./comparativas.html">Comparativas</a></li>
+                <li><a  class = "cabecera__menu--enlace" href="./contacto.html">Contacto</a></li>
+                <li><a  class = "cabecera__menu--enlace" href="./about.html">Sobre nosotros</a></li>
             </ul>
         </nav>
-        <nav>  <!-- Formulario de búsqueda semántico -->
+        <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
             <form name="buscador">
-                <label>Buscador
-                    <input type="search" name="buscador" placeholder="Buscar...">
+                <label class = "buscador__formulario">
+                    <img  class = "buscador__formulario--imagen" src="./assets/imgs/lupa.png" alt="Lupa">
+                    <input class = "buscador__formulario--input" type="search" name="buscador" placeholder="Buscar...">
                 </label>
-                <button type="submit">
-                    <img src="./assets/imgs/lupa.png" alt="Enviar búsqueda">
-                </button>
             </form>
-        </nav>
-        <nav>
-            <!-- Índice temático interno para navegación por secciones de Mario -->
-            <h2>Índice de Mario</h2>
-            <ul>
-                <li><a href="#hitos_2d">Hitos 2D Clásicos</a></li>
-                <li><a href="#hitos_3d">Revolución 3D</a></li>
-                <li><a href="#personajes">Análisis de Personajes</a></li>
-                <li><a href="#curiosidades">Curiosidades y Lore</a></li>
-                <li><a href="#personajes_secundarios">Personajes secundarios</a></li>
-                <li><a href="#imagenes_destacadas">Galería de imágenes</a></li>
-            </ul>
-        </nav>
+        </nav> 
     </header>
     <main>
         <h1>El Fontanero que Salvó a Nintendo</h1>
@@ -308,24 +295,26 @@
             </figure>
         </aside>
     </main>
-    <footer>
-        <section>
-            <h2>Contacto</h2>
-            <address> <!-- Enlaces de contacto semántico y accesible -->
+    <footer class = "pie-pagina">
+        <section class ="pie-pagina__contacto">
+            <h2 class = "pie-pagina__contacto--titulo">Contacto</h2>
+            <address class = "pie-pagina__contacto--informacion"> <!-- Enlaces de contacto semántico y accesible -->
                 <a href="./contacto.html">Formulario de contacto</a> |
                 <a href="mailto:nintendomania@info.es">Correo electrónico</a> |
                 <a href="tel:123456789">Teléfono</a>
             </address>
         </section>
-        <section>
-            <h2>Información legal</h2>
-            <p>
-            <small>
+        <section class = "pie-pagina__info">
+            <h2 class = "pie-pagina__info--titulo">Información legal</h2>
+            <p class = "pie-pagina__info--descripcion">
                 Irene Foncubierta Lobatón 1ºDAW — Proyecto trimestral.
                 El contenido es fan-made y sin fines comerciales.
                 &copy; 2025 NintendoManía.
-            </small>
             </p>
+        </section>
+        <section class = "footer-extra">
+            <img class = "footer-extra__imagen" src="./assets/imgs/logo_principal.png" alt="Logo de NintendoManía">
+            <a href="#inicio" class = "footer-extra__boton"></a>
         </section>
     </footer>
 </body>
