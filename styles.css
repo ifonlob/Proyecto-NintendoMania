@@ -785,11 +785,9 @@ img {
   background: rgba(255,255,255,0.7);
   border: 3px solid white;
   border-radius: 2rem;
-  margin-top:5rem;
   padding: 2rem;
   gap: 1.5rem;
-  max-width: 400px;
-  width: 100%;
+  width: 35%;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
   cursor: pointer;
 }
@@ -798,13 +796,16 @@ img {
   transform: translateY(-6px);
 }
 
+.newsletter__label--email{
+  font-size: 1rem;
+  text-align: center;
+}
 .newsletter__label--checkbox {
-  display: flex;
-  align-items: center;
   width: 100%;
   font-size: 0.9rem;
   gap:1rem;
   white-space: nowrap;
+  text-align: center;
 
 }
 
@@ -819,7 +820,6 @@ img {
 
 .newsletter__boton {
   font-weight: bold;
-  border: none;
   border-radius: 1rem;
   padding: 1rem;
   font-size: 1rem;
@@ -833,6 +833,46 @@ img {
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 
 }
+
+@media (max-width: 1000px) {
+
+  .newsletter {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .newsletter__titulo {
+    font-size: 1.3rem;
+    padding: 0 2rem;
+    text-align: center;
+  }
+
+  .newsletter__descripcion {
+    width: 90%;
+    font-size: 1.05rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .newsletter__formulario {
+    max-width: 90%;
+    padding: 1.8rem;
+  }
+
+  .newsletter__label--checkbox {
+    flex-wrap: wrap;
+    white-space: normal;
+    font-size: 0.85rem;
+  }
+
+  .newsletter__boton {
+    font-size: 0.85rem;
+    padding: 0.8rem 1.6rem;
+    overflow-wrap: break-word ;
+  }
+}
+
+
+
 
 .pie-pagina__contacto--enlace{
   color:var(--color-texto);
