@@ -1576,6 +1576,7 @@ img {
   padding:1.5rem;
 }
 
+
 .hitos__tabla,.evolucion-kirby__tabla,.evolucion-mario__tabla,.evolucion-splat__tabla{
   max-width: 50%;
   width: 100%;
@@ -1585,7 +1586,10 @@ img {
   background: #fff;
   border-radius: 2rem;
   overflow: hidden;
+  table-layout: fixed;
+  word-wrap: break-word;
 }
+
 
 .hitos__tabla--titulo,.evolucion-kirby__tabla--titulo,.evolucion-splat__tabla--titulo,.evolucion-mario__tabla--titulo{
   font-family: var(--fuente-secundaria);
@@ -1638,6 +1642,14 @@ img {
     border-radius: 1.2rem;
   }
 
+  .tabla__head--titulo,
+  .tabla__body--titulo,
+  .tabla__body--celda,
+  .tabla__footer--celda{
+    padding: 0.4rem;
+    font-size: 0.8rem;
+  }
+
   .hitos__tabla--titulo,
   .evolucion-kirby__tabla--titulo,
   .evolucion-splat__tabla--titulo,
@@ -1686,6 +1698,14 @@ img {
     max-width: 100%;
     border-radius: 0.7rem;
     margin: 0 auto;
+  }
+
+  .tabla__head--titulo,
+  .tabla__body--titulo,
+  .tabla__body--celda,
+  .tabla__footer--celda{
+    padding: 0.4rem;
+    font-size: 0.55rem;
   }
 
   .hitos__tabla--titulo,
