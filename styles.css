@@ -24,7 +24,8 @@
 /* ESTILOS GENERALES */
 
 body{
-  background: url(./assets/imgs/fondo_index.png)
+  background-color: #e6f2f9;
+  line-height: 1.6;
 }
 
 a,a:hover,a:focus{
@@ -443,12 +444,13 @@ img {
   flex-wrap: wrap;
   width: 90%;
   margin: 0 auto;
-  background: rgba(255,255,255,0.7);
+  background: #fcfcfc;
   padding: 2rem;
   border-radius: 4rem;
   max-width: 720px;
   transition: box-shadow 0.35s, transform 0.25s;
   border: 3px solid white;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .mejores-sagas:hover{
@@ -486,14 +488,17 @@ img {
 
 .mejores-sagas__figura--imagen[alt="Letra M de Mario Bros"]{
   background-color:#2773F598;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .mejores-sagas__figura--imagen[alt="Inkling de Splatoon"]{
   background-color: #66656598;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .mejores-sagas__figura--imagen[alt="Kirby"]{
   background-color: #FF262698;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .sagas-principales {
@@ -534,12 +539,13 @@ img {
  }
 
 .sagas-principales__mario--imagen,.sagas-principales__splatoon--imagen,.sagas-principales__kirby--imagen{
-  background: rgba(255,255,255,0.7);
+  background: #fcfcfc;;
   border-radius: 4rem;
   transition: transform 0.35s;
   width: 300px;
   height: 300px;
   object-fit: cover;
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .sagas-principales__mario--imagen:hover,.sagas-principales__splatoon--imagen:hover,.sagas-principales__kirby--imagen:hover{
@@ -786,7 +792,7 @@ img {
   display: block;
   padding: 0.5rem 1rem;
   color: var(--color-texto);
-  background: #d3ffe8;
+  background: #5dd772;
   border-radius: 1.25rem;
   font-weight: bold;
   font-family: var(--fuente-secundaria);
@@ -904,6 +910,10 @@ img {
   transition: border 0.18s;
 }
 
+.newsletter__formulario--input:focus{
+  border: 3px solid var(--color-secundario)
+
+}
 .newsletter__boton {
   background-color:var(--color-principal);
   border: 4px solid var(--color-secundario);
