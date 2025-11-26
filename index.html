@@ -166,14 +166,14 @@
             <p class = "newsletter__descripcion">Únete a nuestra NintendoManía News para recibir las últimas noticias de tus sagas favoritas directamente en tu correo. ¡No te pierdas los nuevos lanzamientos de Mario, los Splatfests de Splatoon o los secretos de Kirby!</p>
             <form class = "newsletter__formulario" action="/subscribe" method="post">
                     <label class="newsletter__label--email">Introduce tu email para suscribirte:
-                        <input type="email" name="email" placeholder="ejemplo@correo.es" required>
+                        <input class = "newsletter__formulario--input" type="email" name="email" placeholder="ejemplo@correo.es" required>
                     </label>
                     <label class="newsletter__label--checkbox">He leído y acepto la política de privacidad
-                        <input type="checkbox" name="privacidad" required>
+                        <input class = "newsletter__formulario--input" type="checkbox" name="privacidad" required>
                     </label>
                 <button class ="newsletter__boton" type="submit">¡Suscribirme al newsletter!</button>
             </form>
-            <img src="./assets/imgs/personajes_sagas.png" alt="Kirby,Mario e Inkling juntos.">
+            <img class = "newsletter__imagen" src="./assets/imgs/personajes_sagas.png" alt="Kirby,Mario e Inkling juntos.">
         </aside>
     </main>
     <footer class = "pie-pagina">
