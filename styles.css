@@ -16,6 +16,8 @@
 :root{
   --color-principal: #800E13;
   --color-secundario: #0074D9 ;
+  --color-principal__splatoon: #F02D7D;
+  --color-secundario__splatoon: #19D719;
   --color-texto: #232323;
   --fuente-base: 'Montserrat', Arial, sans-serif;
   --fuente-secundaria: 'Press Start 2P', monospace;
@@ -2011,7 +2013,7 @@ img {
 
 .introduccion-splatoon__titulo{
   font-family: var(--fuente-secundaria);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   text-align: center;
   padding:1.5rem;
   width: 100%;
@@ -2020,32 +2022,100 @@ img {
 .introduccion-splatoon__imagen{
   display: block;
   margin: 0 auto;
-  width: 50%;
+  width: 100%;
+  max-width: 40%;
   border-radius: 5rem;
 }
 
 .introduccion-splatoon__subtitulo{
   font-family: var(--fuente-secundaria);
-  font-size: 1.2rem;
+  font-size: 1rem;
   text-align: center;
+  padding:2rem;
   width: 100%;
 }
 
 .revolucion{
   display: flex;
   flex-direction: column;
+  font-size: 1.2rem;
 
 }
 
 .revolucion__titulo{
   font-family: var(--fuente-secundaria);
-  font-size: 1rem;
+  font-size: 1.5rem;
   text-align: center;
-  padding:1.5rem;
+  padding:0 1rem 1rem 1rem;
   width: 100%;
 }
 
 .revolucion__descripcion{
-  font-family: (var(--fuente-base));
-  padding:1.5rem;
+  font-family: var(--fuente-base);
+  text-align: center;
+  padding:0 1rem 1rem 1rem;
+  max-width: 100%;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.revolucion__imagen{
+  max-width: 100%;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 3rem;
+  border: 4px solid var(--color-principal__splatoon);
+  transition: border-color 1.4s ease, transform 1.4s ease;
+}
+
+.revolucion__imagen:hover{
+  transform: translateY(-6px);
+  border: 4px solid var(--color-secundario__splatoon);
+  transition: border-color 0.8s ease, transform 0.5s ease;
+}
+
+.timeline__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 2rem;
+  text-align: center;
+  padding: 1.5rem;
+  width: 100%;
+}
+
+
+.timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto, 200px, auto;
+  align-items: center;
+  justify-items: center;
+  gap:1.5rem;
+}
+
+.timeline__imagen {
+  grid-column: 1 / 4;
+  width: 100%;
+  justify-self: center;
+  object-fit: cover;
+  object-position: center;
+}
+
+.timeline-splatoon,.timeline-octoexpansion,.timeline-raiders{
+  max-width: 33%;
+  justify-self: center;
+
+}
+
+.timeline-splatoon__titulo,.timeline-octoexpansion__titulo,.timeline-raiders__titulo{
+  font-family: var(--fuente-secundaria);
+  text-align: center;
+}
+
+.timeline-splatoon__figura,.timeline-octoexpansion__figura,.timeline-raiders__figura{
+  width: 200px;
+}
+
+.timeline-splatoon__imagen,.timeline-octoexpansion__imagen,.timeline-raiders__imagen{
+  border-radius: 1rem;
+  border: 3px solid black
 }
