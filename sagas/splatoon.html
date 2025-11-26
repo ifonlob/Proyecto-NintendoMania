@@ -20,7 +20,7 @@
     <link rel="icon" href="../assets/imgs/splatoon_logo.png">
     <link rel="stylesheet" href="../styles.css">
 </head>
-<body id="inicio">
+<body class = "body-splatoon" id="inicio">
     <header class = "cabecera"> 
         <!-- Logotipo principal y acceso rápido al inicio -->
         <a class = "cabecera__logo" href = "../index.html">
@@ -48,57 +48,60 @@
     <main>
         <section class = "introduccion-splatoon"> <!--SECTION: introducción de la saga-->
             <h1 class = "introduccion-splatoon__titulo">Splatoon - La saga que revolucionó la tinta</h1>
-            <img class = "introduccion-splatoon__imagen" src="../assets/imgs/nintendo-mania-splatoon.png" alt="Logo NintendoManía Splatoon">
-            <h2 class = "introduccion-splatoon__subtitulo">¡Prepárate para sumergirte en tinta!</h2>
-            <article class = "revolucion">
-                <h3 class = "revolucion__titulo">Revolución de los shooters</h3>
-                <p class = "revolucion__descripcion">Splatoon no solo revolucionó los shooters con su estilo colorido y frenético, también 
-                    construyó un universo lleno de historia, secretos y evolución a lo largo de varias generaciones de consolas Nintendo.</p>
-                <img class = "revolucion__imagen" src="../assets/imgs/splatoon4k.jpg" alt="Ciudad futurista Splatoon">    
-            </article>
+            <figure>
+                <img class = "introduccion-splatoon__imagen" src="../assets/imgs/nintendo-mania-splatoon.png" alt="Logo NintendoManía Splatoon">
+                <figcaption class = "introduccion-splatoon__subtitulo">¡Prepárate para sumergirte en tinta!</figcaption>
+            </figure>
+            <p class = "introduccion-splatoon__descripcion">Splatoon no solo revolucionó los shooters con su estilo colorido y frenético, también 
+                construyó un universo lleno de historia, secretos y evolución a lo largo de varias generaciones de consolas Nintendo.</p>  
         </section>
-        <section class="timeline"> <!--SECTION: dedicada a la línea del tiempo posteriormente con CSS-->
-            <h2>Desarrollo de la saga a lo largo del tiempo</h2> 
-            <article>
-                <h3>Splatoon (2015)</h3>
-                <figure>
-                    <img src="../assets/imgs/splatoon1_portada.jpeg" alt="Carátula Splatoon">
+        <h2 class = "timeline__titulo">Desarrollo de la saga a lo largo del tiempo</h2> 
+        <section class = "timeline">
+            <article class = "timeline-splatoon">
+                <h3 class = "timeline-splatoon__titulo">Splatoon (2015)</h3>
+                <figure class = "timeline-splatoon__figura">
+                    <img class = "timeline-splatoon__imagen" src="../assets/imgs/splatoon1_portada.jpeg" alt="Carátula Splatoon">
                     <figcaption>El origen: el primer combate territorial.</figcaption>
                 </figure>
             </article>
-            <article>
-                <h3>DLC Octo Expansión (2018)</h3>
-                <figure>
-                    <img src="../assets/imgs/octoexpansion_portada.jpg" alt="Carátula Octo Expansión">
+            <article class = "timeline-octoexpansion">
+                <h3 class = "timeline-octoexpansion__titulo">Octo Expansión (2018)</h3>
+                <figure class = "timeline-octoexpansion__figura">
+                    <img class = "timeline-octoexpansion__imagen" src="../assets/imgs/octoexpansion_portada.jpg" alt="Carátula Octo Expansión">
                     <figcaption>Una campaña oscura que expandió el lore de los Octarianos. </figcaption>
                 </figure>
             </article>
-            <article>
-                <h3>Splatoon Raiders</h3>
-                <figure>
-                    <img src="../assets/imgs/splatoonraiders_portada.jpg" alt="Carátula Splatoon Raiders">
-                    <figcaption>Próximamente...</figcaption>
-                </figure>
+            <article class = "timeline-sideorder"> 
+                <h3 class = "timeline-sideorder__titulo">Side Order (2024)</h3> 
+                <figure class = "timeline-sideorder__figura">
+                    <img class = "timeline-sideorder__imagen" src="../assets/imgs/side_order.jpg" alt="Carátula Side Order"> 
+                    <figcaption>Una campaña donde Agente 8 lucha por devolver el color a Cromópolis Plaza.</figcaption>
+                </figure> 
             </article>
-            <figure>
-                <img src="../assets/imgs/splatoon_timeline.png" alt="Línea del Tiempo">
-            </figure> 
-            <article>
-                <h3>Splatoon 2 (2017)</h3>
-                <figure>
-                    <img src="../assets/imgs/splatoon2_portada.jpg" alt="Carátula Splatoon 2">
+                <img class = "timeline__imagen" src="../assets/imgs/splatoon_timeline.png" alt="Línea del Tiempo">
+            <article class = "timeline-splatoon2">
+                <h3 class = "timeline-splatoon2__titulo">Splatoon 2 (2017)</h3>
+                <figure class = "timeline-splatoon2__figura">
+                    <img class = "timeline-splatoon2__imagen" src="../assets/imgs/splatoon2_portada.jpg" alt="Carátula Splatoon 2">
                     <figcaption>La secuela que consolidó la saga en Nintendo Switch.</figcaption>
                 </figure>
             </article>
-            <article>
-                <h3>Splatoon 3 (2022)</h3>
-                <figure>
-                    <img src="../assets/imgs/splatoon3_portada.jpg" alt="Carátula Splatoon 3">
+            <article class = "timeline-splatoon3">
+                <h3 class = "timeline-splatoon3__titulo">Splatoon 3 (2022)</h3>
+                <figure class = "timeline-splatoon3__figura">
+                    <img class = "timeline-splatoon3__imagen" src="../assets/imgs/splatoon3_portada.jpg" alt="Carátula Splatoon 3">
                     <figcaption>Consolidación de la fórmula con nuevos movimientos y armas especiales. </figcaption>
                 </figure>
             </article>
+            <article class = "timeline-raiders">
+                <h3 class = "timeline-raiders__titulo">Splatoon Raiders</h3>
+                <figure class = "timeline-raiders__figura">
+                    <img class = "timeline-raiders__imagen" src="../assets/imgs/splatoonraiders_portada.jpg" alt="Carátula Splatoon Raiders">
+                    <figcaption>Una nueva aventura llena de desafíos y sorpresas que expandirá el universo Splatoon.</figcaption>
+                </figure>
+            </article>
         </section> 
-        <section id="cronologia"> <!-- SECTION: CRONOLOGÍA DETALLADA -->
+        <section class="cronologia"> <!-- SECTION: CRONOLOGÍA DETALLADA -->
             <h2>Cronología</h2>
             <article>
                 <h3>2015: Splatoon (Wii U)</h3>
@@ -377,7 +380,7 @@
             </p>
         </section>
         <section class = "footer-extra">
-            <img class = "footer-extra__imagen" src="./assets/imgs/logo_principal.png" alt="Logo de NintendoManía">
+            <img class = "footer-extra__imagen" src="../assets/imgs/logo_principal.png" alt="Logo de NintendoManía">
             <a href="#inicio" class = "footer-extra__boton"></a>
         </section>
     </footer>
