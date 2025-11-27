@@ -1859,7 +1859,7 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  padding-bottom: 2rem;
+  gap:2rem;
 }
 
 .voto__titulo{
@@ -1867,14 +1867,13 @@ img {
   font-family: var(--fuente-secundaria);
   font-size: 1.4rem;
   text-align: center;
-  padding: 2rem;
+  padding-top: 2rem;
 }
 
 .voto__descripcion{
   font-family: var(--fuente-base);
   width: 100%;
   text-align: center;
-  padding:1.5rem;
 }
 
 .voto__formulario{
@@ -2190,7 +2189,7 @@ img {
   display: block;
   margin: 0 auto;
   width: 100%;
-  max-width: 40%;
+  max-width: 50%;
   border-radius: 5rem;
   border: 6px solid var(--color-principal__splatoon);
   transition: border-color 1.4s ease, transform 1.4s ease;
@@ -2370,10 +2369,13 @@ img {
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
   text-align: center;
+  overflow-wrap: break-word;
+  width: 80%;
   padding:2rem;
 }
 
 .armas-splatoon__descripcion{
+  max-width: 75%;
   font-family: var(--fuente-base);
   font-size: 1.5rem;
   text-align: center;
@@ -2403,7 +2405,7 @@ img {
 
 .armas-lanzatintas__figura--imagen{
   width: 100%;
-  max-width: 40%;
+  max-width: 50%;
   border-radius: 50%;
   border: 3px solid var(--color-principal__splatoon);
   box-shadow: 0 12px 25px var(--color-texto);
@@ -2416,12 +2418,14 @@ img {
 }
 
 .armas-lanzatintas__descripcion{
+  max-width: 75%;
   font-family:var(--fuente-base);
   font-size: 1.2rem;
   padding:2rem;
 }
 
 .armas-lanzatintas__subtitulo{
+  width: 100%;
   font-family: var(--fuente-secundaria);
   font-size: 1.2rem;
   text-align: center;
@@ -2445,8 +2449,7 @@ img {
 
 .armas-lanzatintas__lista--imagen{
   max-width: 100%;
-  width: 150px;
-  height: 150px;
+  width: 100%;
   object-fit: cover;
   border-radius: 1rem;
 }
@@ -2455,6 +2458,27 @@ img {
   font-weight: 400;
   font-size: 0.9rem;
  }
+@media (max-width: 800px) {
+  .armas-lanzatintas__lista {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .armas-lanzatintas__lista--arma {
+    width: 100%;
+    padding:2rem;
+  }
+
+  .armas-lanzatintas__lista--figura {
+    width: 100%;
+  }
+
+  .armas-lanzatintas__lista--imagen {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
 
 .armas-rodillos{
   display: flex;
@@ -2479,7 +2503,7 @@ img {
 
 .armas-rodillos__figura--imagen{
   width: 100%;
-  max-width: 40%;
+  max-width: 50%;
   border-radius: 50%;
   border: 3px solid var(--color-principal__splatoon);
   box-shadow: 0 12px 25px var(--color-texto);
@@ -2516,20 +2540,39 @@ img {
   text-align: center;
   width: 25%;
   padding:0.5rem;
-
 }
 
 .armas-rodillos__lista--imagen{
+  width: 100%;
   max-width: 100%;
-  width: 150px;
-  height: 150px;
   object-fit: cover;
   border-radius: 1rem;
 }
 
- .armas-rodillos__lista--descripcion{
+.armas-rodillos__lista--descripcion{
   font-weight: 400;
   font-size: 0.9rem;
+}
+
+@media (max-width: 800px) {
+  .armas-rodillos__lista {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .armas-rodillos__lista--arma {
+    width: 100%;
+    padding:2rem;
+  }
+
+  .armas-rodillos__lista--figura {
+    width: 100%;
+  }
+
+  .armas-rodillos__lista--imagen {
+    width: 100%;
+    object-fit: cover;
+  }
 }
 
 
@@ -2556,7 +2599,7 @@ img {
 
 .armas-cargatintas__figura--imagen{
   width: 100%;
-  max-width: 40%;
+  max-width: 35%;
   border-radius: 50%;
   border: 3px solid var(--color-principal__splatoon);
   box-shadow: 0 12px 25px var(--color-texto);
@@ -2572,29 +2615,6 @@ img {
   font-family:var(--fuente-base);
   font-size: 1.2rem;
   padding:2rem;
-}
-
-.armas-cargatintas__subtitulo{
-  font-family: var(--fuente-secundaria);
-  font-size: 1.2rem;
-  text-align: center;
-  padding:2rem;
-}
-
-.armas-cargatintas__lista{
-  display: flex;
-  justify-content: space-evenly;
-  width: 100%;
-}
-
-.armas-cargatintas__lista--habilidad{
-  font-family: var(--fuente-base);
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-align: center;
-  width: 50%;
-  padding:0.5rem;
-
 }
 
 
@@ -2621,7 +2641,7 @@ img {
 
 .armas-derramatic__figura--imagen{
   width: 100%;
-  max-width: 40%;
+  max-width: 50%;
   border-radius: 50%;
   border: 3px solid var(--color-principal__splatoon);
   box-shadow: 0 12px 25px var(--color-texto);
@@ -2639,25 +2659,257 @@ img {
   padding:2rem;
 }
 
-.armas-derramatic__subtitulo{
+.idols-splatoon{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding:2rem;
+}
+
+.idols-splatoon__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 2.5rem;
+  text-align: center;
+  width: 100%;
+  padding:1rem;
+}
+
+.idols-splatoon__calamarcinas{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.idols-splatoon__calamarcinas--titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  padding:1rem;
+}
+
+
+.idols-splatoon__calamarcinas--imagen{
+  border-radius: 2rem;
+}
+
+.idols-splatoon__calamarcinas--descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  text-align: center;
+  padding:1.2rem
+}
+
+.idols-splatoon__cefalopop{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.idols-splatoon__cefalopop--titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  padding:1rem;
+}
+
+.idols-splatoon__cefalopop--imagen{
+  border-radius: 2rem;
+}
+
+.idols-splatoon__cefalopop--descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  text-align: center;
+  padding:1.2rem
+}
+
+.idols-splatoon__surimi{
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.idols-splatoon__surimi--titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1rem;
+  text-align: center;
+  width: 100%;
+  padding:1rem;
+}
+
+
+.idols-splatoon__surimi--imagen{
+  border-radius: 2rem;
+}
+
+.idols-splatoon__surimi--descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  text-align: center;
+  padding:1.2rem
+}
+
+
+@media screen and (max-width: 1200px) {
+  .idols-splatoon {
+    padding: 1.5rem 0;
+     justify-content: center;
+  }
+  .idols-splatoon__titulo {
+    font-size: 2.2rem;
+    padding: 1.5rem;
+  }
+  .idols-splatoon__calamarcinas,
+  .idols-splatoon__cefalopop,
+  .idols-splatoon__surimi {
+    width: 50%;
+    padding: 1rem;
+  }
+  .idols-splatoon__calamarcinas--titulo,
+  .idols-splatoon__cefalopop--titulo,
+  .idols-splatoon__surimi--titulo {
+    font-size: 1.6rem;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .idols-splatoon {
+    padding: 1rem 0;
+    border-radius: 2rem;
+    max-width: 100%; 
+  }
+  .idols-splatoon__titulo {
+    font-size: 2rem;
+    padding: 1rem;
+  }
+  .idols-splatoon__descripcion {
+    font-size: 1rem;
+    padding: 0 1rem 1rem;
+  }
+  .idols-splatoon__calamarcinas,
+  .idols-splatoon__cefalopop,
+  .idols-splatoon__surimi {
+    width: 90%;
+    padding: 0.8rem;
+  }
+  .idols-splatoon__calamarcinas--titulo,
+  .idols-splatoon__cefalopop--titulo,
+  .idols-splatoon__surimi--titulo {
+     font-size: 1.4rem;
+  }
+
+}
+
+#curiosidades{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+}
+
+.curiosidades__titulo {
+  font-family: var(--fuente-secundaria);
+  font-size: 1.8rem;
+  text-align: center;
+  padding:2rem;
+  width: 100%;
+}
+
+.curiosidades__articulo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap:1.5rem;
+}
+
+.curiosidades__articulo--titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.2rem;
+  text-align: center;
+  padding-top:2rem;
+  width: 100%;
+}
+
+.curiosidades__articulo--figura {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap:1.5rem;
+  width: 30%;
+}
+
+.curiosidades__articulo--descripcion {
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  text-align: center;
+  padding:1rem;
+  width: 100%;
+}
+
+.curiosidades__articulo--imagen {
+  border-radius: 2rem;
+  width: 100%;
+  max-width: 80%;
+  object-fit: cover;
+  box-shadow: 0 12px 25px var(--color-texto);
+}
+
+@media (max-width: 800px) {
+  .curiosidades__articulo {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .curiosidades__articulo--figura {
+    width: 100%;
+  }
+}
+
+#imagenes-destacadas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding:2rem;
+  gap:2rem;
+}
+
+.imagenes-destacadas__titulo{
+  width: 100%;
+  font-family: var(--fuente-secundaria);
+  font-size: 2.5rem;
   text-align: center;
   padding:2rem;
 }
 
-.armas-derramatic__lista{
-  display: flex;
-  justify-content: space-evenly;
+.imagenes-destacadas__imagen{
   width: 100%;
+  max-width: 20%;
+  border-radius: 2rem;
+  object-fit: cover;
+  box-shadow: 0 12px 25px var(--color-texto);
+  transition: transform 0.5s ease;
 }
 
-.armas-derramatic__lista--ventaja{
-  font-family: var(--fuente-base);
-  font-size: 1.2rem;
-  font-weight: 400;
-  text-align: center;
-  width: 50%;
-  padding:0.5rem;
+.imagenes-destacadas__imagen:hover{
+  transform: translateY(-6px);
+  transition: transform 0.5s ease;
+}
 
+@media (max-width: 1200px) {
+  .imagenes-destacadas__imagen{
+    max-width: 45%;
+  }
+}
+
+@media (max-width: 800px) {
+  #imagenes-destacadas{
+    justify-content: center;
+  }
+
+  .imagenes-destacadas__imagen{
+    max-width: 90%;
+  }
 }
