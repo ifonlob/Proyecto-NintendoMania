@@ -26,7 +26,7 @@
 /* ESTILOS GENERALES */
 
 body{
-  background-color: #e6f2f9;
+  background-color: #9eafb9;
   line-height: 1.6;
 }
 
@@ -109,14 +109,23 @@ img {
 
 .cabecera__menu--enlace{
   font-family: var(--fuente-base);
-  color: #fff;
-  font-weight: 500;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-shadow: 
+    1.41px 1.41px black, 
+    2px 0 black, 
+    1.41px -1.41px black,
+    0 -2px black, 
+    -1.41px -1.41px black, 
+    -2px 0 black,
+    -1.41px 1.41px black, 
+    0 2px black;
 }
 
 .cabecera__menu--enlace:hover,
 .cabecera__menu--enlace:focus {
   color: var(--color-secundario);
-  text-decoration: underline;
 }
 
 .buscador__formulario{
@@ -183,7 +192,7 @@ img {
   }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 900px) {
   .cabecera {
     flex-direction: column;
     align-items: center;
@@ -224,7 +233,7 @@ img {
   }
 }
 
-@media screen and (max-width: 550px) {
+@media screen and (max-width: 700px) {
   .cabecera {
     padding: 0.25rem;
   }
@@ -892,6 +901,7 @@ img {
   display: flex;
   flex-direction: column;
   text-align: center;
+  font-weight: 600;
   gap: 1rem;
   font-size: 1rem;
   text-align: center;
@@ -923,6 +933,7 @@ img {
   margin:0.5rem;
   border-radius: 2rem;
   color: white;
+  font-size: 1rem;
   font-weight: 600;
   transition: border-color 0.4s ease, transform 0.5s ease;
   cursor: pointer;
@@ -2006,6 +2017,158 @@ img {
 
 /* SPLATOON */
 
+.cabecera-splatoon{
+  top:0;
+  left:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 1.5rem;
+  background: url(./assets/imgs/splatoon_background.png);
+  padding: 0.75rem 1rem;
+}
+
+.cabecera-splatoon__menu{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap:2rem;
+  font-family: var(--fuente-secundaria);
+  color: var(--color-principal__splatoon)
+}
+
+.cabecera-splatoon__menu--titulo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -webkit-text-stroke: 2px black;
+}
+
+.cabecera-splatoon__menu--lista{
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fuente-base);
+  width:100%;
+  max-width: 100%;
+  gap:4rem;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  
+}
+
+
+.cabecera-splatoon__menu--imagen{
+  width: 12%;
+}
+
+.cabecera-splatoon__menu--enlace{
+  font-family: var(--fuente-base);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-shadow: 
+    1.41px 1.41px black, 
+    2px 0 black, 
+    1.41px -1.41px black,
+    0 -2px black, 
+    -1.41px -1.41px black, 
+    -2px 0 black,
+    -1.41px 1.41px black, 
+    0 2px black;
+}
+
+
+.cabecera-splatoon__menu--enlace:hover,
+.cabecera-splatoon__menu--enlace:focus {
+  color: var(--color-secundario__splatoon);
+}
+
+@media screen and (max-width: 1400px) {
+  .cabecera-splatoon{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .cabecera-splatoon__menu {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .cabecera-splatoon__menu--imagen{
+    width: 80px;
+  }
+
+  .cabecera-splatoon__menu--lista {
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+    font-size:1.6rem;
+    padding: 1rem;
+  }
+
+  .cabecera-splatoon__menu--titulo{
+    font-size: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .cabecera-splatoon {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  .cabecera-splatoon__logo {
+    width: 40%;
+    margin-bottom: 0.5rem;
+    margin: 0 auto;
+  }
+  .cabecera-splatoon__menu {
+    width: 100%;
+    gap: 0.5rem;
+    padding:1rem;
+  }
+
+  .cabecera-splatoon__menu--titulo{
+    font-size: 1.8rem;
+  }
+
+  .cabecera-splatoon__menu--imagen{
+    width: 55px;
+  }
+
+  .cabecera-splatoon__menu--lista {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cabecera-splatoon{
+    padding: 0.25rem;
+  }
+  .cabecera-splatoon__logo {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .cabecera-splatoon__menu{
+    padding:1rem;
+  }
+  .cabecera-splatoon__menu--titulo{
+    font-size: 1.5rem;
+
+  }
+
+  .cabecera-splatoon__menu--lista {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+  }
+}
+
 .body-splatoon{
   background-color: #eed3f4;
 }
@@ -2017,7 +2180,7 @@ img {
 
 .introduccion-splatoon__titulo{
   font-family: var(--fuente-secundaria);
-  font-size: 3rem;
+  font-size: 2.5rem;
   text-align: center;
   padding:2rem;
   width: 100%;
@@ -2049,7 +2212,7 @@ img {
 
 .introduccion-splatoon__descripcion{
   font-family: var(--fuente-base);
-  font-size: 2rem;
+  font-size: 1.5rem;
   text-align: center;
   padding:1rem;
   max-width: 100%;
@@ -2171,18 +2334,24 @@ img {
   }
 }
 
-.cronologia-splatoon1__titulo{
+.cronologia-splatoon1__titulo,.cronologia-splatoon2__titulo,.cronologia-splatoon3__titulo,.cronologia-octoexpansion__titulo,.cronologia-sideorder__titulo,.cronologia-raiders__titulo{
+  font-size: 1.5rem;
   text-align: center;
   font-family: var(--fuente-secundaria);
 }
 
-.cronologia-splatoon1__imagen{
+.cronologia-splatoon1__imagen,.cronologia-splatoon2__imagen,.cronologia-splatoon3__imagen,.cronologia-octoexpansion__imagen,.cronologia-raiders__imagen,.cronologia-sideorder__imagen{
   border-radius: 2rem;
-  box-shadow: 0 0 100px rgba(0,0,0,0.5);
+  box-shadow: 0 0 100px black;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.cronologia-splatoon1__imagen:hover{
+.cronologia-splatoon1__imagen:hover,.cronologia-splatoon2__imagen:hover,.cronologia-splatoon3__imagen:hover,.cronologia-octoexpansion__imagen:hover,.cronologia-raiders__imagen:hover,.cronologia-sideorder__imagen:hover{
   transform: translateY(-6px);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
+
+.cronologia-splatoon__lista{
+  list-style-image:url("./assets/imgs/flecha_listas.png");
+}
+
