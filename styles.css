@@ -2223,7 +2223,7 @@ img {
 
 .timeline__titulo{
   font-family: var(--fuente-secundaria);
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-align: center;
   padding: 1.5rem;
   width: 100%;
@@ -2282,7 +2282,7 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding:2rem;
+  padding:3rem;
   gap:1rem;
 }
 
@@ -2290,7 +2290,7 @@ img {
   width: 100%;
   text-align: center;
   font-family: var(--fuente-secundaria);
-  font-size: 3rem;
+  font-size: 2.5rem;
   padding:2rem;
 }
 
@@ -2360,3 +2360,304 @@ img {
   font-size: 1.4rem;
 }
 
+.armas-splatoon{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.armas-splatoon__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 2.5rem;
+  text-align: center;
+  padding:2rem;
+}
+
+.armas-splatoon__descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.5rem;
+  text-align: center;
+  padding:2rem;
+}
+
+.armas-lanzatintas{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.armas-lanzatintas__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  padding:2rem;
+}
+
+.armas-lanzatintas__figura{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:0.5rem;
+}
+
+.armas-lanzatintas__figura--imagen{
+  width: 100%;
+  max-width: 40%;
+  border-radius: 50%;
+  border: 3px solid var(--color-principal__splatoon);
+  box-shadow: 0 12px 25px var(--color-texto);
+}
+
+.armas-lanzatintas__figura--descripcion{
+  font-family: var(--fuente-base);
+  padding:2rem;
+  text-align: center;
+}
+
+.armas-lanzatintas__descripcion{
+  font-family:var(--fuente-base);
+  font-size: 1.2rem;
+  padding:2rem;
+}
+
+.armas-lanzatintas__subtitulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.2rem;
+  text-align: center;
+  padding:2rem;
+}
+
+.armas-lanzatintas__lista{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.armas-lanzatintas__lista--arma{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  width: 25%;
+  padding:0.5rem;
+
+}
+
+.armas-lanzatintas__lista--imagen{
+  max-width: 100%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+ .armas-lanzatintas__lista--descripcion{
+  font-weight: 400;
+  font-size: 0.9rem;
+ }
+
+.armas-rodillos{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.armas-rodillos__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  padding:2rem;
+}
+
+.armas-rodillos__figura{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:0.5rem;
+}
+
+.armas-rodillos__figura--imagen{
+  width: 100%;
+  max-width: 40%;
+  border-radius: 50%;
+  border: 3px solid var(--color-principal__splatoon);
+  box-shadow: 0 12px 25px var(--color-texto);
+}
+
+.armas-rodillos__figura--descripcion{
+  font-family: var(--fuente-base);
+  padding:2rem;
+  text-align: center;
+}
+
+.armas-rodillos__descripcion{
+  font-family:var(--fuente-base);
+  font-size: 1.2rem;
+  padding:2rem;
+}
+
+.armas-rodillos__subtitulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.2rem;
+  text-align: center;
+  padding:2rem;
+}
+
+.armas-rodillos__lista{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.armas-rodillos__lista--arma{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+  width: 25%;
+  padding:0.5rem;
+
+}
+
+.armas-rodillos__lista--imagen{
+  max-width: 100%;
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+
+ .armas-rodillos__lista--descripcion{
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+
+.armas-cargatintas{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.armas-cargatintas__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  padding:2rem;
+}
+
+.armas-cargatintas__figura{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:0.5rem;
+}
+
+.armas-cargatintas__figura--imagen{
+  width: 100%;
+  max-width: 40%;
+  border-radius: 50%;
+  border: 3px solid var(--color-principal__splatoon);
+  box-shadow: 0 12px 25px var(--color-texto);
+}
+
+.armas-cargatintas__figura--descripcion{
+  font-family: var(--fuente-base);
+  padding:2rem;
+  text-align: center;
+}
+
+.armas-cargatintas__descripcion{
+  font-family:var(--fuente-base);
+  font-size: 1.2rem;
+  padding:2rem;
+}
+
+.armas-cargatintas__subtitulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.2rem;
+  text-align: center;
+  padding:2rem;
+}
+
+.armas-cargatintas__lista{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.armas-cargatintas__lista--habilidad{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  width: 50%;
+  padding:0.5rem;
+
+}
+
+
+.armas-derramatic{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.armas-derramatic__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  padding:2rem;
+}
+
+.armas-derramatic__figura{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding:0.5rem;
+}
+
+.armas-derramatic__figura--imagen{
+  width: 100%;
+  max-width: 40%;
+  border-radius: 50%;
+  border: 3px solid var(--color-principal__splatoon);
+  box-shadow: 0 12px 25px var(--color-texto);
+}
+
+.armas-derramatic__figura--descripcion{
+  font-family: var(--fuente-base);
+  padding:2rem;
+  text-align: center;
+}
+
+.armas-derramatic__descripcion{
+  font-family:var(--fuente-base);
+  font-size: 1.2rem;
+  padding:2rem;
+}
+
+.armas-derramatic__subtitulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.2rem;
+  text-align: center;
+  padding:2rem;
+}
+
+.armas-derramatic__lista{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.armas-derramatic__lista--ventaja{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  font-weight: 400;
+  text-align: center;
+  width: 50%;
+  padding:0.5rem;
+
+}
