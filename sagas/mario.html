@@ -18,70 +18,82 @@
     <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../assets/imgs/letra_m.png">
+    <link rel="stylesheet" href="../styles.css">
 </head>
-<body id="inicio">
-    <header class = "cabecera"> 
+<body class = "body-mario" id="inicio">
+    <header class = "cabecera-mario"> 
         <!-- Logotipo principal y acceso rápido al inicio -->
-        <a class = "cabecera__logo" href = "./index.html">
-            <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Logo principal">
+        <a class = "cabecera__logo" href = "../index.html">
+            <img class = "cabecera__logo--imagen" src="../assets/imgs/logo_principal.png" alt="Logo principal">
         </a>
-        <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
-                <h1 class = "cabecera__menu--titulo"><img class = "cabecera__menu--imagen" src="./assets/imgs/logo_switch.svg" alt="Logo Switch" >Nintendo Manía</h1>
-            <ul class = "cabecera__menu--lista">
-                <li><a class = "cabecera__menu--enlace" href="./sagas/splatoon.html">Splatoon</a></li>
-                <li><a  class = "cabecera__menu--enlace" href="./sagas/kirby.html">Kirby</a></li>
-                <li><a  class = "cabecera__menu--enlace" href="./comparativas.html">Comparativas</a></li>
-                <li><a  class = "cabecera__menu--enlace" href="./contacto.html">Contacto</a></li>
-                <li><a  class = "cabecera__menu--enlace" href="./about.html">Sobre nosotros</a></li>
+        <nav class = "cabecera-mario__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
+                <h1 class = "cabecera-mario__menu--titulo"><img class = "cabecera-mario__menu--imagen" src="../assets/imgs/letra_m.png" alt="Logo Switch" >Nintendo Manía</h1>
+            <ul class = "cabecera-mario__menu--lista">
+                <li><a class = "cabecera-mario__menu--enlace" href="./splatoon.html">Splatoon</a></li>
+                <li><a  class = "cabecera-mario__menu--enlace" href="./kirby.html">Kirby</a></li>
+                <li><a  class = "cabecera-mario__menu--enlace" href="../comparativas.html">Comparativas</a></li>
+                <li><a  class = "cabecera-mario__menu--enlace" href="../contacto.html">Contacto</a></li>
+                <li><a  class = "cabecera-mario__menu--enlace" href="../about.html">Sobre nosotros</a></li>
             </ul>
         </nav>
-        <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
+        <nav class = "cabecera__buscador">
             <form name="buscador">
                 <label class = "buscador__formulario">
-                    <img  class = "buscador__formulario--imagen" src="./assets/imgs/lupa.png" alt="Lupa">
+                    <img  class = "buscador__formulario--imagen" src="../assets/imgs/lupa.png" alt="Lupa">
                     <input class = "buscador__formulario--input" type="search" name="buscador" placeholder="Buscar...">
                 </label>
             </form>
         </nav> 
     </header>
     <main>
-        <h1>El Fontanero que Salvó a Nintendo</h1>
-        <p>Mario, creado por Shigeru Miyamoto, no es solo el rostro de Nintendo, sino el personaje más reconocido en la historia de los videojuegos.</p>
-             <img src="../assets/imgs/mario_banner.png" alt="Banner saga Mario Bros">
-       <section id="hitos_2d">
-            <h2>Hitos Clásicos: La Era de las Plataformas 2D</h2> <!-- SECTION: Hitos Clásicos 2D -->
-            <p>La base de la saga, donde se establecieron las reglas del plataformeo, los power-ups y el diseño de niveles. Cada juego redefinió el género.</p>
-            <article>
-                <h3>Super Mario Bros. (1985)</h3>
-                <figure>
-                    <img src="../assets/imgs/caratula_mariobros_nes.jpg" alt="Carátula de Super Mario Bros. (NES)">
-                    <figcaption>La primera gran aventura. Introdujo el scroll lateral y los Power-Ups.</figcaption>
+        <h1 class = "introduccion-mario__titulo">El Fontanero que Salvó a Nintendo</h1>
+        <p class = "introduccion-mario__descripcion">Mario, creado por Shigeru Miyamoto, no es solo el rostro de Nintendo, sino el personaje más reconocido en la historia de los videojuegos.</p>
+        <img class = "introduccion-mario__imagen" src="../assets/imgs/mario-galaxy.jpg" alt="Imagen Mario Galaxy">
+        <section id="hitos-2d">
+            <h2 class="hitos-2d__titulo">Hitos Clásicos: La Era de las Plataformas 2D</h2>
+            <article class="hitos-2d-1985">
+                <h3 class="hitos-2d-1985__titulo">Super Mario Bros. (1985)</h3>
+                <figure class="hitos-2d-1985__figura">
+                <img class="hitos-2d-1985__figura--imagen"
+                    src="../assets/imgs/caratula_mariobros_nes.jpg"
+                    alt="Carátula de Super Mario Bros. (NES)">
+                <figcaption class="hitos-2d-1985__figura--descripcion">
+                    La primera gran aventura. Introdujo el scroll lateral y los Power-Ups.
+                </figcaption>
                 </figure>
-                <p>Este título no solo salvó a la industria del videojuego, sino que inventó las reglas modernas de los juegos de plataformas. Introdujo el icónico Super Champiñón, la Flor de Fuego y la idea de secretos ocultos.</p>
             </article>
-            <article>
-                <h3>Super Mario Bros. 3 (1988)</h3>
-                <figure>
-                    <img src="../assets/imgs/super_mariobros3.webp" alt="Carátula de Super Mario Bros. 3">
-                    <figcaption>La gran expansión. Introdujo el mapamundi y el traje de Mapache.</figcaption>
+            <article class="hitos-2d-1988">
+                <h3 class="hitos-2d-1988__titulo">Super Mario Bros. 3 (1988)</h3>
+                <figure class="hitos-2d-1988__figura">
+                <img class="hitos-2d-1988__figura--imagen"
+                    src="../assets/imgs/super_mariobros3.webp"
+                    alt="Carátula de Super Mario Bros. 3">
+                <figcaption class="hitos-2d-1988__figura--descripcion">
+                    La gran expansión. Introdujo el mapamundi y el traje de Mapache.
+                </figcaption>
                 </figure>
-                <p>SM3 fue un salto masivo en complejidad, introduciendo el mapamundi (que permitía elegir niveles y guardar el progreso) y una gran variedad de trajes de transformación, siendo el más memorable el traje de Mapache con capacidad de volar.</p>
             </article>
-            <article>
-                <h3>Super Mario World (1990)</h3>
-                <figure>
-                    <img src="../assets/imgs/caratula_mariobros_snes.avif" alt="Carátula de Super Mario World (SNES)">
-                    <figcaption>La obra maestra de SNES. Debut de Yoshi y el énfasis en las rutas secretas.</figcaption>
+            <article class="hitos-2d-1990">
+                <h3 class="hitos-2d-1990__titulo">Super Mario World (1990)</h3>
+                <figure class="hitos-2d-1990__figura">
+                <img class="hitos-2d-1990__figura--imagen"
+                    src="../assets/imgs/super-marioworld.jpg"
+                    alt="Carátula de Super Mario World (SNES)">
+                <figcaption class="hitos-2d-1990__figura--descripcion">
+                    La obra maestra de SNES. Debut de Yoshi y el énfasis en las rutas secretas.
+                </figcaption>
                 </figure>
-                <p>Marcó el debut de Super Nintendo y de Yoshi. Perfeccionó el scroll lateral y se centró en la exploración, ya que gran parte de los niveles requerían encontrar salidas secretas para desbloquear nuevas zonas del mapamundi.</p>
             </article>
-            <article>
-                <h3>Yoshi's Island (1995)</h3>
-                <figure>
-                    <img src="../assets/imgs/yoshis_island.png" alt="Carátula de Super Mario World 2: Yoshi's Island (SNES)">
-                    <figcaption>El inicio de la saga Yoshi. Redefinió el estilo artístico 2D y la mecánica de "montar".</figcaption>
+            <article class="hitos-2d-1995">
+                <h3 class="hitos-2d-1995__titulo">Yoshi's Island (1995)</h3>
+                <figure class="hitos-2d-1995__figura">
+                <img class="hitos-2d-1995__figura--imagen"
+                    src="../assets/imgs/yoshis_island.png"
+                    alt="Carátula de Super Mario World 2: Yoshi's Island (SNES)">
+                <figcaption class="hitos-2d-1995__figura--descripcion">
+                    El inicio de la saga Yoshi. Redefinió el estilo artístico 2D y la mecánica de "montar" a Yoshi.
+                </figcaption>
                 </figure>
-                <p>Aunque técnicamente es una secuela, este título centró la jugabilidad en Yoshi (el protector del bebé Mario). Su estilo artístico de crayones fue una ruptura visual y consolidó la mecánica de los huevos de Yoshi.</p>
             </article>
         </section>
         <section id="hitos_3d"> <!-- SECTION: Revolución 3D -->
