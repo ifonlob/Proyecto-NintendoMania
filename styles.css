@@ -274,7 +274,7 @@ img {
   align-items: center;
   gap:2rem;
   max-width: 100%;
-  background: url(./assets/imgs/fondo_footer.jpg);
+  background: url(./assets/imgs/fondo-footer.jpg);
   background-position-y: 20px;
 }
 
@@ -3167,7 +3167,7 @@ img {
   font-family: var(--fuente-base);
   text-align: center;
   font-weight: 600;
-  background-color: #E5252190;
+  background-color: var(--color-principal__mario);
   border-radius: 2rem;
   padding:1rem;
 }
@@ -3331,7 +3331,7 @@ img {
   font-family: var(--fuente-base);
   text-align: center;
   font-weight: 600;
-  background-color: #E5252199;
+  background-color: var(--color-principal__mario);
   border-radius: 2rem;
   padding:1rem;
 }
@@ -3626,12 +3626,6 @@ img {
   padding:1rem;
 }
 
-
-.curiosidades-origen-mario,
-.curiosidades-diseno-mario,
-.curiosidades-goombas {
-}
-
 .curiosidades-origen-mario__titulo,
 .curiosidades-diseno-mario__titulo,
 .curiosidades-goombas__titulo {
@@ -3683,8 +3677,6 @@ img {
   width: 50%;
 }
 
-
-
 .curiosidades-diseno-mario__lista {
   font-family: var(--fuente-base);
   font-weight: 500;
@@ -3714,4 +3706,61 @@ img {
   padding: 1rem;
   margin: 0 auto;
   width: 50%;
+}
+
+#imagenes-destacadas{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly
+  ;
+
+}
+
+.imagenes-destacadas__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 2rem;
+  text-align: center;
+  padding:1rem;
+  width: 100%;
+  text-shadow: -3px 3px 0 var(--color-principal__mario);
+}
+.imagenes-destacadas__descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  padding:1rem;
+}
+
+
+.imagenes-destacadas__figura{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap:1rem;
+  padding:1rem;
+  width: 100%;
+  max-width: 15%;
+  background-image: url(./assets/imgs/fondo-mario.jpg);
+  border-radius: 2rem;
+  border: 3px solid var(--color-texto)
+}
+
+.imagenes-destacadas__figura-imagen{
+  border-radius: 2rem;
+  max-width: 75%;
+}
+
+.imagenes-destacadas__figura-descripcion {
+  font-family: var(--fuente-base);
+  text-align: center;
+  background-color: var(--color-principal__mario);
+  border-radius: 2rem;
+  width: 85%;
+  padding:1rem;
+}
+
+.imagenes-destacadas__figura-descripcion > p:first-of-type {
+  font-weight: 600;
 }
