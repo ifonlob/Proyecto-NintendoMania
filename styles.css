@@ -2183,6 +2183,7 @@ img {
   text-align: center;
   padding:2rem;
   width: 100%;
+  text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
 .introduccion-splatoon__imagen{
@@ -2219,6 +2220,14 @@ img {
   margin: 0 auto;
 }
 
+#timeline {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: auto, 200px, auto;
+  align-items: center;
+  justify-items: center;
+  gap:1.5rem;
+}
 
 .timeline__titulo{
   font-family: var(--fuente-secundaria);
@@ -2226,16 +2235,7 @@ img {
   text-align: center;
   padding: 1.5rem;
   width: 100%;
-}
-
-
-.timeline {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: auto, 200px, auto;
-  align-items: center;
-  justify-items: center;
-  gap:1.5rem;
+  text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
 .timeline__imagen {
@@ -2277,7 +2277,7 @@ img {
   border: 3px solid black
 }
 
-.cronologia-splatoon{
+#cronologia-splatoon{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -2291,6 +2291,7 @@ img {
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
   padding:2rem;
+  text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
 .cronologia-splatoon1,
@@ -2359,7 +2360,7 @@ img {
   font-size: 1.4rem;
 }
 
-.armas-splatoon{
+#armas-splatoon{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2371,7 +2372,9 @@ img {
   text-align: center;
   overflow-wrap: break-word;
   width: 80%;
-  padding:2rem;
+  padding: 2rem;
+  color: var(--color-texto);
+  text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
 .armas-splatoon__descripcion{
@@ -2382,284 +2385,155 @@ img {
   padding:2rem;
 }
 
-.armas-lanzatintas{
+.armas-lanzatintas__titulo,
+.armas-rodillos__titulo,
+.armas-cargatintas__titulo,
+.armas-derramatic__titulo {
+  font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 100%;
+  padding: 2rem;
+}
+
+.armas-lanzatintas,
+.armas-rodillos,
+.armas-cargatintas,
+.armas-derramatic {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.armas-lanzatintas__titulo{
-  font-family: var(--fuente-secundaria);
-  font-size: 1.5rem;
-  text-align: center;
-  width: 100%;
-  padding:2rem;
-}
-
-.armas-lanzatintas__figura{
+.armas-lanzatintas__figura,
+.armas-rodillos__figura,
+.armas-cargatintas__figura,
+.armas-derramatic__figura {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding:0.5rem;
+  padding: 0.5rem;
 }
 
-.armas-lanzatintas__figura--imagen{
+.armas-lanzatintas__figura--imagen,
+.armas-rodillos__figura--imagen,
+.armas-cargatintas__figura--imagen,
+.armas-derramatic__figura--imagen {
   width: 100%;
-  max-width: 50%;
   border-radius: 50%;
   border: 3px solid var(--color-principal__splatoon);
   box-shadow: 0 12px 25px var(--color-texto);
 }
 
-.armas-lanzatintas__figura--descripcion{
+.armas-lanzatintas__figura--imagen,
+.armas-rodillos__figura--imagen,
+.armas-cargatintas__figura--imagen,
+.armas-derramatic__figura--imagen {
+  max-width: 50%;
+}
+
+.armas-lanzatintas__figura--descripcion,
+.armas-rodillos__figura--descripcion,
+.armas-cargatintas__figura--descripcion,
+.armas-derramatic__figura--descripcion {
   font-family: var(--fuente-base);
-  padding:2rem;
+  padding: 2rem;
   text-align: center;
 }
 
-.armas-lanzatintas__descripcion{
-  max-width: 75%;
-  font-family:var(--fuente-base);
+.armas-lanzatintas__descripcion,
+.armas-rodillos__descripcion,
+.armas-cargatintas__descripcion,
+.armas-derramatic__descripcion {
+  font-family: var(--fuente-base);
   font-size: 1.2rem;
-  padding:2rem;
+  padding: 2rem;
 }
 
-.armas-lanzatintas__subtitulo{
-  width: 100%;
+.armas-lanzatintas__subtitulo,
+.armas-rodillos__subtitulo,
+.armas-cargatintas__subtitulo,
+.armas-derramatic__subtitulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.2rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
 }
 
-.armas-lanzatintas__lista{
+.armas-lanzatintas__lista,
+.armas-rodillos__lista,
+.armas-cargatintas__lista,
+.armas-derramatic__lista {
   display: flex;
   justify-content: space-evenly;
 }
 
-.armas-lanzatintas__lista--arma{
+.armas-lanzatintas__lista--arma,
+.armas-rodillos__lista--arma,
+.armas-cargatintas__lista--arma,
+.armas-derramatic__lista--arma {
   font-family: var(--fuente-base);
   font-size: 1.2rem;
   font-weight: 600;
   text-align: center;
   width: 25%;
-  padding:0.5rem;
-
+  padding: 0.5rem;
 }
 
-.armas-lanzatintas__lista--imagen{
-  max-width: 100%;
+.armas-lanzatintas__lista--imagen,
+.armas-rodillos__lista--imagen,
+.armas-cargatintas__lista--imagen,
+.armas-derramatic__lista--imagen {
   width: 100%;
+  max-width: 100%;
   object-fit: cover;
   border-radius: 1rem;
+  border: 4px solid var(--color-secundario__splatoon);
 }
 
- .armas-lanzatintas__lista--descripcion{
+.armas-lanzatintas__lista--descripcion,
+.armas-rodillos__lista--descripcion,
+.armas-cargatintas__lista--descripcion,
+.armas-derramatic__lista--descripcion {
   font-weight: 400;
   font-size: 0.9rem;
- }
+}
+
 @media (max-width: 800px) {
-  .armas-lanzatintas__lista {
+  .armas-lanzatintas__lista,
+  .armas-rodillos__lista,
+  .armas-cargatintas__lista,
+  .armas-derramatic__lista {
     flex-direction: column;
     align-items: center;
   }
 
-  .armas-lanzatintas__lista--arma {
+  .armas-lanzatintas__lista--arma,
+  .armas-rodillos__lista--arma,
+  .armas-cargatintas__lista--arma,
+  .armas-derramatic__lista--arma {
     width: 100%;
-    padding:2rem;
+    padding: 2rem;
   }
 
-  .armas-lanzatintas__lista--figura {
+  .armas-lanzatintas__lista--figura,
+  .armas-rodillos__lista--figura,
+  .armas-cargatintas__lista--figura,
+  .armas-derramatic__lista--figura {
     width: 100%;
   }
 
-  .armas-lanzatintas__lista--imagen {
+  .armas-lanzatintas__lista--imagen,
+  .armas-rodillos__lista--imagen,
+  .armas-cargatintas__lista--imagen,
+  .armas-derramatic__lista--imagen {
     width: 100%;
     object-fit: cover;
   }
 }
 
 
-.armas-rodillos{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.armas-rodillos__titulo{
-  font-family: var(--fuente-secundaria);
-  font-size: 1.5rem;
-  text-align: center;
-  width: 100%;
-  padding:2rem;
-}
-
-.armas-rodillos__figura{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding:0.5rem;
-}
-
-.armas-rodillos__figura--imagen{
-  width: 100%;
-  max-width: 50%;
-  border-radius: 50%;
-  border: 3px solid var(--color-principal__splatoon);
-  box-shadow: 0 12px 25px var(--color-texto);
-}
-
-.armas-rodillos__figura--descripcion{
-  font-family: var(--fuente-base);
-  padding:2rem;
-  text-align: center;
-}
-
-.armas-rodillos__descripcion{
-  font-family:var(--fuente-base);
-  font-size: 1.2rem;
-  padding:2rem;
-}
-
-.armas-rodillos__subtitulo{
-  font-family: var(--fuente-secundaria);
-  font-size: 1.2rem;
-  text-align: center;
-  padding:2rem;
-}
-
-.armas-rodillos__lista{
-  display: flex;
-  justify-content: space-evenly;
-}
-
-.armas-rodillos__lista--arma{
-  font-family: var(--fuente-base);
-  font-size: 1.2rem;
-  font-weight: 600;
-  text-align: center;
-  width: 25%;
-  padding:0.5rem;
-}
-
-.armas-rodillos__lista--imagen{
-  width: 100%;
-  max-width: 100%;
-  object-fit: cover;
-  border-radius: 1rem;
-}
-
-.armas-rodillos__lista--descripcion{
-  font-weight: 400;
-  font-size: 0.9rem;
-}
-
-@media (max-width: 800px) {
-  .armas-rodillos__lista {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .armas-rodillos__lista--arma {
-    width: 100%;
-    padding:2rem;
-  }
-
-  .armas-rodillos__lista--figura {
-    width: 100%;
-  }
-
-  .armas-rodillos__lista--imagen {
-    width: 100%;
-    object-fit: cover;
-  }
-}
-
-
-.armas-cargatintas{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.armas-cargatintas__titulo{
-  font-family: var(--fuente-secundaria);
-  font-size: 1.5rem;
-  text-align: center;
-  width: 100%;
-  padding:2rem;
-}
-
-.armas-cargatintas__figura{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding:0.5rem;
-}
-
-.armas-cargatintas__figura--imagen{
-  width: 100%;
-  max-width: 35%;
-  border-radius: 50%;
-  border: 3px solid var(--color-principal__splatoon);
-  box-shadow: 0 12px 25px var(--color-texto);
-}
-
-.armas-cargatintas__figura--descripcion{
-  font-family: var(--fuente-base);
-  padding:2rem;
-  text-align: center;
-}
-
-.armas-cargatintas__descripcion{
-  font-family:var(--fuente-base);
-  font-size: 1.2rem;
-  padding:2rem;
-}
-
-
-.armas-derramatic{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.armas-derramatic__titulo{
-  font-family: var(--fuente-secundaria);
-  font-size: 1.5rem;
-  text-align: center;
-  width: 100%;
-  padding:2rem;
-}
-
-.armas-derramatic__figura{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding:0.5rem;
-}
-
-.armas-derramatic__figura--imagen{
-  width: 100%;
-  max-width: 50%;
-  border-radius: 50%;
-  border: 3px solid var(--color-principal__splatoon);
-  box-shadow: 0 12px 25px var(--color-texto);
-}
-
-.armas-derramatic__figura--descripcion{
-  font-family: var(--fuente-base);
-  padding:2rem;
-  text-align: center;
-}
-
-.armas-derramatic__descripcion{
-  font-family:var(--fuente-base);
-  font-size: 1.2rem;
-  padding:2rem;
-}
-
-.idols-splatoon{
+#idols-splatoon{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
