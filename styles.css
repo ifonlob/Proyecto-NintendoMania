@@ -17,7 +17,7 @@
   --color-principal: #800E13;
   --color-secundario: #0074D9 ;
   --color-principal__splatoon: #F02D7D;
-  --color-secundario__splatoon: #19D719;
+  --color-principal__mario:#E52521;
   --color-texto: #232323;
   --fuente-base: 'Montserrat', Arial, sans-serif;
   --fuente-secundaria: 'Press Start 2P', monospace;
@@ -26,7 +26,7 @@
 /* ESTILOS GENERALES */
 
 body{
-  background-color: #9eafb9;
+  background-color: #92d2f8;
   line-height: 1.6;
 }
 
@@ -100,6 +100,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  color:black;
 }
 
 .cabecera__menu--imagen{
@@ -803,7 +804,7 @@ img {
   display: block;
   padding: 0.5rem 1rem;
   color: var(--color-texto);
-  background: #5dd772;
+  background: #e59fca;
   border-radius: 1.25rem;
   font-weight: bold;
   font-family: var(--fuente-secundaria);
@@ -1423,7 +1424,7 @@ img {
 }
 
 .calidad__lista--descripcion{
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 400;
   max-width: 60%;
   width: 100%;
@@ -2040,6 +2041,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap:1rem;
   -webkit-text-stroke: 1px black;
 }
 
@@ -2485,7 +2487,7 @@ img {
 .armas-cargatintas__subtitulo,
 .armas-derramatic__subtitulo {
   font-family: var(--fuente-secundaria);
-  font-size: 1.4rem;
+  font-size: 1.6rem;
   text-align: center;
   overflow-wrap: break-word;
   padding: 1rem;
@@ -2493,7 +2495,7 @@ img {
   background-image: url(./assets/imgs/splatoon-fondo-basico.webp);
   border-radius: 1.2rem;
   border: 3px solid var(--color-principal__splatoon);
-  -webkit-text-stroke: 0.6px black;
+  -webkit-text-stroke: 1px black;
   
 }
 
@@ -2881,5 +2883,324 @@ img {
 
   .imagenes-destacadas__imagen{
     max-width: 90%;
+  }
+}
+
+/* MARIO */
+
+.cabecera-mario{
+  top:0;
+  left:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 1.5rem;
+  background: url(./assets/imgs/fondo-mario-header.jpg);
+  padding: 0.75rem 1rem;
+}
+
+.cabecera-mario__menu{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap:2rem;
+  font-family: var(--fuente-secundaria);
+  color: var(--color-principal__mario)
+}
+
+.cabecera-mario__menu--titulo{
+  display: flex;
+  justify-content: center;
+  gap:2rem;
+  align-items: center;
+    -webkit-text-stroke: 1px black;
+}
+
+.cabecera-mario__menu--lista{
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--fuente-base);
+  width:100%;
+  max-width: 100%;
+  gap:4rem;
+  font-size: 1rem;
+  padding-bottom: 1rem;
+  
+}
+
+
+.cabecera-mario__menu--imagen{
+  width: 12%;
+}
+
+.cabecera-mario__menu--enlace{
+  font-family: var(--fuente-base);
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 900;
+  text-shadow: 
+    1.41px 1.41px black, 
+    2px 0 black, 
+    1.41px -1.41px black,
+    0 -2px black, 
+    -1.41px -1.41px black, 
+    -2px 0 black,
+    -1.41px 1.41px black, 
+    0 2px black;
+}
+
+
+.cabecera-mario__menu--enlace:hover,
+.cabecera-mario__menu--enlace:focus {
+  color: var(--color-secundario__splatoon);
+}
+
+
+@media screen and (max-width: 1400px) {
+  .cabecera-mario{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+  }
+  .cabecera-mario__menu {
+    display: flex;
+    width: 100%;
+    gap: 1rem;
+  }
+
+  .cabecera-mario__menu--imagen{
+    width: 80px;
+  }
+
+  .cabecera-mario__menu--lista {
+    justify-content: space-evenly;
+    gap: 1rem;
+    width: 100%;
+    font-size:1.6rem;
+    padding: 1rem;
+  }
+
+  .cabecera-mario__menu--titulo{
+    font-size: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 800px) {
+  .cabecera-mario {
+    flex-direction: column;
+    align-items: center;
+    padding: 0.5rem;
+  }
+  .cabecera-mario__logo {
+    width: 40%;
+    margin-bottom: 0.5rem;
+    margin: 0 auto;
+  }
+  .cabecera-mario__menu {
+    width: 100%;
+    gap: 0.5rem;
+    padding:1rem;
+  }
+
+  .cabecera-mario__menu--titulo{
+    font-size: 1.8rem;
+  }
+
+  .cabecera-mario__menu--imagen{
+    width: 55px;
+  }
+
+  .cabecera-mario__menu--lista {
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 1rem 0.5rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .cabecera-mario{
+    padding: 0.25rem;
+  }
+  .cabecera-mario__logo {
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .cabecera-mario__menu{
+    padding:1rem;
+  }
+  .cabecera-mario__menu--titulo{
+    font-size: 1.2rem;
+
+  }
+
+  .cabecera-mario__menu--lista {
+    flex-direction: column;
+    align-items: center;
+    font-size: 1rem;
+  }
+}
+
+.body-mario{
+  background-color: #e3f3ff;
+}
+
+.introduccion-mario__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 2.5rem;
+  text-align: center;
+  padding:2rem;
+  width: 100%;
+  text-shadow: -3px 3px 0 var(--color-principal__mario);
+}
+
+.introduccion-mario__descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.6rem;
+  text-align: center;
+  width: 100%;
+  max-width: 75%;
+  margin: 0 auto;
+  padding: 0 2rem 1rem 2rem;
+
+}
+
+.introduccion-mario__imagen{
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 40%;
+  border-radius: 5rem;
+  border: 4px solid var(--color-principal__mario);
+  transition: border-color 1.4s ease, transform 1.4s ease;
+}
+
+#hitos-2d{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding:3rem;
+  gap:2.5rem;
+}
+
+.hitos-2d__titulo {
+  font-family: var(--fuente-secundaria);
+  font-size: 2rem;
+  text-align: center;
+  padding:2rem;
+  width: 100%;
+  text-shadow: -3px 3px 0 var(--color-principal__mario);
+}
+
+.hitos-2d-1985,
+.hitos-2d-1988,
+.hitos-2d-1990,
+.hitos-2d-1995 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  max-width: 40%;
+  width: 100%;
+  padding: 1.5rem 1.25rem;
+  background-image: url(./assets/imgs/lucky-blocks.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+.hitos-2d-1985__titulo,
+.hitos-2d-1988__titulo,
+.hitos-2d-1990__titulo,
+.hitos-2d-1995__titulo {
+  font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 80%;
+  padding: 1.5rem;
+  color: #fff;
+  background-image: url(../assets/imgs/header-mario.webp);
+  background-position: center;
+  border-radius: 1.2rem;
+  border: 3px solid var(--color-texto);
+  -webkit-text-stroke: 1px black;
+  overflow-wrap: break-word;
+  text-shadow: -3px 3px 0 var(--color-principal__mario);
+}
+
+.hitos-2d-1985__figura,
+.hitos-2d-1988__figura,
+.hitos-2d-1990__figura,
+.hitos-2d-1995__figura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1rem;
+  width: 100%;
+  max-width: 75%;
+}
+
+.hitos-2d-1985__figura--imagen,
+.hitos-2d-1988__figura--imagen,
+.hitos-2d-1990__figura--imagen,
+.hitos-2d-1995__figura--imagen {
+  border-radius: 2rem;
+  border: 5px solid var(--color-principal__mario)
+}
+
+.hitos-2d-1985__figura--descripcion,
+.hitos-2d-1988__figura--descripcion,
+.hitos-2d-1990__figura--descripcion,
+.hitos-2d-1995__figura--descripcion {
+  font-family: var(--fuente-base);
+  text-align: center;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  #hitos-2d {
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+  }
+
+  .hitos-2d__titulo {
+    font-size: 1.8rem;
+    padding: 1.5rem;
+  }
+
+  .hitos-2d-1985,
+  .hitos-2d-1988,
+  .hitos-2d-1990,
+  .hitos-2d-1995 {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .hitos-2d-1985__titulo,
+  .hitos-2d-1988__titulo,
+  .hitos-2d-1990__titulo,
+  .hitos-2d-1995__titulo {
+    font-size: 1.4rem;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .hitos-2d-1985__figura,
+  .hitos-2d-1988__figura,
+  .hitos-2d-1990__figura,
+  .hitos-2d-1995__figura {
+    max-width: 100%;
+  }
+
+  .hitos-2d-1985__figura--descripcion,
+  .hitos-2d-1988__figura--descripcion,
+  .hitos-2d-1990__figura--descripcion,
+  .hitos-2d-1995__figura--descripcion {
+    font-size: 1.1rem;
   }
 }
