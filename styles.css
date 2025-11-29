@@ -274,7 +274,7 @@ img {
   align-items: center;
   gap:2rem;
   max-width: 100%;
-  background: url(./assets/imgs/fondo_footer.png);
+  background: url(./assets/imgs/fondo_footer.jpg);
   background-position-y: 20px;
 }
 
@@ -499,17 +499,17 @@ img {
 }
 
 .mejores-sagas__figura--imagen[alt="Letra M de Mario Bros"]{
-  background-color:#2773F598;
+  background-color:var(--color-principal__mario);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .mejores-sagas__figura--imagen[alt="Inkling de Splatoon"]{
-  background-color: #66656598;
+  background-color: var(--color-principal__splatoon);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
 .mejores-sagas__figura--imagen[alt="Kirby"]{
-  background-color: #FF262698;
+  background-color: #eb9ec1;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
@@ -2200,7 +2200,6 @@ img {
 
 .introduccion-splatoon__imagen:hover{
   transform: translateY(-6px);
-  border: 6px solid var(--color-secundario__splatoon);
   transition: border-color 0.8s ease, transform 0.5s ease;
 }
 
@@ -2767,7 +2766,7 @@ img {
  
 .curiosidades__articulo--titulo {
   font-family: var(--fuente-secundaria);
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   text-align: center;
   width: 80%;
   padding: 1.5rem;
@@ -2777,7 +2776,7 @@ img {
   background-position: center;
   border-radius: 1.2rem;
   border: 3px solid var(--color-texto);
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 0.7px black;
   overflow-wrap: break-word;
 }
 
@@ -2837,6 +2836,9 @@ img {
   .curiosidades__articulo--figura {
     max-width: 75%;
     width: 100%;
+  }
+  .curiosidades__articulo--titulo{
+    font-size: 1.4rem;
   }
 }
 
@@ -3334,4 +3336,268 @@ img {
   background-color: #E5252199;
   border-radius: 2rem;
   padding:1rem;
+}
+
+@media (max-width: 1200px) {
+  #hitos-3d {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2.5rem;
+  }
+
+  .hitos-3d-1996,
+  .hitos-3d-2002,
+  .hitos-3d-2007,
+  .hitos-3d-2011,
+  .hitos-3d-2013,
+  .hitos-3d-2017 {
+    max-width: 45%;
+    width: 45%;
+  }
+}
+
+@media (max-width: 900px) {
+  .hitos-3d__titulo {
+  font-size: 1.8rem;
+  padding: 1.5rem;
+  }
+
+  .hitos-3d__descripcion {
+  font-size: 1.1rem;
+  padding: 1.5rem 1rem;
+  }
+
+  .hitos-3d-1996,
+  .hitos-3d-2002,
+  .hitos-3d-2007,
+  .hitos-3d-2011,
+  .hitos-3d-2013,
+  .hitos-3d-2017 {
+  max-width: 100%;
+  width: 100%;
+  padding: 1.5rem 1rem;
+  }
+
+  .hitos-3d-1996__titulo,
+  .hitos-3d-2002__titulo,
+  .hitos-3d-2007__titulo,
+  .hitos-3d-2011__titulo,
+  .hitos-3d-2013__titulo,
+  .hitos-3d-2017__titulo {
+  font-size: 1.4rem;
+  width: 100%;
+  padding: 1rem;
+  }
+
+  .hitos-3d-1996__figura,
+  .hitos-3d-2002__figura,
+  .hitos-3d-2007__figura,
+  .hitos-3d-2011__figura,
+  .hitos-3d-2013__figura,
+  .hitos-3d-2017__figura {
+  max-width: 100%;
+  }
+
+  .hitos-3d-1996__figura--descripcion,
+  .hitos-3d-2002__figura--descripcion,
+  .hitos-3d-2007__figura--descripcion,
+  .hitos-3d-2011__figura--descripcion,
+  .hitos-3d-2013__figura--descripcion,
+  .hitos-3d-2017__figura--descripcion {
+  font-size: 1.1rem;
+  }
+
+  .hitos-3d-1996__descripcion,
+  .hitos-3d-2002__descripcion,
+  .hitos-3d-2007__descripcion,
+  .hitos-3d-2011__descripcion,
+  .hitos-3d-2013__descripcion,
+  .hitos-3d-2017__descripcion {
+  font-size: 0.95rem;
+  padding: 1rem;
+  }
+}
+
+
+#personajes{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding:2rem;
+  gap:2.5rem;
+}
+
+.personajes__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 2rem;
+  text-align: center;
+  padding:2rem;
+  width: 100%;
+  text-shadow: -3px 3px 0 var(--color-principal__mario);
+}
+.personajes__descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  padding:2rem;
+
+}
+
+
+.personajes-mario,
+.personajes-luigi,
+.personajes-bowser,
+.personajes-peach,
+.personajes-aliados {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  max-width: 25%;
+  width: 100%;
+  padding: 1.5rem;
+  background-image: url(./assets/imgs/fondo-mario-1up.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+
+.personajes-mario__titulo,
+.personajes-luigi__titulo,
+.personajes-bowser__titulo,
+.personajes-peach__titulo,
+.personajes-aliados__titulo {
+  font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 80%;
+  padding: 1.5rem;
+  color: #fff;
+  background-image: url(../assets/imgs/header-mario.webp);
+  background-position: center;
+  border-radius: 1.2rem;
+  border: 3px solid var(--color-texto);
+  -webkit-text-stroke: 1px black;
+  overflow-wrap: break-word;
+  text-shadow: -3px 3px 0 var(--color-principal__mario);
+}
+
+
+.personajes-mario__descripcion,
+.personajes-luigi__descripcion,
+.personajes-bowser__descripcion,
+.personajes-peach__descripcion,
+.personajes-aliados__descripcion{
+  font-family: var(--fuente-base);
+  text-align: center;
+  font-weight: 600;
+  background-color: var(--color-principal__mario);
+  border-radius: 2rem;
+  padding:1.5rem;
+}
+
+
+.personajes-mario__figura,
+.personajes-luigi__figura,
+.personajes-bowser__figura,
+.personajes-peach__figura,
+.personajes-aliados__figura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1rem;
+  width: 100%;
+  max-width: 75%;
+}
+
+.personajes-mario__figura--descripcion,
+.personajes-luigi__figura--descripcion,
+.personajes-bowser__figura--descripcion,
+.personajes-peach__figura--descripcion,
+.personajes-aliados__figura--descripcion{
+  font-family: var(--fuente-base);
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 900;
+  background: rgba(255,255,255,0.6);
+}
+
+@media (max-width: 1200px) {
+  #personajes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2.5rem;
+  }
+
+  .personajes-mario,
+  .personajes-luigi,
+  .personajes-bowser,
+  .personajes-peach,
+  .personajes-aliados {
+    max-width: 45%;
+    width: 45%;
+  }
+}
+
+@media (max-width: 900px) {
+  .personajes__titulo {
+    font-size: 1.8rem;
+    padding: 1.5rem;
+  }
+
+  .personajes__descripcion {
+    font-size: 1.1rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .personajes-mario,
+  .personajes-luigi,
+  .personajes-bowser,
+  .personajes-peach,
+  .personajes-aliados {
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .personajes-mario__titulo,
+  .personajes-luigi__titulo,
+  .personajes-bowser__titulo,
+  .personajes-peach__titulo,
+  .personajes-aliados__titulo {
+    font-size: 1.4rem;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .personajes-mario__figura,
+  .personajes-luigi__figura,
+  .personajes-bowser__figura,
+  .personajes-peach__figura,
+  .personajes-aliados__figura {
+    max-width: 100%;
+  }
+
+  .personajes-mario__figura--descripcion,
+  .personajes-luigi__figura--descripcion,
+  .personajes-bowser__figura--descripcion,
+  .personajes-peach__figura--descripcion,
+  .personajes-aliados__figura--descripcion {
+    font-size: 1.1rem;
+  }
+
+  .personajes-mario__descripcion,
+  .personajes-luigi__descripcion,
+  .personajes-bowser__descripcion,
+  .personajes-peach__descripcion,
+  .personajes-aliados__descripcion {
+    font-size: 0.95rem;
+    padding: 1rem;
+  }
 }
