@@ -3159,6 +3159,18 @@ img {
   font-weight: 600;
 }
 
+.hitos-2d-1985__descripcion,
+.hitos-2d-1988__descripcion,
+.hitos-2d-1990__descripcion,
+.hitos-2d-1995__descripcion{
+  font-family: var(--fuente-base);
+  text-align: center;
+  font-weight: 600;
+  background-color: #E5252190;
+  border-radius: 2rem;
+  padding:1rem;
+}
+
 @media (max-width: 900px) {
   #hitos-2d {
     flex-direction: column;
@@ -3203,4 +3215,123 @@ img {
   .hitos-2d-1995__figura--descripcion {
     font-size: 1.1rem;
   }
+}
+
+#hitos-3d {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding:2rem;
+  gap:2.5rem;
+}
+
+.hitos-3d__titulo {
+  font-family: var(--fuente-secundaria);
+  font-size: 2rem;
+  text-align: center;
+  padding:2rem;
+  width: 100%;
+  text-shadow: -3px 3px 0 var(--color-principal__mario);
+}
+
+.hitos-3d__descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  text-align: center;
+  width: 100%;
+  padding:2rem;
+
+}
+
+.hitos-3d-1996,
+.hitos-3d-2002,
+.hitos-3d-2007,
+.hitos-3d-2011,
+.hitos-3d-2013,
+.hitos-3d-2017 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+  max-width: 25%;
+  width: 100%;
+  padding: 1.5rem;
+  background-image: url(./assets/imgs/mariobros-fondo-claro.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+}
+
+.hitos-3d-1996__titulo,
+.hitos-3d-2002__titulo,
+.hitos-3d-2007__titulo,
+.hitos-3d-2011__titulo,
+.hitos-3d-2013__titulo,
+.hitos-3d-2017__titulo {
+  font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
+  text-align: center;
+  width: 80%;
+  padding: 1.5rem;
+  color: #fff;
+  background-image: url(../assets/imgs/header-mario.webp);
+  background-position: center;
+  border-radius: 1.2rem;
+  border: 3px solid var(--color-texto);
+  -webkit-text-stroke: 1px black;
+  overflow-wrap: break-word;
+  text-shadow: -3px 3px 0 var(--color-principal__mario);
+}
+
+.hitos-3d-1996__figura,
+.hitos-3d-2002__figura,
+.hitos-3d-2007__figura,
+.hitos-3d-2011__figura,
+.hitos-3d-2013__figura,
+.hitos-3d-2017__figura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:1rem;
+  width: 100%;
+  max-width: 75%;
+}
+
+.hitos-3d-1996__figura--imagen,
+.hitos-3d-2002__figura--imagen,
+.hitos-3d-2007__figura--imagen,
+.hitos-3d-2011__figura--imagen,
+.hitos-3d-2013__figura--imagen,
+.hitos-3d-2017__figura--imagen{
+  border-radius: 2rem;
+
+}
+
+.hitos-3d-1996__figura--descripcion,
+.hitos-3d-2002__figura--descripcion,
+.hitos-3d-2007__figura--descripcion,
+.hitos-3d-2011__figura--descripcion,
+.hitos-3d-2013__figura--descripcion,
+.hitos-3d-2017__figura--descripcion {
+  font-family: var(--fuente-base);
+  font-size: 0.9rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+
+.hitos-3d-1996__descripcion,
+.hitos-3d-2002__descripcion,
+.hitos-3d-2007__descripcion,
+.hitos-3d-2011__descripcion,
+.hitos-3d-2013__descripcion,
+.hitos-3d-2017__descripcion {
+  font-family: var(--fuente-base);
+  text-align: center;
+  font-weight: 600;
+  background-color: #E5252199;
+  border-radius: 2rem;
+  padding:1rem;
 }
