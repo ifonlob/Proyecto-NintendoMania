@@ -286,7 +286,7 @@
                 </p>
             </article>
         </section>
-        <section id="curiosidades" class="curiosidades">
+        <section id="curiosidades">
             <h2 class="curiosidades__titulo">Curiosidades y Secretos del Reino Champiñón</h2>
             <p class="curiosidades__descripcion">
                 El juego que definió una industria está lleno de secretos de desarrollo, decisiones creativas icónicas y lore oculto.
@@ -303,17 +303,15 @@
                         Mario no se llamó Mario al principio sino que era Jumpman y apareció en el juego Donkey Kong de 1981, salvando a su novia, Pauline.
                     </figcaption>
                 </figure>
-                <p class="curiosidades-origen-mario__descripcion">
-                    Mario no se llamó Mario al principio; era Jumpman y apareció en el juego Donkey Kong de 1981, donde su trabajo era salvar a su novia, Pauline, de un gorila gigante. En ese momento, no era un fontanero, sino un carpintero.
-                </p>
-                <p class="curiosidades-origen-mario__detalle">
-                    La mecánica central fue, desde el inicio, el salto. El diseñador, Shigeru Miyamoto, atestigua la razón fundamental detrás de esto:
-                </p>
+                <pre class="curiosidades-origen-mario__detalle">
+                    La mecánica central fue, desde el inicio, el salto.
+                    El diseñador, Shigeru Miyamoto, atestigua la razón fundamental detrás de esto:
+                </pre>
                 <blockquote class="curiosidades-origen-mario__cita">
                     <p class="curiosidades-origen-mario__cita-texto">
                         "Hice la primera plataforma vertical porque quería que los jugadores entendieran que la acción principal era saltar."
                     </p>
-                    ite class="curiosidades-origen-mario__cita-autor">— Shigeru Miyamoto, Creador de Mario</cite>
+                    <cite class="curiosidades-origen-mario__cita-autor">— Shigeru Miyamoto, Creador de Mario</cite>
                 </blockquote>
             </article>
             <article class="curiosidades-diseno-mario">
@@ -328,15 +326,14 @@
                         El icónico diseño de Mario fue una solución a las limitaciones de los gráficos de 8-bits.
                     </figcaption>
                 </figure>
-                <p class="curiosidades-diseno-mario__descripcion">
-                    El famoso bigote y la gorra no fueron elecciones estéticas al azar. Fueron soluciones directas a las limitaciones del hardware de 8 bits:
-                </p>
                 <ul class="curiosidades-diseno-mario__lista">
-                    <li class="curiosidades-diseno-mario__lista-item">
-                        Gorra: Era más fácil de animar que el cabello. Si Mario movía el pelo al saltar, la animación requeriría más píxeles, por lo que una gorra solucionó ese problema.
+                    <li class="curiosidades-diseno-mario__lista--item">
+                        <p>Gorra:</p>
+                        <p>Era más fácil de animar que el cabello. Si Mario movía el pelo al saltar, la animación requeriría más píxeles, por lo que una gorra solucionó ese problema.</p>
                     </li>
-                    <li class="curiosidades-diseno-mario__lista-item">
-                        Bigote: El bigote era necesario para que el rostro de Mario fuera visible en la baja resolución de la NES. Era imposible dibujar una boca claramente, por lo que el bigote hacía que la nariz y la expresión fueran más distinguibles.
+                    <li class="curiosidades-diseno-mario__lista--item">
+                        <p>Bigote:</p>
+                        <p>El bigote era necesario para que el rostro de Mario fuera visible en la baja resolución de la NES. Era imposible dibujar una boca claramente, por lo que el bigote hacía que la nariz y la expresión fueran más distinguibles.</p>
                     </li>
                 </ul>
             </article>
@@ -352,82 +349,65 @@
                         Los Goombas son los soldados más comunes del ejército Koopa, pero su origen es sorprendente.
                     </figcaption>
                 </figure>
-                <p class="curiosidades-goombas__descripcion">
-                    Existe un lore más oscuro en torno a los enemigos comunes. Los Goombas no siempre fueron leales a Bowser. Originalmente, eran miembros del Reino Champiñón que se unieron a Bowser. Esto significa que los jugadores, al aplastar a un Goomba, están derrotando a un antiguo súbdito del Reino que traicionó a Peach.
-                </p>
                 <p class="curiosidades-goombas__teoria">
                     La idea de los power-ups también tiene una base sombría: los bloques que Mario golpea y de donde salen champiñones son, según una teoría no confirmada por Nintendo, los restos de los ciudadanos del Reino transformados por Bowser.
                 </p>
             </article>
         </section>
-        <aside id="personajes_secundarios">  <!-- ASIDE: Personajes secundarios y aliados -->
-            <h3>Personajes Clave y Aliados del Reino Champiñón</h3>
-            <p>Estos personajes han definido el universo de Mario, ya sea como rivales, aliados esenciales o protagonistas de sus propias sagas:</p>
-            <figure>
-                <img src="../assets/imgs/donkeykong_barril.png" alt="Donkey Kong, el gorila, lanzando un barril.">
-                <figcaption>
-                    <h4>Donkey Kong:</h4>
-                    <p>El primer antagonista de Mario (Jumpman) en 1981, y ahora un aliado jugable con su propia saga de plataformas.</p>
+        <aside id="imagenes_destacadas" class="imagenes-destacadas"> <!-- ASIDE: Galería de momentos icónicos -->
+            <h3 class="imagenes-destacadas__titulo">Galería de Momentos Icónicos</h3>
+            <p class="imagenes-destacadas__descripcion">
+                Capturas y arte oficial que ilustran los momentos clave y diseño de la saga Super Mario Bros.
+            </p>
+            <figure class="imagenes-destacadas__figura">
+                <img
+                    src="../assets/imgs/captura_mario64.jpg"
+                    alt="Captura de Mario en el Castillo de Peach en Super Mario 64."
+                    class="imagenes-destacadas__figura-imagen"
+                >
+                <figcaption class="imagenes-destacadas__figura-descripcion">
+                    El Castillo de Peach: el primer centro de mundo abierto 3D.
                 </figcaption>
             </figure>
-
-            <figure>
-                <img src="../assets/imgs/wario.jpg" alt="Wario sonriendo con su traje amarillo y morado.">
-                <figcaption>
-                    <h4>Wario:</h4>
-                    <p>El némesis egoísta y glotón, protagonista de las sagas Wario Land y WarioWare, donde su avaricia es el motor del gameplay.</p>
+            <figure class="imagenes-destacadas__figura">
+                <img
+                    src="../assets/imgs/FLUDD.jpg"
+                    alt="Mario usando la mochila FLUDD para flotar sobre Isla Delfino."
+                    class="imagenes-destacadas__figura-imagen"
+                >
+                <figcaption class="imagenes-destacadas__figura-descripcion">
+                    FLUDD en acción: La mecánica acuática que definió Super Mario Sunshine.
                 </figcaption>
             </figure>
-            
-            <figure>
-                <img src="../assets/imgs/waluigi.jpg" alt="Waluigi con su traje morado y bigote fino.">
-                <figcaption>
-                    <h4>Waluigi:</h4>
-                    <p>El compañero de Wario y la contraparte de Luigi. Vive exclusivamente en los spin-offs, representando el lado caótico de los juegos de fiesta.</p>
+            <figure class="imagenes-destacadas__figura">
+                <img
+                    src="../assets/imgs/fanart_mario_galaxy.jpg"
+                    alt="Mario descansando apoyado en un árbol en Mario Galaxy."
+                    class="imagenes-destacadas__figura-imagen"
+                >
+                <figcaption class="imagenes-destacadas__figura-descripcion">
+                    Plataformeo en el espacio: La innovadora jugabilidad de gravedad de Galaxy.
                 </figcaption>
             </figure>
-
-            <figure>
-                <img src="../assets/imgs/daisy.jpg" alt="Princesa Daisy con su vestido naranja.">
-                <figcaption>
-                    <h4>Princesa Daisy:</h4>
-                    <p>La princesa de Sarasaland. Se distingue por su personalidad enérgica y su estilo más informal, popular en los juegos de carreras y deportes.</p>
+            <figure class="imagenes-destacadas__figura">
+                <img
+                    src="../assets/imgs/mario_goomba_cappy.png"
+                    alt="Mario capturando a un Goomba con Cappy en Super Mario Odyssey."
+                    class="imagenes-destacadas__figura-imagen"
+                >
+                <figcaption class="imagenes-destacadas__figura-descripcion">
+                    Captura de Cappy: La mecánica que permitió a Mario transformarse en cualquier cosa.
                 </figcaption>
             </figure>
-            
-            <figure>
-                <img src="../assets/imgs/estela.jpg" alt="Estela (Rosalina) con su vestido azul y la varita estelar.">
-                <figcaption>
-                    <h4>Estela:</h4>
-                    <p>La misteriosa guardiana de los Destellos y figura central de Super Mario Galaxy. Su historia le da una capa de lore melancólica y compleja a la saga.</p>
+            <figure class="imagenes-destacadas__figura">
+                <img
+                    src="../assets/imgs/mario_crayon.png"
+                    alt="Estilo artístico de crayones y bebés Mario montando a Yoshi en Yoshi's Island."
+                    class="imagenes-destacadas__figura-imagen"
+                >
+                <figcaption class="imagenes-destacadas__figura-descripcion">
+                    El Arte Creyón: El distintivo y atemporal estilo visual de Yoshi's Island.
                 </figcaption>
-            </figure>
-        </aside>
-        <aside id ="imagenes_destacadas"> <!-- ASIDE: Galería de momentos icónicos -->
-            <h3>Galería de Momentos Icónicos</h3>
-            <p>Capturas y arte oficial que ilustran los momentos clave y diseño de la saga Super Mario Bros.</p>
-            <figure>
-                <img src="../assets/imgs/captura_mario64.jpg" alt="Captura de Mario en el Castillo de Peach en Super Mario 64.">
-                <figcaption>El Castillo de Peach: el primer centro de mundo abierto 3D.</figcaption>
-            </figure>
-            
-            <figure>
-                <img src="../assets/imgs/FLUDD.jpg" alt ="Mario usando la mochila FLUDD para flotar sobre Isla Delfino.">
-                <figcaption>FLUDD en acción: La mecánica acuática que definió Super Mario Sunshine.</figcaption>
-            </figure>
-            
-            <figure>
-                <img src="../assets/imgs/fanart_mario_galaxy.jpg" alt="Mario descansando apoyado en un árbol en Mario Galaxy.">
-                <figcaption>Plataformeo en el espacio: La innovadora jugabilidad de gravedad de Galaxy.</figcaption>
-            </figure>
-            
-            <figure>
-                <img src="../assets/imgs/mario_goomba_cappy.png" alt="Mario capturando a un Goomba con Cappy en Super Mario Odyssey.">
-                <figcaption>Captura de Cappy: La mecánica que permitió a Mario transformarse en cualquier cosa.</figcaption>
-            </figure>
-            <figure>
-                <img src="../assets/imgs/mario_crayon.png" alt="Estilo artístico de crayones y bebés Mario montando a Yoshi en Yoshi's Island.">
-                <figcaption>El Arte Creyón: El distintivo y atemporal estilo visual de Yoshi's Island.</figcaption>
             </figure>
         </aside>
     </main>
