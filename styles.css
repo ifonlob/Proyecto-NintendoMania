@@ -654,15 +654,22 @@ img {
   }
 }
 
-
-
 .extra{
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
 
-.noticias-destacadas,.puntos-destacados{
+.puntos-destacados{
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  padding: 1.5rem;
+  background-image: url(./assets/imgs/patron-rosa.jpg);
+  border-radius: 2rem;
+}
+
+.noticias-destacadas{
   display: flex;
   flex-direction: column;
   width: 40%;
@@ -2727,6 +2734,7 @@ img {
 #curiosidades{
   display: flex;
   flex-direction: column;
+  align-items: center;
   flex-wrap: wrap;
   gap:2rem;
   padding: 1.5rem;
@@ -2737,6 +2745,7 @@ img {
   font-size: 2.2rem;
   text-align: center;
   overflow-wrap: break-word;
+  max-width: 75%;
   width: 100%;
   padding:1rem;
   color: var(--color-texto);
@@ -3602,10 +3611,8 @@ img {
 
 #curiosidades{
   display: flex;
-  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
   padding:2rem;
   gap:2.5rem;
 }
@@ -3624,6 +3631,15 @@ img {
   text-align: center;
   width: 100%;
   padding:1rem;
+}
+
+.curiosidades-origen-mario,
+.curiosidades-diseno-mario,
+.curiosidades-goombas{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
 }
 
 .curiosidades-origen-mario__titulo,
@@ -3656,6 +3672,8 @@ img {
 .curiosidades-goombas__figura--descripcion {
   font-family: var(--fuente-base);
   font-weight: 600;
+  font-size: 1.4rem;
+  text-align: center;
   padding: 1rem;
 }
 
@@ -3671,6 +3689,7 @@ img {
 .curiosidades-origen-mario__cita {
   font-family: var(--fuente-base);
   font-weight: 500;
+  font-size: 1.2rem;
   text-align: center;
   padding: 1rem;
   margin: 0 auto;
@@ -3680,6 +3699,7 @@ img {
 .curiosidades-diseno-mario__lista {
   font-family: var(--fuente-base);
   font-weight: 500;
+  font-size: 1.4rem;
   text-align: center;
   padding: 1rem;
   margin: 0 auto;
@@ -3698,21 +3718,103 @@ img {
   font-weight: 600;
 }
 
-
 .curiosidades-goombas__teoria{
   font-family: var(--fuente-base);
   font-weight: 500;
+  font-size: 1.5rem;
   text-align: center;
   padding: 1rem;
   margin: 0 auto;
   width: 50%;
 }
 
+
+@media (max-width: 1200px) {
+  .curiosidades__titulo {
+    font-size: 1.8rem;
+  }
+
+  .curiosidades__descripcion,
+  .curiosidades-origen-mario__detalle,
+  .curiosidades-origen-mario__cita,
+  .curiosidades-diseno-mario__lista,
+  .curiosidades-goombas__teoria {
+    font-size: 1.3rem;
+  }
+  .curiosidades-origen-mario__cita{
+    width: 100%;
+  }
+
+  .curiosidades-diseno-mario__lista{
+    width: 100%;
+  }
+  .curiosidades-origen-mario__titulo,
+  .curiosidades-diseno-mario__titulo,
+  .curiosidades-goombas__titulo {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .curiosidades__titulo {
+    font-size: 1.6rem;
+  }
+
+  .curiosidades__descripcion,
+  .curiosidades-origen-mario__detalle,
+  .curiosidades-origen-mario__cita,
+  .curiosidades-diseno-mario__lista,
+  .curiosidades-goombas__teoria {
+    font-size: 1.15rem;
+  }
+
+  .curiosidades-origen-mario__titulo,
+  .curiosidades-diseno-mario__titulo,
+  .curiosidades-goombas__titulo {
+    font-size: 1.3rem;
+  }
+  .curiosidades-goombas__teoria{
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .curiosidades__titulo {
+    font-size: 1.4rem;
+  }
+
+  .curiosidades__descripcion,
+  .curiosidades-origen-mario__detalle,
+  .curiosidades-origen-mario__cita,
+  .curiosidades-diseno-mario__lista,
+  .curiosidades-goombas__teoria {
+    font-size: 1rem;
+    width: 100%;
+  }
+  .curiosidades-origen-mario__cita{
+    padding: 0;
+    margin: 0;
+    width: 95%;
+  }
+
+  .curiosidades-origen-mario__titulo,
+  .curiosidades-diseno-mario__titulo,
+  .curiosidades-goombas__titulo {
+    font-size: 1.2rem;
+  }
+  .curiosidades-diseno-mario__lista{
+    width: 100%;
+  }
+  .curiosidades-goombas__teoria{
+    width: 100%;
+    padding: 0;
+  }
+}
+
 #imagenes-destacadas{
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly
-  ;
+  justify-content: space-evenly;
 
 }
 
@@ -3763,4 +3865,61 @@ img {
 
 .imagenes-destacadas__figura-descripcion > p:first-of-type {
   font-weight: 600;
+}
+
+@media (max-width: 1400px) {
+  .imagenes-destacadas__figura {
+    flex: 1 1 30%;
+    max-width: 30%;
+  }
+
+  .imagenes-destacadas__titulo {
+    font-size: 1.6rem;
+  }
+
+  .imagenes-destacadas__descripcion {
+    font-size: 1.1rem;
+  }
+
+  .imagenes-destacadas__figura-descripcion {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .imagenes-destacadas__figura {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+
+  .imagenes-destacadas__titulo {
+    font-size: 1.4rem;
+  }
+
+  .imagenes-destacadas__descripcion {
+    font-size: 1rem;
+  }
+
+  .imagenes-destacadas__figura-descripcion {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 550px) {
+  .imagenes-destacadas__figura {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+
+  .imagenes-destacadas__titulo {
+    font-size: 1.2rem;
+  }
+
+  .imagenes-destacadas__descripcion {
+    font-size: 0.95rem;
+  }
+
+  .imagenes-destacadas__figura-descripcion {
+    font-size: 0.85rem;
+  }
 }
