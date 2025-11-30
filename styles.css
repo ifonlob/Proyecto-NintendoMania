@@ -2924,7 +2924,7 @@ img {
   justify-content: center;
   gap:2rem;
   align-items: center;
-    -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px black;
 }
 
 .cabecera-mario__menu--lista{
@@ -4178,9 +4178,11 @@ img {
   font-family: var(--fuente-secundaria);
   font-size: 1.25rem;
   text-align: center;
+  background-image: url(./assets/imgs/kirby-fondo-titulos.jpg);
   padding:1rem;
   width: 100%;
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
+  border-radius: 2rem;
 }
 
 .cronologia-kirby-1992__imagen,
@@ -4209,7 +4211,7 @@ img {
   font-weight: 500;
   background-color: var(--color-principal__kirby);
   border-radius: 2.5rem;
-  padding:1.5rem;
+  padding:2rem;
 }
 
 @media (max-width: 1300px) {
@@ -4293,4 +4295,136 @@ img {
     font-size: 1rem;
     padding: 1rem;
   }
+}
+
+#habilidades {
+}
+
+.habilidades__titulo,
+.habilidades__descripcion {
+}
+
+.habilidad-espada,
+.habilidad-fuego,
+.habilidad-bomba,
+.habilidad-martillo,
+.habilidad-sueno {
+}
+
+.habilidad-espada__titulo,
+.habilidad-fuego__titulo,
+.habilidad-bomba__titulo,
+.habilidad-martillo__titulo,
+.habilidad-sueno__titulo{
+}
+
+.habilidad-espada__figura,
+.habilidad-fuego__figura,
+.habilidad-bomba__figura,
+.habilidad-martillo__figura,
+.habilidad-sueno__figura{
+}
+
+.habilidad-espada__figura--imagen,
+.habilidad-fuego__figura--imagen,
+.habilidad-bomba__figura--imagen,
+.habilidad-martillo__figura--imagen,
+.habilidad-sueno__figura--imagen {
+}
+
+.habilidad-espada__figura--descripcion,
+.habilidad-fuego__figura--descripcion,
+.habilidad-bomba__figura--descripcion,
+.habilidad-martillo__figura--descripcion,
+.habilidad-sueno__figura--descripcion {
+}
+
+.habilidad-espada__descripcion,
+.habilidad-fuego__descripcion,
+.habilidad-bomba__descripcion,
+.habilidad-martillo__descripcion,
+.habilidad-sueno__texto--descripcion {
+}
+
+.habilidad-espada__subtitulo,
+.habilidad-fuego__subtitulo,
+.habilidad-bomba__subtitulo,
+.habilidad-martillo__subtitulo,
+.habilidad-sueno__subtitulo--lista {
+}
+
+.habilidad-espada__lista,
+.habilidad-fuego__lista,
+.habilidad-bomba__lista,
+.habilidad-martillo__lista,
+.habilidad-sueno__lista--movimientos {
+}
+
+.habilidad-espada__lista--item,
+.habilidad-fuego__lista--item,
+.habilidad-bomba__lista--item,
+.habilidad-martillo__lista--item,
+.habilidad-sueno__lista--item {
+}
+
+
+
+
+
+
+#jefes {
+}
+
+.jefes__titulo,
+.jefes__descripcion {
+}
+
+.jefe-whispy,
+.jefe-kracko,
+.jefe-marx {
+}
+
+
+.jefe-whispy__titulo,
+.jefe-kracko__titulo,
+.jefe-marx__titulo {
+}
+
+
+.jefe-whispy__figura,
+.jefe-kracko__figura,
+.jefe-marx__figura {
+}
+
+
+.jefe-whispy__figura--imagen,
+.jefe-kracko__figura--imagen,
+.jefe-marx__figura--imagen {
+}
+
+
+.jefe-whispy__figura--descripcion,
+.jefe-kracko__figura--descripcion,
+.jefe-marx__figura--descripcion {
+}
+
+
+.jefe-whispy__descripcion,
+.jefe-kracko__descripcion,
+.jefe-marx__descripcion {
+}
+
+.jefe-whispy__subtitulo,
+.jefe-kracko__subtitulo,
+.jefe-marx__subtitulo {
+}
+
+.jefe-whispy__lista,
+.jefe-kracko__lista,
+.jefe-marx__lista {
+}
+
+.jefe-whispy__lista--item,
+.jefe-kracko__lista--item,
+.jefe-marx__lista--item {
 }
