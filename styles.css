@@ -4082,6 +4082,11 @@ img {
   }
 }
 
+.introduccion-kirby{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .introduccion-kirby__titulo{
   font-family: var(--fuente-secundaria);
@@ -4103,4 +4108,189 @@ img {
   transition: border-color 1.4s ease, transform 1.4s ease;
 }
 
+.introduccion-kirby__subtitulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.25rem;
+  text-align: center;
+  padding:2rem;
+  width: 60%;
+}
 
+.introduccion-kirby__descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  padding:2rem;
+  width: 85%;
+}
+
+#cronologia-kirby{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 2rem;
+  gap: 2.5rem;
+}
+
+.cronologia-kirby__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 2rem;
+  text-align: center;
+  padding: 2rem;
+  width: 100%;
+  text-shadow: -3px 3px 0 var(--color-principal__kirby);
+}
+
+.cronologia-kirby-1992,
+.cronologia-kirby-1993,
+.cronologia-kirby-1996,
+.cronologia-kirby-2004,
+.cronologia-kirby-2010,
+.cronologia-kirby-2011,
+.cronologia-kirby-2016,
+.cronologia-kirby-2018,
+.cronologia-kirby-2022{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content:space-evenly;
+  gap: 1.5rem;
+  max-width: 25%;
+  width: 100%;
+  padding: 1.5rem;
+  background-image: url(./assets/imgs/fondo-kirby.jpg);
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.5);
+}
+
+.cronologia-kirby-1992__titulo,
+.cronologia-kirby-1993__titulo,
+.cronologia-kirby-1996__titulo,
+.cronologia-kirby-2004__titulo,
+.cronologia-kirby-2010__titulo,
+.cronologia-kirby-2011__titulo,
+.cronologia-kirby-2016__titulo,
+.cronologia-kirby-2018__titulo,
+.cronologia-kirby-2022__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.25rem;
+  text-align: center;
+  padding:1rem;
+  width: 100%;
+  text-shadow: -3px 3px 0 var(--color-principal__kirby);
+}
+
+.cronologia-kirby-1992__imagen,
+.cronologia-kirby-1993__imagen,
+.cronologia-kirby-1996__imagen,
+.cronologia-kirby-2004__imagen,
+.cronologia-kirby-2010__imagen,
+.cronologia-kirby-2011__imagen,
+.cronologia-kirby-2016__imagen,
+.cronologia-kirby-2018__imagen,
+.cronologia-kirby-2022__imagen{
+  border-radius: 2rem;
+}
+
+.cronologia-kirby-1992__descripcion,
+.cronologia-kirby-1993__descripcion,
+.cronologia-kirby-1996__descripcion,
+.cronologia-kirby-2004__descripcion,
+.cronologia-kirby-2010__descripcion,
+.cronologia-kirby-2011__descripcion,
+.cronologia-kirby-2016__descripcion,
+.cronologia-kirby-2018__descripcion,
+.cronologia-kirby-2022__descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: var(--color-principal__kirby);
+  border-radius: 2.5rem;
+  padding:1.5rem;
+}
+
+@media (max-width: 1300px) {
+  #cronologia-kirby{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 2.5rem;
+  }
+
+  .cronologia-kirby-1992,
+  .cronologia-kirby-1993,
+  .cronologia-kirby-1996,
+  .cronologia-kirby-2004,
+  .cronologia-kirby-2010,
+  .cronologia-kirby-2011,
+  .cronologia-kirby-2016,
+  .cronologia-kirby-2018,
+  .cronologia-kirby-2022{
+    max-width: 45%;
+    width: 45%;
+  }
+}
+
+
+@media (max-width: 900px) {
+  .cronologia-kirby__titulo{
+    font-size: 1.8rem;
+    padding: 1.5rem;
+  }
+
+  .cronologia-kirby-1992,
+  .cronologia-kirby-1993,
+  .cronologia-kirby-1996,
+  .cronologia-kirby-2004,
+  .cronologia-kirby-2010,
+  .cronologia-kirby-2011,
+  .cronologia-kirby-2016,
+  .cronologia-kirby-2018,
+  .cronologia-kirby-2022{
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .cronologia-kirby-1992__titulo,
+  .cronologia-kirby-1993__titulo,
+  .cronologia-kirby-1996__titulo,
+  .cronologia-kirby-2004__titulo,
+  .cronologia-kirby-2010__titulo,
+  .cronologia-kirby-2011__titulo,
+  .cronologia-kirby-2016__titulo,
+  .cronologia-kirby-2018__titulo,
+  .cronologia-kirby-2022__titulo{
+    font-size: 1.4rem;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .cronologia-kirby-1992__imagen,
+  .cronologia-kirby-1993__imagen,
+  .cronologia-kirby-1996__imagen,
+  .cronologia-kirby-2004__imagen,
+  .cronologia-kirby-2010__imagen,
+  .cronologia-kirby-2011__imagen,
+  .cronologia-kirby-2016__imagen,
+  .cronologia-kirby-2018__imagen,
+  .cronologia-kirby-2022__imagen{
+    width: 100%;
+  }
+
+  .cronologia-kirby-1992__descripcion,
+  .cronologia-kirby-1993__descripcion,
+  .cronologia-kirby-1996__descripcion,
+  .cronologia-kirby-2004__descripcion,
+  .cronologia-kirby-2010__descripcion,
+  .cronologia-kirby-2011__descripcion,
+  .cronologia-kirby-2016__descripcion,
+  .cronologia-kirby-2018__descripcion,
+  .cronologia-kirby-2022__descripcion{
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
