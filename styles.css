@@ -27,7 +27,7 @@
 /* ESTILOS GENERALES */
 
 body{
-  background-color: #92d2f8;
+  background-color: #c5e3f5;
   line-height: 1.6;
 }
 
@@ -199,6 +199,7 @@ img {
 
   .cabecera__menu--titulo{
     font-size: 1.6rem;
+    text-align: center;
   }
   .cabecera__menu--imagen{
     width: 20%;
@@ -237,11 +238,13 @@ img {
 
   .cabecera__menu--titulo{
     font-size: 1.3rem;
+    text-align: center;
   }
   .cabecera__menu--imagen{
     width: 30%;
   }
   .cabecera__buscador{
+    width: 20%;
   }
 
   .buscador__formulario{
@@ -422,12 +425,13 @@ img {
 
 .introduccion__titulo{
   font-family: var(--fuente-secundaria);
-  font-size: 1.5rem;
-  width: 100%;
+  font-size: 2rem;
+  width: 80%;
   text-align: center;
   overflow-wrap: break-word;
   padding:1rem;
 }
+
 
 .introduccion__descripcion{
   font-family: var(--fuente-base);
@@ -445,8 +449,9 @@ img {
   padding: 2rem;
   border-radius: 4rem;
   max-width: 720px;
+  background-color: var(--color-secundario);
   transition: box-shadow 0.35s, transform 0.25s;
-  border: 3px solid white;
+  border: 5px solid var(--color-principal);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
@@ -459,7 +464,7 @@ img {
 }
 .mejores-sagas__titulo {
   width: 100%;
-  font-family: var(--fuente-base);
+  font-family: var(--fuente-secundaria);
   font-weight: 800;
   font-size: 1.2rem;
   color: var(--color-texto);
@@ -512,12 +517,12 @@ img {
 
 .sagas-principales__titulo{
   font-family: var(--fuente-secundaria);
+  font-size: 2rem;
   text-align: center;
   width: 80%;
-  padding: 2rem;
+  padding: 1rem;
   overflow-wrap: break-word;
 }
-
 
 .sagas-principales__mario--descripcion,.sagas-principales__splatoon--descripcion,.sagas-principales__kirby--descripcion{
   font-family: var(--fuente-base);
@@ -551,9 +556,9 @@ img {
 
 .sagas-principales__mario,.sagas-principales__splatoon,.sagas-principales__kirby{
   padding:2rem;
-  background: rgba(255,255,255,0.7);
+  background: rgba(59, 132, 242, 0.8);
   border-radius: 6rem;
-  border: 3px solid white;
+  border: 5px solid var(--color-principal);
   transition: transform 0.5s ease;
 }
 
@@ -649,16 +654,35 @@ img {
   display: flex;
   flex-direction: column;
   width: 40%;
+  gap:1.5rem;
   padding: 1.5rem;
   background-image: url(./assets/imgs/patron-rosa.jpg);
   border-radius: 2rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-secundario) 0%,
+    #005bb0 35%,
+    #c8202a 70%,
+    var(--color-principal) 100%
+  );
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
 }
 
 .noticias-destacadas{
   display: flex;
   flex-direction: column;
   width: 40%;
+  gap:3.5rem;
   padding: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    var(--color-principal) 0%,
+    #c8202a 35%,
+    #005bb0 70%,
+    var(--color-secundario) 100%
+  );
+  border-radius: 2rem;
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
 }
 
 .noticias-destacadas__mario--imagen,.noticias-destacadas__splatoon--imagen,.noticias-destacadas__kirby--imagen{
@@ -679,6 +703,7 @@ img {
 .noticias-destacadas__mario--descripcion,.noticias-destacadas__splatoon--descripcion,.noticias-destacadas__kirby--descripcion{
   font-size: 1.2rem;
   font-family: var(--fuente-base);
+  font-weight: 600;
   max-width: 80%;
   margin: 0 auto;
   padding:1rem;
@@ -689,13 +714,26 @@ img {
   font-size: 1.8rem;
   width: 100%;
   padding: 1rem;
+  background-color: var(--color-secundario);
+  border-radius: 2rem;
+  border: 5px solid black;
   text-align: center;
   overflow-wrap: break-word;
 }
 
+.puntos-destacados__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1.8rem;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--color-principal);
+  border-radius: 2rem;
+  text-align: center;
+  overflow-wrap: break-word;
+}
 .noticias-destacadas__kirby--titulo,.noticias-destacadas__mario--titulo,.noticias-destacadas__splatoon--titulo{
   font-family: var(--fuente-secundaria);
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 .noticias-destacadas__splatoon,.noticias-destacadas__kirby,.noticias-destacadas__mario{
   display: flex;
@@ -764,6 +802,7 @@ img {
   font-family: var(--fuente-secundaria);
   font-size: 1.5rem;
   text-align: center;
+  border: 5px solid black;
 }
 
 .puntos-destacados__splatoon,
@@ -783,6 +822,7 @@ img {
   color: #fff;
   background: var(--color-principal);
   border-radius: 2rem;
+  border: 3px solid black;
   padding: 1.2rem;
   margin-bottom: 1rem;
   cursor: pointer;
@@ -796,7 +836,8 @@ img {
   display: block;
   padding: 0.5rem 1rem;
   color: var(--color-texto);
-  background: #e59fca;
+  background: #ffd87a;
+  border: 3px solid black;
   border-radius: 1.25rem;
   font-weight: bold;
   font-family: var(--fuente-secundaria);
@@ -816,9 +857,7 @@ img {
 .puntos-destacados__splatoon--enlace:hover,
 .puntos-destacados__kirby--enlace:hover,
 .puntos-destacados__mario--enlace:hover,
-.puntos-destacados__splatoon--enlace:focus-visible,
-.puntos-destacados__kirby--enlace:focus-visible,
-.puntos-destacados__mario--enlace:focus-visible{
+.puntos-destacados__splatoon--enlace:focus-visible{
   background: var(--color-secundario);
   transform: translateX(10px)
 }
@@ -828,10 +867,7 @@ img {
 .puntos-destacados__mario--sumario:hover,
 .puntos-destacados__splatoon--sumario:focus,
 .puntos-destacados__kirby--sumario:focus,
-.puntos-destacados__mario--sumario:focus,
-.puntos-destacados__splatoon--sumario:focus-visible,
-.puntos-destacados__kirby--sumario:focus-visible,
-.puntos-destacados__mario--sumario:focus-visible {
+.puntos-destacados__mario--sumario:focus{
   background: var(--color-secundario);
   transform: translateY(-6px);
   color: #232323;
@@ -848,25 +884,28 @@ img {
 .newsletter{
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 70%;
   align-items: center;
+  margin: 0 auto 2rem auto;
+  padding:1rem;
+  border-radius: 2.5rem;
 }
 
 .newsletter__titulo{
   font-family: var(--fuente-secundaria);
   font-size: 1.5rem;
-  width: 100%;
-  padding: 0 3rem;
+  width: 80%;
+  padding: 2rem;
   text-align: center;
-  overflow-wrap: break-word;
   
 }
 
 .newsletter__descripcion{
   max-width: 100%;
   width: 85%;
+  text-align: center;
   font-size: 1.2rem;
-  font-weight: 400;
+  font-weight: 600;
   font-family: var(--fuente-base);
   padding:2rem;
 }
@@ -877,17 +916,19 @@ img {
   font-size: 1.15rem;
   font-family: var(--fuente-base);
   background: rgba(255,255,255,0.7);
-  border: 3px solid white;
+  border: 3px solid var(--color-principal);
   border-radius: 2rem;
   padding: 2rem;
   gap: 1.5rem;
-  width: 35%;
-  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  width: 50%;
+  transition: transform 0.6s ease;
   cursor: pointer;
 }
 
 .newsletter__formulario:hover{
   transform: translateY(-6px);
+  transition: transform 0.6s ease;
+  
 }
 
 .newsletter__label--email{
