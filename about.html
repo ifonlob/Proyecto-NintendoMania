@@ -12,7 +12,6 @@
     =========================================================================
     -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>NintendoManía - Sobre Nosotros</title>
     <meta name="description" content="NintendoManía: Sobre nosotros">
     <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
@@ -24,10 +23,12 @@
     <header class = "cabecera"> 
         <!-- Logotipo principal y acceso rápido al inicio -->
         <a class = "cabecera__logo" href = "./index.html">
-            <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Logo principal">
+            <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía">
         </a>
         <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
-                <h1 class = "cabecera__menu--titulo"><img class = "cabecera__menu--imagen" src="./assets/imgs/logo_switch.svg" alt="Logo Switch" >Nintendo Manía</h1>
+            <a class = "cabecera__menu--sustituto" href = "./index.html">
+                <h1 class = "cabecera__menu--titulo"><img class = "cabecera__menu--imagen" src="./assets/imgs/logo_switch.svg" alt="Logo Switch">Nintendo Manía</h1>
+            </a>
             <ul class = "cabecera__menu--lista">
                 <li><a class = "cabecera__menu--enlace" href="./sagas/splatoon.html">Splatoon</a></li>
                 <li><a class = "cabecera__menu--enlace"  href="./sagas/mario.html">Mario</a></li>
@@ -38,6 +39,7 @@
             </ul>
         </nav>
         <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
+            <button class="cabecera__buscador--hamburguesa">&#9776;</button>
             <form name="buscador">
                 <label class = "buscador__formulario">
                     <img  class = "buscador__formulario--imagen" src="./assets/imgs/lupa.png" alt="Lupa">
@@ -47,16 +49,15 @@
         </nav> 
     </header>
     <section class = "sobre-nosotros"> <!-- ========== SECTION: Historia y misión del proyecto ========== -->
-        <h1 class = "sobre-nosotros__titulo">Sobre NintendoManía: La Pasión por los Videojuegos Hecha Web</h1>
+        <h2 class = "sobre-nosotros__titulo">Sobre NintendoManía: La Pasión por los Videojuegos Hecha Web</h2>
         <article class = "sobre-nosotros__historia">
             <h2 class = "historia__titulo">Nuestra Historia: El Origen de la Manía</h2>
-            <p class = "historia__descripcion">NintendoManía nació en 2025 de un grupo de fans y profesionales que nos frustramos buscando análisis realmente profundos y bien organizados sobre el lore de nuestras sagas favoritas (Mario, Splatoon y Kirby).
-            Como estábamos hartos de la información a medias.</p>
+            <p class = "historia__descripcion">NintendoManía nació en 2025 de un grupo de fans y profesionales que nos frustramos buscando análisis realmente profundos y bien organizados sobre el lore de nuestras sagas favoritas (Mario, Splatoon y Kirby).</p>
             <img class = "historia__imagen" src="./assets/imgs/tres_sagas.png" alt="Mario,Kirby y un Inkling sonriendo.">
         </article>
         <article class = "sobre-nosotros__juramento">
             <h2 class = "juramento__titulo">Nuestro Juramento de Calidad</h2>
-            <p class = "juramento__descripcion">Creemos que las historias de los videojuegos merecen una tener una buena página web dedicada la cual esté bien estructurada y sea accesible.
+            <p class = "juramento__descripcion">Creemos que las historias de los videojuegos merecen tener una buena página web dedicada la cual esté bien estructurada y sea accesible.
             Nuestro juramento es simple: máxima precisión en cada dato y 100% amor por Nintendo.</p>
             <img class = "juramento__imagen" src="./assets/imgs/nuestra_mision.jpg" alt="Imagen ilustrativa de la misión de NintendoManía">
         </article>
@@ -131,9 +132,11 @@
         <section class ="pie-pagina__contacto">
             <h2 class = "pie-pagina__contacto--titulo">Contacto</h2>
             <address class = "pie-pagina__contacto--informacion"> <!-- Enlaces de contacto semántico y accesible -->
-                <a href="./contacto.html">Formulario de contacto</a> |
-                <a href="mailto:nintendomania@info.es">Correo electrónico</a> |
-                <a href="tel:123456789">Teléfono</a>
+                <ul class="pie-pagina__contacto--lista">
+                    <li><a class="pie-pagina__contacto--enlace" href="./contacto.html">Formulario de contacto</a></li>
+                    <li><a class="pie-pagina__contacto--enlace" href="mailto:nintendomania@info.es">Correo electrónico</a></li>
+                    <li><a class="pie-pagina__contacto--enlace" href="tel:123456789">Teléfono</a></li>
+                </ul>
             </address>
         </section>
         <section class = "pie-pagina__info">
