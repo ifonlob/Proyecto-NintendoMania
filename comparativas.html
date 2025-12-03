@@ -12,7 +12,6 @@
     =========================================================================
     -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Comparativas de Sagas - NintendoManía</title>
     <meta name="description" content="Comparativa de datos, géneros y rendimiento de nuestras sagas">
     <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
@@ -24,19 +23,22 @@
     <header class = "cabecera"> 
             <!-- Logotipo principal y acceso rápido al inicio -->
             <a class = "cabecera__logo" href = "./index.html">
-                <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Logo principal">
+                <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía">
             </a>
             <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
-                    <h1 class = "cabecera__menu--titulo"><img class = "cabecera__menu--imagen" src="./assets/imgs/logo_switch.svg" alt="Logo Switch" >Nintendo Manía</h1>
+                <a class = "cabecera__menu--sustituto" href = "./index.html">
+                    <h1 class = "cabecera__menu--titulo"><img class = "cabecera__menu--imagen" src="./assets/imgs/logo_switch.svg" alt="Logo Switch">Nintendo Manía</h1>
+                </a>
                 <ul class = "cabecera__menu--lista">
                     <li><a class = "cabecera__menu--enlace" href="./sagas/splatoon.html">Splatoon</a></li>
                     <li><a class = "cabecera__menu--enlace"  href="./sagas/mario.html">Mario</a></li>
                     <li><a  class = "cabecera__menu--enlace" href="./sagas/kirby.html">Kirby</a></li>
                     <li><a  class = "cabecera__menu--enlace" href="./contacto.html">Contacto</a></li>
-                    <li><a  class = "cabecera__menu--enlace" href="./about.html">Sobre nosotros</a></li>
+                    <li><a  class = "cabecera__menu--enlace" href="./about.html">About</a></li>
                 </ul>
             </nav>
             <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
+                <button class="cabecera__buscador--hamburguesa">&#9776;</button>
                 <form name="buscador">
                     <label class = "buscador__formulario">
                          <img  class = "buscador__formulario--imagen" src="./assets/imgs/lupa.png" alt="Lupa">
@@ -46,9 +48,9 @@
             </nav> 
         </header>
     <main>
-        <h1 class = "comparativas__titulo">Comparativas y Datos Clave de las Sagas</h1>  <!-- SECTION: Tabla comparativa de hitos principales entre sagas -->
+        <h2 class = "comparativas__titulo">Comparativas y Datos Clave de las Sagas</h2>  <!-- SECTION: Tabla comparativa de hitos principales entre sagas -->
         <section class ="hitos">
-            <h2 class = "hitos__titulo">Comparativa I: Hitos de las Sagas Principales</h2>
+            <h3 class = "hitos__titulo">Comparativa I: Hitos de las Sagas Principales</h3>
             <p class = "hitos__descripcion">Análisis de los lanzamientos, plataformas y métricas de los títulos más representativos de cada saga.</p>
             <table class = "hitos__tabla">
                 <caption class = "hitos__tabla--titulo">Datos clave: Primeros lanzamientos y rendimiento de las sagas.</caption>
@@ -87,7 +89,7 @@
             </table>
         </section>
         <section class ="evolucion-splat"> <!-- SECTION: Evolución técnica de Splatoon -->
-            <h2 class = "evolucion-splat__titulo">Comparativa II: Evolución Técnica de la Saga Splatoon</h2>
+            <h3 class = "evolucion-splat__titulo">Comparativa II: Evolución Técnica de la Saga Splatoon</h3>
             <p class = "evolucion-splat__descripcion">Detalle de las principales novedades de jugabilidad y rendimiento introducidas por cada título de Splatoon.</p>
             <table class = "evolucion-splat__tabla">
                 <caption class = "evolucion-splat__tabla--titulo">Detalles técnicos y de rendimiento de los juegos de Splatoon.</caption>
@@ -125,13 +127,13 @@
                 </tbody>
                 <tfoot class = "evolucion-splat__tabla--footer">
                     <tr>
-                        <td class = "tabla__footer--celda" colspan="5">Ventas basadas en informes de Nintendo hasta 2024. La puntuación media es un promedio de la consulta de varias fuentes.</td>
+                        <td class = "tabla__footer--celda" colspan="5">Ventas basadas en informes de Nintendo hasta 2024.</td>
                     </tr>
                 </tfoot>
             </table>
         </section>
         <section class="evolucion-mario"> <!-- SECTION: Hitos Mario y evolución -->
-            <h2 class = "evolucion-mario__titulo">Comparativa III: Hitos de la Evolución de la Saga Mario</h2>
+            <h3 class = "evolucion-mario__titulo">Comparativa III: Hitos de la Evolución de la Saga Mario</h3>
             <p class = "evolucion-mario__descripcion">Detalle de las principales innovaciones de jugabilidad e impacto introducidas por los títulos clave de Mario.</p>
             <table class = "evolucion-mario__tabla">
                 <caption class = "evolucion-mario__tabla--titulo">Detalles de innovación y ventas de títulos seleccionados de Super Mario Bros.</caption>
@@ -182,7 +184,7 @@
             </table>
         </section>
         <section class="evolucion-kirby"> <!-- SECTION: Hitos Kirby y evolución -->
-            <h2 class="evolucion-kirby__titulo">Comparativa IV: Hitos de la Evolución de la Saga Kirby</h2>
+            <h3 class="evolucion-kirby__titulo">Comparativa IV: Hitos de la Evolución de la Saga Kirby</h3>
             <p class="evolucion-kirby__descripcion">Detalle de las principales innovaciones de jugabilidad e impacto introducidas por los títulos clave de Kirby.</p>
             <table class="evolucion-kirby__tabla">
                 <caption class="evolucion-kirby__tabla--titulo">Detalles de innovación y rendimiento de títulos seleccionados de Kirby.</caption>    
@@ -233,29 +235,29 @@
             </table>
         </section>
         <section class="analisis">  <!-- SECTION: Análisis de los resultados y tendencias de los datos -->
-            <h2 class = "analisis__titulo">Análisis de Tendencias: Conclusiones de las diferentes sagas</h2>
+            <h3 class = "analisis__titulo">Análisis de Tendencias: Conclusiones de las diferentes sagas</h3>
             <p class = "analisis__descripcion">El estudio de los datos revela patrones clave en la estrategia de Nintendo: la coexistencia exitosa de la innovación con la maestría de los géneros clásicos.</p>
             <article class = "analisis__splatoon">
-                <h3 class = "analisis__splatoon--titulo">El Fenómeno Splatoon: Éxito a base de ruptura</h3>
+                <h4 class = "analisis__splatoon--titulo">El Fenómeno Splatoon: Éxito a base de ruptura</h4>
                 <p class = "analisis__splatoon--descripcion">Splatoon ejemplifica el éxito a través de la ruptura total. La tabla confirma su alto rendimiento crítico (89/100) a pesar de debutar en una consola menos popular (Wii U), demostrando el poder de su mecánica central (Guerra Territorial)</p>
                 <p class = "analisis__splatoon--descripcion">El salto a Switch consolidó su base, con ventas que superan los 12 millones, impulsadas por las novedades constantes como Salmon Run y los movimientos avanzados de Splatoon 3.</p>
                 <img class = "analisis__splatoon--imagen" src="./assets/imgs/artwork-splatoon.webp" alt="Artwork de Splatoon">
             </article>
             <article class = "analisis__mario">
-                <h3 class = "analisis__mario--titulo">Mario: La Maestría de la Reinvención 3D</h3>
+                <h4 class = "analisis__mario--titulo">Mario: La Maestría de la Reinvención 3D</h4>
                 <p class = "analisis__mario--descripcion">La saga Mario demuestra la clave de la longevidad: la reinvención constante sobre una base sólida. La tabla de hitos muestra que cada título 3D introduce un concepto que redefine la exploración, desde el salto dimensional de Mario 64 hasta la mecánica de captura de Odyssey.</p>
                 <p class = "analisis__mario--descripcion">Sus altas puntuaciones críticas (93/100) y las ventas masivas demuestran que el público recompensa esta estrategia de innovación donde el salto y el diseño de niveles siguen siendo la prioridad.</p>
                 <img class = "analisis__mario--imagen" src="./assets/imgs/mario-bros-movie-mario-luigi.jpg" alt="Mario y Luigi en la película">
             </article>
             <article class = "analisis__kirby">
-                <h3 class = analisis__kirby--titulo>Kirby y la Consistencia del Diseño Accesible</h3>
+                <h4 class = "analisis__kirby--titulo">Kirby y la Consistencia del Diseño Accesible</h4>
                 <p class = "analisis__kirby--descripcion">Kirby representa la consistencia y el perfeccionamiento. Su alta puntuación (88/100) es un testimonio de la calidad constante, centrada en la evolución de su mecánica central: las Habilidades de Copia.</p>
                 <p class = "analisis__kirby--descripcion">La saga ha evolucionado su arte y ha dado grandes saltos (como la introducción de las habilidades o la transición al 3D en Tierra Olvidada), pero siempre priorizando la jugabilidad accesible y la exploración de las habilidades de copia, lo que garantiza una base de fans leal a través de los años.</p>
                 <img class = "analisis__kirby--imagen" src="./assets/imgs/analisis_kirby.jpg" alt="Kirby y Waddle Dee decorando una pared">
             </article>
         </section>
         <aside class="voto"> <!-- ASIDE: Formulario de votación y llamada a la acción -->
-            <h3 class = "voto__titulo">El gran dilema... ¿Quién es el Campeón?</h3>
+            <h4 class = "voto__titulo">El gran dilema... ¿Quién es el Campeón?</h4>
             <p class = "voto__descripcion">Hemos analizado los datos, pero ahora te toca a ti. ¿Cuál de estas sagas crees que tiene el mejor lore y novedades más impactantes?</p>
             <figure class = "voto__figura">
                 <img class = "voto__figura--imagen" src="./assets/imgs/voto_incentivo.png" alt="Imagen de una urna">
@@ -266,23 +268,23 @@
                     <legend class = "voto__formulario--leyenda">Vota por tu Saga Favorita:</legend>
                     <p>
                     <label class = "voto__formulario--etiqueta">
-                        <input class = "voto__formulario--checkbox" type="radio" name="voto-campeon" value="mario" required> Super Mario Bros
+                        <input class = "voto__formulario--opcion" type="radio" name="voto-campeon" value="mario" required> Super Mario Bros
                         <img class = "voto__formulario--imagen" src="./assets/imgs/letra_m.png" alt="Letra M de Mario Bros">
                     </label>
                     </p>
                     <p>
                     <label class = "voto__formulario--etiqueta">
-                        <input class = "voto__formulario--checkbox" type="radio" name="voto-campeon" value="kirby"> Kirby
+                        <input class = "voto__formulario--opcion" type="radio" name="voto-campeon" value="kirby"> Kirby
                         <img class = "voto__formulario--imagen" src="./assets/imgs/icono_kirby.webp" alt="Kirby saltando">
                     </label>
                     </p>
                     <p>
                     <label class = "voto__formulario--etiqueta">
-                        <input class = "voto__formulario--checkbox" type="radio" name="voto-campeon" value="splatoon"> Splatoon
+                        <input class = "voto__formulario--opcion" type="radio" name="voto-campeon" value="splatoon"> Splatoon
                         <img class = "voto__formulario--imagen" src="./assets/imgs/splatoon_logo.png" alt="Logo Splatoon">
                     </label>
                     </p>
-                    <button class = "voto__formulario--boton type="submit">Votar</button>
+                    <button class = "voto__formulario--boton" type="submit">Votar</button>
                 </fieldset>
             </form>
             <figure class = "voto__figura">
@@ -295,9 +297,11 @@
         <section class ="pie-pagina__contacto">
             <h2 class = "pie-pagina__contacto--titulo">Contacto</h2>
             <address class = "pie-pagina__contacto--informacion"> <!-- Enlaces de contacto semántico y accesible -->
-                <a href="./contacto.html">Formulario de contacto</a> |
-                <a href="mailto:nintendomania@info.es">Correo electrónico</a> |
-                <a href="tel:123456789">Teléfono</a>
+                <ul class="pie-pagina__contacto--lista">
+                    <li><a class="pie-pagina__contacto--enlace" href="./contacto.html">Formulario de contacto</a></li>
+                    <li><a class="pie-pagina__contacto--enlace" href="mailto:nintendomania@info.es">Correo electrónico</a></li>
+                    <li><a class="pie-pagina__contacto--enlace" href="tel:123456789">Teléfono</a></li>
+                </ul>
             </address>
         </section>
         <section class = "pie-pagina__info">
