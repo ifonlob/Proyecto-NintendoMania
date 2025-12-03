@@ -11,8 +11,7 @@
             =========================================================================
             -->
             <meta charset="utf-8">
-            <meta name="viewport" content="width=device-width,initial-scale=1">
-            <title>NintendoManía | Cronología, Curiosidades y Análisis de Sagas Nintendo</title>
+            <title>NintendoManía | Análisis de Sagas Nintendo</title>
             <meta name="description" content="NintendoManía: Cronología, juegos y curiosidades de tus sagas de Nintendo favoritas.">
             <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -23,7 +22,7 @@
         <header class = "cabecera"> 
             <!-- Logotipo principal y acceso rápido al inicio -->
             <a class = "cabecera__logo" href = "./index.html">
-                <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Logo principal">
+                <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía">
             </a>
             <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
                 <a class = "cabecera__menu--sustituto" href = "./index.html">
@@ -50,11 +49,12 @@
         </header>
     <main> 
         <section class = "introduccion"> <!-- SECTION 1: Banner y bienvenida -->
-            <h1 class = "introduccion__titulo">¡Bienvenido a NintendoManía, tu página web friki de confianza!</h1>
+            <h2 class = "introduccion__titulo">¡Bienvenido a NintendoManía, tu página web friki de confianza!</h2>
             <p class = "introduccion__descripcion">Somos la web definitiva para fans que buscan el análisis más profundo y la cronología más precisa del universo Nintendo. Máximo rigor, 100% pasión.</p>
         </section>
         <section class = "mejores-sagas"> <!-- SECTION 2: Sagas principales con imágenes representativas -->
-            <h2 class = "mejores-sagas__titulo">Nintendo Manía.<br> Las mejores sagas al alcance de tu mano</h2>
+            <h2 class = "mejores-sagas__titulo">Nintendo Manía.</h2>
+            <p class = "mejores-sagas__subtitulo">Las mejores sagas al alcance de tu mano</p>
             <figure class = "mejores-sagas__figura">
                 <img class = "mejores-sagas__figura--imagen" src="./assets/imgs/m_negra.png" alt="Letra M de Mario Bros">
                 <img class = "mejores-sagas__figura--imagen" src="./assets/imgs/splatoon_logo.png" alt="Inkling de Splatoon">
@@ -121,7 +121,7 @@
                     <h3 class = "noticias-destacadas__mario--titulo">40 Aniversario Mario Bros</h3>
                     <figure>
                         <a href="https://www.rtve.es/noticias/20250913/super-mario-bros-40-anos-videojuego/16726271.shtml">
-                            <img  class = "noticias-destacadas__mario--imagen"src="./assets/imgs/mariobros_aniversario.jpg" alt="Foto 40 aniversario Mario Bros">
+                            <img  class = "noticias-destacadas__mario--imagen"src="./assets/imgs/mariobros_aniversario.jpg" alt="“Enlace a noticia sobre el 40 aniversario de Super Mario Bros en RTVE">
                         </a>
                         <figcaption class = "noticias-destacadas__mario--descripcion">Super Mario Bros cumple 40 años: el videojuego que inició la saga con más ventas de la historia</figcaption>
                     </figure>
@@ -168,7 +168,7 @@
             <h2 class = "newsletter__titulo">¿Quieres ser el primero en enterarte de las noticias de tus sagas favoritas? ¡Suscríbete!</h2>
             <p class = "newsletter__descripcion">Únete a nuestra NintendoManía News para recibir las últimas noticias de tus sagas favoritas directamente en tu correo. ¡No te pierdas los nuevos lanzamientos de Mario, los Splatfests de Splatoon o los secretos de Kirby!</p>
             <form class = "newsletter__formulario" action="/subscribe" method="post">
-                    <label class="newsletter__label--email">Introduce tu email para suscribirte:
+                    <label class="newsletter__label--email">Introduce tu email para suscribirte<sup>*</sup>:
                         <input class = "newsletter__formulario--input" type="email" name="email" placeholder="ejemplo@correo.es" required>
                     </label>
                     <label class="newsletter__label--checkbox">He leído y acepto la política de privacidad
