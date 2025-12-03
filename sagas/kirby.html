@@ -12,7 +12,6 @@
     =========================================================================
     -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Kirby - NintendoManía</title>
     <meta name="description" content="Splatoon en NintendoManía: Cronología, juegos destacados y curiosidades de la saga.">
     <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
@@ -24,19 +23,22 @@
     <header class = "cabecera-kirby"> 
         <!-- Logotipo principal y acceso rápido al inicio -->
         <a class = "cabecera__logo" href = "../index.html">
-            <img class = "cabecera__logo--imagen" src="../assets/imgs/logo_principal.png" alt="Logo principal">
+            <img class = "cabecera__logo--imagen" src="../assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía">
         </a>
         <nav class = "cabecera-kirby__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
-                <h1 class = "cabecera-kirby__menu--titulo"><img class = "cabecera-kirby__menu--imagen" src="../assets/imgs/kirby-2d.png" alt="Logo Switch" >Nintendo Manía</h1>
+            <a class = "cabecera-kirby__menu--sustituto" href = "../index.html">
+                <p class = "cabecera-kirby__menu--titulo"><img class = "cabecera__menu--imagen" src="../assets/imgs/kirby-2d.png" alt="Logo Switch">Nintendo Manía</p>
+            </a>
             <ul class = "cabecera-kirby__menu--lista">
                 <li><a class = "cabecera-kirby__menu--enlace" href="./splatoon.html">Splatoon</a></li>
                 <li><a class = "cabecera-kirby__menu--enlace"  href="./mario.html">Mario</a></li>
                 <li><a class = "cabecera-kirby__menu--enlace" href="../comparativas.html">Comparativas</a></li>
                 <li><a class = "cabecera-kirby__menu--enlace" href="../contacto.html">Contacto</a></li>
-                <li><a class = "cabecera-kirby__menu--enlace" href="../about.html">Sobre nosotros</a></li>
+                <li><a class = "cabecera-kirby__menu--enlace" href="../about.html">About</a></li>
             </ul>
         </nav>
         <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
+            <button class="cabecera__buscador--hamburguesa">&#9776;</button>
             <form name="buscador">
                 <label class = "buscador__formulario">
                     <img  class = "buscador__formulario--imagen" src="../assets/imgs/lupa.png" alt="Lupa">
@@ -165,7 +167,7 @@
                 </ul>
             </article>
             <article class="habilidad-sueno">
-                <h3 class="habilidad-sueno__titulo--principal">Habilidad Sueño</h3>
+                <h3 class="habilidad-sueno__titulo">Habilidad Sueño</h3>
                 <figure class="habilidad-sueno__figura">
                     <img class="habilidad-sueno__figura--imagen" src="../assets/imgs/habilidad_sueño.webp" alt="Kirby durmiendo con un gorro de dormir y burbujas.">
                     <figcaption class="habilidad-sueno__figura--descripcion">Una habilidad de descanso, a menudo utilizada para recuperar salud.</figcaption>
@@ -305,9 +307,11 @@
         <section class ="pie-pagina__contacto">
             <h2 class = "pie-pagina__contacto--titulo">Contacto</h2>
             <address class = "pie-pagina__contacto--informacion"> <!-- Enlaces de contacto semántico y accesible -->
-                <a href="./contacto.html">Formulario de contacto</a> |
-                <a href="mailto:nintendomania@info.es">Correo electrónico</a> |
-                <a href="tel:123456789">Teléfono</a>
+                <ul class="pie-pagina__contacto--lista">
+                    <li><a class="pie-pagina__contacto--enlace" href="../contacto.html">Formulario de contacto</a></li>
+                    <li><a class="pie-pagina__contacto--enlace" href="mailto:nintendomania@info.es">Correo electrónico</a></li>
+                    <li><a class="pie-pagina__contacto--enlace" href="tel:123456789">Teléfono</a></li>
+                </ul>
             </address>
         </section>
         <section class = "pie-pagina__info">
