@@ -12,7 +12,6 @@
     =========================================================================
     -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Mario Bros - NintendoManía</title>
     <meta name="description" content="Mario Bros en NintendoManía: Cronología, juegos destacados y curiosidades de la saga.">
     <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
@@ -24,11 +23,11 @@
     <header class = "cabecera-mario"> 
         <!-- Logotipo principal y acceso rápido al inicio -->
         <a class = "cabecera__logo" href = "../index.html">
-            <img class = "cabecera__logo--imagen" src="../assets/imgs/logo_principal.png" alt="Logo principal">
+            <img class = "cabecera__logo--imagen" src="../assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía">
         </a>
         <nav class = "cabecera-mario__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
             <a class = "cabecera-mario__menu--sustituto" href = "../index.html">
-                <h1 class = "cabecera-mario__menu--titulo"><img class = "cabecera-mario__menu--imagen" src="../assets/imgs/letra_m.png" alt="Logo Switch" >Nintendo Manía</h1>
+                <p class = "cabecera-mario__menu--titulo"><img class = "cabecera-mario__menu--imagen" src="../assets/imgs/letra_m.png" alt="Logo Switch" >Nintendo Manía</p>
             </a>
             <ul class = "cabecera-mario__menu--lista">
                 <li><a class = "cabecera-mario__menu--enlace" href="./splatoon.html">Splatoon</a></li>
@@ -39,6 +38,7 @@
             </ul>
         </nav>
         <nav class = "cabecera__buscador">
+            <button class="cabecera__buscador--hamburguesa">&#9776;</button>
             <form name="buscador">
                 <label class = "buscador__formulario">
                     <img  class = "buscador__formulario--imagen" src="../assets/imgs/lupa.png" alt="Lupa">
@@ -252,7 +252,7 @@
                     </figcaption>
                 </figure>
                 <p class="personajes-bowser__descripcion">
-                    Bowser es el antagonista más constante de la historia. Es la encarnación del caos que, paradójicamente, da stabilidad a la saga: su objetivo constante de secuestrar a la Princesa Peach es el motor narrativo que impulsa cada nueva innovación de gameplay de Mario.
+                    Bowser es el antagonista más constante de la historia. Es la encarnación del caos que, paradójicamente, da estabilidad a la saga: su objetivo constante de secuestrar a la Princesa Peach es el motor narrativo que impulsa cada nueva innovación de gameplay de Mario.
                 </p>
             </article>
             <article class="personajes-peach">
@@ -364,7 +364,7 @@
                     class="imagenes-destacadas__figura-imagen"
                 >
                 <figcaption class="imagenes-destacadas__figura-descripcion">
-                   <p>El Castillo de Peach:</p> el primer centro de mundo abierto 3D.
+                   <span>El Castillo de Peach:</span> el primer centro de mundo abierto 3D.
                 </figcaption>
             </figure>
             <figure class="imagenes-destacadas__figura">
@@ -374,7 +374,7 @@
                     class="imagenes-destacadas__figura-imagen"
                 >
                 <figcaption class="imagenes-destacadas__figura-descripcion">
-                    <p>FLUDD en acción:</p> La mecánica acuática que definió Super Mario Sunshine.
+                    <span>FLUDD en acción:</span> La mecánica acuática que definió Super Mario Sunshine.
                 </figcaption>
             </figure>
             <figure class="imagenes-destacadas__figura">
@@ -384,7 +384,7 @@
                     class="imagenes-destacadas__figura-imagen"
                 >
                 <figcaption class="imagenes-destacadas__figura-descripcion">
-                    <p>Plataformeo en el espacio:</p> innovadora jugabilidad de gravedad de Galaxy.
+                    <span>Plataformeo en el espacio:</span> innovadora jugabilidad de gravedad de Galaxy.
                 </figcaption>
             </figure>
             <figure class="imagenes-destacadas__figura">
@@ -394,7 +394,7 @@
                     class="imagenes-destacadas__figura-imagen"
                 >
                 <figcaption class="imagenes-destacadas__figura-descripcion">
-                    <p>Captura de Cappy:</p> La mecánica que permitió a Mario transformarse en cualquier cosa.
+                    <span>Captura de Cappy:</span> La mecánica que permitió a Mario transformarse en cualquier cosa.
                 </figcaption>
             </figure>
             <figure class="imagenes-destacadas__figura">
@@ -404,7 +404,7 @@
                     class="imagenes-destacadas__figura-imagen"
                 >
                 <figcaption class="imagenes-destacadas__figura-descripcion">
-                   <p>El Arte Creyón:</p> El distintivo y atemporal estilo visual de Yoshi's Island.
+                   <span>El Arte Creyón:</span> El distintivo y atemporal estilo visual de Yoshi's Island.
                 </figcaption>
             </figure>
         </aside>
@@ -413,9 +413,11 @@
         <section class ="pie-pagina__contacto">
             <h2 class = "pie-pagina__contacto--titulo">Contacto</h2>
             <address class = "pie-pagina__contacto--informacion"> <!-- Enlaces de contacto semántico y accesible -->
-                <a href="./contacto.html">Formulario de contacto</a> |
-                <a href="mailto:nintendomania@info.es">Correo electrónico</a> |
-                <a href="tel:123456789">Teléfono</a>
+                <ul class="pie-pagina__contacto--lista">
+                    <li><a class="pie-pagina__contacto--enlace" href="../contacto.html">Formulario de contacto</a></li>
+                    <li><a class="pie-pagina__contacto--enlace" href="mailto:nintendomania@info.es">Correo electrónico</a></li>
+                    <li><a class="pie-pagina__contacto--enlace" href="tel:123456789">Teléfono</a></li>
+                </ul>
             </address>
         </section>
         <section class = "pie-pagina__info">
