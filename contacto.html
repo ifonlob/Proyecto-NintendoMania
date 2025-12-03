@@ -12,9 +12,8 @@
     =========================================================================
     -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Contacto - Envía tu Opinión | NintendoManía</title>
-    <meta name="description" content="Formulario de contacto para enviar opiniones, sugerencias o propuestas de colaboración a NintendoManía.">
+    <title>Contacto - Envía tu Opinión</title>
+    <meta name="description" content="Formulario de contacto con NintendoManía.">
     <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./assets/imgs/icono_pag.png">
@@ -24,7 +23,7 @@
     <header class = "cabecera"> 
         <!-- Logotipo principal y acceso rápido al inicio -->
         <a class = "cabecera__logo" href = "./index.html">
-            <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Logo principal">
+            <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía">
         </a>
         <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
             <h1 class = "cabecera__menu--titulo"><img class = "cabecera__menu--imagen" src="./assets/imgs/logo_switch.svg" alt="Logo Switch" >Nintendo Manía</h1>
@@ -33,7 +32,7 @@
                 <li><a class = "cabecera__menu--enlace"  href="./sagas/mario.html">Mario</a></li>
                 <li><a  class = "cabecera__menu--enlace" href="./sagas/kirby.html">Kirby</a></li>
                 <li><a  class = "cabecera__menu--enlace" href="./comparativas.html">Comparativas</a></li>
-                <li><a  class = "cabecera__menu--enlace" href="./about.html">Sobre nosotros</a></li>
+                <li><a  class = "cabecera__menu--enlace" href="./about.html">About</a></li>
             </ul>
         </nav>
         <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
@@ -48,7 +47,7 @@
     <main>
         <!-- Introducción a propuesta de colaboración -->
         <section class="colaboracion">
-            <h1 class="colaboracion__titulo">Envíanos un Mensaje o Propuesta de Colaboración</h1>
+            <h2 class="colaboracion__titulo">Envíanos un Mensaje o Propuesta de Colaboración</h2>
             <p class="colaboracion__descripcion">¡Queremos escuchar tu opinión! Usa este formulario para consultas, sugerencias de contenido o si deseas unirte a nuestro equipo de frikis de Nintendo.</p>
             <figure class="colaboracion__figura">
                 <img class="colaboracion__figura--imagen" src="./assets/imgs/queremos_escucharte.jpg" alt="Imagen ilustrativa de afiliación con fans">
@@ -107,8 +106,8 @@
                             <textarea class = "contacto__formulario--textarea" name="mensaje" rows="6" cols="50" minlength="30" required placeholder="Escribe al menos 30 caracteres..."></textarea>
                         </label>
                     </fieldset>
-                    <label class = "contacto__formulario--etiqueta" = >Acepto política de privacidad <sup>*</sup>
-                        <inputtype="checkbox" name="acepta_privacidad" value="si" required>
+                    <label class = "contacto__formulario--etiqueta">Acepto política de privacidad <sup>*</sup>
+                        <input type="checkbox" name="acepta_privacidad" value="si" required>
                     </label>
                     <button class = "contacto__formulario--boton" type="submit">Enviar formulario a NintendoManía</button>
                     <button class = "contacto__formulario--boton" type="reset">Borrar Formulario</button>
@@ -119,36 +118,34 @@
                 <p class="faq-contacto__descripcion">Consulta esta sección si tu interés es unirte al equipo o reportar un error grave.</p>
                 <details>
                     <summary class = "faq-contacto__sumario">¿Puedo reportar errores del sitio web aquí?</summary>
-                    <p class = "faq-contacto__sumario--descripcion">Sí, por favor, utiliza la opción "Reporte de Error/Fallo Técnico" en el menú desplegable.<br> Necesitamos saber qué navegador estás utilizando para poder solucionarlo.</p>
+                    <p class = "faq-contacto__sumario--descripcion">Sí, por favor, utiliza la opción "Reporte de Error/Fallo Técnico" en el menú desplegable.</p>
+                    <p class = "faq-contacto__sumario--descripcion">Necesitamos saber qué navegador estás utilizando para poder solucionarlo.</p>
                 </details>
                 <details>
                     <summary class = "faq-contacto__sumario">¿Cómo puedo enviar sugerencias de lore o curiosidades?</summary>
-                    <p class = "faq-contacto__sumario--descripcion">Puedes usar el campo de "Mensaje" principal y seleccionar "Sugerencia/Corrección de Contenido" en el asunto.<br> Nuestro equipo revisará tu dato para verificar su rigor cronológico.</p>
+                    <p class = "faq-contacto__sumario--descripcion">Puedes usar el campo de "Mensaje" principal y seleccionar "Sugerencia/Corrección de Contenido" en el asunto.</p>
+                    <p class = "faq-contacto__sumario--descripcion"> equipo revisará tu dato para verificar su rigor cronológico.</p>
                 </details>
                 <details>
                     <summary class = "faq-contacto__sumario">¿Existe un proceso de selección para colaboradores?</summary>
-                    <p class = "faq-contacto__sumario--descripcion">Sí. Si seleccionas "Propuesta de Colaboración" te contactaremos por correo para discutir tus habilidades<br> (redacción, diseño, investigación) y asignarte una prueba de contenido.</p>
+                    <p class = "faq-contacto__sumario--descripcion">Sí. Si seleccionas "Propuesta de Colaboración" te contactaremos por correo para discutir tus habilidades</p>
+                    <p class = "faq-contacto__sumario--descripcion">(redacción, diseño, investigación) y asignarte una prueba de contenido.</p>
                 </details>
                 <details>
                     <summary class = "faq-contacto__sumario">¿Por qué recibo un error al enviar el formulario?</summary>
-                    <p class = "faq-contacto__sumario--descripcion">
-                        Asegúrate de haber rellenado todos los campos obligatorios (<sup>*</sup>). <br>El formulario no se enviará si falta algún dato requerido, si el correo electrónico no es válido, o si el mensaje tiene menos de 30 caracteres.<br>
-                        Si el problema persiste, revisa tu conexión o inténtalo desde otro navegador.
-                    </p>
+                    <p class = "faq-contacto__sumario--descripcion">Asegúrate de haber rellenado todos los campos obligatorios (<sup>*</sup>)</p>
+                    <p class = "faq-contacto__sumario--descripcion">El formulario no se enviará si falta algún dato requerido, si el correo electrónico no es válido, o si el mensaje tiene menos de 30 caracteres.</p>
+                    <p class = "faq-contacto__sumario--descripcion">Si el problema persiste, revisa tu conexión o inténtalo desde otro navegador.</p>
                 </details>
                 <details>
                     <summary class = "faq-contacto__sumario">He enviado el formulario pero no recibo respuesta</summary>
-                    <p class = "faq-contacto__sumario--descripcion">
-                        Nuestro equipo trata de contestar en un plazo de 72 horas hábiles.<br>
-                        Si tras ese tiempo no tienes noticias, revisa tu bandeja de spam o contacta por correo directo a nintendomania@info.es.
-                    </p>
+                    <p class = "faq-contacto__sumario--descripcion">Nuestro equipo trata de contestar en un plazo de 72 horas hábiles.</p>
+                    <p class = "faq-contacto__sumario--descripcion">Si tras ese tiempo no tienes noticias, revisa tu bandeja de spam o contacta por correo directo a nintendomania@info.es.</p>
                 </details>
                 <details>
                     <summary class = "faq-contacto__sumario">¿Qué hago si veo un error de diseño o la web no carga bien?</summary>
-                    <p class = "faq-contacto__sumario--descripcion">
-                        Indícanos el navegador y dispositivo que usas (por ejemplo, Chrome en móvil Android o Firefox en PC).<br>
-                        Las capturas de pantalla o un enlace al problema nos ayudarán a solucionarlo más rápido.
-                    </p>
+                    <p class = "faq-contacto__sumario--descripcion">Indícanos el navegador y dispositivo que usas (por ejemplo, Chrome en móvil Android o Firefox en PC).</p>
+                    <p class = "faq-contacto__sumario--descripcion">Las capturas de pantalla o un enlace al problema nos ayudarán a solucionarlo más rápido.</p>
                 </details>
             </article>
         </section>
@@ -157,9 +154,11 @@
         <section class ="pie-pagina__contacto">
             <h2 class = "pie-pagina__contacto--titulo">Contacto</h2>
             <address class = "pie-pagina__contacto--informacion"> <!-- Enlaces de contacto semántico y accesible -->
-                <a href="./contacto.html">Formulario de contacto</a> |
-                <a href="mailto:nintendomania@info.es">Correo electrónico</a> |
-                <a href="tel:123456789">Teléfono</a>
+                <ul class="pie-pagina__contacto--lista">
+                    <li><a class="pie-pagina__contacto--enlace" href="./contacto.html">Formulario de contacto</a></li>
+                    <li><a class="pie-pagina__contacto--enlace" href="mailto:nintendomania@info.es">Correo electrónico</a></li>
+                    <li><a class="pie-pagina__contacto--enlace" href="tel:123456789">Teléfono</a></li>
+                </ul>
             </address>
         </section>
         <section class = "pie-pagina__info">
