@@ -2401,13 +2401,10 @@ img {
   color: var(--color-secundario__splatoon);
 }
 
+
 @media screen and (max-width: 1400px) {
   .cabecera-splatoon {
     padding: 1rem;
-  }
-
-  .cabecera-splatoon__logo {
-    width: 20%;
   }
 
   .cabecera-splatoon__menu {
@@ -2434,25 +2431,14 @@ img {
     font-size: 1.6rem;
   }
 
-  .cabecera-splatoon__buscador {
-    width: 25%;
-    margin-left: auto;
-    margin-right: 0;
-  }
-
-  .buscador__formulario {
-    width: 100%;
-    margin: 0;
-  }
 }
 
 @media screen and (max-width: 1100px) {
   .cabecera-splatoon {
     padding: 0.75rem 1rem;
-  }
-
-  .cabecera-splatoon__logo {
-    width: 22%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 
   .cabecera-splatoon__menu {
@@ -2469,30 +2455,9 @@ img {
   }
 
   .cabecera-splatoon__menu--imagen {
-    width: 18%;
+    width: 14%;
   }
 
-  .cabecera-splatoon__buscador {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-  }
-
-  .cabecera-splatoon__buscador--hamburguesa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2.8rem;
-    height: 2.8rem;
-    margin-bottom: 0.5rem;
-    padding: 0.75rem;
-    border-radius: 50%;
-    border: 3px solid black;
-    background-color: #d77e7e;
-    box-shadow: 0 2px 4px rgba(0,0,0,.25);
-    cursor: pointer;
-  }
 }
 
 @media screen and (max-width: 850px) {
@@ -2500,9 +2465,6 @@ img {
     padding: 0.5rem 1rem;
   }
 
-  .cabecera-splatoon__logo {
-    display: none;
-  }
 
   .cabecera-splatoon__menu {
     padding-left: 0;
@@ -2517,30 +2479,23 @@ img {
   }
 
   .cabecera-splatoon__menu--imagen {
-    width: 28%;
+    width: 15%;
   }
+
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .cabecera-splatoon {
     padding: 0.4rem 0.8rem;
-    flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.4rem;
   }
 
-  .cabecera-splatoon__logo {
-    display: none;
-  }
-
-  .cabecera-splatoon__logo--imagen {
-    width: 70%;
-  }
-
   .cabecera-splatoon__menu {
-    width: 100%;
+    width: 80%;
     align-items: center;
     gap: 0.3rem;
   }
@@ -2552,29 +2507,35 @@ img {
   }
 
   .cabecera-splatoon__menu--imagen {
-    width: 22%;
+    width: 15%;
   }
+}
 
-  .cabecera-splatoon__buscador {
-    width: 80%;
-    margin: 0 auto;
+
+@media screen and (max-width: 450px) {
+  .cabecera-splatoon {
+    padding: 0.35rem 0.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-  }
-
-  .buscador__formulario {
-    width: 100%;
-    padding: 0.3rem 0.8rem;
     gap: 0.3rem;
   }
 
-  .buscador__formulario--input {
-    font-size: 0.85rem;
+
+  .cabecera-splatoon__menu {
+    width: 90%;
+    align-items: center;
+    gap: 0.25rem;
   }
 
-  .cabecera-splatoon__buscador--hamburguesa {
-    width: 2.4rem;
-    height: 2.4rem;
-    margin-bottom: 0.3rem;
+  .cabecera-splatoon__menu--titulo {
+    font-size: 0.95rem;
+    text-align: center;
+    gap: 0.4rem;
+  }
+
+  .cabecera-splatoon__menu--imagen {
+    width: 18%;
   }
 }
 
@@ -4505,10 +4466,6 @@ img {
     padding: 1rem;
   }
 
-  .cabecera-kirby__logo {
-    width: 20%;
-  }
-
   .cabecera-kirby__menu {
     display: flex;
     flex-direction: column;
@@ -4533,25 +4490,14 @@ img {
     font-size: 1.6rem;
   }
 
-  .cabecera-kirby__buscador {
-    width: 25%;
-    margin-left: auto;
-    margin-right: 0;
-  }
-
-  .buscador__formulario {
-    width: 100%;
-    margin: 0;
-  }
 }
 
 @media screen and (max-width: 1100px) {
   .cabecera-kirby {
     padding: 0.75rem 1rem;
-  }
-
-  .cabecera-kirby__logo {
-    width: 22%;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 
   .cabecera-kirby__menu {
@@ -4568,30 +4514,9 @@ img {
   }
 
   .cabecera-kirby__menu--imagen {
-    width: 18%;
+    width: 14%;
   }
 
-  .cabecera-kirby__buscador {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: auto;
-  }
-
-  .cabecera-kirby__buscador--hamburguesa {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 2.8rem;
-    height: 2.8rem;
-    margin-bottom: 0.5rem;
-    padding: 0.75rem;
-    border-radius: 50%;
-    border: 3px solid black;
-    background-color: #d77e7e;
-    box-shadow: 0 2px 4px rgba(0,0,0,.25);
-    cursor: pointer;
-  }
 }
 
 @media screen and (max-width: 850px) {
@@ -4599,19 +4524,12 @@ img {
     padding: 0.5rem 1rem;
   }
 
-  .cabecera-kirby__logo {
-    display: none;
-  }
 
   .cabecera-kirby__menu {
     padding-left: 0;
     width: 100%;
     justify-content: center;
     align-items: center;
-  }
-  .cabecera-kirby__menu--sustituto{
-    pointer-events: auto;
-    cursor: pointer;
   }
 
   .cabecera-kirby__menu--titulo {
@@ -4620,30 +4538,23 @@ img {
   }
 
   .cabecera-kirby__menu--imagen {
-    width: 28%;
+    width: 15%;
   }
+
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .cabecera-kirby {
     padding: 0.4rem 0.8rem;
-    flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.4rem;
   }
 
-  .cabecera-kirby__logo {
-    display: none;
-  }
-
-  .cabecera-kirby__logo--imagen {
-    width: 70%;
-  }
-
   .cabecera-kirby__menu {
-    width: 100%;
+    width: 80%;
     align-items: center;
     gap: 0.3rem;
   }
@@ -4655,29 +4566,35 @@ img {
   }
 
   .cabecera-kirby__menu--imagen {
-    width: 22%;
+    width: 15%;
   }
+}
 
-  .cabecera-kirby__buscador {
-    width: 80%;
-    margin: 0 auto;
+
+@media screen and (max-width: 450px) {
+  .cabecera-kirby {
+    padding: 0.35rem 0.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
-  }
-
-  .buscador__formulario {
-    width: 100%;
-    padding: 0.3rem 0.8rem;
     gap: 0.3rem;
   }
 
-  .buscador__formulario--input {
-    font-size: 0.85rem;
+
+  .cabecera-kirby__menu {
+    width: 90%;
+    align-items: center;
+    gap: 0.25rem;
   }
 
-  .cabecera-kirby__buscador--hamburguesa {
-    width: 2.4rem;
-    height: 2.4rem;
-    margin-bottom: 0.3rem;
+  .cabecera-kirby__menu--titulo {
+    font-size: 0.95rem;
+    text-align: center;
+    gap: 0.4rem;
+  }
+
+  .cabecera-kirby__menu--imagen {
+    width: 18%;
   }
 }
 
