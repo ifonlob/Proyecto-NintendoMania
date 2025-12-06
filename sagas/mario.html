@@ -22,23 +22,24 @@
 <body class = "body-mario" id="inicio">
     <header class = "cabecera-mario"> 
         <!-- Logotipo principal y acceso rápido al inicio -->
-        <a class = "cabecera__logo" href = "../index.html">
+        <button class="cabecera__buscador--hamburguesa">&#9776;</button>
+        <a class = "cabecera__logo" href = "./index.html">
             <img class = "cabecera__logo--imagen" src="../assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía">
         </a>
         <nav class = "cabecera-mario__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
-            <a class = "cabecera-mario__menu--sustituto" href = "../index.html">
-                <p class = "cabecera-mario__menu--titulo"><img class = "cabecera-mario__menu--imagen" src="../assets/imgs/letra_m.png" alt="Logo Switch" >Nintendo Manía</p>
-            </a>
+            <p class="cabecera-mario__menu--titulo">
+                <img class="cabecera-mario__menu--imagen" src="../assets/imgs/letra_m.png" alt="Letra M Mario Bros">
+                Nintendo Manía
+            </p>
             <ul class = "cabecera-mario__menu--lista">
                 <li><a class = "cabecera-mario__menu--enlace" href="./splatoon.html">Splatoon</a></li>
-                <li><a  class = "cabecera-mario__menu--enlace" href="./kirby.html">Kirby</a></li>
+                <li><a class = "cabecera-mario__menu--enlace"  href="./kirby.html">Kirby</a></li>
                 <li><a  class = "cabecera-mario__menu--enlace" href="../comparativas.html">Comparativas</a></li>
                 <li><a  class = "cabecera-mario__menu--enlace" href="../contacto.html">Contacto</a></li>
                 <li><a  class = "cabecera-mario__menu--enlace" href="../about.html">About</a></li>
             </ul>
         </nav>
-        <nav class = "cabecera__buscador">
-            <button class="cabecera__buscador--hamburguesa">&#9776;</button>
+        <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
             <form name="buscador">
                 <label class = "buscador__formulario">
                     <img  class = "buscador__formulario--imagen" src="../assets/imgs/lupa.png" alt="Lupa">

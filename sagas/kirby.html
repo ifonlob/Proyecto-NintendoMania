@@ -22,23 +22,24 @@
 <body id="inicio" class = "body-kirby">
     <header class = "cabecera-kirby"> 
         <!-- Logotipo principal y acceso rápido al inicio -->
-        <a class = "cabecera__logo" href = "../index.html">
+        <button class="cabecera__buscador--hamburguesa">&#9776;</button>
+        <a class = "cabecera__logo" href = "./index.html">
             <img class = "cabecera__logo--imagen" src="../assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía">
         </a>
         <nav class = "cabecera-kirby__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
-            <a class = "cabecera-kirby__menu--sustituto" href = "../index.html">
-                <p class = "cabecera-kirby__menu--titulo"><img class = "cabecera__menu--imagen" src="../assets/imgs/kirby-2d.png" alt="Logo Switch">Nintendo Manía</p>
-            </a>
+            <p class="cabecera-kirby__menu--titulo">
+                <img class="cabecera-kirby__menu--imagen" src="../assets/imgs/kirby-2d.png" alt="Kirby montado en una estrella">
+                Nintendo Manía
+            </p>
             <ul class = "cabecera-kirby__menu--lista">
                 <li><a class = "cabecera-kirby__menu--enlace" href="./splatoon.html">Splatoon</a></li>
                 <li><a class = "cabecera-kirby__menu--enlace"  href="./mario.html">Mario</a></li>
-                <li><a class = "cabecera-kirby__menu--enlace" href="../comparativas.html">Comparativas</a></li>
-                <li><a class = "cabecera-kirby__menu--enlace" href="../contacto.html">Contacto</a></li>
-                <li><a class = "cabecera-kirby__menu--enlace" href="../about.html">About</a></li>
+                <li><a  class = "cabecera-kirby__menu--enlace" href="../comparativas.html">Comparativas</a></li>
+                <li><a  class = "cabecera-kirby__menu--enlace" href="../contacto.html">Contacto</a></li>
+                <li><a  class = "cabecera-kirby__menu--enlace" href="../about.html">About</a></li>
             </ul>
         </nav>
         <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
-            <button class="cabecera__buscador--hamburguesa">&#9776;</button>
             <form name="buscador">
                 <label class = "buscador__formulario">
                     <img  class = "buscador__formulario--imagen" src="../assets/imgs/lupa.png" alt="Lupa">
