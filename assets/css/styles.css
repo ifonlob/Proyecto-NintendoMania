@@ -15,7 +15,7 @@
 
 :root{
   --color-principal: #800E13;
-  --color-secundario: #0074D9 ;
+  --color-secundario: #48a1ee ;
   --color-principal__splatoon: #F02D7D;
   --color-principal__mario:#E52521;
   --color-principal__kirby:#d47bce;
@@ -84,10 +84,6 @@ img {
   font-size: 2rem;
 }
 
-.cabecera__menu--sustituto{
-  pointer-events: none;
-  text-decoration: none;
-}
 
 .cabecera__menu--lista{
   display: flex;
@@ -133,8 +129,11 @@ img {
 .cabecera__menu--enlace:focus {
   color: var(--color-secundario);
 }
+
 .cabecera__buscador--hamburguesa{
   display: none;
+  position: relative;
+  z-index: 1;
 }
 .buscador__formulario{
   display: flex;
@@ -206,10 +205,13 @@ img {
 @media screen and (max-width: 1100px) {
   .cabecera {
     padding: 0.75rem 1rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
   }
 
   .cabecera__logo {
-    width: 22%;
+    display: none;
   }
 
   .cabecera__menu {
@@ -226,14 +228,17 @@ img {
   }
 
   .cabecera__menu--imagen {
-    width: 18%;
+    width: 14%;
   }
 
   .cabecera__buscador {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     width: auto;
+    margin: 0;
+  }
+
+  .buscador__formulario{
+    width: 100%;
+    margin: 0;
   }
 
   .cabecera__buscador--hamburguesa {
@@ -267,10 +272,6 @@ img {
     justify-content: center;
     align-items: center;
   }
-  .cabecera__menu--sustituto{
-    pointer-events: auto;
-    cursor: pointer;
-  }
 
   .cabecera__menu--titulo {
     font-size: 1.3rem;
@@ -278,16 +279,17 @@ img {
   }
 
   .cabecera__menu--imagen {
-    width: 28%;
+    width: 15%;
   }
+
 
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 650px) {
   .cabecera {
     padding: 0.4rem 0.8rem;
-    flex-direction: column;
     justify-content: center;
+    flex-wrap: wrap;
     align-items: center;
     gap: 0.4rem;
   }
@@ -296,12 +298,9 @@ img {
     display: none;
   }
 
-  .cabecera__logo--imagen {
-    width: 70%;
-  }
 
   .cabecera__menu {
-    width: 100%;
+    width: 80%;
     align-items: center;
     gap: 0.3rem;
   }
@@ -313,11 +312,11 @@ img {
   }
 
   .cabecera__menu--imagen {
-    width: 22%;
+    width: 15%;
   }
 
   .cabecera__buscador {
-    width: 80%;
+    width: 50%;
     margin: 0 auto;
     align-items: center;
   }
@@ -336,6 +335,58 @@ img {
     width: 2.4rem;
     height: 2.4rem;
     margin-bottom: 0.3rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cabecera {
+    padding: 0.35rem 0.6rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  .cabecera__logo {
+    display: none;
+  }
+
+  .cabecera__menu {
+    width: 90%;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .cabecera__menu--titulo {
+    font-size: 0.95rem;
+    text-align: center;
+    gap: 0.4rem;
+  }
+
+  .cabecera__menu--imagen {
+    width: 18%;
+  }
+
+  .cabecera__buscador {
+    width: 70%;
+    margin: 0 auto;
+    align-items: center;
+  }
+
+  .buscador__formulario {
+    width: 100%;
+    padding: 0.25rem 0.6rem;
+    gap: 0.25rem;
+  }
+
+  .buscador__formulario--input {
+    font-size: 0.8rem;
+  }
+
+  .cabecera__buscador--hamburguesa {
+    width: 2.2rem;
+    height: 2.2rem;
+    margin-bottom: 0.25rem;
   }
 }
 
@@ -739,7 +790,7 @@ img {
 
 .sagas-principales__mario,.sagas-principales__splatoon,.sagas-principales__kirby{
   padding:2rem;
-  background: rgba(59, 132, 242, 0.8);
+  background: var(--color-secundario);
   border-radius: 6rem;
   border: 5px solid var(--color-principal);
   transition: transform 0.5s ease;
@@ -2301,10 +2352,6 @@ img {
   font-family: var(--fuente-secundaria);
   color: var(--color-principal__splatoon)
 }
-.cabecera-splatoon__menu--sustituto{
-  pointer-events: none;
-  text-decoration: none;
-}
 
 .cabecera-splatoon__menu--titulo{
   display: flex;
@@ -2462,10 +2509,6 @@ img {
     width: 100%;
     justify-content: center;
     align-items: center;
-  }
-  .cabecera-splatoon__menu--sustituto{
-    pointer-events: auto;
-    cursor: pointer;
   }
 
   .cabecera-splatoon__menu--titulo {
@@ -5004,60 +5047,488 @@ img {
 
 
 
+@media screen and (max-width: 1200px) {
+  #habilidades {
+    gap: 2rem;
+    padding: 1.3rem;
+  }
 
-#jefes {
+  .habilidades__titulo {
+    font-size: 1.9rem;
+  }
+
+  .habilidades__descripcion {
+    font-size: 1.2rem;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+
+  .habilidad-espada,
+  .habilidad-fuego,
+  .habilidad-bomba,
+  .habilidad-martillo,
+  .habilidad-sueno {
+    max-width: 30%;
+    padding: 1.3rem;
+  }
+
+  .habilidad-espada__titulo,
+  .habilidad-fuego__titulo,
+  .habilidad-bomba__titulo,
+  .habilidad-martillo__titulo,
+  .habilidad-sueno__titulo {
+    font-size: 1.2rem;
+    padding: 0.9rem;
+  }
+}
+@media screen and (max-width: 900px) {
+  #habilidades {
+    justify-content: center;
+    gap: 1.8rem;
+    padding: 1.2rem;
+  }
+
+  .habilidades__titulo {
+    font-size: 1.8rem;
+  }
+
+  .habilidades__descripcion {
+    font-size: 1.15rem;
+    max-width: 95%;
+  }
+
+  .habilidad-espada,
+  .habilidad-fuego,
+  .habilidad-bomba,
+  .habilidad-martillo,
+  .habilidad-sueno {
+    max-width: 45%;
+    padding: 1.2rem;
+  }
+
+  .habilidad-espada__titulo,
+  .habilidad-fuego__titulo,
+  .habilidad-bomba__titulo,
+  .habilidad-martillo__titulo,
+  .habilidad-sueno__titulo {
+    font-size: 1.1rem;
+  }
+
+  .habilidad-espada__descripcion,
+  .habilidad-fuego__descripcion,
+  .habilidad-bomba__descripcion,
+  .habilidad-martillo__descripcion,
+  .habilidad-sueno__descripcion {
+    font-size: 0.95rem;
+    padding: 1.1rem;
+  }
+
+  .habilidad-espada__lista,
+  .habilidad-fuego__lista,
+  .habilidad-bomba__lista,
+  .habilidad-martillo__lista,
+  .habilidad-sueno__lista {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  #habilidades {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1rem;
+  }
+
+  .habilidades__titulo {
+    font-size: 1.6rem;
+  }
+
+  .habilidades__descripcion {
+    font-size: 1.05rem;
+  }
+
+  .habilidad-espada,
+  .habilidad-fuego,
+  .habilidad-bomba,
+  .habilidad-martillo,
+  .habilidad-sueno {
+    max-width: 90%;
+    padding: 1rem;
+  }
+
+  .habilidad-espada__titulo,
+  .habilidad-fuego__titulo,
+  .habilidad-bomba__titulo,
+  .habilidad-martillo__titulo,
+  .habilidad-sueno__titulo {
+    font-size: 1.05rem;
+    padding: 0.8rem;
+  }
+
+  .habilidad-espada__figura--descripcion,
+  .habilidad-fuego__figura--descripcion,
+  .habilidad-bomba__figura--descripcion,
+  .habilidad-martillo__figura--descripcion,
+  .habilidad-sueno__figura--descripcion {
+    font-size: 0.9rem;
+  }
+
+  .habilidad-espada__descripcion,
+  .habilidad-fuego__descripcion,
+  .habilidad-bomba__descripcion,
+  .habilidad-martillo__descripcion,
+  .habilidad-sueno__descripcion {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .habilidad-espada__lista,
+  .habilidad-fuego__lista,
+  .habilidad-bomba__lista,
+  .habilidad-martillo__lista,
+  .habilidad-sueno__lista {
+    font-size: 0.9rem;
+  }
 }
 
-.jefes__titulo,
+
+
+#jefes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.jefes__titulo {
+  font-family: var(--fuente-secundaria);
+  font-size: 2.5rem;
+  text-align: center;
+  overflow-wrap: break-word;
+  width: 80%;
+  padding: 2rem;
+  color: var(--color-texto);
+  text-shadow: -3px 3px 0 var(--color-principal__kirby);
+}
+
 .jefes__descripcion {
+  max-width: 75%;
+  font-family: var(--fuente-base);
+  font-size: 1.5rem;
+  text-align: center;
+  padding: 2rem;
 }
 
 .jefe-whispy,
 .jefe-kracko,
 .jefe-marx {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  width: 75%;
+  padding: 2rem 1rem;
+  background-image: url(../imgs/kirby-fondo-estrellado.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
-
 
 .jefe-whispy__titulo,
 .jefe-kracko__titulo,
 .jefe-marx__titulo {
+  font-family: var(--fuente-secundaria);
+  font-size: 1.7rem;
+  overflow-wrap: break-word;
+  text-align: center;
+  width: 75%;
+  padding: 1.5rem 2rem;
+  color: #fff;
+  background-image: url(../imgs/kirby-fondo-rosa.jpg);
+  border-radius: 1.2rem;
+  border: 3px solid var(--color-principal__kirby);
+  -webkit-text-stroke: 1px black;
 }
-
 
 .jefe-whispy__figura,
 .jefe-kracko__figura,
 .jefe-marx__figura {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 1rem;
 }
-
 
 .jefe-whispy__figura--imagen,
 .jefe-kracko__figura--imagen,
 .jefe-marx__figura--imagen {
+  width: 100%;
+  max-width: 50%;
+  border-radius: 50%;
+  border: 4px solid var(--color-principal__kirby);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
+.jefe-whispy__figura--imagen:hover,
+.jefe-kracko__figura--imagen:hover,
+.jefe-marx__figura--imagen:hover {
+  transform: translateY(-6px) rotate(-1deg);
+  box-shadow: 0 18px 32px rgba(0, 0, 0, 0.5);
+}
 
 .jefe-whispy__figura--descripcion,
 .jefe-kracko__figura--descripcion,
 .jefe-marx__figura--descripcion {
+  font-family: var(--fuente-base);
+  font-weight: 900;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  background-color: #ffb6e6;
+  border-radius: 2rem;
 }
-
 
 .jefe-whispy__descripcion,
 .jefe-kracko__descripcion,
 .jefe-marx__descripcion {
+  font-family: var(--fuente-base);
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 2rem;
+  text-align: center;
+  background-color: #ffb6e6;
+  border-radius: 2rem;
+  width: 75%;
 }
 
 .jefe-whispy__subtitulo,
 .jefe-kracko__subtitulo,
 .jefe-marx__subtitulo {
+  font-family: var(--fuente-secundaria);
+  font-size: 1.6rem;
+  text-align: center;
+  overflow-wrap: break-word;
+  width: 75%;
+  padding: 1rem;
+  color: #fff;
+  background-image: url(../imgs/kirby-fondo-rosa.jpg);
+  border-radius: 1.2rem;
+  border: 3px solid var(--color-principal__kirby);
+  -webkit-text-stroke: 1px black;
 }
 
 .jefe-whispy__lista,
 .jefe-kracko__lista,
 .jefe-marx__lista {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1rem;
 }
 
 .jefe-whispy__lista--item,
 .jefe-kracko__lista--item,
 .jefe-marx__lista--item {
+  font-family: var(--fuente-base);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-align: center;
+  overflow-wrap: break-word;
+  max-width: 30%;
+  width: 100%;
+  padding: 1rem;
+  background-color: #ffb6e6;
+  border-radius: 1.2rem;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.jefe-whispy__lista--item:hover,
+.jefe-kracko__lista--item:hover,
+.jefe-marx__lista--item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+}
+
+
+@media screen and (max-width: 1200px) {
+  #jefes {
+    gap: 1.8rem;
+  }
+
+  .jefes__titulo {
+    font-size: 2.2rem;
+    width: 85%;
+    padding: 1.8rem;
+  }
+
+  .jefes__descripcion {
+    max-width: 80%;
+    font-size: 1.4rem;
+  }
+
+  .jefe-whispy,
+  .jefe-kracko,
+  .jefe-marx {
+    width: 80%;
+    padding: 1.8rem 1rem;
+  }
+
+  .jefe-whispy__titulo,
+  .jefe-kracko__titulo,
+  .jefe-marx__titulo {
+    font-size: 1.6rem;
+    width: 80%;
+  }
+
+  .jefe-whispy__descripcion,
+  .jefe-kracko__descripcion,
+  .jefe-marx__descripcion {
+    width: 80%;
+  }
+
+  .jefe-whispy__lista--item,
+  .jefe-kracko__lista--item,
+  .jefe-marx__lista--item {
+    max-width: 40%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .jefes__titulo {
+    font-size: 2rem;
+    width: 90%;
+    padding: 1.6rem;
+  }
+
+  .jefes__descripcion {
+    max-width: 85%;
+    font-size: 1.3rem;
+    padding: 1.6rem;
+  }
+
+  .jefe-whispy,
+  .jefe-kracko,
+  .jefe-marx {
+    width: 90%;
+    padding: 1rem;
+    gap: 1.2rem;
+  }
+
+  .jefe-whispy__titulo,
+  .jefe-kracko__titulo,
+  .jefe-marx__titulo {
+    font-size: 1.5rem;
+    width: 90%;
+    padding: 1.2rem;
+  }
+
+  .jefe-whispy__figura--imagen,
+  .jefe-kracko__figura--imagen,
+  .jefe-marx__figura--imagen {
+    max-width: 60%;
+  }
+
+  .jefe-whispy__descripcion,
+  .jefe-kracko__descripcion,
+  .jefe-marx__descripcion {
+    width: 90%;
+    font-size: 1rem;
+    padding: 1.6rem;
+  }
+
+  .jefe-whispy__subtitulo,
+  .jefe-kracko__subtitulo,
+  .jefe-marx__subtitulo {
+    width: 90%;
+    font-size: 1.4rem;
+  }
+
+  .jefe-whispy__lista--item,
+  .jefe-kracko__lista--item,
+  .jefe-marx__lista--item {
+    max-width: 45%;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #jefes {
+    gap: 1.5rem;
+  }
+
+  .jefes__titulo {
+    font-size: 1.7rem;
+    width: 95%;
+    padding: 1.4rem;
+  }
+
+  .jefes__descripcion {
+    max-width: 95%;
+    font-size: 1.1rem;
+    padding: 1.4rem;
+  }
+
+  .jefe-whispy,
+  .jefe-kracko,
+  .jefe-marx {
+    width: 95%;
+    padding: 1.4rem 0.8rem;
+    gap: 1rem;
+  }
+
+  .jefe-whispy__titulo,
+  .jefe-kracko__titulo,
+  .jefe-marx__titulo {
+    font-size: 1.3rem;
+    width: 95%;
+    padding: 1rem 1.2rem;
+  }
+
+  .jefe-whispy__figura--imagen,
+  .jefe-kracko__figura--imagen,
+  .jefe-marx__figura--imagen {
+    max-width: 70%;
+  }
+
+  .jefe-whispy__figura--descripcion,
+  .jefe-kracko__figura--descripcion,
+  .jefe-marx__figura--descripcion {
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .jefe-whispy__descripcion,
+  .jefe-kracko__descripcion,
+  .jefe-marx__descripcion {
+    width: 95%;
+    font-size: 1rem;
+    padding: 1.4rem;
+  }
+
+  .jefe-whispy__subtitulo,
+  .jefe-kracko__subtitulo,
+  .jefe-marx__subtitulo {
+    width: 95%;
+    font-size: 1.25rem;
+    padding: 1rem;
+  }
+
+  .jefe-whispy__lista,
+  .jefe-kracko__lista,
+  .jefe-marx__lista {
+    gap: 1rem;
+  }
+
+  .jefe-whispy__lista--item,
+  .jefe-kracko__lista--item,
+  .jefe-marx__lista--item {
+    max-width: 100%;
+    font-size: 1rem;
+    padding: 1rem;
+  }
 }
