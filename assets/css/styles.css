@@ -192,8 +192,6 @@ img {
 
   .cabecera__buscador {
     width: 25%;
-    margin-left: auto;
-    margin-right: 0;
   }
 
   .buscador__formulario {
@@ -232,7 +230,6 @@ img {
   }
 
   .cabecera__buscador {
-    width: auto;
     margin: 0;
   }
 
@@ -275,7 +272,7 @@ img {
 
   .cabecera__menu--titulo {
     font-size: 1.3rem;
-    text-align: center;
+    gap:0;
   }
 
   .cabecera__menu--imagen {
@@ -315,10 +312,8 @@ img {
     width: 15%;
   }
 
-  .cabecera__buscador {
-    width: 50%;
-    margin: 0 auto;
-    align-items: center;
+  .cabecera__buscador{
+    width: 45%;
   }
 
   .buscador__formulario {
@@ -883,13 +878,7 @@ img {
   padding: 1.5rem;
   background-image: url(../imgs/patron-rosa.jpg);
   border-radius: 2rem;
-  background: linear-gradient(
-    135deg,
-    var(--color-secundario) 0%,
-    #005bb0 35%,
-    #c8202a 70%,
-    var(--color-principal) 100%
-  );
+  background-color:#48a1ee99;
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
 }
 
@@ -899,13 +888,7 @@ img {
   width: 40%;
   gap:3.5rem;
   padding: 1.5rem;
-  background: linear-gradient(
-    135deg,
-    var(--color-principal) 0%,
-    #c8202a 35%,
-    #005bb0 70%,
-    var(--color-secundario) 100%
-  );
+  background-color: #E5252199;
   border-radius: 2rem;
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
 }
@@ -1909,7 +1892,8 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:1.5rem;
+  gap:2.5rem;
+  margin-bottom: 2rem;
   width: 100%;
   max-width: 100%;
 }
@@ -1919,6 +1903,10 @@ img {
   font-size: 1.4rem;
   text-align: center;
   padding:2rem;
+  width: 50%;
+  background-image: url(../imgs/ladrillo-rosa.jpg);
+  border-radius: 2rem;
+  border: 3px solid black;
   overflow-wrap: break-word;
 }
 
@@ -1932,7 +1920,7 @@ img {
 
 
 .hitos__tabla,.evolucion-kirby__tabla,.evolucion-mario__tabla,.evolucion-splat__tabla{
-  max-width: 50%;
+  max-width: 75%;
   width: 100%;
   border-collapse: collapse;
   font-family: var(--fuente-base);
@@ -1955,7 +1943,7 @@ img {
   color: #fff;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .comparativas__titulo {
     font-size: 1.4rem;
     padding: 1.2rem 0.7rem;
@@ -1990,7 +1978,7 @@ img {
   .evolucion-kirby__tabla,
   .evolucion-mario__tabla,
   .evolucion-splat__tabla {
-    max-width: 100%;
+    max-width: 80%;
     font-size: 0.94rem;
     margin: 0;
     border-radius: 1.2rem;
@@ -2013,7 +2001,7 @@ img {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .comparativas__titulo {
     font-size: 1.06rem;
     padding: 1rem;
@@ -2040,7 +2028,7 @@ img {
   .evolucion-kirby__descripcion,
   .evolucion-mario__descripcion,
   .evolucion-splat__descripcion {
-    font-size: 0.87rem;
+    font-size: 1rem;
     padding: 1rem;
   }
 
@@ -2048,8 +2036,8 @@ img {
   .evolucion-kirby__tabla,
   .evolucion-mario__tabla,
   .evolucion-splat__tabla {
-    font-size: 0.88rem;
-    max-width: 100%;
+    font-size: 1rem;
+    max-width: 90%;
     border-radius: 0.7rem;
     margin: 0 auto;
   }
@@ -2059,7 +2047,7 @@ img {
   .tabla__body--celda,
   .tabla__footer--celda{
     padding: 0.4rem;
-    font-size: 0.55rem;
+    font-size: 0.8rem;
   }
 
   .hitos__tabla--titulo,
@@ -2068,6 +2056,25 @@ img {
   .evolucion-mario__tabla--titulo {
     font-size: 0.84rem;
     padding: 0.5rem 0.1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hitos__tabla,
+  .evolucion-kirby__tabla,
+  .evolucion-mario__tabla,
+  .evolucion-splat__tabla {
+    display: block;
+    min-width: 100%;
+    width: max-content;
+    overflow-x: auto;
+  }
+
+  .tabla__head--titulo,
+  .tabla__body--titulo,
+  .tabla__body--celda,
+  .tabla__footer--celda {
+    white-space: nowrap;
   }
 }
 
