@@ -483,7 +483,11 @@ img {
   }
 
   .pie-pagina__info {
-    width: 40%;
+    width: 30%;
+  }
+  .pie-pagina__info--titulo{
+    font-size: 0.5rem;
+    overflow-wrap: break-word;
   }
 
   .pie-pagina__contacto{
@@ -511,7 +515,7 @@ img {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
 
   .pie-pagina__contacto,
   .pie-pagina__info {
@@ -544,40 +548,26 @@ img {
     display: none;
   }
 }
-@media (max-width: 400px) {
-
+@media (max-width: 550px) {
   .pie-pagina {
     justify-content: space-evenly;
-    gap: 0.4rem;
+    gap: 1rem;
     padding: 0.4rem 0.5rem;
   }
-  .pie-pagina__info{
-    width: 35%;
-  }
-
-  .pie-pagina__contacto{
-    padding:0;
-
-  }
-  .pie-pagina__contacto--titulo,
-  .pie-pagina__info--titulo {
-    font-size: 0.6rem;
-  }
-
-  .pie-pagina__contacto--enlace{
-    width: 100%;
-    font-size: 0.55rem;
-  }
-  .pie-pagina__contacto--informacion,
-  .pie-pagina__info--descripcion {
+  .pie-pagina__contacto--titulo,.pie-pagina__info--titulo{
     font-size: 0.8rem;
+    padding-left: 1rem;
   }
 
-  .footer-extra {
-    display: none;
+  .pie-pagina__info,
+  .pie-pagina__contacto {
+    width: 50%;
+    padding: 0.3rem;
   }
-
-}
+  .pie-pagina__info p.pie-pagina__info--descripcion:nth-of-type(2) {
+  display: none;
+  }
+} 
 
 
 
