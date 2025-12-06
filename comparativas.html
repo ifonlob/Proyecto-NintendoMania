@@ -20,32 +20,33 @@
     <link rel="stylesheet" href ="./assets/css/styles.css"></head>
 <body id="inicio">
     <header class = "cabecera"> 
-            <!-- Logotipo principal y acceso rápido al inicio -->
-            <a class = "cabecera__logo" href = "./index.html">
-                <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía">
-            </a>
-            <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
-                <p class = "cabecera__menu--titulo">
-                    <img class = "cabecera__menu--imagen" src="./assets/imgs/logo_switch.svg" alt="Logo Switch">Nintendo Manía
-                </p>
-                <ul class = "cabecera__menu--lista">
-                    <li><a class = "cabecera__menu--enlace" href="./sagas/splatoon.html">Splatoon</a></li>
-                    <li><a class = "cabecera__menu--enlace"  href="./sagas/mario.html">Mario</a></li>
-                    <li><a  class = "cabecera__menu--enlace" href="./sagas/kirby.html">Kirby</a></li>
-                    <li><a  class = "cabecera__menu--enlace" href="./contacto.html">Contacto</a></li>
-                    <li><a  class = "cabecera__menu--enlace" href="./about.html">About</a></li>
-                </ul>
-            </nav>
-            <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
-                <button class="cabecera__buscador--hamburguesa">&#9776;</button>
-                <form name="buscador">
-                    <label class = "buscador__formulario">
-                         <img  class = "buscador__formulario--imagen" src="./assets/imgs/lupa.png" alt="Lupa">
-                         <input class = "buscador__formulario--input" type="search" name="buscador" placeholder="Buscar...">
-                    </label>
-                </form>
-            </nav> 
-        </header>
+        <!-- Logotipo principal y acceso rápido al inicio -->
+        <button class="cabecera__buscador--hamburguesa">&#9776;</button>
+        <a class = "cabecera__logo" href = "./index.html">
+            <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía">
+        </a>
+        <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
+            <p class="cabecera__menu--titulo">
+                <img class="cabecera__menu--imagen" src="./assets/imgs/logo_switch.svg" alt="Logo Switch">
+                Nintendo Manía
+            </p>
+            <ul class = "cabecera__menu--lista">
+                <li><a class = "cabecera__menu--enlace" href="./sagas/splatoon.html">Splatoon</a></li>
+                <li><a class = "cabecera__menu--enlace"  href="./sagas/mario.html">Mario</a></li>
+                <li><a  class = "cabecera__menu--enlace" href="./sagas/kirby.html">Kirby</a></li>
+                <li><a  class = "cabecera__menu--enlace" href="./contacto.html">Contacto</a></li>
+                <li><a  class = "cabecera__menu--enlace" href="./about.html">About</a></li>
+            </ul>
+        </nav>
+        <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
+            <form name="buscador">
+                <label class = "buscador__formulario">
+                    <img  class = "buscador__formulario--imagen" src="./assets/imgs/lupa.png" alt="Lupa">
+                    <input class = "buscador__formulario--input" type="search" name="buscador" placeholder="Buscar...">
+                </label>
+            </form>
+        </nav> 
+    </header>
     <main>
         <h1 class = "comparativas__titulo">Comparativas y Datos Clave de las Sagas</h1>  <!-- SECTION: Tabla comparativa de hitos principales entre sagas -->
         <section class ="hitos">
