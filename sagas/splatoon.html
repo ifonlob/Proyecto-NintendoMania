@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <!--
     =========================================================================
     NintendoManía | Splatoon
@@ -9,393 +9,1012 @@
     Irene Foncubierta Lobatón - 1ºDAW, Proyecto trimestral 2025.
     =========================================================================
     -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>NintendoManía | Splatoon</title>
-    <meta name="description" content="Splatoon en NintendoManía: Cronología, juegos destacados y curiosidades de la saga.">
-    <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="../assets/imgs/splatoon_logo.png">
-    <link rel="stylesheet" href ="../assets/css/styles.css">
-</head>
-<body class = "body-splatoon" id="inicio">
-    <header class = "cabecera-splatoon"> 
-        <!-- Logotipo principal y acceso rápido al inicio -->
-        <button class="cabecera__buscador--hamburguesa" type = "button">&#9776;</button>
-        <a class = "cabecera__logo" href = "../index.html">
-            <img class = "cabecera__logo--imagen" src="../assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía" width="1024" height="1024">
-        </a>
-        <nav class = "cabecera-splatoon__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
-            <p class="cabecera-splatoon__menu--titulo">
-                <img class="cabecera-splatoon__menu--imagen" src="../assets/imgs/splatoon_logo_rosa.png" alt="Logo Inkling Rosa" width="247" height="204">
-                Nintendo Manía
-            </p>
-            <ul class = "cabecera-splatoon__menu--lista">
-                <li><a class = "cabecera-splatoon__menu--enlace"  href="./mario.html">Mario</a></li>
-                <li><a  class = "cabecera-splatoon__menu--enlace" href="./kirby.html">Kirby</a></li>
-                <li><a  class = "cabecera-splatoon__menu--enlace" href="../comparativas.html">Comparativas</a></li>
-                <li><a  class = "cabecera-splatoon__menu--enlace" href="../contacto.html">Contacto</a></li>
-                <li><a  class = "cabecera-splatoon__menu--enlace" href="../about.html">About</a></li>
-            </ul>
-        </nav>
-        <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
-            <form name="buscador">
-                <label class = "buscador__formulario">
-                    <img  class = "buscador__formulario--imagen" src="../assets/imgs/lupa.png" alt="Lupa" width="257" height="280">
-                    <input class = "buscador__formulario--input" type="search" name="buscador" placeholder="Buscar...">
-                </label>
-            </form>
-        </nav> 
+    <meta
+      name="description"
+      content="Splatoon en NintendoManía: Cronología, juegos destacados y curiosidades de la saga."
+    />
+    <meta
+      name="keywords"
+      content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="../assets/imgs/splatoon_logo.png" />
+    <link rel="stylesheet" href="../assets/css/styles.css" />
+  </head>
+  <body class="body-splatoon" id="inicio">
+    <header class="cabecera-splatoon">
+      <!-- Logotipo principal y acceso rápido al inicio -->
+      <button class="cabecera__buscador--hamburguesa" type="button">
+        &#9776;
+      </button>
+      <a class="cabecera__logo" href="../index.html">
+        <img
+          class="cabecera__logo--imagen"
+          src="../assets/imgs/logo_principal.png"
+          alt="Ir al inicio de NintendoManía"
+          width="1024"
+          height="1024"
+        />
+      </a>
+      <nav class="cabecera-splatoon__menu">
+        <!-- Menú principal de navegación entre sagas y páginas destacado -->
+        <p class="cabecera-splatoon__menu--titulo">
+          <img
+            class="cabecera-splatoon__menu--imagen"
+            src="../assets/imgs/splatoon_logo_rosa.png"
+            alt="Logo Inkling Rosa"
+            width="247"
+            height="204"
+          />
+          Nintendo Manía
+        </p>
+        <ul class="cabecera-splatoon__menu--lista">
+          <li>
+            <a class="cabecera-splatoon__menu--enlace" href="./mario.html"
+              >Mario</a
+            >
+          </li>
+          <li>
+            <a class="cabecera-splatoon__menu--enlace" href="./kirby.html"
+              >Kirby</a
+            >
+          </li>
+          <li>
+            <a
+              class="cabecera-splatoon__menu--enlace"
+              href="../comparativas.html"
+              >Comparativas</a
+            >
+          </li>
+          <li>
+            <a class="cabecera-splatoon__menu--enlace" href="../contacto.html"
+              >Contacto</a
+            >
+          </li>
+          <li>
+            <a class="cabecera-splatoon__menu--enlace" href="../about.html"
+              >About</a
+            >
+          </li>
+        </ul>
+      </nav>
+      <nav class="cabecera__buscador">
+        <!-- Formulario de búsqueda semántico -->
+        <form name="buscador">
+          <label class="buscador__formulario">
+            <img
+              class="buscador__formulario--imagen"
+              src="../assets/imgs/lupa.png"
+              alt="Lupa"
+              width="257"
+              height="280"
+            />
+            <input
+              class="buscador__formulario--input"
+              type="search"
+              name="buscador"
+              placeholder="Buscar..."
+            />
+          </label>
+        </form>
+      </nav>
     </header>
     <main>
-        <section class = "introduccion-splatoon"> <!--SECTION: introducción de la saga-->
-            <h1 class = "introduccion-splatoon__titulo">Splatoon - La saga que revolucionó la tinta</h1>
-            <figure>
-                <img class = "introduccion-splatoon__imagen" src="../assets/imgs/nintendo-mania-splatoon.png" alt="Logo NintendoManía Splatoon" width="2816" height="1536">
-                <figcaption class = "introduccion-splatoon__subtitulo">¡Prepárate para sumergirte en tinta!</figcaption>
-            </figure>
-            <p class = "introduccion-splatoon__descripcion">Splatoon no solo revolucionó los shooters con su estilo colorido y frenético, también 
-                construyó un universo lleno de historia, secretos y evolución a lo largo de varias generaciones de consolas Nintendo.</p>  
-        </section>
-        <h2 class = "timeline__titulo">Desarrollo de la saga a lo largo del tiempo</h2> 
-        <section id = "timeline">
-            <article class = "timeline-splatoon">
-                <h3 class = "timeline-splatoon__titulo">Splatoon (2015)</h3>
-                <figure class = "timeline-splatoon__figura">
-                    <img class = "timeline-splatoon__imagen" src="../assets/imgs/splatoon1_portada.png" alt="Carátula Splatoon" width="800" height="1143">
-                    <figcaption>El origen: el primer combate territorial.</figcaption>
-                </figure>
-            </article>
-            <article class = "timeline-octoexpansion">
-                <h3 class = "timeline-octoexpansion__titulo">Octo Expansión (2018)</h3>
-                <figure class = "timeline-octoexpansion__figura">
-                    <img class = "timeline-octoexpansion__imagen" src="../assets/imgs/octoexpansion_portada.jpg" alt="Carátula Octo Expansión" width="1004" height="1453">
-                    <figcaption>Una campaña oscura que expandió el lore de los Octarianos. </figcaption>
-                </figure>
-            </article>
-            <article class = "timeline-sideorder"> 
-                <h3 class = "timeline-sideorder__titulo">Side Order (2024)</h3> 
-                <figure class = "timeline-sideorder__figura">
-                    <img class = "timeline-sideorder__imagen" src="../assets/imgs/side_order.jpg" alt="Carátula Side Order" width="640" height="795"> 
-                    <figcaption>Una campaña donde Agente 8 lucha por devolver el color a Cromópolis Plaza.</figcaption>
-                </figure> 
-            </article>
-                <img class = "timeline__imagen" src="../assets/imgs/splatoon_timeline.png" alt="Línea del Tiempo" width="1920" height="773">
-            <article class = "timeline-splatoon2">
-                <h3 class = "timeline-splatoon2__titulo">Splatoon 2 (2017)</h3>
-                <figure class = "timeline-splatoon2__figura">
-                    <img class = "timeline-splatoon2__imagen" src="../assets/imgs/splatoon2_portada.jpg" alt="Carátula Splatoon 2" width="1581" height="2560">
-                    <figcaption>La secuela que consolidó la saga en Nintendo Switch.</figcaption>
-                </figure>
-            </article>
-            <article class = "timeline-splatoon3">
-                <h3 class = "timeline-splatoon3__titulo">Splatoon 3 (2022)</h3>
-                <figure class = "timeline-splatoon3__figura">
-                    <img class = "timeline-splatoon3__imagen" src="../assets/imgs/splatoon3_portada.jpg" alt="Carátula Splatoon 3" width="618" height="1000">
-                    <figcaption>Consolidación de la fórmula con nuevos movimientos y armas especiales. </figcaption>
-                </figure>
-            </article>
-            <article class = "timeline-raiders">
-                <h3 class = "timeline-raiders__titulo">Splatoon Raiders</h3>
-                <figure class = "timeline-raiders__figura">
-                    <img class = "timeline-raiders__imagen" src="../assets/imgs/splatoonraiders_portada.jpg" alt="Carátula Splatoon Raiders" width="1080" height="1600">
-                    <figcaption>Una nueva aventura llena de desafíos y sorpresas que expandirá el universo Splatoon.</figcaption>
-                </figure>
-            </article>
-        </section> 
-        <section id="cronologia-splatoon"> <!-- SECTION: CRONOLOGÍA DETALLADA -->
-            <h2 class = "cronologia-splatoon__titulo">Cronología</h2>
-            <article class = "cronologia-splatoon1">
-                <h3 class = "cronologia-splatoon1__titulo">2015: Splatoon</h3>
-                <img class = "cronologia-splatoon1__imagen" src="../assets/imgs/splatoon1_cronologia.png" alt="Batalla territorial" width="3796" height="2135">
-                <p class = "cronologia-splatoon1__descripcion">
-                    Splatoon nació dentro de Nintendo como el intento deliberado de crear una franquicia totalmente nueva, distinta de Mario o Zelda, y que ofreciera una experiencia multijugador competitiva en la que la acción principal no fuera matar sino reclamar territorio pintando con tinta.
-                    Esa idea de buscar algo original y jugar con la pintura como mecánica central la impulsó el equipo liderado por Hisashi Nogami junto a desarrolladores clave.
-                        
-                        Asimismo, cabe recalcar un detalle concreto sobre el concepto de “pintar el suelo” surgió cuando un programador estaba experimentando con un sistema de dibujo de texturas y pensó que, si en vez de sombras se permitiera repintar superficies con color, podría convertirse en una forma novedosa de jugar.
-                </p>
-                <h4>Ideas novedosas que trajo Splatoon</h4>
-                <ul class = "cronologia-splatoon__lista">
-                    <li class = "cronologia-splatoon__ideas">Mecánica innovadora: pintar el terreno para conquistar zonas, no acumular bajas.</li>
-                    <li class = "cronologia-splatoon__ideas">Modo principal Turf War (Guerra Territorial) en batallas 4 vs 4.</li>
-                    <li class = "cronologia-splatoon__ideas">Armas originales como los rodillos, pistolas de tinta y lanzadores especiales.</li>
-                    <li class = "cronologia-splatoon__ideas">Campaña individual donde el Agente 3 combate al ejército Octariano.</li>
-                    <li class = "cronologia-splatoon__ideas">Primeros Splatfests, eventos en línea que enfrentan a jugadores según su equipo favorito.</li>          
-                </ul>
-            </article>
-            <article class = "cronologia-splatoon2">
-                <h3 class = "cronologia-splatoon2__titulo"> 2017: Splatoon 2</h3>
-                <img class = "cronologia-splatoon2__imagen" src="../assets/imgs/splatoon2_cronologia.jpg" alt="Grupo de 4 Inklings preparados para empezar una batalla territorial." width="1920" height="1080">
-                <p class = "cronologia-splatoon2__descripcion">Splatoon 2, desarrollado por Nintendo y producido por Hisashi Nogami, es la secuela directa del exitoso Splatoon de Wii U.
-                    Lanzado para Nintendo Switch en 2017, su objetivo fue llevar la acción de tinta al nuevo hardware y consolidar la saga como una de las grandes franquicias modernas de Nintendo.
-                    El juego mantiene la fórmula original de pintar territorio en batallas 4 vs 4 pero introduce mejoras, más modos y una estética renovada.</p>
-                    <h4>Ideas novedosas del juego</h4>
-                    <ul class = "cronologia-splatoon__lista">                                                                                                                                                                                                                        
-                        <li class = "cronologia-splatoon__ideas">Batallas territoriales más fluidas con nuevos escenarios, armas y estilos de tinta.</li>
-                        <li class = "cronologia-splatoon__ideas">Novedoso modo cooperativo Salmon Run, donde los jugadores recolectan huevos dorados enfrentando hordas de enemigos.</li>
-                        <li class = "cronologia-splatoon__ideas">Introducción de nuevos tipos de armas, como los dualies, que permiten rodar y disparar a la vez.</li>
-                        <li class = "cronologia-splatoon__ideas">Modo historia renovado con el Agente 4, enfrentándose al regreso del malvado DJ Octavio.</li>
-                    </ul>
-            </article>
-            <article class = "cronologia-octoexpansion">
-                <h3 class = "cronologia-octoexpansion__titulo">2018: Octo Expansion (DLC)</h3>
-                <img class = "cronologia-octoexpansion__imagen" src="../assets/imgs/octoexpansion_cronologia.jpg" alt="Imagen de la Agente 7 en la Octo Expansión." width="1920" height="1080">
-                <p class = "cronologia-octoexpansion__descripcion">La Octo Expansion es la gran expansión de pago de Splatoon 2, creada por Nintendo bajo la supervisión de Hisashi Nogami. Su propósito fue ampliar el universo del juego y ofrecer un desafío más profundo para los jugadores experimentados.
-                    Por primera vez, los jugadores pueden ponerse en la piel de un Octoling, un personaje del bando enemigo, y descubrir su historia en un ambiente mucho más oscuro y misterioso.</p>
-                <h3>Novedades esenciales</h3>
-                <ul class = "cronologia-splatoon__lista">
-                    <li class = "cronologia-splatoon__ideas">Nuevo protagonista: el Agente 8, un Octoling sin recuerdos que debe escapar del metro subterráneo.</li>
-                    <li class = "cronologia-splatoon__ideas">Más de 80 niveles únicos con retos técnicos, armas y condiciones variadas.</li>
-                    <li class = "cronologia-splatoon__ideas">Historia más profunda y narrativa, con temas de identidad y superación.</li>
-                    <li class = "cronologia-splatoon__ideas">Mantuvo la esencia de Splatoon pero con un tono más serio y una ambientación cyberpunk.</li>
-                </ul>
-            </article>
-            <article class = "cronologia-splatoon3">
-                <h3 class = "cronologia-splatoon3__titulo"> 2022: Splatoon 3</h3>
-                <img class = "cronologia-splatoon3__imagen" src="../assets/imgs/splatoon3_cronologia.jpg" alt="Imagen promocional de Inklings y Octolings de Splatoon 3." width="1920" height="1080">
-                <p class = "cronologia-splatoon3__descripcion">Splatoon 3, desarrollado por Nintendo y producido nuevamente por Hisashi Nogami, es la tercera entrega de la exitosa saga de acción y pintura de Nintendo. 
-                    Lanzado en 2022 para Nintendo Switch, lleva el universo de Splatoon a un nuevo nivel, con más personalización, modos de juego y una historia más elaborada.
-                    Ambientado en Tintelia, una ciudad inspirada en el estilo del desierto y la cultura urbana postapocalíptica, el juego muestra una sociedad donde inklings y octolings conviven en armonía tras los eventos de Splatoon 2.</p>
-                    <h4>Novedades esenciales</h4>
-                    <ul class = "cronologia-splatoon__lista">
-                        <li class = "cronologia-splatoon__ideas">Sistema de personalización ampliado: vestimenta, tarjetas de jugador, decoraciones y más.</li>
-                        <li class = "cronologia-splatoon__ideas">Nuevas armas, como el Arco Tri-stringer y el Cangrejobot, además de la vuelta de las favoritas de entregas anteriores.</li>
-                        <li class = "cronologia-splatoon__ideas">Movimiento mejorado con nuevas habilidades como el salto calamar y el salto propulsor.</li>
-                        <li class = "cronologia-splatoon__ideas">Nueva región: Tintelia, con entornos más abiertos y explorables.</li>
-                    </ul>
-            </article>
-            <article class = "cronologia-sideorder">
-                <h3 class = "cronologia-sideorder__titulo">2024: Side Order (DLC)</h3>
-                <img class = "cronologia-sideorder__imagen" src="../assets/imgs/side_order_portada.avif" alt="Imagen promocional de la Agente 8 en el mundo descolorido de la Side Order." width="1200" height="675">
-                <p class = "cronologia-sideorder__descripcion">Side Order es la segunda expansión de pago de Splatoon 3, lanzada como parte del Pase de Expansión. Fue desarrollada por Nintendo con el objetivo de profundizar en la narrativa del juego y ofrecer un nuevo modo de juego roguelike con elementos de personalización.
-                    La expansión se centra en una experiencia para un solo jugador, llevando a los Inklings y Octolings a la misteriosa Cúpula del Orden, un mundo descolorido y distorsionado donde deben luchar para restaurar el color y la vida.
-                    Los jugadores asumen el papel de la Agente 8, regresando de la Octo Expansion, junto a Perla, ahora en forma de dron, para escalar la torre y enfrentarse a desafíos cada vez mayores.
-                </p>
-                <h4>Novedades destacadas de Side Order</h4>
-                <ul class = "cronologia-splatoon__lista">
-                    <li class = "cronologia-splatoon__ideas">Protagonista principal: la Agente 8, explorando un mundo post-apocalíptico monocromático.</li>
-                    <li class = "cronologia-splatoon__ideas">Más de 30 niveles procedurales con objetivos variados, que ofrecen alta rejugabilidad.</li>
-                    <li class = "cronologia-splatoon__ideas">Sistema de chips de color para personalizar habilidades y estadísticas de cada partida.</li>
-                    <li class = "cronologia-splatoon__ideas">Historia con un tono más oscuro y filosófico, explorando los conceptos de orden y caos.</li>
-                </ul>
-            </article>
-            <article class = "cronologia-raiders">
-                <h3 class = "cronologia-raiders__titulo">2026: Splatoon Raiders</h3>
-                <figure>
-                    <img class = "cronologia-raiders__imagen" src="../assets/imgs/Splatoon_raiders.webp" alt="Splatoon Raiders imagen tráiler" width="1930" height="1080">
-                    <figcaption class = "cronologia-raiders__descripcion">Splatoon Raiders es el primer spin-off confirmado de la saga Splatoon, anunciado por Nintendo</figcaption>
-                </figure>
-                <h4>Lo que se sabe hasta ahora</h4>
-                <ul class = "cronologia-splatoon__lista">
-                    <li class = "cronologia-splatoon__ideas">Será exclusivo para Nintendo Switch 2, y aunque no haya fecha de lanzamiento confirmada aún, algunos rumores apuntan
-                         a 2025 o principios de 2026, pero todavía no es seguro</li>
-                    <li class = "cronologia-splatoon__ideas">La ambientación será en las Islas Espiralita, un archipiélago misterioso, en donde el jugador interpretará a un mecánico con un pasado misterioso, junto con miembros del clan Surimi</li>
-                    <li class = "cronologia-splatoon__ideas">Se aleja del enfoque competitivo multijugador ya que se centra exclusivamente en pintar territorio frente a frente, es decir, 
-                        tiende hacia una experiencia de aventura y de exploración con mayor componente narrativo junto con gráficos y rendimiento mejorados aprovechando el hardware de Switch 2</li>
-                </ul>
-            </article>            
-        </section>
-        <section id="armas-splatoon">  <!-- SECTION: TIPOS DE ARMAS -->
-            <h2 class = "armas-splatoon__titulo">Tipos de Armas Principales en Splatoon</h2>
-            <p class = "armas-splatoon__descripcion">La jugabilidad única de Splatoon se basa en la amplia variedad de armas que usan tinta para pintar el escenario y derrotar a los rivales. Cada tipo de arma ofrece un estilo de juego completamente diferente.</p>
-            <article class = "armas-lanzatintas">
-                <h3 class = "armas-lanzatintas__titulo">Lanzatintas</h3>
-                <figure class = "armas-lanzatintas__figura">
-                    <img class = "armas-lanzatintas__figura--imagen" src="../assets/imgs/lanzatintas.jpg" alt="Lanzatintas arma" width="256" height="256">
-                    <figcaption class = "armas-lanzatintas__figura--descripcion">El arma estándar y más equilibrada, ideal para principiantes y juego ofensivo.</figcaption>
-                </figure>
-                <p class = "armas-lanzatintas__descripcion">Los lanzatintas son la categoría de arma más común y versátil. Disparan tinta de forma rápida y continua, equilibrando el poder de pintado con la capacidad de combate directo. Son perfectos para la línea de frente y para mantener el control territorial.</p>
-                <h4 class = "armas-lanzatintas__subtitulo">Subcategorías Populares:</h4>
-                <ul class = "armas-lanzatintas__lista">
-                    <li class = "armas-lanzatintas__lista--arma">N-ZAP
-                        <figure>
-                            <img class = "armas-lanzatintas__lista--imagen" src="../assets/imgs/nzap89.jpg" alt="Imagen de una N-ZAP 89" width="300" height="169">
-                            <figcaption class = "armas-lanzatintas__lista--descripcion">El arma de equilibrio perfecto.</figcaption>
-                        </figure> 
-                    </li>
-                    <li class = "armas-lanzatintas__lista--arma"> Aerógrafo
-                        <figure>
-                            <img class = "armas-lanzatintas__lista--imagen" src="../assets/imgs/aerografo_pro.jpg" alt="Imagen de un aerógrafo pro" width="650" height="366">
-                            <figcaption class = "armas-lanzatintas__lista--descripcion">Mayor cadencia de fuego, excelente para pintar rápido, pero menos alcance.</figcaption>
-                        </figure>
-                    </li>
-                    <li class = "armas-lanzatintas__lista--arma">Lanzatintas Plus
-                        <figure>
-                            <img class = "armas-lanzatintas__lista--imagen" src="../assets/imgs/lanzatintas_plus.jpg" alt="Imagen de un lanzatintas plus" width="1200" height="675">
-                            <figcaption class = "armas-lanzatintas__lista--descripcion">Versátil y equilibrado, ofrece buen alcance y potencia en la batalla.</figcaption>
-                        </figure>
-                    </li>
-                </ul>
-            </article>
-            <article class="armas-rodillos">
-                <h3 class="armas-rodillos__titulo">Rodillos, Pinceles y Brochas</h3>
-                <figure class="armas-rodillos__figura">
-                    <img class="armas-rodillos__figura--imagen" src="../assets/imgs/rodillo.webp" alt="Inkling haciendo rodar un Rodillo por el suelo." width="1024" height="512">
-                    <figcaption class="armas-rodillos__figura--descripcion">Armas de corto alcance, ideales para pintar grandes áreas y ataques sorpresa cuerpo a cuerpo.</figcaption>
-                </figure>
-                <p class="armas-rodillos__descripcion">Los Rodillos permiten cubrir vastas franjas de terreno con tinta al rodarlos. También pueden usarse para salpicar tinta a distancia. Los Pinceles son una variante más rápida y ligera, enfocada en la movilidad y en emboscadas directas gracias a su velocidad de carrera.</p>
-                <h4 class="armas-rodillos__subtitulo">Subcategorías populares:</h4>
-                <ul class="armas-rodillos__lista">
-                    <li class="armas-rodillos__lista--arma">Rodillo:
-                        <figure class="armas-rodillos__lista--figura">
-                            <img class="armas-rodillos__lista--imagen" src="../assets/imgs/inkling-rodillo.jpg" alt="Inkling empuñando un rodillo" width="360" height="203">
-                            <figcaption class="armas-rodillos__lista--descripcion">Crea autopistas de tinta para el equipo y elimina enemigos con un golpe directo.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="armas-rodillos__lista--arma">Pincel:
-                        <figure class="armas-rodillos__lista--figura">
-                            <img class="armas-rodillos__lista--imagen" src="../assets/imgs/pincel.webp" alt="Inkling utilizando el pincel para desplazarse" width="3840" height="2160">
-                            <figcaption class="armas-rodillos__lista--descripcion">Prioriza la movilidad y el flanqueo rápido de los rivales.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="armas-rodillos__lista--arma">Brocha:
-                        <figure class="armas-rodillos__lista--figura">
-                            <img class="armas-rodillos__lista--imagen" src="../assets/imgs/brocha.jpg" alt="Imagen de una brocha" width="1200" height="675">
-                            <figcaption class="armas-rodillos__lista--descripcion">Es un híbrido entre el pincel y el rodillo, el cual aporta gran versatilidad.</figcaption>
-                        </figure>
-                    </li>
-                </ul>
-            </article>
-            <article class="armas-cargatintas">
-                <h3 class="armas-cargatintas__titulo">Cargatintas</h3>
-                <figure class="armas-cargatintas__figura">
-                    <img class="armas-cargatintas__figura--imagen" src="../assets/imgs/cargatintas.webp" alt="Inkling apuntando a la distancia con un Cargatintas." width="1200" height="1200">
-                    <figcaption class="armas-cargatintas__figura--descripcion">Armas de precisión que disparan un chorro de tinta potente tras un periodo de carga.</figcaption>
-                </figure>
-                <p class="armas-cargatintas__descripcion">Los Cargatintas son el equivalente a los rifles de francotirador. Requieren que el jugador cargue el disparo para alcanzar su máximo alcance y potencia. Son esenciales para el control de mapa a larga distancia y para eliminar a enemigos que se acercan a puntos estratégicos.</p>
-                <h4 class="armas-cargatintas__subtitulo">Subcategorías populares:</h4>
-                <ul class="armas-cargatintas__lista">
-                    <li class="armas-cargatintas__lista--arma">Cargatintas básico:
-                        <figure class="armas-cargatintas__lista--figura">
-                            <img class="armas-cargatintas__lista--imagen" src="../assets/imgs/cargatintas.jpg" alt="Imagen cargatintas básico" width="1280" height="720">
-                            <figcaption class="armas-cargatintas__lista--descripcion">Ofrece un alcance equilibrado y buena potencia de disparo, ideal para aprender el rol de francotirador.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="armas-cargatintas__lista--arma">Tubofusil:
-                        <figure class="armas-cargatintas__lista--figura">
-                            <img class="armas-cargatintas__lista--imagen" src="../assets/imgs/tubofusil.jpg" alt="Imagen tubofusil" width="1920" height="1080">
-                            <figcaption class="armas-cargatintas__lista--descripcion">Permite cargar varios disparos seguidos, manteniendo la presión sobre los rivales mientras te reposicionas.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="armas-cargatintas__lista--arma">Entintador 4K:
-                        <figure class="armas-cargatintas__lista--figura">
-                            <img class="armas-cargatintas__lista--imagen" src="../assets/imgs/entintador4k.jpg" alt="Inkling utilizando un entintador 4K" width="1200" height="675">
-                            <figcaption class="armas-cargatintas__lista--descripcion">Destaca por su alcance extremo y enorme daño, a cambio de una menor movilidad y tiempo de carga más exigente.</figcaption>
-                        </figure>
-                    </li>
-                </ul>
-            </article>
-            <article class="armas-derramatic">
-                <h3 class="armas-derramatic__titulo">Derramatic</h3>
-                <figure class="armas-derramatic__figura">
-                    <img class="armas-derramatic__figura--imagen" src="../assets/imgs/derramatic_centrífugo.webp" alt="Imagen de un inkling con un derramatic centrífugo" width="1015" height="573">
-                    <figcaption class="armas-derramatic__figura--descripcion">Cubos o baldes que lanzan un gran volumen de tinta por encima de obstáculos.</figcaption>
-                </figure>
-                <p class="armas-derramatic__descripcion">El Derramatic permite lanzar un cubo de tinta en una trayectoria curva, lo que lo hace perfecto para atacar a enemigos que se esconden detrás de barreras o desniveles. Ofrece un alto poder de pintado y un gran daño, pero tiene una cadencia de fuego lenta y requiere buena puntería espacial.</p>
-                <h4 class="armas-derramatic__subtitulo">Subcategorías populares:</h4>
-                <ul class="armas-derramatic__lista">
-                    <li class="armas-derramatic__lista--arma">Derramatic triple:
-                        <figure class="armas-derramatic__lista--figura">
-                            <img class="armas-derramatic__lista--imagen" src="../assets/imgs/derramatic-triple.jpg" alt="Imagen de un derramatic triple" width="1200" height="675">
-                            <figcaption class="armas-derramatic__lista--descripcion">Permite lanzar varios chorros de tinta consecutivos, cubriendo más área y manteniendo la presión sobre el equipo rival.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="armas-derramatic__lista--arma">Derramatic centrífugo:
-                        <figure class="armas-derramatic__lista--figura">
-                            <img class="armas-derramatic__lista--imagen" src="../assets/imgs/derramatic-centrifugo.jpg" alt="Imagen de un derramatic centrífugo" width="1200" height="675">
-                            <figcaption class="armas-derramatic__lista--descripcion">Dispersa la tinta en un área más amplia, manteniendo un daño muy alto y gran utilidad en combate.</figcaption>
-                        </figure>
-                    </li>
-                    <li class="armas-derramatic__lista--arma">Derramatic baño:
-                        <figure class="armas-derramatic__lista--figura">
-                            <img class="armas-derramatic__lista--imagen" src="../assets/imgs/derramatic-baño.avif" alt="Imagen de un derramatic baño" width="825" height="413">
-                            <figcaption class="armas-derramatic__lista--descripcion">Variante especializada que ofrece buena presión constante y capacidad para pintar mientras mantiene a raya a los rivales.</figcaption>
-                        </figure>
-                    </li>
-                </ul>
-            </article>
-        </section>
-        <section id="idols-splatoon">
-            <h2 class="idols-splatoon__titulo">Las Idols de Cromópolis y Tintelia</h2>
-            <article class="idols-splatoon__calamarcinas">
-                <h3 class="idols-splatoon__calamarcinas--titulo">Las Calamarciñas — Splatoon</h3>
-                <img class="idols-splatoon__calamarcinas--imagen" src="../assets/imgs/calamarciñas.webp" alt="Mar y Tina, las Calamarciñas, cantando en el escenario." width="1200" height="675">
-                <p class="idols-splatoon__calamarcinas--descripcion">Mar y Tina son primas y el primer dúo de Idols en ascender a la fama. Presentaban las noticias y lideraban los primeros Splatfests, dividiendo a la comunidad en temas de debate.</p>
-            </article>
-            <article class="idols-splatoon__cefalopop">
-                <h3 class="idols-splatoon__cefalopop--titulo">Cefalopop — Splatoon 2</h3>
-                <img class="idols-splatoon__cefalopop--imagen" src="../assets/imgs/cefalopop.jpg" alt="Perla y Marina, el dúo Cefalopop, con un estilo urbano." width="833" height="474">
-                <p class="idols-splatoon__cefalopop--descripcion">Cefalopop introdujo un cambio dinámico en el casting: Perla (Inkling) y Marina (Octoling), reflejando la integración de los Octarianos a la sociedad. Su estilo es más urbano, cercano al pop y al rap.</p>
-            </article>
-            <article class="idols-splatoon__surimi">
-                <h3 class="idols-splatoon__surimi--titulo">Surimi — Splatoon 3</h3>
-                <img class="idols-splatoon__surimi--imagen" src="../assets/imgs/surimi.jpg" alt="Megan, Angie y Roy de Surimi." width="1780" height="1000">
-                <p class="idols-splatoon__surimi--descripcion">Surimi rompió el molde al ser el primer trío de Idols, introduciendo a Roy junto a Megan y Angie. Ambientados en la nueva región desértica, Tintelia, su estética se basa en la cultura urbana y el desierto.</p>
-            </article>
-        </section>
-        <section id="curiosidades-splatoon">
-            <h2 class="curiosidades-splatoon__titulo">Easter Eggs y Curiosidades</h2>
-            <article class="curiosidades-splatoon__articulo">
-                <h3 class="curiosidades-splatoon__articulo--titulo">Concepción y Desarrollo del Juego</h3>
-                <figure class="curiosidades-splatoon__articulo--figura">
-                    <img class="curiosidades-splatoon__articulo--imagen" src="../assets/imgs/conejos_inkling.jpeg" alt="Concepto inicial de Splatoon con personajes conejos en lugar de Inklings." width="680" height="457">
-                    <figcaption class="curiosidades-splatoon__articulo--descripcion">Los Inklings se plantearon originalmente como conejos. Esto se debía a que su color blanco facilitaba ver si habían sido manchados de pintura y sus orejas largas permitirían rastrear fácilmente la dirección de los personajes</figcaption>
-                </figure>
-                <figure class="curiosidades-splatoon__articulo--figura">
-                    <img class="curiosidades-splatoon__articulo--imagen" src="../assets/imgs/calamares_pulpos.jpeg" alt="Dibujo de calamar y pulpo Splatoon" width="297" height="170">
-                    <figcaption class="curiosidades-splatoon__articulo--descripcion">Una vez descartados los conejos, se eligieron calamares en lugar de pulpos porque la forma de flecha de la cabeza de los calamares ayuda a los jugadores a saber a qué dirección miran sus oponentes, algo más difícil con los pulpos</figcaption>
-                </figure>
-            </article>
-            <article class="curiosidades-splatoon__articulo">
-                <h3 class="curiosidades-splatoon__articulo--titulo">Lore y Referencias Ocultas</h3>
-                <figure class="curiosidades-splatoon__articulo--figura">
-                    <img class="curiosidades-splatoon__articulo--imagen" src="../assets/imgs/splatoon_underground.webp" alt="Diseño de arte conceptual de Splatoon con temática underground." width="640" height="375">
-                    <figcaption class="curiosidades-splatoon__articulo--descripcion">La elección del diseño de manchar todo de tinta se relaciona con el vandalismo, lo que encaja con la mezcla de estética underground de los 80 y 90 y el entorno post-apocalíptico</figcaption>
-                </figure>
-                <figure class="curiosidades-splatoon__articulo--figura">
-                    <img class="curiosidades-splatoon__articulo--imagen" src="../assets/imgs/octarianos.jpeg" alt="Imagen de octarianos en el modo historia de Splatoon." width="267" height="189">
-                    <figcaption class="curiosidades-splatoon__articulo--descripcion">Después de derrotar al jefe final, si te quedas en la sala, se escuchan extraños ruidos y gritos que, según la teoría más establecida, son la civilización Octariana en pánico por haberles quitado los siluros eléctricos.</figcaption>
-                </figure>
-            </article>
-            <article class="curiosidades-splatoon__articulo">
-                <h3 class="curiosidades-splatoon__articulo--titulo">Personajes y Referencias a la Cultura Pop</h3>
-                <figure class="curiosidades-splatoon__articulo--figura">
-                    <img class="curiosidades-splatoon__articulo--calamarcinas" src="../assets/imgs/calamarciñas.png" alt="Imagen de las Calamarciñas" width="1200" height="1235">
-                    <figcaption class="curiosidades-splatoon__articulo--descripcion">En el juego se revela que Mar y Tina (las Calamarciñas) en realidad son primas, a pesar de que en inglés el nombre se traduce como "Hermanas Calamar" (Squid Sisters), lo que indica que el nombre es una fachada</figcaption>                
-                </figure>
-                <figure class="curiosidades-splatoon__articulo--figura">
-                    <img class="curiosidades-splatoon__articulo--imagen" src="../assets/imgs/notoriousbig.jpg" alt="Imagen del rapero Notorious B.I.G." width="599" height="705">   
-                    <figcaption class="curiosidades-splatoon__articulo--descripcion">La estética de Céfalo Pop (Perla y Marina) en la Octo Expansion hace referencia a dos raperos: la corona y la bandana son referencias a Notorious B.I.G. y Tupac Shakur, respectivamente.</figcaption>
-                </figure>
-            </article>
-        </section>
-        <aside id="imagenes-destacadas">
-            <h3 class = "imagenes-destacadas__titulo">Imágenes destacadas</h3>
-            <img class = "imagenes-destacadas__imagen" src="../assets/imgs/artwork-squid-vs-octopus.png" alt="Arte promocional de Inkling y un Octoling en un Splatfest." width="913" height="616">
-            <img class = "imagenes-destacadas__imagen" src="../assets/imgs/tintazuca.webp" alt="Diseño de un arma especial, el Rayo Tintazuca." width="1280" height="720">
-            <img class = "imagenes-destacadas__imagen" src="../assets/imgs/lobbysplatoon3.png" alt="Captura de pantalla del Lobby de Splatoon 3." width="780" height="432">
-            <img class = "imagenes-destacadas__imagen" src="../assets/imgs/jibion_octoling.jpg" alt="Agente 8 con el capitán Jibión en la Octo Expansión." width="1244" height="700">
-        </aside>
+      <section class="introduccion-splatoon">
+        <!--SECTION: introducción de la saga-->
+        <h1 class="introduccion-splatoon__titulo">
+          Splatoon - La saga que revolucionó la tinta
+        </h1>
+        <figure>
+          <img
+            class="introduccion-splatoon__imagen"
+            src="../assets/imgs/nintendo-mania-splatoon.png"
+            alt="Logo NintendoManía Splatoon"
+            width="2816"
+            height="1536"
+          />
+          <figcaption class="introduccion-splatoon__subtitulo">
+            ¡Prepárate para sumergirte en tinta!
+          </figcaption>
+        </figure>
+        <p class="introduccion-splatoon__descripcion">
+          Splatoon no solo revolucionó los shooters con su estilo colorido y
+          frenético, también construyó un universo lleno de historia, secretos y
+          evolución a lo largo de varias generaciones de consolas Nintendo.
+        </p>
+      </section>
+      <h2 class="timeline__titulo">
+        Desarrollo de la saga a lo largo del tiempo
+      </h2>
+      <section id="timeline">
+        <article class="timeline-splatoon">
+          <h3 class="timeline-splatoon__titulo">Splatoon (2015)</h3>
+          <figure class="timeline-splatoon__figura">
+            <img
+              class="timeline-splatoon__imagen"
+              src="../assets/imgs/splatoon1_portada.png"
+              alt="Carátula Splatoon"
+              width="800"
+              height="1143"
+            />
+            <figcaption>El origen: el primer combate territorial.</figcaption>
+          </figure>
+        </article>
+        <article class="timeline-octoexpansion">
+          <h3 class="timeline-octoexpansion__titulo">Octo Expansión (2018)</h3>
+          <figure class="timeline-octoexpansion__figura">
+            <img
+              class="timeline-octoexpansion__imagen"
+              src="../assets/imgs/octoexpansion_portada.jpg"
+              alt="Carátula Octo Expansión"
+              width="1004"
+              height="1453"
+            />
+            <figcaption>
+              Una campaña oscura que expandió el lore de los Octarianos.
+            </figcaption>
+          </figure>
+        </article>
+        <article class="timeline-sideorder">
+          <h3 class="timeline-sideorder__titulo">Side Order (2024)</h3>
+          <figure class="timeline-sideorder__figura">
+            <img
+              class="timeline-sideorder__imagen"
+              src="../assets/imgs/side_order.jpg"
+              alt="Carátula Side Order"
+              width="640"
+              height="795"
+            />
+            <figcaption>
+              Una campaña donde Agente 8 lucha por devolver el color a
+              Cromópolis Plaza.
+            </figcaption>
+          </figure>
+        </article>
+        <img
+          class="timeline__imagen"
+          src="../assets/imgs/splatoon_timeline.png"
+          alt="Línea del Tiempo"
+          width="1920"
+          height="773"
+        />
+        <article class="timeline-splatoon2">
+          <h3 class="timeline-splatoon2__titulo">Splatoon 2 (2017)</h3>
+          <figure class="timeline-splatoon2__figura">
+            <img
+              class="timeline-splatoon2__imagen"
+              src="../assets/imgs/splatoon2_portada.jpg"
+              alt="Carátula Splatoon 2"
+              width="1581"
+              height="2560"
+            />
+            <figcaption>
+              La secuela que consolidó la saga en Nintendo Switch.
+            </figcaption>
+          </figure>
+        </article>
+        <article class="timeline-splatoon3">
+          <h3 class="timeline-splatoon3__titulo">Splatoon 3 (2022)</h3>
+          <figure class="timeline-splatoon3__figura">
+            <img
+              class="timeline-splatoon3__imagen"
+              src="../assets/imgs/splatoon3_portada.jpg"
+              alt="Carátula Splatoon 3"
+              width="618"
+              height="1000"
+            />
+            <figcaption>
+              Consolidación de la fórmula con nuevos movimientos y armas
+              especiales.
+            </figcaption>
+          </figure>
+        </article>
+        <article class="timeline-raiders">
+          <h3 class="timeline-raiders__titulo">Splatoon Raiders</h3>
+          <figure class="timeline-raiders__figura">
+            <img
+              class="timeline-raiders__imagen"
+              src="../assets/imgs/splatoonraiders_portada.jpg"
+              alt="Carátula Splatoon Raiders"
+              width="1080"
+              height="1600"
+            />
+            <figcaption>
+              Una nueva aventura llena de desafíos y sorpresas que expandirá el
+              universo Splatoon.
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+      <section id="cronologia-splatoon">
+        <!-- SECTION: CRONOLOGÍA DETALLADA -->
+        <h2 class="cronologia-splatoon__titulo">Cronología</h2>
+        <article class="cronologia-splatoon1">
+          <h3 class="cronologia-splatoon1__titulo">2015: Splatoon</h3>
+          <img
+            class="cronologia-splatoon1__imagen"
+            src="../assets/imgs/splatoon1_cronologia.png"
+            alt="Batalla territorial"
+            width="3796"
+            height="2135"
+          />
+          <p class="cronologia-splatoon1__descripcion">
+            Splatoon nació dentro de Nintendo como el intento deliberado de
+            crear una franquicia totalmente nueva, distinta de Mario o Zelda, y
+            que ofreciera una experiencia multijugador competitiva en la que la
+            acción principal no fuera matar sino reclamar territorio pintando
+            con tinta. Esa idea de buscar algo original y jugar con la pintura
+            como mecánica central la impulsó el equipo liderado por Hisashi
+            Nogami junto a desarrolladores clave. Asimismo, cabe recalcar un
+            detalle concreto sobre el concepto de “pintar el suelo” surgió
+            cuando un programador estaba experimentando con un sistema de dibujo
+            de texturas y pensó que, si en vez de sombras se permitiera repintar
+            superficies con color, podría convertirse en una forma novedosa de
+            jugar.
+          </p>
+          <h4>Ideas novedosas que trajo Splatoon</h4>
+          <ul class="cronologia-splatoon__lista">
+            <li class="cronologia-splatoon__ideas">
+              Mecánica innovadora: pintar el terreno para conquistar zonas, no
+              acumular bajas.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Modo principal Turf War (Guerra Territorial) en batallas 4 vs 4.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Armas originales como los rodillos, pistolas de tinta y lanzadores
+              especiales.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Campaña individual donde el Agente 3 combate al ejército
+              Octariano.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Primeros Splatfests, eventos en línea que enfrentan a jugadores
+              según su equipo favorito.
+            </li>
+          </ul>
+        </article>
+        <article class="cronologia-splatoon2">
+          <h3 class="cronologia-splatoon2__titulo">2017: Splatoon 2</h3>
+          <img
+            class="cronologia-splatoon2__imagen"
+            src="../assets/imgs/splatoon2_cronologia.jpg"
+            alt="Grupo de 4 Inklings preparados para empezar una batalla territorial."
+            width="1920"
+            height="1080"
+          />
+          <p class="cronologia-splatoon2__descripcion">
+            Splatoon 2, desarrollado por Nintendo y producido por Hisashi
+            Nogami, es la secuela directa del exitoso Splatoon de Wii U. Lanzado
+            para Nintendo Switch en 2017, su objetivo fue llevar la acción de
+            tinta al nuevo hardware y consolidar la saga como una de las grandes
+            franquicias modernas de Nintendo. El juego mantiene la fórmula
+            original de pintar territorio en batallas 4 vs 4 pero introduce
+            mejoras, más modos y una estética renovada.
+          </p>
+          <h4>Ideas novedosas del juego</h4>
+          <ul class="cronologia-splatoon__lista">
+            <li class="cronologia-splatoon__ideas">
+              Batallas territoriales más fluidas con nuevos escenarios, armas y
+              estilos de tinta.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Novedoso modo cooperativo Salmon Run, donde los jugadores
+              recolectan huevos dorados enfrentando hordas de enemigos.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Introducción de nuevos tipos de armas, como los dualies, que
+              permiten rodar y disparar a la vez.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Modo historia renovado con el Agente 4, enfrentándose al regreso
+              del malvado DJ Octavio.
+            </li>
+          </ul>
+        </article>
+        <article class="cronologia-octoexpansion">
+          <h3 class="cronologia-octoexpansion__titulo">
+            2018: Octo Expansion (DLC)
+          </h3>
+          <img
+            class="cronologia-octoexpansion__imagen"
+            src="../assets/imgs/octoexpansion_cronologia.jpg"
+            alt="Imagen de la Agente 7 en la Octo Expansión."
+            width="1920"
+            height="1080"
+          />
+          <p class="cronologia-octoexpansion__descripcion">
+            La Octo Expansion es la gran expansión de pago de Splatoon 2, creada
+            por Nintendo bajo la supervisión de Hisashi Nogami. Su propósito fue
+            ampliar el universo del juego y ofrecer un desafío más profundo para
+            los jugadores experimentados. Por primera vez, los jugadores pueden
+            ponerse en la piel de un Octoling, un personaje del bando enemigo, y
+            descubrir su historia en un ambiente mucho más oscuro y misterioso.
+          </p>
+          <h3>Novedades esenciales</h3>
+          <ul class="cronologia-splatoon__lista">
+            <li class="cronologia-splatoon__ideas">
+              Nuevo protagonista: el Agente 8, un Octoling sin recuerdos que
+              debe escapar del metro subterráneo.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Más de 80 niveles únicos con retos técnicos, armas y condiciones
+              variadas.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Historia más profunda y narrativa, con temas de identidad y
+              superación.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Mantuvo la esencia de Splatoon pero con un tono más serio y una
+              ambientación cyberpunk.
+            </li>
+          </ul>
+        </article>
+        <article class="cronologia-splatoon3">
+          <h3 class="cronologia-splatoon3__titulo">2022: Splatoon 3</h3>
+          <img
+            class="cronologia-splatoon3__imagen"
+            src="../assets/imgs/splatoon3_cronologia.jpg"
+            alt="Imagen promocional de Inklings y Octolings de Splatoon 3."
+            width="1920"
+            height="1080"
+          />
+          <p class="cronologia-splatoon3__descripcion">
+            Splatoon 3, desarrollado por Nintendo y producido nuevamente por
+            Hisashi Nogami, es la tercera entrega de la exitosa saga de acción y
+            pintura de Nintendo. Lanzado en 2022 para Nintendo Switch, lleva el
+            universo de Splatoon a un nuevo nivel, con más personalización,
+            modos de juego y una historia más elaborada. Ambientado en Tintelia,
+            una ciudad inspirada en el estilo del desierto y la cultura urbana
+            postapocalíptica, el juego muestra una sociedad donde inklings y
+            octolings conviven en armonía tras los eventos de Splatoon 2.
+          </p>
+          <h4>Novedades esenciales</h4>
+          <ul class="cronologia-splatoon__lista">
+            <li class="cronologia-splatoon__ideas">
+              Sistema de personalización ampliado: vestimenta, tarjetas de
+              jugador, decoraciones y más.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Nuevas armas, como el Arco Tri-stringer y el Cangrejobot, además
+              de la vuelta de las favoritas de entregas anteriores.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Movimiento mejorado con nuevas habilidades como el salto calamar y
+              el salto propulsor.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Nueva región: Tintelia, con entornos más abiertos y explorables.
+            </li>
+          </ul>
+        </article>
+        <article class="cronologia-sideorder">
+          <h3 class="cronologia-sideorder__titulo">2024: Side Order (DLC)</h3>
+          <img
+            class="cronologia-sideorder__imagen"
+            src="../assets/imgs/side_order_portada.avif"
+            alt="Imagen promocional de la Agente 8 en el mundo descolorido de la Side Order."
+            width="1200"
+            height="675"
+          />
+          <p class="cronologia-sideorder__descripcion">
+            Side Order es la segunda expansión de pago de Splatoon 3, lanzada
+            como parte del Pase de Expansión. Fue desarrollada por Nintendo con
+            el objetivo de profundizar en la narrativa del juego y ofrecer un
+            nuevo modo de juego roguelike con elementos de personalización. La
+            expansión se centra en una experiencia para un solo jugador,
+            llevando a los Inklings y Octolings a la misteriosa Cúpula del
+            Orden, un mundo descolorido y distorsionado donde deben luchar para
+            restaurar el color y la vida. Los jugadores asumen el papel de la
+            Agente 8, regresando de la Octo Expansion, junto a Perla, ahora en
+            forma de dron, para escalar la torre y enfrentarse a desafíos cada
+            vez mayores.
+          </p>
+          <h4>Novedades destacadas de Side Order</h4>
+          <ul class="cronologia-splatoon__lista">
+            <li class="cronologia-splatoon__ideas">
+              Protagonista principal: la Agente 8, explorando un mundo
+              post-apocalíptico monocromático.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Más de 30 niveles procedurales con objetivos variados, que ofrecen
+              alta rejugabilidad.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Sistema de chips de color para personalizar habilidades y
+              estadísticas de cada partida.
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Historia con un tono más oscuro y filosófico, explorando los
+              conceptos de orden y caos.
+            </li>
+          </ul>
+        </article>
+        <article class="cronologia-raiders">
+          <h3 class="cronologia-raiders__titulo">2026: Splatoon Raiders</h3>
+          <figure>
+            <img
+              class="cronologia-raiders__imagen"
+              src="../assets/imgs/Splatoon_raiders.webp"
+              alt="Splatoon Raiders imagen tráiler"
+              width="1930"
+              height="1080"
+            />
+            <figcaption class="cronologia-raiders__descripcion">
+              Splatoon Raiders es el primer spin-off confirmado de la saga
+              Splatoon, anunciado por Nintendo
+            </figcaption>
+          </figure>
+          <h4>Lo que se sabe hasta ahora</h4>
+          <ul class="cronologia-splatoon__lista">
+            <li class="cronologia-splatoon__ideas">
+              Será exclusivo para Nintendo Switch 2, y aunque no haya fecha de
+              lanzamiento confirmada aún, algunos rumores apuntan a 2025 o
+              principios de 2026, pero todavía no es seguro
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              La ambientación será en las Islas Espiralita, un archipiélago
+              misterioso, en donde el jugador interpretará a un mecánico con un
+              pasado misterioso, junto con miembros del clan Surimi
+            </li>
+            <li class="cronologia-splatoon__ideas">
+              Se aleja del enfoque competitivo multijugador ya que se centra
+              exclusivamente en pintar territorio frente a frente, es decir,
+              tiende hacia una experiencia de aventura y de exploración con
+              mayor componente narrativo junto con gráficos y rendimiento
+              mejorados aprovechando el hardware de Switch 2
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section id="armas-splatoon">
+        <!-- SECTION: TIPOS DE ARMAS -->
+        <h2 class="armas-splatoon__titulo">
+          Tipos de Armas Principales en Splatoon
+        </h2>
+        <p class="armas-splatoon__descripcion">
+          La jugabilidad única de Splatoon se basa en la amplia variedad de
+          armas que usan tinta para pintar el escenario y derrotar a los
+          rivales. Cada tipo de arma ofrece un estilo de juego completamente
+          diferente.
+        </p>
+        <article class="armas-lanzatintas">
+          <h3 class="armas-lanzatintas__titulo">Lanzatintas</h3>
+          <figure class="armas-lanzatintas__figura">
+            <img
+              class="armas-lanzatintas__figura--imagen"
+              src="../assets/imgs/lanzatintas.jpg"
+              alt="Lanzatintas arma"
+              width="256"
+              height="256"
+            />
+            <figcaption class="armas-lanzatintas__figura--descripcion">
+              El arma estándar y más equilibrada, ideal para principiantes y
+              juego ofensivo.
+            </figcaption>
+          </figure>
+          <p class="armas-lanzatintas__descripcion">
+            Los lanzatintas son la categoría de arma más común y versátil.
+            Disparan tinta de forma rápida y continua, equilibrando el poder de
+            pintado con la capacidad de combate directo. Son perfectos para la
+            línea de frente y para mantener el control territorial.
+          </p>
+          <h4 class="armas-lanzatintas__subtitulo">Subcategorías Populares:</h4>
+          <ul class="armas-lanzatintas__lista">
+            <li class="armas-lanzatintas__lista--arma">
+              N-ZAP
+              <figure>
+                <img
+                  class="armas-lanzatintas__lista--imagen"
+                  src="../assets/imgs/nzap89.jpg"
+                  alt="Imagen de una N-ZAP 89"
+                  width="300"
+                  height="169"
+                />
+                <figcaption class="armas-lanzatintas__lista--descripcion">
+                  El arma de equilibrio perfecto.
+                </figcaption>
+              </figure>
+            </li>
+            <li class="armas-lanzatintas__lista--arma">
+              Aerógrafo
+              <figure>
+                <img
+                  class="armas-lanzatintas__lista--imagen"
+                  src="../assets/imgs/aerografo_pro.jpg"
+                  alt="Imagen de un aerógrafo pro"
+                  width="650"
+                  height="366"
+                />
+                <figcaption class="armas-lanzatintas__lista--descripcion">
+                  Mayor cadencia de fuego, excelente para pintar rápido, pero
+                  menos alcance.
+                </figcaption>
+              </figure>
+            </li>
+            <li class="armas-lanzatintas__lista--arma">
+              Lanzatintas Plus
+              <figure>
+                <img
+                  class="armas-lanzatintas__lista--imagen"
+                  src="../assets/imgs/lanzatintas_plus.jpg"
+                  alt="Imagen de un lanzatintas plus"
+                  width="1200"
+                  height="675"
+                />
+                <figcaption class="armas-lanzatintas__lista--descripcion">
+                  Versátil y equilibrado, ofrece buen alcance y potencia en la
+                  batalla.
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </article>
+        <article class="armas-rodillos">
+          <h3 class="armas-rodillos__titulo">Rodillos, Pinceles y Brochas</h3>
+          <figure class="armas-rodillos__figura">
+            <img
+              class="armas-rodillos__figura--imagen"
+              src="../assets/imgs/rodillo.webp"
+              alt="Inkling haciendo rodar un Rodillo por el suelo."
+              width="1024"
+              height="512"
+            />
+            <figcaption class="armas-rodillos__figura--descripcion">
+              Armas de corto alcance, ideales para pintar grandes áreas y
+              ataques sorpresa cuerpo a cuerpo.
+            </figcaption>
+          </figure>
+          <p class="armas-rodillos__descripcion">
+            Los Rodillos permiten cubrir vastas franjas de terreno con tinta al
+            rodarlos. También pueden usarse para salpicar tinta a distancia. Los
+            Pinceles son una variante más rápida y ligera, enfocada en la
+            movilidad y en emboscadas directas gracias a su velocidad de
+            carrera.
+          </p>
+          <h4 class="armas-rodillos__subtitulo">Subcategorías populares:</h4>
+          <ul class="armas-rodillos__lista">
+            <li class="armas-rodillos__lista--arma">
+              Rodillo:
+              <figure class="armas-rodillos__lista--figura">
+                <img
+                  class="armas-rodillos__lista--imagen"
+                  src="../assets/imgs/inkling-rodillo.jpg"
+                  alt="Inkling empuñando un rodillo"
+                  width="360"
+                  height="203"
+                />
+                <figcaption class="armas-rodillos__lista--descripcion">
+                  Crea autopistas de tinta para el equipo y elimina enemigos con
+                  un golpe directo.
+                </figcaption>
+              </figure>
+            </li>
+            <li class="armas-rodillos__lista--arma">
+              Pincel:
+              <figure class="armas-rodillos__lista--figura">
+                <img
+                  class="armas-rodillos__lista--imagen"
+                  src="../assets/imgs/pincel.webp"
+                  alt="Inkling utilizando el pincel para desplazarse"
+                  width="3840"
+                  height="2160"
+                />
+                <figcaption class="armas-rodillos__lista--descripcion">
+                  Prioriza la movilidad y el flanqueo rápido de los rivales.
+                </figcaption>
+              </figure>
+            </li>
+            <li class="armas-rodillos__lista--arma">
+              Brocha:
+              <figure class="armas-rodillos__lista--figura">
+                <img
+                  class="armas-rodillos__lista--imagen"
+                  src="../assets/imgs/brocha.jpg"
+                  alt="Imagen de una brocha"
+                  width="1200"
+                  height="675"
+                />
+                <figcaption class="armas-rodillos__lista--descripcion">
+                  Es un híbrido entre el pincel y el rodillo, el cual aporta
+                  gran versatilidad.
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </article>
+        <article class="armas-cargatintas">
+          <h3 class="armas-cargatintas__titulo">Cargatintas</h3>
+          <figure class="armas-cargatintas__figura">
+            <img
+              class="armas-cargatintas__figura--imagen"
+              src="../assets/imgs/cargatintas.webp"
+              alt="Inkling apuntando a la distancia con un Cargatintas."
+              width="1200"
+              height="1200"
+            />
+            <figcaption class="armas-cargatintas__figura--descripcion">
+              Armas de precisión que disparan un chorro de tinta potente tras un
+              periodo de carga.
+            </figcaption>
+          </figure>
+          <p class="armas-cargatintas__descripcion">
+            Los Cargatintas son el equivalente a los rifles de francotirador.
+            Requieren que el jugador cargue el disparo para alcanzar su máximo
+            alcance y potencia. Son esenciales para el control de mapa a larga
+            distancia y para eliminar a enemigos que se acercan a puntos
+            estratégicos.
+          </p>
+          <h4 class="armas-cargatintas__subtitulo">Subcategorías populares:</h4>
+          <ul class="armas-cargatintas__lista">
+            <li class="armas-cargatintas__lista--arma">
+              Cargatintas básico:
+              <figure class="armas-cargatintas__lista--figura">
+                <img
+                  class="armas-cargatintas__lista--imagen"
+                  src="../assets/imgs/cargatintas.jpg"
+                  alt="Imagen cargatintas básico"
+                  width="1280"
+                  height="720"
+                />
+                <figcaption class="armas-cargatintas__lista--descripcion">
+                  Ofrece un alcance equilibrado y buena potencia de disparo,
+                  ideal para aprender el rol de francotirador.
+                </figcaption>
+              </figure>
+            </li>
+            <li class="armas-cargatintas__lista--arma">
+              Tubofusil:
+              <figure class="armas-cargatintas__lista--figura">
+                <img
+                  class="armas-cargatintas__lista--imagen"
+                  src="../assets/imgs/tubofusil.jpg"
+                  alt="Imagen tubofusil"
+                  width="1920"
+                  height="1080"
+                />
+                <figcaption class="armas-cargatintas__lista--descripcion">
+                  Permite cargar varios disparos seguidos, manteniendo la
+                  presión sobre los rivales mientras te reposicionas.
+                </figcaption>
+              </figure>
+            </li>
+            <li class="armas-cargatintas__lista--arma">
+              Entintador 4K:
+              <figure class="armas-cargatintas__lista--figura">
+                <img
+                  class="armas-cargatintas__lista--imagen"
+                  src="../assets/imgs/entintador4k.jpg"
+                  alt="Inkling utilizando un entintador 4K"
+                  width="1200"
+                  height="675"
+                />
+                <figcaption class="armas-cargatintas__lista--descripcion">
+                  Destaca por su alcance extremo y enorme daño, a cambio de una
+                  menor movilidad y tiempo de carga más exigente.
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </article>
+        <article class="armas-derramatic">
+          <h3 class="armas-derramatic__titulo">Derramatic</h3>
+          <figure class="armas-derramatic__figura">
+            <img
+              class="armas-derramatic__figura--imagen"
+              src="../assets/imgs/derramatic_centrífugo.webp"
+              alt="Imagen de un inkling con un derramatic centrífugo"
+              width="1015"
+              height="573"
+            />
+            <figcaption class="armas-derramatic__figura--descripcion">
+              Cubos o baldes que lanzan un gran volumen de tinta por encima de
+              obstáculos.
+            </figcaption>
+          </figure>
+          <p class="armas-derramatic__descripcion">
+            El Derramatic permite lanzar un cubo de tinta en una trayectoria
+            curva, lo que lo hace perfecto para atacar a enemigos que se
+            esconden detrás de barreras o desniveles. Ofrece un alto poder de
+            pintado y un gran daño, pero tiene una cadencia de fuego lenta y
+            requiere buena puntería espacial.
+          </p>
+          <h4 class="armas-derramatic__subtitulo">Subcategorías populares:</h4>
+          <ul class="armas-derramatic__lista">
+            <li class="armas-derramatic__lista--arma">
+              Derramatic triple:
+              <figure class="armas-derramatic__lista--figura">
+                <img
+                  class="armas-derramatic__lista--imagen"
+                  src="../assets/imgs/derramatic-triple.jpg"
+                  alt="Imagen de un derramatic triple"
+                  width="1200"
+                  height="675"
+                />
+                <figcaption class="armas-derramatic__lista--descripcion">
+                  Permite lanzar varios chorros de tinta consecutivos, cubriendo
+                  más área y manteniendo la presión sobre el equipo rival.
+                </figcaption>
+              </figure>
+            </li>
+            <li class="armas-derramatic__lista--arma">
+              Derramatic centrífugo:
+              <figure class="armas-derramatic__lista--figura">
+                <img
+                  class="armas-derramatic__lista--imagen"
+                  src="../assets/imgs/derramatic-centrifugo.jpg"
+                  alt="Imagen de un derramatic centrífugo"
+                  width="1200"
+                  height="675"
+                />
+                <figcaption class="armas-derramatic__lista--descripcion">
+                  Dispersa la tinta en un área más amplia, manteniendo un daño
+                  muy alto y gran utilidad en combate.
+                </figcaption>
+              </figure>
+            </li>
+            <li class="armas-derramatic__lista--arma">
+              Derramatic baño:
+              <figure class="armas-derramatic__lista--figura">
+                <img
+                  class="armas-derramatic__lista--imagen"
+                  src="../assets/imgs/derramatic-baño.avif"
+                  alt="Imagen de un derramatic baño"
+                  width="825"
+                  height="413"
+                />
+                <figcaption class="armas-derramatic__lista--descripcion">
+                  Variante especializada que ofrece buena presión constante y
+                  capacidad para pintar mientras mantiene a raya a los rivales.
+                </figcaption>
+              </figure>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section id="idols-splatoon">
+        <h2 class="idols-splatoon__titulo">
+          Las Idols de Cromópolis y Tintelia
+        </h2>
+        <article class="idols-splatoon__calamarcinas">
+          <h3 class="idols-splatoon__calamarcinas--titulo">
+            Las Calamarciñas — Splatoon
+          </h3>
+          <img
+            class="idols-splatoon__calamarcinas--imagen"
+            src="../assets/imgs/calamarciñas.webp"
+            alt="Mar y Tina, las Calamarciñas, cantando en el escenario."
+            width="1200"
+            height="675"
+          />
+          <p class="idols-splatoon__calamarcinas--descripcion">
+            Mar y Tina son primas y el primer dúo de Idols en ascender a la
+            fama. Presentaban las noticias y lideraban los primeros Splatfests,
+            dividiendo a la comunidad en temas de debate.
+          </p>
+        </article>
+        <article class="idols-splatoon__cefalopop">
+          <h3 class="idols-splatoon__cefalopop--titulo">
+            Cefalopop — Splatoon 2
+          </h3>
+          <img
+            class="idols-splatoon__cefalopop--imagen"
+            src="../assets/imgs/cefalopop.jpg"
+            alt="Perla y Marina, el dúo Cefalopop, con un estilo urbano."
+            width="833"
+            height="474"
+          />
+          <p class="idols-splatoon__cefalopop--descripcion">
+            Cefalopop introdujo un cambio dinámico en el casting: Perla
+            (Inkling) y Marina (Octoling), reflejando la integración de los
+            Octarianos a la sociedad. Su estilo es más urbano, cercano al pop y
+            al rap.
+          </p>
+        </article>
+        <article class="idols-splatoon__surimi">
+          <h3 class="idols-splatoon__surimi--titulo">Surimi — Splatoon 3</h3>
+          <img
+            class="idols-splatoon__surimi--imagen"
+            src="../assets/imgs/surimi.jpg"
+            alt="Megan, Angie y Roy de Surimi."
+            width="1780"
+            height="1000"
+          />
+          <p class="idols-splatoon__surimi--descripcion">
+            Surimi rompió el molde al ser el primer trío de Idols, introduciendo
+            a Roy junto a Megan y Angie. Ambientados en la nueva región
+            desértica, Tintelia, su estética se basa en la cultura urbana y el
+            desierto.
+          </p>
+        </article>
+      </section>
+      <section id="curiosidades-splatoon">
+        <h2 class="curiosidades-splatoon__titulo">
+          Easter Eggs y Curiosidades
+        </h2>
+        <article class="curiosidades-splatoon__articulo">
+          <h3 class="curiosidades-splatoon__articulo--titulo">
+            Concepción y Desarrollo del Juego
+          </h3>
+          <figure class="curiosidades-splatoon__articulo--figura">
+            <img
+              class="curiosidades-splatoon__articulo--imagen"
+              src="../assets/imgs/conejos_inkling.jpeg"
+              alt="Concepto inicial de Splatoon con personajes conejos en lugar de Inklings."
+              width="680"
+              height="457"
+            />
+            <figcaption class="curiosidades-splatoon__articulo--descripcion">
+              Los Inklings se plantearon originalmente como conejos. Esto se
+              debía a que su color blanco facilitaba ver si habían sido
+              manchados de pintura y sus orejas largas permitirían rastrear
+              fácilmente la dirección de los personajes
+            </figcaption>
+          </figure>
+          <figure class="curiosidades-splatoon__articulo--figura">
+            <img
+              class="curiosidades-splatoon__articulo--imagen"
+              src="../assets/imgs/calamares_pulpos.jpeg"
+              alt="Dibujo de calamar y pulpo Splatoon"
+              width="297"
+              height="170"
+            />
+            <figcaption class="curiosidades-splatoon__articulo--descripcion">
+              Una vez descartados los conejos, se eligieron calamares en lugar
+              de pulpos porque la forma de flecha de la cabeza de los calamares
+              ayuda a los jugadores a saber a qué dirección miran sus oponentes,
+              algo más difícil con los pulpos
+            </figcaption>
+          </figure>
+        </article>
+        <article class="curiosidades-splatoon__articulo">
+          <h3 class="curiosidades-splatoon__articulo--titulo">
+            Lore y Referencias Ocultas
+          </h3>
+          <figure class="curiosidades-splatoon__articulo--figura">
+            <img
+              class="curiosidades-splatoon__articulo--imagen"
+              src="../assets/imgs/splatoon_underground.webp"
+              alt="Diseño de arte conceptual de Splatoon con temática underground."
+              width="640"
+              height="375"
+            />
+            <figcaption class="curiosidades-splatoon__articulo--descripcion">
+              La elección del diseño de manchar todo de tinta se relaciona con
+              el vandalismo, lo que encaja con la mezcla de estética underground
+              de los 80 y 90 y el entorno post-apocalíptico
+            </figcaption>
+          </figure>
+          <figure class="curiosidades-splatoon__articulo--figura">
+            <img
+              class="curiosidades-splatoon__articulo--imagen"
+              src="../assets/imgs/octarianos.jpeg"
+              alt="Imagen de octarianos en el modo historia de Splatoon."
+              width="267"
+              height="189"
+            />
+            <figcaption class="curiosidades-splatoon__articulo--descripcion">
+              Después de derrotar al jefe final, si te quedas en la sala, se
+              escuchan extraños ruidos y gritos que, según la teoría más
+              establecida, son la civilización Octariana en pánico por haberles
+              quitado los siluros eléctricos.
+            </figcaption>
+          </figure>
+        </article>
+        <article class="curiosidades-splatoon__articulo">
+          <h3 class="curiosidades-splatoon__articulo--titulo">
+            Personajes y Referencias a la Cultura Pop
+          </h3>
+          <figure class="curiosidades-splatoon__articulo--figura">
+            <img
+              class="curiosidades-splatoon__articulo--calamarcinas"
+              src="../assets/imgs/calamarciñas.png"
+              alt="Imagen de las Calamarciñas"
+              width="1200"
+              height="1235"
+            />
+            <figcaption class="curiosidades-splatoon__articulo--descripcion">
+              En el juego se revela que Mar y Tina (las Calamarciñas) en
+              realidad son primas, a pesar de que en inglés el nombre se traduce
+              como "Hermanas Calamar" (Squid Sisters), lo que indica que el
+              nombre es una fachada
+            </figcaption>
+          </figure>
+          <figure class="curiosidades-splatoon__articulo--figura">
+            <img
+              class="curiosidades-splatoon__articulo--imagen"
+              src="../assets/imgs/notoriousbig.jpg"
+              alt="Imagen del rapero Notorious B.I.G."
+              width="599"
+              height="705"
+            />
+            <figcaption class="curiosidades-splatoon__articulo--descripcion">
+              La estética de Céfalo Pop (Perla y Marina) en la Octo Expansion
+              hace referencia a dos raperos: la corona y la bandana son
+              referencias a Notorious B.I.G. y Tupac Shakur, respectivamente.
+            </figcaption>
+          </figure>
+        </article>
+      </section>
+      <aside id="imagenes-destacadas">
+        <h3 class="imagenes-destacadas__titulo">Imágenes destacadas</h3>
+        <img
+          class="imagenes-destacadas__imagen"
+          src="../assets/imgs/artwork-squid-vs-octopus.png"
+          alt="Arte promocional de Inkling y un Octoling en un Splatfest."
+          width="913"
+          height="616"
+        />
+        <img
+          class="imagenes-destacadas__imagen"
+          src="../assets/imgs/tintazuca.webp"
+          alt="Diseño de un arma especial, el Rayo Tintazuca."
+          width="1280"
+          height="720"
+        />
+        <img
+          class="imagenes-destacadas__imagen"
+          src="../assets/imgs/lobbysplatoon3.png"
+          alt="Captura de pantalla del Lobby de Splatoon 3."
+          width="780"
+          height="432"
+        />
+        <img
+          class="imagenes-destacadas__imagen"
+          src="../assets/imgs/jibion_octoling.jpg"
+          alt="Agente 8 con el capitán Jibión en la Octo Expansión."
+          width="1244"
+          height="700"
+        />
+      </aside>
     </main>
-    <footer class = "pie-pagina">
-        <section class ="pie-pagina__contacto">
-            <h2 class = "pie-pagina__contacto--titulo">Contacto</h2>
-            <address class = "pie-pagina__contacto--informacion"> <!-- Enlaces de contacto semántico y accesible -->
-                <ul class="pie-pagina__contacto--lista">
-                    <li><a class="pie-pagina__contacto--enlace" href="../contacto.html">Contacto</a></li>
-                    <li><a class="pie-pagina__contacto--enlace" href="mailto:nintendomania@info.es">Correo electrónico</a></li>
-                    <li><a class="pie-pagina__contacto--enlace" href="tel:123456789">Teléfono</a></li>
-                </ul>
-            </address>
-        </section>
-        <section class = "pie-pagina__info">
-            <h2 class = "pie-pagina__info--titulo">Información legal</h2>
-            <p class = "pie-pagina__info--descripcion">El contenido es fan-made y sin fines comerciales.</p>
-            <p class = "pie-pagina__info--descripcion">&copy; 2025 NintendoManía.</p>
-        </section>
-        <section class = "footer-extra">
-            <img class = "footer-extra__imagen" src="../assets/imgs/logo_principal.png" alt="Logo de NintendoManía" width="1024" height="1024">
-            <a href="#inicio" class = "footer-extra__boton"></a>
-        </section>
+    <footer class="pie-pagina">
+      <section class="pie-pagina__contacto">
+        <h2 class="pie-pagina__contacto--titulo">Contacto</h2>
+        <address class="pie-pagina__contacto--informacion">
+          <!-- Enlaces de contacto semántico y accesible -->
+          <ul class="pie-pagina__contacto--lista">
+            <li>
+              <a class="pie-pagina__contacto--enlace" href="../contacto.html"
+                >Contacto</a
+              >
+            </li>
+            <li>
+              <a
+                class="pie-pagina__contacto--enlace"
+                href="mailto:nintendomania@info.es"
+                >Correo electrónico</a
+              >
+            </li>
+            <li>
+              <a class="pie-pagina__contacto--enlace" href="tel:123456789"
+                >Teléfono</a
+              >
+            </li>
+          </ul>
+        </address>
+      </section>
+      <section class="pie-pagina__info">
+        <h2 class="pie-pagina__info--titulo">Información legal</h2>
+        <p class="pie-pagina__info--descripcion">
+          El contenido es fan-made y sin fines comerciales.
+        </p>
+        <p class="pie-pagina__info--descripcion">&copy; 2025 NintendoManía.</p>
+      </section>
+      <section class="footer-extra">
+        <img
+          class="footer-extra__imagen"
+          src="../assets/imgs/logo_principal.png"
+          alt="Logo de NintendoManía"
+          width="1024"
+          height="1024"
+        />
+        <a href="#inicio" class="footer-extra__boton"></a>
+      </section>
     </footer>
-</body>
+  </body>
 </html>

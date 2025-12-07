@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
+  <head>
     <!-- 
     =========================================================================
     NintendoManía | Comparativas de Sagas
@@ -9,305 +9,570 @@
     Proyecto trimestral - Irene Foncubierta Lobatón, 1ºDAW. 2025.
     =========================================================================
     -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>NintendoManía | Comparativas</title>
-    <meta name="description" content="Comparativa de datos, géneros y rendimiento de nuestras sagas">
-    <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="./assets/imgs/icono_pag.png">
-    <link rel="stylesheet" href ="./assets/css/styles.css">
-</head>
-<body id="inicio">
-    <header class = "cabecera"> 
-        <!-- Logotipo principal y acceso rápido al inicio -->
-        <button class="cabecera__buscador--hamburguesa" type = "button">&#9776;</button>
-        <a class = "cabecera__logo" href = "./index.html">
-            <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía" width="1024" height="1024">
-        </a>
-        <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
-            <p class="cabecera__menu--titulo">
-                <img class="cabecera__menu--imagen" src="./assets/imgs/logo_switch.svg" alt="Logo Switch" width="800" height="600">
-                Nintendo Manía
-            </p>
-            <ul class = "cabecera__menu--lista">
-                <li><a class = "cabecera__menu--enlace" href="./sagas/splatoon.html">Splatoon</a></li>
-                <li><a class = "cabecera__menu--enlace"  href="./sagas/mario.html">Mario</a></li>
-                <li><a  class = "cabecera__menu--enlace" href="./sagas/kirby.html">Kirby</a></li>
-                <li><a  class = "cabecera__menu--enlace" href="./contacto.html">Contacto</a></li>
-                <li><a  class = "cabecera__menu--enlace" href="./about.html">About</a></li>
-            </ul>
-        </nav>
-        <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
-            <form name="buscador">
-                <label class = "buscador__formulario">
-                    <img  class = "buscador__formulario--imagen" src="./assets/imgs/lupa.png" alt="Lupa" width="257" height="280">
-                    <input class = "buscador__formulario--input" type="search" name="buscador" placeholder="Buscar...">
-                </label>
-            </form>
-        </nav> 
+    <meta
+      name="description"
+      content="Comparativa de datos, géneros y rendimiento de nuestras sagas"
+    />
+    <meta
+      name="keywords"
+      content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/imgs/icono_pag.png" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body id="inicio">
+    <header class="cabecera">
+      <!-- Logotipo principal y acceso rápido al inicio -->
+      <button class="cabecera__buscador--hamburguesa" type="button">
+        &#9776;
+      </button>
+      <a class="cabecera__logo" href="./index.html">
+        <img
+          class="cabecera__logo--imagen"
+          src="./assets/imgs/logo_principal.png"
+          alt="Ir al inicio de NintendoManía"
+          width="1024"
+          height="1024"
+        />
+      </a>
+      <nav class="cabecera__menu">
+        <!-- Menú principal de navegación entre sagas y páginas destacado -->
+        <p class="cabecera__menu--titulo">
+          <img
+            class="cabecera__menu--imagen"
+            src="./assets/imgs/logo_switch.svg"
+            alt="Logo Switch"
+            width="800"
+            height="600"
+          />
+          Nintendo Manía
+        </p>
+        <ul class="cabecera__menu--lista">
+          <li>
+            <a class="cabecera__menu--enlace" href="./sagas/splatoon.html"
+              >Splatoon</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./sagas/mario.html"
+              >Mario</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./sagas/kirby.html"
+              >Kirby</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./contacto.html"
+              >Contacto</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./about.html">About</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="cabecera__buscador">
+        <!-- Formulario de búsqueda semántico -->
+        <form name="buscador">
+          <label class="buscador__formulario">
+            <img
+              class="buscador__formulario--imagen"
+              src="./assets/imgs/lupa.png"
+              alt="Lupa"
+              width="257"
+              height="280"
+            />
+            <input
+              class="buscador__formulario--input"
+              type="search"
+              name="buscador"
+              placeholder="Buscar..."
+            />
+          </label>
+        </form>
+      </nav>
     </header>
     <main>
-        <h1 class = "comparativas__titulo">Comparativas y Datos Clave de las Sagas</h1>  <!-- SECTION: Tabla comparativa de hitos principales entre sagas -->
-        <section class ="hitos">
-            <h2 class = "hitos__titulo">Comparativa I: Hitos de las Sagas Principales</h2>
-            <p class = "hitos__descripcion">Análisis de los lanzamientos, plataformas y métricas de los títulos más representativos de cada saga.</p>
-            <table class = "hitos__tabla">
-                <caption class = "hitos__tabla--titulo">Datos clave: Primeros lanzamientos y rendimiento de las sagas.</caption>
-                <thead class = "hitos__tabla--head">
-                    <tr>
-                        <th class = "tabla__head--titulo" scope="col">Saga</th>
-                        <th class = "tabla__head--titulo" scope="col">Primer Título</th>
-                        <th class = "tabla__head--titulo" scope="col">Plataforma Original</th>
-                        <th class = "tabla__head--titulo" scope="col">Género Principal</th>
-                        <th class = "tabla__head--titulo" scope="col">Puntuación media</th>
-                    </tr>
-                </thead>
-                <tbody class = "hitos__tabla--body">
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Super Mario Bros.</th>
-                        <td class = "tabla__body--celda">Super Mario Bros.</td>
-                        <td class = "tabla__body--celda">NES (1985)</td>
-                        <td class = "tabla__body--celda">Plataformas (2D/3D)</td>
-                        <td class = "tabla__body--celda">93/100</td>
-                    </tr>
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Kirby</th>
-                        <td class = "tabla__body--celda">Kirby's Dream Land</td>
-                        <td class = "tabla__body--celda">Game Boy (1992)</td>
-                        <td class = "tabla__body--celda">Plataformas/Aventura</td>
-                        <td class = "tabla__body--celda">88/100</td>
-                    </tr>
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Splatoon</th>
-                        <td class = "tabla__body--celda">Splatoon</td>
-                        <td class = "tabla__body--celda">Wii U (2015)</td>
-                        <td class = "tabla__body--celda">Shooter/Guerra Territorial</td>
-                        <td class = "tabla__body--celda">89/100</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-        <section class ="evolucion-splat"> <!-- SECTION: Evolución técnica de Splatoon -->
-            <h2 class = "evolucion-splat__titulo">Comparativa II: Evolución Técnica de la Saga Splatoon</h2>
-            <p class = "evolucion-splat__descripcion">Detalle de las principales novedades de jugabilidad y rendimiento introducidas por cada título de Splatoon.</p>
-            <table class = "evolucion-splat__tabla">
-                <caption class = "evolucion-splat__tabla--titulo">Detalles técnicos y de rendimiento de los juegos de Splatoon.</caption>
-                <thead class = "evolucion-splat__tabla--head">
-                    <tr>
-                        <th class = "tabla__head--titulo" scope="col">Título</th>
-                        <th class = "tabla__head--titulo" scope="col">Lanzamiento</th>
-                        <th class = "tabla__head--titulo" scope="col">Modo Online Destacado</th>
-                        <th class = "tabla__head--titulo" scope="col">Mejor novedad implementada</th>
-                        <th class = "tabla__head--titulo" scope="col">Ventas (Aprox.)</th>
-                    </tr>
-                </thead>
-                <tbody class = "evolucion-splat__tabla--body">
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Splatoon (Wii U)</th>
-                        <td class = "tabla__body--celda">2015</td>
-                        <td class = "tabla__body--celda">Batalla territorial</td>
-                        <td class = "tabla__body--celda">Transformación en calamar</td>
-                        <td class = "tabla__body--celda">4.95 millones</td>
-                    </tr>
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Splatoon 2 (Switch)</th>
-                        <td class = "tabla__body--celda">2017</td>
-                        <td class = "tabla__body--celda">Salmon Run (PvE)</td>
-                        <td class = "tabla__body--celda">Dualies (Dodge Roll)</td>
-                        <td class = "tabla__body--celda">13.60 millones</td>
-                    </tr>
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Splatoon 3 (Switch)</th>
-                        <td class = "tabla__body--celda">2022</td>
-                        <td class = "tabla__body--celda">Big Run</td>
-                        <td class = "tabla__body--celda">Calamar Dash y Arco Tri-Stringer</td>
-                        <td class = "tabla__body--celda">12.70 millones</td>
-                    </tr>
-                </tbody>
-                <tfoot class = "evolucion-splat__tabla--footer">
-                    <tr>
-                        <td class = "tabla__footer--celda" colspan="5">Ventas basadas en informes de Nintendo hasta 2024.</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
-        <section class="evolucion-mario"> <!-- SECTION: Hitos Mario y evolución -->
-            <h2 class = "evolucion-mario__titulo">Comparativa III: Hitos de la Evolución de la Saga Mario</h2>
-            <p class = "evolucion-mario__descripcion">Detalle de las principales innovaciones de jugabilidad e impacto introducidas por los títulos clave de Mario.</p>
-            <table class = "evolucion-mario__tabla">
-                <caption class = "evolucion-mario__tabla--titulo">Detalles de innovación y ventas de títulos seleccionados de Super Mario Bros.</caption>
-                <thead class = "evolucion-mario__tabla--head">
-                    <tr>
-                        <th class = "tabla__head--titulo" scope="col">Título</th>
-                        <th class = "tabla__head--titulo" scope="col">Lanzamiento</th>
-                        <th class = "tabla__head--titulo" scope="col">Plataforma</th>
-                        <th class = "tabla__head--titulo" scope="col">Mejor novedad implementada</th>
-                        <th class = "tabla__head--titulo" scope="col">Ventas (Aprox.)</th>
-                    </tr>
-                </thead>
-                <tbody class = "evolucion-mario__tabla--body">
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Super Mario Bros.</th>
-                        <td class = "tabla__body--celda">1985</td>
-                        <td class = "tabla__body--celda">NES</td>
-                        <td class = "tabla__body--celda">Scroll lateral y power-ups (Champiñón, Flor, etc...)</td>
-                        <td class = "tabla__body--celda">40.24 millones</td>
-                    </tr>
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Super Mario 64</th>
-                        <td class = "tabla__body--celda">1996</td>
-                        <td class = "tabla__body--celda">Nintendo 64</td>
-                        <td class = "tabla__body--celda">Salto al 3D (Control analógico y cámara 360º)</td>
-                        <td class = "tabla__body--celda">11.91 millones</td>
-                    </tr>
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Super Mario Galaxy</th>
-                        <td class = "tabla__body--celda">2007</td>
-                        <td class = "tabla__body--celda">Wii</td>
-                        <td class = "tabla__body--celda">Gravedad planetaria y jugabilidad cósmica</td>
-                        <td class = "tabla__body--celda">12.80 millones</td>
-                    </tr>
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Super Mario Odyssey</th>
-                        <td class = "tabla__body--celda">2017</td>
-                        <td class = "tabla__body--celda">Nintendo Switch</td>
-                        <td class = "tabla__body--celda">Cappy y mundos abiertos</td>
-                        <td class = "tabla__body--celda">26.00 millones</td>
-                    </tr>
-                </tbody>
-                <tfoot class = "evolucion-mario__tabla--footer">
-                    <tr>
-                        <td class = "tabla__footer--celda" colspan="5">Ventas basadas en informes de Nintendo hasta 2024. Se incluyen títulos que marcaron un antes y un después en la jugabilidad.</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
-        <section class="evolucion-kirby"> <!-- SECTION: Hitos Kirby y evolución -->
-            <h2 class="evolucion-kirby__titulo">Comparativa IV: Hitos de la Evolución de la Saga Kirby</h2>
-            <p class="evolucion-kirby__descripcion">Detalle de las principales innovaciones de jugabilidad e impacto introducidas por los títulos clave de Kirby.</p>
-            <table class="evolucion-kirby__tabla">
-                <caption class="evolucion-kirby__tabla--titulo">Detalles de innovación y rendimiento de títulos seleccionados de Kirby.</caption>    
-                <thead class="evolucion-kirby__tabla--head">
-                    <tr>
-                        <th class = "tabla__head--titulo" scope="col">Título</th>
-                        <th class = "tabla__head--titulo" scope="col">Lanzamiento</th>
-                        <th class = "tabla__head--titulo" scope="col">Plataforma</th>
-                        <th class = "tabla__head--titulo" scope="col">Mejor novedad implementada</th>
-                        <th class = "tabla__head--titulo" scope="col">Ventas (Aprox.)</th>
-                    </tr>
-                </thead>
-                <tbody class="evolucion-kirby__tabla--body">
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Kirby's Dream Land</th>
-                        <td class = "tabla__body--celda">1992</td>
-                        <td class = "tabla__body--celda">Game Boy</td>
-                        <td class = "tabla__body--celda">Mecánica de aspirar/escupir y flotar</td>
-                        <td class = "tabla__body--celda">5.13 millones</td>
-                    </tr>
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Kirby's Adventure</th>
-                        <td class = "tabla__body--celda">1993</td>
-                        <td class = "tabla__body--celda">NES</td>
-                        <td class = "tabla__body--celda">Habilidades de Copia</td>
-                        <td class = "tabla__body--celda">1.70 millones</td>
-                    </tr>
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Kirby Super Star</th>
-                        <td class = "tabla__body--celda">1996</td>
-                        <td class = "tabla__body--celda">SNES</td>
-                        <td class = "tabla__body--celda">Sistema de Ayudantes</td>
-                        <td class = "tabla__body--celda">1.50 millones</td>
-                    </tr>
-                    <tr class = "tabla__body--linea">
-                        <th class = "tabla__body--titulo" scope="row">Kirby y la Tierra Olvidada</th>
-                        <td class = "tabla__body--celda">2022</td>
-                        <td class = "tabla__body--celda">Nintendo Switch</td>
-                        <td class = "tabla__body--celda">Salto al 3D y la capacidad de transformarse en objetos</td>
-                        <td class = "tabla__body--celda">6.46 millones</td>
-                    </tr>
-                </tbody>
-                <tfoot class="evolucion-kirby__tabla--footer">
-                    <tr>
-                        <td class = "tabla__footer--celda" colspan="5">Ventas basadas en informes de Nintendo hasta 2024. Se incluyen títulos que marcaron la introducción de una mecánica fundamental de la saga.</td>
-                    </tr>
-                </tfoot>
-            </table>
-        </section>
-        <section class="analisis">  <!-- SECTION: Análisis de los resultados y tendencias de los datos -->
-            <h2 class = "analisis__titulo">Análisis de Tendencias: Conclusiones de las diferentes sagas</h2>
-            <p class = "analisis__descripcion">El estudio de los datos revela patrones clave en la estrategia de Nintendo: la coexistencia exitosa de la innovación con la maestría de los géneros clásicos.</p>
-            <article class = "analisis__splatoon">
-                <h3 class = "analisis__splatoon--titulo">El Fenómeno Splatoon: Éxito a base de ruptura</h3>
-                <p class = "analisis__splatoon--descripcion">Splatoon ejemplifica el éxito a través de la ruptura total. La tabla confirma su alto rendimiento crítico (89/100) a pesar de debutar en una consola menos popular (Wii U), demostrando el poder de su mecánica central (Guerra Territorial)</p>
-                <p class = "analisis__splatoon--descripcion">El salto a Switch consolidó su base, con ventas que superan los 12 millones, impulsadas por las novedades constantes como Salmon Run y los movimientos avanzados de Splatoon 3.</p>
-                <img class = "analisis__splatoon--imagen" src="./assets/imgs/artwork-splatoon.webp" alt="Artwork de Splatoon" width="1156" height="502">
-            </article>
-            <article class = "analisis__mario">
-                <h3 class = "analisis__mario--titulo">Mario: La Maestría de la Reinvención 3D</h3>
-                <p class = "analisis__mario--descripcion">La saga Mario demuestra la clave de la longevidad: la reinvención constante sobre una base sólida. La tabla de hitos muestra que cada título 3D introduce un concepto que redefine la exploración, desde el salto dimensional de Mario 64 hasta la mecánica de captura de Odyssey.</p>
-                <p class = "analisis__mario--descripcion">Sus altas puntuaciones críticas (93/100) y las ventas masivas demuestran que el público recompensa esta estrategia de innovación donde el salto y el diseño de niveles siguen siendo la prioridad.</p>
-                <img class = "analisis__mario--imagen" src="./assets/imgs/mario-bros-movie-mario-luigi.jpg" alt="Mario y Luigi en la película" width="1825" height="1217">
-            </article>
-            <article class = "analisis__kirby">
-                <h3 class = "analisis__kirby--titulo">Kirby y la Consistencia del Diseño Accesible</h3>
-                <p class = "analisis__kirby--descripcion">Kirby representa la consistencia y el perfeccionamiento. Su alta puntuación (88/100) es un testimonio de la calidad constante, centrada en la evolución de su mecánica central: las Habilidades de Copia.</p>
-                <p class = "analisis__kirby--descripcion">La saga ha evolucionado su arte y ha dado grandes saltos (como la introducción de las habilidades o la transición al 3D en Tierra Olvidada), pero siempre priorizando la jugabilidad accesible y la exploración de las habilidades de copia, lo que garantiza una base de fans leal a través de los años.</p>
-                <img class = "analisis__kirby--imagen" src="./assets/imgs/analisis_kirby.jpg" alt="Kirby y Waddle Dee decorando una pared" width="670" height="250">
-            </article>
-        </section>
-        <aside class="voto"> <!-- ASIDE: Formulario de votación y llamada a la acción -->
-            <h3 class = "voto__titulo">El gran dilema... ¿Quién es el Campeón?</h3>
-            <p class = "voto__descripcion">Hemos analizado los datos, pero ahora te toca a ti. ¿Cuál de estas sagas crees que tiene el mejor lore y novedades más impactantes?</p>
-            <figure class = "voto__figura">
-                <img class = "voto__figura--imagen" src="./assets/imgs/voto_incentivo.png" alt="Imagen de una urna" width="1152" height="896">
-                <figcaption class = "voto__figura--descripcion">¡Tu voto cuenta!</figcaption>
-            </figure>
-            <form class = "voto__formulario" method="post" action =" #">
-                <fieldset class = "voto__formulario--campo">
-                    <legend class = "voto__formulario--leyenda">Vota por tu Saga Favorita:</legend>
-                    <p>
-                    <label class = "voto__formulario--etiqueta">
-                        <input class = "voto__formulario--opcion" type="radio" name="voto-campeon" value="mario" required> Super Mario Bros
-                        <img class = "voto__formulario--imagen" src="./assets/imgs/letra_m.png" alt="Letra M de Mario Bros" width="300" height="300">
-                    </label>
-                    </p>
-                    <p>
-                    <label class = "voto__formulario--etiqueta">
-                        <input class = "voto__formulario--opcion" type="radio" name="voto-campeon" value="kirby"> Kirby
-                        <img class = "voto__formulario--imagen" src="./assets/imgs/icono_kirby.webp" alt="Kirby saltando" width="500" height="479">
-                    </label>
-                    </p>
-                    <p>
-                    <label class = "voto__formulario--etiqueta">
-                        <input class = "voto__formulario--opcion" type="radio" name="voto-campeon" value="splatoon"> Splatoon
-                        <img class = "voto__formulario--imagen" src="./assets/imgs/splatoon_logo.png" alt="Logo Splatoon" width="516" height="483">
-                    </label>
-                    </p>
-                    <button class = "voto__formulario--boton" type="submit">Votar</button>
-                </fieldset>
-            </form>
-        </aside>
+      <h1 class="comparativas__titulo">
+        Comparativas y Datos Clave de las Sagas
+      </h1>
+      <!-- SECTION: Tabla comparativa de hitos principales entre sagas -->
+      <section class="hitos">
+        <h2 class="hitos__titulo">
+          Comparativa I: Hitos de las Sagas Principales
+        </h2>
+        <p class="hitos__descripcion">
+          Análisis de los lanzamientos, plataformas y métricas de los títulos
+          más representativos de cada saga.
+        </p>
+        <table class="hitos__tabla">
+          <caption class="hitos__tabla--titulo">
+            Datos clave: Primeros lanzamientos y rendimiento de las sagas.
+          </caption>
+          <thead class="hitos__tabla--head">
+            <tr>
+              <th class="tabla__head--titulo" scope="col">Saga</th>
+              <th class="tabla__head--titulo" scope="col">Primer Título</th>
+              <th class="tabla__head--titulo" scope="col">
+                Plataforma Original
+              </th>
+              <th class="tabla__head--titulo" scope="col">Género Principal</th>
+              <th class="tabla__head--titulo" scope="col">Puntuación media</th>
+            </tr>
+          </thead>
+          <tbody class="hitos__tabla--body">
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">Super Mario Bros.</th>
+              <td class="tabla__body--celda">Super Mario Bros.</td>
+              <td class="tabla__body--celda">NES (1985)</td>
+              <td class="tabla__body--celda">Plataformas (2D/3D)</td>
+              <td class="tabla__body--celda">93/100</td>
+            </tr>
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">Kirby</th>
+              <td class="tabla__body--celda">Kirby's Dream Land</td>
+              <td class="tabla__body--celda">Game Boy (1992)</td>
+              <td class="tabla__body--celda">Plataformas/Aventura</td>
+              <td class="tabla__body--celda">88/100</td>
+            </tr>
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">Splatoon</th>
+              <td class="tabla__body--celda">Splatoon</td>
+              <td class="tabla__body--celda">Wii U (2015)</td>
+              <td class="tabla__body--celda">Shooter/Guerra Territorial</td>
+              <td class="tabla__body--celda">89/100</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <section class="evolucion-splat">
+        <!-- SECTION: Evolución técnica de Splatoon -->
+        <h2 class="evolucion-splat__titulo">
+          Comparativa II: Evolución Técnica de la Saga Splatoon
+        </h2>
+        <p class="evolucion-splat__descripcion">
+          Detalle de las principales novedades de jugabilidad y rendimiento
+          introducidas por cada título de Splatoon.
+        </p>
+        <table class="evolucion-splat__tabla">
+          <caption class="evolucion-splat__tabla--titulo">
+            Detalles técnicos y de rendimiento de los juegos de Splatoon.
+          </caption>
+          <thead class="evolucion-splat__tabla--head">
+            <tr>
+              <th class="tabla__head--titulo" scope="col">Título</th>
+              <th class="tabla__head--titulo" scope="col">Lanzamiento</th>
+              <th class="tabla__head--titulo" scope="col">
+                Modo Online Destacado
+              </th>
+              <th class="tabla__head--titulo" scope="col">
+                Mejor novedad implementada
+              </th>
+              <th class="tabla__head--titulo" scope="col">Ventas (Aprox.)</th>
+            </tr>
+          </thead>
+          <tbody class="evolucion-splat__tabla--body">
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">Splatoon (Wii U)</th>
+              <td class="tabla__body--celda">2015</td>
+              <td class="tabla__body--celda">Batalla territorial</td>
+              <td class="tabla__body--celda">Transformación en calamar</td>
+              <td class="tabla__body--celda">4.95 millones</td>
+            </tr>
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">
+                Splatoon 2 (Switch)
+              </th>
+              <td class="tabla__body--celda">2017</td>
+              <td class="tabla__body--celda">Salmon Run (PvE)</td>
+              <td class="tabla__body--celda">Dualies (Dodge Roll)</td>
+              <td class="tabla__body--celda">13.60 millones</td>
+            </tr>
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">
+                Splatoon 3 (Switch)
+              </th>
+              <td class="tabla__body--celda">2022</td>
+              <td class="tabla__body--celda">Big Run</td>
+              <td class="tabla__body--celda">
+                Calamar Dash y Arco Tri-Stringer
+              </td>
+              <td class="tabla__body--celda">12.70 millones</td>
+            </tr>
+          </tbody>
+          <tfoot class="evolucion-splat__tabla--footer">
+            <tr>
+              <td class="tabla__footer--celda" colspan="5">
+                Ventas basadas en informes de Nintendo hasta 2024.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+      <section class="evolucion-mario">
+        <!-- SECTION: Hitos Mario y evolución -->
+        <h2 class="evolucion-mario__titulo">
+          Comparativa III: Hitos de la Evolución de la Saga Mario
+        </h2>
+        <p class="evolucion-mario__descripcion">
+          Detalle de las principales innovaciones de jugabilidad e impacto
+          introducidas por los títulos clave de Mario.
+        </p>
+        <table class="evolucion-mario__tabla">
+          <caption class="evolucion-mario__tabla--titulo">
+            Detalles de innovación y ventas de títulos seleccionados de Super
+            Mario Bros.
+          </caption>
+          <thead class="evolucion-mario__tabla--head">
+            <tr>
+              <th class="tabla__head--titulo" scope="col">Título</th>
+              <th class="tabla__head--titulo" scope="col">Lanzamiento</th>
+              <th class="tabla__head--titulo" scope="col">Plataforma</th>
+              <th class="tabla__head--titulo" scope="col">
+                Mejor novedad implementada
+              </th>
+              <th class="tabla__head--titulo" scope="col">Ventas (Aprox.)</th>
+            </tr>
+          </thead>
+          <tbody class="evolucion-mario__tabla--body">
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">Super Mario Bros.</th>
+              <td class="tabla__body--celda">1985</td>
+              <td class="tabla__body--celda">NES</td>
+              <td class="tabla__body--celda">
+                Scroll lateral y power-ups (Champiñón, Flor, etc...)
+              </td>
+              <td class="tabla__body--celda">40.24 millones</td>
+            </tr>
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">Super Mario 64</th>
+              <td class="tabla__body--celda">1996</td>
+              <td class="tabla__body--celda">Nintendo 64</td>
+              <td class="tabla__body--celda">
+                Salto al 3D (Control analógico y cámara 360º)
+              </td>
+              <td class="tabla__body--celda">11.91 millones</td>
+            </tr>
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">
+                Super Mario Galaxy
+              </th>
+              <td class="tabla__body--celda">2007</td>
+              <td class="tabla__body--celda">Wii</td>
+              <td class="tabla__body--celda">
+                Gravedad planetaria y jugabilidad cósmica
+              </td>
+              <td class="tabla__body--celda">12.80 millones</td>
+            </tr>
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">
+                Super Mario Odyssey
+              </th>
+              <td class="tabla__body--celda">2017</td>
+              <td class="tabla__body--celda">Nintendo Switch</td>
+              <td class="tabla__body--celda">Cappy y mundos abiertos</td>
+              <td class="tabla__body--celda">26.00 millones</td>
+            </tr>
+          </tbody>
+          <tfoot class="evolucion-mario__tabla--footer">
+            <tr>
+              <td class="tabla__footer--celda" colspan="5">
+                Ventas basadas en informes de Nintendo hasta 2024. Se incluyen
+                títulos que marcaron un antes y un después en la jugabilidad.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+      <section class="evolucion-kirby">
+        <!-- SECTION: Hitos Kirby y evolución -->
+        <h2 class="evolucion-kirby__titulo">
+          Comparativa IV: Hitos de la Evolución de la Saga Kirby
+        </h2>
+        <p class="evolucion-kirby__descripcion">
+          Detalle de las principales innovaciones de jugabilidad e impacto
+          introducidas por los títulos clave de Kirby.
+        </p>
+        <table class="evolucion-kirby__tabla">
+          <caption class="evolucion-kirby__tabla--titulo">
+            Detalles de innovación y rendimiento de títulos seleccionados de
+            Kirby.
+          </caption>
+          <thead class="evolucion-kirby__tabla--head">
+            <tr>
+              <th class="tabla__head--titulo" scope="col">Título</th>
+              <th class="tabla__head--titulo" scope="col">Lanzamiento</th>
+              <th class="tabla__head--titulo" scope="col">Plataforma</th>
+              <th class="tabla__head--titulo" scope="col">
+                Mejor novedad implementada
+              </th>
+              <th class="tabla__head--titulo" scope="col">Ventas (Aprox.)</th>
+            </tr>
+          </thead>
+          <tbody class="evolucion-kirby__tabla--body">
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">
+                Kirby's Dream Land
+              </th>
+              <td class="tabla__body--celda">1992</td>
+              <td class="tabla__body--celda">Game Boy</td>
+              <td class="tabla__body--celda">
+                Mecánica de aspirar/escupir y flotar
+              </td>
+              <td class="tabla__body--celda">5.13 millones</td>
+            </tr>
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">Kirby's Adventure</th>
+              <td class="tabla__body--celda">1993</td>
+              <td class="tabla__body--celda">NES</td>
+              <td class="tabla__body--celda">Habilidades de Copia</td>
+              <td class="tabla__body--celda">1.70 millones</td>
+            </tr>
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">Kirby Super Star</th>
+              <td class="tabla__body--celda">1996</td>
+              <td class="tabla__body--celda">SNES</td>
+              <td class="tabla__body--celda">Sistema de Ayudantes</td>
+              <td class="tabla__body--celda">1.50 millones</td>
+            </tr>
+            <tr class="tabla__body--linea">
+              <th class="tabla__body--titulo" scope="row">
+                Kirby y la Tierra Olvidada
+              </th>
+              <td class="tabla__body--celda">2022</td>
+              <td class="tabla__body--celda">Nintendo Switch</td>
+              <td class="tabla__body--celda">
+                Salto al 3D y la capacidad de transformarse en objetos
+              </td>
+              <td class="tabla__body--celda">6.46 millones</td>
+            </tr>
+          </tbody>
+          <tfoot class="evolucion-kirby__tabla--footer">
+            <tr>
+              <td class="tabla__footer--celda" colspan="5">
+                Ventas basadas en informes de Nintendo hasta 2024. Se incluyen
+                títulos que marcaron la introducción de una mecánica fundamental
+                de la saga.
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+      <section class="analisis">
+        <!-- SECTION: Análisis de los resultados y tendencias de los datos -->
+        <h2 class="analisis__titulo">
+          Análisis de Tendencias: Conclusiones de las diferentes sagas
+        </h2>
+        <p class="analisis__descripcion">
+          El estudio de los datos revela patrones clave en la estrategia de
+          Nintendo: la coexistencia exitosa de la innovación con la maestría de
+          los géneros clásicos.
+        </p>
+        <article class="analisis__splatoon">
+          <h3 class="analisis__splatoon--titulo">
+            El Fenómeno Splatoon: Éxito a base de ruptura
+          </h3>
+          <p class="analisis__splatoon--descripcion">
+            Splatoon ejemplifica el éxito a través de la ruptura total. La tabla
+            confirma su alto rendimiento crítico (89/100) a pesar de debutar en
+            una consola menos popular (Wii U), demostrando el poder de su
+            mecánica central (Guerra Territorial)
+          </p>
+          <p class="analisis__splatoon--descripcion">
+            El salto a Switch consolidó su base, con ventas que superan los 12
+            millones, impulsadas por las novedades constantes como Salmon Run y
+            los movimientos avanzados de Splatoon 3.
+          </p>
+          <img
+            class="analisis__splatoon--imagen"
+            src="./assets/imgs/artwork-splatoon.webp"
+            alt="Artwork de Splatoon"
+            width="1156"
+            height="502"
+          />
+        </article>
+        <article class="analisis__mario">
+          <h3 class="analisis__mario--titulo">
+            Mario: La Maestría de la Reinvención 3D
+          </h3>
+          <p class="analisis__mario--descripcion">
+            La saga Mario demuestra la clave de la longevidad: la reinvención
+            constante sobre una base sólida. La tabla de hitos muestra que cada
+            título 3D introduce un concepto que redefine la exploración, desde
+            el salto dimensional de Mario 64 hasta la mecánica de captura de
+            Odyssey.
+          </p>
+          <p class="analisis__mario--descripcion">
+            Sus altas puntuaciones críticas (93/100) y las ventas masivas
+            demuestran que el público recompensa esta estrategia de innovación
+            donde el salto y el diseño de niveles siguen siendo la prioridad.
+          </p>
+          <img
+            class="analisis__mario--imagen"
+            src="./assets/imgs/mario-bros-movie-mario-luigi.jpg"
+            alt="Mario y Luigi en la película"
+            width="1825"
+            height="1217"
+          />
+        </article>
+        <article class="analisis__kirby">
+          <h3 class="analisis__kirby--titulo">
+            Kirby y la Consistencia del Diseño Accesible
+          </h3>
+          <p class="analisis__kirby--descripcion">
+            Kirby representa la consistencia y el perfeccionamiento. Su alta
+            puntuación (88/100) es un testimonio de la calidad constante,
+            centrada en la evolución de su mecánica central: las Habilidades de
+            Copia.
+          </p>
+          <p class="analisis__kirby--descripcion">
+            La saga ha evolucionado su arte y ha dado grandes saltos (como la
+            introducción de las habilidades o la transición al 3D en Tierra
+            Olvidada), pero siempre priorizando la jugabilidad accesible y la
+            exploración de las habilidades de copia, lo que garantiza una base
+            de fans leal a través de los años.
+          </p>
+          <img
+            class="analisis__kirby--imagen"
+            src="./assets/imgs/analisis_kirby.jpg"
+            alt="Kirby y Waddle Dee decorando una pared"
+            width="670"
+            height="250"
+          />
+        </article>
+      </section>
+      <aside class="voto">
+        <!-- ASIDE: Formulario de votación y llamada a la acción -->
+        <h3 class="voto__titulo">El gran dilema... ¿Quién es el Campeón?</h3>
+        <p class="voto__descripcion">
+          Hemos analizado los datos, pero ahora te toca a ti. ¿Cuál de estas
+          sagas crees que tiene el mejor lore y novedades más impactantes?
+        </p>
+        <figure class="voto__figura">
+          <img
+            class="voto__figura--imagen"
+            src="./assets/imgs/voto_incentivo.png"
+            alt="Imagen de una urna"
+            width="1152"
+            height="896"
+          />
+          <figcaption class="voto__figura--descripcion">
+            ¡Tu voto cuenta!
+          </figcaption>
+        </figure>
+        <form class="voto__formulario" method="post" action=" #">
+          <fieldset class="voto__formulario--campo">
+            <legend class="voto__formulario--leyenda">
+              Vota por tu Saga Favorita:
+            </legend>
+            <p>
+              <label class="voto__formulario--etiqueta">
+                <input
+                  class="voto__formulario--opcion"
+                  type="radio"
+                  name="voto-campeon"
+                  value="mario"
+                  required
+                />
+                Super Mario Bros
+                <img
+                  class="voto__formulario--imagen"
+                  src="./assets/imgs/letra_m.png"
+                  alt="Letra M de Mario Bros"
+                  width="300"
+                  height="300"
+                />
+              </label>
+            </p>
+            <p>
+              <label class="voto__formulario--etiqueta">
+                <input
+                  class="voto__formulario--opcion"
+                  type="radio"
+                  name="voto-campeon"
+                  value="kirby"
+                />
+                Kirby
+                <img
+                  class="voto__formulario--imagen"
+                  src="./assets/imgs/icono_kirby.webp"
+                  alt="Kirby saltando"
+                  width="500"
+                  height="479"
+                />
+              </label>
+            </p>
+            <p>
+              <label class="voto__formulario--etiqueta">
+                <input
+                  class="voto__formulario--opcion"
+                  type="radio"
+                  name="voto-campeon"
+                  value="splatoon"
+                />
+                Splatoon
+                <img
+                  class="voto__formulario--imagen"
+                  src="./assets/imgs/splatoon_logo.png"
+                  alt="Logo Splatoon"
+                  width="516"
+                  height="483"
+                />
+              </label>
+            </p>
+            <button class="voto__formulario--boton" type="submit">Votar</button>
+          </fieldset>
+        </form>
+      </aside>
     </main>
-    <footer class = "pie-pagina">
-        <section class ="pie-pagina__contacto">
-            <h2 class = "pie-pagina__contacto--titulo">Contacto</h2>
-            <address class = "pie-pagina__contacto--informacion"> <!-- Enlaces de contacto semántico y accesible -->
-                <ul class="pie-pagina__contacto--lista">
-                    <li><a class="pie-pagina__contacto--enlace" href="./contacto.html">Contacto</a></li>
-                    <li><a class="pie-pagina__contacto--enlace" href="mailto:nintendomania@info.es">Correo electrónico</a></li>
-                    <li><a class="pie-pagina__contacto--enlace" href="tel:123456789">Teléfono</a></li>
-                </ul>
-            </address>
-        </section>
-        <section class = "pie-pagina__info">
-            <h2 class = "pie-pagina__info--titulo">Información legal</h2>
-            <p class = "pie-pagina__info--descripcion">El contenido es fan-made y sin fines comerciales.</p>
-            <p class = "pie-pagina__info--descripcion">&copy; 2025 NintendoManía.</p>
-        </section>
-        <section class = "footer-extra">
-            <img class = "footer-extra__imagen" src="./assets/imgs/logo_principal.png" alt="Logo de NintendoManía" width="1024" height="1024">
-            <a href="#inicio" class = "footer-extra__boton"></a>
-        </section>
+    <footer class="pie-pagina">
+      <section class="pie-pagina__contacto">
+        <h2 class="pie-pagina__contacto--titulo">Contacto</h2>
+        <address class="pie-pagina__contacto--informacion">
+          <!-- Enlaces de contacto semántico y accesible -->
+          <ul class="pie-pagina__contacto--lista">
+            <li>
+              <a class="pie-pagina__contacto--enlace" href="./contacto.html"
+                >Contacto</a
+              >
+            </li>
+            <li>
+              <a
+                class="pie-pagina__contacto--enlace"
+                href="mailto:nintendomania@info.es"
+                >Correo electrónico</a
+              >
+            </li>
+            <li>
+              <a class="pie-pagina__contacto--enlace" href="tel:123456789"
+                >Teléfono</a
+              >
+            </li>
+          </ul>
+        </address>
+      </section>
+      <section class="pie-pagina__info">
+        <h2 class="pie-pagina__info--titulo">Información legal</h2>
+        <p class="pie-pagina__info--descripcion">
+          El contenido es fan-made y sin fines comerciales.
+        </p>
+        <p class="pie-pagina__info--descripcion">&copy; 2025 NintendoManía.</p>
+      </section>
+      <section class="footer-extra">
+        <img
+          class="footer-extra__imagen"
+          src="./assets/imgs/logo_principal.png"
+          alt="Logo de NintendoManía"
+          width="1024"
+          height="1024"
+        />
+        <a href="#inicio" class="footer-extra__boton"></a>
+      </section>
     </footer>
-</body>
+  </body>
 </html>

@@ -1,203 +1,519 @@
 <!DOCTYPE html>
-    <html lang="es">
-        <head>
-            <!--
+<html lang="es">
+  <head>
+    <!--
             =========================================================================
             NintendoManía | Index
             =========================================================================
             Proyecto trimestral - Irene Foncubierta Lobatón, 1ºDAW
             =========================================================================
             -->
-            <meta charset="utf-8">
-            <title>NintendoManía | Análisis de Sagas Nintendo</title>
-            <meta name="description" content="NintendoManía: Cronología, juegos y curiosidades de tus sagas de Nintendo favoritas.">
-            <meta name="keywords" content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <link rel="icon" href="./assets/imgs/icono_pag.png">
-            <link rel="stylesheet" href ="./assets/css/styles.css">
-        </head>
-    <body id="inicio">
-        <header class = "cabecera"> 
-            <!-- Logotipo principal y acceso rápido al inicio -->
-            <button class="cabecera__buscador--hamburguesa" type = "button">&#9776;</button>
-            <a class = "cabecera__logo" href = "./index.html">
-                <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía" width="1024" height="1024">
+    <meta charset="utf-8" />
+    <title>NintendoManía | Análisis de Sagas Nintendo</title>
+    <meta
+      name="description"
+      content="NintendoManía: Cronología, juegos y curiosidades de tus sagas de Nintendo favoritas."
+    />
+    <meta
+      name="keywords"
+      content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/imgs/icono_pag.png" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+  <body id="inicio">
+    <header class="cabecera">
+      <!-- Logotipo principal y acceso rápido al inicio -->
+      <button class="cabecera__buscador--hamburguesa" type="button">
+        &#9776;
+      </button>
+      <a class="cabecera__logo" href="./index.html">
+        <img
+          class="cabecera__logo--imagen"
+          src="./assets/imgs/logo_principal.png"
+          alt="Ir al inicio de NintendoManía"
+          width="1024"
+          height="1024"
+        />
+      </a>
+      <nav class="cabecera__menu">
+        <!-- Menú principal de navegación entre sagas y páginas destacado -->
+        <p class="cabecera__menu--titulo">
+          <img
+            class="cabecera__menu--imagen"
+            src="./assets/imgs/logo_switch.svg"
+            alt="Logo Switch"
+            width="800"
+            height="600"
+          />
+          Nintendo Manía
+        </p>
+        <ul class="cabecera__menu--lista">
+          <li>
+            <a class="cabecera__menu--enlace" href="./sagas/splatoon.html"
+              >Splatoon</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./sagas/mario.html"
+              >Mario</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./sagas/kirby.html"
+              >Kirby</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./comparativas.html"
+              >Comparativas</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./contacto.html"
+              >Contacto</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./about.html">About</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="cabecera__buscador">
+        <!-- Formulario de búsqueda semántico -->
+        <form name="buscador">
+          <label class="buscador__formulario">
+            <img
+              class="buscador__formulario--imagen"
+              src="./assets/imgs/lupa.png"
+              alt="Lupa"
+              width="257"
+              height="280"
+            />
+            <input
+              class="buscador__formulario--input"
+              type="search"
+              name="buscador"
+              placeholder="Buscar..."
+            />
+          </label>
+        </form>
+      </nav>
+    </header>
+    <main>
+      <section class="introduccion">
+        <!-- SECTION 1: Banner y bienvenida -->
+        <h1 class="introduccion__titulo">
+          ¡Bienvenido a NintendoManía, tu página web friki de confianza!
+        </h1>
+        <p class="introduccion__descripcion">
+          Somos la web definitiva para fans que buscan el análisis más profundo
+          y la cronología más precisa del universo Nintendo. Máximo rigor, 100%
+          pasión.
+        </p>
+      </section>
+      <section class="mejores-sagas">
+        <!-- SECTION 2: Sagas principales con imágenes representativas -->
+        <h2 class="mejores-sagas__titulo">Nintendo Manía.</h2>
+        <p class="mejores-sagas__subtitulo">
+          Las mejores sagas al alcance de tu mano
+        </p>
+        <figure class="mejores-sagas__figura">
+          <img
+            class="mejores-sagas__figura--imagen"
+            src="./assets/imgs/m_negra.png"
+            alt="Letra M de Mario Bros"
+            width="222"
+            height="217"
+          />
+          <img
+            class="mejores-sagas__figura--imagen"
+            src="./assets/imgs/splatoon_logo.png"
+            alt="Inkling de Splatoon"
+            width="516"
+            height="483"
+          />
+          <img
+            class="mejores-sagas__figura--imagen"
+            src="./assets/imgs/icono_kirby.webp"
+            alt="Kirby"
+            width="500"
+            height="479"
+          />
+        </figure>
+      </section>
+      <section class="sagas-principales">
+        <!-- SECTION 3: Artículos destacados por sagas -->
+        <h2 class="sagas-principales__titulo">Sagas principales</h2>
+        <article class="sagas-principales__mario">
+          <!-- MARIO -->
+          <h3 class="sagas-principales__mario--titulo">Mario Bros</h3>
+          <figure>
+            <a href="./sagas/mario.html">
+              <img
+                class="sagas-principales__mario--imagen"
+                src="./assets/imgs/mario_party.webp"
+                alt="Imagen saga Mario Bros"
+                width="1186"
+                height="840"
+              />
             </a>
-            <nav class = "cabecera__menu"> <!-- Menú principal de navegación entre sagas y páginas destacado -->
-                <p class="cabecera__menu--titulo">
-                    <img class="cabecera__menu--imagen" src="./assets/imgs/logo_switch.svg" alt="Logo Switch" width="800" height="600">
-                    Nintendo Manía
-                </p>
-                <ul class = "cabecera__menu--lista">
-                    <li><a class = "cabecera__menu--enlace" href="./sagas/splatoon.html">Splatoon</a></li>
-                    <li><a class = "cabecera__menu--enlace"  href="./sagas/mario.html">Mario</a></li>
-                    <li><a  class = "cabecera__menu--enlace" href="./sagas/kirby.html">Kirby</a></li>
-                    <li><a  class = "cabecera__menu--enlace" href="./comparativas.html">Comparativas</a></li>
-                    <li><a  class = "cabecera__menu--enlace" href="./contacto.html">Contacto</a></li>
-                    <li><a  class = "cabecera__menu--enlace" href="./about.html">About</a></li>
-                </ul>
-            </nav>
-            <nav class = "cabecera__buscador"> <!-- Formulario de búsqueda semántico -->
-                <form name="buscador">
-                    <label class = "buscador__formulario">
-                        <img  class = "buscador__formulario--imagen" src="./assets/imgs/lupa.png" alt="Lupa" width="257" height="280">
-                        <input class = "buscador__formulario--input" type="search" name="buscador" placeholder="Buscar...">
-                    </label>
-                </form>
-            </nav> 
-        </header>
-    <main> 
-        <section class = "introduccion"> <!-- SECTION 1: Banner y bienvenida -->
-            <h1 class = "introduccion__titulo">¡Bienvenido a NintendoManía, tu página web friki de confianza!</h1>
-            <p class = "introduccion__descripcion">Somos la web definitiva para fans que buscan el análisis más profundo y la cronología más precisa del universo Nintendo. Máximo rigor, 100% pasión.</p>
-        </section>
-        <section class = "mejores-sagas"> <!-- SECTION 2: Sagas principales con imágenes representativas -->
-            <h2 class = "mejores-sagas__titulo">Nintendo Manía.</h2>
-            <p class = "mejores-sagas__subtitulo">Las mejores sagas al alcance de tu mano</p>
-            <figure class = "mejores-sagas__figura">
-                <img class = "mejores-sagas__figura--imagen" src="./assets/imgs/m_negra.png" alt="Letra M de Mario Bros" width="222" height="217">
-                <img class = "mejores-sagas__figura--imagen" src="./assets/imgs/splatoon_logo.png" alt="Inkling de Splatoon" width="516" height="483">
-                <img class = "mejores-sagas__figura--imagen" src="./assets/imgs/icono_kirby.webp" alt="Kirby" width="500" height="479">
+          </figure>
+          <p class="sagas-principales__mario--descripcion">
+            Explora el salto que revolucionó los videojuegos y sigue cada paso
+            del héroe del Reino Champiñón.
+          </p>
+        </article>
+        <article class="sagas-principales__splatoon">
+          <!-- SPLATOON -->
+          <h3 class="sagas-principales__splatoon--titulo">Splatoon</h3>
+          <figure>
+            <a href="./sagas/splatoon.html">
+              <img
+                class="sagas-principales__splatoon--imagen"
+                src="./assets/imgs/splatoon_principal.jpg"
+                alt="Imagen saga Splatoon"
+                width="1920"
+                height="1080"
+              />
+            </a>
+          </figure>
+          <p class="sagas-principales__splatoon--descripcion">
+            Sumérgete en la tinta y conoce como esta saga tan colorida se
+            convirtió en un fenómeno mundial.
+          </p>
+        </article>
+        <article class="sagas-principales__kirby">
+          <!-- KIRBY -->
+          <h3 class="sagas-principales__kirby--titulo">Kirby</h3>
+          <figure>
+            <a href="./sagas/kirby.html">
+              <img
+                class="sagas-principales__kirby--imagen"
+                src="./assets/imgs/kirby_principal.webp"
+                alt="Imagen saga Kirby"
+                width="3840"
+                height="2161"
+              />
+            </a>
+          </figure>
+          <p class="sagas-principales__kirby--descripcion">
+            Adéntrate en los orígenes de la tan carismática bolita rosa y
+            descubre como conquistó el espacio...¡Y nuestras consolas!
+          </p>
+        </article>
+      </section>
+      <aside class="extra">
+        <article class="noticias-destacadas">
+          <!-- Noticias destacadas de las sagas (Posible ampliación futura) -->
+          <h2 class="noticias-destacadas__titulo">Noticias destacadas</h2>
+          <article class="noticias-destacadas__splatoon">
+            <h3 class="noticias-destacadas__splatoon--titulo">
+              Evento pro de Splatoon 3
+            </h3>
+            <figure>
+              <a
+                href="https://www.nintenderos.com/2025/09/nintendo-anuncia-el-primer-combate-evento-pro-de-splatoon-3/"
+              >
+                <img
+                  class="noticias-destacadas__splatoon--imagen"
+                  src="./assets/imgs/splatoon-3-noticias.jpg"
+                  alt="Foto Splatfest temática Halloween"
+                  width="1026"
+                  height="577"
+                />
+              </a>
+              <figcaption class="noticias-destacadas__splatoon--descripcion">
+                Nintendo ha anunciado el primer combate evento pro individual de
+                Splatoon 3, que se celebrará el 12 de diciembre de 2025.
+              </figcaption>
             </figure>
-        </section>
-        <section class = "sagas-principales"> <!-- SECTION 3: Artículos destacados por sagas -->
-            <h2 class = "sagas-principales__titulo">Sagas principales</h2>
-            <article class="sagas-principales__mario"> <!-- MARIO -->
-                <h3 class="sagas-principales__mario--titulo">Mario Bros</h3>
-                <figure>
-                    <a href="./sagas/mario.html">
-                        <img class="sagas-principales__mario--imagen" src="./assets/imgs/mario_party.webp" alt="Imagen saga Mario Bros" width="1186" height="840">
-                    </a>
-                </figure>
-                <p class="sagas-principales__mario--descripcion">Explora el salto que revolucionó los videojuegos y sigue cada paso
-                    del héroe del Reino Champiñón.</p>
-            </article>
-            <article class ="sagas-principales__splatoon"> <!-- SPLATOON -->
-                <h3 class="sagas-principales__splatoon--titulo">Splatoon</h3>
-                <figure>
-                    <a href="./sagas/splatoon.html">
-                        <img class="sagas-principales__splatoon--imagen" src="./assets/imgs/splatoon_principal.jpg" alt="Imagen saga Splatoon" width="1920" height="1080">
-                    </a>
-                </figure>
-                <p class="sagas-principales__splatoon--descripcion">Sumérgete en la tinta y conoce como esta saga tan colorida se convirtió
-                    en un fenómeno mundial.
-                </p>
-            </article>
-            <article class = "sagas-principales__kirby"> <!-- KIRBY -->
-                <h3 class="sagas-principales__kirby--titulo">Kirby</h3>
-                <figure>
-                    <a href="./sagas/kirby.html">
-                        <img class="sagas-principales__kirby--imagen" src="./assets/imgs/kirby_principal.webp" alt="Imagen saga Kirby" width="3840" height="2161">
-                    </a>
-                </figure>
-                <p class="sagas-principales__kirby--descripcion">Adéntrate en los orígenes de la tan carismática bolita rosa y descubre
-                    como conquistó el espacio...¡Y nuestras consolas!
-                </p>
-            </article>
-        </section>
-        <aside class = "extra">
-            <article class = "noticias-destacadas"> <!-- Noticias destacadas de las sagas (Posible ampliación futura) -->
-                <h2 class = "noticias-destacadas__titulo">Noticias destacadas</h2>
-                <article class = "noticias-destacadas__splatoon">
-                    <h3 class = "noticias-destacadas__splatoon--titulo">Evento pro de Splatoon 3</h3>
-                    <figure>
-                        <a href="https://www.nintenderos.com/2025/09/nintendo-anuncia-el-primer-combate-evento-pro-de-splatoon-3/">
-                            <img class = "noticias-destacadas__splatoon--imagen" src="./assets/imgs/splatoon-3-noticias.jpg" alt="Foto Splatfest temática Halloween" width="1026" height="577">
-                        </a>
-                        <figcaption class = "noticias-destacadas__splatoon--descripcion">Nintendo ha anunciado el primer combate evento pro individual de Splatoon 3, que se celebrará el 12 de diciembre de 2025.</figcaption>
-                    </figure>
-                </article>
-                <article class = "noticias-destacadas__kirby">
-                    <h3 class = "noticias-destacadas__kirby--titulo">Nuevo pack Kirby Air Riders</h3>
-                    <figure>
-                        <a href="https://es.ign.com/compras/222040/news/el-pack-mas-irresistible-de-kirby-air-riders-se-encuentra-en-my-nintendo-store">
-                            <img class = "noticias-destacadas__kirby--imagen" src="./assets/imgs/kirby_noticia.webp" alt="Foto Kirby Air Riders" width="1280" height="720">
-                        </a>
-                        <figcaption class = "noticias-destacadas__kirby--descripcion">El pack más irresistible de Kirby Air Riders se encuentra en My Nintendo Store</figcaption>
-                    </figure>
-                </article>
-                <article class = "noticias-destacadas__mario">
-                    <h3 class = "noticias-destacadas__mario--titulo">40 Aniversario Mario Bros</h3>
-                    <figure>
-                        <a href="https://www.rtve.es/noticias/20250913/super-mario-bros-40-anos-videojuego/16726271.shtml">
-                            <img  class = "noticias-destacadas__mario--imagen"src="./assets/imgs/mariobros_aniversario.jpg" alt="Enlace a noticia sobre el 40 aniversario de Super Mario Bros en RTVE" width="300" height="169">
-                        </a>
-                        <figcaption class = "noticias-destacadas__mario--descripcion">Super Mario Bros cumple 40 años: el videojuego que inició la saga con más ventas de la historia</figcaption>
-                    </figure>
-                </article>
-            </article>
-            <article class = "puntos-destacados">
-                <h3 class = "puntos-destacados__titulo">Puntos destacados por sagas:</h3>
-                <details class = "puntos-destacados__splatoon">
-                    <summary class = "puntos-destacados__splatoon--sumario">Splatoon</summary>
-                    <ul class = "puntos-destacados__splatoon--lista">
-                        <li><a class = "puntos-destacados__splatoon--enlace" href="./sagas/splatoon.html#timeline">Línea del Tiempo</a></li>
-                        <li><a class = "puntos-destacados__splatoon--enlace" href="./sagas/splatoon.html#cronologia-splatoon">Cronología</a></li>
-                        <li><a class = "puntos-destacados__splatoon--enlace" href="./sagas/splatoon.html#armas-splatoon">Armas destacadas</a></li>
-                        <li><a class = "puntos-destacados__splatoon--enlace" href="./sagas/splatoon.html#idols-splatoon">Idols</a></li>
-                        <li><a class = "puntos-destacados__splatoon--enlace" href="./sagas/splatoon.html#curiosidades-splatoon">Secretos y Curiosidades</a></li>
-                        <li><a class = "puntos-destacados__splatoon--enlace" href="./sagas/splatoon.html#imagenes-destacadas">Galería de imágenes</a></li>
-                    </ul>
-                </details>
-                <details class = "puntos-destacados__kirby">
-                    <summary class = "puntos-destacados__kirby--sumario">Kirby</summary>
-                    <ul class = "puntos-destacados__kirby--lista">
-                        <li><a class = "puntos-destacados__kirby--enlace" href="./sagas/kirby.html#cronologia">Cronología</a></li>
-                        <li><a class = "puntos-destacados__kirby--enlace" href="./sagas/kirby.html#habilidades">Habilidades</a></li>
-                        <li><a class = "puntos-destacados__kirby--enlace" href="./sagas/kirby.html#jefes">Jefes</a></li>
-                        <li><a class = "puntos-destacados__kirby--enlace" href="./sagas/kirby.html#curiosidades-kirby">Curiosidades</a></li>
-                        <li><a class = "puntos-destacados__kirby--enlace" href="./sagas/kirby.html#personajes">Personajes secundarios</a></li>
-                        <li><a class = "puntos-destacados__kirby--enlace" href="./sagas/kirby.html#galeria">Galería de imágenes</a></li>
-                    </ul>
-                </details>
-                <details class = "puntos-destacados__mario">
-                    <summary class = "puntos-destacados__mario--sumario">Mario Bros</summary>
-                    <ul class = "puntos-destacados__mario--lista">
-                        <li><a class = "puntos-destacados__mario--enlace" href="./sagas/mario.html#hitos_2d">Hitos 2D Clásicos</a></li>
-                        <li><a class = "puntos-destacados__mario--enlace" href="./sagas/mario.html#hitos_3d">Revolución 3D</a></li>
-                        <li><a class = "puntos-destacados__mario--enlace" href="./sagas/mario.html#personajes">Análisis de Personajes</a></li>
-                        <li><a class = "puntos-destacados__mario--enlace" href="./sagas/mario.html#curiosidades-mario">Curiosidades y Lore</a></li>
-                        <li><a class = "puntos-destacados__mario--enlace" href="./sagas/mario.html#personajes_secundarios">Personajes secundarios</a></li>
-                        <li><a class = "puntos-destacados__mario--enlace" href="./sagas/mario.html#imagenes_destacadas">Galería de imágenes</a></li>
-                    </ul>
-                </details>
-            </article>
-        </aside>
-        <aside class = "newsletter"> <!-- SECTION 4: Formulario de suscripción a newsletter -->
-            <h2 class = "newsletter__titulo">¿Quieres ser el primero en enterarte de las noticias de tus sagas favoritas? ¡Suscríbete!</h2>
-            <p class = "newsletter__descripcion">Únete a nuestra NintendoManía News para recibir las últimas noticias de tus sagas favoritas directamente en tu correo. ¡No te pierdas los nuevos lanzamientos de Mario, los Splatfests de Splatoon o los secretos de Kirby!</p>
-            <form class = "newsletter__formulario" action="/subscribe" method="post">
-                    <label class="newsletter__label--email">Introduce tu email para suscribirte*:
-                        <input class = "newsletter__formulario--input" type="email" name="email" placeholder="ejemplo@correo.es" required>
-                    </label>
-                    <label class="newsletter__label--checkbox">He leído y acepto la política de privacidad
-                        <input class = "newsletter__formulario--input" type="checkbox" name="privacidad" required>
-                    </label>
-                <button class ="newsletter__boton" type="submit">¡Suscribirme al newsletter!</button>
-            </form>
-            <img class = "newsletter__imagen" src="./assets/imgs/personajes_sagas.png" alt="Kirby,Mario e Inkling juntos." width="500" height="500">
-        </aside>
+          </article>
+          <article class="noticias-destacadas__kirby">
+            <h3 class="noticias-destacadas__kirby--titulo">
+              Nuevo pack Kirby Air Riders
+            </h3>
+            <figure>
+              <a
+                href="https://es.ign.com/compras/222040/news/el-pack-mas-irresistible-de-kirby-air-riders-se-encuentra-en-my-nintendo-store"
+              >
+                <img
+                  class="noticias-destacadas__kirby--imagen"
+                  src="./assets/imgs/kirby_noticia.webp"
+                  alt="Foto Kirby Air Riders"
+                  width="1280"
+                  height="720"
+                />
+              </a>
+              <figcaption class="noticias-destacadas__kirby--descripcion">
+                El pack más irresistible de Kirby Air Riders se encuentra en My
+                Nintendo Store
+              </figcaption>
+            </figure>
+          </article>
+          <article class="noticias-destacadas__mario">
+            <h3 class="noticias-destacadas__mario--titulo">
+              40 Aniversario Mario Bros
+            </h3>
+            <figure>
+              <a
+                href="https://www.rtve.es/noticias/20250913/super-mario-bros-40-anos-videojuego/16726271.shtml"
+              >
+                <img
+                  class="noticias-destacadas__mario--imagen"
+                  src="./assets/imgs/mariobros_aniversario.jpg"
+                  alt="Enlace a noticia sobre el 40 aniversario de Super Mario Bros en RTVE"
+                  width="300"
+                  height="169"
+                />
+              </a>
+              <figcaption class="noticias-destacadas__mario--descripcion">
+                Super Mario Bros cumple 40 años: el videojuego que inició la
+                saga con más ventas de la historia
+              </figcaption>
+            </figure>
+          </article>
+        </article>
+        <article class="puntos-destacados">
+          <h3 class="puntos-destacados__titulo">
+            Puntos destacados por sagas:
+          </h3>
+          <details class="puntos-destacados__splatoon">
+            <summary class="puntos-destacados__splatoon--sumario">
+              Splatoon
+            </summary>
+            <ul class="puntos-destacados__splatoon--lista">
+              <li>
+                <a
+                  class="puntos-destacados__splatoon--enlace"
+                  href="./sagas/splatoon.html#timeline"
+                  >Línea del Tiempo</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__splatoon--enlace"
+                  href="./sagas/splatoon.html#cronologia-splatoon"
+                  >Cronología</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__splatoon--enlace"
+                  href="./sagas/splatoon.html#armas-splatoon"
+                  >Armas destacadas</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__splatoon--enlace"
+                  href="./sagas/splatoon.html#idols-splatoon"
+                  >Idols</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__splatoon--enlace"
+                  href="./sagas/splatoon.html#curiosidades-splatoon"
+                  >Secretos y Curiosidades</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__splatoon--enlace"
+                  href="./sagas/splatoon.html#imagenes-destacadas"
+                  >Galería de imágenes</a
+                >
+              </li>
+            </ul>
+          </details>
+          <details class="puntos-destacados__kirby">
+            <summary class="puntos-destacados__kirby--sumario">Kirby</summary>
+            <ul class="puntos-destacados__kirby--lista">
+              <li>
+                <a
+                  class="puntos-destacados__kirby--enlace"
+                  href="./sagas/kirby.html#cronologia"
+                  >Cronología</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__kirby--enlace"
+                  href="./sagas/kirby.html#habilidades"
+                  >Habilidades</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__kirby--enlace"
+                  href="./sagas/kirby.html#jefes"
+                  >Jefes</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__kirby--enlace"
+                  href="./sagas/kirby.html#curiosidades-kirby"
+                  >Curiosidades</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__kirby--enlace"
+                  href="./sagas/kirby.html#personajes"
+                  >Personajes secundarios</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__kirby--enlace"
+                  href="./sagas/kirby.html#galeria"
+                  >Galería de imágenes</a
+                >
+              </li>
+            </ul>
+          </details>
+          <details class="puntos-destacados__mario">
+            <summary class="puntos-destacados__mario--sumario">
+              Mario Bros
+            </summary>
+            <ul class="puntos-destacados__mario--lista">
+              <li>
+                <a
+                  class="puntos-destacados__mario--enlace"
+                  href="./sagas/mario.html#hitos_2d"
+                  >Hitos 2D Clásicos</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__mario--enlace"
+                  href="./sagas/mario.html#hitos_3d"
+                  >Revolución 3D</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__mario--enlace"
+                  href="./sagas/mario.html#personajes"
+                  >Análisis de Personajes</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__mario--enlace"
+                  href="./sagas/mario.html#curiosidades-mario"
+                  >Curiosidades y Lore</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__mario--enlace"
+                  href="./sagas/mario.html#personajes_secundarios"
+                  >Personajes secundarios</a
+                >
+              </li>
+              <li>
+                <a
+                  class="puntos-destacados__mario--enlace"
+                  href="./sagas/mario.html#imagenes_destacadas"
+                  >Galería de imágenes</a
+                >
+              </li>
+            </ul>
+          </details>
+        </article>
+      </aside>
+      <aside class="newsletter">
+        <!-- SECTION 4: Formulario de suscripción a newsletter -->
+        <h2 class="newsletter__titulo">
+          ¿Quieres ser el primero en enterarte de las noticias de tus sagas
+          favoritas? ¡Suscríbete!
+        </h2>
+        <p class="newsletter__descripcion">
+          Únete a nuestra NintendoManía News para recibir las últimas noticias
+          de tus sagas favoritas directamente en tu correo. ¡No te pierdas los
+          nuevos lanzamientos de Mario, los Splatfests de Splatoon o los
+          secretos de Kirby!
+        </p>
+        <form class="newsletter__formulario" action="/subscribe" method="post">
+          <label class="newsletter__label--email"
+            >Introduce tu email para suscribirte*:
+            <input
+              class="newsletter__formulario--input"
+              type="email"
+              name="email"
+              placeholder="ejemplo@correo.es"
+              required
+            />
+          </label>
+          <label class="newsletter__label--checkbox"
+            >He leído y acepto la política de privacidad
+            <input
+              class="newsletter__formulario--input"
+              type="checkbox"
+              name="privacidad"
+              required
+            />
+          </label>
+          <button class="newsletter__boton" type="submit">
+            ¡Suscribirme al newsletter!
+          </button>
+        </form>
+        <img
+          class="newsletter__imagen"
+          src="./assets/imgs/personajes_sagas.png"
+          alt="Kirby,Mario e Inkling juntos."
+          width="500"
+          height="500"
+        />
+      </aside>
     </main>
-    <footer class = "pie-pagina">
-        <section class ="pie-pagina__contacto">
-            <h2 class = "pie-pagina__contacto--titulo">Contacto</h2>
-            <address class = "pie-pagina__contacto--informacion"> <!-- Enlaces de contacto semántico y accesible -->
-                <ul class="pie-pagina__contacto--lista">
-                    <li><a class="pie-pagina__contacto--enlace" href="./contacto.html">Contacto</a></li>
-                    <li><a class="pie-pagina__contacto--enlace" href="mailto:nintendomania@info.es">Correo electrónico</a></li>
-                    <li><a class="pie-pagina__contacto--enlace" href="tel:123456789">Teléfono</a></li>
-                </ul>
-            </address>
-        </section>
-        <section class = "pie-pagina__info">
-            <h2 class = "pie-pagina__info--titulo">Información legal</h2>
-            <p class = "pie-pagina__info--descripcion">El contenido es fan-made y sin fines comerciales.</p>
-            <p class = "pie-pagina__info--descripcion">&copy; 2025 NintendoManía.</p>
-        </section>
-        <section class = "footer-extra">
-            <img class = "footer-extra__imagen" src="./assets/imgs/logo_principal.png" alt="Logo de NintendoManía" width="1024" height="1024">
-            <a href="#inicio" class = "footer-extra__boton"></a>
-        </section>
+    <footer class="pie-pagina">
+      <section class="pie-pagina__contacto">
+        <h2 class="pie-pagina__contacto--titulo">Contacto</h2>
+        <address class="pie-pagina__contacto--informacion">
+          <!-- Enlaces de contacto semántico y accesible -->
+          <ul class="pie-pagina__contacto--lista">
+            <li>
+              <a class="pie-pagina__contacto--enlace" href="./contacto.html"
+                >Contacto</a
+              >
+            </li>
+            <li>
+              <a
+                class="pie-pagina__contacto--enlace"
+                href="mailto:nintendomania@info.es"
+                >Correo electrónico</a
+              >
+            </li>
+            <li>
+              <a class="pie-pagina__contacto--enlace" href="tel:123456789"
+                >Teléfono</a
+              >
+            </li>
+          </ul>
+        </address>
+      </section>
+      <section class="pie-pagina__info">
+        <h2 class="pie-pagina__info--titulo">Información legal</h2>
+        <p class="pie-pagina__info--descripcion">
+          El contenido es fan-made y sin fines comerciales.
+        </p>
+        <p class="pie-pagina__info--descripcion">&copy; 2025 NintendoManía.</p>
+      </section>
+      <section class="footer-extra">
+        <img
+          class="footer-extra__imagen"
+          src="./assets/imgs/logo_principal.png"
+          alt="Logo de NintendoManía"
+          width="1024"
+          height="1024"
+        />
+        <a href="#inicio" class="footer-extra__boton"></a>
+      </section>
     </footer>
- </body>
- </html>
+  </body>
+</html>
