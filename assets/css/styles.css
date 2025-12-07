@@ -1389,6 +1389,7 @@ img {
 
 .contacto{
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
   width: 100%;
   padding: 1.5rem;
@@ -1396,6 +1397,7 @@ img {
 }
 
 .contacto__titulo{
+  width: 100%;
   font-family: var(--fuente-secundaria);
   text-align: center;
   font-size: 1.5rem;
@@ -1409,8 +1411,8 @@ img {
   font-family: var(--fuente-base);
   background: white;
   border-radius: 2rem;
-  padding: 2.5rem;
-  max-width: 600px;
+  padding: 2rem;
+  width: 40%;
 }
 
 .contacto__formulario--campo{
@@ -1468,7 +1470,7 @@ img {
   }
 
   .contacto__formulario {
-    max-width: 75%;
+    width: 85%;
     padding: 1.2rem;
     margin: 0 auto;
     border-radius: 1.2rem;
@@ -1548,6 +1550,7 @@ img {
   font-family: var(--fuente-base);
   font-size: 1.4rem;
   padding-bottom: 2rem;
+  width: 40%;
 }
 
 
@@ -1601,6 +1604,7 @@ img {
 
 @media (max-width: 900px) {
   .faq-contacto {
+    width: 90%;
     gap: 0.9rem;
     font-size: 1.2rem;
     padding-bottom: 1.6rem;
@@ -3451,6 +3455,83 @@ img {
   margin: 0 auto;
 }
 
+@media (max-width: 1200px) {
+  .introduccion-splatoon__titulo {
+    font-size: 2rem;
+    padding: 1.5rem;
+    text-shadow: -2px 2px 0 var(--color-principal__splatoon);
+  }
+
+  .introduccion-splatoon__imagen {
+    max-width: 65%;
+    border: 5px solid var(--color-principal__splatoon);
+  }
+
+  .introduccion-splatoon__subtitulo {
+    font-size: 1.25rem;
+    padding: 1.5rem;
+  }
+
+  .introduccion-splatoon__descripcion {
+    font-size: 1.25rem;
+    padding: 0.8rem;
+    width: 85%;
+  }
+}
+
+@media (max-width: 800px) {
+  .introduccion-splatoon{
+    padding:2rem;
+  }  
+  .introduccion-splatoon__titulo {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-shadow: -2px 2px 0 var(--color-principal__splatoon);
+  }
+
+  .introduccion-splatoon__imagen {
+    max-width: 100%;
+    border: 4px solid var(--color-principal__splatoon);
+    border-radius: 2rem;
+  }
+
+  .introduccion-splatoon__subtitulo {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .introduccion-splatoon__descripcion {
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .introduccion-splatoon__titulo {
+    font-size: 0.85rem;
+    padding: 0.75rem;
+    text-shadow: -1px 1px 0 var(--color-principal__splatoon);
+  }
+
+  .introduccion-splatoon__imagen {
+    max-width: 100%;
+    border: 3px solid var(--color-principal__splatoon);
+    border-radius: 1.5rem;
+  }
+
+  .introduccion-splatoon__subtitulo {
+    font-size: 0.9rem;
+    padding: 0.75rem;
+  }
+
+  .introduccion-splatoon__descripcion {
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    width: 95%;
+  }
+}
+
 #timeline {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(0.33fr, 1fr));
@@ -3507,6 +3588,182 @@ img {
   border-radius: 1rem;
   border: 3px solid black
 }
+
+
+@media (max-width: 1200px) {
+  #timeline {
+    grid-template-columns: repeat(auto-fit, minmax(0.5fr, 1fr));
+    gap: 1rem;
+  }
+
+  .timeline__titulo {
+    font-size: 2rem;
+    padding: 1.2rem;
+    text-shadow: -2px 2px 0 var(--color-principal__splatoon);
+  }
+
+  .timeline__imagen {
+    grid-column: 1 / 3;
+  }
+
+  .timeline-splatoon,
+  .timeline-octoexpansion,
+  .timeline-sideorder,
+  .timeline-raiders,
+  .timeline-splatoon2,
+  .timeline-splatoon3 {
+    max-width: 100%;
+  }
+
+  .timeline-splatoon__titulo,
+  .timeline-octoexpansion__titulo,
+  .timeline-sideorder__titulo,
+  .timeline-raiders__titulo,
+  .timeline-splatoon2__titulo,
+  .timeline-splatoon3__titulo {
+    font-size: 1.3rem;
+    padding: 0.8rem;
+  }
+
+  .timeline-splatoon__figura,
+  .timeline-octoexpansion__figura,
+  .timeline-sideorder__figura,
+  .timeline-splatoon2__figura,
+  .timeline-splatoon3__figura,
+  .timeline-raiders__figura {
+    width: 280px;
+    font-size: 0.95rem;
+  }
+
+  .timeline-splatoon__imagen,
+  .timeline-octoexpansion__imagen,
+  .timeline-sideorder__imagen,
+  .timeline-raiders__imagen,
+  .timeline-splatoon2__imagen,
+  .timeline-splatoon3__imagen {
+    border: 2px solid black;
+    border-radius: 0.8rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #timeline {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .timeline__titulo {
+    font-size: 1.5rem;
+    padding: 1rem;
+    text-shadow: -2px 2px 0 var(--color-principal__splatoon);
+  }
+
+  .timeline__imagen {
+    grid-column: 1;
+    max-height: 250px;
+  }
+
+  .timeline-splatoon,
+  .timeline-octoexpansion,
+  .timeline-sideorder,
+  .timeline-raiders,
+  .timeline-splatoon2,
+  .timeline-splatoon3 {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .timeline-splatoon__titulo,
+  .timeline-octoexpansion__titulo,
+  .timeline-sideorder__titulo,
+  .timeline-raiders__titulo,
+  .timeline-splatoon2__titulo,
+  .timeline-splatoon3__titulo {
+    font-size: 1.1rem;
+    padding: 0.7rem;
+  }
+
+  .timeline-splatoon__figura,
+  .timeline-octoexpansion__figura,
+  .timeline-sideorder__figura,
+  .timeline-splatoon2__figura,
+  .timeline-splatoon3__figura,
+  .timeline-raiders__figura {
+    width: 100%;
+    max-width: 350px;
+    font-size: 0.9rem;
+  }
+
+  .timeline-splatoon__imagen,
+  .timeline-octoexpansion__imagen,
+  .timeline-sideorder__imagen,
+  .timeline-raiders__imagen,
+  .timeline-splatoon2__imagen,
+  .timeline-splatoon3__imagen {
+    border: 2px solid black;
+    border-radius: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  #timeline {
+    grid-template-columns: 1fr;
+    gap: 0.6rem;
+  }
+
+  .timeline__titulo {
+    font-size: 1.25rem;
+    padding: 0.75rem;
+    text-shadow: -1px 1px 0 var(--color-principal__splatoon);
+  }
+
+  .timeline__imagen {
+    grid-column: 1;
+    max-height: 200px;
+  }
+
+  .timeline-splatoon,
+  .timeline-octoexpansion,
+  .timeline-sideorder,
+  .timeline-raiders,
+  .timeline-splatoon2,
+  .timeline-splatoon3 {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .timeline-splatoon__titulo,
+  .timeline-octoexpansion__titulo,
+  .timeline-sideorder__titulo,
+  .timeline-raiders__titulo,
+  .timeline-splatoon2__titulo,
+  .timeline-splatoon3__titulo {
+    font-size: 0.95rem;
+    padding: 0.6rem;
+  }
+
+  .timeline-splatoon__figura,
+  .timeline-octoexpansion__figura,
+  .timeline-sideorder__figura,
+  .timeline-splatoon2__figura,
+  .timeline-splatoon3__figura,
+  .timeline-raiders__figura {
+    width: 100%;
+    max-width: 300px;
+    font-size: 0.85rem;
+  }
+
+  .timeline-splatoon__imagen,
+  .timeline-octoexpansion__imagen,
+  .timeline-sideorder__imagen,
+  .timeline-raiders__imagen,
+  .timeline-splatoon2__imagen,
+  .timeline-splatoon3__imagen {
+    border: 2px solid black;
+    border-radius: 0.6rem;
+  }
+}
+
 
 #cronologia-splatoon{
   display: flex;
