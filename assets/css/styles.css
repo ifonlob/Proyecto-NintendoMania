@@ -4178,6 +4178,104 @@ img {
   font-size: 0.9rem;
 }
 
+@media (max-width: 1200px) {
+  #armas-splatoon {
+    gap: 2rem;
+  }
+
+  .armas-splatoon__titulo {
+    width: 85%;
+    font-size: 2.2rem;
+  }
+
+  .armas-splatoon__descripcion {
+    max-width: 80%;
+    font-size: 1.4rem;
+  }
+
+  .armas-lanzatintas,
+  .armas-rodillos,
+  .armas-cargatintas,
+  .armas-derramatic {
+    width: 80%;
+  }
+
+  .armas-lanzatintas__lista--arma,
+  .armas-rodillos__lista--arma,
+  .armas-cargatintas__lista--arma,
+  .armas-derramatic__lista--arma {
+    max-width: 30%;
+  }
+}
+Hasta 800px (tablets)
+css
+@media (max-width: 800px) {
+  #armas-splatoon {
+    padding-inline: 1.5rem;
+  }
+
+  .armas-splatoon__titulo {
+    width: 90%;
+    font-size: 2rem;
+  }
+
+  .armas-splatoon__descripcion {
+    max-width: 90%;
+    font-size: 1.3rem;
+  }
+
+  .armas-lanzatintas,
+  .armas-rodillos,
+  .armas-cargatintas,
+  .armas-derramatic {
+    width: 90%;
+    padding: 2rem 1.5rem;
+  }
+
+  .armas-lanzatintas__titulo,
+  .armas-rodillos__titulo,
+  .armas-cargatintas__titulo,
+  .armas-derramatic__titulo,
+  .armas-lanzatintas__subtitulo,
+  .armas-rodillos__subtitulo,
+  .armas-cargatintas__subtitulo,
+  .armas-derramatic__subtitulo {
+    width: 90%;
+    font-size: 1.5rem;
+  }
+
+  .armas-lanzatintas__figura--imagen,
+  .armas-rodillos__figura--imagen,
+  .armas-cargatintas__figura--imagen,
+  .armas-derramatic__figura--imagen {
+    max-width: 55%;
+  }
+
+  .armas-lanzatintas__descripcion,
+  .armas-rodillos__descripcion,
+  .armas-cargatintas__descripcion,
+  .armas-derramatic__descripcion {
+    width: 90%;
+    font-size: 1.1rem;
+  }
+
+  .armas-lanzatintas__lista,
+  .armas-rodillos__lista,
+  .armas-cargatintas__lista,
+  .armas-derramatic__lista {
+    justify-content: center;
+    gap: 1.2rem;
+  }
+
+  .armas-lanzatintas__lista--arma,
+  .armas-rodillos__lista--arma,
+  .armas-cargatintas__lista--arma,
+  .armas-derramatic__lista--arma {
+    max-width: 45%;
+    width: 45%;
+  }
+}
+
 @media (max-width: 800px) {
   .armas-lanzatintas__lista,
   .armas-rodillos__lista,
@@ -4208,6 +4306,97 @@ img {
   .armas-derramatic__lista--imagen {
     width: 100%;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 500px) {
+  #armas-splatoon {
+    padding-inline: 1rem;
+    gap: 1.5rem;
+  }
+
+  .armas-splatoon__titulo {
+    width: 100%;
+    font-size: 1.8rem;
+    padding: 1.5rem 1rem;
+  }
+
+  .armas-splatoon__descripcion {
+    max-width: 100%;
+    font-size: 1.1rem;
+    padding: 1.2rem 1rem;
+  }
+
+  .armas-lanzatintas,
+  .armas-rodillos,
+  .armas-cargatintas,
+  .armas-derramatic {
+    width: 100%;
+    padding: 1.5rem 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .armas-lanzatintas__titulo,
+  .armas-rodillos__titulo,
+  .armas-cargatintas__titulo,
+  .armas-derramatic__titulo,
+  .armas-lanzatintas__subtitulo,
+  .armas-rodillos__subtitulo,
+  .armas-cargatintas__subtitulo,
+  .armas-derramatic__subtitulo {
+    width: 100%;
+    font-size: 1.3rem;
+    padding: 1rem;
+  }
+
+  .armas-lanzatintas__figura--imagen,
+  .armas-rodillos__figura--imagen,
+  .armas-cargatintas__figura--imagen,
+  .armas-derramatic__figura--imagen {
+    max-width: 65%;
+  }
+
+  .armas-lanzatintas__descripcion,
+  .armas-rodillos__descripcion,
+  .armas-cargatintas__descripcion,
+  .armas-derramatic__descripcion {
+    width: 100%;
+    font-size: 1rem;
+    padding: 1.2rem 1rem;
+  }
+
+  .armas-lanzatintas__lista,
+  .armas-rodillos__lista,
+  .armas-cargatintas__lista,
+  .armas-derramatic__lista {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0.5rem;
+  }
+
+  .armas-lanzatintas__lista--arma,
+  .armas-rodillos__lista--arma,
+  .armas-cargatintas__lista--arma,
+  .armas-derramatic__lista--arma {
+    max-width: 100%;
+    width: 100%;
+    font-size: 1rem;
+    padding: 0.9rem;
+  }
+
+  .armas-lanzatintas__lista--imagen,
+  .armas-rodillos__lista--imagen,
+  .armas-cargatintas__lista--imagen,
+  .armas-derramatic__lista--imagen {
+    border-radius: 1.2rem;
+  }
+
+  .armas-lanzatintas__lista--descripcion,
+  .armas-rodillos__lista--descripcion,
+  .armas-cargatintas__lista--descripcion,
+  .armas-derramatic__lista--descripcion {
+    font-size: 0.85rem;
   }
 }
 
@@ -6934,7 +7123,7 @@ img {
   }
 
   .personajes-secundarios__titulo {
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     padding: 1.4rem;
   }
 
@@ -6957,7 +7146,7 @@ img {
   }
 
   .personajes-secundarios__titulo {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 
   .personajes-secundarios__descripcion {
@@ -6982,7 +7171,7 @@ img {
   }
 
   .personajes-secundarios__titulo {
-    font-size: 1.6rem;
+    font-size: 1rem;
     padding: 1.2rem;
   }
 
@@ -7024,7 +7213,7 @@ img {
 .galeria__descripcion {
   width: 100%;
   font-family: var(--fuente-base);
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   text-align: center;
   padding: 0 2rem 1.5rem;
 }
@@ -7064,22 +7253,61 @@ img {
   .galeria__figura {
     max-width: 45%;
   }
+
+  .galeria__titulo {
+    font-size: 2.2rem;
+  }
+
+  .galeria__descripcion {
+    font-size: 1.1rem;
+  }
+
+  .galeria__figura--descripcion {
+    font-size: 0.9rem;
+  }
 }
 
 @media (max-width: 800px) {
   #galeria {
     justify-content: center;
+    padding: 1.5rem;
+  }
+
+  .galeria__titulo {
+    font-size: 1.6rem;
+    padding: 1.2rem;
+  }
+
+  .galeria__descripcion {
+    font-size: 1.05rem;
+    padding: 0 1.5rem 1.2rem;
   }
 
   .galeria__figura {
     max-width: 90%;
   }
 
+  .galeria__figura--descripcion {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #galeria {
+    padding: 1.2rem 1rem;
+    gap: 1.5rem;
+  }
   .galeria__titulo {
-    font-size: 2rem;
+    font-size: 1.2rem;
+    padding: 1rem;
   }
 
   .galeria__descripcion {
-    font-size: 1.05rem;
+    font-size: 0.98rem;
+    padding: 0 1rem 1rem;
+  }
+
+  .galeria__figura--descripcion {
+    font-size: 0.9rem;
   }
 }
