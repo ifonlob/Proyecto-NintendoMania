@@ -3569,11 +3569,10 @@ img {
 
 #timeline {
   display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(0.33fr, 1fr));
-  grid-template-rows: repeat(auto-fit, minmax(auto,2fr));
-  align-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
   justify-items: center;
-  gap:1.5rem;
+  gap: 1.5rem;
 }
 
 .timeline__titulo{
@@ -3593,11 +3592,16 @@ img {
   object-position: center;
 }
 
-.timeline-splatoon,.timeline-octoexpansion,.timeline-sideorder,.timeline-raiders,.timeline-splatoon2,.timeline-splatoon3{
+.timeline-splatoon,
+.timeline-octoexpansion,
+.timeline-sideorder,
+.timeline-raiders,
+.timeline-splatoon2,
+.timeline-splatoon3{
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 33%;
+  width: 100%;
   justify-self: center;
 }
 
@@ -3627,18 +3631,18 @@ img {
 
 @media (max-width: 1200px) {
   #timeline {
-    grid-template-columns: repeat(auto-fit, minmax(0.5fr, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
+  }
+
+  .timeline__imagen {
+    display: none;
   }
 
   .timeline__titulo {
     font-size: 2rem;
     padding: 1.2rem;
     text-shadow: -2px 2px 0 var(--color-principal__splatoon);
-  }
-
-  .timeline__imagen {
-    grid-column: 1 / 3;
   }
 
   .timeline-splatoon,
@@ -3681,7 +3685,7 @@ img {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
   #timeline {
     grid-template-columns: 1fr;
     gap: 0.8rem;
@@ -3764,7 +3768,8 @@ img {
   .timeline-splatoon2,
   .timeline-splatoon3 {
     max-width: 100%;
-    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .timeline-splatoon__titulo,
@@ -3783,9 +3788,10 @@ img {
   .timeline-splatoon2__figura,
   .timeline-splatoon3__figura,
   .timeline-raiders__figura {
-    width: 100%;
-    max-width: 300px;
+    width: 90%;
+    max-width: 260px;
     font-size: 0.85rem;
+    margin: 0 auto;
   }
 
   .timeline-splatoon__imagen,
@@ -3833,6 +3839,11 @@ img {
   width: 40%;
 }
 
+.cronologia-splatoon__subtitulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 0.95rem;
+}
+
 @media (max-width: 900px) {
   .cronologia-splatoon1,
   .cronologia-splatoon2,
@@ -3859,7 +3870,7 @@ img {
 }
 
 .cronologia-splatoon1__titulo,.cronologia-splatoon2__titulo,.cronologia-splatoon3__titulo,.cronologia-octoexpansion__titulo,.cronologia-sideorder__titulo,.cronologia-raiders__titulo{
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   text-align: center;
   font-family: var(--fuente-secundaria);
 }
