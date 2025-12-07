@@ -20,7 +20,7 @@
 <body id="inicio">
     <header class = "cabecera"> 
         <!-- Logotipo principal y acceso rápido al inicio -->
-        <button class="cabecera__buscador--hamburguesa">&#9776;</button>
+        <button class="cabecera__buscador--hamburguesa" type = "button">&#9776;</button>
         <a class = "cabecera__logo" href = "./index.html">
             <img class = "cabecera__logo--imagen" src="./assets/imgs/logo_principal.png" alt="Ir al inicio de NintendoManía">
         </a>
@@ -58,63 +58,61 @@
         </section>
         <section class="contacto">
             <!-- SECTION: Formulario de contacto -->
-            <article>
-                <h2 class="contacto__titulo">Formulario de Contacto NintendoManía</h2>
-                <form class="contacto__formulario" name="contacto" method="post">
-                    <fieldset class = "contacto__formulario--campo">
-                        <legend class = "contacto__formulario--leyenda">Datos Personales</legend>
-                        <label>Nombre Completo:<sup>*</sup>
-                            <input class = "contacto__formulario--input" type="text" name="nombre" required placeholder="Tu nombre">
-                        </label>
-                        <label>Correo Electrónico:<sup>*</sup>
-                            <input class = "contacto__formulario--input" type="email" name="email" required placeholder="ejemplo@correo.com">
-                        </label>
-                        <label>Teléfono de Contacto (Opcional):
-                            <input class = "contacto__formulario--input" type="tel" name="telefono" placeholder="Ej: 696 123 456">
-                        </label>
-                    </fieldset>
-                    <fieldset class = "contacto__formulario--campo">
-                        <legend class = "contacto__formulario--leyenda">Detalles de tu Petición</legend>
-                        <label>Asunto Principal:<sup>*</sup>
-                            <select class = "contacto__formulario--select" name="asunto" required>
-                                <option value="" disabled selected>-- Selecciona un tema --</option>
-                                <option value="sugerencia_contenido">Sugerencia/Corrección de Contenido</option>
-                                <option value="colaboracion">Propuesta de Colaboración (Escritor/Diseñador)</option>
-                                <option value="opinion_general">Opinión General de la Web</option>
-                                <option value="reporte_error">Reporte de Error/Fallo Técnico</option>
-                            </select>
-                        </label>
-                        <label>Enlace de Referencia (Opcional):
-                            <input class = "contacto__formulario--input" type="url" name="url_referencia" placeholder="https://www.nintendomania.com">
-                        </label>
-                    </fieldset class = "contacto__formulario--campo">
-                    <fieldset class = "contacto__formulario--campo">
-                        <!-- Sección informativa y estadística -->
-                        <legend class = "contacto__formulario--leyenda">¡Queremos saber más sobre ti!</legend>
-                        <label>Saga favorita (Para informes estadísticos exclusivamente):<sup>*</sup></label>
-                        <label>
-                            <input type="radio" name="saga_favorita" value="mario" required> Mario Bros.
-                        </label>
-                        <label>
-                            <input type="radio" name="saga_favorita" value="splatoon" required> Splatoon
-                        </label>
-                        <label>
-                            <input type="radio" name="saga_favorita" value="kirby" required> Kirby
-                        </label>
-                        <label>
-                            <input type="radio" name="saga_favorita" value="otro" required> Otra/No aplica
-                        </label>
-                        <label>Tu Mensaje: <sup>*</sup>
-                            <textarea class = "contacto__formulario--textarea" name="mensaje" rows="6" cols="50" minlength="30" required placeholder="Escribe al menos 30 caracteres..."></textarea>
-                        </label>
-                    </fieldset>
-                    <label class = "contacto__formulario--etiqueta">Acepto política de privacidad <sup>*</sup>
-                        <input type="checkbox" name="acepta_privacidad" value="si" required>
+            <h2 class="contacto__titulo">Formulario de Contacto NintendoManía</h2>
+            <form class="contacto__formulario" name="contacto" method="post">
+                <fieldset class = "contacto__formulario--campo">
+                    <legend class = "contacto__formulario--leyenda">Datos Personales</legend>
+                    <label>Nombre Completo:<sup>*</sup>
+                        <input class = "contacto__formulario--input" type="text" name="nombre" required placeholder="Tu nombre">
                     </label>
-                    <button class = "contacto__formulario--boton" type="submit">Enviar formulario a NintendoManía</button>
-                    <button class = "contacto__formulario--boton" type="reset">Borrar Formulario</button>
-                </form>
-            </article>
+                    <label>Correo Electrónico:<sup>*</sup>
+                        <input class = "contacto__formulario--input" type="email" name="email" required placeholder="ejemplo@correo.com">
+                    </label>
+                    <label>Teléfono de Contacto (Opcional):
+                        <input class = "contacto__formulario--input" type="tel" name="telefono" placeholder="Ej: 696 123 456">
+                    </label>
+                </fieldset>
+                <fieldset class = "contacto__formulario--campo">
+                    <legend class = "contacto__formulario--leyenda">Detalles de tu Petición</legend>
+                    <label>Asunto Principal:<sup>*</sup>
+                        <select class = "contacto__formulario--select" name="asunto" required>
+                            <option value="" disabled selected>-- Selecciona un tema --</option>
+                            <option value="sugerencia_contenido">Sugerencia/Corrección de Contenido</option>
+                            <option value="colaboracion">Propuesta de Colaboración (Escritor/Diseñador)</option>
+                            <option value="opinion_general">Opinión General de la Web</option>
+                            <option value="reporte_error">Reporte de Error/Fallo Técnico</option>
+                        </select>
+                    </label>
+                    <label>Enlace de Referencia (Opcional):
+                        <input class = "contacto__formulario--input" type="url" name="url_referencia" placeholder="https://www.nintendomania.com">
+                    </label>
+                </fieldset class = "contacto__formulario--campo">
+                <fieldset class = "contacto__formulario--campo">
+                    <!-- Sección informativa y estadística -->
+                    <legend class = "contacto__formulario--leyenda">¡Queremos saber más sobre ti!</legend>
+                    <label>Saga favorita (Para informes estadísticos exclusivamente):<sup>*</sup></label>
+                    <label>
+                        <input type="radio" name="saga_favorita" value="mario" required> Mario Bros.
+                    </label>
+                    <label>
+                        <input type="radio" name="saga_favorita" value="splatoon" required> Splatoon
+                    </label>
+                    <label>
+                        <input type="radio" name="saga_favorita" value="kirby" required> Kirby
+                    </label>
+                    <label>
+                        <input type="radio" name="saga_favorita" value="otro" required> Otra/No aplica
+                    </label>
+                    <label>Tu Mensaje: <sup>*</sup>
+                        <textarea class = "contacto__formulario--textarea" name="mensaje" rows="6" cols="50" minlength="30" maxlength="1000" required placeholder="Escribe al menos 30 caracteres..."></textarea>
+                    </label>
+                </fieldset>
+                <label class = "contacto__formulario--etiqueta">Acepto política de privacidad <sup>*</sup>
+                    <input type="checkbox" name="acepta_privacidad" value="si" required>
+                </label>
+                <button class = "contacto__formulario--boton" type="submit">Enviar formulario a NintendoManía</button>
+                <button class = "contacto__formulario--boton" type="reset">Borrar Formulario</button>
+            </form>
             <article class="faq-contacto">
                 <h2 class="faq-contacto__titulo">Preguntas Frecuentes sobre Colaboración</h2>
                 <p class="faq-contacto__descripcion">Consulta esta sección si tu interés es unirte al equipo o reportar un error grave.</p>
