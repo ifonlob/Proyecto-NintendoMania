@@ -6884,11 +6884,14 @@ css
   padding: 1rem;
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
 }
-.curiosidades-kirby__origen,.curiosidades-kirby__habilidades {
+
+.curiosidades-kirby__origen,
+.curiosidades-kirby__habilidades {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   gap: 1.5rem;
+  width: 75%;              /* igual que los bloques de jefes */
 }
 
 .curiosidades-kirby__figura {
@@ -6897,7 +6900,7 @@ css
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  max-width: 30%;
+  max-width: 30%;          /* 3 columnas en escritorio */
   width: 100%;
   padding: 1rem;
   background-image: url(../imgs/kirby-fondo-figura.jpg);
@@ -6905,8 +6908,9 @@ css
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
 }
 
-.curiosidades-kirby__origen--titulo,.curiosidades-kirby__habilidades--titulo{
-  width: 100%;
+.curiosidades-kirby__origen--titulo,
+.curiosidades-kirby__habilidades--titulo {
+  width: 75%;
   text-align: center;
   font-family: var(--fuente-secundaria);
   font-size: 1.8rem;
@@ -6956,6 +6960,11 @@ css
     max-width: 80%;
   }
 
+  .curiosidades-kirby__origen,
+  .curiosidades-kirby__habilidades {
+    width: 80%;
+  }
+
   .curiosidades-kirby__figura {
     max-width: 32%;
     padding: 0.9rem;
@@ -6963,6 +6972,7 @@ css
 
   .curiosidades-kirby__origen--titulo,
   .curiosidades-kirby__habilidades--titulo {
+    width: 80%;
     font-size: 1.7rem;
     padding: 1.3rem;
   }
@@ -6974,19 +6984,15 @@ css
 }
 
 @media screen and (max-width: 900px) {
-  #curiosidades-kirby {
-    gap: 1.6rem;
-    padding: 1.2rem;
-  }
-
   .curiosidades-kirby__titulo {
     font-size: 1.8rem;
     max-width: 90%;
     padding: 0.9rem;
   }
 
-  .curiosidades-kirby__articulo {
-    justify-content: center;
+  .curiosidades-kirby__origen,
+  .curiosidades-kirby__habilidades {
+    width: 90%;
     gap: 1.3rem;
   }
 
@@ -6997,6 +7003,7 @@ css
 
   .curiosidades-kirby__origen--titulo,
   .curiosidades-kirby__habilidades--titulo {
+    width: 90%;
     font-size: 1.5rem;
     padding: 1.1rem;
   }
@@ -7008,7 +7015,7 @@ css
 
 @media screen and (max-width: 600px) {
   #curiosidades-kirby {
-    gap: 1.4rem;
+    gap: 1.5rem;
     padding: 1rem;
   }
 
@@ -7018,19 +7025,22 @@ css
     padding: 0.8rem;
   }
 
-  .curiosidades-kirby__origen {
+  .curiosidades-kirby__origen,
+  .curiosidades-kirby__habilidades {
+    width: 95%;
     flex-direction: column;
     align-items: center;
     gap: 1.1rem;
   }
 
   .curiosidades-kirby__figura {
-    max-width: 90%;
+    max-width: 100%;
     padding: 0.8rem;
   }
 
   .curiosidades-kirby__origen--titulo,
   .curiosidades-kirby__habilidades--titulo {
+    width: 95%;
     font-size: 1.35rem;
     padding: 0.9rem;
   }
