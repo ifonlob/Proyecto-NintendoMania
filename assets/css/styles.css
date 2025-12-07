@@ -1,47 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
 
-/* FORMATEO CSS */
-
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  border: 0;
-  outline: 0;
-  list-style: none;
+/* =========================
+   1. Reset básico
+   ========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* VARIABLES */
+/* =========================
+   2. Variables globales
+   ========================= */
+:root {
+    --color-principal: #800E13;
+    --color-secundario: #48a1ee;
+    --color-principal__splatoon: #F02D7D;
+    --color-principal__mario: #E52521;
+    --color-principal__kirby: #ffb6e6;
+    --color-texto: #232323;
 
-:root{
-  --color-principal: #800E13;
-  --color-secundario: #48a1ee ;
-  --color-principal__splatoon: #F02D7D;
-  --color-principal__mario:#E52521;
-  --color-principal__kirby:#ffb6e6;
-  --color-texto: #232323;
-  --fuente-base: 'Montserrat', Arial, sans-serif;
-  --fuente-secundaria: 'Press Start 2P', monospace;
+    --fuente-base: 'Montserrat', Arial, sans-serif;
+    --fuente-secundaria: 'Press Start 2P', monospace;
 }
 
-/* ESTILOS GENERALES */
-
-body{
-  background-color: #c5e3f5;
-  line-height: 1.6;
+/* =========================
+   3. Estilos generales
+   ========================= */
+body {
+    background-color: #c5e3f5;
+    line-height: 1.6;
+    font-family: var(--fuente-base);
 }
 
-a,a:hover,a:focus{
-  text-decoration: none;
+a,
+a:hover,
+a:focus {
+    text-decoration: none;
 }
 
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
 }
 
-
-/* CABECERA */
+/* =========================
+   4. Cabecera genérica
+   ========================= */
 
 .cabecera {
   top:0;
@@ -386,7 +391,9 @@ img {
 }
 
 
-/* FOOTER */
+/* =========================
+   5. Pie de página
+   ========================= */
 
 .pie-pagina{
   display: flex;
@@ -564,8 +571,6 @@ img {
   }
 } 
 
-
-
 .footer-extra__imagen:hover{
   transform: translateY(-6px);
 }
@@ -591,7 +596,7 @@ img {
 
 .footer-extra__boton::after {
   content: '↑';
-  font-weight: 9000;
+  font-weight: 900;
   line-height: 1;
 }
 
@@ -603,8 +608,11 @@ img {
 
 }
 
-/* INDEX */
+/* =========================
+   6. Página inicio (index)
+   ========================= */
 
+/* Introducción */
 .introduccion{
   display: flex;
   flex-direction: column;
@@ -620,6 +628,13 @@ img {
   text-align: center;
   overflow-wrap: break-word;
   padding: 1rem;
+}
+
+.introduccion__descripcion{
+  font-family: var(--fuente-base);
+  font-weight: 600;
+  padding:1.5rem;
+  text-align: center;
 }
 @media screen and (max-width: 1100px) {
   .introduccion__titulo {
@@ -651,12 +666,7 @@ img {
 }
 
 
-.introduccion__descripcion{
-  font-family: var(--fuente-base);
-  font-weight: 600;
-  padding:1.5rem;
-  text-align: center;
-}
+/* Mejores sagas */
 
 .mejores-sagas {
   display: flex;
@@ -721,6 +731,8 @@ img {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
+/* Sagas principales*/
+
 .sagas-principales {
   display: flex;
   flex-wrap: wrap;
@@ -780,7 +792,6 @@ img {
 .sagas-principales__mario--imagen:hover,.sagas-principales__splatoon--imagen:hover,.sagas-principales__kirby--imagen:hover{
   transform: scale(1) rotate(-3deg);
 }
-
 
 
 .sagas-principales__mario:hover,.sagas-principales__splatoon:hover,.sagas-principales__kirby:hover{
@@ -864,6 +875,8 @@ img {
     max-width: 96%;
   }
 }
+
+/* Extra: puntos destacados y noticias */
 
 .extra{
   display: flex;
@@ -972,7 +985,6 @@ img {
     max-width: 100%;
     height: auto;
     border:5px solid var(--color-secundario);
-    transition: background 0.3 ease;
     
   }
   .noticias-destacadas__mario--descripcion,
@@ -1021,8 +1033,6 @@ img {
 .puntos-destacados__mario{
   padding-bottom: 2rem;
 }
-
-
 
 .puntos-destacados__splatoon--sumario,
 .puntos-destacados__kirby--sumario,
@@ -1091,6 +1101,8 @@ img {
   flex-direction: column;
   gap: 0.5rem;
 }
+
+/* Bloque newsletter */
 
 .newsletter{
   display: flex;
@@ -1313,7 +1325,11 @@ img {
 }
 
 
-/* CONTACTO */
+/* =========================
+   7. Página contacto
+   ========================= */
+
+/* Colaboración */
 
 .colaboracion{
   display: flex;
@@ -1387,6 +1403,8 @@ img {
   }
 }
 
+/* Formulario de contacto */
+
 .contacto{
   display: flex;
   flex-wrap: wrap;
@@ -1454,8 +1472,6 @@ img {
   color: var(--color-texto)
 
 }
-
-
 
 @media (max-width: 900px) {
   .contacto {
@@ -1539,6 +1555,7 @@ img {
   transition: background-color 0.75s ease, color 0.75s ease, transform 0.75s ease;
 }
 
+/* FAQ contacto */
 
 .faq-contacto{
   display: flex;
@@ -1663,7 +1680,11 @@ img {
   }
 }
 
-/* ABOUT US*/
+/* =========================
+   8. Página sobre nosotros (about)
+   ========================= */
+
+/* Sobre nosotros: historia y juramento */
 
 .sobre-nosotros{
   display: flex;
@@ -1821,6 +1842,8 @@ img {
     border-radius: 1.2rem;
   }
 }
+
+/* Pilares y calidad */
 
 .pilares {
   display: flex;
@@ -2040,6 +2063,8 @@ img {
     font-size: 0.85rem;
   }
 }
+
+/* Equipo */
 
 .equipo{
   display: flex;
@@ -2477,7 +2502,11 @@ img {
   }
 }
 
-/* COMPARATIVAS */
+/* =========================
+   9. Página comparativas
+   ========================= */
+
+/* Tablas comparativas */
 
 .comparativas__titulo{
   font-family: var(--fuente-secundaria);
@@ -2721,6 +2750,8 @@ img {
   background: #f7f5ff;
 }
 
+/* Bloques de análisis */
+
 .analisis{
   display: flex;
   flex-wrap: wrap;
@@ -2811,8 +2842,6 @@ img {
   background-color: rgba(255,255,255,0.7);
   border-radius: 2rem;
 }
-
-
 
 .analisis__splatoon--imagen,.analisis__mario--imagen,.analisis__kirby--imagen{
   width: 90%;
@@ -2957,6 +2986,8 @@ img {
     border-radius: 1.2rem;
   }
 }
+
+/* Formulario de voto*/
 
 .voto{
   display: flex;
@@ -3196,7 +3227,9 @@ img {
 
 }
 
-/* SPLATOON */
+/* =========================
+   10. Página Splatoon
+   ========================= */
 
 .cabecera-splatoon{
   top:0;
@@ -3346,8 +3379,6 @@ img {
   .cabecera-splatoon__menu--imagen {
     width: 15%;
   }
-
-
 }
 
 @media screen and (max-width: 650px) {
@@ -3375,7 +3406,6 @@ img {
     width: 15%;
   }
 }
-
 
 @media screen and (max-width: 450px) {
   .cabecera-splatoon {
@@ -3407,6 +3437,9 @@ img {
 .body-splatoon{
   background-color: #eed3f4;
 }
+
+/* Introducción Splatoon*/
+
 .introduccion-splatoon{
   display: flex;
   justify-content: center;
@@ -3531,6 +3564,8 @@ img {
     width: 95%;
   }
 }
+
+/* Línea del tiempo*/
 
 #timeline {
   display: grid;
@@ -3764,6 +3799,7 @@ img {
   }
 }
 
+/* Cronología Splatoon*/
 
 #cronologia-splatoon{
   display: flex;
@@ -3796,8 +3832,6 @@ img {
   font-size: 2rem;
   width: 40%;
 }
-
-
 
 @media (max-width: 900px) {
   .cronologia-splatoon1,
@@ -3849,6 +3883,8 @@ img {
   list-style-image:url("../imgs/flecha_listas.png");
   font-size: 1.4rem;
 }
+
+/* Armas Splatoon */
 
 #armas-splatoon{
   display: flex;
@@ -4085,6 +4121,7 @@ img {
   }
 }
 
+/* Idols Splatoon */
 
 #idols-splatoon{
   display: flex;
@@ -4212,6 +4249,8 @@ img {
 
 }
 
+/* Curiosidades Splatoon */
+
 #curiosidades-splatoon{
   display: flex;
   flex-direction: column;
@@ -4332,6 +4371,8 @@ img {
   }
 }
 
+/* Imágenes destacadas Splatoon */
+
 #imagenes-destacadas{
   display: flex;
   flex-wrap: wrap;
@@ -4378,7 +4419,9 @@ img {
   }
 }
 
-/* MARIO */
+/* =========================
+   11. Página Mario
+   ========================= */
 
 .cabecera-mario{
   top:0;
@@ -4426,8 +4469,6 @@ img {
   padding-bottom: 1rem;
   
 }
-
-
 .cabecera-mario__menu--imagen{
   width: 12%;
 }
@@ -4448,12 +4489,10 @@ img {
     0 2px black;
 }
 
-
 .cabecera-mario__menu--enlace:hover,
 .cabecera-mario__menu--enlace:focus {
   color: var(--color-secundario__splatoon);
 }
-
 
 @media screen and (max-width: 1400px) {
   .cabecera-mario {
@@ -4595,6 +4634,8 @@ img {
   background-color: #f0a4a4;
 }
 
+/* Introducción Mario */
+
 .introduccion-mario__titulo{
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
@@ -4624,6 +4665,8 @@ img {
   border: 4px solid var(--color-principal__mario);
   transition: border-color 1.4s ease, transform 1.4s ease;
 }
+
+/* Hitos 2D Mario */
 
 #hitos-2d{
   display: flex;
@@ -4764,6 +4807,8 @@ img {
     font-size: 1.1rem;
   }
 }
+
+/* Hitos 3D Mario */
 
 #hitos-3d {
   display: flex;
@@ -4964,6 +5009,7 @@ img {
   }
 }
 
+/* Personajes Mario */
 
 #personajes{
   display: flex;
@@ -5146,6 +5192,8 @@ img {
     padding: 1rem;
   }
 }
+
+/* Curiosidades Mario */
 
 #curiosidades-mario{
   display: flex;
@@ -5349,6 +5397,8 @@ img {
   }
 }
 
+/* Imágenes destacadas Mario */
+
 #imagenes-destacadas{
   display: flex;
   flex-wrap: wrap;
@@ -5462,7 +5512,9 @@ img {
   }
 }
 
-/* KIRBY */
+/* =========================
+   12. Página Kirby
+   ========================= */
 
 .body-kirby{
   background-color: #ddfbf1 
@@ -5672,6 +5724,8 @@ img {
   }
 }
 
+/* Introducción Kirby */
+
 .introduccion-kirby__titulo{
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
@@ -5709,6 +5763,8 @@ img {
   padding:2rem;
   width: 85%;
 }
+
+/*Cronología Kirby */
 
 #cronologia-kirby{
   display: flex;
@@ -5882,6 +5938,8 @@ img {
   }
 }
 
+/* Habilidades Kirby */
+
 #habilidades {
   display: flex;
   justify-content: space-evenly;
@@ -6026,7 +6084,6 @@ img {
   font-weight: 600;
 }
 
-
 .habilidad-espada__lista--item,
 .habilidad-fuego__lista--item,
 .habilidad-bomba__lista--item,
@@ -6035,8 +6092,6 @@ img {
   padding: 0.3rem 0;
   text-align: center;
 }
-
-
 
 @media screen and (max-width: 1200px) {
   #habilidades {
@@ -6182,7 +6237,7 @@ img {
   }
 }
 
-
+/* Jefes Kirby */
 
 #jefes {
   display: flex;
@@ -6524,6 +6579,8 @@ img {
   }
 }
 
+/* Curiosidades Kirby */
+
 #curiosidades-kirby {
   display: flex;
   flex-direction: column;
@@ -6704,6 +6761,9 @@ img {
     padding: 0.8rem;
   }
 }
+
+/* Personajes secundarios Kirby */
+
 #personajes-secundarios {
   display: flex;
   flex-wrap: wrap;
@@ -6847,6 +6907,8 @@ img {
     padding: 0.9rem;
   }
 }
+
+/* Galería de imágenes Kirby */
 
 #galeria {
   display: flex;
