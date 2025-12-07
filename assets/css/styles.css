@@ -6,8 +6,19 @@
 * {
     margin: 0;
     padding: 0;
+    outline: 0;
+    border: 0;
     box-sizing: border-box;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms;
+    animation-iteration-count: 1;
+    transition-duration: 0.01ms;
+  }
+}
+
 
 /* =========================
    2. Variables globales
@@ -18,19 +29,25 @@
     --color-principal__splatoon: #F02D7D;
     --color-principal__mario: #E52521;
     --color-principal__kirby: #ffb6e6;
-    --color-texto: #232323;
-
+    --color-negro: #000000;
+    --color-blanco: #ffffff;
+    --color-fondo-principal:#c5e3f5;
     --fuente-base: 'Montserrat', Arial, sans-serif;
     --fuente-secundaria: 'Press Start 2P', monospace;
 }
+
 
 /* =========================
    3. Estilos generales
    ========================= */
 body {
-    background-color: #c5e3f5;
+    background-color:var(--color-fondo-principal);
     line-height: 1.6;
     font-family: var(--fuente-base);
+}
+
+li{
+  list-style: none;
 }
 
 a,
@@ -107,7 +124,7 @@ img {
   justify-content: center;
   align-items: center;
   gap:1.5rem;
-  color:black;
+  color:var(--color-negro);
 }
 
 .cabecera__menu--imagen{
@@ -120,14 +137,14 @@ img {
   font-size: 1.5rem;
   font-weight: 900;
   text-shadow: 
-    1.41px 1.41px black, 
-    2px 0 black, 
-    1.41px -1.41px black,
-    0 -2px black, 
-    -1.41px -1.41px black, 
-    -2px 0 black,
-    -1.41px 1.41px black, 
-    0 2px black;
+    1.41px 1.41px var(--color-negro), 
+    2px 0 var(--color-negro), 
+    1.41px -1.41px var(--color-negro),
+    0 -2px var(--color-negro), 
+    -1.41px -1.41px var(--color-negro), 
+    -2px 0 var(--color-negro),
+    -1.41px 1.41px var(--color-negro), 
+    0 2px var(--color-negro);
 }
 
 .cabecera__menu--enlace:hover,
@@ -146,7 +163,7 @@ img {
   width:80%;
   gap: 0.5rem;
   padding: 0.4rem 1rem;
-  background-color: #ffffff;
+  background-color: var(--color-blanco);
   border-radius: 2rem;
   box-shadow: 0 2px 4px rgba(0,0,0,.25);
 }
@@ -252,7 +269,7 @@ img {
     margin-bottom: 0.5rem;
     padding: 0.75rem;
     border-radius: 50%;
-    border: 3px solid black;
+    border: 3px solid var(--color-negro);
     background-color: #d77e7e;
     box-shadow: 0 2px 4px rgba(0,0,0,.25);
     cursor: pointer;
@@ -439,7 +456,7 @@ img {
   text-align: center;
   font-family: var(--fuente-secundaria);
   background-color: var(--color-secundario);
-  border:3px solid black;
+  border:3px solid var(--color-negro);
   border-radius: 1rem;
   padding:0.65rem;
   transition: transform 0.5s ease,background-color 0.5s ease;
@@ -452,7 +469,7 @@ img {
 }
 
 .pie-pagina__contacto--enlace{
-  color:var(--color-texto);
+  color:var(--color-negro);
 }
 .pie-pagina__contacto--enlace:hover{
   background-color: var(--color-principal);
@@ -695,7 +712,7 @@ img {
   font-family: var(--fuente-secundaria);
   font-weight: 800;
   font-size: 1.2rem;
-  color: var(--color-texto);
+  color: var(--color-negro);
   padding-bottom: 2rem ;
   text-align: center;
 }
@@ -785,7 +802,7 @@ img {
   width: 300px;
   height: 300px;
   object-fit: cover;
-  border: 3px solid black;
+  border: 3px solid var(--color-negro);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
@@ -939,7 +956,7 @@ img {
   padding: 1rem;
   background-color: var(--color-secundario);
   border-radius: 2rem;
-  border: 5px solid black;
+  border: 5px solid var(--color-negro);
   text-align: center;
   overflow-wrap: break-word;
 }
@@ -1025,7 +1042,7 @@ img {
   font-family: var(--fuente-secundaria);
   font-size: 1.5rem;
   text-align: center;
-  border: 5px solid black;
+  border: 5px solid var(--color-negro);
 }
 
 .puntos-destacados__splatoon,
@@ -1040,10 +1057,10 @@ img {
   font-family: var(--fuente-secundaria);
   font-size: 1.2rem;
   text-align: center;
-  color: #fff;
+  color: var(--color-blanco);
   background: var(--color-principal);
   border-radius: 2rem;
-  border: 3px solid black;
+  border: 3px solid var(--color-negro);
   padding: 1.2rem;
   margin-bottom: 1rem;
   cursor: pointer;
@@ -1056,9 +1073,9 @@ img {
 {
   display: block;
   padding: 0.5rem 1rem;
-  color: var(--color-texto);
+  color: var(--color-negro);
   background: #ffd87a;
-  border: 3px solid black;
+  border: 3px solid var(--color-negro);
   border-radius: 1.25rem;
   font-weight: bold;
   font-family: var(--fuente-secundaria);
@@ -1070,7 +1087,7 @@ img {
 .puntos-destacados__mario--enlace:active
 {
   background: var(--color-secundario);
-  color: var(--color-texto);
+  color: var(--color-negro);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
@@ -1091,7 +1108,7 @@ img {
 .puntos-destacados__mario--sumario:focus{
   background: var(--color-secundario);
   transform: translateY(-6px);
-  color: #232323;
+  color: var(--color-negro);
 }
 
 .puntos-destacados__splatoon--lista,
@@ -1168,7 +1185,7 @@ img {
   border: 1.5px solid #BDBDBD;
   border-radius: 0.7rem;
   font-size: 1rem;
-  background: #fff;
+  background: var(--color-blanco);
   transition: border 0.18s;
 }
 
@@ -1191,7 +1208,7 @@ img {
 
 .newsletter__boton:hover{
   background-color: var(--color-secundario);
-  color: var(--color-texto);
+  color: var(--color-negro);
   border: 4px solid var(--color-principal);
   transform: translateY(-6px);
   transition: background-color 0.5s ease, transform 0.5s ease;
@@ -1449,7 +1466,7 @@ img {
 .contacto__formulario--etiqueta{
   display: block;
   padding-bottom: 1rem;
-  color: var(--color-texto)
+  color: var(--color-negro)
 }
 
 .contacto__formulario--boton{
@@ -1469,7 +1486,7 @@ img {
   transform: translateY(-6px);
   background-color: var(--color-secundario);
   border: 4px solid var(--color-principal);
-  color: var(--color-texto)
+  color: var(--color-negro)
 
 }
 
@@ -1604,7 +1621,7 @@ img {
 .faq-contacto__sumario:hover{
   background-color: var(--color-secundario);
   border: 4px solid var(--color-principal);
-  color: var(--color-texto);
+  color: var(--color-negro);
   transform: translateY(-6px);
   transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
 
@@ -1700,7 +1717,7 @@ img {
   text-align: center;
   width: 100%;
   padding: 1rem;
-  color: var(--color-texto);
+  color: var(--color-negro);
 }
 
 .sobre-nosotros__historia,.sobre-nosotros__juramento{
@@ -1736,7 +1753,7 @@ img {
   max-width: 400px;
   width: 400px;
   border-radius: 2rem;
-  border: 3px solid black;
+  border: 3px solid var(--color-negro);
 }
 
 @media (max-width: 1200px){
@@ -1860,7 +1877,7 @@ img {
   padding: 2rem 1rem;
   text-align: center;
   width: 100%;
-  color: var(--color-texto);
+  color: var(--color-negro);
   letter-spacing: 0.5px;
 }
 
@@ -2133,7 +2150,7 @@ img {
   font-size: 2rem;
   text-align: center;
   padding: 2rem 1rem;
-  color: var(--color-texto);
+  color: var(--color-negro);
   letter-spacing: 0.5px;
 }
 
@@ -2373,7 +2390,7 @@ img {
 .cuestionario__enlace:focus {
   background-color: var(--color-secundario); 
   border: 4px solid var(--color-principal);
-  color: var(--color-texto);
+  color: var(--color-negro);
   transform: translateY(-6px);
   transition: background-color 0.5s ease, transform 0.5s ease;
 }
@@ -2534,7 +2551,7 @@ img {
   width: 70%;
   background-image: url(../imgs/ladrillo-rosa.jpg);
   border-radius: 2rem;
-  border: 3px solid black;
+  border: 3px solid var(--color-negro);
   overflow-wrap: break-word;
 }
 
@@ -2553,7 +2570,7 @@ img {
   border-collapse: collapse;
   font-family: var(--fuente-base);
   font-size: 1rem;
-  background: #fff;
+  background: var(--color-blanco);
   border-radius: 2rem;
   overflow: hidden;
   table-layout: fixed;
@@ -2568,7 +2585,7 @@ img {
   font-weight: bold;
   padding: 1.5rem;
   background-color: var(--color-principal);
-  color: #fff;
+  color: var(--color-blanco);
 }
 
 @media (max-width: 1200px) {
@@ -2721,7 +2738,7 @@ img {
 .tabla__head--titulo{
   font-family: var(--fuente-base);
   font-weight: 600;
-  color: var(--color-texto);
+  color: var(--color-negro);
   background: var(--color-secundario);
   padding: 1rem;
   border-bottom: 3px solid var(--color-principal);
@@ -3062,7 +3079,7 @@ img {
   background-color: var(--color-secundario); 
   transform: translateY(-6px);
   border: solid 3px var(--color-principal);
-  color: var(--color-texto)
+  color: var(--color-negro)
 
 }
 .voto__formulario--etiqueta{
@@ -3258,7 +3275,7 @@ img {
   gap:1rem;
   color: var(--color-principal__splatoon);
   font-size: 2rem;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px var(--color-negro);
 }
 
 .cabecera-splatoon__menu--lista{
@@ -3283,14 +3300,14 @@ img {
   font-size: 1.5rem;
   font-weight: 900;
   text-shadow: 
-    1.41px 1.41px black, 
-    2px 0 black, 
-    1.41px -1.41px black,
-    0 -2px black, 
-    -1.41px -1.41px black, 
-    -2px 0 black,
-    -1.41px 1.41px black, 
-    0 2px black;
+    1.41px 1.41px var(--color-negro), 
+    2px 0 var(--color-negro), 
+    1.41px -1.41px var(--color-negro),
+    0 -2px var(--color-negro), 
+    -1.41px -1.41px var(--color-negro), 
+    -2px 0 var(--color-negro),
+    -1.41px 1.41px var(--color-negro), 
+    0 2px var(--color-negro);
 }
 
 
@@ -3625,7 +3642,7 @@ img {
 }
 .timeline-splatoon__imagen,.timeline-octoexpansion__imagen,.timeline-sideorder__imagen,.timeline-raiders__imagen,.timeline-splatoon2__imagen,.timeline-splatoon3__imagen{
   border-radius: 1rem;
-  border: 3px solid black
+  border: 3px solid var(--color-negro)
 }
 
 
@@ -3680,7 +3697,7 @@ img {
   .timeline-raiders__imagen,
   .timeline-splatoon2__imagen,
   .timeline-splatoon3__imagen {
-    border: 2px solid black;
+    border: 2px solid var(--color-negro);
     border-radius: 0.8rem;
   }
 }
@@ -3739,7 +3756,7 @@ img {
   .timeline-raiders__imagen,
   .timeline-splatoon2__imagen,
   .timeline-splatoon3__imagen {
-    border: 2px solid black;
+    border: 2px solid var(--color-negro);
     border-radius: 0.8rem;
   }
 }
@@ -3800,7 +3817,7 @@ img {
   .timeline-raiders__imagen,
   .timeline-splatoon2__imagen,
   .timeline-splatoon3__imagen {
-    border: 2px solid black;
+    border: 2px solid var(--color-negro);
     border-radius: 0.6rem;
   }
 }
@@ -3877,7 +3894,7 @@ img {
 
 .cronologia-splatoon1__imagen,.cronologia-splatoon2__imagen,.cronologia-splatoon3__imagen,.cronologia-octoexpansion__imagen,.cronologia-raiders__imagen,.cronologia-sideorder__imagen{
   border-radius: 2rem;
-  box-shadow: 0 0 100px black;
+  box-shadow: 0 0 100px var(--color-negro);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
@@ -3911,7 +3928,7 @@ img {
   overflow-wrap: break-word;
   width: 80%;
   padding: 2rem;
-  color: var(--color-texto);
+  color: var(--color-negro);
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
@@ -3933,11 +3950,11 @@ img {
   text-align: center;
   width: 75%;
   padding: 1.5rem 2rem;
-  color: #fff;
+  color: var(--color-blanco);
   background-image: url(../imgs/splatoon-fondo-basico.webp);
   border-radius: 1.2rem;
   border: 3px solid var(--color-principal__splatoon);
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px var(--color-negro);
 }
 
 .armas-lanzatintas,
@@ -4025,11 +4042,11 @@ img {
   overflow-wrap: break-word;
   width: 75%;
   padding: 1rem;
-  color: #fff;
+  color: var(--color-blanco);
   background-image: url(../imgs/splatoon-fondo-basico.webp);
   border-radius: 1.2rem;
   border: 3px solid var(--color-principal__splatoon);
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px var(--color-negro);
   
 }
 
@@ -4148,7 +4165,7 @@ img {
   text-align: center;
   width: 100%;
   padding: 2rem 1rem;
-  color: var(--color-texto);
+  color: var(--color-negro);
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
@@ -4175,13 +4192,13 @@ img {
   text-align: center;
   width: 100%;
   padding: 1.5rem;
-  color: #fff;
+  color: var(--color-blanco);
   background-image: url(../imgs/splatoon-fondo-basico.webp);
   background-size: cover;
   background-position: center;
   border-radius: 1.2rem;
-  border: 3px solid var(--color-texto);
-  -webkit-text-stroke: 1px black;
+  border: 3px solid var(--color-negro);
+  -webkit-text-stroke: 1px var(--color-negro);
   overflow-wrap: break-word;
 }
 
@@ -4279,7 +4296,7 @@ img {
   max-width: 75%;
   width: 100%;
   padding:1rem;
-  color: var(--color-texto);
+  color: var(--color-negro);
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
@@ -4310,13 +4327,13 @@ img {
   text-align: center;
   width: 80%;
   padding: 1.5rem;
-  color: #fff;
+  color: var(--color-blanco);
   background-image: url(../imgs/splatoon-fondo-basico.webp);
   background-size: cover;
   background-position: center;
   border-radius: 1.2rem;
-  border: 3px solid var(--color-texto);
-  -webkit-text-stroke: 0.7px black;
+  border: 3px solid var(--color-negro);
+  -webkit-text-stroke: 0.7px var(--color-negro);
   overflow-wrap: break-word;
 }
 
@@ -4405,7 +4422,7 @@ img {
   max-width: 20%;
   border-radius: 2rem;
   object-fit: cover;
-  box-shadow: 0 12px 25px var(--color-texto);
+  box-shadow: 0 12px 25px var(--color-negro);
   transition: transform 0.5s ease;
 }
 
@@ -4466,7 +4483,7 @@ img {
   align-items: center;
   color:var(--color-principal__mario);
   font-size: 2rem;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px var(--color-negro);
 }
 
 .cabecera-mario__menu--lista{
@@ -4490,14 +4507,14 @@ img {
   font-size: 1.5rem;
   font-weight: 900;
   text-shadow: 
-    1.41px 1.41px black, 
-    2px 0 black, 
-    1.41px -1.41px black,
-    0 -2px black, 
-    -1.41px -1.41px black, 
-    -2px 0 black,
-    -1.41px 1.41px black, 
-    0 2px black;
+    1.41px 1.41px var(--color-negro), 
+    2px 0 var(--color-negro), 
+    1.41px -1.41px var(--color-negro),
+    0 -2px var(--color-negro), 
+    -1.41px -1.41px var(--color-negro), 
+    -2px 0 var(--color-negro),
+    -1.41px 1.41px var(--color-negro), 
+    0 2px var(--color-negro);
 }
 
 .cabecera-mario__menu--enlace:hover,
@@ -4723,12 +4740,12 @@ img {
   text-align: center;
   width: 80%;
   padding: 1.5rem;
-  color: #fff;
+  color: var(--color-blanco);
   background-image: url(../imgs/header-mario.webp);
   background-position: center;
   border-radius: 1.2rem;
-  border: 3px solid var(--color-texto);
-  -webkit-text-stroke: 1px black;
+  border: 3px solid var(--color-negro);
+  -webkit-text-stroke: 1px var(--color-negro);
   overflow-wrap: break-word;
 }
 
@@ -4879,12 +4896,12 @@ img {
   text-align: center;
   width: 80%;
   padding: 1.5rem;
-  color: #fff;
+  color: var(--color-blanco);
   background-image: url(../imgs/header-mario.webp);
   background-position: center;
   border-radius: 1.2rem;
-  border: 3px solid var(--color-texto);
-  -webkit-text-stroke: 1px black;
+  border: 3px solid var(--color-negro);
+  -webkit-text-stroke: 1px var(--color-negro);
   overflow-wrap: break-word;
 }
 
@@ -5079,12 +5096,12 @@ img {
   text-align: center;
   width: 80%;
   padding: 1.5rem;
-  color: #fff;
+  color: var(--color-blanco);
   background-image: url(../imgs/header-mario.webp);
   background-position: center;
   border-radius: 1.2rem;
-  border: 3px solid var(--color-texto);
-  -webkit-text-stroke: 1px black;
+  border: 3px solid var(--color-negro);
+  -webkit-text-stroke: 1px var(--color-negro);
   overflow-wrap: break-word;
 }
 
@@ -5261,7 +5278,7 @@ img {
 .curiosidades-mario-goombas__figura--imagen {
   max-width: 40%;
   border-radius: 2.5rem;
-  border: 3px solid var(--color-texto)
+  border: 3px solid var(--color-negro)
 }
 
 .curiosidades-mario-origen-mario__figura--descripcion,
@@ -5445,7 +5462,7 @@ img {
   max-width: 15%;
   background-image: url(../imgs/fondo-mario.jpg);
   border-radius: 2rem;
-  border: 3px solid var(--color-texto)
+  border: 3px solid var(--color-negro)
 }
 
 .imagenes-destacadas__figura-imagen{
@@ -5558,7 +5575,7 @@ img {
   gap:1rem;
   color:var(--color-principal__kirby);
   font-size: 2rem;
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px var(--color-negro);
 }
 
 .cabecera-kirby__menu--lista{
@@ -5582,14 +5599,14 @@ img {
   font-size: 1.5rem;
   font-weight: 900;
   text-shadow: 
-    1.41px 1.41px black, 
-    2px 0 black, 
-    1.41px -1.41px black,
-    0 -2px black, 
-    -1.41px -1.41px black, 
-    -2px 0 black,
-    -1.41px 1.41px black, 
-    0 2px black;
+    1.41px 1.41px var(--color-negro), 
+    2px 0 var(--color-negro), 
+    1.41px -1.41px var(--color-negro),
+    0 -2px var(--color-negro), 
+    -1.41px -1.41px var(--color-negro), 
+    -2px 0 var(--color-negro),
+    -1.41px 1.41px var(--color-negro), 
+    0 2px var(--color-negro);
 }
 
 
@@ -6040,7 +6057,7 @@ img {
 .habilidad-martillo__figura--imagen:hover,
 .habilidad-sueno__figura--imagen:hover {
   transform: scale(1.05);
-  border-color: #fff;
+  border-color: var(--color-blanco);
 }
 
 .habilidad-espada__figura--descripcion,
@@ -6264,7 +6281,7 @@ img {
   overflow-wrap: break-word;
   width: 80%;
   padding: 2rem;
-  color: var(--color-texto);
+  color: var(--color-negro);
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
 }
 
@@ -6302,11 +6319,11 @@ img {
   text-align: center;
   width: 75%;
   padding: 1.5rem 2rem;
-  color: #fff;
+  color: var(--color-blanco);
   background-image: url(../imgs/kirby-fondo-rosa.jpg);
   border-radius: 1.2rem;
   border: 3px solid var(--color-principal__kirby);
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px var(--color-negro);
 }
 
 .jefe-whispy__figura,
@@ -6370,11 +6387,11 @@ img {
   overflow-wrap: break-word;
   width: 75%;
   padding: 1rem;
-  color: #fff;
+  color: var(--color-blanco);
   background-image: url(../imgs/kirby-fondo-rosa.jpg);
   border-radius: 1.2rem;
   border: 3px solid var(--color-principal__kirby);
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px var(--color-negro);
 }
 
 .jefe-whispy__lista,
@@ -6609,7 +6626,7 @@ img {
   max-width: 75%;
   width: 100%;
   padding: 1rem;
-  color: var(--color-texto);
+  color: var(--color-negro);
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
 }
 .curiosidades-kirby__origen,.curiosidades-kirby__habilidades {
@@ -6639,12 +6656,12 @@ img {
   font-family: var(--fuente-secundaria);
   font-size: 1.8rem;
   padding: 1.5rem;
-  color: #fff;
+  color: var(--color-blanco);
   background-image: url(../imgs/kirby-fondo-titulos2.jpg);
   background-size: cover;
   border-radius: 1.2rem;
   border: 3px solid var(--color-principal__kirby);
-  -webkit-text-stroke: 0.7px black;
+  -webkit-text-stroke: 0.7px var(--color-negro);
   overflow-wrap: break-word;
 }
 
