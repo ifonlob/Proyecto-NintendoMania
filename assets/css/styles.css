@@ -2232,19 +2232,132 @@ img {
 }
 
 
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1200px) {
+  .analisis {
+    gap: 1.4rem;
+    padding: 1.2rem 0.8rem;
+  }
+
+  .analisis__titulo {
+    font-size: 1.35rem;
+    padding: 0.9rem 1.4rem;
+  }
+
+  .analisis__descripcion {
+    font-size: 0.98rem;
+    padding:1rem;
+  }
+
   .analisis__splatoon,
   .analisis__kirby,
   .analisis__mario {
-    width: 45%;
+    width: 40%;
+    gap: 1.4rem;
+    padding: 1rem;
   }
-}
 
-@media screen and (max-width: 650px) {
+  .analisis__splatoon--titulo,
+  .analisis__kirby--titulo,
+  .analisis__mario--titulo {
+    padding: 1.2rem;
+    font-size: 1rem;
+  }
+
+  .analisis__splatoon--descripcion,
+  .analisis__mario--descripcion,
+  .analisis__kirby--descripcion {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+}
+@media screen and (max-width: 700px) {
+.analisis {
+    gap: 1.2rem;
+    padding: 1rem 0.7rem;
+  }
+
+  .analisis__titulo {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
+
+  .analisis__descripcion {
+    font-size: 1rem;
+    padding: 0.8rem;
+  }
+
   .analisis__splatoon,
   .analisis__kirby,
   .analisis__mario {
     width: 90%;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .analisis__splatoon--titulo,
+  .analisis__kirby--titulo,
+  .analisis__mario--titulo {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .analisis__splatoon--descripcion,
+  .analisis__mario--descripcion,
+  .analisis__kirby--descripcion {
+    font-size: 1rem;
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .analisis {
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .analisis__titulo {
+    font-size: 0.8rem;
+    padding: 0.5rem;
+    overflow-wrap: break-word;
+  }
+
+  .analisis__descripcion {
+    font-size: 0.9rem;
+    padding: 1rem;
+  }
+
+  .analisis__splatoon,
+  .analisis__kirby,
+  .analisis__mario {
+    width: 100%;
+    padding: 1rem;
+    gap: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .analisis__splatoon--titulo,
+  .analisis__kirby--titulo,
+  .analisis__mario--titulo {
+    width: 90%;
+    font-size: 0.75rem;
+    padding: 1rem;
+    overflow-wrap: break-word;
+  }
+
+  .analisis__splatoon--descripcion,
+  .analisis__mario--descripcion,
+  .analisis__kirby--descripcion {
+    width: 90%;
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+
+  .analisis__splatoon--imagen,
+  .analisis__mario--imagen,
+  .analisis__kirby--imagen {
+    width: 95%;
+    border-radius: 1.2rem;
   }
 }
 
@@ -2348,8 +2461,7 @@ img {
 }
 
 .voto__figura--imagen{
-  max-width: 400px;
-  width: 100%;
+  width: 50%;
   object-fit: cover;
   border-radius: 4rem;
   transition: color 0.3s ease,transform 0.5s ease;
@@ -2359,54 +2471,141 @@ img {
   transform: translateY(-6px);
 }
 
-@media (max-width: 1300px) {
-  .voto{
+@media (max-width: 1200px) {
+  .voto {
     flex-direction: column;
     align-items: center;
+    gap: 1.5rem;
+    padding: 1.5rem;
   }
+
   .voto__titulo {
-    font-size: 1.1rem;
-    padding: 1.2rem 0.5rem;
+    font-size: 1.2rem;
+    padding: 1.5rem 0.8rem 0.8rem;
   }
 
   .voto__descripcion {
-    font-size: 1rem;
-    padding: 0.8rem 0.4rem;
+    font-size: 1.05rem;
+    padding: 0 1.2rem 0.8rem;
   }
 
   .voto__formulario {
-    max-width: 60%;
-    min-width: 180px;
+    max-width: 500px;
+    width: 100%;
+    min-width: 230px;
     padding: 1.5rem;
     border-radius: 2.5rem;
   }
 
   .voto__formulario--campo {
-    gap: 1.1rem;
+    gap: 1.2rem;
   }
-  .voto__formulario--leyenda{
-    font-size: 0.8rem;
-    padding:0.4rem;
+
+  .voto__formulario--leyenda {
+    font-size: 0.9rem;
+    padding: 0.4rem;
   }
+
   .voto__formulario--boton {
-    font-size: 0.90rem;
-    padding: 0.8rem;
-    border-radius: 1.4rem;
+    font-size: 0.95rem;
+    padding: 0.9rem;
+    border-radius: 1.6rem;
   }
 
   .voto__figura--imagen {
-    max-width: 350px;
-    padding: 1rem;
+    padding: 0.8rem;
     border-radius: 3rem;
+    width: 60%;
   }
 
-  .voto__formulario--imagen{
-    max-width: 40px;
-    width: 40px;
-    min-width: 22px;
+  .voto__formulario--imagen {
+    width: 95%;
   }
 }
 
+@media (max-width: 700px) {
+  .voto {
+    padding: 1.2rem 0.8rem;
+    gap: 1.2rem;
+  }
+
+  .voto__titulo {
+    font-size: 1.1rem;
+    padding: 1rem 0.5rem 0.6rem;
+  }
+
+  .voto__descripcion {
+    font-size: 0.95rem;
+    padding: 0 0.6rem 0.8rem;
+  }
+
+  .voto__formulario {
+    max-width: 100%;
+    min-width: 0;
+    padding: 1.2rem;
+    border-radius: 2rem;
+  }
+
+  .voto__formulario--campo {
+    gap: 0.9rem;
+  }
+
+  .voto__formulario--etiqueta {
+    gap: 0.6rem;
+  }
+
+  .voto__formulario--leyenda {
+    font-size: 0.85rem;
+  }
+
+  .voto__formulario--boton {
+    font-size: 0.9rem;
+    padding: 0.9rem;
+  }
+
+  .voto__figura--imagen {
+    width: 80%;
+    padding: 0.6rem;
+    border-radius: 2.5rem;
+  }
+
+  .voto__formulario--imagen {
+    max-width: 32px;
+    width: 32px;
+    min-width: 20px;
+  }
+}
+
+
+@media (max-width: 450px) {
+  .voto {
+    padding: 1rem 0.5rem;
+    gap: 1rem;
+  }
+
+  .voto__titulo {
+    font-size: 1rem;
+  }
+
+  .voto__descripcion {
+    font-size: 0.9rem;
+  }
+
+  .voto__formulario {
+    padding: 1rem;
+    border-radius: 1.8rem;
+  }
+
+  .voto__formulario--boton {
+    font-size: 0.85rem;
+    padding: 0.8rem;
+  }
+
+  .voto__figura--imagen {
+    padding: 0.4rem;
+    border-radius: 2rem;
+  }
+}
 
 /* SPLATOON */
 
