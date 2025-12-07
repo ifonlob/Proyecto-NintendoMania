@@ -8,6 +8,7 @@
     padding: 0;
     outline: 0;
     border: 0;
+    list-style: none;
     box-sizing: border-box;
 }
 
@@ -31,23 +32,38 @@
     --color-principal__kirby: #ffb6e6;
     --color-negro: #000000;
     --color-blanco: #ffffff;
-    --color-fondo-principal:#c5e3f5;
+    --color-sumario:#ffffffee;
+    --color-fondo: #c5e3f5;
+    --color-fondo-splatoon:#eed3f4;
+    --color-fondo-mario:#f0a4a4;
+    --color-fondo-kirby:#ddfbf1;
     --fuente-base: 'Montserrat', Arial, sans-serif;
     --fuente-secundaria: 'Press Start 2P', monospace;
 }
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo: #050816de;
+    --color-fondo-splatoon: #21152a;
+    --color-fondo-mario: #103b3b;
+    --color-fondo-kirby: #24121a;
+    --color-texto: #f5f5f5;
+  }
+
+  body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+  }
+
+}
 
 /* =========================
    3. Estilos generales
    ========================= */
 body {
-    background-color:var(--color-fondo-principal);
+    background-color:var(--color-fondo);
     line-height: 1.6;
     font-family: var(--fuente-base);
-}
-
-li{
-  list-style: none;
 }
 
 a,
@@ -441,6 +457,7 @@ img {
   font-size: 1.8rem;
   text-align: center;
   padding: 0.5rem;
+  color: var(--color-negro)
 }
 
 .pie-pagina__contacto--lista{
@@ -466,6 +483,7 @@ img {
   font-family: var(--fuente-base);
   font-size: 1.2rem;
   text-align: center;
+  color: var(--color-negro)
 }
 
 .pie-pagina__contacto--enlace{
@@ -786,13 +804,14 @@ img {
   margin: 0 auto;
   text-align: center;
   font-weight: 600;
-  
+  color: var(--color-negro)
 }
 
 .sagas-principales__mario--titulo,.sagas-principales__splatoon--titulo,.sagas-principales__kirby--titulo{
   padding:2.5rem;
   font-size: 1.4rem;
   font-family: var(--fuente-secundaria);
+  color: var(--color-negro)
  }
 
 .sagas-principales__mario--imagen,.sagas-principales__splatoon--imagen,.sagas-principales__kirby--imagen{
@@ -959,6 +978,7 @@ img {
   border: 5px solid var(--color-negro);
   text-align: center;
   overflow-wrap: break-word;
+  color:var(--color-negro);
 }
 
 .puntos-destacados__titulo{
@@ -971,6 +991,7 @@ img {
   color: white;
   text-align: center;
   overflow-wrap: break-word;
+  color: var(--color-negro);
 }
 .noticias-destacadas__kirby--titulo,.noticias-destacadas__mario--titulo,.noticias-destacadas__splatoon--titulo{
   font-family: var(--fuente-secundaria);
@@ -1244,9 +1265,9 @@ img {
     flex-direction: column;
     align-items: center;
     gap: 0.6rem;
-    white-space: normal;
-    font-size: 0.9rem;
+    width: 100%;
     text-align: center;
+    font-size: 0.9rem;
   }
 
   .newsletter__boton {
@@ -1441,13 +1462,14 @@ img {
 
 .contacto__formulario{
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   font-family: var(--fuente-base);
   background: white;
   border-radius: 2rem;
   padding: 2rem;
-  width: 40%;
+  width: 30%;
 }
 
 .contacto__formulario--campo{
@@ -1457,6 +1479,7 @@ img {
 }
 
 .contacto__formulario--leyenda{
+  width: 90%;
   font-size: 1.3rem;
   font-weight: bold;
   color: var(--color-principal);
@@ -1464,6 +1487,15 @@ img {
 }
 
 .contacto__formulario--etiqueta{
+  text-align: start;
+  display: block;
+  padding-bottom: 1rem;
+  color: var(--color-negro)
+}
+
+.contacto__formulario--política-privacidad{
+  width: 100%;
+  text-align: center;
   display: block;
   padding-bottom: 1rem;
   color: var(--color-negro)
@@ -1490,6 +1522,34 @@ img {
 
 }
 
+@media (max-width: 1200px) {
+  .contacto {
+    justify-content: space-evenly;
+    gap: 1.5rem;
+  }
+
+  .contacto__titulo {
+    font-size: 1.4rem;
+    padding: 1.2rem;
+  }
+
+  .contacto__formulario {
+    flex-direction: column;
+    align-items: center;
+    width: 40%;
+    padding: 1.8rem;
+    border-radius: 1.6rem;
+  }
+
+  .contacto__formulario--leyenda {
+    font-size: 1.15rem;
+  }
+
+  .contacto__formulario--etiqueta {
+    font-size: 1rem;
+  }
+}
+
 @media (max-width: 900px) {
   .contacto {
     flex-direction: column;
@@ -1503,18 +1563,21 @@ img {
   }
 
   .contacto__formulario {
+    flex-direction: column;
     width: 85%;
     padding: 1.2rem;
     margin: 0 auto;
     border-radius: 1.2rem;
+    align-items: center;
+    text-align: center;
   }
 
-  .contacto__formulario--leyenda{
+  .contacto__formulario--leyenda {
     font-size: 1.07rem;
     padding-bottom: 0.7rem;
   }
-  
-  .contacto__formulario--etiqueta{
+
+  .contacto__formulario--etiqueta {
     width: 100%;
     text-align: center;
     padding-bottom: 0.7rem;
@@ -1527,6 +1590,7 @@ img {
     flex-direction: column;
     padding: 0 0.3rem;
     width: 100%;
+    justify-content: center;
   }
 
   .contacto__titulo {
@@ -1535,18 +1599,21 @@ img {
   }
 
   .contacto__formulario {
-    max-width: 100%;
+    flex-direction: column;
     width: 80%;
+    max-width: 100%;
     padding: 1.4rem;
     border-radius: 1.2rem;
+    align-items: center;
+    text-align: center;
   }
 
-  .contacto__formulario--leyenda{
+  .contacto__formulario--leyenda {
     font-size: 0.95rem;
     padding-bottom: 0.3rem;
   }
-  
-  .contacto__formulario--etiqueta{
+
+  .contacto__formulario--etiqueta {
     padding-bottom: 0.4rem;
     font-size: 0.87rem;
   }
@@ -1633,6 +1700,8 @@ img {
   background-color: rgba(0, 0, 0, 0.05);
   border-left: 4px solid var(--color-principal);
   border-radius: 0.6rem;
+  background-color: var(--color-sumario);
+  color: var(--color-negro)
 }
 
 
@@ -1717,7 +1786,6 @@ img {
   text-align: center;
   width: 100%;
   padding: 1rem;
-  color: var(--color-negro);
 }
 
 .sobre-nosotros__historia,.sobre-nosotros__juramento{
@@ -1877,8 +1945,6 @@ img {
   padding: 2rem 1rem;
   text-align: center;
   width: 100%;
-  color: var(--color-negro);
-  letter-spacing: 0.5px;
 }
 
 .calidad {
@@ -2096,6 +2162,7 @@ img {
   font-size: 1.5rem;
   text-align: center;
   padding:2rem;
+  color:white;
 }
 
 .equipo__descripcion{
@@ -2142,16 +2209,6 @@ img {
   justify-content: center;
   gap: 2rem;
   padding: 2rem 1rem;
-}
-
-.equipo__titulo {
-  font-family: var(--fuente-secundaria);
-  width: 100%;
-  font-size: 2rem;
-  text-align: center;
-  padding: 2rem 1rem;
-  color: var(--color-negro);
-  letter-spacing: 0.5px;
 }
 
 .equipo__descripcion {
@@ -2553,6 +2610,7 @@ img {
   border-radius: 2rem;
   border: 3px solid var(--color-negro);
   overflow-wrap: break-word;
+  color: var(--color-negro)
 }
 
 .hitos__descripcion,.evolucion-kirby__descripcion,.evolucion-mario__descripcion,.evolucion-splat__descripcion{
@@ -2752,7 +2810,8 @@ img {
   padding: 1rem;
   text-align: center;
   border-bottom: 1px solid #e7e7e7;
-  transition: background 0.3s ease;
+  transition: background-color 0.5s ease;
+  color: var(--color-negro)
 }
 
 .tabla__body--titulo{
@@ -2831,6 +2890,7 @@ img {
   font-family: var(--fuente-secundaria);
   padding:1.5rem;
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
+  color: var(--color-negro)
 }
 
 .analisis__mario--titulo{
@@ -2839,6 +2899,7 @@ img {
   font-family: var(--fuente-secundaria);
   padding:1.5rem;
   text-shadow: -3px 3px 0 var(--color-principal__mario);
+  color: var(--color-negro)
 }
 
 
@@ -2848,6 +2909,7 @@ img {
   font-family: var(--fuente-secundaria);
   padding:1.5rem;
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
+  color: var(--color-negro)
 }
 
 
@@ -2858,6 +2920,7 @@ img {
   padding:1rem;
   background-color: rgba(255,255,255,0.7);
   border-radius: 2rem;
+  color: var(--color-negro)
 }
 
 .analisis__splatoon--imagen,.analisis__mario--imagen,.analisis__kirby--imagen{
@@ -3008,8 +3071,7 @@ img {
 
 .voto{
   display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap:2rem;
   padding:2rem;
 }
@@ -3032,6 +3094,7 @@ img {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
   max-width: 400px;
   min-width: 260px; 
   padding:2rem;
@@ -3102,7 +3165,7 @@ img {
 }
 
 .voto__figura--imagen{
-  width: 50%;
+  width: 40%;
   object-fit: cover;
   border-radius: 4rem;
   border: 4px solid var(--color-secundario);
@@ -3452,7 +3515,7 @@ img {
 }
 
 .body-splatoon{
-  background-color: #eed3f4;
+  background-color: var(--color-fondo-splatoon);
 }
 
 /* Introducción Splatoon*/
@@ -3928,7 +3991,6 @@ img {
   overflow-wrap: break-word;
   width: 80%;
   padding: 2rem;
-  color: var(--color-negro);
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
@@ -4165,7 +4227,6 @@ img {
   text-align: center;
   width: 100%;
   padding: 2rem 1rem;
-  color: var(--color-negro);
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
@@ -4296,7 +4357,6 @@ img {
   max-width: 75%;
   width: 100%;
   padding:1rem;
-  color: var(--color-negro);
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
@@ -4659,7 +4719,7 @@ img {
   }
 }
 .body-mario{
-  background-color: #f0a4a4;
+  background-color: var(--color-fondo-mario);
 }
 
 /* Introducción Mario */
@@ -4776,6 +4836,7 @@ img {
   font-family: var(--fuente-base);
   text-align: center;
   font-weight: 600;
+  color: var(--color-negro)
 }
 
 .hitos-2d-1985__descripcion,
@@ -4939,6 +5000,7 @@ img {
   font-size: 0.9rem;
   text-align: center;
   font-weight: 900;
+  color: var(--color-negro)
 }
 
 
@@ -5144,6 +5206,7 @@ img {
   font-weight: 900;
   background: rgba(255,255,255,0.6);
   padding:1rem;
+  color: var(--color-negro)
 }
 
 @media (max-width: 1200px) {
@@ -5545,7 +5608,7 @@ img {
    ========================= */
 
 .body-kirby{
-  background-color: #ddfbf1 
+  background-color: var(--color-fondo-kirby)
 }
 
 .cabecera-kirby{
@@ -5852,6 +5915,7 @@ img {
   width: 100%;
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
   border-radius: 2rem;
+  color: var(--color-negro)
 }
 
 .cronologia-kirby-1992__imagen,
@@ -6026,6 +6090,7 @@ img {
   background-image: url(../imgs/kirby-fondo-titulos.jpg);
   background-size: cover;
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
+  color: var(--color-negro)
 }
 
 
@@ -6069,6 +6134,7 @@ img {
   font-size: 0.95rem;
   text-align: center;
   padding: 0.5rem 1rem;
+  color: var(--color-negro)
 }
 
 .habilidad-espada__descripcion,
@@ -6093,7 +6159,7 @@ img {
   font-family: var(--fuente-secundaria);
   font-size: 1.05rem;
   text-align: center;
-  margin-top: 0.5rem;
+  color: var(--color-negro)
 }
 
 .habilidad-espada__lista,
@@ -6119,6 +6185,7 @@ img {
 .habilidad-sueno__lista--item {
   padding: 0.3rem 0;
   text-align: center;
+  color: var(--color-negro);
 }
 
 @media screen and (max-width: 1200px) {
@@ -6626,7 +6693,6 @@ img {
   max-width: 75%;
   width: 100%;
   padding: 1rem;
-  color: var(--color-negro);
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
 }
 .curiosidades-kirby__origen,.curiosidades-kirby__habilidades {
