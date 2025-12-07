@@ -6035,15 +6035,63 @@ css
   width: 60%;
 }
 
-.introduccion-kirby__descripcion{
-  font-family: var(--fuente-base);
-  font-size: 1.2rem;
-  font-weight: 500;
-  text-align: center;
-  padding:2rem;
-  width: 85%;
+@media (max-width: 1200px) {
+  .introduccion-kirby__titulo {
+    font-size: 2.2rem;
+    padding: 1.8rem;
+  }
+
+  .introduccion-kirby__imagen {
+    max-width: 55%;
+    border-width: 5px;
+  }
+
+  .introduccion-kirby__subtitulo {
+    width: 65%;
+    font-size: 1.2rem;
+    padding: 1.8rem;
+  }
+
 }
 
+@media (max-width: 900px) {
+  .introduccion-kirby__titulo {
+    font-size: 2rem;
+    padding: 1.6rem;
+  }
+
+  .introduccion-kirby__imagen {
+    max-width: 65%;
+    border-width: 5px;
+  }
+
+  .introduccion-kirby__subtitulo {
+    width: 80%;
+    font-size: 1.15rem;
+    padding: 1.6rem;
+  }
+
+}
+
+@media (max-width: 600px) {
+  .introduccion-kirby__titulo {
+    font-size: 1.2rem;
+    padding: 1.4rem;
+  }
+
+  .introduccion-kirby__imagen {
+    max-width: 80%;
+    border-width: 4px;
+    border-radius: 3rem;
+  }
+
+  .introduccion-kirby__subtitulo {
+    width: 95%;
+    font-size: 0.7rem;
+    padding: 1.2rem;
+  }
+
+}
 /*Cronología Kirby */
 
 #cronologia-kirby{
@@ -6136,11 +6184,11 @@ css
   padding:2rem;
 }
 
-@media (max-width: 1300px) {
-  #cronologia-kirby{
+@media (max-width: 1200px) {
+  #cronologia-kirby {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     gap: 2.5rem;
   }
 
@@ -6152,16 +6200,15 @@ css
   .cronologia-kirby-2011,
   .cronologia-kirby-2016,
   .cronologia-kirby-2018,
-  .cronologia-kirby-2022{
+  .cronologia-kirby-2022 {
     max-width: 45%;
     width: 45%;
   }
 }
 
-
 @media (max-width: 900px) {
-  .cronologia-kirby__titulo{
-    font-size: 1.8rem;
+  .cronologia-kirby__titulo {
+    font-size: 1.3rem;
     padding: 1.5rem;
   }
 
@@ -6173,10 +6220,10 @@ css
   .cronologia-kirby-2011,
   .cronologia-kirby-2016,
   .cronologia-kirby-2018,
-  .cronologia-kirby-2022{
+  .cronologia-kirby-2022 {
     max-width: 100%;
     width: 100%;
-    padding: 1.5rem 1rem;
+    padding: 1.5rem 1.2rem;
   }
 
   .cronologia-kirby-1992__titulo,
@@ -6187,7 +6234,7 @@ css
   .cronologia-kirby-2011__titulo,
   .cronologia-kirby-2016__titulo,
   .cronologia-kirby-2018__titulo,
-  .cronologia-kirby-2022__titulo{
+  .cronologia-kirby-2022__titulo {
     font-size: 1.4rem;
     width: 100%;
     padding: 1rem;
@@ -6201,7 +6248,7 @@ css
   .cronologia-kirby-2011__imagen,
   .cronologia-kirby-2016__imagen,
   .cronologia-kirby-2018__imagen,
-  .cronologia-kirby-2022__imagen{
+  .cronologia-kirby-2022__imagen {
     width: 100%;
   }
 
@@ -6213,9 +6260,59 @@ css
   .cronologia-kirby-2011__descripcion,
   .cronologia-kirby-2016__descripcion,
   .cronologia-kirby-2018__descripcion,
-  .cronologia-kirby-2022__descripcion{
+  .cronologia-kirby-2022__descripcion {
     font-size: 1rem;
     padding: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #cronologia-kirby {
+    gap: 1.8rem;
+    padding: 1.2rem 1rem;
+  }
+
+  .cronologia-kirby__titulo {
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+
+  .cronologia-kirby-1992,
+  .cronologia-kirby-1993,
+  .cronologia-kirby-1996,
+  .cronologia-kirby-2004,
+  .cronologia-kirby-2010,
+  .cronologia-kirby-2011,
+  .cronologia-kirby-2016,
+  .cronologia-kirby-2018,
+  .cronologia-kirby-2022 {
+    padding: 1.2rem 0.9rem;
+  }
+
+  .cronologia-kirby-1992__titulo,
+  .cronologia-kirby-1993__titulo,
+  .cronologia-kirby-1996__titulo,
+  .cronologia-kirby-2004__titulo,
+  .cronologia-kirby-2010__titulo,
+  .cronologia-kirby-2011__titulo,
+  .cronologia-kirby-2016__titulo,
+  .cronologia-kirby-2018__titulo,
+  .cronologia-kirby-2022__titulo {
+    font-size: 1.25rem;
+    padding: 0.9rem;
+  }
+
+  .cronologia-kirby-1992__descripcion,
+  .cronologia-kirby-1993__descripcion,
+  .cronologia-kirby-1996__descripcion,
+  .cronologia-kirby-2004__descripcion,
+  .cronologia-kirby-2010__descripcion,
+  .cronologia-kirby-2011__descripcion,
+  .cronologia-kirby-2016__descripcion,
+  .cronologia-kirby-2018__descripcion,
+  .cronologia-kirby-2022__descripcion {
+    font-size: 0.95rem;
+    padding: 0.9rem;
   }
 }
 
@@ -6891,7 +6988,7 @@ css
   flex-wrap: wrap;
   justify-content: center;
   gap: 1.5rem;
-  width: 75%;              /* igual que los bloques de jefes */
+  width: 75%;
 }
 
 .curiosidades-kirby__figura {
@@ -6900,7 +6997,7 @@ css
   justify-content: space-around;
   align-items: center;
   gap: 1rem;
-  max-width: 30%;          /* 3 columnas en escritorio */
+  max-width: 30%;
   width: 100%;
   padding: 1rem;
   background-image: url(../imgs/kirby-fondo-figura.jpg);
