@@ -27,6 +27,15 @@
       <section>   Curiosidades (artículos temáticos: origen, diseño, goombas)
       <aside>     Galería de momentos icónicos de la saga
     <footer>      Contacto, información legal, logo y botón "volver al inicio"
+
+    ACCESIBILIDAD Y BUENAS PRÁCTICAS:
+    - Metadatos: charset UTF-8, viewport responsive, SEO, Open Graph
+    - Imágenes con atributos alt + width/height definidos
+    - Uso correcto de <header>, <nav>, <main>, <section>, <article>, <aside>, <figure>, <figcaption>, <address>, <footer>
+    - Títulos jerárquicos: un solo h1, h2 para secciones, h3/h4/h5 para subniveles
+    - Listas <ul>/<li> y <dl>/<dt>/<dd> para agrupar datos relacionados
+    - Enlaces de navegación entre sagas y a páginas globales
+    - Botón hamburguesa para menú móvil (preparado para JS/CSS)
     =========================================================================
     -->
     <meta charset="utf-8" />
@@ -57,11 +66,17 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body class="body-mario" id="inicio">
+    <!-- =====================================================================
+         HEADER: Cabecera específica de la saga Mario
+         Incluye logo global, menú de sagas, enlaces y buscador
+         ===================================================================== -->
     <header class="cabecera-mario">
-      <!-- Logotipo principal y acceso rápido al inicio -->
+      <!-- Botón hamburguesa para menú móvil (gestión futura con JS/CSS) -->
       <button class="cabecera__buscador--hamburguesa" type="button">
         &#9776;
       </button>
+
+      <!-- Logotipo principal y enlace rápido a la página de inicio general -->
       <a class="cabecera__logo" href="../index.html">
         <img
           class="cabecera__logo--imagen"
@@ -71,8 +86,9 @@
           height="1024"
         />
       </a>
+
+      <!-- Menú principal de navegación entre sagas y secciones destacadas -->
       <nav class="cabecera-mario__menu">
-        <!-- Menú principal de navegación entre sagas y páginas destacado -->
         <p class="cabecera-mario__menu--titulo">
           <img
             class="cabecera-mario__menu--imagen"
@@ -83,6 +99,8 @@
           />
           Nintendo Manía
         </p>
+
+        <!-- Lista de navegación a otras sagas y páginas globales -->
         <ul class="cabecera-mario__menu--lista">
           <li>
             <a class="cabecera-mario__menu--enlace" href="./splatoon.html"
@@ -111,6 +129,8 @@
           </li>
         </ul>
       </nav>
+
+      <!-- Navegación secundaria: bloque de búsqueda global -->
       <nav class="cabecera__buscador">
         <!-- Formulario de búsqueda semántico -->
         <form name="buscador">
@@ -132,7 +152,15 @@
         </form>
       </nav>
     </header>
+
+    <!-- =====================================================================
+         MAIN: Contenido principal de la página dedicada a Mario
+         ===================================================================== -->
     <main>
+      <!-- ===================================================================
+           SECTION: Introducción general a Mario
+           Presenta el h1 de la página, descripción breve e imagen destacada
+           =================================================================== -->
       <section class="introduccion-mario">
         <h1 class="introduccion-mario__titulo">
           El Fontanero que Salvó a Nintendo
@@ -149,10 +177,17 @@
           height="1080"
         />
       </section>
+
+      <!-- ===================================================================
+           SECTION: Hitos clásicos 2D
+           Cada <article> representa un título clave de la era de plataformas 2D
+           =================================================================== -->
       <section id="hitos-2d">
         <h2 class="hitos-2d__titulo">
           Hitos Clásicos: La Era de las Plataformas 2D
         </h2>
+
+        <!-- ARTICLE: Super Mario Bros. (1985) -->
         <article class="hitos-2d-1985">
           <h3 class="hitos-2d-1985__titulo">Super Mario Bros. (1985)</h3>
           <figure class="hitos-2d-1985__figura">
@@ -176,6 +211,8 @@
             ocultos.
           </p>
         </article>
+
+        <!-- ARTICLE: Super Mario Bros. 3 (1988) -->
         <article class="hitos-2d-1988">
           <h3 class="hitos-2d-1988__titulo">Super Mario Bros. 3 (1988)</h3>
           <figure class="hitos-2d-1988__figura">
@@ -197,6 +234,8 @@
             traje de Mapache con capacidad de volar.
           </p>
         </article>
+
+        <!-- ARTICLE: Super Mario World (1990) -->
         <article class="hitos-2d-1990">
           <h3 class="hitos-2d-1990__titulo">Super Mario World (1990)</h3>
           <figure class="hitos-2d-1990__figura">
@@ -219,6 +258,8 @@
             zonas del mapamundi.
           </p>
         </article>
+
+        <!-- ARTICLE: Yoshi's Island (1995) -->
         <article class="hitos-2d-1995">
           <h3 class="hitos-2d-1995__titulo">Yoshi's Island (1995)</h3>
           <figure class="hitos-2d-1995__figura">
@@ -242,6 +283,11 @@
           </p>
         </article>
       </section>
+
+      <!-- ===================================================================
+           SECTION: Hitos 3D
+           Analiza los títulos que redefinen la saga en tres dimensiones
+           =================================================================== -->
       <section id="hitos-3d">
         <h2 class="hitos-3d__titulo">
           La Revolución 3D: El Salto Dimensional (1996)
@@ -253,6 +299,8 @@
           interacción en un espacio tridimensional. Esta sección muestra los
           títulos que han redefinido esta perspectiva.
         </p>
+
+        <!-- ARTICLE: Super Mario 64 (1996) -->
         <article class="hitos-3d-1996">
           <h3 class="hitos-3d-1996__titulo">Super Mario 64 (1996)</h3>
           <figure class="hitos-3d-1996__figura">
@@ -275,14 +323,16 @@
           </p>
           <blockquote class="hitos-3d__cita">
             <p class="hitos-3d__cita--texto">
-              "Mario 64 fue el momento en que comprendimos que el 3D no era solo gráficos,
-              sino una nueva forma de pensar el diseño de niveles."
+              "Mario 64 fue el momento en que comprendimos que el 3D no era solo
+              gráficos, sino una nueva forma de pensar el diseño de niveles."
             </p>
             <cite class="hitos-3d__cita--autor">
               — Shigeru Miyamoto, Director de Mario 64
             </cite>
           </blockquote>
         </article>
+
+        <!-- ARTICLE: Super Mario Sunshine (2002) -->
         <article class="hitos-3d-2002">
           <h3 class="hitos-3d-2002__titulo">Super Mario Sunshine (2002)</h3>
           <figure class="hitos-3d-2002__figura">
@@ -305,6 +355,8 @@
             acuático.
           </p>
         </article>
+
+        <!-- ARTICLE: Super Mario Galaxy (2007) -->
         <article class="hitos-3d-2007">
           <h3 class="hitos-3d-2007__titulo">Super Mario Galaxy (2007)</h3>
           <figure class="hitos-3d-2007__figura">
@@ -327,6 +379,8 @@
             los saltos entre esferas cósmicas.
           </p>
         </article>
+
+        <!-- ARTICLE: Super Mario 3D Land (2011) -->
         <article class="hitos-3d-2011">
           <h3 class="hitos-3d-2011__titulo">Super Mario 3D Land (2011)</h3>
           <figure class="hitos-3d-2011__figura">
@@ -350,6 +404,8 @@
             Reintrodujo el Traje Tanooki (Mapache).
           </p>
         </article>
+
+        <!-- ARTICLE: Super Mario 3D World (2013) -->
         <article class="hitos-3d-2013">
           <h3 class="hitos-3d-2013__titulo">Super Mario 3D World (2013)</h3>
           <figure class="hitos-3d-2013__figura">
@@ -374,6 +430,8 @@
             multijugador cooperativo de cuatro jugadores en pantalla.
           </p>
         </article>
+
+        <!-- ARTICLE: Super Mario Odyssey (2017) -->
         <article class="hitos-3d-2017">
           <h3 class="hitos-3d-2017__titulo">Super Mario Odyssey (2017)</h3>
           <figure class="hitos-3d-2017__figura">
@@ -395,10 +453,10 @@
             "capturar" a la mayoría de los enemigos y objetos, adquiriendo sus
             habilidades de forma temporal.
           </p>
-           <blockquote class="hitos-3d__cita">
+          <blockquote class="hitos-3d__cita">
             <p class="hitos-3d__cita--texto">
-              "Queríamos que cada Reino se sintiera como un lugar único con su propia 
-              identidad, no solo un conjunto de niveles."
+              "Queríamos que cada Reino se sintiera como un lugar único con su
+              propia identidad, no solo un conjunto de niveles."
             </p>
             <cite class="hitos-3d__cita--autor">
               — Kenta Motokura, Director de Super Mario Odyssey
@@ -406,6 +464,11 @@
           </blockquote>
         </article>
       </section>
+
+      <!-- ===================================================================
+           SECTION: Personajes clave del Reino Champiñón
+           Cada <article> analiza un personaje principal y su evolución
+           =================================================================== -->
       <section id="personajes-mario">
         <h2 class="personajes__titulo">
           Análisis de Personajes Clave y su Evolución
@@ -415,6 +478,8 @@
           habitantes, aliados y antagonistas. Analizamos el rol semántico de los
           personajes más importantes de la saga.
         </p>
+
+        <!-- ARTICLE: Mario -->
         <article class="personajes-mario">
           <h3 class="personajes-mario__titulo">
             Mario: El Héroe, el Icono y el Saltador
@@ -442,6 +507,8 @@
             siendo el punto central de cada innovación jugable desde 1985.
           </p>
         </article>
+
+        <!-- ARTICLE: Luigi -->
         <article class="personajes-luigi">
           <h3 class="personajes-luigi__titulo">
             Luigi: El Hermano Tímido y el Saltador Alto
@@ -468,6 +535,8 @@
             precisión.
           </p>
         </article>
+
+        <!-- ARTICLE: Bowser -->
         <article class="personajes-bowser">
           <h3 class="personajes-bowser__titulo">Bowser: El Villano Esencial</h3>
           <figure class="personajes-bowser__figura">
@@ -490,6 +559,8 @@
             narrativo que impulsa cada nueva innovación de gameplay de Mario.
           </p>
         </article>
+
+        <!-- ARTICLE: Princesa Peach -->
         <article class="personajes-peach">
           <h3 class="personajes-peach__titulo">
             Princesa Peach: De Damisela a Soberana
@@ -512,6 +583,8 @@
             su soberanía sobre el Reino Champiñón.
           </p>
         </article>
+
+        <!-- ARTICLE: Yoshi y Toad -->
         <article class="personajes-aliados">
           <h3 class="personajes-aliados__titulo">
             Yoshi y Toad: Los Aliados Esenciales
@@ -539,6 +612,11 @@
           </p>
         </article>
       </section>
+
+      <!-- ===================================================================
+           SECTION: Curiosidades y secretos
+           Reúne artículos sobre origen de Mario, diseño y teorías de lore
+           =================================================================== -->
       <section id="curiosidades-mario">
         <h2 class="curiosidades-mario__titulo">
           Curiosidades y Secretos del Reino Champiñón
@@ -547,6 +625,8 @@
           El juego que definió una industria está lleno de secretos de
           desarrollo, decisiones creativas icónicas y lore oculto.
         </p>
+
+        <!-- ARTICLE: Origen de Mario y la regla del salto -->
         <article class="curiosidades-mario-origen">
           <h3 class="curiosidades-mario-origen__titulo">
             El Origen de Mario y la Regla del Salto
@@ -575,6 +655,8 @@
             >
           </blockquote>
         </article>
+
+        <!-- ARTICLE: Diseño de Mario -->
         <article class="curiosidades-mario-diseno-mario">
           <h3 class="curiosidades-mario-diseno-mario__titulo">
             ¿Por qué tiene Bigote y Gorra?
@@ -615,6 +697,8 @@
             </dd>
           </dl>
         </article>
+
+        <!-- ARTICLE: Goombas y lore oscuro -->
         <article class="curiosidades-mario-goombas">
           <h3 class="curiosidades-mario-goombas__titulo">
             El Origen de los Goombas y el Lore Oscuro
@@ -640,8 +724,12 @@
           </p>
         </article>
       </section>
+
+      <!-- ===================================================================
+           ASIDE: Galería de momentos icónicos
+           Contenido complementario al main, centrado en imágenes y pies
+           =================================================================== -->
       <aside id="imagenes-destacadas-mario">
-        <!-- ASIDE: Galería de momentos icónicos -->
         <h2 class="imagenes-destacadas__titulo">
           Galería de Momentos Icónicos
         </h2>
@@ -649,6 +737,8 @@
           Capturas y arte oficial que ilustran los momentos clave y diseño de la
           saga Super Mario Bros.
         </p>
+
+        <!-- Figura 1: Castillo de Peach en Mario 64 -->
         <figure class="imagenes-destacadas__figura">
           <img
             src="../assets/imgs/captura_mario64.jpg"
@@ -662,6 +752,8 @@
             3D.
           </figcaption>
         </figure>
+
+        <!-- Figura 2: FLUDD en Mario Sunshine -->
         <figure class="imagenes-destacadas__figura">
           <img
             src="../assets/imgs/FLUDD.jpg"
@@ -675,6 +767,8 @@
             Mario Sunshine.
           </figcaption>
         </figure>
+
+        <!-- Figura 3: Mario Galaxy -->
         <figure class="imagenes-destacadas__figura">
           <img
             src="../assets/imgs/fanart_mario_galaxy.jpg"
@@ -688,6 +782,8 @@
             gravedad de Galaxy.
           </figcaption>
         </figure>
+
+        <!-- Figura 4: Cappy capturando a un Goomba -->
         <figure class="imagenes-destacadas__figura">
           <img
             src="../assets/imgs/mario_goomba_cappy.png"
@@ -701,6 +797,8 @@
             transformarse en cualquier cosa.
           </figcaption>
         </figure>
+
+        <!-- Figura 5: Estilo crayón de Yoshi's Island -->
         <figure class="imagenes-destacadas__figura">
           <img
             src="../assets/imgs/mario_crayon.png"
@@ -716,12 +814,19 @@
         </figure>
       </aside>
     </main>
+
+    <!-- =====================================================================
+         FOOTER: Contacto, información legal y navegación extra
+         ===================================================================== -->
     <footer class="pie-pagina">
       <!-- Sección de contacto semántica con <address> -->
       <section class="pie-pagina__contacto">
         <h2 class="pie-pagina__contacto--titulo">Contacto</h2>
-        <address class="pie-pagina__contacto--informacion" aria-label="Información de contacto">
-          <!-- Links de contacto: formulario, email, teléfono -->
+        <address
+          class="pie-pagina__contacto--informacion"
+          aria-label="Información de contacto"
+        >
+          <!-- Enlaces de contacto: formulario, email y teléfono -->
           <ul class="pie-pagina__contacto--lista">
             <li>
               <a class="pie-pagina__contacto--enlace" href="../contacto.html"
@@ -743,7 +848,8 @@
           </ul>
         </address>
       </section>
-      <!-- Sección de información legal -->
+
+      <!-- Sección de información legal y copyright -->
       <section class="pie-pagina__info">
         <h2 class="pie-pagina__info--titulo">Información legal</h2>
         <p class="pie-pagina__info--descripcion">
@@ -751,7 +857,8 @@
         </p>
         <p class="pie-pagina__info--descripcion">&copy; 2025 NintendoManía.</p>
       </section>
-      <!-- Sección extra: Logo y botón de volver al inicio -->
+
+      <!-- Sección extra: Logo y botón para volver al inicio (#inicio) -->
       <section class="footer-extra">
         <img
           class="footer-extra__imagen"
