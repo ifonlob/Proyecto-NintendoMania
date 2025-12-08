@@ -6,8 +6,9 @@
 - [Justificación de la Temática](#justificación-de-la-temática)
 - [Estructura de archivos](#estructura-de-archivos)
 - [Estructura del Proyecto](#estructura-del-proyecto)
-- [Estructura HTML5 Semántica](#-estructura-html5-semántica)
-- [Análisis de Estructura por Página](#-análisis-de-estructura-por-página)
+- [Estructura HTML5 Semántica](#estructura-html5-semántica)
+- [Evolución HTML : HTML 4.01 a HTML5]()
+- [Análisis de Estructura por Página](#análisis-de-estructura-por-página)
 - [Uniformidad y Diferenciación](#uniformidad-y-diferenciación)
 - [Buenas Prácticas Aplicadas](#buenas-prácticas-aplicadas)
 - [Estructura CSS y Diseño Visual](#estructura-css-y-diseño-visual)
@@ -180,6 +181,39 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 - **Uso:** Presente en todas las páginas
 - **Beneficio:** Refuerza coherencia estructural del sitio
 - **Accesibilidad:** Ubicación consistente de información secundaria
+
+---
+
+## Evolución HTML: HTML4.01 a HTML5
+
+### DOCTYPE
+- **HTML4.01**: `<!DOCTYPE html PUBLIC ...>` (largo, complejo)
+- **HTML5**: `<!DOCTYPE html>` (simple, universal)
+- **Estado**: Por esa razón hemos usado HTML5
+
+### Elementos Semánticos
+| Estructura | HTML4 | HTML5 | Estado |
+|-----------|-------|-------|--------|
+| Navegación | `<div class="nav">` | `<nav>` | Usado |
+| Encabezado | `<div class="header">` | `<header>` | Usado |
+| Artículo | `<div class="article">` | `<article>` | Usado |
+| Lateral | `<div class="sidebar">` | `<aside>` | Usado |
+| Principal | `<div id="main">` | `<main>` | Usado |
+
+### Tipos de Input (HTML5)
+- `<input type="email">` (validación nativa)
+- `<input type="tel">` (teclado teléfono en mobile)
+- `<input type="url">` (validación URL)
+- `<input type="date">` (calendario)
+- **Antes (HTML4)**: Solo `<input type="text">` + validación JavaScript
+
+### Elementos Obsoletos EVITADOS
+| Elemento | Razón | Alternativa |
+|----------|-------|-------------|
+| `<font>` | Mezcla contenido + estilo | CSS + `<span>` |
+| `<center>` | Obsoleto en HTML5 | CSS `text-align: center` |
+| `<u>` | Confunde con enlaces | CSS `text-decoration` |
+| `<b>` sin semántica | Desaconsejado | `<strong>` o CSS |
 
 ---
 
@@ -432,7 +466,7 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 - Organización interna de `<section>`
 - Uso específico de `<article>` según contenido
 - Cantidad y tipo de tablas/listas
-- Complejidad de `<aside>`
+- Uso de `<aside>`
 - Profundidad de análisis
 
 ---
@@ -600,7 +634,7 @@ styles.css
 │   ├── .sagas-principales
 │   ├── .extra (puntos destacados + noticias)
 │   ├── .newsletter (formulario)
-│   └── @media queries (1200px, 800px, 500px, 400px)
+│   └── @media queries (1200px, 800px, 500px)
 ├── 7. Página contacto (contacto.html)
 │   ├── .colaboracion
 │   ├── .contacto (formulario)
@@ -616,11 +650,11 @@ styles.css
 │   ├── Estilos de votación
 │   └── @media queries
 ├── 10-12. Páginas de sagas (Splatoon, Mario, Kirby)
-│   ├── Estilos de cronología
-│   ├── Estilos de armas/habilidades
-│   ├── Cards temáticas
-│   └── @media queries
-└── Responsive breakpoints globales (1400px, 1100px, 850px, 650px, 450px)
+    ├── Estilos de cronología
+    ├── Estilos de armas/habilidades
+    ├── Tarjetas temáticas
+    └── @media queries
+
 ```
 
 ### Especificidad CSS
@@ -643,7 +677,7 @@ A lo largo del desarrollo del proyecto hemos utilizado **BEM (Block Element Modi
 - `.cabecera` - Header del sitio
 - `.pie-pagina` - Footer
 - `.newsletter` - Sección de suscripción
-- `.sagas-principales` - Cards de sagas
+- `.sagas-principales` - Tarjetas de sagas
 - `.contacto` - Formulario de contacto
 - `.faq-contacto` - Preguntas frecuentes
 - `.puntos-destacados` - Módulo de destacados
@@ -690,7 +724,7 @@ Todos los elementos interactivos tienen estados de foco visibles:
 ```
 
 **Transformaciones aplicadas:**
-- `translateY(-6px)`: Desplazamiento vertical para feedback visual
+- `translateY(-6px)`: Desplazamiento vertical.
 - `scale(1.05)`: Aumento de tamaño para botones
 - Cambio de color de fondo
 - Cambio de color de borde
@@ -751,7 +785,7 @@ El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante 
 
 ### Especificidades Detectadas y Justificadas
 
-- Uso de prefijos de vendor (`-webkit-`) , prácticamente es compatible con todos los navegadores modernos.
+- Uso de prefijos de vendor (`-webkit-`) , prácticamente es compatible con todos los navegadores antiguos.
 - Variables CSS
 - Media queries bien estructuradas
 - Sin `!important`
@@ -818,7 +852,7 @@ El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante 
 - Active: Elevación menor
 - Focus: Borde primario visible
 
-### Cards de Sagas
+### Tarjetas de Sagas
 
 **Selector base:** `.sagas-principales__mario`, `.sagas-principales__splatoon`, `.sagas-principales__kirby`
 
