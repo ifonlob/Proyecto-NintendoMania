@@ -678,9 +678,53 @@ A lo largo del desarrollo del proyecto hemos utilizado **BEM (Block Element Modi
 - Código autodocumentado (BEM actúa como especificación y se documenta por sí solo)
 
 
+---
+
+## Accesibilidad Visual
+
+Todos los elementos interactivos tienen estados de foco visibles:
+
+```css
+.cabecera__menu--enlace:hover { color: var(--color-secundario); }
+.newsletter__boton:hover { 
+    background-color: var(--color-secundario);
+    transform: translateY(-6px);
+}
+.contacto__formulario--input:focus { 
+    border-color: var(--color-secundario);
+}
+```
+
+**Transformaciones aplicadas:**
+- `translateY(-6px)`: Desplazamiento vertical para feedback visual
+- `scale(1.05)`: Aumento de tamaño para botones
+- Cambio de color de fondo
+- Cambio de color de borde
 
 
+### Respetar Preferencias del Usuario
 
+**Animaciones reducidas:**
+```css
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+```
+
+**Modo oscuro:**
+```css
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-fondo: #050816de;
+        --color-texto: #f5f5f5;
+        /* ... resto de variables */
+    }
+}
+```
 
 
 
