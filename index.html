@@ -139,7 +139,6 @@
       <!-- Buscador semántico con rol="search" para accesibilidad -->
       <nav
         class="cabecera__buscador"
-        aria-label="Buscador del sitio"
         aria-label="Buscar contenido en NintendoManía"
       >
         <!-- Formulario de búsqueda semántico -->
@@ -297,7 +296,6 @@
                 title="Abre en nueva ventana: Nintenderos"
                 aria-label="Leer más en Nintenderos"
               >
-                Ver noticia >
                 <img
                   class="noticias-destacadas__splatoon--imagen"
                   src="./assets/imgs/splatoon-3-noticias.jpg"
@@ -321,6 +319,9 @@
               <a
                 href="https://es.ign.com/compras/222040/news/el-pack-mas-irresistible-de-kirby-air-riders-se-encuentra-en-my-nintendo-store"
                 rel="noopener noreferrer"
+                target="_blank"
+                title="Leer artículo en IGN (abre en nueva ventana)"
+                aria-label="Ver nuevo pack Kirby Air Riders en IGN (sitio externo, abre en nueva ventana)"
               >
                 <img
                   class="noticias-destacadas__kirby--imagen"
@@ -345,6 +346,9 @@
               <a
                 href="https://www.rtve.es/noticias/20250913/super-mario-bros-40-anos-videojuego/16726271.shtml"
                 rel="noopener noreferrer"
+                target="_blank"
+                title="Leer artículo en RTVE (abre en nueva ventana)"
+                aria-label="Ver 40 aniversario Mario Bros en RTVE (sitio externo, abre en nueva ventana)"
               >
                 <img
                   class="noticias-destacadas__mario--imagen"
@@ -544,6 +548,7 @@
               type="email"
               name="email"
               placeholder="ejemplo@correo.es"
+              autocomplete="email"
               required
             />
           </label>
@@ -553,6 +558,7 @@
               class="newsletter__formulario--input"
               type="checkbox"
               name="privacidad"
+              aria-required="true"
               required
             />
           </label>
