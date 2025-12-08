@@ -1459,6 +1459,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .colaboracion__titulo{
@@ -1472,7 +1473,8 @@ img {
   font-family: var(--fuente-base);
   text-align: center;
   font-size: 1.2rem;
-  padding:0 1rem 1rem 1rem;
+  padding:1rem;
+  width: 80%;
 }
 
 .colaboracion__figura{
@@ -5682,6 +5684,13 @@ img {
   padding:1rem;
 }
 
+.hitos-3d__cita{
+  font-family: var(--fuente-base);
+  background-color: var(--color-principal__mario);
+  border-radius: 2rem;
+  padding:1.5rem;
+}
+
 @media (max-width: 1200px) {
   #hitos-3d {
     display: flex;
@@ -6168,7 +6177,7 @@ img {
   padding-bottom: 1.5rem;
 }
 
-.curiosidades-mario-diseno-mario__lista--item > p:first-of-type{
+.curiosidades-mario-diseno-mario__lista--termino{
   font-family: var(--fuente-secundaria);
   font-weight: 600;
 }
@@ -7803,6 +7812,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-evenly;
   gap: 1rem;
   max-width: 25%;
   width: 100%;
