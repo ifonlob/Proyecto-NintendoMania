@@ -20,14 +20,8 @@
 - [Diseño Responsive y Puntos de Ruptura](#diseño-responsive-y-puntos-de-ruptura)
 - [Validación CSS Completa](#validación-css-completa)
 - [Compatibilidad de Navegadores](#compatibilidad-de-navegadores)
-- [Testing de Accesibilidad](#testing-de-accesibilidad)
-- [Performance y Optimización](#performance-y-optimización)
-- [Proceso de Diseño](#proceso-de-diseño)
 - [Componentes CSS Documentados](#componentes-css-documentados)
-- [Análisis de Diseño por Página](#análisis-de-diseño-por-página)
-- [Limitaciones Actuales y Mejoras Futuras](#limitaciones-actuales-y-mejoras-futuras)
 - [Validación W3C](#validación-w3c)
-- [Estructura de Archivos](#estructura-de-archivos)
 - [Conclusión](#conclusión)
 
 ---
@@ -772,7 +766,7 @@ El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante 
 |-----------|---------|--------|------------------------|
 | **Chrome** | 120+ | ✓ Totalmente compatible | CSS Grid, Flexbox, Variables CSS, Media Queries |
 | **Firefox** | 121+ | ✓ Totalmente compatible | Soporte completo de todas las características |
-| **Safari** | 17+ | ✓ Compatible | Requiere `-webkit-` prefixes para algunos efectos transform |
+| **Safari** | 17+ | ✓ Compatible | Requiere `-webkit-` para algunos efectos transform |
 | **Edge** | 120+ | ✓ Totalmente compatible | Basado en Chromium, soporte idéntico a Chrome |
 
 ### Mobile
@@ -780,11 +774,162 @@ El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante 
 | Navegador | Versión | Estado | Notas de Compatibilidad |
 |-----------|---------|--------|------------------------|
 | **Chrome Mobile** | 120+ | ✓ | Soporte completo de responsive, touch-friendly |
-| **Safari iOS** | 17+ | ✓ | Requiere `-webkit-` prefixes, viewport correcto |
+| **Safari iOS** | 17+ | ✓ | Requiere `-webkit-`, viewport correcto |
 | **Samsung Internet** | 20+ | ✓ | Basado en Chromium, compatible |
 | **Android Browser** | 9+ | ✓ | Soporte de Media Queries, Flexbox |
 
+---
 
+
+
+## Componentes CSS Documentados
+
+### Botones
+
+**Selector base:** `.newsletter__boton`, `.contacto__formulario--boton`
+
+```css
+.newsletter__boton {
+    background-color: var(--color-principal);
+    border: 4px solid var(--color-secundario);
+    padding: 1.5rem;
+    border-radius: 2rem;
+    color: white;
+    font-weight: 600;
+    transition: border-color 0.4s ease, transform 0.5s ease;
+    cursor: pointer;
+}
+
+.newsletter__boton:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-negro);
+    border: 4px solid var(--color-principal);
+    transform: translateY(-6px);
+}
+
+.newsletter__boton:active {
+    transform: translateY(-3px);
+}
+```
+
+**Estados:**
+- Normal: Color principal con borde secundario
+- Hover: Colores invertidos que aporta contraste y elevación vertical
+- Active: Elevación menor
+- Focus: Borde primario visible
+
+### Cards de Sagas
+
+**Selector base:** `.sagas-principales__mario`, `.sagas-principales__splatoon`, `.sagas-principales__kirby`
+
+```css
+.sagas-principales__mario {
+    padding: 2rem;
+    background: var(--color-secundario);
+    border-radius: 6rem;
+    border: 5px solid var(--color-principal);
+    transition: transform 0.5s ease;
+}
+
+.sagas-principales__mario:hover {
+    transform: translateY(-6px);
+}
+
+.sagas-principales__mario--imagen {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 4rem;
+    border: 3px solid var(--color-negro);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s;
+}
+
+.sagas-principales__mario--imagen:hover {
+    transform: scale(1) rotate(-3deg);
+}
+```
+
+**Variantes:**
+- `.sagas-principales__mario` - Tema rojo Mario
+- `.sagas-principales__splatoon` - Tema magenta Splatoon
+- `.sagas-principales__kirby` - Tema rosa Kirby
+
+### Formularios
+
+**Selector base:** `.newsletter__formulario`, `.contacto__formulario`
+
+```css
+.newsletter__formulario--input {
+    padding: 1rem;
+    border: 1.5px solid #BDBDBD;
+    border-radius: 0.7rem;
+    font-size: 1rem;
+    background: var(--color-blanco);
+    transition: border 0.18s;
+}
+
+.newsletter__formulario--input:focus {
+    border: 3px solid var(--color-secundario);
+    outline: none;
+}
+
+.contacto__formulario--input {
+    width: 100%;
+    padding: 0.5rem;
+    border: 3px solid #b3c5f6;
+    border-radius: 1rem;
+    transition: border-color 0.75s ease;
+}
+
+.contacto__formulario--input:focus {
+    border-color: var(--color-secundario);
+}
+```
+
+**Características:**
+- Transiciones suaves en focus
+- Bordes coloreados que aportan contraste
+- Accesible sin JavaScript
+
+### Contenedores Expandibles (Details)
+
+**Selector base:** `.puntos-destacados__mario--sumario`, `.faq-contacto__sumario`
+
+```css
+.faq-contacto__sumario {
+    display: inline-block;
+    color: white;
+    background: var(--color-principal);
+    font-family: var(--fuente-secundaria);
+    padding: 1rem;
+    border: 4px solid var(--color-secundario);
+    border-radius: 2rem;
+    cursor: pointer;
+    transition: background-color 0.5s ease, transform 0.5s ease;
+}
+
+.faq-contacto__sumario:hover {
+    background-color: var(--color-secundario);
+    color: var(--color-negro);
+    transform: translateY(-6px);
+}
+
+.faq-contacto__sumario--descripcion {
+    font-size: 1rem;
+    padding: 1rem;
+    background-color: var(--color-sumario);
+    border-left: 4px solid var(--color-principal);
+    border-radius: 0.6rem;
+}
+```
+
+**Ventajas:**
+- Interactividad nativa HTML sin JavaScript
+- Accesible completamente
+- Estados claros (cuando están contraídos o extendidos)
+
+---
 
 
 ## Validación W3C
