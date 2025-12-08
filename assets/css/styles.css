@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Press+Start+2P&display=swap");
 
 /* =========================
    1. Reset básico
    ========================= */
 * {
-    margin: 0;
-    padding: 0;
-    outline: 0;
-    border: 0;
-    list-style: none;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  border: 0;
+  list-style: none;
+  box-sizing: border-box;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -20,25 +20,24 @@
   }
 }
 
-
 /* =========================
    2. Variables globales
    ========================= */
 :root {
-    --color-principal: #800E13;
-    --color-secundario: #48a1ee;
-    --color-principal__splatoon: #F02D7D;
-    --color-principal__mario: #E52521;
-    --color-principal__kirby: #ffb6e6;
-    --color-negro: #000000;
-    --color-blanco: #ffffff;
-    --color-sumario:#ffffffee;
-    --color-fondo: #c5e3f5;
-    --color-fondo-splatoon:#eed3f4;
-    --color-fondo-mario:#f0a4a4;
-    --color-fondo-kirby:#ddfbf1;
-    --fuente-base: 'Montserrat', Arial, sans-serif;
-    --fuente-secundaria: 'Press Start 2P', monospace;
+  --color-principal: #800e13;
+  --color-secundario: #48a1ee;
+  --color-principal__splatoon: #f02d7d;
+  --color-principal__mario: #e52521;
+  --color-principal__kirby: #ffb6e6;
+  --color-negro: #000000;
+  --color-blanco: #ffffff;
+  --color-sumario: #ffffffee;
+  --color-fondo: #c5e3f5;
+  --color-fondo-splatoon: #eed3f4;
+  --color-fondo-mario: #f0a4a4;
+  --color-fondo-kirby: #ddfbf1;
+  --fuente-base: "Montserrat", Arial, sans-serif;
+  --fuente-secundaria: "Press Start 2P", monospace;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -54,27 +53,26 @@
     background-color: var(--color-fondo);
     color: var(--color-texto);
   }
-
 }
 
 /* =========================
    3. Estilos generales
    ========================= */
 body {
-    background-color:var(--color-fondo);
-    line-height: 1.6;
-    font-family: var(--fuente-base);
+  background-color: var(--color-fondo);
+  line-height: 1.6;
+  font-family: var(--fuente-base);
 }
 
 a,
 a:hover,
 a:focus {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 img {
-    max-width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
 /* =========================
@@ -82,8 +80,8 @@ img {
    ========================= */
 
 .cabecera {
-  top:0;
-  left:0;
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -96,71 +94,65 @@ img {
   width: 20%;
 }
 
-.cabecera__logo{
+.cabecera__logo {
   display: flex;
   justify-content: center;
   width: 20%;
-  transition: transform 0.35s;
+  transition: transform 0.5s;
 }
 
-.cabecera__logo:hover{
+.cabecera__logo:hover {
   transform: translateY(-6px);
+  transition: transform 0.5s;
 }
 
-.cabecera__logo--imagen{
-  width: 45%;
+.cabecera__logo--imagen {
+  width: 55%;
   border-radius: 8rem;
-  margin:0.5rem;
+  margin: 0.5rem;
 }
 
-.cabecera__menu{
+.cabecera__menu {
   display: flex;
   flex-direction: column;
   align-content: center;
-  gap:2rem;
+  gap: 2rem;
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
 }
 
-
-.cabecera__menu--lista{
+.cabecera__menu--lista {
   display: flex;
   justify-content: space-between;
   font-family: var(--fuente-base);
-  width:100%;
-  gap:4rem;
+  width: 100%;
+  gap: 4rem;
   font-size: 1.2rem;
   font-weight: bolder;
   margin-bottom: 1rem;
-  
 }
 
-.cabecera__menu--titulo{
+.cabecera__menu--titulo {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:1.5rem;
-  color:var(--color-negro);
+  gap: 1.5rem;
+  color: var(--color-negro);
 }
 
-.cabecera__menu--imagen{
+.cabecera__menu--imagen {
   width: 10%;
 }
 
-.cabecera__menu--enlace{
+.cabecera__menu--enlace {
   font-family: var(--fuente-base);
   color: white;
   font-size: 1.5rem;
   font-weight: 900;
-  text-shadow: 
-    1.41px 1.41px var(--color-negro), 
-    2px 0 var(--color-negro), 
-    1.41px -1.41px var(--color-negro),
-    0 -2px var(--color-negro), 
-    -1.41px -1.41px var(--color-negro), 
-    -2px 0 var(--color-negro),
-    -1.41px 1.41px var(--color-negro), 
-    0 2px var(--color-negro);
+  text-shadow: 1.41px 1.41px var(--color-negro), 2px 0 var(--color-negro),
+    1.41px -1.41px var(--color-negro), 0 -2px var(--color-negro),
+    -1.41px -1.41px var(--color-negro), -2px 0 var(--color-negro),
+    -1.41px 1.41px var(--color-negro), 0 2px var(--color-negro);
 }
 
 .cabecera__menu--enlace:hover,
@@ -168,32 +160,31 @@ img {
   color: var(--color-secundario);
 }
 
-.cabecera__buscador--hamburguesa{
+.cabecera__buscador--hamburguesa {
   display: none;
   position: relative;
   z-index: 1;
 }
-.buscador__formulario{
+.buscador__formulario {
   display: flex;
   align-items: center;
-  width:80%;
+  width: 80%;
   gap: 0.5rem;
   padding: 0.4rem 1rem;
   background-color: var(--color-blanco);
   border-radius: 2rem;
-  box-shadow: 0 2px 4px rgba(0,0,0,.25);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 
-.buscador__formulario--imagen{
+.buscador__formulario--imagen {
   width: 1.4rem;
   height: 1.4rem;
 }
 
-.buscador__formulario--input{
+.buscador__formulario--input {
   background: transparent;
   font-size: 1rem;
 }
-
 
 @media screen and (max-width: 1400px) {
   .cabecera {
@@ -271,7 +262,7 @@ img {
     margin: 0;
   }
 
-  .buscador__formulario{
+  .buscador__formulario {
     width: 100%;
     margin: 0;
   }
@@ -287,7 +278,7 @@ img {
     border-radius: 50%;
     border: 3px solid var(--color-negro);
     background-color: #d77e7e;
-    box-shadow: 0 2px 4px rgba(0,0,0,.25);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     cursor: pointer;
   }
 }
@@ -310,14 +301,12 @@ img {
 
   .cabecera__menu--titulo {
     font-size: 1.3rem;
-    gap:0;
+    gap: 0;
   }
 
   .cabecera__menu--imagen {
     width: 15%;
   }
-
-
 }
 
 @media screen and (max-width: 650px) {
@@ -332,7 +321,6 @@ img {
   .cabecera__logo {
     display: none;
   }
-
 
   .cabecera__menu {
     width: 80%;
@@ -350,7 +338,7 @@ img {
     width: 15%;
   }
 
-  .cabecera__buscador{
+  .cabecera__buscador {
     width: 45%;
   }
 
@@ -423,79 +411,75 @@ img {
   }
 }
 
-
 /* =========================
    5. Pie de página
    ========================= */
 
-.pie-pagina{
+.pie-pagina {
   display: flex;
   align-items: start;
-  gap:2rem;
+  gap: 2rem;
   max-width: 100%;
   background: url(../imgs/fondo-footer.jpg);
   background-position-y: 20px;
   max-height: 400px;
 }
 
-.pie-pagina__info{
+.pie-pagina__info {
   width: 40%;
-  padding:2rem;
+  padding: 2rem;
 }
 
-.pie-pagina__contacto{
+.pie-pagina__contacto {
   display: flex;
-  gap:1rem;
+  gap: 1rem;
   flex-wrap: wrap;
   justify-content: space-evenly;
   width: 40%;
-  padding:0.75rem;
+  padding: 0.75rem;
 }
 
-.pie-pagina__contacto--titulo,.pie-pagina__info--titulo{
+.pie-pagina__contacto--titulo,
+.pie-pagina__info--titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.8rem;
   text-align: center;
   padding: 0.5rem;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
-.pie-pagina__contacto--lista{
+.pie-pagina__contacto--lista {
   display: flex;
   justify-content: center;
   font-size: 0.8rem;
-  gap:0.5rem;
-
+  gap: 0.5rem;
 }
 
-.pie-pagina__contacto--enlace{
+.pie-pagina__contacto--enlace {
   display: inline-block;
   text-align: center;
   font-family: var(--fuente-secundaria);
   background-color: var(--color-secundario);
-  border:3px solid var(--color-negro);
+  border: 3px solid var(--color-negro);
   border-radius: 1rem;
-  padding:0.65rem;
-  transition: transform 0.5s ease,background-color 0.5s ease;
+  padding: 0.65rem;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 }
 
-.pie-pagina__contacto--informacion,.pie-pagina__info--descripcion{
+.pie-pagina__contacto--enlace:hover {
+  background-color: var(--color-principal);
+  color: white;
+  transform: translateY(6px);
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.pie-pagina__contacto--informacion,
+.pie-pagina__info--descripcion {
   font-family: var(--fuente-base);
   font-size: 1.2rem;
   text-align: center;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
-
-.pie-pagina__contacto--enlace{
-  color:var(--color-negro);
-}
-.pie-pagina__contacto--enlace:hover{
-  background-color: var(--color-principal);
-  color:white;
-  transform: translateY(6px);
-  transition: transform 0.5s ease,background-color 0.5s ease;
-}
-
 
 .footer-extra {
   display: flex;
@@ -506,15 +490,14 @@ img {
 }
 
 .footer-extra__imagen {
-  max-width: 50%; 
+  max-width: 50%;
   height: auto;
   border-radius: 50%;
-  padding:0.5rem 0;
+  padding: 0.5rem 0;
   transition: transform 0.3s ease;
 }
 
 @media (max-width: 1200px) {
-
   .pie-pagina {
     padding: 0.8rem;
   }
@@ -522,21 +505,19 @@ img {
   .pie-pagina__info {
     width: 30%;
   }
-  .pie-pagina__info--titulo{
+  .pie-pagina__info--titulo {
     font-size: 0.5rem;
     overflow-wrap: break-word;
   }
 
-  .pie-pagina__contacto{
+  .pie-pagina__contacto {
     width: 60%;
-
   }
-  .pie-pagina__contacto--titulo{
+  .pie-pagina__contacto--titulo {
     width: 100%;
     font-size: 1.5rem;
     padding: 0.8rem 1rem 0.4rem;
   }
-
 
   .pie-pagina__info--titulo {
     font-size: 1rem;
@@ -547,17 +528,16 @@ img {
     font-weight: 600;
   }
 
-  .footer-extra__imagen{
+  .footer-extra__imagen {
     display: none;
   }
 }
 
 @media (max-width: 800px) {
-
   .pie-pagina__contacto,
   .pie-pagina__info {
     width: 100%;
-    gap:0;
+    gap: 0;
   }
 
   .pie-pagina__contacto--titulo,
@@ -566,12 +546,12 @@ img {
     padding: 0.4rem;
   }
 
-  .pie-pagina__contacto--lista{
+  .pie-pagina__contacto--lista {
     display: flex;
     flex-direction: column;
   }
 
-  .pie-pagina__contacto--enlace{
+  .pie-pagina__contacto--enlace {
     width: 100%;
     font-size: 0.75rem;
   }
@@ -591,7 +571,8 @@ img {
     gap: 1rem;
     padding: 0.4rem 0.5rem;
   }
-  .pie-pagina__contacto--titulo,.pie-pagina__info--titulo{
+  .pie-pagina__contacto--titulo,
+  .pie-pagina__info--titulo {
     font-size: 0.8rem;
     padding-left: 1rem;
   }
@@ -602,13 +583,12 @@ img {
     padding: 0.3rem;
   }
   .pie-pagina__info p.pie-pagina__info--descripcion:nth-of-type(2) {
-  display: none;
+    display: none;
   }
-} 
-
+}
 
 @media (max-width: 400px) {
-  .pie-pagina{
+  .pie-pagina {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
@@ -617,47 +597,46 @@ img {
   }
 
   .pie-pagina__info,
-  .pie-pagina__contacto{
+  .pie-pagina__contacto {
     width: 100%;
     padding: 0.5rem;
   }
 
   .pie-pagina__contacto--titulo,
-  .pie-pagina__info--titulo{
+  .pie-pagina__info--titulo {
     font-size: 0.9rem;
     padding: 0.3rem;
   }
 
   .pie-pagina__contacto--informacion,
-  .pie-pagina__info--descripcion{
+  .pie-pagina__info--descripcion {
     font-size: 0.85rem;
   }
 
-  .pie-pagina__contacto--lista{
+  .pie-pagina__contacto--lista {
     flex-direction: column;
     align-items: center;
   }
 
-  .pie-pagina__contacto--enlace{
+  .pie-pagina__contacto--enlace {
     width: 100%;
     font-size: 0.8rem;
   }
-
 }
 
-.footer-extra__imagen:hover{
+.footer-extra__imagen:hover {
   transform: translateY(-6px);
 }
 .footer-extra__boton {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: fixed; 
-  bottom: 30px;    
-  right: 30px;     
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
   z-index: 2;
   background-color: var(--color-principal);
-  color:white;
+  color: white;
   font-size: 2rem;
   text-decoration: none;
   text-align: center;
@@ -665,21 +644,22 @@ img {
   height: 60px;
   border-radius: 50%;
   border: 3px solid var(--color-secundario);
-  transition: background-color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.4s ease,
+    border-color 0.3s ease;
 }
 
 .footer-extra__boton::after {
-  content: '↑';
+  content: "↑";
   font-weight: 900;
   line-height: 1;
 }
 
 .footer-extra__boton:hover {
-  color:var(--color-principal);
-  background-color: var(--color-secundario); 
+  color: var(--color-principal);
+  background-color: var(--color-secundario);
   border-color: var(--color-principal);
   transform: translateY(-4px) scale(1.05);
-
+  transition: background-color 0.3s ease, transform 0.4s ease;
 }
 
 /* =========================
@@ -687,7 +667,7 @@ img {
    ========================= */
 
 /* Introducción */
-.introduccion{
+.introduccion {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -695,7 +675,7 @@ img {
   padding: 1rem;
 }
 
-.introduccion__titulo{
+.introduccion__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
   width: 80%;
@@ -704,10 +684,10 @@ img {
   padding: 1rem;
 }
 
-.introduccion__descripcion{
+.introduccion__descripcion {
   font-family: var(--fuente-base);
   font-weight: 600;
-  padding:1.5rem;
+  padding: 1.5rem;
   text-align: center;
 }
 @media screen and (max-width: 1200px) {
@@ -732,7 +712,6 @@ img {
   }
 }
 
-
 /* Mejores sagas */
 
 .mejores-sagas {
@@ -745,29 +724,28 @@ img {
   border-radius: 4rem;
   max-width: 720px;
   background-color: var(--color-secundario);
-  transition: box-shadow 0.35s, transform 0.25s;
+  transition: box-shadow 0.35s, transform 0.45s;
   border: 5px solid var(--color-principal);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
-.mejores-sagas:hover{
+.mejores-sagas:hover {
   transform: translateY(-6px);
+  transition: box-shadow 0.35s, transform 0.45s;
 }
 
-.mejores-sagas__figura--imagen:hover {
-  transform: scale(1) rotate(-3deg);
-}
-.mejores-sagas__titulo,.mejores-sagas__subtitulo {
+.mejores-sagas__titulo,
+.mejores-sagas__subtitulo {
   width: 100%;
   font-family: var(--fuente-secundaria);
   font-weight: 800;
   font-size: 1.2rem;
   color: var(--color-negro);
-  padding-bottom: 2rem ;
+  padding-bottom: 2rem;
   text-align: center;
 }
 
-.mejores-sagas__figura{
+.mejores-sagas__figura {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
@@ -775,36 +753,31 @@ img {
   margin: 0 auto;
 }
 
-.mejores-sagas-mario__figura--imagen{
+.mejores-sagas-mario__figura--imagen {
   width: 140px;
   height: 140px;
   object-fit: cover;
   border-radius: 1rem;
-  background-color:var(--color-principal__mario);
+  background-color: var(--color-principal__mario);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s, box-shadow 0.22s;
 }
 
-
-.mejores-sagas-kirby__figura--imagen{
+.mejores-sagas-kirby__figura--imagen {
   width: 140px;
   height: 140px;
   object-fit: cover;
   border-radius: 1rem;
   background-color: #eb9ec1;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s, box-shadow 0.22s;
 }
 
-
-.mejores-sagas-splatoon__figura--imagen{
+.mejores-sagas-splatoon__figura--imagen {
   width: 140px;
   height: 140px;
   object-fit: cover;
   border-radius: 1rem;
   background-color: var(--color-principal__splatoon);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s, box-shadow 0.22s;
 }
 
 /* Sagas principales*/
@@ -820,8 +793,7 @@ img {
   gap: 2rem;
 }
 
-
-.sagas-principales__titulo{
+.sagas-principales__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
   text-align: center;
@@ -830,33 +802,41 @@ img {
   overflow-wrap: break-word;
 }
 
-.sagas-principales__mario,.sagas-principales__splatoon,.sagas-principales__kirby{
-  padding:2rem;
+.sagas-principales__mario,
+.sagas-principales__splatoon,
+.sagas-principales__kirby {
+  padding: 2rem;
   background: var(--color-secundario);
   border-radius: 6rem;
   border: 5px solid var(--color-principal);
   transition: transform 0.5s ease;
 }
 
-.sagas-principales__mario--descripcion,.sagas-principales__splatoon--descripcion,.sagas-principales__kirby--descripcion{
+.sagas-principales__mario--descripcion,
+.sagas-principales__splatoon--descripcion,
+.sagas-principales__kirby--descripcion {
   font-family: var(--fuente-base);
   padding-top: 1rem;
   max-width: 260px;
   margin: 0 auto;
   text-align: center;
   font-weight: 600;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
-.sagas-principales__mario--titulo,.sagas-principales__splatoon--titulo,.sagas-principales__kirby--titulo{
-  padding:2.5rem;
+.sagas-principales__mario--titulo,
+.sagas-principales__splatoon--titulo,
+.sagas-principales__kirby--titulo {
+  padding: 2.5rem;
   font-size: 1.4rem;
   font-family: var(--fuente-secundaria);
-  color: var(--color-negro)
- }
+  color: var(--color-negro);
+}
 
-.sagas-principales__mario--imagen,.sagas-principales__splatoon--imagen,.sagas-principales__kirby--imagen{
-  background: #fcfcfc;;
+.sagas-principales__mario--imagen,
+.sagas-principales__splatoon--imagen,
+.sagas-principales__kirby--imagen {
+  background: #fcfcfc;
   border-radius: 4rem;
   transition: transform 0.35s;
   width: 300px;
@@ -866,13 +846,18 @@ img {
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
 }
 
-.sagas-principales__mario--imagen:hover,.sagas-principales__splatoon--imagen:hover,.sagas-principales__kirby--imagen:hover{
+.sagas-principales__mario--imagen:hover,
+.sagas-principales__splatoon--imagen:hover,
+.sagas-principales__kirby--imagen:hover {
   transform: scale(1) rotate(-3deg);
+  transition: transform 0.5s ease;
 }
 
-
-.sagas-principales__mario:hover,.sagas-principales__splatoon:hover,.sagas-principales__kirby:hover{
+.sagas-principales__mario:hover,
+.sagas-principales__splatoon:hover,
+.sagas-principales__kirby:hover {
   transform: translateY(-6px);
+  transition: transform 0.5s ease;
 }
 
 @media (max-width: 1200px) {
@@ -920,7 +905,7 @@ img {
     gap: 1.2rem;
   }
 
-  .sagas-principales__titulo{
+  .sagas-principales__titulo {
     font-size: 1.4rem;
     padding: 0.9rem;
     width: 90%;
@@ -958,7 +943,6 @@ img {
   }
 }
 
-
 @media (max-width: 500px) {
   .sagas-principales {
     width: 85%;
@@ -969,7 +953,7 @@ img {
     gap: 1.5rem;
   }
 
-  .sagas-principales__titulo{
+  .sagas-principales__titulo {
     font-size: 1rem;
   }
   .sagas-principales__mario,
@@ -1001,26 +985,26 @@ img {
 
 /* Extra: puntos destacados y noticias */
 
-.extra{
+.extra {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap:2rem;
+  gap: 2rem;
 }
 
-.puntos-destacados{
+.puntos-destacados {
   display: flex;
   flex-direction: column;
   width: 40%;
-  gap:1.5rem;
+  gap: 1.5rem;
   padding: 1.5rem;
   background-image: url(../imgs/patron-rosa.jpg);
   border-radius: 2rem;
-  background-color:#48a1ee99;
+  background-color: #48a1ee99;
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.35);
 }
 
-.puntos-destacados__titulo{
+.puntos-destacados__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.8rem;
   width: 100%;
@@ -1033,41 +1017,47 @@ img {
   border: 5px solid var(--color-negro);
 }
 
-.noticias-destacadas{
+.noticias-destacadas {
   display: flex;
   flex-direction: column;
   width: 40%;
-  gap:3.5rem;
+  gap: 3.5rem;
   padding: 1.5rem;
-  background-color: #E5252199;
+  background-color: #e5252199;
   border-radius: 2rem;
   box-shadow: 0 18px 35px rgba(0, 0, 0, 0.45);
 }
 
-.noticias-destacadas__mario--imagen,.noticias-destacadas__splatoon--imagen,.noticias-destacadas__kirby--imagen{
+.noticias-destacadas__mario--imagen,
+.noticias-destacadas__splatoon--imagen,
+.noticias-destacadas__kirby--imagen {
   border-radius: 6rem;
-  width: 260px;               
+  width: 260px;
   height: 160px;
-  border: 4px solid var(--color-secundario);                   
+  border: 4px solid var(--color-secundario);
   object-fit: cover;
   transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
 }
 
-
-.noticias-destacadas__mario--imagen:hover,.noticias-destacadas__splatoon--imagen:hover,.noticias-destacadas__kirby--imagen:hover{
+.noticias-destacadas__mario--imagen:hover,
+.noticias-destacadas__splatoon--imagen:hover,
+.noticias-destacadas__kirby--imagen:hover {
   transform: translateY(-6px);
+  transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
 }
 
-.noticias-destacadas__mario--descripcion,.noticias-destacadas__splatoon--descripcion,.noticias-destacadas__kirby--descripcion{
+.noticias-destacadas__mario--descripcion,
+.noticias-destacadas__splatoon--descripcion,
+.noticias-destacadas__kirby--descripcion {
   font-size: 1.2rem;
   font-family: var(--fuente-base);
   font-weight: 600;
   max-width: 80%;
   margin: 0 auto;
-  padding:1rem;
+  padding: 1rem;
 }
 
-.noticias-destacadas__titulo{
+.noticias-destacadas__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.8rem;
   width: 100%;
@@ -1077,32 +1067,34 @@ img {
   border: 5px solid var(--color-negro);
   text-align: center;
   overflow-wrap: break-word;
-  color:var(--color-negro);
+  color: var(--color-negro);
 }
 
-.noticias-destacadas__kirby--titulo,.noticias-destacadas__mario--titulo,.noticias-destacadas__splatoon--titulo{
+.noticias-destacadas__kirby--titulo,
+.noticias-destacadas__mario--titulo,
+.noticias-destacadas__splatoon--titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.2rem;
 }
-.noticias-destacadas__splatoon,.noticias-destacadas__kirby,.noticias-destacadas__mario{
+.noticias-destacadas__splatoon,
+.noticias-destacadas__kirby,
+.noticias-destacadas__mario {
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding:0 2rem;
-  gap:1rem;
+  padding: 0 2rem;
+  gap: 1rem;
 }
-
-
 
 .puntos-destacados__splatoon,
 .puntos-destacados__kirby,
-.puntos-destacados__mario{
+.puntos-destacados__mario {
   padding-bottom: 2rem;
 }
 
 .puntos-destacados__splatoon--sumario,
 .puntos-destacados__kirby--sumario,
-.puntos-destacados__mario--sumario{
+.puntos-destacados__mario--sumario {
   font-family: var(--fuente-secundaria);
   font-size: 1.2rem;
   text-align: center;
@@ -1113,13 +1105,12 @@ img {
   padding: 1.2rem;
   margin-bottom: 1rem;
   cursor: pointer;
-  transition: background-color 0.5s ease,transform 0.5s ease;
+  transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
 .puntos-destacados__splatoon--enlace,
 .puntos-destacados__kirby--enlace,
-.puntos-destacados__mario--enlace
-{
+.puntos-destacados__mario--enlace {
   display: block;
   padding: 0.5rem 1rem;
   color: var(--color-negro);
@@ -1128,25 +1119,23 @@ img {
   border-radius: 1.25rem;
   font-weight: bold;
   font-family: var(--fuente-secundaria);
-  transition: background-color 0.2s ease,transform 0.4s ease;
+  transition: background-color 0.2s ease, transform 0.4s ease;
 }
 
 .puntos-destacados__splatoon--enlace:active,
 .puntos-destacados__kirby--enlace:active,
-.puntos-destacados__mario--enlace:active
-{
+.puntos-destacados__mario--enlace:active {
   background: var(--color-secundario);
   color: var(--color-negro);
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
-
 .puntos-destacados__splatoon--enlace:hover,
 .puntos-destacados__kirby--enlace:hover,
 .puntos-destacados__mario--enlace:hover,
-.puntos-destacados__splatoon--enlace:focus-visible{
+.puntos-destacados__splatoon--enlace:focus-visible {
   background: var(--color-secundario);
-  transform: translateX(10px)
+  transform: translateX(10px);
 }
 
 .puntos-destacados__splatoon--sumario:hover,
@@ -1154,10 +1143,11 @@ img {
 .puntos-destacados__mario--sumario:hover,
 .puntos-destacados__splatoon--sumario:focus,
 .puntos-destacados__kirby--sumario:focus,
-.puntos-destacados__mario--sumario:focus{
+.puntos-destacados__mario--sumario:focus {
   background: var(--color-secundario);
   transform: translateY(-6px);
   color: var(--color-negro);
+  transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
 .puntos-destacados__splatoon--lista,
@@ -1184,8 +1174,7 @@ img {
     width: 100%;
     max-width: 100%;
     height: auto;
-    border:5px solid var(--color-secundario);
-    
+    border: 5px solid var(--color-secundario);
   }
   .noticias-destacadas__mario--descripcion,
   .noticias-destacadas__splatoon--descripcion,
@@ -1213,11 +1202,13 @@ img {
     padding: 0.5rem;
   }
 
-  .noticias-destacadas__mario--titulo,.noticias-destacadas__splatoon--titulo,.noticias-destacadas__kirby--titulo{
+  .noticias-destacadas__mario--titulo,
+  .noticias-destacadas__splatoon--titulo,
+  .noticias-destacadas__kirby--titulo {
     font-size: 0.8rem;
-    padding:0.5rem;
+    padding: 0.5rem;
   }
-  
+
   .noticias-destacadas__splatoon--descripcion,
   .noticias-destacadas__kirby--descripcion,
   .noticias-destacadas__mario--descripcion {
@@ -1228,33 +1219,32 @@ img {
 
 /* Bloque newsletter */
 
-.newsletter{
+.newsletter {
   display: flex;
   flex-direction: column;
   width: 70%;
   align-items: center;
   margin: 0 auto 2rem auto;
-  padding:1rem;
+  padding: 1rem;
   border-radius: 2.5rem;
 }
 
-.newsletter__titulo{
+.newsletter__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.5rem;
   width: 90%;
   padding: 2rem;
   text-align: center;
-  
 }
 
-.newsletter__descripcion{
+.newsletter__descripcion {
   max-width: 100%;
   width: 85%;
   text-align: center;
   font-size: 1.2rem;
   font-weight: 600;
   font-family: var(--fuente-base);
-  padding:2rem;
+  padding: 2rem;
 }
 
 .newsletter__formulario {
@@ -1262,7 +1252,7 @@ img {
   flex-direction: column;
   font-size: 1.15rem;
   font-family: var(--fuente-base);
-  background: rgba(255,255,255,0.7);
+  background: rgba(255, 255, 255, 0.7);
   border: 3px solid var(--color-principal);
   border-radius: 2rem;
   padding: 2rem;
@@ -1271,7 +1261,7 @@ img {
   cursor: pointer;
 }
 
-.newsletter__label--email{
+.newsletter__label--email {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -1280,31 +1270,30 @@ img {
   font-size: 1rem;
   text-align: center;
 }
-.newsletter__label--opcion{
+.newsletter__label--opcion {
   width: 100%;
   font-size: 0.9rem;
-  gap:1rem;
+  gap: 1rem;
   text-align: center;
 }
 
-.newsletter__formulario--input{
+.newsletter__formulario--input {
   padding: 1rem;
-  border: 1.5px solid #BDBDBD;
+  border: 1.5px solid #bdbdbd;
   border-radius: 0.7rem;
   font-size: 1rem;
   background: var(--color-blanco);
   transition: border 0.18s;
 }
 
-.newsletter__formulario--input:focus{
-  border: 3px solid var(--color-secundario)
-
+.newsletter__formulario--input:focus {
+  border: 3px solid var(--color-secundario);
 }
 .newsletter__boton {
-  background-color:var(--color-principal);
+  background-color: var(--color-principal);
   border: 4px solid var(--color-secundario);
   padding: 1.5rem;
-  margin:0.5rem;
+  margin: 0.5rem;
   border-radius: 2rem;
   color: white;
   font-size: 1rem;
@@ -1313,17 +1302,15 @@ img {
   cursor: pointer;
 }
 
-.newsletter__boton:hover{
+.newsletter__boton:hover {
   background-color: var(--color-secundario);
   color: var(--color-negro);
   border: 4px solid var(--color-principal);
   transform: translateY(-6px);
   transition: background-color 0.5s ease, transform 0.5s ease;
-
 }
 
 @media (max-width: 1000px) {
-
   .newsletter {
     width: 85%;
     padding: 1.5rem 1rem;
@@ -1368,7 +1355,6 @@ img {
 }
 
 @media (max-width: 500px) {
-
   .newsletter {
     width: 95%;
     padding: 1.2rem 0.8rem;
@@ -1410,7 +1396,6 @@ img {
 }
 
 @media (max-width: 400px) {
-
   .newsletter {
     width: 100%;
     margin: 0 auto 1.5rem auto;
@@ -1448,58 +1433,58 @@ img {
   }
 }
 
-
 /* =========================
    7. Página contacto
    ========================= */
 
 /* Colaboración */
 
-.colaboracion{
+.colaboracion {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.colaboracion__titulo{
+.colaboracion__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.4rem;
   text-align: center;
-  padding:1.5rem;
+  padding: 1.5rem;
 }
 
-.colaboracion__descripcion{
+.colaboracion__descripcion {
   font-family: var(--fuente-base);
   text-align: center;
   font-size: 1.2rem;
-  padding:1rem;
+  padding: 1rem;
   width: 80%;
 }
 
-.colaboracion__figura{
- display: flex;
- flex-direction: column;
- gap:2rem;
- text-align: center;
- font-family: var(--fuente-base);
- font-size: larger;
- font-weight: 600;
+.colaboracion__figura {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+  font-family: var(--fuente-base);
+  font-size: larger;
+  font-weight: 600;
 }
 
-.colaboracion__figura--imagen{
+.colaboracion__figura--imagen {
   max-width: 300px;
-  margin:0 auto;
+  margin: 0 auto;
   border-radius: 3rem;
   border: 4px solid var(--color-secundario);
   transition: transform 0.5s ease;
 }
 
-.colaboracion__figura--imagen:hover{
+.colaboracion__figura--imagen:hover {
   transform: translateY(-6px);
-  border: 4px solid var(--color-principal)
+  border: 4px solid var(--color-principal);
+  transition: transform 0.5s ease;
 }
-.colaboracion__figura--descripcion{
+.colaboracion__figura--descripcion {
   font-family: var(--fuente-base);
   text-align: center;
   font-weight: 600;
@@ -1531,7 +1516,7 @@ img {
 
 /* Formulario de contacto */
 
-.contacto{
+.contacto {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -1540,15 +1525,15 @@ img {
   gap: 2rem;
 }
 
-.contacto__titulo{
+.contacto__titulo {
   width: 100%;
   font-family: var(--fuente-secundaria);
   text-align: center;
   font-size: 1.5rem;
-  padding:1.5rem;
+  padding: 1.5rem;
 }
 
-.contacto__formulario{
+.contacto__formulario {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -1560,13 +1545,13 @@ img {
   width: 30%;
 }
 
-.contacto__formulario--campo{
+.contacto__formulario--campo {
   border: none;
   margin-bottom: 1.5rem;
   padding: 0;
 }
 
-.contacto__formulario--leyenda{
+.contacto__formulario--leyenda {
   width: 90%;
   font-size: 1.3rem;
   font-weight: bold;
@@ -1574,40 +1559,39 @@ img {
   padding-bottom: 1rem;
 }
 
-.contacto__formulario--etiqueta{
+.contacto__formulario--etiqueta {
   text-align: start;
   display: block;
   padding-bottom: 1rem;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
-.contacto__formulario--política-privacidad{
+.contacto__formulario--política-privacidad {
   width: 100%;
   text-align: center;
   display: block;
   padding-bottom: 1rem;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
-.contacto__formulario--boton{
-  background-color:var(--color-principal);
+.contacto__formulario--boton {
+  background-color: var(--color-principal);
   border: 4px solid var(--color-secundario);
   padding: 1.5rem;
-  margin:0.5rem;
+  margin: 0.5rem;
   border-radius: 2rem;
   color: white;
   font-weight: 600;
-  transition: border-color 0.4s ease, transform 0.5s ease;
+  transition: border-color 0.5s ease, transform 0.5s ease;
   cursor: pointer;
-  
 }
 
-.contacto__formulario--boton:hover{
+.contacto__formulario--boton:hover {
   transform: translateY(-6px);
   background-color: var(--color-secundario);
   border: 4px solid var(--color-principal);
-  color: var(--color-negro)
-
+  color: var(--color-negro);
+  transition: border-color 0.5s ease, transform 0.5s ease;
 }
 
 @media (max-width: 1200px) {
@@ -1717,69 +1701,68 @@ img {
   font-size: 1rem;
   margin-top: 0.5rem;
   padding-bottom: 0.5rem;
-  transition: background-color 0.75s ease,color 0.75s ease, transform 0.75s ease;
+  transition: background-color 0.75s ease, color 0.75s ease,
+    transform 0.75s ease;
 }
 
 .contacto__formulario--input:focus,
 .contacto__formulario--select:focus,
 .contacto__formulario--textarea:focus {
   border-color: var(--color-secundario);
-  transition: background-color 0.75s ease, color 0.75s ease, transform 0.75s ease;
+  transition: background-color 0.75s ease, color 0.75s ease,
+    transform 0.75s ease;
 }
 
 /* FAQ contacto */
 
-.faq-contacto{
+.faq-contacto {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
-  gap:1rem;
+  gap: 1rem;
   font-family: var(--fuente-base);
   font-size: 1.4rem;
   padding-bottom: 2rem;
   width: 40%;
 }
 
-
-.faq-contacto__titulo{
+.faq-contacto__titulo {
   font-family: var(--fuente-secundaria);
   text-align: center;
   font-size: 1.5rem;
-  padding:1.5rem;
+  padding: 1.5rem;
 }
 
-.faq-contacto__descripcion{
+.faq-contacto__descripcion {
   font-family: var(--fuente-base);
   font-size: 1rem;
   font-weight: 500;
   text-align: center;
-  padding:1rem;
+  padding: 1rem;
 }
 
-.faq-contacto__sumario{
+.faq-contacto__sumario {
   display: inline-block;
   color: white;
   text-align: center;
-  background:var(--color-principal);
+  background: var(--color-principal);
   font-family: var(--fuente-secundaria);
   padding: 1rem;
   border: 4px solid var(--color-secundario);
   border-radius: 2rem;
   font-size: 1rem;
   cursor: pointer;
-  transition: background-color 0.5s ease,transform 0.5s ease;
-
+  transition: background-color 0.5s ease, transform 0.5s ease;
 }
 
-.faq-contacto__sumario:hover{
+.faq-contacto__sumario:hover {
   background-color: var(--color-secundario);
   border: 4px solid var(--color-principal);
   color: var(--color-negro);
   transform: translateY(-6px);
   transition: background-color 0.5s ease, color 0.5s ease, transform 0.5s ease;
-
 }
 
 .faq-contacto__sumario--descripcion {
@@ -1789,9 +1772,8 @@ img {
   border-left: 4px solid var(--color-principal);
   border-radius: 0.6rem;
   background-color: var(--color-sumario);
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
-
 
 @media (max-width: 800px) {
   .faq-contacto {
@@ -1813,7 +1795,7 @@ img {
   }
 
   .faq-contacto__sumario {
-    width: 75%;
+    width: 100%;
     font-size: 0.95rem;
     padding: 0.9rem 1.1rem;
   }
@@ -1843,6 +1825,7 @@ img {
   }
 
   .faq-contacto__sumario {
+    width: 100%;
     font-size: 0.6rem;
     padding: 0.8rem 1rem;
     border-width: 3px;
@@ -1860,7 +1843,7 @@ img {
 
 /* Sobre nosotros: historia y juramento */
 
-.sobre-nosotros{
+.sobre-nosotros {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -1868,7 +1851,7 @@ img {
   padding: 1rem;
 }
 
-.sobre-nosotros__titulo{
+.sobre-nosotros__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
   text-align: center;
@@ -1876,19 +1859,20 @@ img {
   padding: 1rem;
 }
 
-.sobre-nosotros__historia,.sobre-nosotros__juramento{
+.sobre-nosotros__historia,
+.sobre-nosotros__juramento {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
   width: 40%;
-  padding:2rem;
+  padding: 2rem;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 2rem;
-
 }
 
-.juramento__titulo,.historia__titulo{
+.juramento__titulo,
+.historia__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1rem;
   text-align: center;
@@ -1897,23 +1881,24 @@ img {
   border-bottom: 3px solid var(--color-principal);
 }
 
-
-.historia__descripcion,.juramento__descripcion{
+.historia__descripcion,
+.juramento__descripcion {
   font-family: var(--fuente-base);
   text-align: center;
   font-weight: 500;
-  padding:1.5rem;
+  padding: 1.5rem;
 }
 
-.historia__imagen,.juramento__imagen{
+.historia__imagen,
+.juramento__imagen {
   max-width: 400px;
   width: 400px;
   border-radius: 2rem;
   border: 3px solid var(--color-negro);
 }
 
-@media (max-width: 1200px){
-  .sobre-nosotros{
+@media (max-width: 1200px) {
+  .sobre-nosotros {
     width: 85%;
     margin: 0 auto;
     flex-direction: column;
@@ -2096,14 +2081,14 @@ img {
 .calidad__lista--splatoon:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-
- .calidad__lista--titulo{
+.calidad__lista--titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1rem;
   text-align: center;
- }
+}
 
 .calidad__lista--descripcion {
   font-size: 0.95rem;
@@ -2125,6 +2110,7 @@ img {
 .calidad__lista--imagen:hover {
   transform: scale(1.05) translateY(-6px);
   border: 3px solid var(--color-principal);
+  transition: border-color 0.5s ease, transform 0.4s ease;
 }
 
 @media (max-width: 1200px) {
@@ -2243,31 +2229,33 @@ img {
 
 /* Equipo */
 
-.equipo{
+.equipo {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap:1rem;
+  gap: 1rem;
 }
 
-.equipo__titulo{
+.equipo__titulo {
   font-family: var(--fuente-secundaria);
   width: 100%;
   font-size: 1.5rem;
   text-align: center;
-  padding:2rem;
-  color:white;
+  padding: 2rem;
+  color: white;
 }
 
-.equipo__descripcion{
+.equipo__descripcion {
   font-family: var(--fuente-base);
   width: 100%;
   text-align: center;
   font-weight: 600;
-  padding:2rem;
+  padding: 2rem;
 }
 
-.equipo__miembro1,.equipo__miembro2,.equipo__miembro3{
+.equipo__miembro1,
+.equipo__miembro2,
+.equipo__miembro3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2278,21 +2266,21 @@ img {
   width: 30%;
   max-width: 70%;
   margin: 0 auto;
-  gap:1rem;
+  gap: 1rem;
 }
 
-.miembro__figura--descripcion{
-  padding:1rem;
+.miembro__figura--descripcion {
+  padding: 1rem;
   font-size: 1.2rem;
   font-weight: 600;
 }
 
-.miembro__figura--imagen{
+.miembro__figura--imagen {
   border-radius: 4rem;
   transition: transform 0.5s ease;
 }
 
-.miembro__figura--imagen:hover{
+.miembro__figura--imagen:hover {
   transform: scale(1.05);
   transition: transform 0.5s ease;
 }
@@ -2330,11 +2318,15 @@ img {
   transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.miembro1__titulo,.miembro2__titulo,.miembro3__titulo{
+.miembro1__titulo,
+.miembro2__titulo,
+.miembro3__titulo {
   font-family: var(--fuente-secundaria);
 }
 
-.miembro1__descripcion,.miembro2__descripcion,.miembro3__descripcion{
+.miembro1__descripcion,
+.miembro2__descripcion,
+.miembro3__descripcion {
   font-family: var(--fuente-base);
   font-weight: 600;
 }
@@ -2343,8 +2335,11 @@ img {
 .equipo__miembro3:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
-.miembro1__figura,.miembro2__figura,.miembro3__figura{
+.miembro1__figura,
+.miembro2__figura,
+.miembro3__figura {
   font-family: var(--fuente-base);
 }
 .miembro__figura--descripcion {
@@ -2357,12 +2352,12 @@ img {
   border-radius: 2rem;
   border: 3px solid var(--color-principal);
   object-fit: cover;
-  transition: transform 0.4s ease, filter 0.4s ease;
+  transition: transform 0.4s ease;
 }
 
 .miembro__figura--imagen:hover {
-  transform: scale(1.08) translateY(-4px);
-  filter: brightness(1.1);
+  transform: scale(1.1) translateY(-4px);
+  transition: transform 0.4s ease;
 }
 
 @media (max-width: 1200px) {
@@ -2388,7 +2383,9 @@ img {
     text-align: center;
     border-radius: 1.8rem;
   }
-  .miembro1__figura,.miembro2__figura,.miembro3__figura{
+  .miembro1__figura,
+  .miembro2__figura,
+  .miembro3__figura {
     width: 100%;
     align-items: center;
   }
@@ -2428,7 +2425,9 @@ img {
     gap: 1rem;
     border-radius: 1.6rem;
   }
-  .miembro1__titulo,.miembro2__titulo,.miembro3__titulo{
+  .miembro1__titulo,
+  .miembro2__titulo,
+  .miembro3__titulo {
     font-size: 1rem;
   }
 
@@ -2469,7 +2468,9 @@ img {
     border-radius: 1.4rem;
     border-width: 3px;
   }
-  .miembro1__titulo,.miembro2__titulo,.miembro3__titulo{
+  .miembro1__titulo,
+  .miembro2__titulo,
+  .miembro3__titulo {
     overflow-wrap: break-word;
     font-size: 0.8rem;
   }
@@ -2482,51 +2483,51 @@ img {
   }
 }
 
-.cuestionario{
+.cuestionario {
   display: flex;
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  padding:2rem;
+  padding: 2rem;
 }
 
-.cuestionario__titulo{
+.cuestionario__titulo {
   font-family: var(--fuente-secundaria);
   width: 100%;
   font-size: 1.5rem;
   text-align: center;
-  padding:1rem;
+  padding: 1rem;
   overflow-wrap: break-word;
 }
 
-.cuestionario__descripcion{
+.cuestionario__descripcion {
   font-family: var(--fuente-base);
   width: 100%;
   text-align: center;
   font-weight: 600;
-  padding:1.5rem;
+  padding: 1.5rem;
 }
 
-.cuestionario__figura{
+.cuestionario__figura {
   font-family: var(--fuente-base);
   width: 100%;
-  text-align: center ;
+  text-align: center;
   font-weight: 600;
 }
 
-.cuestionario__figura--imagen{
+.cuestionario__figura--imagen {
   border-radius: 2rem;
   max-width: 35%;
 }
 
-.cuestionario__figura--descripcion{
+.cuestionario__figura--descripcion {
   padding: 2rem;
 }
 
-.cuestionario__enlace{
+.cuestionario__enlace {
   display: block;
-  color:white;
-  padding:1.5rem;
+  color: white;
+  padding: 1.5rem;
   text-align: center;
   border-radius: 2rem;
   font-weight: 600;
@@ -2534,12 +2535,11 @@ img {
   border: 4px solid var(--color-secundario);
   font-family: var(--fuente-base);
   transition: background-color 0.5s ease, transform 0.5s ease;
-
 }
 
-.cuestionario__enlace:hover, 
+.cuestionario__enlace:hover,
 .cuestionario__enlace:focus {
-  background-color: var(--color-secundario); 
+  background-color: var(--color-secundario);
   border: 4px solid var(--color-principal);
   color: var(--color-negro);
   transform: translateY(-6px);
@@ -2676,47 +2676,58 @@ img {
 
 /* Tablas comparativas */
 
-.comparativas__titulo{
+.comparativas__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
   overflow-wrap: break-word;
 }
 
-.hitos,.evolucion-kirby,.evolucion-mario,.evolucion-splat{
+.hitos,
+.evolucion-kirby,
+.evolucion-mario,
+.evolucion-splat {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:2.5rem;
+  gap: 2.5rem;
   margin-bottom: 2rem;
   width: 100%;
   max-width: 100%;
 }
 
-.hitos__titulo,.evolucion-kirby__titulo,.evolucion-mario__titulo,.evolucion-splat__titulo{
+.hitos__titulo,
+.evolucion-kirby__titulo,
+.evolucion-mario__titulo,
+.evolucion-splat__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.4rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
   width: 70%;
   background-image: url(../imgs/ladrillo-rosa.jpg);
   border-radius: 2rem;
   border: 3px solid var(--color-negro);
   overflow-wrap: break-word;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
-.hitos__descripcion,.evolucion-kirby__descripcion,.evolucion-mario__descripcion,.evolucion-splat__descripcion{
+.hitos__descripcion,
+.evolucion-kirby__descripcion,
+.evolucion-mario__descripcion,
+.evolucion-splat__descripcion {
   font-family: var(--fuente-base);
   width: 100%;
   text-align: center;
   font-weight: 600;
-  padding:1.5rem;
+  padding: 1.5rem;
 }
 
-
-.hitos__tabla,.evolucion-kirby__tabla,.evolucion-mario__tabla,.evolucion-splat__tabla{
+.hitos__tabla,
+.evolucion-kirby__tabla,
+.evolucion-mario__tabla,
+.evolucion-splat__tabla {
   max-width: 75%;
   width: 100%;
   border-collapse: collapse;
@@ -2729,8 +2740,10 @@ img {
   word-wrap: break-word;
 }
 
-
-.hitos__tabla--titulo,.evolucion-kirby__tabla--titulo,.evolucion-splat__tabla--titulo,.evolucion-mario__tabla--titulo{
+.hitos__tabla--titulo,
+.evolucion-kirby__tabla--titulo,
+.evolucion-splat__tabla--titulo,
+.evolucion-mario__tabla--titulo {
   font-family: var(--fuente-secundaria);
   text-align: center;
   font-size: 1.2rem;
@@ -2785,7 +2798,7 @@ img {
   .tabla__head--titulo,
   .tabla__body--titulo,
   .tabla__body--celda,
-  .tabla__footer--celda{
+  .tabla__footer--celda {
     padding: 0.4rem;
     font-size: 0.8rem;
   }
@@ -2844,7 +2857,7 @@ img {
   .tabla__head--titulo,
   .tabla__body--titulo,
   .tabla__body--celda,
-  .tabla__footer--celda{
+  .tabla__footer--celda {
     padding: 0.4rem;
     font-size: 0.8rem;
   }
@@ -2859,15 +2872,12 @@ img {
 }
 
 @media (max-width: 500px) {
-
   .hitos__titulo,
   .evolucion-kirby__titulo,
   .evolucion-mario__titulo,
   .evolucion-splat__titulo {
     width: 90%;
   }
-
-
 
   .hitos__tabla,
   .evolucion-kirby__tabla,
@@ -2887,7 +2897,7 @@ img {
   }
 }
 
-.tabla__head--titulo{
+.tabla__head--titulo {
   font-family: var(--fuente-base);
   font-weight: 600;
   color: var(--color-negro);
@@ -2899,16 +2909,16 @@ img {
 
 .tabla__body--titulo,
 .tabla__body--celda,
-.tabla__footer--celda{
+.tabla__footer--celda {
   font-family: var(--fuente-base);
   padding: 1rem;
   text-align: center;
   border-bottom: 1px solid #e7e7e7;
   transition: background-color 0.5s ease;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
-.tabla__body--titulo{
+.tabla__body--titulo {
   font-weight: 600;
   color: var(--color-principal);
   background: #faf7f7;
@@ -2916,121 +2926,126 @@ img {
 
 .tabla__body--linea:hover .tabla__body--celda,
 .tabla__body--linea:hover .tabla__body--titulo,
-.tabla__footer--celda:hover{
+.tabla__footer--celda:hover {
   background: #f7f5ff;
+  transition: background-color 0.3s ease;
 }
 
 /* Bloques de análisis */
 
-.analisis{
+.analisis {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap:1.2rem;
+  gap: 1.2rem;
 }
 
-.analisis__titulo{
+.analisis__titulo {
   width: 100%;
   text-align: center;
   font-family: var(--fuente-secundaria);
   font-size: 1.5rem;
-  padding:1rem 2rem;
+  padding: 1rem 2rem;
 }
 
-.analisis__descripcion{
+.analisis__descripcion {
   width: 100%;
   text-align: center;
   font-family: var(--fuente-base);
 }
 
-.analisis__splatoon{
+.analisis__splatoon {
   display: flex;
   flex-direction: column;
-  gap:2rem;
-  padding:1rem;
+  gap: 2rem;
+  padding: 1rem;
   align-items: center;
   width: 25%;
   background-image: url(../imgs/fondo-analisis-splatoon.jpg);
   border-radius: 2rem;
 }
 
-.analisis__kirby{
+.analisis__kirby {
   display: flex;
   flex-direction: column;
-  gap:2rem;
-  padding:1rem;
+  gap: 2rem;
+  padding: 1rem;
   align-items: center;
   width: 25%;
   background-image: url(../imgs/kirby-analisis-claro.jpg);
   border-radius: 2rem;
 }
 
-.analisis__mario{
+.analisis__mario {
   display: flex;
   flex-direction: column;
-  gap:2rem;
-  padding:1rem;
+  gap: 2rem;
+  padding: 1rem;
   align-items: center;
   width: 25%;
   background-image: url(../imgs/mariobros-fondo-claro.jpg);
-  background-size:cover;
+  background-size: cover;
   background-position-x: -85px;
   border-radius: 2rem;
 }
 
-.analisis__splatoon--titulo{
+.analisis__splatoon--titulo {
   width: 85%;
   text-align: center;
   font-family: var(--fuente-secundaria);
-  padding:1.5rem;
+  padding: 1.5rem;
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
-.analisis__mario--titulo{
+.analisis__mario--titulo {
   width: 85%;
   text-align: center;
   font-family: var(--fuente-secundaria);
-  padding:1.5rem;
+  padding: 1.5rem;
   text-shadow: -3px 3px 0 var(--color-principal__mario);
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
-
-.analisis__kirby--titulo{
+.analisis__kirby--titulo {
   width: 85%;
   text-align: center;
   font-family: var(--fuente-secundaria);
-  padding:1.5rem;
+  padding: 1.5rem;
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
-
-.analisis__splatoon--descripcion,.analisis__mario--descripcion,.analisis__kirby--descripcion{
+.analisis__splatoon--descripcion,
+.analisis__mario--descripcion,
+.analisis__kirby--descripcion {
   width: 80%;
   text-align: center;
   font-family: var(--fuente-base);
-  padding:1rem;
-  background-color: rgba(255,255,255,0.7);
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.7);
   border-radius: 2rem;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
-.analisis__splatoon--imagen,.analisis__mario--imagen,.analisis__kirby--imagen{
+.analisis__splatoon--imagen,
+.analisis__mario--imagen,
+.analisis__kirby--imagen {
   width: 90%;
   height: 200px;
   object-fit: cover;
   border-radius: 1.5rem;
   border: 4px solid var(--color-secundario);
-  transition: border 0.3s ease,transform 0.5s ease;
+  transition: border 0.3s ease, transform 0.5s ease;
 }
 
-.analisis__splatoon--imagen:hover,.analisis__mario--imagen:hover,.analisis__kirby--imagen:hover{
+.analisis__splatoon--imagen:hover,
+.analisis__mario--imagen:hover,
+.analisis__kirby--imagen:hover {
   transform: translateY(-6px);
   border: 4px solid var(--color-principal);
+  transition: border 0.3s ease, transform 0.5s ease;
 }
-
 
 @media screen and (max-width: 1200px) {
   .analisis {
@@ -3045,7 +3060,7 @@ img {
 
   .analisis__descripcion {
     font-size: 0.98rem;
-    padding:1rem;
+    padding: 1rem;
   }
 
   .analisis__splatoon,
@@ -3069,10 +3084,9 @@ img {
     font-size: 1rem;
     padding: 1rem;
   }
-
 }
 @media screen and (max-width: 800px) {
-.analisis {
+  .analisis {
     gap: 1.2rem;
     padding: 1rem 0.7rem;
   }
@@ -3163,14 +3177,14 @@ img {
 
 /* Formulario de voto*/
 
-.voto{
+.voto {
   display: flex;
   flex-direction: column;
-  gap:2rem;
-  padding:2rem;
+  gap: 2rem;
+  padding: 2rem;
 }
 
-.voto__titulo{
+.voto__titulo {
   width: 100%;
   font-family: var(--fuente-secundaria);
   font-size: 1.4rem;
@@ -3178,97 +3192,98 @@ img {
   padding-top: 2rem;
 }
 
-.voto__descripcion{
+.voto__descripcion {
   font-family: var(--fuente-base);
   width: 100%;
   text-align: center;
 }
 
-.voto__formulario{
+.voto__formulario {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
   max-width: 400px;
-  min-width: 260px; 
-  padding:2rem;
+  min-width: 260px;
+  padding: 2rem;
   font-family: var(--fuente-base);
   background-color: #d34d53;
   border: solid 3px var(--color-secundario);
   border-radius: 4rem;
 }
 
-.voto__formulario--campo{
+.voto__formulario--campo {
   width: 100%;
   display: flex;
   flex-direction: column;
   font-weight: 600;
-  gap:2rem;
+  gap: 2rem;
+  transition: transform 0.5s ease;
 }
 
-.voto__formulario--leyenda{
+.voto__formulario--leyenda {
   font-family: var(--fuente-secundaria);
   text-align: center;
 }
 
-.voto__formulario--etiqueta{
+.voto__formulario--etiqueta {
   display: flex;
-  gap:1rem;
+  gap: 1rem;
 }
 
-.voto__formulario--checkbox{
+.voto__formulario--checkbox {
   cursor: pointer;
 }
 
-.voto__formulario--boton{
+.voto__formulario--boton {
   width: 100%;
-  background:var(--color-principal);
+  background: var(--color-principal);
   padding: 1rem;
   border-radius: 2rem;
   border: solid 3px var(--color-secundario);
   color: white;
   font-weight: bold;
   cursor: pointer;
-  transition: background-color 0.75s ease,border-color 0.75s ease, transform 0.75s;
+  transition: background-color 0.5s ease, border-color 0.5s ease;
 }
 
-.voto__formulario--boton:hover{
-  background-color: var(--color-secundario); 
+.voto__formulario--boton:hover {
+  background-color: var(--color-secundario);
   transform: translateY(-6px);
   border: solid 3px var(--color-principal);
-  color: var(--color-negro)
-
+  color: var(--color-negro);
+  transition: background-color 0.5s ease, border-color 0.5s ease;
 }
-.voto__formulario--etiqueta{
+.voto__formulario--etiqueta {
   display: flex;
   align-items: center;
   width: 100%;
 }
 
-.voto__formulario--imagen{
+.voto__formulario--imagen {
   max-width: 50px;
   width: 50px;
   min-width: 30px;
 }
 
-.voto__figura{
+.voto__figura {
   align-self: center;
   text-align: center;
   font-family: var(--fuente-base);
   font-weight: 600;
 }
 
-.voto__figura--imagen{
+.voto__figura--imagen {
   width: 40%;
   object-fit: cover;
   border-radius: 4rem;
   border: 4px solid var(--color-secundario);
-  transition: border-color 0.5s ease, transform 1s ease;
+  transition: border-color 0.5s ease, transform 0.5s ease;
 }
 
-.voto__figura--imagen:hover{
+.voto__figura--imagen:hover {
   transform: translateY(-6px);
-  transition: border-color 0.5s ease,transform 0.75s ease;
+  transition: border-color 0.5s ease, transform 0.75s ease;
 }
 
 @media (max-width: 1200px) {
@@ -3374,7 +3389,6 @@ img {
   }
 }
 
-
 @media (max-width: 500px) {
   .voto {
     padding: 1rem 0.5rem;
@@ -3398,16 +3412,15 @@ img {
     font-size: 0.85rem;
     padding: 0.8rem;
   }
-
 }
 
 /* =========================
    10. Página Splatoon
    ========================= */
 
-.cabecera-splatoon{
-  top:0;
-  left:0;
+.cabecera-splatoon {
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -3416,63 +3429,55 @@ img {
   padding: 0.75rem 1rem;
 }
 
-.cabecera-splatoon__menu{
+.cabecera-splatoon__menu {
   display: flex;
   flex-direction: column;
   align-content: center;
-  gap:2rem;
+  gap: 2rem;
   font-family: var(--fuente-secundaria);
-  color: var(--color-principal__splatoon)
+  color: var(--color-principal__splatoon);
 }
 
-.cabecera-splatoon__menu--titulo{
+.cabecera-splatoon__menu--titulo {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
   color: var(--color-principal__splatoon);
   font-size: 2rem;
   -webkit-text-stroke: 1px var(--color-negro);
 }
 
-.cabecera-splatoon__menu--lista{
+.cabecera-splatoon__menu--lista {
   display: flex;
   justify-content: space-between;
   font-family: var(--fuente-base);
-  width:100%;
+  width: 100%;
   max-width: 100%;
-  gap:4rem;
+  gap: 4rem;
   font-size: 1rem;
   padding-bottom: 1rem;
-  
 }
 
-.cabecera-splatoon__menu--imagen{
+.cabecera-splatoon__menu--imagen {
   width: 12%;
 }
 
-.cabecera-splatoon__menu--enlace{
+.cabecera-splatoon__menu--enlace {
   font-family: var(--fuente-base);
   color: white;
   font-size: 1.5rem;
   font-weight: 900;
-  text-shadow: 
-    1.41px 1.41px var(--color-negro), 
-    2px 0 var(--color-negro), 
-    1.41px -1.41px var(--color-negro),
-    0 -2px var(--color-negro), 
-    -1.41px -1.41px var(--color-negro), 
-    -2px 0 var(--color-negro),
-    -1.41px 1.41px var(--color-negro), 
-    0 2px var(--color-negro);
+  text-shadow: 1.41px 1.41px var(--color-negro), 2px 0 var(--color-negro),
+    1.41px -1.41px var(--color-negro), 0 -2px var(--color-negro),
+    -1.41px -1.41px var(--color-negro), -2px 0 var(--color-negro),
+    -1.41px 1.41px var(--color-negro), 0 2px var(--color-negro);
 }
-
 
 .cabecera-splatoon__menu--enlace:hover,
 .cabecera-splatoon__menu--enlace:focus {
   color: var(--color-secundario__splatoon);
 }
-
 
 @media screen and (max-width: 1400px) {
   .cabecera-splatoon {
@@ -3502,7 +3507,6 @@ img {
   .cabecera-splatoon__menu--titulo {
     font-size: 1.6rem;
   }
-
 }
 
 @media screen and (max-width: 1100px) {
@@ -3529,14 +3533,12 @@ img {
   .cabecera-splatoon__menu--imagen {
     width: 14%;
   }
-
 }
 
 @media screen and (max-width: 850px) {
   .cabecera-splatoon {
     padding: 0.5rem 1rem;
   }
-
 
   .cabecera-splatoon__menu {
     padding-left: 0;
@@ -3590,7 +3592,6 @@ img {
     gap: 0.3rem;
   }
 
-
   .cabecera-splatoon__menu {
     width: 90%;
     align-items: center;
@@ -3608,28 +3609,28 @@ img {
   }
 }
 
-.body-splatoon{
+.body-splatoon {
   background-color: var(--color-fondo-splatoon);
 }
 
 /* Introducción Splatoon*/
 
-.introduccion-splatoon{
+.introduccion-splatoon {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.introduccion-splatoon__titulo{
+.introduccion-splatoon__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
   width: 100%;
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
-.introduccion-splatoon__imagen{
+.introduccion-splatoon__imagen {
   display: block;
   margin: 0 auto;
   width: 100%;
@@ -3639,24 +3640,24 @@ img {
   transition: border-color 1.4s ease, transform 1.4s ease;
 }
 
-.introduccion-splatoon__imagen:hover{
+.introduccion-splatoon__imagen:hover {
   transform: translateY(-6px);
   transition: border-color 0.8s ease, transform 0.5s ease;
 }
 
-.introduccion-splatoon__subtitulo{
+.introduccion-splatoon__subtitulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.5rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
   width: 100%;
 }
 
-.introduccion-splatoon__descripcion{
+.introduccion-splatoon__descripcion {
   font-family: var(--fuente-base);
   font-size: 1.5rem;
   text-align: center;
-  padding:1rem;
+  padding: 1rem;
   max-width: 100%;
   width: 80%;
   margin: 0 auto;
@@ -3687,9 +3688,9 @@ img {
 }
 
 @media (max-width: 800px) {
-  .introduccion-splatoon{
-    padding:2rem;
-  }  
+  .introduccion-splatoon {
+    padding: 2rem;
+  }
   .introduccion-splatoon__titulo {
     font-size: 1.5rem;
     padding: 1rem;
@@ -3749,7 +3750,7 @@ img {
   gap: 1.5rem;
 }
 
-.timeline__titulo{
+.timeline__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
   text-align: center;
@@ -3771,7 +3772,7 @@ img {
 .timeline-sideorder,
 .timeline-raiders,
 .timeline-splatoon2,
-.timeline-splatoon3{
+.timeline-splatoon3 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -3779,13 +3780,23 @@ img {
   justify-self: center;
 }
 
-.timeline-splatoon__titulo,.timeline-octoexpansion__titulo,.timeline-raiders__titulo,.timeline-splatoon2__titulo,.timeline-splatoon3__titulo,.timeline-sideorder__titulo{
+.timeline-splatoon__titulo,
+.timeline-octoexpansion__titulo,
+.timeline-raiders__titulo,
+.timeline-splatoon2__titulo,
+.timeline-splatoon3__titulo,
+.timeline-sideorder__titulo {
   font-family: var(--fuente-secundaria);
   text-align: center;
-  padding:1rem;
+  padding: 1rem;
 }
 
-.timeline-splatoon__figura,.timeline-octoexpansion__figura,.timeline-sideorder__figura,.timeline-splatoon2__figura,.timeline-splatoon3__figura,.timeline-raiders__figura{
+.timeline-splatoon__figura,
+.timeline-octoexpansion__figura,
+.timeline-sideorder__figura,
+.timeline-splatoon2__figura,
+.timeline-splatoon3__figura,
+.timeline-raiders__figura {
   width: 350px;
   text-align: center;
   font-family: var(--fuente-base);
@@ -3793,15 +3804,24 @@ img {
   transition: transform 0.5s ease;
 }
 
-.timeline-splatoon__figura:hover,.timeline-octoexpansion__figura:hover,.timeline-sideorder__figura:hover,.timeline-splatoon2__figura:hover,.timeline-splatoon3__figura:hover,.timeline-raiders__figura:hover{
+.timeline-splatoon__figura:hover,
+.timeline-octoexpansion__figura:hover,
+.timeline-sideorder__figura:hover,
+.timeline-splatoon2__figura:hover,
+.timeline-splatoon3__figura:hover,
+.timeline-raiders__figura:hover {
   transform: translateY(-6px);
   transition: transform 0.5s ease;
 }
-.timeline-splatoon__imagen,.timeline-octoexpansion__imagen,.timeline-sideorder__imagen,.timeline-raiders__imagen,.timeline-splatoon2__imagen,.timeline-splatoon3__imagen{
+.timeline-splatoon__imagen,
+.timeline-octoexpansion__imagen,
+.timeline-sideorder__imagen,
+.timeline-raiders__imagen,
+.timeline-splatoon2__imagen,
+.timeline-splatoon3__imagen {
   border-radius: 1rem;
-  border: 3px solid var(--color-negro)
+  border: 3px solid var(--color-negro);
 }
-
 
 @media (max-width: 1200px) {
   #timeline {
@@ -3981,20 +4001,20 @@ img {
 
 /* Cronología Splatoon*/
 
-#cronologia-splatoon{
+#cronologia-splatoon {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding:3rem;
-  gap:1rem;
+  padding: 3rem;
+  gap: 1rem;
 }
 
-.cronologia-splatoon__titulo{
+.cronologia-splatoon__titulo {
   width: 100%;
   text-align: center;
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
-  padding:2rem;
+  padding: 2rem;
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
@@ -4013,44 +4033,65 @@ img {
   width: 40%;
 }
 
-.cronologia-splatoon__subtitulo{
+.cronologia-splatoon__subtitulo {
   font-family: var(--fuente-secundaria);
   font-size: 0.95rem;
 }
 
-.cronologia-splatoon1__titulo,.cronologia-splatoon2__titulo,.cronologia-splatoon3__titulo,.cronologia-octoexpansion__titulo,.cronologia-sideorder__titulo,.cronologia-raiders__titulo{
+.cronologia-splatoon1__titulo,
+.cronologia-splatoon2__titulo,
+.cronologia-splatoon3__titulo,
+.cronologia-octoexpansion__titulo,
+.cronologia-sideorder__titulo,
+.cronologia-raiders__titulo {
   font-size: 1.2rem;
   text-align: center;
   font-family: var(--fuente-secundaria);
 }
 
-.cronologia-splatoon1__imagen,.cronologia-splatoon2__imagen,.cronologia-splatoon3__imagen,.cronologia-octoexpansion__imagen,.cronologia-raiders__imagen,.cronologia-sideorder__imagen{
+.cronologia-splatoon1__imagen,
+.cronologia-splatoon2__imagen,
+.cronologia-splatoon3__imagen,
+.cronologia-octoexpansion__imagen,
+.cronologia-raiders__imagen,
+.cronologia-sideorder__imagen {
   border-radius: 2rem;
   box-shadow: 0 0 100px var(--color-negro);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.cronologia-splatoon1__imagen:hover,.cronologia-splatoon2__imagen:hover,.cronologia-splatoon3__imagen:hover,.cronologia-octoexpansion__imagen:hover,.cronologia-raiders__imagen:hover,.cronologia-sideorder__imagen:hover{
+.cronologia-splatoon1__imagen:hover,
+.cronologia-splatoon2__imagen:hover,
+.cronologia-splatoon3__imagen:hover,
+.cronologia-octoexpansion__imagen:hover,
+.cronologia-raiders__imagen:hover,
+.cronologia-sideorder__imagen:hover {
   transform: translateY(-6px);
   transition: transform 0.5s ease, box-shadow 0.5s ease;
 }
 
-.cronologia-octoexpansion__descripcion,.cronologia-splatoon1__descripcion,.cronologia-raiders__descripcion,.cronologia-splatoon2__descripcion,.cronologia-splatoon3__descripcion,.cronologia-raiders__descripcion,.cronologia-sideorder__descripcion{
+.cronologia-octoexpansion__descripcion,
+.cronologia-splatoon1__descripcion,
+.cronologia-raiders__descripcion,
+.cronologia-splatoon2__descripcion,
+.cronologia-splatoon3__descripcion,
+.cronologia-raiders__descripcion,
+.cronologia-sideorder__descripcion {
   font-size: 1.2rem;
 }
 
-.cronologia-splatoon__ideas{
-  list-style-image:url("../imgs/flecha_listas.png");
+.cronologia-splatoon__ideas {
+  list-style-image: url("../imgs/flecha_listas.png");
   font-size: 1.4rem;
 }
 
 @media (max-width: 1200px) {
-  #cronologia-splatoon{
+  #cronologia-splatoon {
     padding: 2.5rem;
     gap: 1.2rem;
   }
 
-  .cronologia-splatoon__titulo{
+  .cronologia-splatoon__titulo {
     font-size: 2.3rem;
     padding: 1.8rem;
   }
@@ -4070,7 +4111,7 @@ img {
   .cronologia-splatoon3__titulo,
   .cronologia-octoexpansion__titulo,
   .cronologia-sideorder__titulo,
-  .cronologia-raiders__titulo{
+  .cronologia-raiders__titulo {
     font-size: 1.15rem;
   }
 
@@ -4079,23 +4120,23 @@ img {
   .cronologia-raiders__descripcion,
   .cronologia-splatoon2__descripcion,
   .cronologia-splatoon3__descripcion,
-  .cronologia-sideorder__descripcion{
+  .cronologia-sideorder__descripcion {
     font-size: 1.15rem;
   }
 
-  .cronologia-splatoon__ideas{
+  .cronologia-splatoon__ideas {
     font-size: 1.35rem;
   }
 }
 
 @media (max-width: 800px) {
-  #cronologia-splatoon{
+  #cronologia-splatoon {
     padding: 2rem 1.5rem;
     gap: 1.5rem;
     justify-content: center;
   }
 
-  .cronologia-splatoon__titulo{
+  .cronologia-splatoon__titulo {
     font-size: 2rem;
     padding: 1.5rem;
   }
@@ -4115,7 +4156,7 @@ img {
   .cronologia-splatoon3__titulo,
   .cronologia-octoexpansion__titulo,
   .cronologia-sideorder__titulo,
-  .cronologia-raiders__titulo{
+  .cronologia-raiders__titulo {
     font-size: 1.1rem;
   }
 
@@ -4124,22 +4165,22 @@ img {
   .cronologia-raiders__descripcion,
   .cronologia-splatoon2__descripcion,
   .cronologia-splatoon3__descripcion,
-  .cronologia-sideorder__descripcion{
+  .cronologia-sideorder__descripcion {
     font-size: 1.05rem;
   }
 
-  .cronologia-splatoon__ideas{
+  .cronologia-splatoon__ideas {
     font-size: 1.25rem;
   }
 }
 
 @media (max-width: 500px) {
-  #cronologia-splatoon{
+  #cronologia-splatoon {
     padding: 1.5rem 1rem;
     gap: 1.3rem;
   }
 
-  .cronologia-splatoon__titulo{
+  .cronologia-splatoon__titulo {
     font-size: 1.2rem;
     padding: 1.2rem;
   }
@@ -4159,7 +4200,7 @@ img {
   .cronologia-splatoon3__titulo,
   .cronologia-octoexpansion__titulo,
   .cronologia-sideorder__titulo,
-  .cronologia-raiders__titulo{
+  .cronologia-raiders__titulo {
     font-size: 1rem;
   }
 
@@ -4168,30 +4209,29 @@ img {
   .cronologia-raiders__descripcion,
   .cronologia-splatoon2__descripcion,
   .cronologia-splatoon3__descripcion,
-  .cronologia-sideorder__descripcion{
+  .cronologia-sideorder__descripcion {
     font-size: 0.95rem;
   }
 
-  .cronologia-splatoon__subtitulo{
+  .cronologia-splatoon__subtitulo {
     font-size: 0.9rem;
   }
 
-  .cronologia-splatoon__ideas{
+  .cronologia-splatoon__ideas {
     font-size: 1.1rem;
   }
 }
 
-
 /* Armas Splatoon */
 
-#armas-splatoon{
+#armas-splatoon {
   display: flex;
   flex-direction: column;
   gap: 2rem;
   align-items: center;
 }
 
-.armas-splatoon__titulo{
+.armas-splatoon__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
   text-align: center;
@@ -4201,12 +4241,12 @@ img {
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
-.armas-splatoon__descripcion{
+.armas-splatoon__descripcion {
   max-width: 75%;
   font-family: var(--fuente-base);
   font-size: 1.5rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
 }
 
 .armas-lanzatintas__titulo,
@@ -4252,7 +4292,7 @@ img {
   flex-direction: column;
   align-items: center;
   padding: 0.5rem;
-  gap:1rem;
+  gap: 1rem;
 }
 
 .armas-lanzatintas__figura--imagen,
@@ -4264,7 +4304,7 @@ img {
   border-radius: 50%;
   border: 4px solid var(--color-principal__splatoon);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .armas-lanzatintas__figura--imagen:hover,
@@ -4273,6 +4313,7 @@ img {
 .armas-derramatic__figura--imagen:hover {
   transform: translateY(-6px) rotate(-1deg);
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .armas-lanzatintas__figura--descripcion,
@@ -4316,7 +4357,6 @@ img {
   border-radius: 1.2rem;
   border: 3px solid var(--color-principal__splatoon);
   -webkit-text-stroke: 1px var(--color-negro);
-  
 }
 
 .armas-lanzatintas__lista,
@@ -4330,7 +4370,7 @@ img {
   padding: 1rem;
 }
 
-.armas__lista--titulo{
+.armas__lista--titulo {
   font-family: var(--fuente-secundaria);
   text-align: center;
 }
@@ -4350,7 +4390,7 @@ img {
   background-color: #e4659a;
   border-radius: 1.2rem;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .armas-lanzatintas__lista--arma:hover,
@@ -4359,6 +4399,7 @@ img {
 .armas-derramatic__lista--arma:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .armas-lanzatintas__lista--imagen,
@@ -4370,7 +4411,8 @@ img {
   object-fit: cover;
   border-radius: 2rem;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
-  margin-top:0.5rem;
+  margin-top: 0.5rem;
+  transition: transform 0.5s ease;
 }
 
 .armas-lanzatintas__lista--imagen:hover,
@@ -4380,7 +4422,6 @@ img {
   transform: scale(1.05);
   transition: transform 0.5s ease;
 }
-
 
 .armas-lanzatintas__lista--descripcion,
 .armas-rodillos__lista--descripcion,
@@ -4579,15 +4620,15 @@ img {
 
 /* Idols Splatoon */
 
-#idols-splatoon{
+#idols-splatoon {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap:1rem;
-  padding:2rem;
+  gap: 1rem;
+  padding: 2rem;
 }
 
-.idols-splatoon__titulo{
+.idols-splatoon__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
   text-align: center;
@@ -4602,7 +4643,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:1.5rem;
+  gap: 1.5rem;
   max-width: 30%;
   width: 100%;
   padding: 1.5rem 1.25rem;
@@ -4637,7 +4678,7 @@ img {
   border: 4px solid var(--color-principal__splatoon);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
   object-fit: cover;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .idols-splatoon__calamarcinas--imagen:hover,
@@ -4645,6 +4686,7 @@ img {
 .idols-splatoon__surimi--imagen:hover {
   transform: translateY(-6px) rotate(-1deg);
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .idols-splatoon__calamarcinas--descripcion,
@@ -4658,7 +4700,6 @@ img {
   border-radius: 2rem;
   padding: 1rem;
 }
-
 
 @media screen and (max-width: 1200px) {
   #idols-splatoon {
@@ -4763,7 +4804,7 @@ img {
 }
 /* Curiosidades Splatoon */
 
-#curiosidades-splatoon{
+#curiosidades-splatoon {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -4833,10 +4874,10 @@ img {
   border: 4px solid var(--color-principal__splatoon);
   object-fit: cover;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.curiosidades-splatoon__articulo--calamarcinas{
+.curiosidades-splatoon__articulo--calamarcinas {
   width: 100%;
   object-fit: cover;
 }
@@ -4844,6 +4885,7 @@ img {
 .curiosidades-splatoon__articulo--imagen:hover {
   transform: translateY(-6px) rotate(-1deg);
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .curiosidades-splatoon__articulo--descripcion {
@@ -4955,23 +4997,23 @@ img {
 
 /* Imágenes destacadas Splatoon */
 
-#imagenes-destacadas{
+#imagenes-destacadas {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding:2rem;
-  gap:2rem;
+  padding: 2rem;
+  gap: 2rem;
 }
 
-.imagenes-destacadas__titulo{
+.imagenes-destacadas__titulo {
   width: 100%;
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
 }
 
-.imagenes-destacadas__imagen{
+.imagenes-destacadas__imagen {
   width: 100%;
   max-width: 20%;
   border-radius: 2rem;
@@ -4980,7 +5022,7 @@ img {
   transition: transform 0.5s ease;
 }
 
-.imagenes-destacadas__imagen:hover{
+.imagenes-destacadas__imagen:hover {
   transform: translateY(-6px);
   transition: transform 0.5s ease;
 }
@@ -5039,9 +5081,9 @@ img {
    11. Página Mario
    ========================= */
 
-.cabecera-mario{
-  top:0;
-  left:0;
+.cabecera-mario {
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -5050,59 +5092,53 @@ img {
   padding: 0.75rem 1rem;
 }
 
-.cabecera-mario__menu{
+.cabecera-mario__menu {
   display: flex;
   flex-direction: column;
   align-content: center;
-  gap:2rem;
+  gap: 2rem;
   font-family: var(--fuente-secundaria);
-  color: var(--color-principal__mario)
+  color: var(--color-principal__mario);
 }
 
-.cabecera__menu--sustituto{
+.cabecera__menu--sustituto {
   pointer-events: none;
   text-decoration: none;
 }
 
-.cabecera-mario__menu--titulo{
+.cabecera-mario__menu--titulo {
   display: flex;
   justify-content: center;
-  gap:2rem;
+  gap: 2rem;
   align-items: center;
-  color:var(--color-principal__mario);
+  color: var(--color-principal__mario);
   font-size: 2rem;
   -webkit-text-stroke: 1px var(--color-negro);
 }
 
-.cabecera-mario__menu--lista{
+.cabecera-mario__menu--lista {
   display: flex;
   justify-content: space-between;
   font-family: var(--fuente-base);
-  width:100%;
+  width: 100%;
   max-width: 100%;
-  gap:4rem;
+  gap: 4rem;
   font-size: 1rem;
   padding-bottom: 1rem;
-  
 }
-.cabecera-mario__menu--imagen{
+.cabecera-mario__menu--imagen {
   width: 12%;
 }
 
-.cabecera-mario__menu--enlace{
+.cabecera-mario__menu--enlace {
   font-family: var(--fuente-base);
   color: white;
   font-size: 1.5rem;
   font-weight: 900;
-  text-shadow: 
-    1.41px 1.41px var(--color-negro), 
-    2px 0 var(--color-negro), 
-    1.41px -1.41px var(--color-negro),
-    0 -2px var(--color-negro), 
-    -1.41px -1.41px var(--color-negro), 
-    -2px 0 var(--color-negro),
-    -1.41px 1.41px var(--color-negro), 
-    0 2px var(--color-negro);
+  text-shadow: 1.41px 1.41px var(--color-negro), 2px 0 var(--color-negro),
+    1.41px -1.41px var(--color-negro), 0 -2px var(--color-negro),
+    -1.41px -1.41px var(--color-negro), -2px 0 var(--color-negro),
+    -1.41px 1.41px var(--color-negro), 0 2px var(--color-negro);
 }
 
 .cabecera-mario__menu--enlace:hover,
@@ -5138,7 +5174,6 @@ img {
   .cabecera-mario__menu--titulo {
     font-size: 1.6rem;
   }
-
 }
 
 @media screen and (max-width: 1100px) {
@@ -5165,14 +5200,12 @@ img {
   .cabecera-mario__menu--imagen {
     width: 14%;
   }
-
 }
 
 @media screen and (max-width: 850px) {
   .cabecera-mario {
     padding: 0.5rem 1rem;
   }
-
 
   .cabecera-mario__menu {
     padding-left: 0;
@@ -5189,8 +5222,6 @@ img {
   .cabecera-mario__menu--imagen {
     width: 15%;
   }
-
-
 }
 
 @media screen and (max-width: 650px) {
@@ -5219,7 +5250,6 @@ img {
   }
 }
 
-
 @media screen and (max-width: 450px) {
   .cabecera-mario {
     padding: 0.35rem 0.6rem;
@@ -5228,7 +5258,6 @@ img {
     align-items: center;
     gap: 0.3rem;
   }
-
 
   .cabecera-mario__menu {
     width: 90%;
@@ -5246,116 +5275,119 @@ img {
     width: 18%;
   }
 }
-.body-mario{
+.body-mario {
   background-color: var(--color-fondo-mario);
 }
 
 /* Introducción Mario */
 
-.introduccion-mario{
+.introduccion-mario {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.introduccion-mario__titulo{
+.introduccion-mario__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
   width: 100%;
   text-shadow: -3px 3px 0 var(--color-principal__mario);
 }
 
-.introduccion-mario__descripcion{
+.introduccion-mario__descripcion {
   font-family: var(--fuente-base);
   font-size: 1.6rem;
   text-align: center;
   width: 100%;
   max-width: 75%;
   padding: 0 2rem 1rem 2rem;
-
 }
 
-.introduccion-mario__imagen{
+.introduccion-mario__imagen {
   width: 100%;
   max-width: 40%;
   border-radius: 5rem;
   border: 4px solid var(--color-principal__mario);
-  transition: border-color 1.4s ease, transform 1.4s ease;
+  transition: transform 0.5s ease;
+}
+
+.introduccion-mario__imagen:hover {
+  transform: translateY(-6px);
+  transition: transform 0.5s ease;
 }
 
 @media (max-width: 1200px) {
-  .introduccion-mario__titulo{
+  .introduccion-mario__titulo {
     font-size: 2.2rem;
     padding: 1.8rem;
   }
 
-  .introduccion-mario__descripcion{
+  .introduccion-mario__descripcion {
     font-size: 1.45rem;
     max-width: 80%;
     padding: 0 1.8rem 1rem 1.8rem;
   }
 
-  .introduccion-mario__imagen{
+  .introduccion-mario__imagen {
     max-width: 45%;
     border-width: 4px;
   }
 }
 
 @media (max-width: 800px) {
-  .introduccion-mario__titulo{
+  .introduccion-mario__titulo {
     font-size: 2rem;
     padding: 1.6rem;
   }
 
-  .introduccion-mario__descripcion{
+  .introduccion-mario__descripcion {
     font-size: 1.3rem;
     max-width: 85%;
     padding: 0 1.5rem 1rem 1.5rem;
   }
 
-  .introduccion-mario__imagen{
+  .introduccion-mario__imagen {
     max-width: 55%;
     border-width: 3.5px;
   }
 }
 
 @media (max-width: 500px) {
-  .introduccion-mario__titulo{
+  .introduccion-mario__titulo {
     font-size: 1.2rem;
     padding: 1.3rem;
   }
 
-  .introduccion-mario__descripcion{
+  .introduccion-mario__descripcion {
     font-size: 0.9rem;
     max-width: 95%;
     padding: 0 1.2rem 0.9rem 1.2rem;
   }
 
-  .introduccion-mario__imagen{
+  .introduccion-mario__imagen {
     max-width: 70%;
     border-width: 3px;
     border-radius: 3.5rem;
   }
 }
 
-
 /* Hitos 2D Mario */
 
-#hitos-2d{
+#hitos-2d {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding:3rem;
-  gap:2.5rem;
+  padding: 3rem;
+  gap: 2.5rem;
 }
 
 .hitos-2d__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
   width: 100%;
   text-shadow: -3px 3px 0 var(--color-principal__mario);
 }
@@ -5403,7 +5435,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
   width: 100%;
   max-width: 75%;
 }
@@ -5413,7 +5445,16 @@ img {
 .hitos-2d-1990__figura--imagen,
 .hitos-2d-1995__figura--imagen {
   border-radius: 2rem;
-  border: 5px solid var(--color-principal__mario)
+  border: 5px solid var(--color-principal__mario);
+  transition: transform 0.5s ease;
+}
+
+.hitos-2d-1985__figura--imagen:hover,
+.hitos-2d-1988__figura--imagen:hover,
+.hitos-2d-1990__figura--imagen:hover,
+.hitos-2d-1995__figura--imagen:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
 }
 
 .hitos-2d-1985__figura--descripcion,
@@ -5423,23 +5464,23 @@ img {
   font-family: var(--fuente-base);
   text-align: center;
   font-weight: 600;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
 .hitos-2d-1985__descripcion,
 .hitos-2d-1988__descripcion,
 .hitos-2d-1990__descripcion,
-.hitos-2d-1995__descripcion{
+.hitos-2d-1995__descripcion {
   font-family: var(--fuente-base);
   text-align: center;
   font-weight: 600;
   background-color: var(--color-principal__mario);
   border-radius: 2rem;
-  padding:1rem;
+  padding: 1rem;
 }
 
 @media (max-width: 1200px) {
-  #hitos-2d{
+  #hitos-2d {
     padding: 2.5rem;
     gap: 2.2rem;
   }
@@ -5474,7 +5515,6 @@ img {
     font-size: 1.05rem;
   }
 }
-
 
 @media (max-width: 800px) {
   #hitos-2d {
@@ -5523,7 +5563,7 @@ img {
 }
 
 @media (max-width: 500px) {
-  #hitos-2d{
+  #hitos-2d {
     padding: 1.2rem;
     gap: 1.6rem;
   }
@@ -5569,26 +5609,25 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding:2rem;
-  gap:2.5rem;
+  padding: 2rem;
+  gap: 2.5rem;
 }
 
 .hitos-3d__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
   width: 100%;
   text-shadow: -3px 3px 0 var(--color-principal__mario);
 }
 
-.hitos-3d__descripcion{
+.hitos-3d__descripcion {
   font-family: var(--fuente-base);
   font-size: 1.2rem;
   text-align: center;
   width: 100%;
-  padding:2rem;
-
+  padding: 2rem;
 }
 
 .hitos-3d-1996,
@@ -5641,7 +5680,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
   width: 100%;
   max-width: 75%;
 }
@@ -5651,9 +5690,20 @@ img {
 .hitos-3d-2007__figura--imagen,
 .hitos-3d-2011__figura--imagen,
 .hitos-3d-2013__figura--imagen,
-.hitos-3d-2017__figura--imagen{
+.hitos-3d-2017__figura--imagen {
+  border-color: 3px solid var(--color-principal__mario);
   border-radius: 2rem;
+  transition: transform 0.5s ease;
+}
 
+.hitos-3d-1996__figura--imagen:hover,
+.hitos-3d-2002__figura--imagen:hover,
+.hitos-3d-2007__figura--imagen:hover,
+.hitos-3d-2011__figura--imagen:hover,
+.hitos-3d-2013__figura--imagen:hover,
+.hitos-3d-2017__figura--imagen:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
 }
 
 .hitos-3d-1996__figura--descripcion,
@@ -5666,9 +5716,8 @@ img {
   font-size: 0.9rem;
   text-align: center;
   font-weight: 900;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
-
 
 .hitos-3d-1996__descripcion,
 .hitos-3d-2002__descripcion,
@@ -5681,14 +5730,14 @@ img {
   font-weight: 600;
   background-color: var(--color-principal__mario);
   border-radius: 2rem;
-  padding:1rem;
+  padding: 1rem;
 }
 
-.hitos-3d__cita{
+.hitos-3d__cita {
   font-family: var(--fuente-base);
   background-color: var(--color-principal__mario);
   border-radius: 2rem;
-  padding:1.5rem;
+  padding: 1.5rem;
 }
 
 @media (max-width: 1200px) {
@@ -5712,13 +5761,13 @@ img {
 
 @media (max-width: 800px) {
   .hitos-3d__titulo {
-  font-size: 1.8rem;
-  padding: 1.5rem;
+    font-size: 1.8rem;
+    padding: 1.5rem;
   }
 
   .hitos-3d__descripcion {
-  font-size: 1.1rem;
-  padding: 1.5rem 1rem;
+    font-size: 1.1rem;
+    padding: 1.5rem 1rem;
   }
 
   .hitos-3d-1996,
@@ -5727,9 +5776,9 @@ img {
   .hitos-3d-2011,
   .hitos-3d-2013,
   .hitos-3d-2017 {
-  max-width: 100%;
-  width: 100%;
-  padding: 1.5rem 1rem;
+    max-width: 100%;
+    width: 100%;
+    padding: 1.5rem 1rem;
   }
 
   .hitos-3d-1996__titulo,
@@ -5738,9 +5787,9 @@ img {
   .hitos-3d-2011__titulo,
   .hitos-3d-2013__titulo,
   .hitos-3d-2017__titulo {
-  font-size: 1.4rem;
-  width: 100%;
-  padding: 1rem;
+    font-size: 1.4rem;
+    width: 100%;
+    padding: 1rem;
   }
 
   .hitos-3d-1996__figura,
@@ -5749,7 +5798,7 @@ img {
   .hitos-3d-2011__figura,
   .hitos-3d-2013__figura,
   .hitos-3d-2017__figura {
-  max-width: 100%;
+    max-width: 100%;
   }
 
   .hitos-3d-1996__figura--descripcion,
@@ -5758,7 +5807,7 @@ img {
   .hitos-3d-2011__figura--descripcion,
   .hitos-3d-2013__figura--descripcion,
   .hitos-3d-2017__figura--descripcion {
-  font-size: 1.1rem;
+    font-size: 1.1rem;
   }
 
   .hitos-3d-1996__descripcion,
@@ -5767,8 +5816,8 @@ img {
   .hitos-3d-2011__descripcion,
   .hitos-3d-2013__descripcion,
   .hitos-3d-2017__descripcion {
-  font-size: 0.95rem;
-  padding: 1rem;
+    font-size: 0.95rem;
+    padding: 1rem;
   }
 }
 
@@ -5784,7 +5833,7 @@ img {
     overflow-wrap: break-word;
   }
 
-  .hitos-3d__descripcion{
+  .hitos-3d__descripcion {
     font-size: 1rem;
     padding: 1rem;
   }
@@ -5832,31 +5881,29 @@ img {
 
 /* Personajes Mario */
 
-#personajes-mario{
+#personajes-mario {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  padding:2rem;
-  gap:2.5rem;
+  padding: 2rem;
+  gap: 2.5rem;
 }
 
-.personajes__titulo{
+.personajes__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
   width: 100%;
   text-shadow: -3px 3px 0 var(--color-principal__mario);
 }
-.personajes__descripcion{
+.personajes__descripcion {
   font-family: var(--fuente-base);
   font-size: 1.2rem;
   text-align: center;
   width: 100%;
-  padding:2rem;
-
+  padding: 2rem;
 }
-
 
 .personajes-mario,
 .personajes-luigi,
@@ -5878,14 +5925,13 @@ img {
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
 
-
 .personajes-mario__titulo,
 .personajes-luigi__titulo,
 .personajes-bowser__titulo,
 .personajes-peach__titulo,
 .personajes-aliados__titulo {
   font-family: var(--fuente-secundaria);
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   text-align: center;
   width: 80%;
   padding: 1.5rem;
@@ -5898,20 +5944,18 @@ img {
   overflow-wrap: break-word;
 }
 
-
 .personajes-mario__descripcion,
 .personajes-luigi__descripcion,
 .personajes-bowser__descripcion,
 .personajes-peach__descripcion,
-.personajes-aliados__descripcion{
+.personajes-aliados__descripcion {
   font-family: var(--fuente-base);
   text-align: center;
   font-weight: 600;
   background-color: var(--color-principal__mario);
   border-radius: 2rem;
-  padding:1.5rem;
+  padding: 1.5rem;
 }
-
 
 .personajes-mario__figura,
 .personajes-luigi__figura,
@@ -5921,7 +5965,7 @@ img {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:1rem;
+  gap: 1rem;
   width: 100%;
   max-width: 75%;
 }
@@ -5930,14 +5974,14 @@ img {
 .personajes-luigi__figura--descripcion,
 .personajes-bowser__figura--descripcion,
 .personajes-peach__figura--descripcion,
-.personajes-aliados__figura--descripcion{
+.personajes-aliados__figura--descripcion {
   font-family: var(--fuente-base);
   font-size: 0.9rem;
   text-align: center;
   font-weight: 900;
-  background: rgba(255,255,255,0.6);
-  padding:1rem;
-  color: var(--color-negro)
+  background: rgba(255, 255, 255, 0.6);
+  padding: 1rem;
+  color: var(--color-negro);
 }
 
 @media (max-width: 1200px) {
@@ -5955,6 +5999,16 @@ img {
   .personajes-aliados {
     max-width: 45%;
     width: 45%;
+  }
+
+  .personajes-mario__titulo,
+  .personajes-luigi__titulo,
+  .personajes-bowser__titulo,
+  .personajes-peach__titulo,
+  .personajes-aliados__titulo {
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 1rem;
   }
 }
 
@@ -5984,7 +6038,7 @@ img {
   .personajes-bowser__titulo,
   .personajes-peach__titulo,
   .personajes-aliados__titulo {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     width: 100%;
     padding: 1rem;
   }
@@ -6021,13 +6075,13 @@ img {
     gap: 1.8rem;
   }
 
-  .personajes__titulo{
+  .personajes__titulo {
     font-size: 1.2rem;
     padding: 1.3rem;
     overflow-wrap: break-word;
   }
 
-  .personajes__descripcion{
+  .personajes__descripcion {
     font-size: 1rem;
     padding: 1rem;
   }
@@ -6070,22 +6124,21 @@ img {
   }
 }
 
-
 /* Curiosidades Mario */
 
-#curiosidades-mario{
+#curiosidades-mario {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  padding:2rem;
-  gap:2.5rem;
+  padding: 2rem;
+  gap: 2.5rem;
 }
 
-.curiosidades-mario__titulo{
+.curiosidades-mario__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
   text-align: center;
-  padding:1rem;
+  padding: 1rem;
   width: 100%;
   text-shadow: -3px 3px 0 var(--color-principal__mario);
 }
@@ -6094,12 +6147,12 @@ img {
   font-size: 1.5rem;
   text-align: center;
   width: 100%;
-  padding:1rem;
+  padding: 1rem;
 }
 
 .curiosidades-mario-origen,
 .curiosidades-mario-diseno-mario,
-.curiosidades-mario-goombas{
+.curiosidades-mario-goombas {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6123,14 +6176,21 @@ img {
   align-items: center;
 }
 
-.curiosidades-mario-origen__figura--imagen, 
+.curiosidades-mario-origen__figura--imagen,
 .curiosidades-mario-diseno-mario__figura--imagen,
 .curiosidades-mario-goombas__figura--imagen {
   max-width: 40%;
   border-radius: 2.5rem;
-  border: 3px solid var(--color-negro)
+  border: 3px solid var(--color-negro);
+  transition: transform 0.5s ease;
 }
 
+.curiosidades-mario-origen__figura--imagen:hover,
+.curiosidades-mario-diseno-mario__figura--imagen:hover,
+.curiosidades-mario-goombas__figura--imagen:hover {
+  transform: translateY(-6px);
+  transition: transform 0.5s ease;
+}
 .curiosidades-mario-origen__figura--descripcion,
 .curiosidades-mario-diseno-mario__figura--descripcion,
 .curiosidades-mario-goombas__figura--descripcion {
@@ -6170,19 +6230,19 @@ img {
   width: 50%;
 }
 
-.curiosidades-mario-diseno-mario__lista--item{
+.curiosidades-mario-diseno-mario__lista--item {
   display: flex;
   flex-direction: column;
-  gap:1rem;
+  gap: 1rem;
   padding-bottom: 1.5rem;
 }
 
-.curiosidades-mario-diseno-mario__lista--termino{
+.curiosidades-mario-diseno-mario__lista--termino {
   font-family: var(--fuente-secundaria);
   font-weight: 600;
 }
 
-.curiosidades-mario-goombas__teoria{
+.curiosidades-mario-goombas__teoria {
   font-family: var(--fuente-base);
   font-weight: 500;
   font-size: 1.5rem;
@@ -6191,7 +6251,6 @@ img {
   margin: 0 auto;
   width: 50%;
 }
-
 
 @media (max-width: 1200px) {
   .curiosidades-mario__titulo {
@@ -6258,7 +6317,7 @@ img {
 }
 
 @media (max-width: 500px) {
-  #curiosidades-mario{
+  #curiosidades-mario {
     padding: 1.5rem 1rem;
     gap: 2rem;
   }
@@ -6281,7 +6340,7 @@ img {
     padding-bottom: 1rem;
   }
 
-  .curiosidades-mario-origen__figura--imagen, 
+  .curiosidades-mario-origen__figura--imagen,
   .curiosidades-mario-diseno-mario__figura--imagen,
   .curiosidades-mario-goombas__figura--imagen {
     max-width: 70%;
@@ -6305,51 +6364,55 @@ img {
   }
 }
 
-
 /* Imágenes destacadas Mario */
 
-#imagenes-destacadas-mario{
+#imagenes-destacadas-mario {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  gap:1rem;
-  padding:1.5rem;
+  gap: 1rem;
+  padding: 1.5rem;
 }
 
-.imagenes-destacadas__titulo{
+.imagenes-destacadas__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
   text-align: center;
-  padding:1rem;
+  padding: 1rem;
   width: 100%;
   text-shadow: -3px 3px 0 var(--color-principal__mario);
 }
-.imagenes-destacadas__descripcion{
+.imagenes-destacadas__descripcion {
   font-family: var(--fuente-base);
   font-size: 1.5rem;
   text-align: center;
   width: 100%;
-  padding:1rem;
+  padding: 1rem;
 }
 
-
-.imagenes-destacadas__figura{
+.imagenes-destacadas__figura {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-evenly;
-  gap:1rem;
-  padding:1rem;
+  gap: 1rem;
+  padding: 1rem;
   width: 100%;
   max-width: 15%;
   background-image: url(../imgs/fondo-mario.jpg);
   border-radius: 2rem;
-  border: 3px solid var(--color-negro)
+  border: 3px solid var(--color-negro);
 }
 
-.imagenes-destacadas__figura-imagen{
+.imagenes-destacadas__figura-imagen {
   border-radius: 2rem;
   max-width: 75%;
+  transition: transform 0.5s ease;
+}
+
+.imagenes-destacadas__figura-imagen:hover {
+  transform: scale(1.05);
+  transition: transform 0.5s ease;
 }
 
 .imagenes-destacadas__figura-descripcion {
@@ -6358,7 +6421,7 @@ img {
   background-color: var(--color-principal__mario);
   border-radius: 2rem;
   width: 85%;
-  padding:1rem;
+  padding: 1rem;
 }
 
 .imagenes-destacadas__figura-descripcion > span:first-of-type {
@@ -6426,13 +6489,13 @@ img {
    12. Página Kirby
    ========================= */
 
-.body-kirby{
-  background-color: var(--color-fondo-kirby)
+.body-kirby {
+  background-color: var(--color-fondo-kirby);
 }
 
-.cabecera-kirby{
-  top:0;
-  left:0;
+.cabecera-kirby {
+  top: 0;
+  left: 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -6441,56 +6504,49 @@ img {
   padding: 0.75rem 1rem;
 }
 
-.cabecera-kirby__menu{
+.cabecera-kirby__menu {
   display: flex;
   flex-direction: column;
   align-content: center;
-  gap:2rem;
+  gap: 2rem;
   font-family: var(--fuente-secundaria);
-  color: var(--color-principal__kirby)
+  color: var(--color-principal__kirby);
 }
 
-.cabecera-kirby__menu--titulo{
+.cabecera-kirby__menu--titulo {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:1rem;
-  color:var(--color-principal__kirby);
+  gap: 1rem;
+  color: var(--color-principal__kirby);
   font-size: 2rem;
   -webkit-text-stroke: 1px var(--color-negro);
 }
 
-.cabecera-kirby__menu--lista{
+.cabecera-kirby__menu--lista {
   display: flex;
   justify-content: space-evenly;
   font-family: var(--fuente-base);
-  width:100%;
+  width: 100%;
   max-width: 100%;
   font-size: 1rem;
   padding-bottom: 1rem;
-  
 }
 
-.cabecera-kirby__menu--imagen{
-  width:10%;
+.cabecera-kirby__menu--imagen {
+  width: 10%;
 }
 
-.cabecera-kirby__menu--enlace{
+.cabecera-kirby__menu--enlace {
   font-family: var(--fuente-base);
   color: white;
   font-size: 1.5rem;
   font-weight: 900;
-  text-shadow: 
-    1.41px 1.41px var(--color-negro), 
-    2px 0 var(--color-negro), 
-    1.41px -1.41px var(--color-negro),
-    0 -2px var(--color-negro), 
-    -1.41px -1.41px var(--color-negro), 
-    -2px 0 var(--color-negro),
-    -1.41px 1.41px var(--color-negro), 
-    0 2px var(--color-negro);
+  text-shadow: 1.41px 1.41px var(--color-negro), 2px 0 var(--color-negro),
+    1.41px -1.41px var(--color-negro), 0 -2px var(--color-negro),
+    -1.41px -1.41px var(--color-negro), -2px 0 var(--color-negro),
+    -1.41px 1.41px var(--color-negro), 0 2px var(--color-negro);
 }
-
 
 .cabecera-kirby__menu--enlace:hover,
 .cabecera-kirby__menu--enlace:focus {
@@ -6525,7 +6581,6 @@ img {
   .cabecera-kirby__menu--titulo {
     font-size: 1.6rem;
   }
-
 }
 
 @media screen and (max-width: 1100px) {
@@ -6552,14 +6607,12 @@ img {
   .cabecera-kirby__menu--imagen {
     width: 14%;
   }
-
 }
 
 @media screen and (max-width: 850px) {
   .cabecera-kirby {
     padding: 0.5rem 1rem;
   }
-
 
   .cabecera-kirby__menu {
     padding-left: 0;
@@ -6576,8 +6629,6 @@ img {
   .cabecera-kirby__menu--imagen {
     width: 15%;
   }
-
-
 }
 
 @media screen and (max-width: 650px) {
@@ -6606,7 +6657,6 @@ img {
   }
 }
 
-
 @media screen and (max-width: 450px) {
   .cabecera-kirby {
     padding: 0.35rem 0.6rem;
@@ -6615,7 +6665,6 @@ img {
     align-items: center;
     gap: 0.3rem;
   }
-
 
   .cabecera-kirby__menu {
     width: 90%;
@@ -6636,31 +6685,35 @@ img {
 
 /* Introducción Kirby */
 
-.introduccion-kirby__titulo{
+.introduccion-kirby__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
   width: 100%;
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
 }
 
-
-.introduccion-kirby__imagen{
+.introduccion-kirby__imagen {
   display: block;
   margin: 0 auto;
   width: 100%;
   max-width: 50%;
   border-radius: 5rem;
   border: 6px solid var(--color-principal__kirby);
-  transition: border-color 1.4s ease, transform 1.4s ease;
+  transition: transform 0.5s ease;
 }
 
-.introduccion-kirby__subtitulo{
+.introduccion-kirby__imagen:hover {
+  transform: translateY(-6px);
+  transition: transform 0.5s ease;
+}
+
+.introduccion-kirby__subtitulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.25rem;
   text-align: center;
-  padding:2rem;
+  padding: 2rem;
   margin: 0 auto;
   width: 60%;
 }
@@ -6681,7 +6734,6 @@ img {
     font-size: 1.2rem;
     padding: 1.8rem;
   }
-
 }
 
 @media (max-width: 800px) {
@@ -6700,7 +6752,6 @@ img {
     font-size: 1.15rem;
     padding: 1.6rem;
   }
-
 }
 
 @media (max-width: 500px) {
@@ -6720,11 +6771,10 @@ img {
     font-size: 0.7rem;
     padding: 1.2rem;
   }
-
 }
 /*Cronología Kirby */
 
-#cronologia-kirby{
+#cronologia-kirby {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
@@ -6732,7 +6782,7 @@ img {
   gap: 2.5rem;
 }
 
-.cronologia-kirby__titulo{
+.cronologia-kirby__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
   text-align: center;
@@ -6749,11 +6799,11 @@ img {
 .cronologia-kirby-2011,
 .cronologia-kirby-2016,
 .cronologia-kirby-2018,
-.cronologia-kirby-2022{
+.cronologia-kirby-2022 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   gap: 1.5rem;
   max-width: 25%;
   width: 100%;
@@ -6773,16 +6823,16 @@ img {
 .cronologia-kirby-2011__titulo,
 .cronologia-kirby-2016__titulo,
 .cronologia-kirby-2018__titulo,
-.cronologia-kirby-2022__titulo{
+.cronologia-kirby-2022__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.25rem;
   text-align: center;
   background-image: url(../imgs/kirby-fondo-titulos.jpg);
-  padding:1rem;
+  padding: 1rem;
   width: 100%;
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
   border-radius: 2rem;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
 .cronologia-kirby-1992__imagen,
@@ -6793,7 +6843,7 @@ img {
 .cronologia-kirby-2011__imagen,
 .cronologia-kirby-2016__imagen,
 .cronologia-kirby-2018__imagen,
-.cronologia-kirby-2022__imagen{
+.cronologia-kirby-2022__imagen {
   border-radius: 2rem;
 }
 
@@ -6805,13 +6855,13 @@ img {
 .cronologia-kirby-2011__descripcion,
 .cronologia-kirby-2016__descripcion,
 .cronologia-kirby-2018__descripcion,
-.cronologia-kirby-2022__descripcion{
+.cronologia-kirby-2022__descripcion {
   font-family: var(--fuente-base);
   font-size: 1.2rem;
   font-weight: 500;
   background-color: var(--color-principal__kirby);
   border-radius: 2.5rem;
-  padding:2rem;
+  padding: 2rem;
 }
 
 @media (max-width: 1200px) {
@@ -6953,7 +7003,7 @@ img {
   justify-content: space-evenly;
   flex-wrap: wrap;
   gap: 2.5rem;
-  padding:1.5rem;
+  padding: 1.5rem;
 }
 
 .habilidades__titulo {
@@ -6972,7 +7022,6 @@ img {
   width: 100%;
 }
 
-
 .habilidad-espada,
 .habilidad-fuego,
 .habilidad-bomba,
@@ -6986,35 +7035,33 @@ img {
   max-width: 25%;
   width: 100%;
   padding: 1.5rem;
-  background-image:url(../imgs/fondo-kirby-habilidades.jpg);
+  background-image: url(../imgs/fondo-kirby-habilidades.jpg);
   border-radius: 2rem;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
 }
-
 
 .habilidad-espada__titulo,
 .habilidad-fuego__titulo,
 .habilidad-bomba__titulo,
 .habilidad-martillo__titulo,
-.habilidad-sueno__titulo{
+.habilidad-sueno__titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.3rem;
   text-align: center;
   width: 100%;
-  padding:1rem;
+  padding: 1rem;
   border-radius: 2rem;
   background-image: url(../imgs/kirby-fondo-titulos.jpg);
   background-size: cover;
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
-
 
 .habilidad-espada__figura,
 .habilidad-fuego__figura,
 .habilidad-bomba__figura,
 .habilidad-martillo__figura,
-.habilidad-sueno__figura{
+.habilidad-sueno__figura {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -7039,6 +7086,7 @@ img {
 .habilidad-sueno__figura--imagen:hover {
   transform: scale(1.05);
   border-color: var(--color-blanco);
+  transition: transform 0.4s ease, border-color 0.4s ease;
 }
 
 .habilidad-espada__figura--descripcion,
@@ -7050,14 +7098,14 @@ img {
   font-size: 0.95rem;
   text-align: center;
   padding: 0.5rem 1rem;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
 .habilidad-espada__descripcion,
 .habilidad-fuego__descripcion,
 .habilidad-bomba__descripcion,
 .habilidad-martillo__descripcion,
-.habilidad-sueno__descripcion{
+.habilidad-sueno__descripcion {
   font-family: var(--fuente-base);
   font-size: 1rem;
   font-weight: 500;
@@ -7071,18 +7119,18 @@ img {
 .habilidad-fuego__subtitulo,
 .habilidad-bomba__subtitulo,
 .habilidad-martillo__subtitulo,
-.habilidad-sueno__subtitulo{
+.habilidad-sueno__subtitulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.05rem;
   text-align: center;
-  color: var(--color-negro)
+  color: var(--color-negro);
 }
 
 .habilidad-espada__lista,
 .habilidad-fuego__lista,
 .habilidad-bomba__lista,
 .habilidad-martillo__lista,
-.habilidad-sueno__lista{
+.habilidad-sueno__lista {
   list-style: none;
   padding: 0;
   margin: 0.8rem 0 0;
@@ -7090,7 +7138,7 @@ img {
   font-size: 0.95rem;
 }
 
-.habilidad__negrita{
+.habilidad__negrita {
   font-weight: 600;
 }
 
@@ -7197,7 +7245,7 @@ img {
   }
 
   .habilidades__titulo {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
   }
 
   .habilidades__descripcion {
@@ -7326,7 +7374,7 @@ img {
   border-radius: 50%;
   border: 4px solid var(--color-principal__kirby);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .jefe-whispy__figura--imagen:hover,
@@ -7334,6 +7382,7 @@ img {
 .jefe-marx__figura--imagen:hover {
   transform: translateY(-6px) rotate(-1deg);
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .jefe-whispy__figura--descripcion,
@@ -7400,7 +7449,7 @@ img {
   background-color: var(--color-principal__kirby);
   border-radius: 1.2rem;
   box-shadow: 0 10px 22px rgba(0, 0, 0, 0.5);
-  transition: transform 0.18s ease, box-shadow 0.18s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .jefe-whispy__lista--item:hover,
@@ -7408,8 +7457,8 @@ img {
 .jefe-marx__lista--item:hover {
   transform: translateY(-6px);
   box-shadow: 0 16px 30px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-
 
 @media screen and (max-width: 1200px) {
   #jefes {
@@ -7656,12 +7705,13 @@ img {
   border: 4px solid var(--color-principal__kirby);
   object-fit: cover;
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .curiosidades-kirby__figura--imagen:hover {
   transform: translateY(-6px) rotate(-1deg);
   box-shadow: 0 18px 32px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .curiosidades-kirby__figura--descripcion {
@@ -7673,7 +7723,6 @@ img {
   border-radius: 2rem;
   padding: 1rem;
 }
-
 
 @media screen and (max-width: 1200px) {
   #curiosidades-kirby {
@@ -7823,7 +7872,7 @@ img {
   border-radius: 2rem;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
 }
-.personajes-secundarios__figura--titulo{
+.personajes-secundarios__figura--titulo {
   font-family: var(--fuente-secundaria);
   text-align: center;
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
@@ -7969,14 +8018,14 @@ img {
   width: 100%;
   border-radius: 2rem;
   object-fit: cover;
-  box-shadow: 0 12px 25px rgba(0,0,0,0.55);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.55);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   border: 4px solid var(--color-principal__kirby);
 }
 
 .galeria__figura--imagen:hover {
   transform: translateY(-6px);
-  box-shadow: 0 16px 30px rgba(0,0,0,0.65);
+  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.65);
 }
 
 .galeria__figura--descripcion {
