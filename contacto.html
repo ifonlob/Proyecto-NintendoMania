@@ -39,7 +39,11 @@
   <body id="inicio">
     <header class="cabecera">
       <!-- Logotipo principal y acceso rápido al inicio -->
-      <button class="cabecera__buscador--hamburguesa" type="button">
+      <button
+        class="cabecera__buscador--hamburguesa"
+        type="button"
+        aria-label="Abrir menú de navegación"
+      >
         &#9776;
       </button>
       <a class="cabecera__logo" href="./index.html">
@@ -51,7 +55,7 @@
           height="1024"
         />
       </a>
-      <nav class="cabecera__menu">
+      <nav class="cabecera__menu" aria-label="Menú principal del sitio">
         <!-- Menú principal de navegación entre sagas y páginas destacado -->
         <p class="cabecera__menu--titulo">
           <img
@@ -89,9 +93,16 @@
           </li>
         </ul>
       </nav>
-      <nav class="cabecera__buscador">
+      <nav
+        class="cabecera__buscador"
+        aria-label="Buscar contenido en NintendoManía"
+      >
         <!-- Formulario de búsqueda semántico -->
-        <form name="buscador">
+        <form
+          name="buscador"
+          role="search"
+          aria-label="Buscar contenido en NintendoManía"
+        >
           <label class="buscador__formulario">
             <img
               class="buscador__formulario--imagen"
@@ -143,7 +154,11 @@
           method="post"
           action="#"
         >
-          <fieldset class="contacto__formulario--campo">
+          <fieldset
+            class="contacto__formulario--campo"
+            role="group"
+            data-section="datos-personales"
+          >
             <legend class="contacto__formulario--leyenda">
               Datos Personales
             </legend>
@@ -153,8 +168,10 @@
                 class="contacto__formulario--input"
                 type="text"
                 name="nombre"
+                autocomplete="name"
                 required
                 placeholder="Tu nombre"
+                aria-required="true"
               />
             </label>
             <label class="contacto__formulario--etiqueta"
@@ -163,8 +180,10 @@
                 class="contacto__formulario--input"
                 type="email"
                 name="email"
+                autocomplete="email"
                 required
                 placeholder="ejemplo@correo.com"
+                aria-required="true"
               />
             </label>
             <label class="contacto__formulario--etiqueta"
@@ -173,11 +192,18 @@
                 class="contacto__formulario--input"
                 type="tel"
                 name="telefono"
+                autocomplete="tel"
                 placeholder="Ej: 696 123 456"
+                pattern="[0-9\s\-\+\(\)]{7,}"
+                title="Formato válido: +34 612 345 678 o 612345678"
               />
             </label>
           </fieldset>
-          <fieldset class="contacto__formulario--campo">
+          <fieldset
+            class="contacto__formulario--campo"
+            data-section="detalles-peticion"
+            role="group"
+          >
             <legend class="contacto__formulario--leyenda">
               Detalles de tu Petición
             </legend>
@@ -187,6 +213,7 @@
                 class="contacto__formulario--select"
                 name="asunto"
                 required
+                aria-required="true"
               >
                 <option value="" disabled selected>
                   -- Selecciona un tema --
@@ -210,12 +237,17 @@
               <input
                 class="contacto__formulario--input"
                 type="url"
-                name="url_referencia"
+                name="url"
+                autocomplete="url"
                 placeholder="https://www.nintendomania.com"
               />
             </label>
           </fieldset>
-          <fieldset class="contacto__formulario--campo">
+          <fieldset
+            class="contacto__formulario--campo"
+            data-section="info-estadistica"
+            role="group"
+          >
             <!-- Sección informativa y estadística -->
             <legend class="contacto__formulario--leyenda">
               ¡Queremos saber más sobre ti!
@@ -226,7 +258,13 @@
               ></label
             >
             <label class="contacto__formulario--etiqueta">
-              <input type="radio" name="saga_favorita" value="mario" required />
+              <input
+                type="radio"
+                name="saga_favorita"
+                value="mario"
+                required
+                aria-required="true"
+              />
               Mario Bros.
             </label>
             <label class="contacto__formulario--etiqueta">
@@ -235,15 +273,28 @@
                 name="saga_favorita"
                 value="splatoon"
                 required
+                aria-required="true"
               />
               Splatoon
             </label>
             <label class="contacto__formulario--etiqueta">
-              <input type="radio" name="saga_favorita" value="kirby" required />
+              <input
+                type="radio"
+                name="saga_favorita"
+                value="kirby"
+                required
+                aria-required="true"
+              />
               Kirby
             </label>
             <label class="contacto__formulario--etiqueta">
-              <input type="radio" name="saga_favorita" value="otro" required />
+              <input
+                type="radio"
+                name="saga_favorita"
+                value="otro"
+                required
+                aria-required="true"
+              />
               Otra/No aplica
             </label>
             <label class="contacto__formulario--etiqueta"
@@ -257,6 +308,7 @@
                 maxlength="1000"
                 required
                 placeholder="Escribe al menos 30 caracteres..."
+                aria-required="true"
               ></textarea>
             </label>
           </fieldset>
@@ -267,6 +319,7 @@
               name="acepta_privacidad"
               value="si"
               required
+              aria-required="true"
             />
           </label>
           <button class="contacto__formulario--boton" type="submit">
@@ -350,11 +403,17 @@
       </section>
     </main>
     <footer class="pie-pagina">
+      <!-- Sección de contacto semántica con <address> -->
       <section class="pie-pagina__contacto">
         <h2 class="pie-pagina__contacto--titulo">Contacto</h2>
-        <address class="pie-pagina__contacto--informacion">
-          <!-- Enlaces de contacto semántico y accesible -->
+        <address class="pie-pagina__contacto--informacion" aria-label="Información de contacto">
+          <!-- Links de contacto: formulario, email, teléfono -->
           <ul class="pie-pagina__contacto--lista">
+            <li>
+              <a class="pie-pagina__contacto--enlace" href="./contacto.html"
+                >Contacto</a
+              >
+            </li>
             <li>
               <a
                 class="pie-pagina__contacto--enlace"
@@ -370,6 +429,7 @@
           </ul>
         </address>
       </section>
+      <!-- Sección de información legal -->
       <section class="pie-pagina__info">
         <h2 class="pie-pagina__info--titulo">Información legal</h2>
         <p class="pie-pagina__info--descripcion">
@@ -377,6 +437,7 @@
         </p>
         <p class="pie-pagina__info--descripcion">&copy; 2025 NintendoManía.</p>
       </section>
+      <!-- Sección extra: Logo y botón de volver al inicio -->
       <section class="footer-extra">
         <img
           class="footer-extra__imagen"
@@ -385,7 +446,11 @@
           width="1024"
           height="1024"
         />
-        <a href="#inicio" class="footer-extra__boton"></a>
+        <a
+          href="#inicio"
+          class="footer-extra__boton"
+          aria-label="Volver al inicio de la página"
+        ></a>
       </section>
     </footer>
   </body>

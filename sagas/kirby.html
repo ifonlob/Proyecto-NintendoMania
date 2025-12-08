@@ -883,10 +883,11 @@
       </aside>
     </main>
     <footer class="pie-pagina">
+      <!-- Sección de contacto semántica con <address> -->
       <section class="pie-pagina__contacto">
         <h2 class="pie-pagina__contacto--titulo">Contacto</h2>
-        <address class="pie-pagina__contacto--informacion">
-          <!-- Enlaces de contacto semántico y accesible -->
+        <address class="pie-pagina__contacto--informacion" aria-label="Información de contacto">
+          <!-- Links de contacto: formulario, email, teléfono -->
           <ul class="pie-pagina__contacto--lista">
             <li>
               <a class="pie-pagina__contacto--enlace" href="../contacto.html"
@@ -908,6 +909,7 @@
           </ul>
         </address>
       </section>
+      <!-- Sección de información legal -->
       <section class="pie-pagina__info">
         <h2 class="pie-pagina__info--titulo">Información legal</h2>
         <p class="pie-pagina__info--descripcion">
@@ -915,6 +917,7 @@
         </p>
         <p class="pie-pagina__info--descripcion">&copy; 2025 NintendoManía.</p>
       </section>
+      <!-- Sección extra: Logo y botón de volver al inicio -->
       <section class="footer-extra">
         <img
           class="footer-extra__imagen"
@@ -923,7 +926,11 @@
           width="1024"
           height="1024"
         />
-        <a href="#inicio" class="footer-extra__boton"></a>
+        <a
+          href="#inicio"
+          class="footer-extra__boton"
+          aria-label="Volver al inicio de la página"
+        ></a>
       </section>
     </footer>
   </body>
