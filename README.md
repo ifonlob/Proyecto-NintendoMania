@@ -732,8 +732,6 @@ Todos los elementos interactivos tienen estados de foco visibles:
 
 El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante `@media (max-width)`.
 
-### Puntos de Ruptura Utilizados
-
 | Breakpoint | Dispositivo | Adaptaciones Clave |
 |------------|-------------|-------------------|
 | **1400px** | Monitores muy grandes | Reducción de padding, ajuste de gap en flex|
@@ -742,13 +740,29 @@ El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante 
 | **500px** | Mobile pequeño | Vista minimalista y mínima, botones adaptados |
 | **400px** | Mobile xtra small | Ocultar elementos no críticos, fuentes mínimas |
 
+--- 
 
 
+## Validación CSS Completa
 
+### W3C CSS Validator
 
+**Estado:** Válido sin errores
 
+- **Archivo:** `styles.css` (167 KB)
+- **Resultado:** 0 errores, warnings insignificativos
+- **Validador:** https://jigsaw.w3.org/css-validator/
 
+![W3C Validator CSS](/assets/imgs/W3C-CSS.png)
 
+### Especificidades Detectadas y Justificadas
+
+- Uso de prefijos de vendor (`-webkit-`) , prácticamente es compatible con todos los navegadores modernos.
+- Variables CSS
+- Media queries bien estructuradas
+- Sin `!important`
+
+---
 
 
 
