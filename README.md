@@ -597,10 +597,9 @@ Esta decisión no es solo estética: demuestra de forma práctica las **ventajas
 
 En lugar de mezclar contenido y estilos en el mismo archivo, el HTML se dedica exclusivamente a la **estructura semántica**, mientras que el CSS controla el **aspecto visual** desde un único punto centralizado.
 
-**Sin CSS externo (mala práctica, solo a modo de contraste):**
+**Sin CSS externo (mala práctica):**
 
 ```html
-<!-- Ejemplo NO usado en el proyecto -->
 <button style="background-color:#800E13;color:#ffffff;padding:1.5rem;border-radius:2rem;border:4px solid #48a1ee;font-weight:600;cursor:pointer;">
   Suscribirme
 </button>
@@ -609,12 +608,10 @@ En lugar de mezclar contenido y estilos en el mismo archivo, el HTML se dedica e
 **Con CSS externo (enfoque del proyecto):**
 
 ```html
-<!-- HTML limpio y semántico -->
 <button class="newsletter__boton">Suscribirme</button>
 ```
 
 ```css
-/* styles.css */
 .newsletter__boton {
   background-color: var(--color-principal);
   color: var(--color-blanco);
@@ -635,7 +632,7 @@ En lugar de mezclar contenido y estilos en el mismo archivo, el HTML se dedica e
 
 ### 2. Reutilización masiva mediante variables CSS
 
-El uso intensivo de **variables CSS** convierte el diseño en un sistema configurable, en lugar de un conjunto de valores “quemados” en el código.
+El uso de **variables CSS** convierte el diseño en un sistema configurable.
 
 ```css
 :root {
@@ -656,15 +653,15 @@ El uso intensivo de **variables CSS** convierte el diseño en un sistema configu
 
 ```css
 :root {
-  --color-principal: #b00020; /* Nuevo color principal */
+  --color-principal: #b00020;
 }
 ```
 
 En lugar de editar decenas de reglas, todos los botones, bordes y títulos que usan `var(--color-principal)` se actualizan automáticamente. Esto demuestra:
 
 - **Mantenibilidad:** cambios globales en segundos.
-- **Reducción de errores:** no hay riesgo de dejar colores “antiguos” olvidados.
-- **Escalabilidad:** preparar un tema alternativo o un rediseño es trivial.
+- **Reducción de errores:** no hay riesgo de dejar colores antiguos olvidados.
+- **Escalabilidad:** nos facilita preparar un tema alternativo o un rediseño.
 
 
 ### 3. Consistencia visual gracias a BEM y componentes reutilizables
@@ -1187,6 +1184,17 @@ Cabe destacar que lo único que se muestra en el W3C Validator son mensajes info
 - styles.css | Válido | [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
 ---
+## Conclusión
+
+A través del proyecto de **NintendoManía** se ha demostrado un dominio avanzado de **HTML5**, **CSS3**, accesibilidad y herramientas de desarrollo web:
+
+- Estructura HTML5 semántica, con uso preciso de `<header>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<figure>`, `<figcaption>`, `<details>`, `<summary>`, `<table>`, `<label>`, `<fieldset>` y `<legend>`.
+- Justificación clara de la evolución de HTML4.01 a HTML5 aplicada a decisiones concretas del proyecto.
+- Uso experto de atributos (`alt`, `title`, `aria-*`, etc.) y formularios robustos con validación HTML5.
+- Separación estricta entre **contenido** (HTML) y **presentación** (CSS), con una única hoja de estilos externa estructurada.
+- Aplicación coherente de **BEM**, variables CSS, diseño responsive, dark mode y preferencias de usuario (`prefers-reduced-motion`, `prefers-color-scheme`).
+- Validación completa con herramientas oficiales W3C para HTML y CSS.
+- Uso de Git, VS Code y herramientas de navegador, con un flujo de trabajo basado en commits frecuentes y descriptivos.
 
 
 ---
