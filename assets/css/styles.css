@@ -46,7 +46,7 @@
     --color-fondo: #050816de;
     --color-fondo-splatoon: #21152a;
     --color-fondo-mario: #103b3b;
-    --color-fondo-kirby: #24121a;
+    --color-fondo-kirby: #1f1f23;
     --color-texto: #f5f5f5;
   }
 
@@ -606,6 +606,45 @@ img {
   }
 } 
 
+
+@media (max-width: 400px) {
+  .pie-pagina{
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0.6rem 0.5rem;
+  }
+
+  .pie-pagina__info,
+  .pie-pagina__contacto{
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  .pie-pagina__contacto--titulo,
+  .pie-pagina__info--titulo{
+    font-size: 0.9rem;
+    padding: 0.3rem;
+  }
+
+  .pie-pagina__contacto--informacion,
+  .pie-pagina__info--descripcion{
+    font-size: 0.85rem;
+  }
+
+  .pie-pagina__contacto--lista{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pie-pagina__contacto--enlace{
+    width: 100%;
+    font-size: 0.8rem;
+  }
+
+}
+
 .footer-extra__imagen:hover{
   transform: translateY(-6px);
 }
@@ -743,27 +782,36 @@ img {
   margin: 0 auto;
 }
 
-.mejores-sagas__figura--imagen{
+.mejores-sagas-mario__figura--imagen{
   width: 140px;
   height: 140px;
   object-fit: cover;
-  border-radius: 18px;
+  border-radius: 1rem;
+  background-color:var(--color-principal__mario);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s, box-shadow 0.22s;
 }
 
-.mejores-sagas__figura--imagen[alt="Letra M de Mario Bros"]{
-  background-color:var(--color-principal__mario);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-}
 
-.mejores-sagas__figura--imagen[alt="Inkling de Splatoon"]{
-  background-color: var(--color-principal__splatoon);
-  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
-}
-
-.mejores-sagas__figura--imagen[alt="Kirby"]{
+.mejores-sagas-kirby__figura--imagen{
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 1rem;
   background-color: #eb9ec1;
   box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, box-shadow 0.22s;
+}
+
+
+.mejores-sagas-splatoon__figura--imagen{
+  width: 140px;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 1rem;
+  background-color: var(--color-principal__splatoon);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s, box-shadow 0.22s;
 }
 
 /* Sagas principales*/
@@ -834,7 +882,7 @@ img {
   transform: translateY(-6px);
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .sagas-principales {
     flex-direction: column;
     align-items: center;
@@ -956,7 +1004,6 @@ img {
 
 .noticias-destacadas__mario--imagen:hover,.noticias-destacadas__splatoon--imagen:hover,.noticias-destacadas__kirby--imagen:hover{
   transform: translateY(-6px);
-  border:4px solid var(--color-principal);
 }
 
 .noticias-destacadas__mario--descripcion,.noticias-destacadas__splatoon--descripcion,.noticias-destacadas__kirby--descripcion{
@@ -991,7 +1038,6 @@ img {
   color: white;
   text-align: center;
   overflow-wrap: break-word;
-  color: var(--color-negro);
 }
 .noticias-destacadas__kirby--titulo,.noticias-destacadas__mario--titulo,.noticias-destacadas__splatoon--titulo{
   font-family: var(--fuente-secundaria);
@@ -1050,6 +1096,12 @@ img {
     font-size: 1rem;
     padding: 0.5rem;
   }
+
+  .noticias-destacadas__mario--titulo,.noticias-destacadas__splatoon--titulo,.noticias-destacadas__kirby--titulo{
+    font-size: 0.8rem;
+    padding:0.5rem;
+  }
+  
   .noticias-destacadas__splatoon--descripcion,
   .noticias-destacadas__kirby--descripcion,
   .noticias-destacadas__mario--descripcion {
@@ -1837,7 +1889,7 @@ img {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .sobre-nosotros {
     gap: 1rem;
     padding: 1rem 0.5rem;
@@ -1883,7 +1935,7 @@ img {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .sobre-nosotros {
     gap: 1rem;
     padding: 0.5rem;
@@ -1891,7 +1943,7 @@ img {
   }
 
   .sobre-nosotros__titulo {
-    font-size: 0.8rem;
+    font-size: 1rem;
     padding: 0.3rem;
     overflow-wrap: break-word;
   }
@@ -2055,7 +2107,7 @@ img {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .pilares {
     padding: 1.2rem 0.5rem;
   }
@@ -2098,7 +2150,7 @@ img {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .pilares {
     padding: 1rem 0.4rem;
   }
@@ -2490,7 +2542,7 @@ img {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .cuestionario {
     padding: 1.5rem 1rem;
   }
@@ -2532,7 +2584,7 @@ img {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
   .cuestionario {
     padding: 1.2rem 0.6rem;
   }
@@ -2705,7 +2757,7 @@ img {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .comparativas__titulo {
     font-size: 1.06rem;
     padding: 1rem;
@@ -2977,7 +3029,7 @@ img {
   }
 
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
 .analisis {
     gap: 1.2rem;
     padding: 1rem 0.7rem;
@@ -3016,7 +3068,7 @@ img {
   }
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .analisis {
     gap: 1rem;
     padding: 1rem;
@@ -3046,7 +3098,7 @@ img {
   .analisis__kirby--titulo,
   .analisis__mario--titulo {
     width: 90%;
-    font-size: 0.75rem;
+    font-size: 1rem;
     padding: 1rem;
     overflow-wrap: break-word;
   }
@@ -3228,7 +3280,7 @@ img {
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .voto {
     padding: 1.2rem 0.8rem;
     gap: 1.2rem;
@@ -3281,7 +3333,7 @@ img {
 }
 
 
-@media (max-width: 450px) {
+@media (max-width: 500px) {
   .voto {
     padding: 1rem 0.5rem;
     gap: 1rem;
@@ -3620,7 +3672,7 @@ img {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   .introduccion-splatoon__titulo {
     font-size: 0.85rem;
     padding: 0.75rem;
@@ -3765,7 +3817,7 @@ img {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   #timeline {
     grid-template-columns: 1fr;
     gap: 0.8rem;
@@ -3824,7 +3876,7 @@ img {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 500px) {
   #timeline {
     grid-template-columns: 1fr;
     gap: 0.6rem;
@@ -3967,7 +4019,7 @@ img {
   .cronologia-splatoon3,
   .cronologia-sideorder,
   .cronologia-raiders {
-    width: 45%;        /* dos columnas algo más anchas */
+    width: 45%;
     font-size: 1.8rem;
   }
 
@@ -4012,7 +4064,7 @@ img {
   .cronologia-splatoon3,
   .cronologia-sideorder,
   .cronologia-raiders {
-    width: 100%;       /* una columna */
+    width: 100%;
     font-size: 1.6rem;
   }
 
@@ -4820,7 +4872,7 @@ img {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   #curiosidades-splatoon {
     gap: 1.4rem;
     padding: 1rem;
@@ -4898,7 +4950,7 @@ img {
   }
 
   .imagenes-destacadas__imagen {
-    max-width: 45%;   /* 2 columnas */
+    max-width: 45%;
   }
 }
 
@@ -4919,7 +4971,7 @@ img {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   #imagenes-destacadas {
     padding: 1.2rem 1rem;
     gap: 1.4rem;
@@ -5377,7 +5429,7 @@ img {
 }
 
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   #hitos-2d {
     flex-direction: column;
     align-items: center;
@@ -5604,7 +5656,7 @@ img {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .hitos-3d__titulo {
   font-size: 1.8rem;
   padding: 1.5rem;
@@ -5852,7 +5904,7 @@ img {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .personajes__titulo {
     font-size: 1.8rem;
     padding: 1.5rem;
@@ -6119,7 +6171,7 @@ img {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .curiosidades-mario__titulo {
     font-size: 1.6rem;
     padding: 1rem;
@@ -6258,7 +6310,7 @@ img {
   font-weight: 600;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
   .imagenes-destacadas__figura {
     flex: 1 1 30%;
     max-width: 30%;
@@ -6296,7 +6348,7 @@ img {
   }
 }
 
-@media (max-width: 550px) {
+@media (max-width: 500px) {
   .imagenes-destacadas__figura {
     flex: 1 1 100%;
     max-width: 100%;
@@ -6577,7 +6629,7 @@ img {
 
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .introduccion-kirby__titulo {
     font-size: 2rem;
     padding: 1.6rem;
@@ -6596,7 +6648,7 @@ img {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   .introduccion-kirby__titulo {
     font-size: 1.2rem;
     padding: 1.4rem;
@@ -6729,7 +6781,7 @@ img {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   .cronologia-kirby__titulo {
     font-size: 1.3rem;
     padding: 1.5rem;
@@ -6789,7 +6841,7 @@ img {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
   #cronologia-kirby {
     gap: 1.8rem;
     padding: 1.2rem 1rem;
@@ -7031,7 +7083,7 @@ img {
     padding: 0.9rem;
   }
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   #habilidades {
     justify-content: center;
     gap: 1.8rem;
@@ -7081,7 +7133,7 @@ img {
     font-size: 0.9rem;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   #habilidades {
     flex-direction: column;
     align-items: center;
@@ -7157,7 +7209,6 @@ img {
   overflow-wrap: break-word;
   width: 80%;
   padding: 2rem;
-  color: var(--color-negro);
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
 }
 
@@ -7348,7 +7399,7 @@ img {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .jefes__titulo {
     font-size: 2rem;
     width: 90%;
@@ -7406,7 +7457,7 @@ img {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   #jefes {
     gap: 1.5rem;
   }
@@ -7603,7 +7654,7 @@ img {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   .curiosidades-kirby__titulo {
     font-size: 1.8rem;
     max-width: 90%;
@@ -7633,7 +7684,7 @@ img {
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   #curiosidades-kirby {
     gap: 1.5rem;
     padding: 1rem;
@@ -7720,6 +7771,7 @@ img {
   font-family: var(--fuente-secundaria);
   text-align: center;
   text-shadow: -3px 3px 0 var(--color-principal__kirby);
+  color: var(--color-negro);
 }
 
 .personajes-secundarios__figura--imagen {
@@ -7768,7 +7820,7 @@ img {
   }
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 800px) {
   #personajes-secundarios {
     justify-content: center;
     gap: 1.6rem;
@@ -7792,7 +7844,7 @@ img {
     font-size: 0.9rem;
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 500px) {
   #personajes-secundarios {
     flex-direction: column;
     align-items: center;
