@@ -536,9 +536,20 @@ En el proyecto hemos implementado un sistema de colores estratégico con variabl
 | **Kirby (Rosa)** | #ffb6e6 | `--color-principal__kirby` | Identidad visual saga Kirby, fondos temáticos |
 
 
+### Fondos por Contexto
 
+De la misma forma, los fondos temáticos se adaptan según la página y las preferencias del usuario:
 
+- `--color-fondo`: #c5e3f5 (azul claro) → fondo general
+- `--color-fondo-splatoon`: #eed3f4 (púrpura claro)
+- `--color-fondo-mario`: #f0a4a4 (rojo suave)
+- `--color-fondo-kirby`: #ddfbf1 (verde menta claro)
 
+En **modo oscuro** (`@media (prefers-color-scheme: dark)`):
+- `--color-fondo`: #050816de (azul marino oscuro)
+- `--color-fondo-splatoon`: #21152a (púrpura oscuro)
+- `--color-fondo-mario`: #103b3b (verde azulado oscuro)
+- `--color-fondo-kirby`: #1f1f23 (gris oscuro)
 
 
 ## Validación W3C
