@@ -7,6 +7,7 @@
 - [Estructura de archivos](#estructura-de-archivos)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Estructura HTML5 Semántica](#estructura-html5-semántica)
+- [Ejemplo de Indentación y Comentarios HTML](#ejemplo-de-indentación-y-comentarios-html)
 - [Evolución HTML : HTML 4.01 a HTML5](#evolución-html-html401-a-html5)
 - [Análisis de Estructura por Página](#análisis-de-estructura-por-página)
 - [Uniformidad y Diferenciación](#uniformidad-y-diferenciación)
@@ -182,6 +183,115 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 - **Uso:** Presente en todas las páginas
 - **Beneficio:** Refuerza coherencia estructural del sitio
 - **Accesibilidad:** Ubicación consistente de información secundaria
+
+---
+
+## Ejemplo de Indentación y Comentarios HTML
+
+Asimismo, para cumplir estrictamente con las buenas prácticas del criterio **2.b**, se incluye un ejemplo real de estructura HTML del proyecto, mostrando **indentación consistente (2 espacios)** y **comentarios útiles** que documentan las secciones principales de la página.
+
+```html
+<!-- HEADER: Navegación principal del sitio -->
+<header class="cabecera">
+  <!-- Menú de navegación principal con enlaces a las secciones clave -->
+  <nav class="cabecera__menu" aria-label="Navegación principal">
+    <ul class="cabecera__menu--lista">
+      <li><a href="index.html" class="cabecera__menu--enlace">Inicio</a></li>
+      <li><a href="about.html" class="cabecera__menu--enlace">Sobre nosotros</a></li>
+      <li><a href="comparativas.html" class="cabecera__menu--enlace">Comparativas</a></li>
+      <li><a href="contacto.html" class="cabecera__menu--enlace">Contacto</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- MAIN: Contenido principal único de la página de inicio -->
+<main id="main">
+  <!-- Sección introductoria con héroe visual de NintendoManía -->
+  <section class="introduccion">
+    <h1>NintendoManía</h1>
+    <p>Portal profesional de análisis de sagas de Nintendo.</p>
+    <figure class="introduccion__figura">
+      <img 
+        src="assets/imgs/fondo_header.png" 
+        alt="Montaje de personajes de Nintendo sobre fondo dinámico" 
+        width="800" 
+        height="400" 
+        loading="lazy"
+      >
+      <figcaption>Universo Nintendo en un solo lugar.</figcaption>
+    </figure>
+  </section>
+
+  <!-- Sección con las tres sagas principales destacadas -->
+  <section class="sagas-principales">
+    <article class="sagas-principales__mario">
+      <h2>Super Mario Bros</h2>
+      <p>Análisis de la evolución de Mario del 2D al 3D.</p>
+    </article>
+
+    <article class="sagas-principales__splatoon">
+      <h2>Splatoon</h2>
+      <p>Estudio de armas, modos competitivos y lore del Inkopolis.</p>
+    </article>
+
+    <article class="sagas-principales__kirby">
+      <h2>Kirby</h2>
+      <p>Recorrido por las habilidades de copia y el lore cósmico.</p>
+    </article>
+  </section>
+
+  <!-- Sección de newsletter para suscripción al portal -->
+  <section class="newsletter">
+    <h2>Suscríbete a NintendoManía</h2>
+    <form class="newsletter__formulario" action="#" method="post">
+      <label for="email_newsletter">Correo electrónico</label>
+      <input 
+        type="email" 
+        name="email_newsletter" 
+        id="email_newsletter" 
+        class="newsletter__formulario--input"
+        placeholder="tu@email.com"
+        required
+        aria-describedby="email-newsletter-ayuda"
+      >
+      <p id="email-newsletter-ayuda" class="newsletter__ayuda">
+        Usaremos tu correo solo para enviarte novedades sobre el portal.
+      </p>
+      <button type="submit" class="newsletter__boton">Suscribirme</button>
+    </form>
+  </section>
+</main>
+
+<!-- ASIDE: Contenido complementario (noticias y destacados) -->
+<aside class="extra">
+  <section class="noticias-destacadas">
+    <h2>Noticias destacadas</h2>
+    <!-- Cada entrada podría ampliarse en el futuro a un <article> independiente -->
+    <p>Splatoon 3 recibe nuevo mapa competitivo.</p>
+  </section>
+
+  <section class="puntos-destacados">
+    <h2>Lo mejor de cada saga</h2>
+    <details class="puntos-destacados__mario">
+      <summary class="puntos-destacados__mario--sumario">Mario</summary>
+      <p>Selección de los hitos más importantes de la saga en 2D y 3D.</p>
+    </details>
+  </section>
+</aside>
+
+<!-- FOOTER: Información secundaria del sitio -->
+<footer class="pie-pagina">
+  <p>&copy; 2024 NintendoManía Team. Proyecto académico con fines educativos.</p>
+</footer>
+```
+
+En este ejemplo se demuestra de forma explícita:
+
+- **Indentación consistente** de 2 espacios en toda la estructura.
+- **Comentarios útiles** al inicio de cada bloque estructural (`HEADER`, `MAIN`, `ASIDE`, `FOOTER`).
+- **Organización jerárquica lógica**: `header` → `main` → `aside` → `footer`.
+- **Uso impecable de etiquetas semánticas** para cada tipo de contenido.
+
 
 ---
 
