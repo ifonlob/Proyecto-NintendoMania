@@ -1,41 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <!--
-    =========================================================================
-    NintendoManía | Página Principal (Index)
-    =========================================================================
-    Proyecto trimestral de Desarrollo Web - LMSGI
-    Autora: Irene Foncubierta Lobatón, 1º DAW
-    
-    DESCRIPCIÓN DE PÁGINA:
-    Portal principal del sitio web NintendoManía. Funciona como puerta de
-    entrada a las 3 sagas principales (Mario, Splatoon, Kirby) con:
-    - Descripción breve del proyecto con enlaces a las sagas
-    - 3 artículos destacados con enlaces a sagas
-    - Noticias destacadas (ASIDE complementario)
-    - Puntos destacados con navegación rápida
-    - Newsletter de suscripción
-    
-    ESTRUCTURA SEMÁNTICA:
-    <header>      Navegación principal, logo, buscador
-    <main>        Contenido central único de la página
-      <section>   Introducción y banner
-      <section>   Logos decorativos de sagas
-      <section>   3 artículos principales (Mario, Splatoon, Kirby)
-      <aside>     Noticias destacadas y puntos de navegación rápida
-      <aside>     Formulario de newsletter
-    <footer>      Contacto, información legal, logo
-    
-    ACCESIBILIDAD:
-    - Metadatos completos (charset, viewport, SEO)
-    - Open Graph tags para compartir en redes
-    - Imágenes con alt descriptivo + width/height
-    - Formularios con labels explícitos
-    - Navegación con <nav> y <address> semánticos
-    - Details/Summary para navegación sin JavaScript
-    =========================================================================
-    -->
     <meta charset="utf-8" />
     <title>NintendoManía | Análisis de Sagas Nintendo</title>
     <meta
@@ -63,6 +28,34 @@
     <link rel="icon" href="./assets/imgs/icono_pag.png" />
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
+  <!--
+    =========================================================================
+    NintendoManía | Página Principal (Index)
+    =========================================================================
+    Proyecto trimestral de Desarrollo Web - LMSGI
+    Autora: Irene Foncubierta Lobatón, 1º DAW
+    
+    DESCRIPCIÓN DE PÁGINA:
+    Portal principal del sitio web NintendoManía. Funciona como puerta de
+    entrada a las 3 sagas principales (Mario, Splatoon, Kirby) con:
+    - Descripción breve del proyecto con enlaces a las sagas
+    - 3 artículos destacados con enlaces a sagas
+    - Noticias destacadas (ASIDE complementario)
+    - Puntos destacados con navegación rápida
+    - Newsletter de suscripción
+    
+    ESTRUCTURA:
+    <header>      Navegación principal, logo, buscador
+    <main>        Contenido central único de la página
+      <section>   Introducción y banner
+      <section>   Logos decorativos de sagas
+      <section>   3 artículos principales (Mario, Splatoon, Kirby)
+      <aside>     Noticias destacadas y puntos de navegación rápida
+      <aside>     Formulario de newsletter
+    <footer>      Contacto, información legal, logo
+  
+    =========================================================================
+    -->
   <body id="inicio">
     <!-- ============================================================
          HEADER: Navegación principal, logo, buscador
@@ -77,12 +70,7 @@
         &#9776;
       </button>
       <!-- Logotipo principal y enlace de regreso al inicio -->
-      <a
-        class="cabecera__logo"
-        href="./index.html"
-        role="link"
-        aria-label="Ir al inicio"
-      >
+      <a class="cabecera__logo" href="./index.html" aria-label="Ir al inicio">
         <img
           class="cabecera__logo--imagen"
           src="./assets/imgs/logo_principal.png"
@@ -136,12 +124,8 @@
           </li>
         </ul>
       </nav>
-      <!-- Buscador semántico con rol="search" para accesibilidad -->
-      <nav
-        class="cabecera__buscador"
-        aria-label="Buscar contenido en NintendoManía"
-      >
-        <!-- Formulario de búsqueda semántico -->
+      <nav class="cabecera__buscador">
+        <!-- Formulario de búsqueda -->
         <form
           name="buscador"
           role="search"
@@ -538,7 +522,6 @@
           class="newsletter__formulario"
           action="/subscribe"
           method="post"
-          role="form"
           aria-label="Formulario de suscripción al newsletter"
         >
           <label class="newsletter__label--email"
@@ -558,7 +541,6 @@
               class="newsletter__formulario--input"
               type="checkbox"
               name="privacidad"
-              aria-required="true"
               required
             />
           </label>
@@ -583,7 +565,10 @@
       <!-- Sección de contacto semántica con <address> -->
       <section class="pie-pagina__contacto">
         <h2 class="pie-pagina__contacto--titulo">Contacto</h2>
-        <address class="pie-pagina__contacto--informacion" aria-label="Información de contacto">
+        <address
+          class="pie-pagina__contacto--informacion"
+          aria-label="Información de contacto"
+        >
           <!-- Links de contacto: formulario, email, teléfono -->
           <ul class="pie-pagina__contacto--lista">
             <li>
