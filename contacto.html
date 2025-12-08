@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
-    <!-- 
+    <!--
     =========================================================================
-    NintendoManía | Contacto
+    NintendoManía | Formulario de Contacto
     =========================================================================
-    Página de contacto principal. Permite enviar opiniones, sugerencias o propuestas.
-    Irene Foncubierta Lobatón, 1ºDAW | Proyecto trimestral 2025.
-    
-    ESTRUCTURA SEMÁNTICA:
-    - <head>: Meta tags de descripción, Open Graph, y referenciamiento
-    - <body>: Header (navegación) → Main (formulario + FAQ) → Footer (contacto + legal)
+    Proyecto trimestral de Desarrollo Web - LMSGI
+    Autora: Irene Foncubierta Lobatón, 1º DAW
+
+    DESCRIPCIÓN DE PÁGINA:
+    Página de contacto principal de NintendoManía. Permite a visitantes enviar
+    consultas, sugerencias de contenido, reportar errores técnicos y proponer
+    colaboraciones. Incluye:
+    - Sección de presentación (colaboración/afiliación)
+    - Formulario multibloque con 3 fieldsets (datos personales, detalles de 
+      petición, información estadística)
+    - FAQ expandible con <details>/<summary> para consultas frecuentes
+    - Validación HTML5 con atributos required, pattern, minlength, maxlength
+    - Accesibilidad WCAG AA con aria-required, aria-label, roles semánticos
+
+    ESTRUCTURA:
+    <header>      Navegación principal, logo, buscador
+    <main>        Contenido central único de la página
+      <section>   1. Sección de colaboración/presentación
+      <section>   2. Formulario de contacto (3 fieldsets) + FAQ
+        <form>    Formulario con validación y estructura semántica
+        <article> FAQ con <details>/<summary> expandibles
+    <footer>      Contacto, información legal, logo y botón flotante
+
     =========================================================================
     -->
     <meta charset="utf-8" />
@@ -54,7 +71,11 @@
         &#9776;
       </button>
       <!-- Logotipo principal y enlace de regreso al inicio -->
-      <a class="cabecera__logo" href="./index.html">
+      <a
+        class="cabecera__logo"
+        href="./index.html"
+        aria-label="Volver al inicio de NintendoManía"
+      >
         <img
           class="cabecera__logo--imagen"
           src="./assets/imgs/logo_principal.png"
@@ -103,10 +124,7 @@
           </li>
         </ul>
       </nav>
-      <nav
-        class="cabecera__buscador"
-        aria-label="Buscar contenido en NintendoManía"
-      >
+      <nav class="cabecera__buscador">
         <!-- Formulario de búsqueda -->
         <form
           name="buscador"
@@ -136,7 +154,10 @@
          MAIN: Contenido central y único de la página de contacto
          ============================================================ -->
       <section class="colaboracion">
-        <!-- SECCIÓN 1: Colaboración -->
+        <!-- ===================================================================
+           SECTION 1: Presentación y llamada a la acción
+           Sección introductoria que invita al usuario a contactar
+           =================================================================== -->
         <h1 class="colaboracion__titulo">
           Formulario de Contacto NintendoManía
         </h1>
@@ -158,7 +179,11 @@
           </figcaption>
         </figure>
       </section>
-      <!-- SECCIÓN 2: Formulario de contacto -->
+      <!-- ===================================================================
+           SECTION 2: Formulario de contacto multibloque + FAQ
+           Contiene 3 fieldsets para datos personales, detalles y estadísticas
+           Incluye article con FAQ expandible usando <details>/<summary>
+           =================================================================== -->
       <section class="contacto">
         <h2 class="contacto__titulo">Formulario de Contacto NintendoManía</h2>
         <form
@@ -167,7 +192,10 @@
           method="post"
           action="#"
         >
-          <!-- CAMPO 1: Datos Personales -->
+          <!-- ===============================================================
+               FIELDSET 1: Datos Personales del Usuario
+               Campos: nombre, email, teléfono (opcional)
+               =============================================================== -->
           <fieldset
             class="contacto__formulario--campo"
             data-section="datos-personales"
@@ -175,6 +203,7 @@
             <legend class="contacto__formulario--leyenda">
               Datos Personales
             </legend>
+            <!-- Campo 1.1: Nombre completo (obligatorio) -->
             <label class="contacto__formulario--etiqueta"
               >Nombre Completo:<sup>*</sup>
               <input
@@ -187,6 +216,7 @@
                 aria-required="true"
               />
             </label>
+            <!-- Campo 1.2: Email (obligatorio, con validación type="email") -->
             <label class="contacto__formulario--etiqueta"
               >Correo Electrónico:<sup>*</sup>
               <input
@@ -199,6 +229,7 @@
                 aria-required="true"
               />
             </label>
+            <!-- Campo 1.3: Teléfono (opcional, con validación pattern) -->
             <label class="contacto__formulario--etiqueta"
               >Teléfono de Contacto (Opcional):
               <input
@@ -212,7 +243,10 @@
               />
             </label>
           </fieldset>
-          <!-- CAMPO 2: Detalles Petición -->
+          <!-- ===============================================================
+               FIELDSET 2: Detalles de la Petición/Consulta
+               Campos: asunto (select desplegable), URL de referencia
+               =============================================================== -->
           <fieldset
             class="contacto__formulario--campo"
             data-section="detalles-peticion"
@@ -220,6 +254,7 @@
             <legend class="contacto__formulario--leyenda">
               Detalles de tu Petición
             </legend>
+            <!-- Campo 2.1: Asunto (obligatorio, select con opciones) -->
             <label class="contacto__formulario--etiqueta"
               >Asunto Principal:<sup>*</sup>
               <select
@@ -245,6 +280,7 @@
                 </option>
               </select>
             </label>
+            <!-- Campo 2.2: URL de referencia (opcional, con validación type="url") -->
             <label class="contacto__formulario--etiqueta"
               >Enlace de Referencia (Opcional):
               <input
@@ -256,7 +292,10 @@
               />
             </label>
           </fieldset>
-          <!-- CAMPO 3: Información estadística -->
+          <!-- ===============================================================
+               FIELDSET 3: Información Estadística e Investigativa
+               Campos: saga favorita (radio buttons), mensaje (textarea)
+               =============================================================== -->
           <fieldset
             class="contacto__formulario--campo"
             data-section="info-estadistica"
@@ -265,6 +304,7 @@
             <legend class="contacto__formulario--leyenda">
               ¡Queremos saber más sobre ti!
             </legend>
+            <!-- Campo 3.1: Saga favorita (obligatorio, grupo de radio buttons) -->
             <label class="contacto__formulario--etiqueta"
               >Saga favorita (Para informes estadísticos exclusivamente):<sup
                 >*</sup
@@ -310,6 +350,7 @@
               />
               Otra/No aplica
             </label>
+            <!-- Campo 3.2: Mensaje (obligatorio, textarea con límites) -->
             <label class="contacto__formulario--etiqueta"
               >Tu Mensaje: <sup>*</sup>
               <textarea
@@ -325,6 +366,7 @@
               ></textarea>
             </label>
           </fieldset>
+           <!-- Checkbox: Confirmación de política de privacidad (obligatorio) -->
           <label class="contacto__formulario--política-privacidad"
             >Acepto política de privacidad <sup>*</sup>
             <input
@@ -342,7 +384,10 @@
             Borrar Formulario
           </button>
         </form>
-        <!-- ARTICLE : FAQ -->
+        <!-- ===============================================================
+             ARTICLE: FAQ - Preguntas Frecuentes sobre Contacto
+             Sección con <details>/<summary> expandibles sin JavaScript
+             =============================================================== -->
         <article class="faq-contacto">
           <h2 class="faq-contacto__titulo">
             Preguntas Frecuentes sobre Colaboración
@@ -352,6 +397,7 @@
             un error grave.
           </p>
           <details>
+            <!-- FAQ 1: Reporte de errores técnicos -->
             <summary class="faq-contacto__sumario">
               ¿Puedo reportar errores del sitio web aquí?
             </summary>
@@ -362,6 +408,7 @@
             </p>
           </details>
           <details>
+            <!-- FAQ 2: Sugerencias de lore y curiosidades -->
             <summary class="faq-contacto__sumario">
               ¿Cómo puedo enviar sugerencias de lore o curiosidades?
             </summary>
@@ -372,6 +419,7 @@
             </p>
           </details>
           <details>
+            <!-- FAQ 3: Proceso de selección para colaboradores -->
             <summary class="faq-contacto__sumario">
               ¿Existe un proceso de selección para colaboradores?
             </summary>
@@ -382,6 +430,7 @@
             </p>
           </details>
           <details>
+            <!-- FAQ 4: Errores al enviar formulario -->
             <summary class="faq-contacto__sumario">
               ¿Por qué recibo un error al enviar el formulario?
             </summary>
@@ -394,6 +443,7 @@
             </p>
           </details>
           <details>
+            <!-- FAQ 5: No recibo respuesta después de enviar -->
             <summary class="faq-contacto__sumario">
               He enviado el formulario pero no recibo respuesta
             </summary>
@@ -404,6 +454,7 @@
             </p>
           </details>
           <details>
+            <!-- FAQ 6: Errores de diseño o problemas de carga -->
             <summary class="faq-contacto__sumario">
               ¿Qué hago si veo un error de diseño o la web no carga bien?
             </summary>
@@ -416,6 +467,9 @@
         </article>
       </section>
     </main>
+    <!-- =====================================================================
+         FOOTER: Secciones de contacto, información legal y navegación extra
+         ===================================================================== -->
     <footer class="pie-pagina">
       <!-- Sección de contacto semántica con <address> -->
       <section class="pie-pagina__contacto">
