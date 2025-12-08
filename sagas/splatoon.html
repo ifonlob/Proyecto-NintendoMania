@@ -2,13 +2,35 @@
 <html lang="es">
   <head>
     <!--
-    =========================================================================
-    NintendoManía | Splatoon
-    =========================================================================
-    Página dedicada a la cronología, jugabilidad, lore, armas y personajes
-    Irene Foncubierta Lobatón - 1ºDAW, Proyecto trimestral 2025.
-    =========================================================================
-    -->
+  ============================================================================
+  NintendoManía | Splatoon
+  ============================================================================
+  Proyecto trimestral de Desarrollo Web - LMSGI
+  Autora: Irene Foncubierta Lobatón, 1º DAW, 2025
+
+  DESCRIPCIÓN DE PÁGINA:
+  Página monográfica dedicada a la saga Splatoon. Presenta:
+  - Introducción general a la saga (historia y contexto)
+  - Línea temporal de entregas principales y DLCs (timeline)
+  - Cronología detallada por año/juego con listas de novedades
+  - Sección de tipos de armas con subcategorías e imágenes
+  - Sección de idols (Calamarciñas, Cefalopop, Surimi)
+  - Sección de curiosidades, lore y easter eggs
+  - Aside de imágenes destacadas
+
+  ESTRUCTURA:
+  <header>      Cabecera específica de la saga Splatoon (logo, menú, buscador)
+  <main>        Contenido principal de la página Splatoon
+    <section>   Introducción a la saga (h1, figura, texto descriptivo)
+    <h2>        Título de bloque para el desarrollo de la saga
+    <section>   Timeline (artículos por entrega: Splatoon, 2, Octo, 3, Side Order, Raiders)
+    <section>   Cronología detallada (artículos por año/juego con listas de ideas)
+    <section>   Armas (artículos por tipo: lanzatintas, rodillos, cargatintas, derramatic, etc.)
+    <section>   Idols (artículos por grupo: Calamarciñas, Cefalopop, Surimi)
+    <section>   Curiosidades (artículos temáticos: desarrollo, lore, cultura pop)
+    <aside>     Imágenes destacadas de la saga
+  ============================================================================
+  -->
     <meta charset="utf-8" />
     <title>NintendoManía | Splatoon</title>
     <meta
@@ -37,6 +59,10 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body class="body-splatoon" id="inicio">
+    <!-- =======================================================================
+       HEADER: Cabecera específica de la saga Splatoon
+       Incluye logo global, menú principal adaptado y buscador
+       ======================================================================= -->
     <header class="cabecera-splatoon">
       <!-- Logotipo principal y acceso rápido al inicio -->
       <button class="cabecera__buscador--hamburguesa" type="button">
@@ -114,7 +140,14 @@
         </form>
       </nav>
     </header>
+    <!-- =======================================================================
+       MAIN: Contenido principal de la página Splatoon
+       ======================================================================= -->
     <main>
+      <!-- =====================================================================
+         SECTION: Introducción general a la saga Splatoon
+         Presenta título principal, imagen temática y descripción global
+         ===================================================================== -->
       <section class="introduccion-splatoon">
         <!--SECTION: introducción de la saga-->
         <h1 class="introduccion-splatoon__titulo">
@@ -141,8 +174,13 @@
       <h2 class="timeline__titulo">
         Desarrollo de la saga a lo largo del tiempo
       </h2>
+      <!-- =====================================================================
+         SECTION: Timeline visual de lanzamientos Splatoon
+         Cada <article> representa una entrega principal o expansión
+         ===================================================================== -->
       <section id="timeline">
         <article class="timeline-splatoon">
+          <!-- Splatoon (2015) -->
           <h3 class="timeline-splatoon__titulo">Splatoon (2015)</h3>
           <figure class="timeline-splatoon__figura">
             <img
@@ -156,6 +194,7 @@
           </figure>
         </article>
         <article class="timeline-splatoon2">
+          <!-- Splatoon 2 (2017) -->
           <h3 class="timeline-splatoon2__titulo">Splatoon 2 (2017)</h3>
           <figure class="timeline-splatoon2__figura">
             <img
@@ -171,6 +210,7 @@
           </figure>
         </article>
         <article class="timeline-octoexpansion">
+          <!-- Octo Expansión (2018) -->
           <h3 class="timeline-octoexpansion__titulo">Octo Expansión (2018)</h3>
           <figure class="timeline-octoexpansion__figura">
             <img
@@ -185,6 +225,7 @@
             </figcaption>
           </figure>
         </article>
+        <!-- Imagen global de la línea temporal -->
         <img
           class="timeline__imagen"
           src="../assets/imgs/splatoon_timeline.png"
@@ -193,6 +234,7 @@
           height="773"
         />
         <article class="timeline-splatoon3">
+          <!-- Splatoon 3 (2022) -->
           <h3 class="timeline-splatoon3__titulo">Splatoon 3 (2022)</h3>
           <figure class="timeline-splatoon3__figura">
             <img
@@ -209,6 +251,7 @@
           </figure>
         </article>
         <article class="timeline-sideorder">
+          <!-- Side Order (2024) -->
           <h3 class="timeline-sideorder__titulo">Side Order (2024)</h3>
           <figure class="timeline-sideorder__figura">
             <img
@@ -225,6 +268,7 @@
           </figure>
         </article>
         <article class="timeline-raiders">
+          <!-- Splatoon Raiders (spin-off futuro) -->
           <h3 class="timeline-raiders__titulo">Splatoon Raiders</h3>
           <figure class="timeline-raiders__figura">
             <img
@@ -242,8 +286,12 @@
         </article>
       </section>
       <section id="cronologia-splatoon">
-        <!-- SECTION: CRONOLOGÍA DETALLADA -->
+        <!-- =====================================================================
+         SECTION: CRONOLOGÍA DETALLADA
+         Cada <article> describe un año/juego con texto y lista de novedades
+         ===================================================================== -->
         <h2 class="cronologia-splatoon__titulo">Cronología</h2>
+        <!-- 2015: Splatoon -->
         <article class="cronologia-splatoon1">
           <h3 class="cronologia-splatoon1__titulo">2015: Splatoon</h3>
           <img
@@ -289,6 +337,7 @@
             </li>
           </ul>
         </article>
+        <!-- 2017: Splatoon 2 -->
         <article class="cronologia-splatoon2">
           <h3 class="cronologia-splatoon2__titulo">2017: Splatoon 2</h3>
           <img
@@ -331,6 +380,7 @@
             </li>
           </ul>
         </article>
+        <!-- 2018: Octo Expansion -->
         <article class="cronologia-octoexpansion">
           <h3 class="cronologia-octoexpansion__titulo">
             2018: Octo Expansion (DLC)
@@ -368,6 +418,8 @@
             </li>
           </ul>
         </article>
+
+        <!-- 2022: Splatoon 3 -->
         <article class="cronologia-splatoon3">
           <h3 class="cronologia-splatoon3__titulo">2022: Splatoon 3</h3>
           <img
@@ -406,6 +458,7 @@
             </li>
           </ul>
         </article>
+        <!-- 2024: Side Order -->
         <article class="cronologia-sideorder">
           <h3 class="cronologia-sideorder__titulo">2024: Side Order (DLC)</h3>
           <img
@@ -448,6 +501,7 @@
             </li>
           </ul>
         </article>
+        <!-- 2026: Splatoon Raiders -->
         <article class="cronologia-raiders">
           <h3 class="cronologia-raiders__titulo">2026: Splatoon Raiders</h3>
           <img
@@ -487,7 +541,10 @@
         </article>
       </section>
       <section id="armas-splatoon">
-        <!-- SECTION: TIPOS DE ARMAS -->
+        <!-- =====================================================================
+         SECTION: TIPOS DE ARMAS
+         Cada <article> describe una familia de armas con subcategorías
+         ===================================================================== -->
         <h2 class="armas-splatoon__titulo">
           Tipos de Armas Principales en Splatoon
         </h2>
@@ -497,6 +554,7 @@
           rivales. Cada tipo de arma ofrece un estilo de juego completamente
           diferente.
         </p>
+        <!-- Lanzatintas -->
         <article class="armas-lanzatintas">
           <h3 class="armas-lanzatintas__titulo">Lanzatintas</h3>
           <figure class="armas-lanzatintas__figura">
@@ -521,7 +579,7 @@
           <h4 class="armas-lanzatintas__subtitulo">Subcategorías Populares:</h4>
           <ul class="armas-lanzatintas__lista">
             <li class="armas-lanzatintas__lista--arma">
-              <h5 class = "armas__lista--titulo">N-ZAP</h5>
+              <h5 class="armas__lista--titulo">N-ZAP</h5>
               <figure>
                 <img
                   class="armas-lanzatintas__lista--imagen"
@@ -536,7 +594,7 @@
               </figure>
             </li>
             <li class="armas-lanzatintas__lista--arma">
-              <h5 class = "armas__lista--titulo">Aerógrafo</h5>
+              <h5 class="armas__lista--titulo">Aerógrafo</h5>
               <figure>
                 <img
                   class="armas-lanzatintas__lista--imagen"
@@ -552,7 +610,7 @@
               </figure>
             </li>
             <li class="armas-lanzatintas__lista--arma">
-              <h5 class = "armas__lista--titulo">Lanzatintas Plus</h5>
+              <h5 class="armas__lista--titulo">Lanzatintas Plus</h5>
               <figure>
                 <img
                   class="armas-lanzatintas__lista--imagen"
@@ -569,6 +627,7 @@
             </li>
           </ul>
         </article>
+        <!-- Rodillos, Pinceles y Brochas -->
         <article class="armas-rodillos">
           <h3 class="armas-rodillos__titulo">Rodillos, Pinceles y Brochas</h3>
           <figure class="armas-rodillos__figura">
@@ -594,7 +653,7 @@
           <h4 class="armas-rodillos__subtitulo">Subcategorías populares:</h4>
           <ul class="armas-rodillos__lista">
             <li class="armas-rodillos__lista--arma">
-              <h5 class = "armas__lista--titulo">Rodillo:</h5>
+              <h5 class="armas__lista--titulo">Rodillo:</h5>
               <figure class="armas-rodillos__lista--figura">
                 <img
                   class="armas-rodillos__lista--imagen"
@@ -610,7 +669,7 @@
               </figure>
             </li>
             <li class="armas-rodillos__lista--arma">
-              <h5 class = "armas__lista--titulo">Pincel</h5>
+              <h5 class="armas__lista--titulo">Pincel</h5>
               <figure class="armas-rodillos__lista--figura">
                 <img
                   class="armas-rodillos__lista--imagen"
@@ -625,7 +684,7 @@
               </figure>
             </li>
             <li class="armas-rodillos__lista--arma">
-              <h5 class = "armas__lista--titulo">Brocha</h5>
+              <h5 class="armas__lista--titulo">Brocha</h5>
               <figure class="armas-rodillos__lista--figura">
                 <img
                   class="armas-rodillos__lista--imagen"
@@ -642,6 +701,7 @@
             </li>
           </ul>
         </article>
+        <!-- Cargatintas -->
         <article class="armas-cargatintas">
           <h3 class="armas-cargatintas__titulo">Cargatintas</h3>
           <figure class="armas-cargatintas__figura">
@@ -716,6 +776,7 @@
             </li>
           </ul>
         </article>
+        <!-- Derramatic -->
         <article class="armas-derramatic">
           <h3 class="armas-derramatic__titulo">Derramatic</h3>
           <figure class="armas-derramatic__figura">
@@ -791,10 +852,15 @@
           </ul>
         </article>
       </section>
+      <!-- =====================================================================
+         SECTION: IDOLS
+         Presenta a los grupos musicales clave de la saga (Calamarciñas, etc.)
+         ===================================================================== -->
       <section id="idols-splatoon">
         <h2 class="idols-splatoon__titulo">
           Las Idols de Cromópolis y Tintelia
         </h2>
+        <!-- Calamarciñas -->
         <article class="idols-splatoon__calamarcinas">
           <h3 class="idols-splatoon__calamarcinas--titulo">
             Las Calamarciñas — Splatoon
@@ -812,6 +878,7 @@
             dividiendo a la comunidad en temas de debate.
           </p>
         </article>
+        <!-- Cefalopop -->
         <article class="idols-splatoon__cefalopop">
           <h3 class="idols-splatoon__cefalopop--titulo">
             Cefalopop — Splatoon 2
@@ -830,6 +897,7 @@
             al rap.
           </p>
         </article>
+        <!-- Surimi -->
         <article class="idols-splatoon__surimi">
           <h3 class="idols-splatoon__surimi--titulo">Surimi — Splatoon 3</h3>
           <img
@@ -847,10 +915,15 @@
           </p>
         </article>
       </section>
+      <!-- =====================================================================
+         SECTION: Curiosidades, lore y easter eggs
+         Agrupa artículos temáticos con figuras y pies de foto
+         ===================================================================== -->
       <section id="curiosidades-splatoon">
         <h2 class="curiosidades-splatoon__titulo">
           Easter Eggs y Curiosidades
         </h2>
+        <!-- Artículo 1: Concepción y desarrollo -->
         <article class="curiosidades-splatoon__articulo">
           <h3 class="curiosidades-splatoon__articulo--titulo">
             Concepción y Desarrollo del Juego
@@ -886,6 +959,7 @@
             </figcaption>
           </figure>
         </article>
+        <!-- Artículo 2: Lore y referencias ocultas -->
         <article class="curiosidades-splatoon__articulo">
           <h3 class="curiosidades-splatoon__articulo--titulo">
             Lore y Referencias Ocultas
@@ -920,6 +994,7 @@
             </figcaption>
           </figure>
         </article>
+        <!-- Artículo 3: Personajes y referencias culturales -->
         <article class="curiosidades-splatoon__articulo">
           <h3 class="curiosidades-splatoon__articulo--titulo">
             Personajes y Referencias a la Cultura Pop
@@ -955,6 +1030,10 @@
           </figure>
         </article>
       </section>
+      <!-- =====================================================================
+         ASIDE: Imágenes destacadas de la saga Splatoon
+         Contenido complementario al main (galería visual)
+         ===================================================================== -->
       <aside id="imagenes-destacadas">
         <h2 class="imagenes-destacadas__titulo">Imágenes destacadas</h2>
         <img
@@ -991,7 +1070,10 @@
       <!-- Sección de contacto semántica con <address> -->
       <section class="pie-pagina__contacto">
         <h2 class="pie-pagina__contacto--titulo">Contacto</h2>
-        <address class="pie-pagina__contacto--informacion" aria-label="Información de contacto">
+        <address
+          class="pie-pagina__contacto--informacion"
+          aria-label="Información de contacto"
+        >
           <!-- Links de contacto: formulario, email, teléfono -->
           <ul class="pie-pagina__contacto--lista">
             <li>
