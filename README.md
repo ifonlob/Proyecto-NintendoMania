@@ -2,13 +2,34 @@
 
 ## Índice Detallado del Contenido
 
+
+## Índice Detallado del Contenido
+
 - [Presentación](#presentación)
 - [Justificación de la Temática](#justificación-de-la-temática)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Estructura HTML5 Semántica](#-estructura-html5-semántica)
 - [Análisis de Estructura por Página](#-análisis-de-estructura-por-página)
 - [Buenas Prácticas Aplicadas](#buenas-prácticas-aplicadas)
+- [Estructura CSS y Diseño Visual](#estructura-css-y-diseño-visual)
+- [Sistema de Diseño](#sistema-de-diseño)
+- [Paleta de Colores](#paleta-de-colores)
+- [Sistema Tipográfico](#sistema-tipográfico)
+- [Arquitectura CSS](#arquitectura-css)
+- [Metodología CSS: BEM](#metodología-css-bem)
+- [Accesibilidad Visual](#accesibilidad-visual)
+- [Responsive Design y Puntos de Ruptura](#responsive-design-y-puntos-de-ruptura)
+- [Validación CSS Completa](#validación-css-completa)
+- [Compatibilidad de Navegadores](#compatibilidad-de-navegadores)
+- [Testing de Accesibilidad](#testing-de-accesibilidad)
+- [Performance y Optimización](#performance-y-optimización)
+- [Proceso de Diseño](#proceso-de-diseño)
+- [Componentes CSS Documentados](#componentes-css-documentados)
+- [Análisis de Diseño por Página](#análisis-de-diseño-por-página)
+- [Limitaciones Actuales y Mejoras Futuras](#limitaciones-actuales-y-mejoras-futuras)
 - [Validación W3C](#validación-w3c)
+- [Estructura de Archivos](#estructura-de-archivos)
+- [Conclusión](#conclusión)
 
 ---
 
@@ -178,7 +199,6 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 - `<article>` para cada saga (independientes)
 - `<aside>` para contenido complementario
 - `<details>` + `<summary>` para interactividad sin JS
-- **4 imágenes con alt + dimensiones**
 
 ---
 
@@ -206,7 +226,6 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 - `<ul>` para pilares (contenido no ordenado)
 - `<ol>` para trayectoria (cronología = contenido ordenado)
 - `<aside>` para información complementaria
-- **13 imágenes con alt + dimensiones, 4 figcaptions**
 
 ---
 
@@ -238,7 +257,6 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 - `<details>` + `<summary>` para FAQ (sin JS)
 - **7 tipos de inputs:** text, email, tel, url, select, radio, textarea
 - **Validación HTML5:** required, type validation, minlength
-- **4 imágenes con contexto**
 
 ---
 
@@ -268,7 +286,6 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 - `<th>` con `scope="col"` y `scope="row"`
 - `<article>` para análisis individual de cada saga
 - `<aside>` con formulario de votación
-- **4 tablas semánticas**
 
 ---
 
@@ -311,15 +328,6 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 
 <footer/>
 ```
-
-**Características técnicas:**
-- **60+ imágenes** con alt + width + height
-- **45+ figcaptions** descriptivos
-- **6 secciones** bien diferenciadas por tema
-- **22 artículos** temáticos
-- **IDs** para navegación interna
-- **Jerarquía h1→h2→h3→h4** perfecta
-
 ---
 
 ### sagas/mario.html - Análisis de Saga Mario
@@ -357,13 +365,6 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 <footer/>
 ```
 
-**Características técnicas:**
-- **25+ imágenes** con contexto
-- **25+ figcaptions** descriptivos
-- Uso de `<blockquote>` + `<cite>` para citas de desarrolladores
-- **Estructura diferenciada vs splatoon:** Énfasis en 2D vs 3D
-- **800+ palabras** de análisis original
-
 ---
 
 ### sagas/kirby.html - Análisis de Saga Kirby
@@ -399,13 +400,6 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 
 <footer/>
 ```
-
-**Características técnicas:**
-- **30+ imágenes** con alt descriptivo
-- **29+ figcaptions**
-- **1000+ palabras** de análisis profundo
-- **Dos `<aside>`** para contenido diverso
-- **Jerarquía semántica** clara y profunda
 
 ---
 
@@ -484,13 +478,16 @@ Todas las páginas han sido validadas sin errores:
 
 | Página | Estado | Validador |
 |--------|--------|-----------|
-| **index.html** | Válido | [W3C Markup Validator](https://validator.w3.org/) |
-| **about.html** | Válido | [W3C Markup Validator](https://validator.w3.org/) |
-| **contacto.html** | Válido | [W3C Markup Validator](https://validator.w3.org/) |
-| **comparativas.html** | Válido | [W3C Markup Validator](https://validator.w3.org/) |
-| **sagas/splatoon.html** | Válido | [W3C Markup Validator](https://validator.w3.org/) |
-| **sagas/mario.html** | Válido | [W3C Markup Validator](https://validator.w3.org/) |
-| **sagas/kirby.html** | Válido | [W3C Markup Validator](https://validator.w3.org/) |
+| **index.html** | Válido | ![W3C Markup Validator](./assets/imgs/W3C-index.png) |
+| **about.html** | Válido | ![W3C Markup Validator](./assets/imgs/W3C-about.png) |
+| **contacto.html** | Válido | ![W3C Markup Validator](./assets/imgs/W3C-contacto.png) |
+| **comparativas.html** | Válido | ![W3C Markup Validator](./assets/imgs/W3C-comparativas.png) |
+| **sagas/splatoon.html** | Válido | ![W3C Markup Validator](./assets/imgs/W3C-splatoon.png) |
+| **sagas/mario.html** | Válido | ![W3C Markup Validator](./assets/imgs/W3C-mario.png) |
+| **sagas/kirby.html** | Válido | ![W3C Markup Validator](./assets/imgs/W3C-kirby.png) |
+
+Cabe destacar que lo único que se muestra en el W3C Validator son mensajes informativos respecto al uso de slash de cierre en las etiquetas autocontenidas y un warning en la sección `footer-extra` ya que ésta no posee un título propio puesto que esta sección es utilizada para el botón con posición `fixed` que nos facilita volver al inicio de la página.
+
 
 **Validación de CSS** (Fase 2):
 - styles.css | Válido | [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
@@ -513,7 +510,7 @@ proyecto-nintendomanía/
 ├── assets/
 │   ├── css/
 │   └── imgs/
-│       ├── [145+ imágenes]
+│       ├── [150+ imágenes]
 ├── README.md
 ```
 
