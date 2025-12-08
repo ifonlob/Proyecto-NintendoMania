@@ -12,6 +12,7 @@
 - [Análisis de Estructura por Página](#análisis-de-estructura-por-página)
 - [Uniformidad y Diferenciación](#uniformidad-y-diferenciación)
 - [Buenas Prácticas Aplicadas](#buenas-prácticas-aplicadas)
+- [Atributos HTML5 y Validación de Formularios](#atributos-html5-y-validación-de-formularios)
 - [Estructura CSS y Diseño Visual](#estructura-css-y-diseño-visual)
 - [Ventajas de usar CSS]()
 - [Sistema de Diseño](#sistema-de-diseño)
@@ -632,6 +633,24 @@ En este ejemplo se demuestra de forma explícita:
 
 ---
 
+## Atributos HTML5 y Validación de Formularios
+
+Para cubrir el criterio **2.c** al máximo nivel, se documenta de forma explícita la selección de etiquetas, atributos y la validación aplicada en los formularios y contenido.
+
+### Tipos de Input y Atributos Utilizados
+
+| Input Type | Atributos utilizados | Página | Finalidad | Validación |
+|-----------|----------------------|--------|-----------|-----------|
+| `text` | `name`, `id`, `required`, `minlength="3"`, `placeholder` | contacto.html | Nombre de usuario | Mínimo 3 caracteres, obligatorio. |
+| `email` | `name`, `id`, `type="email"`, `required`, `placeholder`, `aria-describedby` | contacto.html, index.html (newsletter) | Correo electrónico | Validación nativa de formato email + campo obligatorio. |
+| `tel` | `name`, `id`, `type="tel"`, `pattern="[0-9]{9}"`, `placeholder` | contacto.html | Teléfono de contacto | Debe tener exactamente 9 dígitos numéricos. |
+| `url` | `name`, `id`, `type="url"`, `required`, `placeholder` | contacto.html | URL de portfolio / web personal | Validación nativa para formato de URL. |
+| `radio` | `name`, `id`, `value`, `required` | contacto.html | Selección de tema o motivo de contacto | Obliga a escoger exactamente una opción. |
+| `checkbox` | `name`, `id`, `value` | contacto.html, index.html | Aceptación de condiciones / suscripciones | Permite múltiples selecciones, gestionado por nombre del campo. |
+| `select` | `name`, `id`, `required` | contacto.html | Selección de categoría o asunto | Obliga a seleccionar una opción válida. |
+| `textarea` | `name`, `id`, `required`, `minlength="10"`, `maxlength="500"`, `rows` | contacto.html | Mensaje detallado del usuario | Entre 10 y 500 caracteres. |
+
+---
 
 ## Estructura CSS y Diseño Visual
 
