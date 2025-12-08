@@ -2097,6 +2097,12 @@ img {
 }
 
 
+ .calidad__lista--titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 1rem;
+  text-align: center;
+ }
+
 .calidad__lista--descripcion {
   font-size: 0.95rem;
   font-weight: 400;
@@ -4320,6 +4326,11 @@ img {
   gap: 1.5rem;
   flex-wrap: wrap;
   padding: 1rem;
+}
+
+.armas__lista--titulo{
+  font-family: var(--fuente-secundaria);
+  text-align: center;
 }
 
 .armas-lanzatintas__lista--arma,
