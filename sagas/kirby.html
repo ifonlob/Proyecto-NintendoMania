@@ -5,8 +5,30 @@
     =========================================================================
     NintendoManía | Kirby
     =========================================================================
-    Página dedicada a la cronología, mecánicas, personajes y curiosidades de la saga Kirby.
-    Proyecto trimestral - Irene Foncubierta Lobatón, 1ºDAW, 2025.
+    Proyecto trimestral de Desarrollo Web - LMSGI
+    Autora: Irene Foncubierta Lobatón, 1º DAW, 2025
+
+    DESCRIPCIÓN DE PÁGINA:
+    Página monográfica dedicada a la saga Kirby. Incluye:
+    - Introducción general al personaje y tono de la franquicia
+    - Cronología detallada de títulos clave (2D, 3D, experimentales)
+    - Sección central de Habilidades de Copia emblemáticas
+    - Jefes icónicos con su rol en la saga
+    - Secretos y curiosidades (origen del nombre, color, lore)
+    - Aside con personajes secundarios y otro aside con galería
+
+    ESTRUCTURA:
+    <header>      Cabecera específica Kirby (logo, menú, buscador)
+    <main>        Contenido principal de la página Kirby
+      <section>   Introducción (h1 + imagen + subtítulo)
+      <section>   Cronología de juegos (artículos por año/título)
+      <section>   Habilidades de copia (artículos por habilidad)
+      <section>   Jefes emblemáticos (artículos por jefe)
+      <section>   Curiosidades y secretos (artículos temáticos)
+      <aside>     Personajes secundarios y aliados (figuras)
+      <aside>     Galería de la Estrella (imágenes icónicas)
+    <footer>      Contacto, información legal, logo y botón “volver arriba”
+
     =========================================================================
     -->
     <meta charset="utf-8" />
@@ -37,11 +59,17 @@
     <link rel="stylesheet" href="../assets/css/styles.css" />
   </head>
   <body id="inicio" class="body-kirby">
+    <!-- =====================================================================
+         HEADER: Cabecera específica de Kirby
+         Logo global, menú de sagas y buscador superior
+         ===================================================================== -->
     <header class="cabecera-kirby">
-      <!-- Logotipo principal y acceso rápido al inicio -->
+      <!-- Botón hamburguesa para menú móvil (controlable vía JS/CSS) -->
       <button class="cabecera__buscador--hamburguesa" type="button">
         &#9776;
       </button>
+
+      <!-- Logotipo principal y enlace rápido a la página de inicio global -->
       <a class="cabecera__logo" href="../index.html">
         <img
           class="cabecera__logo--imagen"
@@ -51,8 +79,10 @@
           height="1024"
         />
       </a>
+
+      <!-- Menú principal de navegación entre sagas y páginas destacadas -->
       <nav class="cabecera-kirby__menu">
-        <!-- Menú principal de navegación entre sagas y páginas destacado -->
+        <!-- Título del sitio con icono temático de Kirby -->
         <p class="cabecera-kirby__menu--titulo">
           <img
             class="cabecera-kirby__menu--imagen"
@@ -63,6 +93,8 @@
           />
           Nintendo Manía
         </p>
+
+        <!-- Lista de navegación a Splatoon, Mario y páginas globales -->
         <ul class="cabecera-kirby__menu--lista">
           <li>
             <a class="cabecera-kirby__menu--enlace" href="./splatoon.html"
@@ -91,8 +123,9 @@
           </li>
         </ul>
       </nav>
+
+      <!-- Navegación secundaria: bloque de búsqueda global -->
       <nav class="cabecera__buscador">
-        <!-- Formulario de búsqueda semántico -->
         <form name="buscador">
           <label class="buscador__formulario">
             <img
@@ -112,7 +145,14 @@
         </form>
       </nav>
     </header>
+
+    <!-- =====================================================================
+         MAIN: Contenido principal de la página Kirby
+         ===================================================================== -->
     <main>
+      <!-- ===================================================================
+           SECTION: Introducción a Kirby
+           =================================================================== -->
       <section class="introduccion-kirby">
         <h1 class="introduccion-kirby__titulo">
           Kirby - La adorable bolita rosa de Nintendo
@@ -129,10 +169,17 @@
           debut en Game Boy.
         </p>
       </section>
+
+      <!-- ===================================================================
+           SECTION: Cronología de la saga
+           Cada <article> detalla un juego clave con año, plataforma y contexto
+           =================================================================== -->
       <section id="cronologia-kirby">
         <h2 class="cronologia-kirby__titulo">
           Cronología Detallada: La Evolución de la saga a lo largo del tiempo
         </h2>
+
+        <!-- 1992: Kirby's Dream Land -->
         <article class="cronologia-kirby-1992">
           <h3 class="cronologia-kirby-1992__titulo">
             1992: Kirby's Dream Land (Game Boy)
@@ -152,6 +199,8 @@
             tragar enemigos, aunque las habilidades de copia aún no existían.
           </p>
         </article>
+
+        <!-- 1993: Kirby's Adventure -->
         <article class="cronologia-kirby-1993">
           <h3 class="cronologia-kirby-1993__titulo">
             1993: Kirby's Adventure (NES)
@@ -171,6 +220,8 @@
             a otros adversarios, multiplicando las posibilidades de juego.
           </p>
         </article>
+
+        <!-- 1996: Kirby Super Star -->
         <article class="cronologia-kirby-1996">
           <h3 class="cronologia-kirby-1996__titulo">
             1996: Kirby Super Star (SNES)
@@ -191,6 +242,8 @@
             cooperativa.
           </p>
         </article>
+
+        <!-- 2004: Kirby & The Amazing Mirror -->
         <article class="cronologia-kirby-2004">
           <h3 class="cronologia-kirby-2004__titulo">
             2004: Kirby & The Amazing Mirror (Game Boy Advance)
@@ -212,6 +265,8 @@
             futuras.
           </p>
         </article>
+
+        <!-- 2010: Kirby's Epic Yarn -->
         <article class="cronologia-kirby-2010">
           <h3 class="cronologia-kirby-2010__titulo">
             2010: Kirby's Epic Yarn (Wii)
@@ -232,6 +287,8 @@
             enfoque innovador centrado en el diseño de niveles y el cooperativo.
           </p>
         </article>
+
+        <!-- 2011: Kirby's Return to Dream Land -->
         <article class="cronologia-kirby-2011">
           <h3 class="cronologia-kirby-2011__titulo">
             2011: Kirby's Return to Dream Land (Wii)
@@ -251,6 +308,8 @@
             amigos jugar como Kirby, Meta Knight, Rey Dedede o Waddle Dee.
           </p>
         </article>
+
+        <!-- 2016: Kirby: Planet Robobot -->
         <article class="cronologia-kirby-2016">
           <h3 class="cronologia-kirby-2016__titulo">
             2016: Kirby: Planet Robobot (Nintendo 3DS)
@@ -272,6 +331,8 @@
             escala.
           </p>
         </article>
+
+        <!-- 2018: Kirby Star Allies -->
         <article class="cronologia-kirby-2018">
           <h3 class="cronologia-kirby-2018__titulo">
             2018: Kirby Star Allies (Nintendo Switch)
@@ -291,6 +352,8 @@
             aliados controlados por la IA o por otros jugadores (hasta cuatro).
           </p>
         </article>
+
+        <!-- 2022: Kirby y la Tierra Olvidada -->
         <article class="cronologia-kirby-2022">
           <h3 class="cronologia-kirby-2022__titulo">
             2022: Kirby y la Tierra Olvidada (Nintendo Switch)
@@ -312,6 +375,11 @@
           </p>
         </article>
       </section>
+
+      <!-- ===================================================================
+           SECTION: Habilidades de copia
+           Cada <article> profundiza en una habilidad icónica y sus usos
+           =================================================================== -->
       <section id="habilidades">
         <h2 class="habilidades__titulo">
           Las Habilidades de Copia más Emblemáticas
@@ -320,6 +388,8 @@
           La esencia de Kirby reside en su capacidad para absorber y copiar.
           Despliega cada habilidad para ver su origen y su principal uso.
         </p>
+
+        <!-- Habilidad: Espada -->
         <article class="habilidad-espada">
           <h3 class="habilidad-espada__titulo">Habilidad Espada</h3>
           <figure class="habilidad-espada__figura">
@@ -366,6 +436,8 @@
             </li>
           </ul>
         </article>
+
+        <!-- Habilidad: Fuego -->
         <article class="habilidad-fuego">
           <h3 class="habilidad-fuego__titulo">Habilidad Fuego</h3>
           <figure class="habilidad-fuego__figura">
@@ -410,6 +482,8 @@
             </li>
           </ul>
         </article>
+
+        <!-- Habilidad: Bomba -->
         <article class="habilidad-bomba">
           <h3 class="habilidad-bomba__titulo">Habilidad Bomba</h3>
           <figure class="habilidad-bomba__figura">
@@ -458,6 +532,8 @@
             </li>
           </ul>
         </article>
+
+        <!-- Habilidad: Martillo -->
         <article class="habilidad-martillo">
           <h3 class="habilidad-martillo__titulo">Habilidad Martillo</h3>
           <figure class="habilidad-martillo__figura">
@@ -497,6 +573,8 @@
             </li>
           </ul>
         </article>
+
+        <!-- Habilidad: Sueño -->
         <article class="habilidad-sueno">
           <h3 class="habilidad-sueno__titulo">Habilidad Sueño</h3>
           <figure class="habilidad-sueno__figura">
@@ -543,13 +621,20 @@
           </ul>
         </article>
       </section>
+
+      <!-- ===================================================================
+           SECTION: Jefes emblemáticos
+           Artículos centrados en Whispy Woods, Kracko y Marx
+           =================================================================== -->
       <section id="jefes">
         <h2 class="jefes__titulo">Jefes Emblemáticos</h2>
-        <!-- SECTION: Jefes emblemáticos de la franquicia -->
+        <!-- Descripción general de la sección de jefes -->
         <p class="jefes__descripcion">
           La saga Kirby esconde algunas de las batallas más épicas contra jefes
           increíbles y variados.
         </p>
+
+        <!-- Jefe: Whispy Woods -->
         <article class="jefe-whispy">
           <h3 class="jefe-whispy__titulo">Whispy Woods</h3>
           <figure class="jefe-whispy__figura">
@@ -581,6 +666,8 @@
             </li>
           </ul>
         </article>
+
+        <!-- Jefe: Kracko -->
         <article class="jefe-kracko">
           <h3 class="jefe-kracko__titulo">Kracko</h3>
           <figure class="jefe-kracko__figura">
@@ -613,6 +700,8 @@
             </li>
           </ul>
         </article>
+
+        <!-- Jefe: Marx -->
         <article class="jefe-marx">
           <h3 class="jefe-marx__titulo">Marx</h3>
           <figure class="jefe-marx__figura">
@@ -646,15 +735,23 @@
           </ul>
         </article>
       </section>
+
+      <!-- ===================================================================
+           SECTION: Secretos y curiosidades
+           Artículos sobre origen, nombre, color y lore poder/cómico
+           =================================================================== -->
       <section id="curiosidades-kirby">
-        <!-- SECTION: Secretos y curiosidades -->
         <h2 class="curiosidades-kirby__titulo">
           Secretos y Curiosidades de Kirby
         </h2>
+
+        <!-- Artículo: Origen y nombre de Kirby -->
         <article class="curiosidades-kirby__origen">
           <h3 class="curiosidades-kirby__origen--titulo">
             El Origen y el Nombre de Kirby
           </h3>
+
+          <!-- Figura 1: Concepción del personaje, Sakurai -->
           <figure class="curiosidades-kirby__figura">
             <figcaption class="curiosidades-kirby__figura--descripcion">
               Concepción: Kirby fue creado por Masahiro Sakurai como un
@@ -669,6 +766,8 @@
               height="281"
             />
           </figure>
+
+          <!-- Figura 2: Teorías sobre el nombre Kirby -->
           <figure class="curiosidades-kirby__figura">
             <figcaption class="curiosidades-kirby__figura--descripcion">
               El nombre "Kirby": Hay dos teorías principales. Una es que fue
@@ -684,6 +783,8 @@
               height="430"
             />
           </figure>
+
+          <!-- Figura 3: Color original (blanco/rosa) -->
           <figure class="curiosidades-kirby__figura">
             <figcaption class="curiosidades-kirby__figura--descripcion">
               Color original: En su debut en Kirby's Dream Land (Game Boy),
@@ -700,10 +801,14 @@
             />
           </figure>
         </article>
+
+        <!-- Artículo: Habilidades y lore inesperado -->
         <article class="curiosidades-kirby__habilidades">
           <h3 class="curiosidades-kirby__habilidades--titulo">
             Habilidades y Lore Inesperado
           </h3>
+
+          <!-- Figura 1: Poder cósmico de Kirby -->
           <figure class="curiosidades-kirby__figura">
             <figcaption class="curiosidades-kirby__figura--descripcion">
               ¿Quién es Kirby realmente?: A pesar de su apariencia adorable,
@@ -719,6 +824,8 @@
               height="281"
             />
           </figure>
+
+          <!-- Figura 2: Meta Knight y Galacta Knight -->
           <figure class="curiosidades-kirby__figura">
             <figcaption class="curiosidades-kirby__figura--descripcion">
               Meta Knight y Galacta Knight: El misterioso espadachín Meta Knight
@@ -736,6 +843,7 @@
             />
           </figure>
 
+          <!-- Figura 3: Motivación cómica (comida) -->
           <figure class="curiosidades-kirby__figura">
             <figcaption class="curiosidades-kirby__figura--descripcion">
               La comida es su motivación: Gran parte de los conflictos en Dream
@@ -753,12 +861,18 @@
           </figure>
         </article>
       </section>
+
+      <!-- ===================================================================
+           ASIDE: Personajes secundarios y aliados
+           =================================================================== -->
       <aside id="personajes-secundarios">
-        <!-- ASIDE: Personajes secundarios y aliados -->
+        <!-- Título del aside de personajes secundarios -->
         <h2 class="personajes-secundarios__titulo">Personajes secundarios</h2>
         <p class="personajes-secundarios__descripcion">
           Conoce a los aliados y rivales que definen el mundo de Kirby.
         </p>
+
+        <!-- Rey Dedede -->
         <figure class="personajes-secundarios__figura">
           <img
             class="personajes-secundarios__figura--imagen"
@@ -768,10 +882,12 @@
             height="448"
           />
           <figcaption class="personajes-secundarios__figura--descripcion">
-            <strong>Rey Dedede:</strong> El archirrival que a menudo es un aliado.
+            <strong>Rey Dedede:</strong> El archirrival que a menudo es un
+            aliado.
           </figcaption>
         </figure>
 
+        <!-- Bandana Waddle Dee -->
         <figure class="personajes-secundarios__figura">
           <img
             class="personajes-secundarios__figura--imagen"
@@ -781,9 +897,12 @@
             height="556"
           />
           <figcaption class="personajes-secundarios__figura--descripcion">
-            <strong>Waddle Dee:</strong> leal amigo y uno de los ayudantes más populares.
+            <strong>Waddle Dee:</strong> leal amigo y uno de los ayudantes más
+            populares.
           </figcaption>
         </figure>
+
+        <!-- Meta Knight -->
         <figure class="personajes-secundarios__figura">
           <img
             class="personajes-secundarios__figura--imagen"
@@ -797,6 +916,8 @@
             El espadachín misterioso de la misma especie que Kirby.
           </figcaption>
         </figure>
+
+        <!-- Ribbon -->
         <figure class="personajes-secundarios__figura">
           <img
             class="personajes-secundarios__figura--imagen"
@@ -812,6 +933,8 @@
             mágico.
           </figcaption>
         </figure>
+
+        <!-- Gooey -->
         <figure class="personajes-secundarios__figura">
           <img
             class="personajes-secundarios__figura--imagen"
@@ -827,11 +950,18 @@
           </figcaption>
         </figure>
       </aside>
+
+      <!-- ===================================================================
+           ASIDE: Galería de la Estrella
+           Galería visual complementaria con momentos clave de la saga
+           =================================================================== -->
       <aside id="galeria">
         <h2 class="galeria__titulo">¡La Galería de la Estrella!</h2>
         <p class="galeria__descripcion">
           Echa un vistazo a algunas de las imágenes más icónicas de Kirby.
         </p>
+
+        <!-- Star Rod -->
         <figure class="galeria__figura">
           <img
             class="galeria__figura--imagen"
@@ -844,6 +974,8 @@
             Kirby con la legendaria Star Rod.
           </figcaption>
         </figure>
+
+        <!-- Abilities múltiples -->
         <figure class="galeria__figura">
           <img
             class="galeria__figura--imagen"
@@ -856,6 +988,8 @@
             La versatilidad de sus Copy Abilities.
           </figcaption>
         </figure>
+
+        <!-- Arte conceptual Dream Land -->
         <figure class="galeria__figura">
           <img
             class="galeria__figura--imagen"
@@ -868,6 +1002,8 @@
             El arte original de Dream Land.
           </figcaption>
         </figure>
+
+        <!-- Kirby con amigos -->
         <figure class="galeria__figura">
           <img
             class="galeria__figura--imagen"
@@ -882,12 +1018,19 @@
         </figure>
       </aside>
     </main>
+
+    <!-- =====================================================================
+         FOOTER: Contacto, información legal y botón volver al inicio
+         ===================================================================== -->
     <footer class="pie-pagina">
       <!-- Sección de contacto semántica con <address> -->
       <section class="pie-pagina__contacto">
         <h2 class="pie-pagina__contacto--titulo">Contacto</h2>
-        <address class="pie-pagina__contacto--informacion" aria-label="Información de contacto">
-          <!-- Links de contacto: formulario, email, teléfono -->
+        <address
+          class="pie-pagina__contacto--informacion"
+          aria-label="Información de contacto"
+        >
+          <!-- Enlaces de contacto: formulario, correo, teléfono -->
           <ul class="pie-pagina__contacto--lista">
             <li>
               <a class="pie-pagina__contacto--enlace" href="../contacto.html"
@@ -909,6 +1052,7 @@
           </ul>
         </address>
       </section>
+
       <!-- Sección de información legal -->
       <section class="pie-pagina__info">
         <h2 class="pie-pagina__info--titulo">Información legal</h2>
@@ -917,7 +1061,8 @@
         </p>
         <p class="pie-pagina__info--descripcion">&copy; 2025 NintendoManía.</p>
       </section>
-      <!-- Sección extra: Logo y botón de volver al inicio -->
+
+      <!-- Sección extra: logo y botón ancla para volver al inicio -->
       <section class="footer-extra">
         <img
           class="footer-extra__imagen"
