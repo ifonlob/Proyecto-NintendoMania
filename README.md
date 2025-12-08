@@ -637,6 +637,61 @@ styles.css
 - **Cascada respetada:** Orden de media queries de mayor a menor ancho
 - **Selectores compuestos:** `.cabecera__menu--enlace` (especificidad 0.3.0) para evitar conflictos
 
+---
+
+## Metodología CSS: BEM
+
+A lo largo del desarrollo del proyecto hemos utilizado **BEM (Block Element Modifier)** adaptado al contexto:
+
+### Nomenclatura Aplicada
+
+**Bloques principales:**
+- `.cabecera` - Header del sitio
+- `.pie-pagina` - Footer
+- `.newsletter` - Sección de suscripción
+- `.sagas-principales` - Cards de sagas
+- `.contacto` - Formulario de contacto
+- `.faq-contacto` - Preguntas frecuentes
+- `.puntos-destacados` - Módulo de destacados
+- `.noticias-destacadas` - Módulo de noticias
+
+**Ejemplos de elementos usados (con `__`):**
+```css
+.cabecera__menu
+.cabecera__logo
+.pie-pagina__contacto
+.newsletter__formulario
+.sagas-principales__mario
+```
+
+**Ejemplos de modificadores usados (con `--`):**
+```css
+.cabecera__menu--lista
+.cabecera__menu--enlace
+.sagas-principales__mario--imagen
+.puntos-destacados__splatoon--sumario
+```
+
+**Ventajas de este enfoque:**
+- Evita colisiones de estilos entre componentes
+- Facilita la reutilización y extensión
+- Código autodocumentado (BEM actúa como especificación y se documenta por sí solo)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 ## Validación W3C
 
