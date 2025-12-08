@@ -2,11 +2,9 @@
 
 ## Índice Detallado del Contenido
 
-
-## Índice Detallado del Contenido
-
 - [Presentación](#presentación)
 - [Justificación de la Temática](#justificación-de-la-temática)
+- [Estructura de archivos](#estructura-de-archivos)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Estructura HTML5 Semántica](#-estructura-html5-semántica)
 - [Análisis de Estructura por Página](#-análisis-de-estructura-por-página)
@@ -68,6 +66,28 @@ La elección de **NintendoManía** fue estratégica. Buscábamos un proyecto sos
 4. **Formulario Robusto:** El formulario de contacto incluye **7 tipos diferentes de inputs** (email, tel, url, select, radio, checkbox, textarea), validación HTML5 completa, y uso de `<fieldset>` y `<legend>` para accesibilidad.
 
 5. **Representación de Datos:** 4 tablas semánticas en `comparativas.html` con `<caption>`, `<thead>`, `<tbody>` y `scope` attributes, cumpliendo requisitos de datos tabulares.
+
+---
+
+## Estructura de Archivos
+
+```
+proyecto-nintendomanía/
+├── index.html
+├── about.html
+├── contacto.html
+├── comparativas.html
+├── styles.css
+├── sagas/
+│   ├── kirby.html
+│   ├── mario.html
+│   └── splatoon.html
+├── assets/
+│   ├── css/
+│   └── imgs/
+│       ├── [150+ imágenes]
+├── README.md
+```
 
 ---
 
@@ -433,7 +453,7 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 - `<table>` + `<caption>` + `<thead>` + `<tbody>` para datos
 
 ### 2. Accesibilidad
-- **145+ imágenes** con `alt` descriptivo
+- **150+ imágenes** con `alt` descriptivo
 - `width` y `height` especificados en todas las imágenes
 - `<label>` asociadas correctamente a inputs
 - `<fieldset>` + `<legend>` en formulario
@@ -494,37 +514,5 @@ Cabe destacar que lo único que se muestra en el W3C Validator son mensajes info
 
 ---
 
-## Estructura de Archivos
-
-```
-proyecto-nintendomanía/
-├── index.html
-├── about.html
-├── contacto.html
-├── comparativas.html
-├── styles.css
-├── sagas/
-│   ├── kirby.html
-│   ├── mario.html
-│   └── splatoon.html
-├── assets/
-│   ├── css/
-│   └── imgs/
-│       ├── [150+ imágenes]
-├── README.md
-```
 
 ---
-
-## Conclusión
-
-**NintendoManía** demuestra:
-- Dominio completo de **HTML5 semántico**
-- Aplicación rigurosa de **buenas prácticas de accesibilidad**
-- Validación perfecta según estándares **W3C**
-- Contenido original y profesional
-- Estructura diferenciada en cada página
-- Accesibilidad garantizada para todo tipo de usuarios
-- Organización profesional del proyecto en carpetas
-
-Este proyecto establece una base sólida para la **Fase 2 (CSS y diseño visual)**, manteniéndola separada completamente del contenido y la estructura.
