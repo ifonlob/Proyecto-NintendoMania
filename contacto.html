@@ -7,6 +7,10 @@
     =========================================================================
     Página de contacto principal. Permite enviar opiniones, sugerencias o propuestas.
     Irene Foncubierta Lobatón, 1ºDAW | Proyecto trimestral 2025.
+    
+    ESTRUCTURA SEMÁNTICA:
+    - <head>: Meta tags de descripción, Open Graph, y referenciamiento
+    - <body>: Header (navegación) → Main (formulario + FAQ) → Footer (contacto + legal)
     =========================================================================
     -->
     <meta charset="utf-8" />
@@ -37,8 +41,11 @@
     <link rel="stylesheet" href="./assets/css/styles.css" />
   </head>
   <body id="inicio">
+    <!-- ============================================================
+         HEADER: Navegación principal, logo, buscador
+         ============================================================ -->
     <header class="cabecera">
-      <!-- Logotipo principal y acceso rápido al inicio -->
+      <!-- Botón hamburguesa para menú móvil -->
       <button
         class="cabecera__buscador--hamburguesa"
         type="button"
@@ -46,6 +53,7 @@
       >
         &#9776;
       </button>
+      <!-- Logotipo principal y enlace de regreso al inicio -->
       <a class="cabecera__logo" href="./index.html">
         <img
           class="cabecera__logo--imagen"
@@ -55,6 +63,7 @@
           height="1024"
         />
       </a>
+      <!-- Navegación principal: Links a sagas y páginas destacadas -->
       <nav class="cabecera__menu" aria-label="Menú principal del sitio">
         <!-- Menú principal de navegación entre sagas y páginas destacado -->
         <p class="cabecera__menu--titulo">
@@ -67,6 +76,7 @@
           />
           Nintendo Manía
         </p>
+        <!-- Lista de navegación semántica a las 3 sagas y páginas principales -->
         <ul class="cabecera__menu--lista">
           <li>
             <a class="cabecera__menu--enlace" href="./sagas/splatoon.html"
@@ -97,7 +107,7 @@
         class="cabecera__buscador"
         aria-label="Buscar contenido en NintendoManía"
       >
-        <!-- Formulario de búsqueda semántico -->
+        <!-- Formulario de búsqueda -->
         <form
           name="buscador"
           role="search"
@@ -122,10 +132,13 @@
       </nav>
     </header>
     <main>
-      <!-- Introducción a propuesta de colaboración -->
+      <!-- ============================================================
+         MAIN: Contenido central y único de la página de contacto
+         ============================================================ -->
       <section class="colaboracion">
+        <!-- SECCIÓN 1: Colaboración -->
         <h1 class="colaboracion__titulo">
-          Envíanos un Mensaje o Propuesta de Colaboración
+          Formulario de Contacto NintendoManía
         </h1>
         <p class="colaboracion__descripcion">
           ¡Queremos escuchar tu opinión! Usa este formulario para consultas,
@@ -145,8 +158,8 @@
           </figcaption>
         </figure>
       </section>
+      <!-- SECCIÓN 2: Formulario de contacto -->
       <section class="contacto">
-        <!-- SECTION: Formulario de contacto -->
         <h2 class="contacto__titulo">Formulario de Contacto NintendoManía</h2>
         <form
           class="contacto__formulario"
@@ -154,9 +167,9 @@
           method="post"
           action="#"
         >
+          <!-- CAMPO 1: Datos Personales -->
           <fieldset
             class="contacto__formulario--campo"
-            role="group"
             data-section="datos-personales"
           >
             <legend class="contacto__formulario--leyenda">
@@ -199,10 +212,10 @@
               />
             </label>
           </fieldset>
+          <!-- CAMPO 2: Detalles Petición -->
           <fieldset
             class="contacto__formulario--campo"
             data-section="detalles-peticion"
-            role="group"
           >
             <legend class="contacto__formulario--leyenda">
               Detalles de tu Petición
@@ -243,10 +256,10 @@
               />
             </label>
           </fieldset>
+          <!-- CAMPO 3: Información estadística -->
           <fieldset
             class="contacto__formulario--campo"
             data-section="info-estadistica"
-            role="group"
           >
             <!-- Sección informativa y estadística -->
             <legend class="contacto__formulario--leyenda">
@@ -329,6 +342,7 @@
             Borrar Formulario
           </button>
         </form>
+        <!-- ARTICLE : FAQ -->
         <article class="faq-contacto">
           <h2 class="faq-contacto__titulo">
             Preguntas Frecuentes sobre Colaboración
@@ -406,7 +420,10 @@
       <!-- Sección de contacto semántica con <address> -->
       <section class="pie-pagina__contacto">
         <h2 class="pie-pagina__contacto--titulo">Contacto</h2>
-        <address class="pie-pagina__contacto--informacion" aria-label="Información de contacto">
+        <address
+          class="pie-pagina__contacto--informacion"
+          aria-label="Información de contacto"
+        >
           <!-- Links de contacto: formulario, email, teléfono -->
           <ul class="pie-pagina__contacto--lista">
             <li>
