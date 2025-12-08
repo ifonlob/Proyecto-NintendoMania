@@ -753,7 +753,7 @@ El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante 
 - **Resultado:** 0 errores, warnings insignificativos
 - **Validador:** https://jigsaw.w3.org/css-validator/
 
-![W3C Validator CSS](/assets/imgs/W3C-CSS.png)
+![W3C Validator CSS](./assets/imgs/W3C-CSS.png)
 
 ### Especificidades Detectadas y Justificadas
 
@@ -764,6 +764,25 @@ El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante 
 
 ---
 
+## Compatibilidad de Navegadores
+
+### Desktop
+
+| Navegador | Versión | Estado | Notas de Compatibilidad |
+|-----------|---------|--------|------------------------|
+| **Chrome** | 120+ | ✓ Totalmente compatible | CSS Grid, Flexbox, Variables CSS, Media Queries |
+| **Firefox** | 121+ | ✓ Totalmente compatible | Soporte completo de todas las características |
+| **Safari** | 17+ | ✓ Compatible | Requiere `-webkit-` prefixes para algunos efectos transform |
+| **Edge** | 120+ | ✓ Totalmente compatible | Basado en Chromium, soporte idéntico a Chrome |
+
+### Mobile
+
+| Navegador | Versión | Estado | Notas de Compatibilidad |
+|-----------|---------|--------|------------------------|
+| **Chrome Mobile** | 120+ | ✓ | Soporte completo de responsive, touch-friendly |
+| **Safari iOS** | 17+ | ✓ | Requiere `-webkit-` prefixes, viewport correcto |
+| **Samsung Internet** | 20+ | ✓ | Basado en Chromium, compatible |
+| **Android Browser** | 9+ | ✓ | Soporte de Media Queries, Flexbox |
 
 
 
