@@ -7,11 +7,12 @@
 - [Estructura de archivos](#estructura-de-archivos)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Estructura HTML5 Semántica](#estructura-html5-semántica)
-- [Evolución HTML : HTML 4.01 a HTML5]()
+- [Evolución HTML : HTML 4.01 a HTML5](#evolución-html-html401-a-html5)
 - [Análisis de Estructura por Página](#análisis-de-estructura-por-página)
 - [Uniformidad y Diferenciación](#uniformidad-y-diferenciación)
 - [Buenas Prácticas Aplicadas](#buenas-prácticas-aplicadas)
 - [Estructura CSS y Diseño Visual](#estructura-css-y-diseño-visual)
+- [Ventajas de usar CSS]()
 - [Sistema de Diseño](#sistema-de-diseño)
 - [Paleta de Colores](#paleta-de-colores)
 - [Sistema Tipográfico](#sistema-tipográfico)
@@ -582,6 +583,205 @@ En **modo oscuro** (`@media (prefers-color-scheme: dark)`):
 
 ---
 
+# Ventajas de usar CSS
+
+El proyecto NintendoManía se ha desarrollado siguiendo de forma estricta el principio de **separación de responsabilidades**:
+
+- **Fase 1:** solo HTML5 semántico (sin estilos ni inline, ni internos, ni externos).
+- **Fase 2:** un **único archivo externo `styles.css`** que concentra todo el diseño y la presentación.
+
+Esta decisión no es solo estética: demuestra de forma práctica las **ventajas reales** de utilizar hojas de estilo.
+
+
+### 1. Separación total entre contenido (HTML) y presentación (CSS)
+
+En lugar de mezclar contenido y estilos en el mismo archivo, el HTML se dedica exclusivamente a la **estructura semántica**, mientras que el CSS controla el **aspecto visual** desde un único punto centralizado.
+
+**Sin CSS externo (mala práctica, solo a modo de contraste):**
+
+```html
+<!-- Ejemplo NO usado en el proyecto -->
+<button style="background-color:#800E13;color:#ffffff;padding:1.5rem;border-radius:2rem;border:4px solid #48a1ee;font-weight:600;cursor:pointer;">
+  Suscribirme
+</button>
+```
+
+**Con CSS externo (enfoque del proyecto):**
+
+```html
+<!-- HTML limpio y semántico -->
+<button class="newsletter__boton">Suscribirme</button>
+```
+
+```css
+/* styles.css */
+.newsletter__boton {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 1.5rem;
+  border-radius: 2rem;
+  border: 4px solid var(--color-secundario);
+  font-weight: 600;
+  cursor: pointer;
+}
+```
+
+**Ventajas:**
+
+- HTML mucho más legible y mantenible.
+- El significado del contenido no se mezcla con decisiones de diseño.
+- Permite cambiar el diseño completo del sitio **sin tocar ni una sola etiqueta HTML**.
+
+
+### 2. Reutilización masiva mediante variables CSS
+
+El uso intensivo de **variables CSS** convierte el diseño en un sistema configurable, en lugar de un conjunto de valores “quemados” en el código.
+
+```css
+:root {
+  --color-principal: #800E13;
+  --color-secundario: #48a1ee;
+  --color-principal__mario: #E52521;
+  --color-principal__splatoon: #F02D7D;
+  --color-principal__kirby: #ffb6e6;
+
+  --fuente-base: 'Montserrat', Arial, sans-serif;
+  --fuente-secundaria: 'Press Start 2P', cursive;
+}
+```
+
+**Ejemplo de cambio global real:**
+
+- Cambiar el color corporativo del portal implica **modificar una sola línea**:
+
+```css
+:root {
+  --color-principal: #b00020; /* Nuevo color principal */
+}
+```
+
+En lugar de editar decenas de reglas, todos los botones, bordes y títulos que usan `var(--color-principal)` se actualizan automáticamente. Esto demuestra:
+
+- **Mantenibilidad:** cambios globales en segundos.
+- **Reducción de errores:** no hay riesgo de dejar colores “antiguos” olvidados.
+- **Escalabilidad:** preparar un tema alternativo o un rediseño es trivial.
+
+
+### 3. Consistencia visual gracias a BEM y componentes reutilizables
+
+La aplicación sistemática de la metodología **BEM (Block–Element–Modifier)** en las clases CSS garantiza que:
+
+- Cada bloque (ej. `.newsletter`, `.sagas-principales`, `.cabecera`) representa un componente claro.
+- Sus elementos (`__`) y modificadores (`--`) siguen una nomenclatura coherente y predecible.
+- El mismo componente se ve y se comporta **igual** en todas las páginas.
+
+**Ejemplo: botones consistentes en todo el sitio**
+
+```html
+<button class="newsletter__boton">Suscribirme</button>
+<button class="contacto__formulario--boton">Enviar mensaje</button>
+```
+
+```css
+.newsletter__boton,
+.contacto__formulario--boton {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  padding: 1.5rem;
+  border-radius: 2rem;
+  border: 4px solid var(--color-secundario);
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 0.4s ease, transform 0.5s ease;
+}
+```
+
+**Resultado:**
+
+- Misma tipografía, mismos tamaños, mismo comportamiento en hover y focus.
+- **Experiencia de usuario coherente** en todas las páginas.
+- Cualquier mejora (por ejemplo aumentar el `border-radius`) se hace **una sola vez**.
+
+
+### 4. Mantenibilidad y escalabilidad del diseño
+
+Al centralizar estilos en `styles.css` y estructurarlos por secciones y páginas, el proyecto:
+
+- Permite localizar rápidamente el bloque de estilos que afecta a un componente.
+- Evita solapamientos y conflictos entre reglas de páginas distintas.
+- Facilita añadir nuevas secciones o incluso nuevas páginas sin “romper” el diseño existente.
+
+**Ejemplo: añadir una nueva saga**
+
+Para añadir una cuarta saga:
+
+1. Se crea una nueva card HTML siguiendo la convención BEM.
+2. Se añade un bloque de estilos específico en la sección correspondiente del CSS (p. ej. “Página inicio” o “Páginas de sagas”).
+3. Se reutilizan variables de color, tipografía y espaciados existentes.
+
+No es necesario redefinir botones, formularios o tipografía: ya son **componentes globales**.
+
+
+### 5. Mejora de rendimiento y eficiencia de carga
+
+Sin hojas de estilo externas, cada página repetiría los mismos estilos, aumentando el tamaño total descargado.
+
+Con `styles.css`:
+
+- El navegador descarga el CSS **una sola vez** y lo cachea.
+- Las siguientes páginas reutilizan la misma hoja de estilos desde caché.
+- Se elimina la duplicación de estilos inline o `<style>` internos por página.
+
+Esto se traduce en:
+
+- **Menos peso total transferido**.
+- **Tiempos de carga más rápidos**, especialmente en navegación interna.
+- **Mejor puntuación de rendimiento** en herramientas como Lighthouse.
+
+
+### 6. Soporte avanzado de responsive design y dark mode
+
+Sin CSS, sería imposible:
+
+- Definir **puntos de ruptura** para adaptar el diseño a móviles, tablets y escritorio.
+- Aplicar un **modo oscuro** basado en las preferencias del usuario.
+- Respetar `prefers-reduced-motion` para usuarios que desactivan animaciones.
+
+Con CSS:
+
+```css
+/* Responsive design */
+@media (max-width: 800px) {
+  .sagas-principales {
+    flex-direction: column;
+    width: 90%;
+  }
+}
+
+/* Modo oscuro automático */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-fondo: #050816de;
+    --color-texto: #f5f5f5;
+  }
+}
+
+/* Respeto a usuarios con reducción de movimiento */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+```
+
+**Ventajas claras:**
+
+- El **mismo HTML** se adapta visualmente a cualquier dispositivo.
+- El portal **respeta las preferencias del usuario** (tema oscuro, menos animaciones).
+- La lógica de adaptación está en el CSS, no en el HTML.
+
+---
 ## Sistema Tipográfico
 
 Hemos seleccionado las siguientes fuentes:
