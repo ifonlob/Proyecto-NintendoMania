@@ -556,8 +556,6 @@ En **modo oscuro** (`@media (prefers-color-scheme: dark)`):
 
 ## Sistema Tipográfico
 
-### Fuentes Seleccionadas
-
 Hemos seleccionado las siguientes fuentes:
 
 | Fuente | Variable CSS | Uso | Justificación |
@@ -569,6 +567,66 @@ Las fuentes se importan desde **Google Fonts** al inicio de `styles.css`:
 ```css
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
 ```
+
+---
+
+## Arquitectura CSS
+
+### Organización de Fichero
+
+La estructura de `styles.css` sigue este orden:
+
+```
+styles.css
+├── Importación de fuentes (Google Fonts)
+├── 1. Reset básico
+│   ├── Selector universal *
+│   └── @media prefers-reduced-motion
+├── 2. Variables globales (:root)
+│   ├── Colores (principal, secundario, específicos de la saga)
+│   ├── Fondos por contexto
+│   ├── Tipografías
+│   └── @media (prefers-color-scheme: dark)
+├── 3. Estilos generales
+│   ├── body, a, img.
+│   └── Comportamientos base
+├── 4. Cabecera (.cabecera)
+│   ├── Layout flexbox
+│   ├── Navegación responsive
+│   ├── Buscador formulario
+│   └── Menú hamburguesa (mobile)
+├── 5. Pie de página (.pie-pagina)
+│   ├── Contacto y enlaces
+│   ├── Información empresa
+│   ├── Botón flotante "Volver arriba"
+│   └── Responsive adaptations
+├── 6. Página inicio (index.html)
+│   ├── .introduccion
+│   ├── .mejores-sagas
+│   ├── .sagas-principales
+│   ├── .extra (puntos destacados + noticias)
+│   ├── .newsletter (formulario)
+│   └── @media queries (1200px, 800px, 500px, 400px)
+├── 7. Página contacto (contacto.html)
+│   ├── .colaboracion
+│   ├── .contacto (formulario)
+│   ├── .faq-contacto (expandibles)
+│   └── @media queries
+├── 8. Página about (about.html)
+│   ├── .sobre-nosotros
+│   ├── .pilares
+│   ├── .calidad (equipo)
+│   └── @media queries
+├── 9. Página comparativas (comparativas.html)
+│   ├── Estilos específicos para tablas
+│   ├── Estilos de votación
+│   └── @media queries
+├── 10-12. Páginas de sagas (Splatoon, Mario, Kirby)
+│   ├── Estilos de cronología
+│   ├── Estilos de armas/habilidades
+│   ├── Cards temáticas
+│   └── @media queries
+└── Responsive breakpoints globales (1400px, 1100px, 850px, 650px, 450px)
 
 ## Validación W3C
 
