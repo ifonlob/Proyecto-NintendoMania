@@ -14,7 +14,7 @@
 - [Buenas Prácticas Aplicadas](#buenas-prácticas-aplicadas)
 - [Atributos HTML5 y Validación de Formularios](#atributos-html5-y-validación-de-formularios)
 - [Estructura CSS y Diseño Visual](#estructura-css-y-diseño-visual)
-- [Ventajas de usar CSS]()
+- [Ventajas de usar CSS](#ventajas-de-usar-css)
 - [Sistema de Diseño](#sistema-de-diseño)
 - [Paleta de Colores](#paleta-de-colores)
 - [Sistema Tipográfico](#sistema-tipográfico)
@@ -41,7 +41,7 @@ Nuestro objetivo es crear un **portal digital especializado** que documente:
 
 Las sagas cubiertas son: **Super Mario Bros**, **Splatoon** y **Kirby**.
 
-La temática friki se aborda con una **metodología de desarrollo profesional**, garantizando que el producto final cumpla con los estándares más altos de **accesibilidad, estructura web y validación W3C**.
+De la misma forma, la temática friki se aborda con una **metodología de desarrollo profesional**, garantizando que el producto final cumpla con los estándares más altos de **accesibilidad, estructura web y validación W3C**.
 
 ---
 
@@ -51,16 +51,16 @@ La temática friki se aborda con una **metodología de desarrollo profesional**,
 
 La elección de **NintendoManía** fue estratégica. Buscábamos un proyecto sostenible que permitiera:
 - Aplicar nuestros conocimientos técnicos al más alto nivel
-- Abordar contenido de genuino interés
+- Abordar contenido de interés para la comunidad gaming
 - Demostrar dominio de **HTML5 semántico puro**
 
 ### Ventajas Técnicas de Esta Temática
 
-1. **Semántica Avanzada:** La estructura de sagas, personajes y armas se presta perfectamente para usar `<section>`, `<article>`, `<figure>` y `<aside>` de forma natural y significativa.
+1. **Semántica Avanzada:** La estructura de sagas, personajes y armas es perfecta para usar `<section>`, `<article>`, `<figure>` y `<aside>`.
 
-2. **Uso Moderno de HTML5:** Empleamos etiquetas como `<details>` y `<summary>` para interactividad sin JavaScript, demostrando dominio de HTML5 contemporáneo.
+2. **Uso Moderno de HTML5:** Empleamos etiquetas como `<details>` y `<summary>` para interactividad sin JavaScript.
 
-3. **Atributos de Accesibilidad:** Usamos `alt` descriptivos en **145+ imágenes**, garantizando que lectores de pantalla comprendan el contenido visual.
+3. **Atributos de Accesibilidad:** Usamos `alt` descriptivos en **150+ imágenes**, garantizando que lectores de pantalla comprendan el contenido visual.
 
 4. **Formulario Robusto:** El formulario de contacto incluye **7 tipos diferentes de inputs** (email, tel, url, select, radio, checkbox, textarea), validación HTML5 completa, y uso de `<fieldset>` y `<legend>` para accesibilidad.
 
@@ -96,13 +96,13 @@ El proyecto consta de **7 páginas HTML** (raíz + carpeta sagas), cada una con 
 
 | Archivo | Temática Principal | Estructura Diferencial Clave | Contenido |
 | :--- | :--- | :--- | :--- |
-| **`index.html`** | Portada e introducción | **Índice Modular:** `<aside>` con `<details>` para navegación | Hero section, 3 sagas destacadas, newsletter |
-| **`about.html`** | Sobre nosotros, equipo, misión | **Semántica de Listas:** `<ul>` para pilares, `<ol>` para trayectoria cronológica | 4 secciones temáticas, 13 imágenes |
+| **`index.html`** | Portada e introducción | **Índice Modular:** `<aside>` con `<details>` para navegación | Introducción sagas, 3 sagas destacadas, newsletter |
+| **`about.html`** | Sobre nosotros, equipo, misión | **Semántica de Listas:** `<ul>` para pilares, `<ol>` para trayectoria cronológica | 4 secciones temáticas|
 | **`contacto.html`** | Formulario y FAQ | **Formulario Avanzado:** `<fieldset>` por tema, `<details>` para FAQ | 7 campos, validación HTML5 completa |
 | **`comparativas.html`** | Análisis comparativo de sagas | **Tabular Rigurosa:** 4 `<table>` semánticas con `scope` | Hitos, evolución por saga, análisis |
-| **`sagas/splatoon.html`** | Cronología, armas, personajes, lore | **Lineal y Modular:** Cronología + Armas + Idols + Curiosidades | 60+ imágenes, 45+ figcaptions, 6 secciones |
-| **`sagas/mario.html`** | Evolución 2D → 3D, personajes icónicos | **Jerárquica de Hitos:** Artículos por era (2D vs 3D) | 25+ imágenes, blockquotes, 800+ palabras |
-| **`sagas/kirby.html`** | Habilidades, jefes, lore cósmico | **Fichas de Lore:** Intensivo uso de `<figure>` + `<figcaption>` | 30+ imágenes, 29+ figcaptions, 1000+ palabras |
+| **`sagas/splatoon.html`** | Cronología, armas, personajes, lore | **Lineal y Modular:** Cronología + Armas + Idols + Curiosidades | 6 secciones y uso de figuras descriptivas|
+| **`sagas/mario.html`** | Evolución 2D → 3D, personajes icónicos | **Jerárquica de Hitos:** Artículos por era (2D vs 3D) | 800+ palabras , secciones diferentes y citas |
+| **`sagas/kirby.html`** | Habilidades, jefes, lore cósmico | **Fichas de Lore:** Intensivo uso de `<figure>` + `<figcaption>` | Uso de figcaptions, 1000+ palabras |
 
 ---
 
@@ -253,7 +253,6 @@ Asimismo, para cumplir estrictamente con las buenas prácticas del criterio **2.
         class="newsletter__formulario--input"
         placeholder="tu@email.com"
         required
-        aria-describedby="email-newsletter-ayuda"
       >
       <p id="email-newsletter-ayuda" class="newsletter__ayuda">
         Usaremos tu correo solo para enviarte novedades sobre el portal.
@@ -292,7 +291,6 @@ En este ejemplo se demuestra de forma explícita:
 - **Comentarios útiles** al inicio de cada bloque estructural (`HEADER`, `MAIN`, `ASIDE`, `FOOTER`).
 - **Organización jerárquica lógica**: `header` → `main` → `aside` → `footer`.
 - **Uso impecable de etiquetas semánticas** para cada tipo de contenido.
-
 
 ---
 
@@ -590,13 +588,13 @@ En este ejemplo se demuestra de forma explícita:
 - `<section>` para agrupar contenido temático
 - `<article>` para contenido independiente
 - `<aside>` para contenido complementario
-- `<figure>` + `<figcaption>` para imágenes contextualizadas
-- `<table>` + `<caption>` + `<thead>` + `<tbody>` para datos
+- `<figure>` + `<figcaption>` para imágenes con contexto
+- `<table>` + `<caption>` + `<thead>` + `<tbody>` para una tabla de datos
 
 ### 2. Accesibilidad
 - **150+ imágenes** con `alt` descriptivo
 - `width` y `height` especificados en todas las imágenes
-- `<label>` asociadas correctamente a inputs
+- `<label>` asociadas correctamente a inputs de forma implícita (sin necesidad de uso de id)
 - `<fieldset>` + `<legend>` en formulario
 - `scope` attributes en tablas
 - Navegación por IDs para enlaces internos
@@ -635,14 +633,14 @@ En este ejemplo se demuestra de forma explícita:
 
 ## Atributos HTML5 y Validación de Formularios
 
-Para cubrir el criterio **2.c** al máximo nivel, se documenta de forma explícita la selección de etiquetas, atributos y la validación aplicada en los formularios y contenido.
+Asimismo, para cubrir el criterio **2.c** , hemos documentado de forma explícita la selección de etiquetas, atributos y la validación aplicada en los formularios y contenido.
 
 ### Tipos de Input y Atributos Utilizados
 
 | Input Type | Atributos utilizados | Página | Finalidad | Validación |
 |-----------|----------------------|--------|-----------|-----------|
 | `text` | `name`, `id`, `required`, `minlength="3"`, `placeholder` | contacto.html | Nombre de usuario | Mínimo 3 caracteres, obligatorio. |
-| `email` | `name`, `id`, `type="email"`, `required`, `placeholder`, `aria-describedby` | contacto.html, index.html (newsletter) | Correo electrónico | Validación nativa de formato email + campo obligatorio. |
+| `email` | `name`, `id`, `type="email"`, `required`, `placeholder` | contacto.html, index.html (newsletter) | Correo electrónico | Validación nativa de formato email + campo obligatorio. |
 | `tel` | `name`, `id`, `type="tel"`, `pattern="[0-9]{9}"`, `placeholder` | contacto.html | Teléfono de contacto | Debe tener exactamente 9 dígitos numéricos. |
 | `url` | `name`, `id`, `type="url"`, `required`, `placeholder` | contacto.html | URL de portfolio / web personal | Validación nativa para formato de URL. |
 | `radio` | `name`, `id`, `value`, `required` | contacto.html | Selección de tema o motivo de contacto | Obliga a escoger exactamente una opción. |
@@ -719,7 +717,7 @@ El proyecto NintendoManía se ha desarrollado siguiendo de forma estricta el pri
 - **Fase 1:** solo HTML5 semántico (sin estilos ni inline, ni internos, ni externos).
 - **Fase 2:** un **único archivo externo `styles.css`** que concentra todo el diseño y la presentación.
 
-Esta decisión no es solo estética: demuestra de forma práctica las **ventajas reales** de utilizar hojas de estilo.
+Esta decisión no es solo estética, sino que demuestra de forma práctica las **ventajas reales** de utilizar hojas de estilo.
 
 
 ### 1. Separación total entre contenido (HTML) y presentación (CSS)
@@ -752,11 +750,11 @@ En lugar de mezclar contenido y estilos en el mismo archivo, el HTML se dedica e
 }
 ```
 
-**Ventajas:**
+**Ventajas que nos ha aportado:**
 
 - HTML mucho más legible y mantenible.
 - El significado del contenido no se mezcla con decisiones de diseño.
-- Permite cambiar el diseño completo del sitio **sin tocar ni una sola etiqueta HTML**.
+- Nos ha permitido cambiar el diseño completo del sitio **sin tocar ni una sola etiqueta HTML**.
 
 
 ### 2. Reutilización masiva mediante variables CSS
@@ -862,7 +860,7 @@ Esto se traduce en:
 
 - **Menos peso total transferido**.
 - **Tiempos de carga más rápidos**, especialmente en navegación interna.
-- **Mejor puntuación de rendimiento** en herramientas como Lighthouse.
+- **Mejor puntuación de rendimiento**
 
 
 ### 6. Soporte avanzado de responsive design y dark mode
@@ -986,7 +984,7 @@ styles.css
 ### Especificidad CSS
 
 **Estrategia de especificidad:**
-- **Omisión de `!important`:** Ninguno encontrado en el CSS
+- **Omisión de `!important`:** No usado en el CSS
 - **Selectores optimizados:** Uso de clases (especificidad 0.1.0) y combinadores directos
 - **Cascada respetada:** Orden de media queries de mayor a menor ancho
 - **Selectores compuestos:** `.cabecera__menu--enlace` (especificidad 0.3.0) para evitar conflictos
@@ -1030,7 +1028,6 @@ A lo largo del desarrollo del proyecto hemos utilizado **BEM (Block Element Modi
 - Evita colisiones de estilos entre componentes
 - Facilita la reutilización y extensión
 - Código autodocumentado (BEM actúa como especificación y se documenta por sí solo)
-
 
 ---
 
@@ -1096,7 +1093,6 @@ El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante 
 
 --- 
 
-
 ## Validación CSS Completa
 
 ### W3C CSS Validator
@@ -1139,8 +1135,6 @@ El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante 
 | **Android Browser** | 9+ | ✓ | Soporte de Media Queries, Flexbox |
 
 ---
-
-
 
 ## Componentes CSS Documentados
 
@@ -1291,10 +1285,9 @@ El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante 
 
 ---
 
-
 ## Validación W3C
 
-Todas las páginas han sido validadas sin errores:
+Todas las páginas han sido validadas sin errores a través de [W3C HTLM Validator](https://validator.w3.org/#validate_by_upload):
 
 | Página | Estado | Validador |
 |--------|--------|-----------|
@@ -1312,10 +1305,12 @@ Cabe destacar que lo único que se muestra en el W3C Validator son mensajes info
 **Validación de CSS** (Fase 2):
 - styles.css | Válido | [W3C CSS Validator](https://jigsaw.w3.org/css-validator/)
 
+![Validación W3C CSS](./assets/imgs/W3C-CSS.png)
+
 ---
 ## Conclusión
 
-A través del proyecto de **NintendoManía** se ha demostrado un dominio avanzado de **HTML5**, **CSS3**, accesibilidad y herramientas de desarrollo web:
+Finalmente, podemos afirmar que a través del proyecto de **NintendoManía** se ha demostrado un dominio avanzado de **HTML5**, **CSS3**, accesibilidad y herramientas de desarrollo web:
 
 - Estructura HTML5 semántica, con uso preciso de `<header>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<figure>`, `<figcaption>`, `<details>`, `<summary>`, `<table>`, `<label>`, `<fieldset>` y `<legend>`.
 - Justificación clara de la evolución de HTML4.01 a HTML5 aplicada a decisiones concretas del proyecto.
@@ -1325,5 +1320,3 @@ A través del proyecto de **NintendoManía** se ha demostrado un dominio avanzad
 - Validación completa con herramientas oficiales W3C para HTML y CSS.
 - Uso de Git, VS Code y herramientas de navegador, con un flujo de trabajo basado en commits frecuentes y descriptivos.
 
-
----
