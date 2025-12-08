@@ -17,7 +17,7 @@
 - [Arquitectura CSS](#arquitectura-css)
 - [Metodología CSS: BEM](#metodología-css-bem)
 - [Accesibilidad Visual](#accesibilidad-visual)
-- [Responsive Design y Puntos de Ruptura](#responsive-design-y-puntos-de-ruptura)
+- [Diseño Responsive y Puntos de Ruptura](#diseño-responsive-y-puntos-de-ruptura)
 - [Validación CSS Completa](#validación-css-completa)
 - [Compatibilidad de Navegadores](#compatibilidad-de-navegadores)
 - [Testing de Accesibilidad](#testing-de-accesibilidad)
@@ -725,6 +725,23 @@ Todos los elementos interactivos tienen estados de foco visibles:
     }
 }
 ```
+
+---
+
+## Diseño Responsive y Puntos de Ruptura
+
+El CSS se escribe para escritorio primero, luego se adapta hacia abajo mediante `@media (max-width)`.
+
+### Puntos de Ruptura Utilizados
+
+| Breakpoint | Dispositivo | Adaptaciones Clave |
+|------------|-------------|-------------------|
+| **1400px** | Monitores muy grandes | Reducción de padding, ajuste de gap en flex|
+| **1200px** | Desktop estándar | Cambio de 3 columnas para vista más compacta |
+| **800px** | Transición tablet-mobile | Reajuste fundamental de columnas del contenido|
+| **500px** | Mobile pequeño | Vista minimalista y mínima, botones adaptados |
+| **400px** | Mobile xtra small | Ocultar elementos no críticos, fuentes mínimas |
+
 
 
 
