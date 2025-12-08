@@ -500,7 +500,7 @@ Para llevar a cabo el proyecto hemos incluido toda la parte de diseño y estilos
 
 ### 1. Arquitectura del fichero CSS
 
-La hoja de estilos está estructurada de forma modular mediante comentarios numerados:
+Hemos estructurado la hoja de estilos de forma modular mediante comentarios numerados:
 
 1. **Reset básico**
 2. **Variables globales**
@@ -518,6 +518,24 @@ La hoja de estilos está estructurada de forma modular mediante comentarios nume
 Hemos considerado utilizar este sistema puesto que permite localizar rápidamente cualquier bloque de estilos y evita mezclar reglas de distintas páginas en un mismo bloque conceptual.
 
 ---
+
+## Sistema de Diseño
+
+### Paleta de Colores
+
+En el proyecto hemos implementado un sistema de colores estratégico con variables CSS que garantizan consistencia y facilitan el mantenimiento:
+
+| Color | Hex | Variable CSS | Uso Principal |
+|-------|-----|--------------|---------------|
+| **Primario** | #800E13 | `--color-principal` | Bordes, botones CTA (click to action), títulos destacados, componentes interactivos |
+| **Secundario** | #48a1ee | `--color-secundario` | Fondos, acentos, hover effects, botones secundarios |
+| **Blanco** | #ffffff | `--color-blanco` | Texto sobre fondos oscuros, contenedores principales |
+| **Negro** | #000000 | `--color-negro` | Texto principal, bordes, iconografía |
+| **Mario (Rojo)** | #E52521 | `--color-principal__mario` | Identidad visual saga Mario, fondos temáticos |
+| **Splatoon (Magenta)** | #F02D7D | `--color-principal__splatoon` | Identidad visual saga Splatoon, fondos temáticos |
+| **Kirby (Rosa)** | #ffb6e6 | `--color-principal__kirby` | Identidad visual saga Kirby, fondos temáticos |
+
+
 
 
 
