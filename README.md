@@ -627,6 +627,16 @@ styles.css
 │   ├── Cards temáticas
 │   └── @media queries
 └── Responsive breakpoints globales (1400px, 1100px, 850px, 650px, 450px)
+```
+
+### Especificidad CSS
+
+**Estrategia de especificidad:**
+- **Omisión de `!important`:** Ninguno encontrado en el CSS
+- **Selectores optimizados:** Uso de clases (especificidad 0.1.0) y combinadores directos
+- **Cascada respetada:** Orden de media queries de mayor a menor ancho
+- **Selectores compuestos:** `.cabecera__menu--enlace` (especificidad 0.3.0) para evitar conflictos
+
 
 ## Validación W3C
 
