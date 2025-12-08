@@ -3924,31 +3924,6 @@ img {
   font-size: 0.95rem;
 }
 
-@media (max-width: 900px) {
-  .cronologia-splatoon1,
-  .cronologia-splatoon2,
-  .cronologia-octoexpansion,
-  .cronologia-splatoon3,
-  .cronologia-sideorder,
-  .cronologia-raiders {
-    width: 100%;
-  }
-
-  .cronologia-splatoon__titulo {
-    font-size: 2rem;
-    padding: 1rem;
-  }
-
-  .cronologia-splatoon1,
-  .cronologia-splatoon2,
-  .cronologia-octoexpansion,
-  .cronologia-splatoon3,
-  .cronologia-sideorder,
-  .cronologia-raiders {
-    font-size: 1.6rem;
-  }
-}
-
 .cronologia-splatoon1__titulo,.cronologia-splatoon2__titulo,.cronologia-splatoon3__titulo,.cronologia-octoexpansion__titulo,.cronologia-sideorder__titulo,.cronologia-raiders__titulo{
   font-size: 1.2rem;
   text-align: center;
@@ -3974,6 +3949,144 @@ img {
   list-style-image:url("../imgs/flecha_listas.png");
   font-size: 1.4rem;
 }
+
+@media (max-width: 1200px) {
+  #cronologia-splatoon{
+    padding: 2.5rem;
+    gap: 1.2rem;
+  }
+
+  .cronologia-splatoon__titulo{
+    font-size: 2.3rem;
+    padding: 1.8rem;
+  }
+
+  .cronologia-splatoon1,
+  .cronologia-splatoon2,
+  .cronologia-octoexpansion,
+  .cronologia-splatoon3,
+  .cronologia-sideorder,
+  .cronologia-raiders {
+    width: 45%;        /* dos columnas algo más anchas */
+    font-size: 1.8rem;
+  }
+
+  .cronologia-splatoon1__titulo,
+  .cronologia-splatoon2__titulo,
+  .cronologia-splatoon3__titulo,
+  .cronologia-octoexpansion__titulo,
+  .cronologia-sideorder__titulo,
+  .cronologia-raiders__titulo{
+    font-size: 1.15rem;
+  }
+
+  .cronologia-octoexpansion__descripcion,
+  .cronologia-splatoon1__descripcion,
+  .cronologia-raiders__descripcion,
+  .cronologia-splatoon2__descripcion,
+  .cronologia-splatoon3__descripcion,
+  .cronologia-sideorder__descripcion{
+    font-size: 1.15rem;
+  }
+
+  .cronologia-splatoon__ideas{
+    font-size: 1.35rem;
+  }
+}
+
+@media (max-width: 800px) {
+  #cronologia-splatoon{
+    padding: 2rem 1.5rem;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+
+  .cronologia-splatoon__titulo{
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+
+  .cronologia-splatoon1,
+  .cronologia-splatoon2,
+  .cronologia-octoexpansion,
+  .cronologia-splatoon3,
+  .cronologia-sideorder,
+  .cronologia-raiders {
+    width: 100%;       /* una columna */
+    font-size: 1.6rem;
+  }
+
+  .cronologia-splatoon1__titulo,
+  .cronologia-splatoon2__titulo,
+  .cronologia-splatoon3__titulo,
+  .cronologia-octoexpansion__titulo,
+  .cronologia-sideorder__titulo,
+  .cronologia-raiders__titulo{
+    font-size: 1.1rem;
+  }
+
+  .cronologia-octoexpansion__descripcion,
+  .cronologia-splatoon1__descripcion,
+  .cronologia-raiders__descripcion,
+  .cronologia-splatoon2__descripcion,
+  .cronologia-splatoon3__descripcion,
+  .cronologia-sideorder__descripcion{
+    font-size: 1.05rem;
+  }
+
+  .cronologia-splatoon__ideas{
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #cronologia-splatoon{
+    padding: 1.5rem 1rem;
+    gap: 1.3rem;
+  }
+
+  .cronologia-splatoon__titulo{
+    font-size: 1.2rem;
+    padding: 1.2rem;
+  }
+
+  .cronologia-splatoon1,
+  .cronologia-splatoon2,
+  .cronologia-octoexpansion,
+  .cronologia-splatoon3,
+  .cronologia-sideorder,
+  .cronologia-raiders {
+    width: 100%;
+    font-size: 1.4rem;
+  }
+
+  .cronologia-splatoon1__titulo,
+  .cronologia-splatoon2__titulo,
+  .cronologia-splatoon3__titulo,
+  .cronologia-octoexpansion__titulo,
+  .cronologia-sideorder__titulo,
+  .cronologia-raiders__titulo{
+    font-size: 1rem;
+  }
+
+  .cronologia-octoexpansion__descripcion,
+  .cronologia-splatoon1__descripcion,
+  .cronologia-raiders__descripcion,
+  .cronologia-splatoon2__descripcion,
+  .cronologia-splatoon3__descripcion,
+  .cronologia-sideorder__descripcion{
+    font-size: 0.95rem;
+  }
+
+  .cronologia-splatoon__subtitulo{
+    font-size: 0.9rem;
+  }
+
+  .cronologia-splatoon__ideas{
+    font-size: 1.1rem;
+  }
+}
+
 
 /* Armas Splatoon */
 
@@ -4185,7 +4298,7 @@ img {
 
   .armas-splatoon__titulo {
     width: 85%;
-    font-size: 2.2rem;
+    font-size: 1.8rem;
   }
 
   .armas-splatoon__descripcion {
@@ -4207,8 +4320,7 @@ img {
     max-width: 30%;
   }
 }
-Hasta 800px (tablets)
-css
+
 @media (max-width: 800px) {
   #armas-splatoon {
     padding-inline: 1.5rem;
@@ -4216,7 +4328,7 @@ css
 
   .armas-splatoon__titulo {
     width: 90%;
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
 
   .armas-splatoon__descripcion {
@@ -4276,48 +4388,14 @@ css
   }
 }
 
-@media (max-width: 800px) {
-  .armas-lanzatintas__lista,
-  .armas-rodillos__lista,
-  .armas-cargatintas__lista,
-  .armas-derramatic__lista {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .armas-lanzatintas__lista--arma,
-  .armas-rodillos__lista--arma,
-  .armas-cargatintas__lista--arma,
-  .armas-derramatic__lista--arma {
-    max-width: 75%;
-    width: 100%;
-  }
-
-  .armas-lanzatintas__lista--figura,
-  .armas-rodillos__lista--figura,
-  .armas-cargatintas__lista--figura,
-  .armas-derramatic__lista--figura {
-    width: 100%;
-  }
-
-  .armas-lanzatintas__lista--imagen,
-  .armas-rodillos__lista--imagen,
-  .armas-cargatintas__lista--imagen,
-  .armas-derramatic__lista--imagen {
-    width: 100%;
-    object-fit: cover;
-  }
-}
-
 @media (max-width: 500px) {
   #armas-splatoon {
-    padding-inline: 1rem;
     gap: 1.5rem;
   }
 
   .armas-splatoon__titulo {
     width: 100%;
-    font-size: 1.8rem;
+    font-size: 1.2rem;
     padding: 1.5rem 1rem;
   }
 
@@ -4488,10 +4566,12 @@ css
     padding: 1.5rem 0;
     justify-content: center;
   }
+
   .idols-splatoon__titulo {
     font-size: 2.2rem;
     padding: 1.5rem;
   }
+
   .idols-splatoon__calamarcinas,
   .idols-splatoon__cefalopop,
   .idols-splatoon__surimi {
@@ -4500,6 +4580,17 @@ css
     padding: 1rem;
   }
 
+  .idols-splatoon__calamarcinas--titulo,
+  .idols-splatoon__cefalopop--titulo,
+  .idols-splatoon__surimi--titulo {
+    font-size: 1.4rem;
+  }
+
+  .idols-splatoon__calamarcinas--descripcion,
+  .idols-splatoon__cefalopop--descripcion,
+  .idols-splatoon__surimi--descripcion {
+    font-size: 1.1rem;
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -4507,26 +4598,70 @@ css
     flex-direction: column;
     align-items: center;
     padding: 1rem 0;
-    border-radius: 2rem;
   }
+
   .idols-splatoon__titulo {
-    font-size: 2rem;
+    width: 90%;
+    font-size: 1.5rem;
     padding: 1rem;
   }
-  .idols-splatoon__descripcion {
-    font-size: 1rem;
-    padding: 0 1rem 1rem;
-  }
+
   .idols-splatoon__calamarcinas,
   .idols-splatoon__cefalopop,
   .idols-splatoon__surimi {
     max-width: 75%;
     width: 100%;
+    padding: 0.9rem;
+  }
+
+  .idols-splatoon__calamarcinas--titulo,
+  .idols-splatoon__cefalopop--titulo,
+  .idols-splatoon__surimi--titulo {
+    font-size: 1.3rem;
+    padding: 1.2rem;
+  }
+
+  .idols-splatoon__calamarcinas--descripcion,
+  .idols-splatoon__cefalopop--descripcion,
+  .idols-splatoon__surimi--descripcion {
+    font-size: 1.05rem;
+    padding: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #idols-splatoon {
+    gap: 1.2rem;
+    padding: 0.8rem 0.5rem;
+  }
+
+  .idols-splatoon__titulo {
+    font-size: 1.2rem;
+    padding: 0.9rem;
+  }
+
+  .idols-splatoon__calamarcinas,
+  .idols-splatoon__cefalopop,
+  .idols-splatoon__surimi {
+    max-width: 95%;
+    width: 100%;
     padding: 0.8rem;
   }
 
-}
+  .idols-splatoon__calamarcinas--titulo,
+  .idols-splatoon__cefalopop--titulo,
+  .idols-splatoon__surimi--titulo {
+    font-size: 1.2rem;
+    padding: 1rem;
+  }
 
+  .idols-splatoon__calamarcinas--descripcion,
+  .idols-splatoon__cefalopop--descripcion,
+  .idols-splatoon__surimi--descripcion {
+    font-size: 0.95rem;
+    padding: 0.8rem;
+  }
+}
 /* Curiosidades Splatoon */
 
 #curiosidades-splatoon{
@@ -4534,7 +4669,7 @@ css
   flex-direction: column;
   align-items: center;
   flex-wrap: wrap;
-  gap:2rem;
+  gap: 2rem;
   padding: 1.5rem;
 }
 
@@ -4545,7 +4680,7 @@ css
   overflow-wrap: break-word;
   max-width: 75%;
   width: 100%;
-  padding:1rem;
+  padding: 1rem;
   text-shadow: -3px 3px 0 var(--color-principal__splatoon);
 }
 
@@ -4554,6 +4689,7 @@ css
   flex-wrap: wrap;
   justify-content: space-evenly;
   gap: 1.5rem;
+  width: 75%;
 }
 
 .curiosidades-splatoon__articulo--figura {
@@ -4569,7 +4705,7 @@ css
   border-radius: 2rem;
   box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
- 
+
 .curiosidades-splatoon__articulo--titulo {
   font-family: var(--fuente-secundaria);
   font-size: 1.8rem;
@@ -4621,30 +4757,100 @@ css
   padding: 1rem;
 }
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
+  #curiosidades-splatoon {
+    gap: 1.8rem;
+    padding: 1.3rem;
+  }
+
+  .curiosidades-splatoon__titulo {
+    font-size: 2rem;
+    max-width: 80%;
+  }
+
   .curiosidades-splatoon__articulo {
-    align-items: center;
+    width: 80%;
+    justify-content: center;
   }
 
   .curiosidades-splatoon__articulo--figura {
     max-width: 45%;
-    width: 100%;
-    font-size: 0.5rem;
+    padding: 0.9rem;
+  }
+
+  .curiosidades-splatoon__articulo--titulo {
+    font-size: 1.6rem;
+    width: 85%;
+    padding: 1.3rem;
+  }
+
+  .curiosidades-splatoon__articulo--descripcion {
+    font-size: 1.1rem;
+    padding: 0.9rem;
   }
 }
 
 @media (max-width: 800px) {
+  .curiosidades-splatoon__titulo {
+    font-size: 1.8rem;
+    max-width: 90%;
+    padding: 0.9rem;
+  }
+
   .curiosidades-splatoon__articulo {
     flex-direction: column;
     align-items: center;
+    width: 90%;
+    gap: 1.3rem;
   }
 
   .curiosidades-splatoon__articulo--figura {
-    max-width: 75%;
+    max-width: 80%;
     width: 100%;
   }
-  .curiosidades-splatoon__articulo--titulo{
+
+  .curiosidades-splatoon__articulo--titulo {
     font-size: 1.4rem;
+    width: 90%;
+    padding: 1.1rem;
+  }
+
+  .curiosidades-splatoon__articulo--descripcion {
+    font-size: 1.05rem;
+  }
+}
+
+@media (max-width: 600px) {
+  #curiosidades-splatoon {
+    gap: 1.4rem;
+    padding: 1rem;
+  }
+
+  .curiosidades-splatoon__titulo {
+    font-size: 1rem;
+    max-width: 95%;
+    padding: 0.8rem;
+  }
+
+  .curiosidades-splatoon__articulo {
+    width: 95%;
+    gap: 1.1rem;
+  }
+
+  .curiosidades-splatoon__articulo--figura {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+
+  .curiosidades-splatoon__articulo--titulo {
+    font-size: 1.2rem;
+    width: 95%;
+    padding: 0.9rem;
+  }
+
+  .curiosidades-splatoon__articulo--descripcion {
+    font-size: 0.95rem;
+    padding: 0.8rem;
   }
 }
 
@@ -4681,18 +4887,52 @@ css
 }
 
 @media (max-width: 1200px) {
-  .imagenes-destacadas__imagen{
-    max-width: 45%;
+  #imagenes-destacadas {
+    padding: 1.8rem;
+    gap: 1.8rem;
+  }
+
+  .imagenes-destacadas__titulo {
+    font-size: 2.2rem;
+    padding: 1.8rem;
+  }
+
+  .imagenes-destacadas__imagen {
+    max-width: 45%;   /* 2 columnas */
   }
 }
 
 @media (max-width: 800px) {
-  #imagenes-destacadas{
+  #imagenes-destacadas {
     justify-content: center;
+    padding: 1.5rem;
+    gap: 1.6rem;
   }
 
-  .imagenes-destacadas__imagen{
+  .imagenes-destacadas__titulo {
+    font-size: 2rem;
+    padding: 1.5rem;
+  }
+
+  .imagenes-destacadas__imagen {
     max-width: 90%;
+  }
+}
+
+@media (max-width: 600px) {
+  #imagenes-destacadas {
+    padding: 1.2rem 1rem;
+    gap: 1.4rem;
+  }
+
+  .imagenes-destacadas__titulo {
+    font-size: 1.7rem;
+    padding: 1.2rem;
+  }
+
+  .imagenes-destacadas__imagen {
+    max-width: 100%;
+    border-radius: 1.6rem;
   }
 }
 
@@ -4913,6 +5153,12 @@ css
 
 /* Introducción Mario */
 
+.introduccion-mario{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .introduccion-mario__titulo{
   font-family: var(--fuente-secundaria);
   font-size: 2.5rem;
@@ -4928,20 +5174,73 @@ css
   text-align: center;
   width: 100%;
   max-width: 75%;
-  margin: 0 auto;
   padding: 0 2rem 1rem 2rem;
 
 }
 
 .introduccion-mario__imagen{
-  display: block;
-  margin: 0 auto;
   width: 100%;
   max-width: 40%;
   border-radius: 5rem;
   border: 4px solid var(--color-principal__mario);
   transition: border-color 1.4s ease, transform 1.4s ease;
 }
+
+@media (max-width: 1200px) {
+  .introduccion-mario__titulo{
+    font-size: 2.2rem;
+    padding: 1.8rem;
+  }
+
+  .introduccion-mario__descripcion{
+    font-size: 1.45rem;
+    max-width: 80%;
+    padding: 0 1.8rem 1rem 1.8rem;
+  }
+
+  .introduccion-mario__imagen{
+    max-width: 45%;
+    border-width: 4px;
+  }
+}
+
+@media (max-width: 800px) {
+  .introduccion-mario__titulo{
+    font-size: 2rem;
+    padding: 1.6rem;
+  }
+
+  .introduccion-mario__descripcion{
+    font-size: 1.3rem;
+    max-width: 85%;
+    padding: 0 1.5rem 1rem 1.5rem;
+  }
+
+  .introduccion-mario__imagen{
+    max-width: 55%;
+    border-width: 3.5px;
+  }
+}
+
+@media (max-width: 500px) {
+  .introduccion-mario__titulo{
+    font-size: 1.2rem;
+    padding: 1.3rem;
+  }
+
+  .introduccion-mario__descripcion{
+    font-size: 0.9rem;
+    max-width: 95%;
+    padding: 0 1.2rem 0.9rem 1.2rem;
+  }
+
+  .introduccion-mario__imagen{
+    max-width: 70%;
+    border-width: 3px;
+    border-radius: 3.5rem;
+  }
+}
+
 
 /* Hitos 2D Mario */
 
@@ -5040,6 +5339,44 @@ css
   padding:1rem;
 }
 
+@media (max-width: 1200px) {
+  #hitos-2d{
+    padding: 2.5rem;
+    gap: 2.2rem;
+  }
+
+  .hitos-2d__titulo {
+    font-size: 2rem;
+    padding: 1.8rem;
+  }
+
+  .hitos-2d-1985,
+  .hitos-2d-1988,
+  .hitos-2d-1990,
+  .hitos-2d-1995 {
+    max-width: 45%;
+  }
+
+  .hitos-2d-1985__titulo,
+  .hitos-2d-1988__titulo,
+  .hitos-2d-1990__titulo,
+  .hitos-2d-1995__titulo {
+    font-size: 1.5rem;
+  }
+
+  .hitos-2d-1985__figura--descripcion,
+  .hitos-2d-1988__figura--descripcion,
+  .hitos-2d-1990__figura--descripcion,
+  .hitos-2d-1995__figura--descripcion,
+  .hitos-2d-1985__descripcion,
+  .hitos-2d-1988__descripcion,
+  .hitos-2d-1990__descripcion,
+  .hitos-2d-1995__descripcion {
+    font-size: 1.05rem;
+  }
+}
+
+
 @media (max-width: 900px) {
   #hitos-2d {
     flex-direction: column;
@@ -5083,6 +5420,47 @@ css
   .hitos-2d-1990__figura--descripcion,
   .hitos-2d-1995__figura--descripcion {
     font-size: 1.1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #hitos-2d{
+    padding: 1.2rem;
+    gap: 1.6rem;
+  }
+
+  .hitos-2d__titulo {
+    font-size: 1.2rem;
+    padding: 1.3rem;
+    overflow-wrap: break-word;
+  }
+
+  .hitos-2d-1985,
+  .hitos-2d-1988,
+  .hitos-2d-1990,
+  .hitos-2d-1995 {
+    padding: 1.2rem 0.9rem;
+  }
+
+  .hitos-2d-1985__titulo,
+  .hitos-2d-1988__titulo,
+  .hitos-2d-1990__titulo,
+  .hitos-2d-1995__titulo {
+    font-size: 1.2rem;
+    padding: 0.9rem;
+    width: 95%;
+  }
+
+  .hitos-2d-1985__figura--descripcion,
+  .hitos-2d-1988__figura--descripcion,
+  .hitos-2d-1990__figura--descripcion,
+  .hitos-2d-1995__figura--descripcion,
+  .hitos-2d-1985__descripcion,
+  .hitos-2d-1988__descripcion,
+  .hitos-2d-1990__descripcion,
+  .hitos-2d-1995__descripcion {
+    font-size: 0.95rem;
+    padding: 0.9rem;
   }
 }
 
@@ -5207,7 +5585,7 @@ css
   padding:1rem;
 }
 
-@media (max-width: 1300px) {
+@media (max-width: 1200px) {
   #hitos-3d {
     display: flex;
     flex-wrap: wrap;
@@ -5285,6 +5663,64 @@ css
   .hitos-3d-2017__descripcion {
   font-size: 0.95rem;
   padding: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  #hitos-3d {
+    padding: 1.5rem 1rem;
+    gap: 1.8rem;
+  }
+
+  .hitos-3d__titulo {
+    font-size: 1.2rem;
+    padding: 1.2rem;
+    overflow-wrap: break-word;
+  }
+
+  .hitos-3d__descripcion{
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .hitos-3d-1996,
+  .hitos-3d-2002,
+  .hitos-3d-2007,
+  .hitos-3d-2011,
+  .hitos-3d-2013,
+  .hitos-3d-2017 {
+    padding: 1rem;
+    gap: 1.2rem;
+  }
+
+  .hitos-3d-1996__titulo,
+  .hitos-3d-2002__titulo,
+  .hitos-3d-2007__titulo,
+  .hitos-3d-2011__titulo,
+  .hitos-3d-2013__titulo,
+  .hitos-3d-2017__titulo {
+    font-size: 1.2rem;
+    width: 95%;
+    padding: 1rem;
+  }
+
+  .hitos-3d-1996__figura--descripcion,
+  .hitos-3d-2002__figura--descripcion,
+  .hitos-3d-2007__figura--descripcion,
+  .hitos-3d-2011__figura--descripcion,
+  .hitos-3d-2013__figura--descripcion,
+  .hitos-3d-2017__figura--descripcion {
+    font-size: 0.9rem;
+  }
+
+  .hitos-3d-1996__descripcion,
+  .hitos-3d-2002__descripcion,
+  .hitos-3d-2007__descripcion,
+  .hitos-3d-2011__descripcion,
+  .hitos-3d-2013__descripcion,
+  .hitos-3d-2017__descripcion {
+    font-size: 0.9rem;
+    padding: 0.9rem;
   }
 }
 
@@ -5473,6 +5909,62 @@ css
   }
 }
 
+@media (max-width: 500px) {
+  #personajes {
+    padding: 1rem;
+    gap: 1.8rem;
+  }
+
+  .personajes__titulo{
+    font-size: 1.2rem;
+    padding: 1.3rem;
+    overflow-wrap: break-word;
+  }
+
+  .personajes__descripcion{
+    font-size: 1rem;
+    padding: 1rem;
+  }
+
+  .personajes-mario,
+  .personajes-luigi,
+  .personajes-bowser,
+  .personajes-peach,
+  .personajes-aliados {
+    padding: 1rem;
+    gap: 1.2rem;
+  }
+
+  .personajes-mario__titulo,
+  .personajes-luigi__titulo,
+  .personajes-bowser__titulo,
+  .personajes-peach__titulo,
+  .personajes-aliados__titulo {
+    font-size: 1.2rem;
+    width: 95%;
+    padding: 0.9rem;
+  }
+
+  .personajes-mario__figura--descripcion,
+  .personajes-luigi__figura--descripcion,
+  .personajes-bowser__figura--descripcion,
+  .personajes-peach__figura--descripcion,
+  .personajes-aliados__figura--descripcion {
+    font-size: 0.95rem;
+    padding: 0.9rem;
+  }
+
+  .personajes-mario__descripcion,
+  .personajes-luigi__descripcion,
+  .personajes-bowser__descripcion,
+  .personajes-peach__descripcion,
+  .personajes-aliados__descripcion {
+    font-size: 0.9rem;
+    padding: 0.9rem;
+  }
+}
+
+
 /* Curiosidades Mario */
 
 #curiosidades-mario{
@@ -5499,7 +5991,7 @@ css
   padding:1rem;
 }
 
-.curiosidades-mario-origen-mario,
+.curiosidades-mario-origen,
 .curiosidades-mario-diseno-mario,
 .curiosidades-mario-goombas{
   display: flex;
@@ -5508,7 +6000,7 @@ css
   width: 100%;
 }
 
-.curiosidades-mario-origen-mario__titulo,
+.curiosidades-mario-origen__titulo,
 .curiosidades-mario-diseno-mario__titulo,
 .curiosidades-mario-goombas__titulo {
   font-family: var(--fuente-secundaria);
@@ -5517,7 +6009,7 @@ css
   padding-bottom: 1.5rem;
 }
 
-.curiosidades-mario-origen-mario__figura,
+.curiosidades-mario-origen__figura,
 .curiosidades-mario-diseno-mario__figura,
 .curiosidades-mario-goombas__figura {
   display: flex;
@@ -5525,7 +6017,7 @@ css
   align-items: center;
 }
 
-.curiosidades-mario-origen-mario__figura--imagen,
+.curiosidades-mario-origen__figura--imagen, 
 .curiosidades-mario-diseno-mario__figura--imagen,
 .curiosidades-mario-goombas__figura--imagen {
   max-width: 40%;
@@ -5533,17 +6025,17 @@ css
   border: 3px solid var(--color-negro)
 }
 
-.curiosidades-mario-origen-mario__figura--descripcion,
+.curiosidades-mario-origen__figura--descripcion,
 .curiosidades-mario-diseno-mario__figura--descripcion,
 .curiosidades-mario-goombas__figura--descripcion {
   font-family: var(--fuente-base);
-  font-weight: 600;
+  font-weight: 400;
   font-size: 1.4rem;
   text-align: center;
   padding: 1rem;
 }
 
-.curiosidades-mario-origen-mario__detalle {
+.curiosidades-mario-origen__detalle {
   font-family: var(--fuente-base);
   font-weight: 500;
   text-align: center;
@@ -5552,7 +6044,7 @@ css
   width: 80%;
 }
 
-.curiosidades-mario-origen-mario__cita {
+.curiosidades-mario-origen__cita {
   font-family: var(--fuente-base);
   font-weight: 500;
   font-size: 1.2rem;
@@ -5596,86 +6088,117 @@ css
 
 
 @media (max-width: 1200px) {
-  .curiosidades__titulo {
+  .curiosidades-mario__titulo {
     font-size: 1.8rem;
+    padding: 1.2rem;
   }
 
-  .curiosidades__descripcion,
-  .curiosidades-origen-mario__detalle,
-  .curiosidades-origen-mario__cita,
-  .curiosidades-diseno-mario__lista,
-  .curiosidades-goombas__teoria {
+  .curiosidades-mario__descripcion {
+    font-size: 1.35rem;
+    padding: 1rem;
+  }
+
+  .curiosidades-mario-origen__titulo,
+  .curiosidades-mario-diseno-mario__titulo,
+  .curiosidades-mario-goombas__titulo {
+    font-size: 1.4rem;
+  }
+
+  .curiosidades-mario-origen__figura--descripcion,
+  .curiosidades-mario-diseno-mario__figura--descripcion,
+  .curiosidades-mario-goombas__figura--descripcion {
     font-size: 1.3rem;
   }
-  .curiosidades-origen-mario__cita{
-    width: 100%;
-  }
 
-  .curiosidades-diseno-mario__lista{
-    width: 100%;
-  }
-  .curiosidades-origen-mario__titulo,
-  .curiosidades-diseno-mario__titulo,
-  .curiosidades-goombas__titulo {
-    font-size: 1.4rem;
+  .curiosidades-mario-origen__detalle,
+  .curiosidades-mario-origen__cita,
+  .curiosidades-mario-diseno-mario__lista,
+  .curiosidades-mario-goombas__teoria {
+    font-size: 1.3rem;
+    width: 70%;
   }
 }
 
-@media (max-width: 800px) {
-  .curiosidades__titulo {
+@media (max-width: 900px) {
+  .curiosidades-mario__titulo {
     font-size: 1.6rem;
+    padding: 1rem;
   }
 
-  .curiosidades__descripcion,
-  .curiosidades-origen-mario__detalle,
-  .curiosidades-origen-mario__cita,
-  .curiosidades-diseno-mario__lista,
-  .curiosidades-goombas__teoria {
-    font-size: 1.15rem;
+  .curiosidades-mario__descripcion {
+    font-size: 1.25rem;
+    padding: 0.9rem;
   }
 
-  .curiosidades-origen-mario__titulo,
-  .curiosidades-diseno-mario__titulo,
-  .curiosidades-goombas__titulo {
+  .curiosidades-mario-origen__titulo,
+  .curiosidades-mario-diseno-mario__titulo,
+  .curiosidades-mario-goombas__titulo {
     font-size: 1.3rem;
   }
-  .curiosidades-goombas__teoria{
-    width: 100%;
-  }
-}
 
-@media (max-width: 480px) {
-  .curiosidades__titulo {
-    font-size: 1.4rem;
-  }
-
-  .curiosidades__descripcion,
-  .curiosidades-origen-mario__detalle,
-  .curiosidades-origen-mario__cita,
-  .curiosidades-diseno-mario__lista,
-  .curiosidades-goombas__teoria {
-    font-size: 1rem;
-    width: 100%;
-  }
-  .curiosidades-origen-mario__cita{
-    padding: 0;
-    margin: 0;
-    width: 95%;
-  }
-
-  .curiosidades-origen-mario__titulo,
-  .curiosidades-diseno-mario__titulo,
-  .curiosidades-goombas__titulo {
+  .curiosidades-mario-origen__figura--descripcion,
+  .curiosidades-mario-diseno-mario__figura--descripcion,
+  .curiosidades-mario-goombas__figura--descripcion {
     font-size: 1.2rem;
   }
-  .curiosidades-diseno-mario__lista{
-    width: 100%;
-  }
-  .curiosidades-goombas__teoria{
-    width: 100%;
-    padding: 0;
+
+  .curiosidades-mario-origen__detalle,
+  .curiosidades-mario-origen__cita,
+  .curiosidades-mario-diseno-mario__lista,
+  .curiosidades-mario-goombas__teoria {
+    font-size: 1.15rem;
+    width: 85%;
   }
 }
+
+@media (max-width: 500px) {
+  #curiosidades-mario{
+    padding: 1.5rem 1rem;
+    gap: 2rem;
+  }
+
+  .curiosidades-mario__titulo {
+    font-size: 1.3rem;
+    padding: 0.8rem;
+    overflow-wrap: break-word;
+  }
+
+  .curiosidades-mario__descripcion {
+    font-size: 1.05rem;
+    padding: 0.8rem;
+  }
+
+  .curiosidades-mario-origen__titulo,
+  .curiosidades-mario-diseno-mario__titulo,
+  .curiosidades-mario-goombas__titulo {
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+  }
+
+  .curiosidades-mario-origen__figura--imagen, 
+  .curiosidades-mario-diseno-mario__figura--imagen,
+  .curiosidades-mario-goombas__figura--imagen {
+    max-width: 70%;
+  }
+
+  .curiosidades-mario-origen__figura--descripcion,
+  .curiosidades-mario-diseno-mario__figura--descripcion,
+  .curiosidades-mario-goombas__figura--descripcion {
+    font-size: 1.05rem;
+    padding: 0.8rem;
+  }
+
+  .curiosidades-mario-origen__detalle,
+  .curiosidades-mario-origen__cita,
+  .curiosidades-mario-diseno-mario__lista,
+  .curiosidades-mario-goombas__teoria {
+    font-size: 1rem;
+    width: 100%;
+    padding: 0.8rem 0.5rem;
+    margin: 0 auto;
+  }
+}
+
 
 /* Imágenes destacadas Mario */
 
