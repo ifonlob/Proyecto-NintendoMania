@@ -8,6 +8,7 @@
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Estructura HTML5 Semántica](#-estructura-html5-semántica)
 - [Análisis de Estructura por Página](#-análisis-de-estructura-por-página)
+- [Uniformidad y Diferenciación](#uniformidad-y-diferenciación)
 - [Buenas Prácticas Aplicadas](#buenas-prácticas-aplicadas)
 - [Estructura CSS y Diseño Visual](#estructura-css-y-diseño-visual)
 - [Sistema de Diseño](#sistema-de-diseño)
@@ -491,6 +492,36 @@ Nuestro proyecto utiliza **HTML5 semántico** para garantizar:
 - Estructurado de forma comprensible
 
 ---
+
+
+## Estructura CSS y Diseño Visual
+
+Para llevar a cabo el proyecto hemos incluido toda la parte de diseño y estilos en una **única hoja de estilos global (`styles.css`)** organizada en bloques numerados y comentados, que agrupan los estilos por **funcionalidad y por página**. Esta organización garantiza coherencia visual en todo el portal y facilita el mantenimiento.
+
+### 1. Arquitectura del fichero CSS
+
+La hoja de estilos está estructurada de forma modular mediante comentarios numerados:
+
+1. **Reset básico**
+2. **Variables globales**
+3. **Estilos generales**
+4. **Cabecera genérica**
+5. **Pie de página**
+6. **Página inicio (`index.html`)**
+7. **Página contacto (`contacto.html`)**
+8. **Página sobre nosotros (`about.html`)**
+9. **Página comparativas (`comparativas.html`)**
+10. **Página Splatoon (`sagas/splatoon.html`)**
+11. **Página Mario (`sagas/mario.html`)**
+12. **Página Kirby (`sagas/kirby.html`)**
+
+Hemos considerado utilizar este sistema puesto que permite localizar rápidamente cualquier bloque de estilos y evita mezclar reglas de distintas páginas en un mismo bloque conceptual.
+
+---
+
+
+
+
 
 ## Validación W3C
 
