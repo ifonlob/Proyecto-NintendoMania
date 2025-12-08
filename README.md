@@ -552,6 +552,24 @@ En **modo oscuro** (`@media (prefers-color-scheme: dark)`):
 - `--color-fondo-kirby`: #1f1f23 (gris oscuro)
 
 
+---
+
+## Sistema Tipográfico
+
+### Fuentes Seleccionadas
+
+Hemos seleccionado las siguientes fuentes:
+
+| Fuente | Variable CSS | Uso | Justificación |
+|--------|--------------|-----|---------------|
+| **Montserrat** | `--fuente-base` | Párrafos, descripciones, contenido general | Fuente moderna, sans-serif, excelente legibilidad en pantalla, pesos múltiples (300-700) para jerarquía |
+| **Press Start 2P** | `--fuente-secundaria` | Títulos, botones, elementos destacados, encabezados | Fuente pixelada retro, refuerza identidad gaming/Nintendo y tiene un impacto visual alto |
+
+Las fuentes se importan desde **Google Fonts** al inicio de `styles.css`:
+```css
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Press+Start+2P&display=swap');
+```
+
 ## Validación W3C
 
 Todas las páginas han sido validadas sin errores:
