@@ -8135,15 +8135,18 @@ img {
 .hamburguesa-nav a {
   display: block;
   padding: 1rem;
-  color: var(--color-blanco);
   font-family: var(--fuente-base);
-  font-weight: 600;
+  color: white;
   font-size: 1rem;
+  font-weight: 900;
+  text-shadow: 1.41px 1.41px var(--color-negro), 2px 0 var(--color-negro),
+    1.41px -1.41px var(--color-negro), 0 -2px var(--color-negro),
+    -1.41px -1.41px var(--color-negro), -2px 0 var(--color-negro),
+    -1.41px 1.41px var(--color-negro), 0 2px var(--color-negro);
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .hamburguesa-nav a:hover {
-  background-color: var(--color-secundario);
-  color: var(--color-negro);
+  color: var(--color-secundario);
 }
 
