@@ -173,9 +173,9 @@ img {
 .hamburguesa-nav__activa{
   display: block;
   position: absolute;
-  top: 60px;
+  top: 100px;
   left: 0;
-  width: 100%;
+  width: 50%;
   background-color: var(--color-principal);
   z-index: 2;
   padding: 1rem;

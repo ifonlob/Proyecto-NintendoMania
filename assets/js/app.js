@@ -24,6 +24,7 @@ for(let i = 0; i < enlacesNavegacion.length; i++){
 }
 
 botonHamburguesa.after(menuNavegacion)
+
 botonHamburguesa.addEventListener("click",() => {menuNavegacion.classList.toggle('hamburguesa-nav__activa')})
 
 
