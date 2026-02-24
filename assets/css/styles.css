@@ -167,8 +167,20 @@ img {
 }
 
 .hamburguesa-nav{
-  
+  display: none;
 }
+
+.hamburguesa-nav__activa{
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-principal);
+  z-index: 2;
+  padding: 1rem;
+}
+
 
 .buscador__formulario {
   display: flex;

@@ -1,25 +1,30 @@
 "use strict";
 
-/* === BOTÓN HAMBURGUESA === */ 
+/* Creación de botón hamburguesa interactivo */
 
-const botonHamburguesa = document.querySelector("cabecera__buscador--hamburguesa")
-
-/* Creación barra de navegación móvil */
+const botonHamburguesa = document.querySelector(".cabecera__buscador--hamburguesa")
 
 const menuNavegacion = document.createElement('nav')
+menuNavegacion.classList.add('hamburguesa-nav');
+
 const navegacionLista = document.createElement('ul')
-const apartadosNavegacion = document.querySelectorAll('cabecera__menu--lista li')
-const enlacesNavegacion = document.querySelectorAll('cabecera__menu--lista li a')
-for(let i = 0; i < apartadosNavegacion.length; i++){
+menuNavegacion.append(navegacionLista)
+
+const enlacesNavegacion = document.querySelectorAll('.cabecera__menu--lista li a')
+
+for(let i = 0; i < enlacesNavegacion.length; i++){
     const apartado = document.createElement('li')
     const enlace = document.createElement('a')
-    navegacionLista.append(apartado)
-    apartado.append(enlace)
+
     enlace.textContent = enlacesNavegacion[i].textContent
+    enlace.href = enlacesNavegacion[i].href
+
+    apartado.append(enlace)
+    navegacionLista.append(apartado)
 }
 
 botonHamburguesa.after(menuNavegacion)
-botonHamburguesa.addEventListener("click",(menuNavegacionHamburguesa) => {menuNavegacion.className('hamburguesa-nav')})
+botonHamburguesa.addEventListener("click",() => {menuNavegacion.classList.toggle('hamburguesa-nav__activa')})
 
 
 /* 
