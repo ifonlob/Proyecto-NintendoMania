@@ -80,6 +80,7 @@ img {
    ========================= */
 
 .cabecera {
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
@@ -129,7 +130,6 @@ img {
   gap: 4rem;
   font-size: 1.2rem;
   font-weight: bolder;
-  margin-bottom: 1rem;
 }
 
 .cabecera__menu--titulo {
@@ -164,23 +164,8 @@ img {
   display: none;
   position: relative;
   z-index: 1;
+  cursor: pointer;
 }
-
-.hamburguesa-nav{
-  display: none;
-}
-
-.hamburguesa-nav__activa{
-  display: block;
-  position: absolute;
-  top: 100px;
-  left: 0;
-  width: 50%;
-  background-color: var(--color-principal);
-  z-index: 2;
-  padding: 1rem;
-}
-
 
 .buscador__formulario {
   display: flex;
@@ -8115,3 +8100,50 @@ img {
     font-size: 0.9rem;
   }
 }
+
+/* BOTÓN HAMBURGUESA INTERACTIVO */
+
+.hamburguesa-nav {
+  position: absolute;
+  opacity: 0;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: var(--color-principal);
+  z-index: 2;
+  visibility: hidden;
+  transform: translateY(-15px);
+  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+}
+
+.hamburguesa-nav__activa {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.hamburguesa-nav ul {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+
+.hamburguesa-nav li {
+  text-align: center;
+}
+
+.hamburguesa-nav a {
+  display: block;
+  padding: 1rem;
+  color: var(--color-blanco);
+  font-family: var(--fuente-base);
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.hamburguesa-nav a:hover {
+  background-color: var(--color-secundario);
+  color: var(--color-negro);
+}
+
