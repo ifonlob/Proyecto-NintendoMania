@@ -11,7 +11,7 @@ menuNavegacion.classList.add('hamburguesa-nav');
 const navegacionLista = document.createElement('ul')
 menuNavegacion.append(navegacionLista)
 
-const enlacesNavegacion = document.querySelectorAll('.cabecera__menu--lista li a')
+const enlacesNavegacion = document.querySelectorAll('header ul li a')
 
 for(let i = 0; i < enlacesNavegacion.length; i++){
     const apartado = document.createElement('li')
@@ -23,18 +23,28 @@ for(let i = 0; i < enlacesNavegacion.length; i++){
     apartado.append(enlace)
     navegacionLista.append(apartado)
 }
+    if(!document.querySelector('.introduccion')){
+        const apartadoInicio = document.createElement('li')
+        const enlaceInicio = document.createElement('a')
+
+        enlaceInicio.textContent = 'Inicio'
+        enlaceInicio.href = document.querySelector('.cabecera__logo').href
+
+        apartadoInicio.append(enlaceInicio)
+        navegacionLista.prepend(apartadoInicio)
+    }
 
 botonHamburguesa.after(menuNavegacion)
 
 botonHamburguesa.addEventListener("click",() => {
     menuNavegacion.classList.toggle('hamburguesa-nav__activa')
-    const titulo = cabecera.nextElementSibling;
-    titulo.style.transition = "transform 0.4s ease"
+    const siguienteSeccion = cabecera.nextElementSibling;
+    siguienteSeccion.style.transition = "transform 0.4s ease"
     if (menuNavegacion.classList.contains('hamburguesa-nav__activa')) {
         const alturaMenu = menuNavegacion.scrollHeight;
-        titulo.style.transform = `translateY(${alturaMenu}px)`;
+        siguienteSeccion.style.transform = `translateY(${alturaMenu}px)`;
     }
     else{
-        titulo.style.transform = ""
+        siguienteSeccion.style.transform = ""
     }
 })
