@@ -8101,8 +8101,8 @@ img {
   }
 }
 
+@media (max-width : 1100px){
 /* BOTÓN HAMBURGUESA INTERACTIVO */
-
 .hamburguesa-nav {
   position: absolute;
   opacity: 0;
@@ -8119,7 +8119,7 @@ img {
 .hamburguesa-nav__activa {
   opacity: 1;
   visibility: visible;
-  transform: translateY(0);
+  transform: translateY(0px);
 }
 
 .hamburguesa-nav ul {
@@ -8148,5 +8148,15 @@ img {
 
 .hamburguesa-nav a:hover {
   color: var(--color-secundario);
+  }
 }
+
+@media (min-width: 1100px){
+  .hamburguesa-nav{
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+}
+
 
