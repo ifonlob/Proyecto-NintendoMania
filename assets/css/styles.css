@@ -3421,6 +3421,7 @@ img {
    ========================= */
 
 .cabecera-splatoon {
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
@@ -5084,6 +5085,7 @@ img {
    ========================= */
 
 .cabecera-mario {
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
@@ -6496,6 +6498,7 @@ img {
 }
 
 .cabecera-kirby {
+  position: relative;
   top: 0;
   left: 0;
   display: flex;
