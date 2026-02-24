@@ -3,6 +3,7 @@
 /* Creación de botón hamburguesa interactivo */
 
 const botonHamburguesa = document.querySelector(".cabecera__buscador--hamburguesa")
+const cabecera = document.querySelector('header');
 
 const menuNavegacion = document.createElement('nav')
 menuNavegacion.classList.add('hamburguesa-nav');
@@ -25,38 +26,15 @@ for(let i = 0; i < enlacesNavegacion.length; i++){
 
 botonHamburguesa.after(menuNavegacion)
 
-botonHamburguesa.addEventListener("click",() => {menuNavegacion.classList.toggle('hamburguesa-nav__activa')})
-
-
-/* 
-    <ul class="cabecera__menu--lista">
-          <li>
-            <a class="cabecera__menu--enlace" href="./sagas/splatoon.html"
-              >Splatoon</a
-            >
-          </li>
-          <li>
-            <a class="cabecera__menu--enlace" href="./sagas/mario.html"
-              >Mario</a
-            >
-          </li>
-          <li>
-            <a class="cabecera__menu--enlace" href="./sagas/kirby.html"
-              >Kirby</a
-            >
-          </li>
-          <li>
-            <a class="cabecera__menu--enlace" href="./comparativas.html"
-              >Comparativas</a
-            >
-          </li>
-          <li>
-            <a class="cabecera__menu--enlace" href="./contacto.html"
-              >Contacto</a
-            >
-          </li>
-          <li>
-            <a class="cabecera__menu--enlace" href="./about.html">About</a>
-          </li>
-        </ul>
-*/
+botonHamburguesa.addEventListener("click",() => {
+    menuNavegacion.classList.toggle('hamburguesa-nav__activa')
+    const titulo = cabecera.nextElementSibling;
+    titulo.style.transition = "transform 0.4s ease"
+    if (menuNavegacion.classList.contains('hamburguesa-nav__activa')) {
+        const alturaMenu = menuNavegacion.scrollHeight;
+        titulo.style.transform = `translateY(${alturaMenu}px)`;
+    }
+    else{
+        titulo.style.transform = ""
+    }
+})
