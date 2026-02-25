@@ -39,10 +39,13 @@ botonHamburguesa.after(menuNavegacion)
 botonHamburguesa.addEventListener("click",() => {
     menuNavegacion.classList.toggle('hamburguesa-nav__activa')
     const siguienteSeccion = cabecera.nextElementSibling;
+    const piePagina = document.querySelector('footer');
     siguienteSeccion.style.transition = "transform 0.4s ease"
+    piePagina.style.transition = "transform 0.4s ease"
     if (menuNavegacion.classList.contains('hamburguesa-nav__activa')) {
         const alturaMenu = menuNavegacion.scrollHeight;
         siguienteSeccion.style.transform = `translateY(${alturaMenu}px)`;
+        piePagina.style.transform = `translateY(${alturaMenu}px)`;
     }
     else{
         siguienteSeccion.style.transform = ""
