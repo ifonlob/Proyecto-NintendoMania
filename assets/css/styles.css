@@ -8197,3 +8197,15 @@ img {
   cursor: pointer;
   transition: transform 0.3s ease;
 }
+
+.boton-oscuro{
+  background-color: #1f1f23;
+  border: 3px solid black;
+  border-radius: 1rem;
+}
+
+.boton-claro{
+  background-color: rgb(243, 243, 69);
+  border: 3px solid rgb(239, 222, 89);
+  border-radius: 1rem;
+}

@@ -72,16 +72,20 @@ function modoOscuro(cabecera,cuerpoPagina){
     if(temaGuardado === 'oscuro' || (!temaGuardado && prefiereOscuro)){
         cuerpoPagina.classList.add('tema-oscuro')
         boton.textContent = '☀️'
+        boton.classList.add('boton-claro')
     }
     else{
         cuerpoPagina.classList.add('tema-claro')
         boton.textContent = '🌙'
+        boton.classList.add('boton-oscuro')
     }
 
     boton.addEventListener('click', () =>{
         if(cuerpoPagina.classList.contains('tema-oscuro')){
             cuerpoPagina.classList.remove('tema-oscuro')
             cuerpoPagina.classList.add('tema-claro')
+            boton.classList.remove('boton-claro')
+            boton.classList.add('boton-oscuro')
             boton.textContent = '🌙'
             localStorage.setItem('tema-nintendo', 'claro');
         }
@@ -89,6 +93,8 @@ function modoOscuro(cabecera,cuerpoPagina){
             cuerpoPagina.classList.remove('tema-claro')
             cuerpoPagina.classList.add('tema-oscuro')
             boton.textContent = '☀️'
+            boton.classList.remove('boton-oscuro')
+            boton.classList.add('boton-claro')
             localStorage.setItem('tema-nintendo', 'oscuro');
         }
     })
