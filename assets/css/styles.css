@@ -108,7 +108,7 @@ img {
 }
 
 .cabecera__logo--imagen {
-  width: 55%;
+  width: 45%;
   border-radius: 8rem;
   margin: 0.5rem;
 }
@@ -8105,16 +8105,18 @@ img {
 }
 
 @media (max-width : 1100px){
-/* BOTÓN HAMBURGUESA INTERACTIVO */
+/* =======================================================
+   BOTÓN HAMBURGUESA
+   ======================================================= */
 .hamburguesa-nav {
   position: absolute;
+  visibility: hidden;
   opacity: 0;
   top: 100%;
   left: 0;
   width: 100%;
   background-color: var(--color-principal);
   z-index: 2;
-  visibility: hidden;
   transform: translateY(-15px);
   transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
 }
@@ -8164,3 +8166,34 @@ img {
 }
 
 
+/* =======================================================
+   MODO OSCURO
+   ======================================================= */
+
+.tema-oscuro {
+  --color-fondo: #050816de;
+  --color-fondo-splatoon: #21152a;
+  --color-fondo-mario: #103b3b;
+  --color-fondo-kirby: #1f1f23;
+  --color-texto: #f5f5f5;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.tema-claro {
+  --color-fondo: #c5e3f5;
+  --color-fondo-splatoon: #eed3f4;
+  --color-fondo-mario: #f0a4a4;
+  --color-fondo-kirby: #ddfbf1;
+  --color-texto: var(--color-negro);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.boton-tema{
+  width: 20%;
+  padding: 0.5rem;
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}

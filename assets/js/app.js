@@ -5,6 +5,7 @@
    ======================================================= */
 
 const cabecera = document.querySelector('header')
+const cuerpoPagina = document.querySelector('body')
 function interactividadHamburguesa(cabecera){
     const botonHamburguesa = document.querySelector(".cabecera__buscador--hamburguesa")
 
@@ -59,26 +60,36 @@ function interactividadHamburguesa(cabecera){
 /* =======================================================
    MODO OSCURO
    ======================================================= */
-function modoOscuro(cabecera){
+function modoOscuro(cabecera,cuerpoPagina){
     const logo = document.querySelector('.cabecera__logo')
     const boton = document.createElement('button')
+    boton.classList.add('boton-tema')
     logo.replaceWith(boton)
 
     const temaGuardado = localStorage.getItem('tema-nintendo')
     const prefiereOscuro = window.matchMedia('(prefers-color-scheme: dark)').matches
 
     if(temaGuardado === 'oscuro' || (!temaGuardado && prefiereOscuro)){
-        boton.classList.add('tema-oscuro')
-        botonTema.textContent = '☀️';
+        cuerpoPagina.classList.add('tema-oscuro')
+        boton.textContent = '☀️'
     }
     else{
-        boton.classList.add('tema-claro')
-        botonTema.textContent = '🌙';
+        cuerpoPagina.classList.add('tema-claro')
+        boton.textContent = '🌙'
     }
 
     boton.addEventListener('click', () =>{
-        if(document.body.classList.contains('tema-oscuro')){
-            body.classList.remove('tema-oscuro')
+        if(cuerpoPagina.classList.contains('tema-oscuro')){
+            cuerpoPagina.classList.remove('tema-oscuro')
+            cuerpoPagina.classList.add('tema-claro')
+            boton.textContent = '🌙'
+            localStorage.setItem('tema-nintendo', 'claro');
+        }
+        else{
+            cuerpoPagina.classList.remove('tema-claro')
+            cuerpoPagina.classList.add('tema-oscuro')
+            boton.textContent = '☀️'
+            localStorage.setItem('tema-nintendo', 'oscuro');
         }
     })
 }
@@ -86,3 +97,4 @@ function modoOscuro(cabecera){
 
 
 interactividadHamburguesa(cabecera)
+modoOscuro(cabecera,cuerpoPagina)
