@@ -57,15 +57,23 @@ function interactividadHamburguesa(cabecera){
     })
 }
 
+
 /* =======================================================
    MODO OSCURO
    ======================================================= */
 function modoOscuro(cabecera,cuerpoPagina){
     const logo = document.querySelector('.cabecera__logo')
+
+    const contenedor = document.createElement('div');
+    contenedor.classList.add('contenedor-tema');
+
     const boton = document.createElement('button')
     boton.classList.add('boton-tema')
+    
     logo.replaceWith(boton)
-
+    cabecera.prepend(contenedor)
+    contenedor.append(boton)
+    
     const temaGuardado = localStorage.getItem('tema-nintendo')
     const prefiereOscuro = window.matchMedia('(prefers-color-scheme: dark)').matches
 
@@ -98,6 +106,21 @@ function modoOscuro(cabecera,cuerpoPagina){
             localStorage.setItem('tema-nintendo', 'oscuro');
         }
     })
+
+    const buscador = document.querySelector('.cabecera__buscador');
+    const mediaQueryPantalla = window.matchMedia('(max-width: 650px)');
+    
+    const reubicarBotonMovil = (evento) => {
+        if(evento.matches){
+            buscador.before(contenedor);
+        }
+        else{
+            cabecera.prepend(contenedor)
+        }
+    }
+
+    mediaQueryPantalla.addEventListener('change', reubicarBotonMovil);
+    reubicarBotonMovil(mediaQueryPantalla)
 }
 
 
