@@ -76,7 +76,7 @@ img {
 }
 
 /* =========================
-   4. Cabecera genérica
+   4. Cabecera
    ========================= */
 
 .cabecera {
@@ -8190,10 +8190,16 @@ img {
   color: var(--color-texto);
 }
 
-.boton-tema{
+.contenedor-tema{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 20%;
+}
+
+.boton-tema{
   padding: 0.5rem;
-  font-size: 2.2rem;
+  font-size: 1.5rem;
   cursor: pointer;
   transition: transform 0.3s ease;
 }
@@ -8208,4 +8214,16 @@ img {
   background-color: rgb(243, 243, 69);
   border: 3px solid rgb(239, 222, 89);
   border-radius: 1rem;
+}
+
+@media screen and (max-width: 650px) {
+  .cabecera__menu{
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .cabecera__buscador{
+    width: 50%;
+  }
 }
