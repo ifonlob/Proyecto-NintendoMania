@@ -1,13 +1,15 @@
 "use strict";
 
 /* =======================================================
-   BOTÓN HAMBURGUESA
+   INTERACTIVIDAD BOTÓN HAMBURGUESA
    ======================================================= */
 
 const cabecera = document.querySelector('header')
 const cuerpoPagina = document.querySelector('body')
-function interactividadHamburguesa(cabecera){
+const interactividadHamburguesa = (cabecera) =>{
     const botonHamburguesa = document.querySelector(".cabecera__buscador--hamburguesa")
+
+    if(!botonHamburguesa) return
 
     const menuNavegacion = document.createElement('nav')
     menuNavegacion.classList.add('hamburguesa-nav')
@@ -59,10 +61,12 @@ function interactividadHamburguesa(cabecera){
 
 
 /* =======================================================
-   MODO OSCURO
+   BOTÓN DE CAMBIO DE TEMA
    ======================================================= */
-function modoOscuro(cabecera,cuerpoPagina){
+const modoOscuro = (cabecera,cuerpoPagina) => {
     const logo = document.querySelector('.cabecera__logo')
+
+    if(!logo) return
 
     const contenedor = document.createElement('div');
     contenedor.classList.add('contenedor-tema');
@@ -70,9 +74,8 @@ function modoOscuro(cabecera,cuerpoPagina){
     const boton = document.createElement('button')
     boton.classList.add('boton-tema')
     
-    logo.replaceWith(boton)
-    cabecera.prepend(contenedor)
     contenedor.append(boton)
+    logo.replaceWith(contenedor)
     
     const temaGuardado = localStorage.getItem('tema-nintendo')
     const prefiereOscuro = window.matchMedia('(prefers-color-scheme: dark)').matches
@@ -123,7 +126,19 @@ function modoOscuro(cabecera,cuerpoPagina){
     reubicarBotonMovil(mediaQueryPantalla)
 }
 
+/* =======================================================
+   VALIDACIÓN FORMULARIO CONTACTO
+   ======================================================= */
+    const validacionFormularioContacto = () => {
+        const formularioContacto = document.querySelector('.contacto__formulario')
 
+        if(!formularioContacto) return
+
+        formularioContacto.addEventListener('submit',(evento) =>{
+            evento.preventDefault()
+
+        })
+    }
 
 interactividadHamburguesa(cabecera)
 modoOscuro(cabecera,cuerpoPagina)
