@@ -172,9 +172,50 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
         })
     }
 
+/* =======================================================
+   GESTOR DE JUEGOS 
+   ======================================================= */
 
+    const inicializarGestorDeJuegos = () => {
+        const formulario = document.querySelector('.gestor-juegos__formulario');
+        const galeria = document.querySelector('.gestor-juegos__galeria');
+        const selectorJuegos = document.querySelector('#nombre_juego');
 
+        if (!formulario || !galeria) return;
 
+        formulario.addEventListener('submit', (evento) =>{
+            evento.preventDefault()
+
+            const datos = new FormData(formulario);
+            const saga = datos.get('saga_juego');
+            const juego = datos.get('nombre_juego');
+            const resena = datos.get('resena_juego');
+            const puntuacion = datos.get('puntuacion_juego');
+
+            const tarjeta = document.createElement('article');
+            tarjeta.classList.add('tarjeta-juego');
+
+            tarjeta.dataset.categoria = saga;
+
+            tarjeta.innerHTML = `
+                <h4>${juego}</h4>
+                <p>${saga}</p>
+                <p>${resena}</p>
+                <p>${puntuacion}</p>
+                <button type="button" class="tarjeta-juego__boton-borrar">Eliminar</button>
+            `
+
+            const botonDeBorrado = tarjeta.querySelector('.tarjeta-juego__boton-borrar')
+            botonDeBorrado.addEventListener('click',() =>{
+                tarjeta.remove()
+            })
+
+            galeria.append(tarjeta)
+            formulario.reset()
+            selectorJuegos.innerHTML = '<option value="" disabled selected>-- Selecciona un juego --</option>';
+            selectorJuegos.disabled = true;
+        })
+    }
 
 
 
@@ -184,3 +225,4 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
 interactividadHamburguesa(cabecera)
 modoOscuro(cabecera,cuerpoPagina)
 inicializarDesplegables()
+inicializarGestorDeJuegos()
