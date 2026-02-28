@@ -179,7 +179,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
     const inicializarGestorDeJuegos = () => {
         const formulario = document.querySelector('.gestor-juegos__formulario');
         const galeria = document.querySelector('.gestor-juegos__galeria');
-        const selectorJuegos = document.querySelector('#nombre_juego');
+        const selectorJuegos = document.querySelector('#nombre-juego');
 
         if (!formulario || !galeria) return;
 
@@ -187,10 +187,10 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
             evento.preventDefault()
 
             const datos = new FormData(formulario);
-            const saga = datos.get('saga_juego');
-            const juego = datos.get('nombre_juego');
-            const resena = datos.get('resena_juego');
-            const puntuacion = datos.get('puntuacion_juego');
+            const saga = datos.get('saga-juego');
+            const juego = datos.get('nombre-juego');
+            const resena = datos.get('resena-juego');
+            const puntuacion = datos.get('puntuacion-juego');
 
             const tarjeta = document.createElement('article');
             tarjeta.classList.add('tarjeta-juego');
