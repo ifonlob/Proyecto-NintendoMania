@@ -158,12 +158,17 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
         selectorSagas.addEventListener('change',(evento) => {
             const sagaElegida = evento.target.value
             const juegosDisponibles = baseDeDatosJuegos[sagaElegida];
-            for(i = 0; i < juegosDisponibles.length; i++){
+            
+            selectorJuegos.innerHTML = '<option value="" disabled selected>-- Selecciona un juego --</option>';
+            
+            for(let i = 0; i < juegosDisponibles.length; i++){
                 const opcion = document.createElement('option')
-                opcion.value = juegosDisponibles[i].textContent
-                opcion.textContent = juegosDisponibles[i].textContent
-                selectorJuegos.prepend(opcion)
+                opcion.value = juegosDisponibles[i]
+                opcion.textContent = juegosDisponibles[i]
+                selectorJuegos.append(opcion)
+                
             }
+            selectorJuegos.disabled = false;
         })
     }
 
