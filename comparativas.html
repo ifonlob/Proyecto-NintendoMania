@@ -557,7 +557,7 @@
             </legend>
             <label class="gestor-juegos__etiqueta">
               Saga a la que pertenece: <sup>*</sup>
-              <select class="gestor-juegos__select" name="saga_juego" required>
+              <select class="gestor-juegos__select" id="saga-juego" name="saga-juego" required>
                 <option value="" disabled selected>
                   -- Selecciona la saga --
                 </option>
@@ -566,21 +566,24 @@
                 <option value="kirby">Kirby</option>
               </select>
             </label>
-            <label class="gestor-juegos__etiqueta">
-              Nombre del Juego: <sup>*</sup>
-              <input
-                class="gestor-juegos__input"
-                type="text"
-                name="nombre_juego"
-                placeholder="Ej: Super Mario Galaxy"
+            <label class="gestor-juegos__etiqueta">Juego:
+              <select
+                class="gestor-juegos__select"
+                name="nombre-juego"
+                id="nombre-juego"
                 required
-              />
+                disabled
+              >
+                <option value="" disabled selected>
+                  -- Selecciona un juego --
+                </option>
+              </select>
             </label>
             <label class="gestor-juegos__etiqueta">
               ¿Por qué es el mejor? <sup>*</sup>
               <textarea
                 class="gestor-juegos__textarea"
-                name="resena_juego"
+                name="resena-juego"
                 rows="4"
                 placeholder="Escribe tu reseña aquí (mínimo 15 caracteres)..."
                 required
@@ -599,7 +602,7 @@
           <menu class="filtros__menu">
             <li>
               <button
-                type="submit"
+                type="button"
                 class="boton-filtro activo"
                 data-filtro="todos"
               >
@@ -607,25 +610,23 @@
               </button>
             </li>
             <li>
-              <button type="submit" class="boton-filtro" data-filtro="mario">
+              <button type="button" class="boton-filtro" data-filtro="mario">
                 Solo Mario
               </button>
             </li>
             <li>
-              <button type="submit" class="boton-filtro" data-filtro="splatoon">
+              <button type="button" class="boton-filtro" data-filtro="splatoon">
                 Solo Splatoon
               </button>
             </li>
             <li>
-              <button type="submit" class="boton-filtro" data-filtro="kirby">
+              <button type="button" class="boton-filtro" data-filtro="kirby">
                 Solo Kirby
               </button>
             </li>
           </menu>
         </nav>
-        <section
-          class="gestor-juegos__galeria"
-        ></section>
+        <section class="gestor-juegos__galeria"></section>
       </aside>
     </main>
     <!-- =====================================================================
