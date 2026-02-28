@@ -557,7 +557,12 @@
             </legend>
             <label class="gestor-juegos__etiqueta">
               Saga a la que pertenece: <sup>*</sup>
-              <select class="gestor-juegos__select" id="saga-juego" name="saga-juego" required>
+              <select
+                class="gestor-juegos__select"
+                id="saga-juego"
+                name="saga-juego"
+                required
+              >
                 <option value="" disabled selected>
                   -- Selecciona la saga --
                 </option>
@@ -566,7 +571,8 @@
                 <option value="kirby">Kirby</option>
               </select>
             </label>
-            <label class="gestor-juegos__etiqueta">Juego:
+            <label class="gestor-juegos__etiqueta"
+              >Juego:
               <select
                 class="gestor-juegos__select"
                 name="nombre-juego"
@@ -588,6 +594,10 @@
                 placeholder="Escribe tu reseña aquí (mínimo 15 caracteres)..."
                 required
               ></textarea>
+            </label>
+            <label class="gestor-juegos__puntuacion">
+              Puntuación (0-100):
+              <input type="text" name="puntuacion-juego" />
             </label>
             <button class="gestor-juegos__boton" type="submit">
               Publicar Reseña en el Muro
