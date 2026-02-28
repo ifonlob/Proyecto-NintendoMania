@@ -127,18 +127,55 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
 }
 
 /* =======================================================
-   VALIDACIÓN FORMULARIO CONTACTO
+   DESPLEGABLES JUEGOS SEGÚN SAGA 
    ======================================================= */
-    const validacionFormularioContacto = () => {
-        const formularioContacto = document.querySelector('.contacto__formulario')
+    const inicializarDesplegables = () => {
+        const selectorSagas = document.querySelector('#saga-juego')
+        const selectorJuegos = document.querySelector('#nombre-juego')
 
-        if(!formularioContacto) return
+        if(!selectorSagas || !selectorJuegos) return
 
-        formularioContacto.addEventListener('submit',(evento) =>{
-            evento.preventDefault()
+        const baseDeDatosJuegos = {
+            mario: [
+                "Super Mario Bros.", 
+                "Super Mario 64", 
+                "Super Mario Galaxy", 
+                "Super Mario Odyssey"
+            ],
+            splatoon: [
+                "Splatoon", 
+                "Splatoon 2", 
+                "Splatoon 3"
+            ],
+            kirby: [
+                "Kirby's Dream Land", 
+                "Kirby's Adventure", 
+                "Kirby Super Star", 
+                "Kirby y la Tierra Olvidada"
+            ]
+        }
 
+        selectorSagas.addEventListener('change',(evento) => {
+            const sagaElegida = evento.target.value
+            const juegosDisponibles = baseDeDatosJuegos[sagaElegida];
+            for(i = 0; i < juegosDisponibles.length; i++){
+                const opcion = document.createElement('option')
+                opcion.value = juegosDisponibles[i].textContent
+                opcion.textContent = juegosDisponibles[i].textContent
+                selectorJuegos.prepend(opcion)
+            }
         })
     }
 
+
+
+
+
+
+
+
+
+
 interactividadHamburguesa(cabecera)
 modoOscuro(cabecera,cuerpoPagina)
+inicializarDesplegables()
