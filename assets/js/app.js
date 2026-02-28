@@ -161,13 +161,13 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
             
             selectorJuegos.innerHTML = '<option value="" disabled selected>-- Selecciona un juego --</option>';
             
-            for(let i = 0; i < juegosDisponibles.length; i++){
+            juegosDisponibles.forEach( juego =>{
                 const opcion = document.createElement('option')
-                opcion.value = juegosDisponibles[i]
-                opcion.textContent = juegosDisponibles[i]
+                opcion.value = juego
+                opcion.textContent = juego
                 selectorJuegos.append(opcion)
                 
-            }
+            })
             selectorJuegos.disabled = false;
         })
     }
@@ -207,7 +207,10 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
 
             const botonDeBorrado = tarjeta.querySelector('.tarjeta-juego__boton-borrar')
             botonDeBorrado.addEventListener('click',() =>{
-                tarjeta.remove()
+                const confirmacion = confirm(`¿Estás seguro de que quieres eliminar la reseña de ${juego}?`);
+                if(confirmacion){
+                    tarjeta.remove()
+                }
             })
 
             galeria.append(tarjeta)
