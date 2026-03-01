@@ -237,12 +237,38 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
         })
     }
 
+/* =======================================================
+   SISTEMA DE FILTRADO 
+   ======================================================= */
 
+    const inicializarFiltros = () =>{
+        const botonesFiltro = document.querySelectorAll('.boton-filtro')
+        const galeria = document.querySelector('.gestor-juegos__galeria')
 
+        if (!galeria || botonesFiltro.length === 0) return;
 
+        botonesFiltro.forEach(boton =>{
+            boton.addEventListener('click', (evento) => {
+                botonesFiltro.forEach(botonSec => botonSec.classList.remove('activo'))
+                evento.target.classList.add('activo')
+                const filtroElegido = evento.target.dataset.filtro
+                const tarjetas = galeria.querySelectorAll('.tarjeta-juego')
+                tarjetas.forEach(tarjeta =>{
+                    const categoriaTarjeta = tarjeta.dataset.categoria;
+                    if (filtroElegido === 'todos' || filtroElegido === categoriaTarjeta) {
+                        tarjeta.classList.remove('oculto')
+                    } 
+                    else {
+                        tarjeta.classList.add('oculto')
+                    }
+                })
+            })
+        })
+    }
 
 
 interactividadHamburguesa(cabecera)
 modoOscuro(cabecera,cuerpoPagina)
 inicializarDesplegables()
 inicializarGestorDeJuegos()
+inicializarFiltros()
