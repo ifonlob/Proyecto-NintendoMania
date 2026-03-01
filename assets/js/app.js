@@ -177,6 +177,22 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
    ======================================================= */
 
     const inicializarGestorDeJuegos = () => {
+    const imagenesJuegos = {
+        "Super Mario Bros.": "./assets/imgs/caratula_mariobros_nes.jpg",
+        "Super Mario 64": "./assets/imgs/caratula_mario64.webp",
+        "Super Mario Galaxy": "./assets/imgs/SuperMarioGalaxy.jpg",
+        "Super Mario Odyssey": "./assets/imgs/mario_odyssey.jpg",
+        
+        "Splatoon": "./assets/imgs/splatoon1_portada.png",
+        "Splatoon 2": "./assets/imgs/splatoon2_portada.jpg",
+        "Splatoon 3": "./assets/imgs/splatoon3_portada.jpg",
+        
+        "Kirby's Dream Land": "./assets/imgs/return_dreamland.jpg",
+        "Kirby's Adventure": "./assets/imgs/kirby_adventura_captura.jpg",
+        "Kirby Super Star": "./assets/imgs/kirby_super_star.jpg",
+        "Kirby y la Tierra Olvidada": "./assets/imgs/tierra_olvidada.jpg"
+    };
+
         const formulario = document.querySelector('.gestor-juegos__formulario');
         const galeria = document.querySelector('.gestor-juegos__galeria');
         const selectorJuegos = document.querySelector('#nombre-juego');
@@ -192,6 +208,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
             const resena = datos.get('resena-juego');
             const puntuacion = datos.get('puntuacion-juego');
 
+            const rutaImagen = imagenesJuegos[juego];
             const tarjeta = document.createElement('article');
             tarjeta.classList.add('tarjeta-juego');
 
@@ -199,9 +216,9 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
 
             tarjeta.innerHTML = `
                 <h4>${juego}</h4>
-                <p>${saga}</p>
-                <p>${resena}</p>
-                <p>${puntuacion}</p>
+                <img src="${rutaImagen}" alt="Imagen de ${juego}" class="tarjeta-juego__imagen">
+                <p class="tarjeta__descripcion">${resena}</p>
+                <p class="tarjeta__descripcion">Puntuación:<br>${puntuacion}</p>
                 <button type="button" class="tarjeta-juego__boton-borrar">Eliminar</button>
             `
 
