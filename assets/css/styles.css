@@ -2694,7 +2694,6 @@ img {
   flex-direction: column;
   align-items: center;
   gap: 2.5rem;
-  margin-bottom: 2rem;
   width: 100%;
   max-width: 100%;
 }
@@ -7986,5 +7985,289 @@ img {
 @media screen and (max-width: 450px) {
   .cabecera__buscador{
     width: 50%;
+  }
+}
+
+/* =======================================================
+   ESTILOS DEL GESTOR DE JUEGOS
+   ======================================================= */
+.gestor-juegos {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap:1rem;
+  padding: 2rem;
+  margin-top:2rem;
+  width: 80%;
+  background-color: var(--color-blanco);
+  border-radius: 1rem;
+  box-shadow: 0 4px 6px black;
+}
+
+.gestor-juegos__titulo{
+  font-size: 1.5rem;
+  font-family: var(--fuente-secundaria);
+  text-align: center;
+}
+
+.gestor-juegos__descripcion{
+  text-align: center;
+}
+
+.gestor-juegos__campo{
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
+  border: 2px solid black;
+  border-radius: 1rem;
+  padding:1rem;
+  min-width: 0;
+
+}
+
+.gestor-juegos__leyenda{
+  font-family: var(--fuente-base);
+  font-weight: 600;
+  text-align: center;
+}
+
+.gestor-juegos__etiqueta{
+  display: flex;
+  flex-direction: column;
+  gap:0.5rem;
+  padding:0.75rem;
+  font-weight: 500;
+}
+
+.gestor-juegos__input,.gestor-juegos__textarea,.gestor-juegos__select{
+  width: 100%;
+  max-width: 100%;
+  padding: 1rem;
+  font-family: var(--fuente-base);
+  font-size: 1rem;
+  color: var(--color-negro);
+  background-color: #f4f4f4;
+  border: 2px solid #ccc;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.gestor-juegos__input:focus,
+.gestor-juegos__select:focus,
+.gestor-juegos__textarea:focus,
+.gestor-juegos__puntuacion input:focus {
+  background-color: var(--color-blanco);
+  border-color: var(--color-secundario);
+}
+
+.gestor-juegos__boton{
+  padding: 0.5rem;
+  border: 2px solid var(--color-negro);
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.gestor-juegos__boton:hover{
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+}
+
+@media (max-width: 1200px) {
+  .gestor-juegos {
+    width: 85%;
+    padding: 1.8rem;
+  }
+
+  .gestor-juegos__titulo {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .gestor-juegos {
+    width: 90%;
+    padding: 1.5rem;
+  }
+
+  .gestor-juegos__titulo {
+    font-size: 1.3rem;
+  }
+
+  .gestor-juegos__descripcion {
+    font-size: 0.95rem;
+  }
+
+  .gestor-juegos__campo {
+    padding: 0.8rem;
+  }
+
+  .gestor-juegos__etiqueta {
+    padding: 0.5rem;
+  }
+
+  .gestor-juegos__input, 
+  .gestor-juegos__textarea, 
+  .gestor-juegos__select {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .gestor-juegos {
+    width: 95%;
+    padding: 1rem;
+    border-radius: 1.5rem;
+  }
+
+  .gestor-juegos__titulo {
+    font-size: 1.1rem;
+  }
+
+  .gestor-juegos__descripcion {
+    font-size: 0.9rem;
+    padding: 0 0.5rem;
+  }
+
+  .gestor-juegos__campo {
+    padding: 0.5rem;
+  }
+
+  .gestor-juegos__leyenda {
+    font-size: 0.95rem;
+  }
+
+  .gestor-juegos__etiqueta {
+    padding: 0.3rem;
+    font-size: 0.9rem;
+  }
+
+  .gestor-juegos__input, 
+  .gestor-juegos__textarea, 
+  .gestor-juegos__select {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    border-radius: 0.8rem;
+  }
+
+  .gestor-juegos__boton {
+    padding: 0.7rem;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.gestor-juegos__filtros {
+  text-align: center;
+}
+
+.filtros__menu {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.boton-filtro {
+  padding: 0.5rem;
+  border: 2px solid var(--color-negro);
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 20px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.boton-filtro.activo, .boton-filtro:hover {
+  background-color: var(--color-negro);
+  color: var(--color-blanco);
+}
+
+.gestor-juegos__galeria{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap:1rem;
+  border: 2px solid black;
+  padding:1rem;
+}
+
+.tarjeta-juego {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  background-color: #fdfdfd;
+  border: 2px solid var(--color-negro);
+  border-radius: 1rem;
+  padding: 0.75rem;
+  position: relative;
+  gap: 0.5rem;
+}
+
+
+.tarjeta-juego__boton-borrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--color-principal__mario);
+  color: white;
+  border-radius: 1rem;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.tarjeta-juego__imagen {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 1rem;
+  border: 2px solid var(--color-negro);
+}
+@media (max-width: 1200px) {
+  .tarjeta-juego {
+    width: 45%; 
+    padding: 1rem;
+  }
+
+  .tarjeta-juego__imagen {
+    height: 180px;
+  }
+}
+
+@media (max-width: 800px) {
+  .tarjeta-juego {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .tarjeta-juego__imagen {
+    height: 220px;
+  }
+
+  .tarjeta-juego__boton-borrar {
+    padding: 0.5ren;
+  }
+}
+
+@media (max-width: 500px) {
+  .tarjeta-juego {
+    width: 100%;
+    padding: 0.8rem;
+    gap: 0.4rem;
+  }
+
+  .tarjeta-juego__imagen {
+    height: 180px;
+  }
+
+  .tarjeta-juego__boton-borrar {
+    position: static;
+    width: 100%;
+    font-size: 0.9rem; 
+    padding: 0.6rem;
   }
 }
