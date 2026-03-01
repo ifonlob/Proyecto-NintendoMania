@@ -8207,6 +8207,10 @@ img {
   gap: 0.5rem;
 }
 
+.tarjeta__descripcion{
+  text-align: center;
+  font-weight: 400;
+}
 
 .tarjeta-juego__boton-borrar {
   position: absolute;
