@@ -8198,6 +8198,10 @@ img {
   gap: 0.5rem;
 }
 
+.tarjeta-juego.oculto{
+  display: none;
+}
+
 .tarjeta__descripcion{
   text-align: center;
   font-weight: 400;
