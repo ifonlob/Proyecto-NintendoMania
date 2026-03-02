@@ -225,18 +225,24 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
             "Kirby Super Star": "./assets/imgs/kirby_super_star.jpg",
             "Kirby y la Tierra Olvidada": "./assets/imgs/tierra_olvidada.jpg"
         };
-        const inicializarTarjetas = (imagenesJuegos) =>{
+
+        const coloresSagas = {
+            mario : "var(--color-principal__mario)",
+            splatoon : "var(--color-principal__splatoon)",
+            kirby : "var(--color-principal__kirby)"
+        }
+        const inicializarTarjetas = (imagenesJuegos,coloresSagas) =>{
                 const galeria = document.querySelector('.favoritos')
                 const favoritosGuardados = JSON.parse(localStorage.getItem('coleccionFavoritos')) || []
                 favoritosGuardados.forEach(favorito =>{
                     const rutaImagen = imagenesJuegos[favorito.juego]
                     const tarjeta = document.createElement('article')
                     tarjeta.classList.add('tarjeta-juego')
-
+                    tarjeta.style.backgroundColor = coloresSagas[favorito.saga]
                     tarjeta.dataset.categoria = favorito.saga
 
                     tarjeta.innerHTML = `
-                    <h4>${favorito.juego}</h4>
+                    <h4 class="tarjeta__titulo">${favorito.juego}</h4>
                     <img src="${rutaImagen}" alt="Imagen de ${favorito.juego}" class="tarjeta-juego__imagen">
                     <p class="tarjeta__descripcion">${favorito.resena}</p>
                     <p class="tarjeta__descripcion">Puntuación:<br>${favorito.puntuacion}/100</p>
@@ -292,7 +298,7 @@ interactividadHamburguesa(cabecera)
 modoOscuro(cabecera,cuerpoPagina)
 inicializarDesplegables()
 inicializarFormularioFavoritos()
-inicializarTarjetas(imagenesJuegos)
+inicializarTarjetas(imagenesJuegos,coloresSagas)
 inicializarFiltros()
 
 
