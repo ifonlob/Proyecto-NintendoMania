@@ -194,7 +194,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
     };
 
         const formulario = document.querySelector('.gestor-juegos__formulario');
-        const galeria = document.querySelector('.gestor-juegos__galeria');
+        const galeria = document.querySelector('.favoritos');
         const selectorJuegos = document.querySelector('#nombre-juego');
 
         if (!formulario || !galeria) return;
@@ -218,7 +218,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
                 <h4>${juego}</h4>
                 <img src="${rutaImagen}" alt="Imagen de ${juego}" class="tarjeta-juego__imagen">
                 <p class="tarjeta__descripcion">${resena}</p>
-                <p class="tarjeta__descripcion">Puntuación:<br>${puntuacion}</p>
+                <p class="tarjeta__descripcion">Puntuación:<br>${puntuacion}/100</p>
                 <button type="button" class="tarjeta-juego__boton-borrar">Eliminar</button>
             `
 
@@ -243,7 +243,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
 
     const inicializarFiltros = () =>{
         const botonesFiltro = document.querySelectorAll('.boton-filtro')
-        const galeria = document.querySelector('.gestor-juegos__galeria')
+        const galeria = document.querySelector('.favoritos')
 
         if (!galeria || botonesFiltro.length === 0) return;
 
