@@ -233,6 +233,9 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
         }
         const inicializarTarjetas = (imagenesJuegos,coloresSagas) =>{
                 const galeria = document.querySelector('.favoritos')
+                
+                if (!galeria) return;
+
                 const favoritosGuardados = JSON.parse(localStorage.getItem('coleccionFavoritos')) || []
                 favoritosGuardados.forEach(favorito =>{
                     const rutaImagen = imagenesJuegos[favorito.juego]
@@ -293,6 +296,19 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
         })
     }
 
+    /* =======================================================
+        ANCHOR INICIO 
+   ======================================================= */
+
+const inicializarAnchorsInicio = () =>{
+    const logo = document.querySelector('.cabecera__menu--imagen')
+
+    if(logo){
+        logo.addEventListener('click',() =>{
+            window.location.href = './index.html'
+        })
+    }
+   }
 
 interactividadHamburguesa(cabecera)
 modoOscuro(cabecera,cuerpoPagina)
@@ -300,32 +316,4 @@ inicializarDesplegables()
 inicializarFormularioFavoritos()
 inicializarTarjetas(imagenesJuegos,coloresSagas)
 inicializarFiltros()
-
-
-
-
-/*             const rutaImagen = imagenesJuegos[juego];
-            const tarjeta = document.createElement('article');
-            tarjeta.classList.add('tarjeta-juego');
-                tarjeta.dataset.categoria = saga;
-
-                tarjeta.innerHTML = `
-                    <h4>${juego}</h4>
-                    <img src="${rutaImagen}" alt="Imagen de ${juego}" class="tarjeta-juego__imagen">
-                    <p class="tarjeta__descripcion">${resena}</p>
-                    <p class="tarjeta__descripcion">Puntuación:<br>${puntuacion}/100</p>
-                    <button type="button" class="tarjeta-juego__boton-borrar">Eliminar</button>
-                `
-
-                const botonDeBorrado = tarjeta.querySelector('.tarjeta-juego__boton-borrar')
-                botonDeBorrado.addEventListener('click',() =>{
-                    const confirmacion = confirm(`¿Estás seguro de que quieres eliminar la reseña de ${juego}?`);
-                    if(confirmacion){
-                        tarjeta.remove()
-                    }
-                })
-
-                galeria.append(tarjeta)
-                formulario.reset()
-                selectorJuegos.innerHTML = '<option value="" disabled selected>-- Selecciona un juego --</option>';
-                selectorJuegos.disabled = true; */
+inicializarAnchorsInicio()
