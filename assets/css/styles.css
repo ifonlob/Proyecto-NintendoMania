@@ -3226,6 +3226,7 @@ img {
 
 .cabecera-splatoon__menu--imagen {
   width: 12%;
+  cursor: pointer;
 }
 
 .cabecera-splatoon__menu--enlace {
@@ -4894,6 +4895,7 @@ img {
 }
 .cabecera-mario__menu--imagen {
   width: 12%;
+  cursor:pointer;
 }
 
 .cabecera-mario__menu--enlace {
@@ -6302,6 +6304,7 @@ img {
 
 .cabecera-kirby__menu--imagen {
   width: 10%;
+  cursor: pointer;
 }
 
 .cabecera-kirby__menu--enlace {
