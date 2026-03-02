@@ -142,6 +142,7 @@ img {
 
 .cabecera__menu--imagen {
   width: 10%;
+  cursor: pointer;
 }
 
 .cabecera__menu--enlace {
