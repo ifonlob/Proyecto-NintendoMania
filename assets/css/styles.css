@@ -2696,6 +2696,7 @@ img {
   gap: 2.5rem;
   width: 100%;
   max-width: 100%;
+  margin-top: 2rem;
 }
 
 .hitos__titulo,
@@ -8159,13 +8160,20 @@ img {
   }
 }
 
+
+#main-favoritos{
+  display: flex;
+  min-height: 70vh;
+  padding:1rem;
+}
+
 .tarjeta-juego {
   display: flex;
   flex-direction: column;
   width: 30%;
   border: 2px solid var(--color-negro);
   border-radius: 1rem;
-  padding: 0.75rem;
+  padding: 1.25rem;
   position: relative;
   gap: 0.5rem;
 }
@@ -8186,6 +8194,7 @@ img {
   background-color: var(--color-principal__mario);
   color: var(--color-blanco);
   border-radius: 1rem;
+  border: 2px solid black;
   padding: 0.5rem;
   cursor: pointer;
   font-weight: 800;
@@ -8243,11 +8252,6 @@ img {
   }
 }
 
-#main-favoritos{
-  display: flex;
-  min-height: 70vh;
-  padding:1rem;
-}
 
 .favoritos-filtros{
   width: 20%;
@@ -8276,7 +8280,6 @@ img {
   flex-wrap: wrap;
   gap: 1rem;
   padding: 0.5rem;
-  background-color: ;
 }
 
 .boton-filtro {
@@ -8305,9 +8308,11 @@ img {
 
 .favoritos__titulo{
   font-family: var(--fuente-secundaria);
-  font-size: 2.5rem;
+  font-size: 2rem;
   text-align: center;
-  width: 100%;
+  width: 80%;
+  padding: 1rem;
+  overflow-wrap: break-word;
 }
 
 .favoritos__descripcion{
@@ -8317,4 +8322,71 @@ img {
   text-align: center;
   margin: 0 auto;
   width: 100%;
+}
+
+
+@media (max-width: 1200px) {
+  .favoritos-filtros {
+    width: 25%;
+  }
+  
+  .favoritos {
+    width: 75%;
+  }
+  .favoritos__titulo{
+    font-size: 1rem;
+  }
+}
+
+
+@media (max-width: 800px) {
+  #main-favoritos {
+    flex-direction: column;
+    padding: 0.5rem;
+  }
+
+  .favoritos-filtros {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .gestor-juegos__filtros {
+    padding: 1rem 0.5rem;
+  }
+
+  .filtros__menu {
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+
+  .favoritos {
+    width: 100%;
+  }
+  .favoritos__titulo{
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .filtros__titulo {
+    font-size: 1.1rem;
+  }
+
+  .filtros__menu {
+
+    gap: 0.5rem;
+  }
+
+  .filtros__menu li {
+    width: 47%; 
+  }
+
+  .boton-filtro {
+    width: 100%;
+    font-size: 0.85rem;
+  }
+    .favoritos__titulo{
+    font-size: 0.9rem;
+  }
 }
