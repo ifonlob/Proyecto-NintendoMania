@@ -8275,3 +8275,25 @@ img {
     padding: 0.6rem;
   }
 }
+
+.favoritos{
+
+}
+
+.favoritos__titulo{
+  font-family: var(--fuente-secundaria);
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 1.2rem;
+  width: 100%;
+}
+
+.favoritos__descripcion{
+  font-family: var(--fuente-base);
+  font-size: 1.3rem;
+  font-weight: 400;
+  text-align: center;
+  padding: 0.5rem;
+  margin: 0 auto;
+  width: 60%;
+}
