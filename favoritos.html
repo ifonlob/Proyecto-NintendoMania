@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <title>NintendoManía | Juegos Favoritos</title>
+    <meta
+      name="description"
+      content="NintendoManía: Cronología, juegos y curiosidades de tus sagas de Nintendo favoritas."
+    />
+    <meta
+      name="keywords"
+      content="Nintendo, lore, Mario, Splatoon, Kirby, análisis, videojuegos, web de fans, cronología"
+    />
+    <meta name="author" content="Irene Foncubierta Lobatón" />
+    <meta name="theme-color" content="#800E13" />
+    <meta
+      property="og:title"
+      content="NintendoManía | Análisis de Sagas Nintendo"
+    />
+    <meta
+      property="og:description"
+      content="NintendoManía: Cronología, juegos y curiosidades de tus sagas de Nintendo favoritas."
+    />
+    <meta property="og:image" content="./assets/imgs/logo_principal.png" />
+    <meta property="og:type" content="website" />
+    <meta name="robots" content="index, follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./assets/imgs/icono_pag.png" />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src = "./assets/js/app.js" defer></script>
+  </head>
+  <body>
+        <header class="cabecera">
+      <!-- Logotipo principal y enlace de regreso al inicio -->
+      <a class="cabecera__logo" href="./index.html" aria-label="Ir al inicio">
+        <img
+          class="cabecera__logo--imagen"
+          src="./assets/imgs/logo_principal.png"
+          alt="Ir al inicio de NintendoManía"
+          width="1024"
+          height="1024"
+        />
+      </a>
+      <!-- Navegación principal: Links a sagas y páginas destacadas -->
+      <nav class="cabecera__menu" aria-label="Menú principal del sitio">
+        <!-- Menú principal de navegación entre sagas y páginas destacado -->
+        <p class="cabecera__menu--titulo">
+          <img
+            class="cabecera__menu--imagen"
+            src="./assets/imgs/logo_switch.svg"
+            alt="Logo Switch"
+            width="800"
+            height="600"
+          />
+          Nintendo Manía
+        </p>
+        <!-- Lista de navegación semántica a las 3 sagas y páginas principales -->
+        <ul class="cabecera__menu--lista">
+          <li>
+            <a class="cabecera__menu--enlace" href="./sagas/splatoon.html"
+              >Splatoon</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./sagas/mario.html"
+              >Mario</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./sagas/kirby.html"
+              >Kirby</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./comparativas.html"
+              >Comparativas</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./contacto.html"
+              >Contacto</a
+            >
+          </li>
+          <li>
+            <a class="cabecera__menu--enlace" href="./about.html">About</a>
+          </li>
+        </ul>
+      </nav>
+      <nav class="cabecera__buscador">
+        <!-- Formulario de búsqueda -->
+        <form
+          name="buscador"
+          role="search"
+          aria-label="Buscar contenido en NintendoManía"
+        >
+          <label class="buscador__formulario">
+            <img
+              class="buscador__formulario--imagen"
+              src="./assets/imgs/lupa.png"
+              alt="Lupa"
+              width="257"
+              height="280"
+            />
+            <input
+              class="buscador__formulario--input"
+              type="search"
+              name="buscador"
+              placeholder="Buscar..."
+            />
+          </label>
+        </form>
+      </nav>
+      <button
+        class="cabecera__buscador--hamburguesa"
+        type="button"
+        aria-label="Abrir menú de navegación"
+      >
+        &#9776;
+      </button>
+    </header>
+    <main>
+        <section class="favoritos">
+            <h1 class="favoritos__titulo">Tus favoritos</h1>
+            <p class="favoritos__descripcion">¿Eres un fanático de Nintendo?</p>
+            <p class="favoritos__descripcion">Si es así, aquí podrás encontrar una colección de tus juegos favoritos junto con su puntuación y reseña.</p>
+
+        </section>
+        <aside>
+            <nav
+          class="gestor-juegos__filtros"
+          aria-label="Filtros del muro de reseñas"
+        >
+          <h4 class="filtros__titulo">Filtrar el muro por saga:</h4>
+          <menu class="filtros__menu">
+            <li>
+              <button
+                type="button"
+                class="boton-filtro activo"
+                data-filtro="todos"
+              >
+                Ver Todos
+              </button>
+            </li>
+            <li>
+              <button type="button" class="boton-filtro" data-filtro="mario">
+                Solo Mario
+              </button>
+            </li>
+            <li>
+              <button type="button" class="boton-filtro" data-filtro="splatoon">
+                Solo Splatoon
+              </button>
+            </li>
+            <li>
+              <button type="button" class="boton-filtro" data-filtro="kirby">
+                Solo Kirby
+              </button>
+            </li>
+          </menu>
+        </nav>
+        </aside>
+    </main>
+    <footer class="pie-pagina">
+      <!-- Sección de contacto semántica con <address> -->
+      <section class="pie-pagina__contacto">
+        <h2 class="pie-pagina__contacto--titulo">Contacto</h2>
+        <address
+          class="pie-pagina__contacto--informacion"
+          aria-label="Información de contacto"
+        >
+          <!-- Links de contacto: formulario, email, teléfono -->
+          <ul class="pie-pagina__contacto--lista">
+            <li>
+              <a class="pie-pagina__contacto--enlace" href="./contacto.html"
+                >Contacto</a
+              >
+            </li>
+            <li>
+              <a
+                class="pie-pagina__contacto--enlace"
+                href="mailto:nintendomania@info.es"
+                >Correo electrónico</a
+              >
+            </li>
+            <li>
+              <a class="pie-pagina__contacto--enlace" href="tel:123456789"
+                >Teléfono</a
+              >
+            </li>
+          </ul>
+        </address>
+      </section>
+      <!-- Sección de información legal -->
+      <section class="pie-pagina__info">
+        <h2 class="pie-pagina__info--titulo">Información legal</h2>
+        <img src="" alt="Kirby,Mario y un Inkling juntos">
+        <p class="pie-pagina__info--descripcion">
+          El contenido es fan-made y sin fines comerciales.
+        </p>
+        <p class="pie-pagina__info--descripcion">&copy; 2025 NintendoManía.</p>
+      </section>
+      <!-- Sección extra: Logo y botón de volver al inicio -->
+      <section class="footer-extra">
+        <img
+          class="footer-extra__imagen"
+          src="./assets/imgs/logo_principal.png"
+          alt="Logo de NintendoManía"
+          width="1024"
+          height="1024"
+        />
+        <a
+          href="#inicio"
+          class="footer-extra__boton"
+          aria-label="Volver al inicio de la página"
+        ></a>
+      </section>
+    </footer>
+</html>
