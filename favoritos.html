@@ -119,46 +119,45 @@
       </button>
     </header>
     <main id="main-favoritos">
+      <aside>
+          <nav
+        class="gestor-juegos__filtros"
+        aria-label="Filtros del muro de reseñas"
+      >
+        <h4 class="filtros__titulo">Filtrar el muro por saga:</h4>
+        <ul class="filtros__menu">
+          <li>
+            <button
+              type="button"
+              class="boton-filtro activo"
+              data-filtro="todos"
+            >
+              Ver Todos
+            </button>
+          </li>
+          <li>
+            <button type="button" class="boton-filtro" data-filtro="mario">
+              Solo Mario
+            </button>
+          </li>
+          <li>
+            <button type="button" class="boton-filtro" data-filtro="splatoon">
+              Solo Splatoon
+            </button>
+          </li>
+          <li>
+            <button type="button" class="boton-filtro" data-filtro="kirby">
+              Solo Kirby
+            </button>
+          </li>
+        </ul>
+      </nav>
+      </aside>
         <section class="favoritos">
             <h1 class="favoritos__titulo">Tus favoritos</h1>
             <p class="favoritos__descripcion">¿Eres un fanático de Nintendo?</p>
             <p class="favoritos__descripcion">Si es así, aquí podrás encontrar una colección de tus juegos favoritos junto con su puntuación y reseña.</p>
-
         </section>
-        <aside>
-            <nav
-          class="gestor-juegos__filtros"
-          aria-label="Filtros del muro de reseñas"
-        >
-          <h4 class="filtros__titulo">Filtrar el muro por saga:</h4>
-          <menu class="filtros__menu">
-            <li>
-              <button
-                type="button"
-                class="boton-filtro activo"
-                data-filtro="todos"
-              >
-                Ver Todos
-              </button>
-            </li>
-            <li>
-              <button type="button" class="boton-filtro" data-filtro="mario">
-                Solo Mario
-              </button>
-            </li>
-            <li>
-              <button type="button" class="boton-filtro" data-filtro="splatoon">
-                Solo Splatoon
-              </button>
-            </li>
-            <li>
-              <button type="button" class="boton-filtro" data-filtro="kirby">
-                Solo Kirby
-              </button>
-            </li>
-          </menu>
-        </nav>
-        </aside>
     </main>
     <footer class="pie-pagina">
       <!-- Sección de contacto semántica con <address> -->
