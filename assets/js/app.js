@@ -179,16 +179,17 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
     const inicializarFormularioFavoritos = () => {
 
         const formulario = document.querySelector('.gestor-juegos__formulario');
+        const selectorJuegos = document.querySelector('#nombre-juego');
 
         if (!formulario) return;
 
         formulario.addEventListener('submit', (evento) =>{
             evento.preventDefault()
             
-            const datos = new FormData(formulario);
+            const datos = new FormData(formulario)
 
             const favoritoNuevo = {
-                id: Date.now(),
+                id : Date.now(),
                 saga : datos.get('saga-juego'),
                 juego : datos.get('nombre-juego'),
                 resena : datos.get('resena-juego'),
@@ -198,8 +199,10 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
             const favoritosGuardados = JSON.parse(localStorage.getItem('coleccionFavoritos')) || [];
             favoritosGuardados.push(favoritoNuevo)
             localStorage.setItem('coleccionFavoritos',JSON.stringify(favoritosGuardados))
-            alert("¡Añadido a Favoritos con éxito! Ve a la pestaña 'Favoritos' para verlo.");
-            formulario.reset()  
+            alert("¡Añadido a Favoritos con éxito! Ve a la pestaña 'Favoritos' para verlo.")
+            formulario.reset()
+            selectorJuegos.innerHTML = '<option value="" disabled selected>-- Selecciona un juego --</option>';
+            selectorJuegos.disabled = true;
         })
     }
 
@@ -224,6 +227,36 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
         };
         const inicializarTarjetas = (imagenesJuegos) =>{
                 const galeria = document.querySelector('.favoritos')
+                const favoritosGuardados = JSON.parse(localStorage.getItem('coleccionFavoritos')) || []
+                favoritosGuardados.forEach(favorito =>{
+                    const rutaImagen = imagenesJuegos[favorito.juego]
+                    const tarjeta = document.createElement('article')
+                    tarjeta.classList.add('tarjeta-juego')
+
+                    tarjeta.dataset.categoria = favorito.saga
+
+                    tarjeta.innerHTML = `
+                    <h4>${favorito.juego}</h4>
+                    <img src="${rutaImagen}" alt="Imagen de ${favorito.juego}" class="tarjeta-juego__imagen">
+                    <p class="tarjeta__descripcion">${favorito.resena}</p>
+                    <p class="tarjeta__descripcion">Puntuación:<br>${favorito.puntuacion}/100</p>
+                    <button type="button" class="tarjeta-juego__boton-borrar">Eliminar</button>
+                `
+                
+                    const botonDeBorrado = tarjeta.querySelector('.tarjeta-juego__boton-borrar')
+                    botonDeBorrado.addEventListener('click',() =>{
+                        const confirmacion = confirm(`¿Estás seguro de que quieres eliminar la reseña de ${favorito.juego}?`);
+                        if(confirmacion){
+                            tarjeta.remove()
+                            const favoritosGuardados = JSON.parse(localStorage.getItem('coleccionFavoritos'))
+                            const favoritosFiltrados = favoritosGuardados.filter(favoritoSec =>{
+                                favoritoSec.id !== favorito.id
+                            })
+                            localStorage.setItem('coleccionFavoritos', JSON.stringify(favoritosFiltrados))
+                        }
+                    })
+                    galeria.append(tarjeta)
+                })
             }
 /* =======================================================
    SISTEMA DE FILTRADO 
@@ -259,7 +292,7 @@ interactividadHamburguesa(cabecera)
 modoOscuro(cabecera,cuerpoPagina)
 inicializarDesplegables()
 inicializarFormularioFavoritos()
-inicializarTarjetas()
+inicializarTarjetas(imagenesJuegos)
 inicializarFiltros()
 
 
