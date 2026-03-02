@@ -173,70 +173,58 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
     }
 
 /* =======================================================
-   GESTOR DE JUEGOS 
+   FORMULARIO FAVORITOS
    ======================================================= */
 
-    const inicializarGestorDeJuegos = () => {
-    const imagenesJuegos = {
-        "Super Mario Bros.": "./assets/imgs/caratula_mariobros_nes.jpg",
-        "Super Mario 64": "./assets/imgs/caratula_mario64.webp",
-        "Super Mario Galaxy": "./assets/imgs/SuperMarioGalaxy.jpg",
-        "Super Mario Odyssey": "./assets/imgs/mario_odyssey.jpg",
-        
-        "Splatoon": "./assets/imgs/splatoon1_portada.png",
-        "Splatoon 2": "./assets/imgs/splatoon2_portada.jpg",
-        "Splatoon 3": "./assets/imgs/splatoon3_portada.jpg",
-        
-        "Kirby's Dream Land": "./assets/imgs/return_dreamland.jpg",
-        "Kirby's Adventure": "./assets/imgs/kirby_adventura_captura.jpg",
-        "Kirby Super Star": "./assets/imgs/kirby_super_star.jpg",
-        "Kirby y la Tierra Olvidada": "./assets/imgs/tierra_olvidada.jpg"
-    };
+    const inicializarFormularioFavoritos = () => {
 
         const formulario = document.querySelector('.gestor-juegos__formulario');
-        const galeria = document.querySelector('.favoritos');
-        const selectorJuegos = document.querySelector('#nombre-juego');
 
-        if (!formulario || !galeria) return;
+        if (!formulario) return;
 
         formulario.addEventListener('submit', (evento) =>{
             evento.preventDefault()
-
+            
             const datos = new FormData(formulario);
-            const saga = datos.get('saga-juego');
-            const juego = datos.get('nombre-juego');
-            const resena = datos.get('resena-juego');
-            const puntuacion = datos.get('puntuacion-juego');
 
-            const rutaImagen = imagenesJuegos[juego];
-            const tarjeta = document.createElement('article');
-            tarjeta.classList.add('tarjeta-juego');
+            const favoritoNuevo = {
+                id: Date.now(),
+                saga : datos.get('saga-juego'),
+                juego : datos.get('nombre-juego'),
+                resena : datos.get('resena-juego'),
+                puntuacion : datos.get('puntuacion-juego')
+            }
 
-            tarjeta.dataset.categoria = saga;
-
-            tarjeta.innerHTML = `
-                <h4>${juego}</h4>
-                <img src="${rutaImagen}" alt="Imagen de ${juego}" class="tarjeta-juego__imagen">
-                <p class="tarjeta__descripcion">${resena}</p>
-                <p class="tarjeta__descripcion">Puntuación:<br>${puntuacion}/100</p>
-                <button type="button" class="tarjeta-juego__boton-borrar">Eliminar</button>
-            `
-
-            const botonDeBorrado = tarjeta.querySelector('.tarjeta-juego__boton-borrar')
-            botonDeBorrado.addEventListener('click',() =>{
-                const confirmacion = confirm(`¿Estás seguro de que quieres eliminar la reseña de ${juego}?`);
-                if(confirmacion){
-                    tarjeta.remove()
-                }
-            })
-
-            galeria.append(tarjeta)
-            formulario.reset()
-            selectorJuegos.innerHTML = '<option value="" disabled selected>-- Selecciona un juego --</option>';
-            selectorJuegos.disabled = true;
+            const favoritosGuardados = JSON.parse(localStorage.getItem('coleccionFavoritos')) || [];
+            favoritosGuardados.push(favoritoNuevo)
+            localStorage.setItem('coleccionFavoritos',JSON.stringify(favoritosGuardados))
+            alert("¡Añadido a Favoritos con éxito! Ve a la pestaña 'Favoritos' para verlo.");
+            formulario.reset()  
         })
     }
 
+    /* =======================================================
+        SISTEMA DE TARJETAS 
+        ======================================================= */
+        
+        const imagenesJuegos = {
+            "Super Mario Bros.": "./assets/imgs/caratula_mariobros_nes.jpg",
+            "Super Mario 64": "./assets/imgs/caratula_mario64.webp",
+            "Super Mario Galaxy": "./assets/imgs/SuperMarioGalaxy.jpg",
+            "Super Mario Odyssey": "./assets/imgs/mario_odyssey.jpg",
+            
+            "Splatoon": "./assets/imgs/splatoon1_portada.png",
+            "Splatoon 2": "./assets/imgs/splatoon2_portada.jpg",
+            "Splatoon 3": "./assets/imgs/splatoon3_portada.jpg",
+            
+            "Kirby's Dream Land": "./assets/imgs/return_dreamland.jpg",
+            "Kirby's Adventure": "./assets/imgs/kirby_adventura_captura.jpg",
+            "Kirby Super Star": "./assets/imgs/kirby_super_star.jpg",
+            "Kirby y la Tierra Olvidada": "./assets/imgs/tierra_olvidada.jpg"
+        };
+        const inicializarTarjetas = (imagenesJuegos) =>{
+                const galeria = document.querySelector('.favoritos')
+            }
 /* =======================================================
    SISTEMA DE FILTRADO 
    ======================================================= */
@@ -270,5 +258,35 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
 interactividadHamburguesa(cabecera)
 modoOscuro(cabecera,cuerpoPagina)
 inicializarDesplegables()
-inicializarGestorDeJuegos()
+inicializarFormularioFavoritos()
+inicializarTarjetas()
 inicializarFiltros()
+
+
+
+
+/*             const rutaImagen = imagenesJuegos[juego];
+            const tarjeta = document.createElement('article');
+            tarjeta.classList.add('tarjeta-juego');
+                tarjeta.dataset.categoria = saga;
+
+                tarjeta.innerHTML = `
+                    <h4>${juego}</h4>
+                    <img src="${rutaImagen}" alt="Imagen de ${juego}" class="tarjeta-juego__imagen">
+                    <p class="tarjeta__descripcion">${resena}</p>
+                    <p class="tarjeta__descripcion">Puntuación:<br>${puntuacion}/100</p>
+                    <button type="button" class="tarjeta-juego__boton-borrar">Eliminar</button>
+                `
+
+                const botonDeBorrado = tarjeta.querySelector('.tarjeta-juego__boton-borrar')
+                botonDeBorrado.addEventListener('click',() =>{
+                    const confirmacion = confirm(`¿Estás seguro de que quieres eliminar la reseña de ${juego}?`);
+                    if(confirmacion){
+                        tarjeta.remove()
+                    }
+                })
+
+                galeria.append(tarjeta)
+                formulario.reset()
+                selectorJuegos.innerHTML = '<option value="" disabled selected>-- Selecciona un juego --</option>';
+                selectorJuegos.disabled = true; */
