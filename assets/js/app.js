@@ -233,7 +233,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
         }
         const inicializarTarjetas = (imagenesJuegos,coloresSagas) =>{
                 const galeria = document.querySelector('.favoritos')
-                
+
                 if (!galeria) return;
 
                 const favoritosGuardados = JSON.parse(localStorage.getItem('coleccionFavoritos')) || []
@@ -258,9 +258,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
                         if(confirmacion){
                             tarjeta.remove()
                             const favoritosGuardados = JSON.parse(localStorage.getItem('coleccionFavoritos'))
-                            const favoritosFiltrados = favoritosGuardados.filter(favoritoSec =>{
-                                favoritoSec.id !== favorito.id
-                            })
+                            const favoritosFiltrados = favoritosGuardados.filter(favoritoSec =>favoritoSec.id !== favorito.id)
                             localStorage.setItem('coleccionFavoritos', JSON.stringify(favoritosFiltrados))
                         }
                     })
@@ -297,18 +295,60 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
     }
 
     /* =======================================================
-        ANCHOR INICIO 
-   ======================================================= */
+        ANCHORS INICIO 
+       ======================================================= */
 
 const inicializarAnchorsInicio = () =>{
-    const logo = document.querySelector('.cabecera__menu--imagen')
+
+    const logo = document.querySelector('.cabecera__menu--imagen');
+
+    const logoSaga = document.querySelector('.cabecera-kirby__menu--imagen, .cabecera-mario__menu--imagen, .cabecera-splatoon__menu--imagen');
 
     if(logo){
         logo.addEventListener('click',() =>{
             window.location.href = './index.html'
         })
     }
+    if(logoSaga){
+        logoSaga.addEventListener('click',() =>{
+            window.location.href = '../index.html'
+        })
+    }
    }
+
+     /* =======================================================
+          VALIDACIÓN TIEMPO REAL FORMULARIO FAVORITOS 
+    ======================================================= */
+    const inicialiizarValidacionInputs = () =>{
+        const resena = document.querySelector('.gestor-juegos__textarea')
+        const puntuacion = document.querySelector('.gestor-juegos__input')
+        
+        const resenaError = document.createElement('p')
+        const puntuacionError = document.createElement('p')
+
+        resenaError.textContent = "Error. La reseña tiene que tener una longitud mínima de 15 caracteres."
+        puntuacionError.textContent = "Error. La puntuación tiene que estar comprendida entre 0 y 100"
+
+        /* TEXTAREA */
+
+        resena.addEventListener('blur',(evento) =>{
+            if(evento.target.value.length < 15){
+                resena.before(resenaError)
+            }
+            else{
+                resenaError.remove()
+            }
+        })
+
+        puntuacion.addEventListener('blur',(evento) =>{
+            if(evento.target.value < 0 || evento.target.value > 100|| evento.target.value.length === 0){
+                puntuacion.before(puntuacionError)
+            }
+            else{
+                puntuacionError.remove()
+            }
+        })
+    }
 
 interactividadHamburguesa(cabecera)
 modoOscuro(cabecera,cuerpoPagina)
