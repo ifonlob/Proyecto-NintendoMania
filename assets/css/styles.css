@@ -8092,6 +8092,15 @@ img {
   color: var(--color-blanco);
 }
 
+.gestor-juegos__boton:disabled {
+  background-color: #cccccc;
+  color: #666666;
+  border: 1px solid #999999;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
 @media (max-width: 1200px) {
   .gestor-juegos {
     width: 85%;
@@ -8407,3 +8416,12 @@ img {
     font-size: 0.9rem;
   }
 }
+
+.mensaje-error{
+  font-size: 0.85rem;
+  background-color: #fee2e2;
+  border: 1px solid #f87171;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+
