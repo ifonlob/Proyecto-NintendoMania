@@ -449,6 +449,7 @@ img {
   text-align: center;
   padding: 0.5rem;
   color: var(--color-negro);
+  width: 100%;
 }
 
 .pie-pagina__contacto--lista {
@@ -7875,7 +7876,7 @@ img {
    ======================================================= */
 .hamburguesa-nav {
   position: absolute;
-  visibility: hidden;
+  display: none;
   opacity: 0;
   top: 100%;
   left: 0;
@@ -7883,12 +7884,19 @@ img {
   background-color: var(--color-principal);
   z-index: 2;
   transform: translateY(-15px);
-  transition: opacity 0.4s ease, transform 0.4s ease, visibility 0.4s;
+  transition: opacity 0.4s ease, transform 0.4s ease, display 0.5s allow-discrete;
+}
+
+@starting-style {
+  .hamburguesa-nav__activa {
+    opacity: 0;
+    transform: translateY(-15px);
+  }
 }
 
 .hamburguesa-nav__activa {
   opacity: 1;
-  visibility: visible;
+  display: block;
   transform: translateY(0px);
 }
 
@@ -8002,7 +8010,7 @@ img {
   margin: 0 auto;
   gap:1rem;
   padding: 2rem;
-  margin-top:2rem;
+  margin:2rem auto;
   width: 80%;
   background-color: var(--color-blanco);
   border-radius: 1rem;
@@ -8013,10 +8021,12 @@ img {
   font-size: 1.5rem;
   font-family: var(--fuente-secundaria);
   text-align: center;
+  color: var(--color-negro)
 }
 
 .gestor-juegos__descripcion{
   text-align: center;
+  color: var(--color-negro)
 }
 
 .gestor-juegos__campo{
@@ -8034,6 +8044,7 @@ img {
   font-family: var(--fuente-base);
   font-weight: 600;
   text-align: center;
+  color: var(--color-negro)
 }
 
 .gestor-juegos__etiqueta{
@@ -8042,6 +8053,7 @@ img {
   gap:0.5rem;
   padding:0.75rem;
   font-weight: 500;
+  color: var(--color-negro)
 }
 
 .gestor-juegos__input,.gestor-juegos__textarea,.gestor-juegos__select{
@@ -8275,6 +8287,7 @@ img {
 .filtros__titulo{
   width: 100%;
   padding: 0.5rem;
+  color: var(--color-negro);
 }
 
 .filtros__menu {
