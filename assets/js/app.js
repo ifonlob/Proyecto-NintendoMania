@@ -19,16 +19,16 @@ const interactividadHamburguesa = (cabecera) =>{
 
     const enlacesNavegacion = document.querySelectorAll('header ul li a')
 
-    for(let i = 0; i < enlacesNavegacion.length; i++){
+    enlacesNavegacion.forEach(enlaceSec =>{
         const apartado = document.createElement('li')
         const enlace = document.createElement('a')
 
-        enlace.textContent = enlacesNavegacion[i].textContent
-        enlace.href = enlacesNavegacion[i].href
+        enlace.textContent = enlaceSec.textContent
+        enlace.href = enlaceSec.href
 
         apartado.append(enlace)
         navegacionLista.append(apartado)
-    }
+    })
         if(!document.querySelector('.introduccion')){
             const apartadoInicio = document.createElement('li')
             const enlaceInicio = document.createElement('a')
@@ -46,15 +46,16 @@ const interactividadHamburguesa = (cabecera) =>{
         menuNavegacion.classList.toggle('hamburguesa-nav__activa')
         const siguienteSeccion = cabecera.nextElementSibling
         const piePagina = document.querySelector('footer')
-        siguienteSeccion.style.transition = "transform 0.4s ease"
-        piePagina.style.transition = "transform 0.4s ease"
+        siguienteSeccion.classList.add('transicion-menu-hamrburguesa')
+        piePagina.classList.add('transicion-menu-hamrburguesa')
         if (menuNavegacion.classList.contains('hamburguesa-nav__activa')) {
             const alturaMenu = menuNavegacion.scrollHeight
             siguienteSeccion.style.transform = `translateY(${alturaMenu}px)`
             piePagina.style.transform = `translateY(${alturaMenu}px)`
         }
         else{
-            siguienteSeccion.style.transform = ""
+            siguienteSeccion.style.transform = ''
+            piePagina.style.transform = ''
         }
     })
 }
@@ -309,10 +310,10 @@ const inicializarFormularioYValidacion = () =>{
     resena.addEventListener('blur', (evento) =>{
         if(evento.target.value.length < 15){
             resena.before(resenaError)
-            resena.style.border = '2px solid red'
+            resena.classList.add('input-error')
         } else {
             resenaError.remove()
-            resena.style.border = ''
+            resena.classList.remove('input-error')
         }
 
         if(document.querySelector('.mensaje-error') ){
@@ -330,10 +331,10 @@ const inicializarFormularioYValidacion = () =>{
         
         if(valor === '' || isNaN(valorNumerico) || valorNumerico < 0 || valorNumerico > 100){
             puntuacion.before(puntuacionError)
-            puntuacion.style.border = '2px solid red'
+            puntuacion.classList.add('input-error')
         } else {
             puntuacionError.remove()
-            puntuacion.style.border = ''
+            puntuacion.classList.remove('input-error')
         }
 
         if(document.querySelector('.mensaje-error') ){
