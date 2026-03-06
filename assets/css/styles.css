@@ -8075,8 +8075,7 @@ img {
 
 .gestor-juegos__input:focus,
 .gestor-juegos__select:focus,
-.gestor-juegos__textarea:focus,
-.gestor-juegos__puntuacion input:focus {
+.gestor-juegos__textarea:focus{
   background-color: var(--color-blanco);
   border-color: var(--color-secundario);
 }
@@ -8432,6 +8431,7 @@ img {
   border: 2px solid red;
 }
 
-.gestor-juegos__input.input-error:focus {
-  outline: 2px solid #dc2626;
+.gestor-juegos__input.input-error{
+  border: 2px solid #dc2626;
 }
+
