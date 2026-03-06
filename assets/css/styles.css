@@ -7938,6 +7938,10 @@ img {
   }
 }
 
+.transicion-menu-hamrburguesa {
+  transition: transform 0.4s ease;
+}
+
 
 /* =======================================================
    MODO OSCURO
@@ -8277,7 +8281,6 @@ img {
   }
 }
 
-
 .favoritos-filtros{
   width: 20%;
 }
@@ -8425,3 +8428,10 @@ img {
   padding: 0.5rem;
 }
 
+.gestor-juegos__textarea.input-error{
+  border: 2px solid red;
+}
+
+.gestor-juegos__input.input-error:focus {
+  outline: 2px solid #dc2626;
+}
