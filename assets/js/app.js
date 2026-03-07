@@ -199,7 +199,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
                 kirby : "var(--color-principal__kirby)"
             }
             const inicializarTarjetas = (imagenesJuegos,coloresSagas) =>{
-                    const galeria = document.querySelector('.favoritos')
+                    const galeria = document.querySelector('#favoritos')
 
                     if (!galeria) return
 
@@ -248,7 +248,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
 
         const inicializarFiltros = () =>{
             const botonesFiltro = document.querySelectorAll('.boton-filtro')
-            const galeria = document.querySelector('.favoritos')
+            const galeria = document.querySelector('#favoritos')
 
             if (!galeria || botonesFiltro.length === 0) return
 
@@ -298,11 +298,11 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
     =============================================================== */
 
 const inicializarFormularioYValidacion = () =>{
-    const formulario = document.querySelector('.gestor-juegos__formulario')
-    const resena = document.querySelector('.gestor-juegos__textarea')
-    const puntuacion = document.querySelector('.gestor-juegos__input')
-    const botonEnvio = document.querySelector('.gestor-juegos__boton')
-    const selectJuegos = document.querySelectorAll('.gestor-juegos__select')
+    const formulario = document.querySelector('#gestor-juegos__formulario')
+    const resena = document.querySelector('#gestor-juegos__textarea')
+    const puntuacion = document.querySelector('#gestor-juegos__input')
+    const botonEnvio = document.querySelector('#gestor-juegos__boton')
+    const selectJuegos = document.querySelectorAll('#gestor-juegos__select')
     const selectorJuegoSecundario = document.querySelector('#nombre-juego')
 
     if (!formulario || !resena || !puntuacion || !botonEnvio) return
@@ -360,7 +360,7 @@ const inicializarFormularioYValidacion = () =>{
         evento.preventDefault()
         
         const selectVacios = [...selectJuegos].filter(select => select.value.trim() === '')
-        const boton = document.querySelector('.gestor-juegos__boton')
+        const boton = document.querySelector('#gestor-juegos__boton')
         const mensajeError = document.createElement('p')
         if(resena.value.trim().length === 0 || selectVacios.length > 0){
             const errorPrevio = document.querySelector('.mensaje-error-formulario')
@@ -408,6 +408,30 @@ const inicializarFormularioYValidacion = () =>{
     })
 }
 
+    /* ============================================================
+      INICIALIZACIÓN FAVORITOS VACÍA 
+    =============================================================== */
+
+const inicializarTextoFavoritosVacio = () => {
+    const galeriaFavoritos = document.querySelector('#favoritos')
+
+    if(!galeriaFavoritos) return
+
+    if(!document.querySelector('.tarjeta-juego')){
+        
+        const tarjetaVacia = document.createElement('article')
+        tarjetaVacia.classList.add('mensaje-vacio')
+
+        tarjetaVacia.innerHTML = `
+            <h3 class="mensaje-vacio__titulo">¡Tu estantería está vacía!</h3>
+            <p class="mensaje-vacio__descripcion">Está esperando su primera obra maestra.</p>
+            <a href="./comparativas.html#gestor-juegos" class="mensaje-vacio__boton">Añadir un juego</a>
+        `
+        
+        galeriaFavoritos.append(tarjetaVacia)
+    }
+}
+
 
 
 interactividadHamburguesa(cabecera)
@@ -417,3 +441,4 @@ inicializarTarjetas(imagenesJuegos,coloresSagas)
 inicializarFormularioYValidacion()
 inicializarFiltros()
 inicializarAnchorsInicio()
+inicializarTextoFavoritosVacio()
