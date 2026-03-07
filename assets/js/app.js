@@ -351,9 +351,21 @@ const inicializarFormularioYValidacion = () =>{
         evento.preventDefault()
         
         const selectVacios = [...selectJuegos].filter(select => select.value.trim() === '')
-        
+        const boton = document.querySelector('.gestor-juegos__boton')
+        const mensajeError = document.createElement('p')
         if(resena.value.trim().length === 0 || selectVacios.length > 0){
-            alert("⚠️ Por favor, selecciona un juego y rellena todos los campos correctamente antes de publicar.")
+            const errorPrevio = document.querySelector('.mensaje-error-formulario')
+            if(errorPrevio){
+                errorPrevio.remove()
+            }
+
+            mensajeError.textContent = "⚠️ Por favor, selecciona un juego y rellena todos los campos correctamente antes de publicar."
+
+            mensajeError.classList.add('mensaje-error-formulario')
+            boton.after(mensajeError)
+            setTimeout(() => {
+                mensajeError.remove();
+            }, 4000);
             return
         }
         
@@ -375,6 +387,9 @@ const inicializarFormularioYValidacion = () =>{
         mensajeExito.textContent = "¡Añadido a Favoritos con éxito! Ve a la pestaña 'Favoritos'.";
         mensajeExito.classList.add('mensaje-exito')
         botonEnvio.after(mensajeExito)
+        setTimeout(() => {
+                mensajeExito.remove();
+            }, 4000);
 
 
         formulario.reset()
