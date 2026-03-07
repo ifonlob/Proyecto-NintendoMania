@@ -116,8 +116,10 @@
           <li>
             <a class="cabecera__menu--enlace" href="./about.html">About</a>
           </li>
-                    <li>
-            <a class="cabecera__menu--enlace" href="./favoritos.html">Favoritos</a>
+          <li>
+            <a class="cabecera__menu--enlace" href="./favoritos.html"
+              >Favoritos</a
+            >
           </li>
         </ul>
       </nav>
@@ -544,7 +546,7 @@
            ASIDE: Formulario de votación interactiva
            Llamada a la acción para que el usuario vote por su saga favorita
            =================================================================== -->
-      <aside class="gestor-juegos">
+      <aside id="gestor-juegos">
         <h3 class="gestor-juegos__titulo">
           El gran dilema... ¡Añade tu Campeón!
         </h3>
@@ -575,7 +577,7 @@
               </select>
             </label>
             <label class="gestor-juegos__etiqueta"
-              >Juego:
+              >Juego: *
               <select
                 class="gestor-juegos__select"
                 name="nombre-juego"
@@ -600,7 +602,11 @@
             </label>
             <label class="gestor-juegos__etiqueta">
               Puntuación (0-100):
-              <input class = "gestor-juegos__input" type="text" name="puntuacion-juego" />
+              <input
+                class="gestor-juegos__input"
+                type="text"
+                name="puntuacion-juego"
+              />
             </label>
             <button class="gestor-juegos__boton" type="submit">
               Publicar Reseña en el Muro
