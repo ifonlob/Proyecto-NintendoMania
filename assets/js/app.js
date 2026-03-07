@@ -229,8 +229,17 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
                                 const favoritosFiltrados = favoritosGuardados.filter(favoritoSec =>favoritoSec.id !== id)
                                 localStorage.setItem('coleccionFavoritos', JSON.stringify(favoritosFiltrados))
                             }
-                        })
+                        })         
                         galeria.append(tarjeta)
+                    })
+                    
+                    const botonBorradoMasivo = document.querySelector('.favorito-eliminar-todos')
+                    botonBorradoMasivo.addEventListener('click',(evento) =>{
+                        const tarjetas = document.querySelectorAll('.tarjeta-juego')
+                        tarjetas.forEach(tarjeta =>{
+                            tarjeta.remove()
+                        })
+                        localStorage.setItem('coleccionFavoritos',JSON.stringify([]))
                     })
                 }
     /* =======================================================
