@@ -8104,6 +8104,17 @@ img {
   box-shadow: none;
 }
 
+.mensaje-exito{
+  background-color: #dcfce7;
+  color: #166534;
+  padding:1rem;
+  border-radius: 1rem;
+  border: 1px solid green;
+  text-align: center;
+  font-weight: 600;
+}
+
+
 @media (max-width: 1200px) {
   .gestor-juegos {
     width: 85%;
