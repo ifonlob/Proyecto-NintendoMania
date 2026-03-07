@@ -8008,7 +8008,7 @@ img {
 /* =======================================================
    ESTILOS DEL GESTOR DE JUEGOS
    ======================================================= */
-.gestor-juegos {
+#gestor-juegos {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -8340,7 +8340,7 @@ img {
   color: var(--color-blanco);
 }
 
-.favoritos{
+#favoritos{
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -8473,3 +8473,46 @@ img {
 }
 
 
+.mensaje-vacio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.5rem;
+  background-color: var(--color-sumario);
+  border: 3px dashed var(--color-secundario);
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 100%; 
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.mensaje-vacio__titulo {
+  color: var(--color-principal);
+  font-family: var(--fuente-secundaria);
+  font-size: 1.5rem;
+}
+
+.mensaje-vacio__descripcion {
+  font-family: var(--fuente-base);
+  color: var(--color-negro);
+  font-size: 1.2rem;
+}
+
+.mensaje-vacio__boton {
+  background-color: var(--color-principal);
+  color: var(--color-blanco);
+  font-family: var(--fuente-base);
+  font-weight: 600;
+  font-size: 1.2rem;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.mensaje-vacio__boton:hover {
+  background-color: var(--color-secundario);
+  transform: scale(1.05);
+}
