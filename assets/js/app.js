@@ -227,6 +227,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
                                 tarjeta.remove()
                                 const favoritosGuardados = JSON.parse(localStorage.getItem('coleccionFavoritos'))
                                 const favoritosFiltrados = favoritosGuardados.filter(favoritoSec =>favoritoSec.id !== id)
+                                if(favoritosFiltrados.length === 0) inicializarTextoFavoritosVacio()
                                 localStorage.setItem('coleccionFavoritos', JSON.stringify(favoritosFiltrados))
                             }
                         })         
@@ -240,6 +241,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
                             tarjeta.remove()
                         })
                         localStorage.setItem('coleccionFavoritos',JSON.stringify([]))
+                        inicializarTextoFavoritosVacio()
                     })
                 }
     /* =======================================================
@@ -298,11 +300,11 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
     =============================================================== */
 
 const inicializarFormularioYValidacion = () =>{
-    const formulario = document.querySelector('#gestor-juegos__formulario')
-    const resena = document.querySelector('#gestor-juegos__textarea')
-    const puntuacion = document.querySelector('#gestor-juegos__input')
-    const botonEnvio = document.querySelector('#gestor-juegos__boton')
-    const selectJuegos = document.querySelectorAll('#gestor-juegos__select')
+    const formulario = document.querySelector('.gestor-juegos__formulario')
+    const resena = document.querySelector('.gestor-juegos__textarea')
+    const puntuacion = document.querySelector('.gestor-juegos__input')
+    const botonEnvio = document.querySelector('.gestor-juegos__boton')
+    const selectJuegos = document.querySelectorAll('.gestor-juegos__select')
     const selectorJuegoSecundario = document.querySelector('#nombre-juego')
 
     if (!formulario || !resena || !puntuacion || !botonEnvio) return
@@ -360,7 +362,7 @@ const inicializarFormularioYValidacion = () =>{
         evento.preventDefault()
         
         const selectVacios = [...selectJuegos].filter(select => select.value.trim() === '')
-        const boton = document.querySelector('#gestor-juegos__boton')
+        const boton = document.querySelector('.gestor-juegos__boton')
         const mensajeError = document.createElement('p')
         if(resena.value.trim().length === 0 || selectVacios.length > 0){
             const errorPrevio = document.querySelector('.mensaje-error-formulario')
@@ -393,7 +395,7 @@ const inicializarFormularioYValidacion = () =>{
         localStorage.setItem('coleccionFavoritos', JSON.stringify(favoritosGuardados))
         
         const mensajeExito = document.createElement('p')
-        mensajeExito.textContent = "¡Añadido a Favoritos con éxito! Ve a la pestaña 'Favoritos'.";
+        mensajeExito.innerHTML = `¡Añadido a Favoritos con éxito! Ve a la pestaña de <a href="./favoritos.html">Favoritos</a>.`;
         mensajeExito.classList.add('mensaje-exito')
         botonEnvio.after(mensajeExito)
         setTimeout(() => {
