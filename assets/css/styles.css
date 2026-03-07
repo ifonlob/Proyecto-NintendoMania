@@ -8104,16 +8104,6 @@ img {
   box-shadow: none;
 }
 
-.mensaje-exito{
-  background-color: #dcfce7;
-  color: #166534;
-  padding:1rem;
-  border-radius: 1rem;
-  border: 1px solid green;
-  text-align: center;
-  font-weight: 600;
-}
-
 
 @media (max-width: 1200px) {
   .gestor-juegos {
@@ -8432,8 +8422,10 @@ img {
 
 .mensaje-error{
   font-size: 0.85rem;
+  text-align: center;
+  font-weight: 600;
   background-color: #fee2e2;
-  border: 1px solid #f87171;
+  border: 1px solid red;
   border-radius: 0.75rem;
   padding: 0.5rem;
 }
@@ -8445,4 +8437,37 @@ img {
 .gestor-juegos__input.input-error{
   border: 2px solid #dc2626;
 }
+
+.mensaje-exito{
+  background-color: #dcfce7;
+  color: #166534;
+  padding:1rem;
+  border-radius: 1rem;
+  border: 1px solid green;
+  text-align: center;
+  font-weight: 600;
+}
+
+.mensaje-error-formulario{
+  font-size: 0.85rem;
+  text-align: center;
+  font-weight: 600;
+  background-color: #fee2e2;
+  border: 1px solid red;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+
+.mensaje-error-formulario-reincidente{
+  font-size: 0.85rem;
+  text-align: center;
+  font-weight: 600;
+  background-color: #fee2e2;
+  border: 1px solid red;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+  transform: scale(1.05);
+  transition: scale 0.5s ease;
+}
+
 
