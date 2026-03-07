@@ -371,8 +371,12 @@ const inicializarFormularioYValidacion = () =>{
         favoritosGuardados.push(favoritoNuevo)
         localStorage.setItem('coleccionFavoritos', JSON.stringify(favoritosGuardados))
         
-        alert("¡Añadido a Favoritos con éxito! Ve a la pestaña 'Favoritos' para verlo.")
-        
+        const mensajeExito = document.createElement('p')
+        mensajeExito.textContent = "¡Añadido a Favoritos con éxito! Ve a la pestaña 'Favoritos'.";
+        mensajeExito.classList.add('mensaje-exito')
+        botonEnvio.after(mensajeExito)
+
+
         formulario.reset()
         selectorJuegoSecundario.innerHTML = '<option value="" disabled selected>-- Selecciona un juego --</option>'
         selectorJuegoSecundario.disabled = true
