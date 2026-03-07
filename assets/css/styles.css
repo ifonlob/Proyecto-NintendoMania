@@ -8194,6 +8194,7 @@ img {
   display: flex;
   min-height: 70vh;
   padding:1rem;
+  position: relative;
 }
 
 .tarjeta-juego {
@@ -8217,6 +8218,19 @@ img {
 }
 
 .tarjeta-juego__boton-borrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--color-principal__mario);
+  color: var(--color-blanco);
+  border-radius: 1rem;
+  border: 2px solid black;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-weight: 800;
+}
+
+.favorito-eliminar-todos{
   position: absolute;
   top: 10px;
   right: 10px;
@@ -8456,18 +8470,6 @@ img {
   border: 1px solid red;
   border-radius: 0.75rem;
   padding: 0.5rem;
-}
-
-.mensaje-error-formulario-reincidente{
-  font-size: 0.85rem;
-  text-align: center;
-  font-weight: 600;
-  background-color: #fee2e2;
-  border: 1px solid red;
-  border-radius: 0.75rem;
-  padding: 0.5rem;
-  transform: scale(1.05);
-  transition: scale 0.5s ease;
 }
 
 
