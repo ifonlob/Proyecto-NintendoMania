@@ -6,6 +6,13 @@
 
 const cabecera = document.querySelector('header')
 const cuerpoPagina = document.querySelector('body')
+
+/**
+ * Inicializa el menú hamburguesa para versión móvil.
+ * Crea el menú dinámicamente en el DOM y gestiona su animación mediante el cálculo de altura que ocupe en ese momento.
+ * @param {HTMLElement} cabecera - El elemento <header> del DOM.
+ */
+
 const interactividadHamburguesa = (cabecera) =>{
     const botonHamburguesa = document.querySelector(".cabecera__buscador--hamburguesa")
 
@@ -19,6 +26,7 @@ const interactividadHamburguesa = (cabecera) =>{
 
     const enlacesNavegacion = document.querySelectorAll('header ul li a')
 
+    // Clona los enlaces existentes en el header principal
     enlacesNavegacion.forEach(enlaceSec =>{
         const apartado = document.createElement('li')
         const enlace = document.createElement('a')
@@ -29,6 +37,7 @@ const interactividadHamburguesa = (cabecera) =>{
         apartado.append(enlace)
         navegacionLista.append(apartado)
     })
+        // Añade el enlace a "Inicio" si no se está ya en la página principal
         if(!document.querySelector('.introduccion')){
             const apartadoInicio = document.createElement('li')
             const enlaceInicio = document.createElement('a')
@@ -42,6 +51,7 @@ const interactividadHamburguesa = (cabecera) =>{
 
     botonHamburguesa.after(menuNavegacion)
 
+    // Evento para desplegar o recoger el menú modificando su posición en el eje Y
     botonHamburguesa.addEventListener("click",() => {
         menuNavegacion.classList.toggle('hamburguesa-nav__activa')
         const siguienteSeccion = cabecera.nextElementSibling
@@ -64,6 +74,13 @@ const interactividadHamburguesa = (cabecera) =>{
 /* =======================================================
    BOTÓN DE CAMBIO DE TEMA
    ======================================================= */
+/**
+ * Crea y gestiona el botón para alternar entre el tema claro y oscuro de la página.
+ * Lee las preferencias del sistema operativo o el estado previo guardado en localStorage, 
+ * @param {HTMLElement} cabecera - Nodo del DOM correspondiente a la cabecera.
+ * @param {HTMLElement} cuerpoPagina - Nodo del DOM correspondiente a la etiqueta body.
+ */
+
 const modoOscuro = (cabecera,cuerpoPagina) => {
     const logo = document.querySelector('.cabecera__logo')
 
@@ -81,6 +98,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
     const temaGuardado = localStorage.getItem('tema-nintendo')
     const prefiereOscuro = window.matchMedia('(prefers-color-scheme: dark)').matches
 
+    // Recupera la configuración de almacenamiento local o la preferencia de color del navegador
     if(temaGuardado === 'oscuro' || (!temaGuardado && prefiereOscuro)){
         cuerpoPagina.classList.add('tema-oscuro')
         boton.textContent = '☀️'
@@ -113,7 +131,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
 
     const buscador = document.querySelector('.cabecera__buscador')
     const mediaQueryPantalla = window.matchMedia('(max-width: 650px)')
-    
+    // Ajusta la posición del botón en la cabecera según el tamaño del viewport
     const reubicarBotonMovil = (evento) => {
         if(evento.matches){
             buscador.before(contenedor)
@@ -130,6 +148,12 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
 /* =======================================================
    DESPLEGABLES JUEGOS SEGÚN SAGA 
    ======================================================= */
+
+   /**
+     * Gestiona los campos select del formulario.
+     * Al cambiar el valor del select principal (sagas), genera y añade dinámicamente 
+     * las opciones correspondientes en el select secundario (juegos) basándose en una estructura de datos local.
+    */
     const inicializarDesplegables = () => {
         const selectorSagas = document.querySelector('#saga-juego')
         const selectorJuegos = document.querySelector('#nombre-juego')
@@ -159,9 +183,11 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
         selectorSagas.addEventListener('change',(evento) => {
             const sagaElegida = evento.target.value
             const juegosDisponibles = baseDeDatosJuegos[sagaElegida]
-            
+
+            // Limpia las opciones anteriores
             selectorJuegos.innerHTML = '<option value="" disabled selected>-- Selecciona un juego --</option>'
-            
+
+            // Rellena el selector secundario
             juegosDisponibles.forEach( juego =>{
                 const opcion = document.createElement('option')
                 opcion.value = juego
@@ -198,6 +224,14 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
                 splatoon : "var(--color-principal__splatoon)",
                 kirby : "var(--color-principal__kirby)"
             }
+
+            /**
+             * Recupera la colección de favoritos guardados en localStorage y crea dinámicamente 
+             * las tarjetas correspondientes en el DOM. Asigna eventos de eliminación individual para cada 
+             * tarjeta y gestiona el evento del botón de borrado masivo.
+             * @param {Object} imagenesJuegos - Diccionario que mapea los nombres de los juegos con rutas de imágenes locales.
+             * @param {Object} coloresSagas - Diccionario que asigna variables CSS de color a cada saga.
+             */
             const inicializarTarjetas = (imagenesJuegos,coloresSagas) =>{
                     const galeria = document.querySelector('#favoritos')
 
@@ -212,6 +246,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
                         tarjeta.style.backgroundColor = coloresSagas[saga]
                         tarjeta.dataset.categoria = saga
 
+                        // Crea la estructura interna de la tarjeta
                         tarjeta.innerHTML = `
                         <h4 class="tarjeta__titulo">${juego}</h4>
                         <img src="${rutaImagen}" alt="Imagen de ${juego}" class="tarjeta-juego__imagen">
@@ -219,7 +254,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
                         <p class="tarjeta__descripcion">Puntuación:<br>${puntuacion}/100</p>
                         <button type="button" class="tarjeta-juego__boton-borrar">Eliminar</button>
                     `
-                    
+                        // Evento de eliminación individual
                         const botonDeBorrado = tarjeta.querySelector('.tarjeta-juego__boton-borrar')
                         botonDeBorrado.addEventListener('click',() =>{
                             const confirmacion = confirm(`¿Estás seguro de que quieres eliminar la reseña de ${juego}?`)
@@ -233,7 +268,8 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
                         })         
                         galeria.append(tarjeta)
                     })
-                    
+
+                    // Evento de eliminación global
                     const botonBorradoMasivo = document.querySelector('.favorito-eliminar-todos')
                     botonBorradoMasivo.addEventListener('click',(evento) =>{
                         const tarjetas = document.querySelectorAll('.tarjeta-juego')
@@ -247,7 +283,11 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
     /* =======================================================
         SISTEMA DE FILTRADO 
     ======================================================= */
-
+        /**
+         * Inicializa la lógica de los botones de filtrado de la galería.
+         * Al hacer clic en un filtro, alterna la visibilidad de las tarjetas añadiendo o 
+         * retirando la clase de estado correspondiente, según su atributo data-categoria.
+         */
         const inicializarFiltros = () =>{
             const botonesFiltro = document.querySelectorAll('.boton-filtro')
             const galeria = document.querySelector('#favoritos')
@@ -256,10 +296,14 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
 
             botonesFiltro.forEach(boton =>{
                 boton.addEventListener('click', (evento) => {
+
+                    // Actualiza la clase activa de los botones
                     botonesFiltro.forEach(botonSec => botonSec.classList.remove('activo'))
                     evento.target.classList.add('activo')
                     const filtroElegido = evento.target.dataset.filtro
                     const tarjetas = galeria.querySelectorAll('.tarjeta-juego')
+
+                    // Oculta o muestra las tarjetas según el filtro seleccionad
                     tarjetas.forEach(tarjeta =>{
                         const categoriaTarjeta = tarjeta.dataset.categoria
                         if (filtroElegido === 'todos' || filtroElegido === categoriaTarjeta) {
@@ -276,8 +320,11 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
     /* =======================================================
         ANCHORS INICIO 
     ======================================================= */
-
-    const inicializarAnchorsInicio = () =>{
+    /**
+     * Añade eventos de clic a los logotipos de la cabecera principal y de las
+     * subpáginas para que actúen como enlaces de redirección a la ruta de inicio.
+     */
+        const inicializarAnchorsInicio = () =>{
 
         const logo = document.querySelector('.cabecera__menu--imagen')
 
@@ -299,6 +346,13 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
       INICIALIZACIÓN Y VALIDACIÓN TIEMPO REAL FORMULARIO FAVORITOS 
     =============================================================== */
 
+    /**
+     * Configura la validación y el envío del formulario de favoritos.
+     * Aplica validación visual al salir de los campos de texto e implementa 
+     * un chequeo estricto previo a la acción de submit. En caso de éxito, procesa
+     * los datos introducidos, actualiza el localStorage, proporciona feedback visual y resetea los campos.
+     */
+
 const inicializarFormularioYValidacion = () =>{
     const formulario = document.querySelector('.gestor-juegos__formulario')
     const resena = document.querySelector('.gestor-juegos__textarea')
@@ -319,6 +373,8 @@ const inicializarFormularioYValidacion = () =>{
     puntuacionError.textContent = "Error. La puntuación tiene que estar comprendida entre 0 y 100."
 
     /* TEXTAREA */
+
+    // Evento blur para el área de texto (reseña)
     resena.addEventListener('blur', (evento) =>{
         if(evento.target.value.length < 15){
             resena.before(resenaError)
@@ -337,6 +393,8 @@ const inicializarFormularioYValidacion = () =>{
     })
 
     /* PUNTUACIÓN */
+
+    // Evento blur para el input numérico (puntuación)
     puntuacion.addEventListener('blur', (evento) =>{
         const valor = evento.target.value.trim()
         const valorNumerico = Number(valor)
@@ -358,6 +416,8 @@ const inicializarFormularioYValidacion = () =>{
     })
 
     /* EVENTO SUBMIT  */
+
+    // Evento final de comprobación y envío de datos
     formulario.addEventListener('submit', (evento) =>{
         evento.preventDefault()
         
@@ -379,7 +439,8 @@ const inicializarFormularioYValidacion = () =>{
             }, 4000);
             return
         }
-        
+
+        // Procesamiento de los datos si la validación es correcta
         const datos = new FormData(formulario)
 
         const favoritoNuevo = {
@@ -393,7 +454,8 @@ const inicializarFormularioYValidacion = () =>{
         const favoritosGuardados = JSON.parse(localStorage.getItem('coleccionFavoritos')) || []
         favoritosGuardados.push(favoritoNuevo)
         localStorage.setItem('coleccionFavoritos', JSON.stringify(favoritosGuardados))
-        
+
+        // Feedback visual de finalización
         const mensajeExito = document.createElement('p')
         mensajeExito.innerHTML = `¡Añadido a Favoritos con éxito! Ve a la pestaña de <a href="./favoritos.html">Favoritos</a>.`;
         mensajeExito.classList.add('mensaje-exito')
@@ -402,7 +464,7 @@ const inicializarFormularioYValidacion = () =>{
                 mensajeExito.remove();
             }, 4000);
 
-
+        // Restauración del estado inicial del formulario
         formulario.reset()
         selectorJuegoSecundario.innerHTML = '<option value="" disabled selected>-- Selecciona un juego --</option>'
         selectorJuegoSecundario.disabled = true
@@ -414,6 +476,11 @@ const inicializarFormularioYValidacion = () =>{
       INICIALIZACIÓN FAVORITOS VACÍA 
     =============================================================== */
 
+    /**
+     * Evalúa el estado de la galería de favoritos. Si determina que no hay nodos 
+     * de tipo tarjeta , inyecta en el DOM un cuadro de texto
+     * para informar al usuario y sugerir una redirección al formulario.
+     */
 const inicializarTextoFavoritosVacio = () => {
     const galeriaFavoritos = document.querySelector('#favoritos')
 
@@ -434,7 +501,7 @@ const inicializarTextoFavoritosVacio = () => {
     }
 }
 
-
+// Bloque de ejecución principal
 
 interactividadHamburguesa(cabecera)
 modoOscuro(cabecera,cuerpoPagina)
