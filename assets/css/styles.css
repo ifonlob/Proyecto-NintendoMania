@@ -8192,6 +8192,7 @@ img {
 
 #main-favoritos{
   display: flex;
+  align-items: center;
   min-height: 70vh;
   padding:1rem;
   position: relative;
@@ -8232,8 +8233,8 @@ img {
 
 .favorito-eliminar-todos{
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 15px;
+  right: 15px;
   background-color: var(--color-principal__mario);
   color: var(--color-blanco);
   border-radius: 1rem;
@@ -8241,6 +8242,22 @@ img {
   padding: 0.5rem;
   cursor: pointer;
   font-weight: 800;
+}
+
+@media (max-width:800px){
+  .favorito-eliminar-todos{
+    top: 90%;
+    right: 40%;
+    left: 40%;
+  }
+}
+
+@media (max-width:500px){
+  .favorito-eliminar-todos{
+    top: 90%;
+    right: 30%;
+    left: 30%;
+  }
 }
 
 .tarjeta-juego__imagen {
@@ -8342,7 +8359,7 @@ img {
 
 #favoritos{
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
   gap:1rem;
   padding:1rem;
@@ -8353,8 +8370,7 @@ img {
   font-family: var(--fuente-secundaria);
   font-size: 2rem;
   text-align: center;
-  width: 80%;
-  padding: 1rem;
+  width: 100%;
   overflow-wrap: break-word;
 }
 
@@ -8373,11 +8389,11 @@ img {
     width: 25%;
   }
   
-  .favoritos {
+  #favoritos {
     width: 75%;
   }
   .favoritos__titulo{
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -8403,15 +8419,19 @@ img {
     gap: 0.8rem;
   }
 
-  .favoritos {
+  #favoritos {
     width: 100%;
   }
   .favoritos__titulo{
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 }
 
 @media (max-width: 500px) {
+  #favoritos{
+    padding: 0;
+  }
+
   .filtros__titulo {
     font-size: 1.1rem;
   }
@@ -8430,7 +8450,7 @@ img {
     font-size: 0.85rem;
   }
     .favoritos__titulo{
-    font-size: 0.9rem;
+    font-size: 0.75rem;
   }
 }
 
@@ -8515,4 +8535,66 @@ img {
 .mensaje-vacio__boton:hover {
   background-color: var(--color-secundario);
   transform: scale(1.05);
+}
+
+@media (min-width: 1100px) {
+  .mensaje-vacio {
+    max-width: 900px;
+    padding: 3rem;
+    gap: 2rem;
+  }
+  
+  .mensaje-vacio__titulo {
+    font-size: 1.8rem;
+  }
+  
+  .mensaje-vacio__boton {
+    padding: 1.5rem;
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .mensaje-vacio {
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+  }
+  
+  .mensaje-vacio__titulo {
+    font-size: 1.3rem;
+  }
+  
+  .mensaje-vacio__descripcion {
+    font-size: 1.1rem;
+  }
+  
+  .mensaje-vacio__boton {
+    font-size: 1.1rem;
+    padding: 0.8rem 1.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .mensaje-vacio {
+    width: 100%;
+    gap: 0.8rem;
+    padding: 0.75rem;
+    border-radius: 0.6rem;
+    max-height: 75%;
+  }
+  
+  .mensaje-vacio__titulo {
+    font-size: 0.7rem;
+  }
+  
+  .mensaje-vacio__descripcion {
+    font-size: 0.9rem;
+  }
+  
+  .mensaje-vacio__boton {
+    font-size: 0.8rem;
+    padding: 0.7rem 1.2rem;
+    border-radius: 1.5rem;
+  }
 }
