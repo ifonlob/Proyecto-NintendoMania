@@ -424,7 +424,7 @@ const inicializarFormularioYValidacion = () =>{
         const selectVacios = [...selectJuegos].filter(select => select.value.trim() === '')
         const boton = document.querySelector('.gestor-juegos__boton')
         const mensajeError = document.createElement('p')
-        if(resena.value.trim().length === 0 || selectVacios.length > 0){
+        if(resena.value.trim().length === 0 || selectVacios.length > 0 || puntuacion.value.trim().length === 0){
             const errorPrevio = document.querySelector('.mensaje-error-formulario')
             if(errorPrevio){
                 errorPrevio.remove()
