@@ -1695,7 +1695,10 @@ img {
   }
 }
 
-.contacto__formulario--input,
+.contacto__formulario--nombre,
+.contacto__formulario--correo,
+.contacto__formulario--telefono,
+.contacto__formulario--,
 .contacto__formulario--select,
 .contacto__formulario--textarea {
   width: 100%;
