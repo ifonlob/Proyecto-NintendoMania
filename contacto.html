@@ -124,7 +124,6 @@
           name="buscador"
           role="search"
           aria-label="Buscar contenido en NintendoManía"
-          novalidate
         >
           <label class="buscador__formulario">
             <img
@@ -194,6 +193,7 @@
           name="contacto"
           method="post"
           action="#"
+          novalidate
         >
           <!-- ===============================================================
                FIELDSET 1: Datos Personales del Usuario
@@ -210,7 +210,7 @@
             <label class="contacto__formulario--etiqueta"
               >Nombre Completo:<sup>*</sup>
               <input
-                class="contacto__formulario--input"
+                class="contacto__formulario--nombre"
                 type="text"
                 name="nombre"
                 autocomplete="name"
@@ -222,7 +222,7 @@
             <label class="contacto__formulario--etiqueta"
               >Correo Electrónico:<sup>*</sup>
               <input
-                class="contacto__formulario--input"
+                class="contacto__formulario--correo"
                 type="email"
                 name="email"
                 autocomplete="email"
@@ -234,7 +234,7 @@
             <label class="contacto__formulario--etiqueta"
               >Teléfono de Contacto (Opcional):
               <input
-                class="contacto__formulario--input"
+                class="contacto__formulario--telefono"
                 type="tel"
                 name="telefono"
                 autocomplete="tel"
@@ -284,7 +284,7 @@
             <label class="contacto__formulario--etiqueta"
               >Enlace de Referencia (Opcional):
               <input
-                class="contacto__formulario--input"
+                class="contacto__formulario--enlace"
                 type="url"
                 name="url"
                 autocomplete="url"
