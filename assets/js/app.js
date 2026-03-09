@@ -261,7 +261,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
                             if(confirmacion){
                                 tarjeta.remove()
                                 const favoritosGuardados = JSON.parse(localStorage.getItem('coleccionFavoritos'))
-                                const favoritosFiltrados = favoritosGuardados.filter(favoritoSec =>favoritoSec.id !== id)
+                                const favoritosFiltrados = favoritosGuardados.filter(favoritoSec => favoritoSec.id !== id)
                                 if(favoritosFiltrados.length === 0) inicializarTextoFavoritosVacio()
                                 localStorage.setItem('coleccionFavoritos', JSON.stringify(favoritosFiltrados))
                             }
@@ -344,7 +344,7 @@ const modoOscuro = (cabecera,cuerpoPagina) => {
 
     /* ============================================================
       INICIALIZACIÓN Y VALIDACIÓN TIEMPO REAL FORMULARIO FAVORITOS 
-    =============================================================== */
+      ============================================================= */
 
     /**
      * Configura la validación y el envío del formulario de favoritos.
@@ -507,6 +507,28 @@ const inicializarTextoFavoritosVacio = () => {
 
     const validacionFormularioContacto = () =>{
         const formularioContacto = document.querySelector('.contacto__formulario')
+        const campoNombre = document.querySelector('.contacto__formulario--nombre')
+        const campoCorreo = document.querySelector('.contacto__formulario--correo')
+        const campoTelefono = document.querySelector('.contacto__formulario--telefono')
+        const campoEnlaceReferencia = document.querySelector('.contacto__formulario--enlace')
+        const selectAsunto = document.querySelector('.contacto__formulario--select')
+
+        if(!formularioContacto || !campoNombre || !campoCorreo || !campoTelefono || !campoEnlaceReferencia || selectAsunto) return
+
+        const errorNombre = document.createElement('p')
+        const errorCorreo = document.createElement('p')
+        const errorTelefono = document.createElement('p')
+        const errorEnlaceReferencia = document.createElement('p')
+
+        errorNombre.textContent = "Error. El nombre no puede estar vacío."
+        errorCorreo.textContent = "Error. La dirección de correo electrónico tiene que ser válida (Tiene que contener una @ precedida de un punto)."
+        errorTelefono.textContent = "Error. El teléfono tiene que estar formado por 9 números."
+        errorEnlaceReferencia.textContent = "Error. El enlace de referencia tiene que ser una URL válida."
+
+
+
+
+        
     }
 
 // Bloque de ejecución principal
@@ -519,4 +541,3 @@ inicializarFormularioYValidacion()
 inicializarFiltros()
 inicializarAnchorsInicio()
 inicializarTextoFavoritosVacio()
-validacionFormularioContacto()
