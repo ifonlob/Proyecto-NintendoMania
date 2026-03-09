@@ -501,6 +501,14 @@ const inicializarTextoFavoritosVacio = () => {
     }
 }
 
+    /* ============================================================
+      VALIDACIÓN TIEMPO REAL FORMULARIO CONTACTO
+    =============================================================== */
+
+    const validacionFormularioContacto = () =>{
+        const formularioContacto = document.querySelector('.contacto__formulario')
+    }
+
 // Bloque de ejecución principal
 
 interactividadHamburguesa(cabecera)
@@ -511,3 +519,4 @@ inicializarFormularioYValidacion()
 inicializarFiltros()
 inicializarAnchorsInicio()
 inicializarTextoFavoritosVacio()
+validacionFormularioContacto()
