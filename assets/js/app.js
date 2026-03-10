@@ -510,25 +510,35 @@ const inicializarTextoFavoritosVacio = () => {
         const campoNombre = document.querySelector('.contacto__formulario--nombre')
         const campoCorreo = document.querySelector('.contacto__formulario--correo')
         const campoTelefono = document.querySelector('.contacto__formulario--telefono')
-        const campoEnlaceReferencia = document.querySelector('.contacto__formulario--enlace')
         const selectAsunto = document.querySelector('.contacto__formulario--select')
 
-        if(!formularioContacto || !campoNombre || !campoCorreo || !campoTelefono || !campoEnlaceReferencia || selectAsunto) return
+        if(!formularioContacto || !campoNombre || !campoCorreo || !campoTelefono || !selectAsunto) return
 
         const errorNombre = document.createElement('p')
         const errorCorreo = document.createElement('p')
         const errorTelefono = document.createElement('p')
-        const errorEnlaceReferencia = document.createElement('p')
+
+        errorNombre.classList.add('mensaje-error');
+        errorCorreo.classList.add('mensaje-error');
+        errorTelefono.classList.add('mensaje-error');
 
         errorNombre.textContent = "Error. El nombre no puede estar vacío."
         errorCorreo.textContent = "Error. La dirección de correo electrónico tiene que ser válida (Tiene que contener una @ precedida de un punto)."
         errorTelefono.textContent = "Error. El teléfono tiene que estar formado por 9 números."
-        errorEnlaceReferencia.textContent = "Error. El enlace de referencia tiene que ser una URL válida."
 
+        /* VALIDACIÓN NOMBRE */
 
-
-
-        
+        campoNombre.addEventListener('blur',(evento)=>{
+            const valor = evento.target.value.trim()
+            if(valor.length < 3){
+                campoNombre.after(errorNombre)
+                campoNombre.classList.add('input-error')
+            }
+            else{
+                errorNombre.remove()
+                campoNombre.classList.remove('input-error')
+            }
+        })
     }
 
 // Bloque de ejecución principal
@@ -541,3 +551,4 @@ inicializarFormularioYValidacion()
 inicializarFiltros()
 inicializarAnchorsInicio()
 inicializarTextoFavoritosVacio()
+validacionFormularioContacto()
