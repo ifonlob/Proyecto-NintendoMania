@@ -8601,3 +8601,6 @@ img {
     border-radius: 1.5rem;
   }
 }
+contacto__formulario--nombre.input-error,contacto__formulario--correo.input-error,contacto__formulario--telefono.input-error,contacto__formulario--textarea.input-error{
+  border: 2px solid #dc2626;
+}
