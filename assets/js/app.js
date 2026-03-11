@@ -511,20 +511,24 @@ const inicializarTextoFavoritosVacio = () => {
         const campoCorreo = document.querySelector('.contacto__formulario--correo')
         const campoTelefono = document.querySelector('.contacto__formulario--telefono')
         const selectAsunto = document.querySelector('.contacto__formulario--select')
+        const campoTextarea = document.querySelector('.contacto__formulario--textarea')
 
         if(!formularioContacto || !campoNombre || !campoCorreo || !campoTelefono || !selectAsunto) return
 
         const errorNombre = document.createElement('p')
         const errorCorreo = document.createElement('p')
         const errorTelefono = document.createElement('p')
+        const errorTextarea = document.createElement('p')
 
         errorNombre.classList.add('mensaje-error');
         errorCorreo.classList.add('mensaje-error');
         errorTelefono.classList.add('mensaje-error');
+        errorTextarea.classList.add('mensaje-error');
 
         errorNombre.textContent = "Error. El nombre no puede estar vacío."
         errorCorreo.textContent = "Error. La dirección de correo electrónico tiene que ser válida (Tiene que contener una @ precedida de un punto)."
-        errorTelefono.textContent = "Error. El teléfono tiene que estar formado por 9 números."
+        errorTelefono.textContent = "Error. El teléfono tiene que estar formado por 9 números en formato correcto."
+        errorTextarea.textContent = "Error. El mensaje tiene que estar formado por mínimo 30 caracteres."
 
         /* VALIDACIÓN NOMBRE */
 
@@ -554,7 +558,43 @@ const inicializarTextoFavoritosVacio = () => {
             campoCorreo.classList.remove('input-error')
         }
     })
-}
+
+    /* VALIDACIÓN TELÉFONO */
+
+    campoTelefono.addEventListener('blur',(evento) =>{
+        const valor = evento.target.value
+        const patronTelefono = /^((9|6)[0-9]{8})$/;
+        if(!patronTelefono.test(valor)){
+            campoTelefono.classList.add('input-error')
+            campoTelefono.after(errorTelefono)
+        }
+        else{
+            campoTelefono.classList.remove('input-error')
+            errorTelefono.remove()
+        }
+    })
+
+    /* VALIDACIÓN TEXTAREA */
+
+    campoTextarea.addEventListener('blur',(evento)=> {
+        const valor = evento.target.value.trim()
+        if(valor.length < 30){
+            campoTextarea.classList.add('input-error')
+            campoTextarea.after(errorTextarea)
+        }
+        else{
+            campoTextarea.classList.remove('input-error')
+            errorTextarea.remove()
+        }
+    })
+
+    formularioContacto.addEventListener('submit',(evento) =>{
+        evento.preventDefault()
+        if(selectAsunto.value === '' || formularioContacto.querySelector('input-error')){
+
+        }
+})
+
 // Bloque de ejecución principal
 
 interactividadHamburguesa(cabecera)
