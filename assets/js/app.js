@@ -539,8 +539,22 @@ const inicializarTextoFavoritosVacio = () => {
                 campoNombre.classList.remove('input-error')
             }
         })
-    }
 
+    /* VALIDACIÓN CORREO */
+
+    campoCorreo.addEventListener('blur', (evento) =>{
+        const valor = evento.target.value.trim()
+        const patronCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if(!patronCorreo.test(valor)){
+            campoCorreo.classList.add('input-error')
+            campoCorreo.after(errorCorreo)
+        }
+        else{
+            errorCorreo.remove()
+            campoCorreo.classList.remove('input-error')
+        }
+    })
+}
 // Bloque de ejecución principal
 
 interactividadHamburguesa(cabecera)
