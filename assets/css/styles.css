@@ -1570,7 +1570,7 @@ img {
   color: var(--color-negro);
 }
 
-.contacto__formulario--política-privacidad {
+.contacto__formulario--politica-privacidad {
   width: 100%;
   text-align: center;
   display: block;
@@ -8457,7 +8457,7 @@ img {
   }
 }
 
-.mensaje-error{
+.mensaje-error,.mensaje-error__formulario-contacto{
   font-size: 0.85rem;
   text-align: center;
   font-weight: 600;
