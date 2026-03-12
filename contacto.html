@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
   <head>
     <meta charset="utf-8" />
@@ -26,8 +26,8 @@
     <meta name="robots" content="index, follow" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/imgs/icono_pag.png" />
-    <link rel="stylesheet" href="./assets/css/styles.css"/>
-    <script src = "./assets/js/app.js" defer></script>
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+    <script src="./assets/js/app.js" defer></script>
   </head>
   <!--
     =========================================================================
@@ -113,8 +113,10 @@
           <li>
             <a class="cabecera__menu--enlace" href="./about.html">About</a>
           </li>
-                    <li>
-            <a class="cabecera__menu--enlace" href="./favoritos.html">Favoritos</a>
+          <li>
+            <a class="cabecera__menu--enlace" href="./favoritos.html"
+              >Favoritos</a
+            >
           </li>
         </ul>
       </nav>
@@ -305,11 +307,11 @@
               ¡Queremos saber más sobre ti!
             </legend>
             <!-- Campo 3.1: Saga favorita (obligatorio, grupo de radio buttons) -->
-            <label class="contacto__formulario--etiqueta"
-              >Saga favorita (Para informes estadísticos exclusivamente):<sup
+            <legend class="contacto__formulario--etiqueta">
+              Saga favorita (Para informes estadísticos exclusivamente):<sup
                 >*</sup
-              ></label
-            >
+              >
+            </legend>
             <label class="contacto__formulario--etiqueta">
               <input type="radio" name="saga_favorita" value="mario" required />
               Mario Bros.
@@ -347,7 +349,7 @@
             </label>
           </fieldset>
           <!-- Checkbox: Confirmación de política de privacidad (obligatorio) -->
-          <label class="contacto__formulario--política-privacidad"
+          <label class="contacto__formulario--politica-privacidad"
             >Acepto política de privacidad <sup>*</sup>
             <input
               type="checkbox"
