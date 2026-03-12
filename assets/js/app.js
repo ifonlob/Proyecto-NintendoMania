@@ -525,7 +525,7 @@ const inicializarTextoFavoritosVacio = () => {
         errorTelefono.classList.add('mensaje-error');
         errorTextarea.classList.add('mensaje-error');
 
-        errorNombre.textContent = "Error. El nombre no puede estar vacío."
+        errorNombre.textContent = "Error. El nombre no puede estar formado por menos de 3 caracteres."
         errorCorreo.textContent = "Error. La dirección de correo electrónico tiene que ser válida (Tiene que contener una @ precedida de un punto)."
         errorTelefono.textContent = "Error. El teléfono tiene que estar formado por 9 números en formato correcto."
         errorTextarea.textContent = "Error. El mensaje tiene que estar formado por mínimo 30 caracteres."
@@ -534,6 +534,13 @@ const inicializarTextoFavoritosVacio = () => {
 
         campoNombre.addEventListener('blur',(evento)=>{
             const valor = evento.target.value.trim()
+
+            if(valor.length === 0){
+                errorNombre.remove()
+                campoNombre.classList.remove('input-error')
+                return
+            }
+
             if(valor.length < 3){
                 campoNombre.after(errorNombre)
                 campoNombre.classList.add('input-error')
@@ -549,6 +556,13 @@ const inicializarTextoFavoritosVacio = () => {
     campoCorreo.addEventListener('blur', (evento) =>{
         const valor = evento.target.value.trim()
         const patronCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if(valor.length === 0){
+            errorCorreo.remove()
+            campoCorreo.classList.remove('input-error')
+            return
+        }
+
         if(!patronCorreo.test(valor)){
             campoCorreo.classList.add('input-error')
             campoCorreo.after(errorCorreo)
@@ -564,6 +578,13 @@ const inicializarTextoFavoritosVacio = () => {
     campoTelefono.addEventListener('blur',(evento) =>{
         const valor = evento.target.value
         const patronTelefono = /^((9|6)[0-9]{8})$/;
+
+        if(valor.length === 0){
+            errorTelefono.remove()
+            campoTelefono.classList.remove('input-error')
+            return
+        }
+
         if(!patronTelefono.test(valor)){
             campoTelefono.classList.add('input-error')
             campoTelefono.after(errorTelefono)
@@ -578,6 +599,14 @@ const inicializarTextoFavoritosVacio = () => {
 
     campoTextarea.addEventListener('blur',(evento)=> {
         const valor = evento.target.value.trim()
+
+        if(valor.length === 0){
+            errorTextarea.remove()
+            campoTextarea.classList.remove('input-error')
+            return
+        }
+
+
         if(valor.length < 30){
             campoTextarea.classList.add('input-error')
             campoTextarea.after(errorTextarea)
@@ -588,12 +617,38 @@ const inicializarTextoFavoritosVacio = () => {
         }
     })
 
+    /* EVENTO SUBMIT */
+
     formularioContacto.addEventListener('submit',(evento) =>{
         evento.preventDefault()
-        if(selectAsunto.value === '' || formularioContacto.querySelector('input-error')){
+        
+        const botonBorrado = document.querySelector('.contacto__formulario--boton[type="reset"]')
+        const radioSeleccionado = document.querySelector('input[name="saga_favorita"]:checked');
+        const politicaPrivacidad = document.querySelector('input[name="acepta_privacidad"]');
+        const mensajeErrorFormularioVacio = document.createElement('p')
+        mensajeErrorFormularioVacio.classList.add('mensaje-error__formulario-contacto')
+        mensajeErrorFormularioVacio.textContent ="⚠️ Por favor, rellene todos los campos correctamente antes de publicar."
+        const mensajeExito = document.createElement('p')
+        mensajeExito.classList.add('mensaje-exito')
+        mensajeExito.textContent = "¡Gracias por enviar tu petición! Te contactaremos lo antes posible vía correo electrónico."
 
+        if(selectAsunto.value === '' || !politicaPrivacidad.checked || campoNombre.value === '' || campoCorreo.value === '' || formularioContacto.querySelector('.input-error') || !radioSeleccionado || campoTextarea.value === ''){
+            if(!document.querySelector('.mensaje-error__formulario-contacto')){
+                botonBorrado.after(mensajeErrorFormularioVacio)
+            }
+            setTimeout(() => {
+                mensajeErrorFormularioVacio.remove();
+            }, 4000);
+            return
         }
-})
+        botonBorrado.after(mensajeExito)
+            setTimeout(() => {
+                mensajeExito.remove();
+            }, 4000);
+            return
+        
+    }) 
+}
 
 // Bloque de ejecución principal
 
