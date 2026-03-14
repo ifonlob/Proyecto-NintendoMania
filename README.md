@@ -1406,10 +1406,7 @@ Con esto, el portal se siente vivo ya que: clicas filtro Mario y desaparecen Spl
 
 Finalmente, podemos afirmar que a través del proyecto de **NintendoManía** se ha demostrado un dominio avanzado de **HTML5**, **CSS3**, **JavaScript vanilla ES6+**, accesibilidad y herramientas de desarrollo web completo:
 
-```
 - Estructura HTML5 semántica impecable con `<header>`, `<main>`, `<section>`, `<article>`, `<aside>`, `<figure>`, `<figcaption>`, `<details>`, `<summary>`, `<table>`, `<label>`, `<fieldset>` y `<legend>`.
-```
-
 - Evolución justificada de HTML4.01 a HTML5 y ES5 a ES6+, aplicada directamente en decisiones del proyecto como filtros dinámicos y persistencia cliente.
 - Uso experto de atributos (`alt`, `title`, `aria-*`) + formularios robustos con validación HTML5 nativa y JavaScript para UX real-time (blur validation).
 - Separación estricta **contenido HTML** / **presentación CSS** / **interactividad JavaScript**, con única hoja `styles.css` y `app.js` monolítico ligero (27KB).
