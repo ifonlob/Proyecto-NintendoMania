@@ -76,6 +76,7 @@ proyecto-nintendomanía/
 ├── about.html
 ├── contacto.html
 ├── comparativas.html
+├── favoritos.html
 ├── styles.css
 ├── sagas/
 │   ├── kirby.html
@@ -83,9 +84,17 @@ proyecto-nintendomanía/
 │   └── splatoon.html
 ├── assets/
 │   ├── css/
+│   │   └── styles.css
+│   ├── js/
+│   │   └── app.js
 │   └── imgs/
 │       ├── [150+ imágenes]
-├── README.md
+│       ├── logo_principal.png
+│       ├── icono_pag.png
+│       ├── logo_switch.svg
+│       ├── lupa.png
+│       └── ...
+└── README.md
 ```
 
 ---
@@ -103,6 +112,7 @@ El proyecto consta de **7 páginas HTML** (raíz + carpeta sagas), cada una con 
 | **`sagas/splatoon.html`** | Cronología, armas, personajes, lore | **Lineal y Modular:** Cronología + Armas + Idols + Curiosidades | 6 secciones y uso de figuras descriptivas|
 | **`sagas/mario.html`** | Evolución 2D → 3D, personajes icónicos | **Jerárquica de Hitos:** Artículos por era (2D vs 3D) | 800+ palabras , secciones diferentes y citas |
 | **`sagas/kirby.html`** | Habilidades, jefes, lore cósmico | **Fichas de Lore:** Intensivo uso de `<figure>` + `<figcaption>` | Uso de figcaptions, 1000+ palabras |
+| **`favoritos.html`** | Juegos favoritos y filtros | **Muro Dinámico:** sección de favoritos gestionados con botones y filtros por saga | Listado de juegos guardados, botón “Eliminar todos”, filtros por saga |
 
 ---
 
@@ -521,7 +531,7 @@ En este ejemplo se demuestra de forma explícita:
   Imágenes y hechos destacados
 </aside>
 
-<footer/>
+</footer>
 ```
 
 ---
@@ -532,7 +542,7 @@ En este ejemplo se demuestra de forma explícita:
 
 **Estructura:**
 ```html
-<header><nav/></header>
+<header><nav></header>
 
 <main>
   <section>Introducción</section>
@@ -556,8 +566,7 @@ En este ejemplo se demuestra de forma explícita:
 
 <aside id="galeria">Imágenes destacadas</aside>
 <aside id="extras">Información adicional</aside>
-
-<footer/>
+</footer>
 ```
 
 ---
