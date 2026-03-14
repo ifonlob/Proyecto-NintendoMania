@@ -713,36 +713,72 @@ const validacionFormularioContacto = () => {
   });
 };
 
-
 /* ============================================================
       VALIDACIÓN TIEMPO REAL NEWSLETTER
   ============================================================= */
 
-  const validacionNewsletter = () =>{
-    const newsletter = document.querySelector('.newsletter__formulario')
-    const campoCorreo = document.querySelector('.newsletter__formulario--input')
-    const checkbox = document.querySelector('.newsletter__label--checkbox')
-    const botonNewsletter = document.querySelector('.newsletter__boton')
+const validacionNewsletter = () => {
+  const newsletter = document.querySelector(".newsletter__formulario");
+  const campoCorreo = document.querySelector(".newsletter__formulario--input");
+  const checkbox = document.querySelector('.newsletter__formulario input[type="checkbox"]');
+  const botonNewsletter = document.querySelector(".newsletter__boton");
 
-    if(!newsletter || !campoCorreo || !checkbox || !botonNewsletter) return 
+  if (!newsletter || !campoCorreo || !checkbox || !botonNewsletter) return;
 
-    const errorCorreo = document.createElement('p')
-    errorCorreo.textContent = 'Error. La dirección de correo electrónico tiene que ser válida (Tiene que contener una @ precedida de un punto).'
+  const mensajeExito = document.createElement("p");
+  const errorCorreo = document.createElement("p");
+  const mensajeError = document.createElement("p");
+  mensajeExito.textContent =
+    "¡Gracias por subscribirte a nuestra newsletter! Te mantendremos informado de las nuevas noticias ;)";
+  mensajeExito.classList.add("mensaje-exito");
+  mensajeError.textContent =
+    "Por favor, introduzca su correo y acepte la política de privacidad para continuar";
+  mensajeError.classList.add("mensaje-error");
+  errorCorreo.textContent =
+    "Error. La dirección de correo electrónico tiene que ser válida.";
+  errorCorreo.classList.add("mensaje-error");
 
-    campoCorreo.addEventListener('blur',(evento) =>{
-      const valor = evento.target.value
-      const patronCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  campoCorreo.addEventListener("blur", (evento) => {
+    const valor = evento.target.value;
+    const patronCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-      if(!patronCorreo.test(valor)){
-        campoCorreo.after(errorCorreo)
-        campoCorreo.classList.add('input-error')
-      }
-      else{
-        errorCorreo.remove()
-        campoCorreo.classList.remove()
-      }
-    })
-  }
+    if (valor.length === 0) {
+      errorCorreo.remove();
+      campoCorreo.classList.remove("input-error");
+      return;
+    }
+
+    if (!patronCorreo.test(valor)) {
+      campoCorreo.after(errorCorreo);
+      campoCorreo.classList.add("input-error");
+    } else {
+      errorCorreo.remove();
+      campoCorreo.classList.remove("input-error");
+    }
+  });
+
+  newsletter.addEventListener("submit", (evento) => {
+    evento.preventDefault();
+    const hayErrores = newsletter.querySelector(".input-error");
+    const correoVacio = campoCorreo.value.trim() === "";
+    if (!hayErrores && checkbox.checked && !correoVacio) {
+      newsletter.after(mensajeExito);
+
+      if (document.querySelector(".mensaje-error")) mensajeError.remove();
+
+      setTimeout(() => {
+        mensajeExito.remove();
+      }, 4000);
+
+      newsletter.reset();
+    } else {
+      newsletter.after(mensajeError);
+      setTimeout(() => {
+        mensajeError.remove();
+      }, 4000);
+    }
+  });
+};
 
 // Bloque de ejecución principal
 
