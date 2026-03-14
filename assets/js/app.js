@@ -539,7 +539,7 @@ const inicializarTextoFavoritosVacio = () => {
 
 /* ============================================================
       VALIDACIÓN TIEMPO REAL FORMULARIO CONTACTO
-    =============================================================== */
+  =============================================================== */
 
 const validacionFormularioContacto = () => {
   const formularioContacto = document.querySelector(".contacto__formulario");
@@ -713,6 +713,37 @@ const validacionFormularioContacto = () => {
   });
 };
 
+
+/* ============================================================
+      VALIDACIÓN TIEMPO REAL NEWSLETTER
+  ============================================================= */
+
+  const validacionNewsletter = () =>{
+    const newsletter = document.querySelector('.newsletter__formulario')
+    const campoCorreo = document.querySelector('.newsletter__formulario--input')
+    const checkbox = document.querySelector('.newsletter__label--checkbox')
+    const botonNewsletter = document.querySelector('.newsletter__boton')
+
+    if(!newsletter || !campoCorreo || !checkbox || !botonNewsletter) return 
+
+    const errorCorreo = document.createElement('p')
+    errorCorreo.textContent = 'Error. La dirección de correo electrónico tiene que ser válida (Tiene que contener una @ precedida de un punto).'
+
+    campoCorreo.addEventListener('blur',(evento) =>{
+      const valor = evento.target.value
+      const patronCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+      if(!patronCorreo.test(valor)){
+        campoCorreo.after(errorCorreo)
+        campoCorreo.classList.add('input-error')
+      }
+      else{
+        errorCorreo.remove()
+        campoCorreo.classList.remove()
+      }
+    })
+  }
+
 // Bloque de ejecución principal
 
 interactividadHamburguesa(cabecera);
@@ -724,3 +755,4 @@ inicializarFiltros();
 inicializarAnchorsInicio();
 inicializarTextoFavoritosVacio();
 validacionFormularioContacto();
+validacionNewsletter();
