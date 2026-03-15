@@ -6,6 +6,7 @@
 
 const cabecera = document.querySelector("header");
 const cuerpoPagina = document.querySelector("body");
+const galeria = document.querySelector("#favoritos");
 
 /**
  * Inicializa el menú hamburguesa para versión móvil.
@@ -58,8 +59,8 @@ const interactividadHamburguesa = (cabecera) => {
     menuNavegacion.classList.toggle("hamburguesa-nav__activa");
     const siguienteSeccion = cabecera.nextElementSibling;
     const piePagina = document.querySelector("footer");
-    siguienteSeccion.classList.add("transicion-menu-hamrburguesa");
-    piePagina.classList.add("transicion-menu-hamrburguesa");
+    siguienteSeccion.classList.add("transicion-menu-hamburguesa");
+    piePagina.classList.add("transicion-menu-hamburguesa");
     if (menuNavegacion.classList.contains("hamburguesa-nav__activa")) {
       const alturaMenu = menuNavegacion.scrollHeight;
       siguienteSeccion.style.transform = `translateY(${alturaMenu}px)`;
@@ -149,7 +150,7 @@ const modoOscuro = (cabecera, cuerpoPagina) => {
    ======================================================= */
 
 /**
- * Gestiona los campos select  formulario.
+ * Gestiona los campos select del formulario.
  * Al cambiar el valor del select principal (sagas), genera y añade dinámicamente
  * las opciones correspondientes en el select secundario (juegos) basándose en una estructura de datos local.
  */
@@ -222,11 +223,11 @@ const coloresSagas = {
  * Recupera la colección de favoritos guardados en localStorage y crea dinámicamente
  * las tarjetas correspondientes en el DOM. Asigna eventos de eliminación individual para cada
  * tarjeta y gestiona el evento del botón de borrado masivo.
+ * @param {HTMLElement} galeria - La galería de tarjetas de juegos favoritos. 
  * @param {Object} imagenesJuegos - Diccionario que mapea los nombres de los juegos con rutas de imágenes locales.
  * @param {Object} coloresSagas - Diccionario que asigna variables CSS de color a cada saga.
  */
-const inicializarTarjetas = (imagenesJuegos, coloresSagas) => {
-  const galeria = document.querySelector("#favoritos");
+const inicializarTarjetas = (galeria,imagenesJuegos, coloresSagas) => {
   if (!galeria) return;
 
   const favoritosGuardados =
@@ -257,10 +258,10 @@ const inicializarTarjetas = (imagenesJuegos, coloresSagas) => {
     parrafoResena.textContent = resena;
     tarjeta.append(parrafoResena);
 
-    const pPuntuacion = document.createElement("p");
-    pPuntuacion.classList.add("tarjeta__descripcion");
-    pPuntuacion.innerHTML = `Puntuación:<br>${puntuacion}/100`;
-    tarjeta.append(pPuntuacion);
+    const parrafoPuntuacion = document.createElement("p");
+    parrafoPuntuacion.classList.add("tarjeta__descripcion");
+    parrafoPuntuacion.innerHTML = `Puntuación:<br>${puntuacion}/100`;
+    tarjeta.append(parrafoPuntuacion);
 
     const botonDeBorrado = document.createElement("button");
     botonDeBorrado.type = "button";
@@ -287,7 +288,6 @@ const inicializarTarjetas = (imagenesJuegos, coloresSagas) => {
         );
       }
     });
-
     galeria.append(tarjeta);
   });
 
@@ -308,10 +308,11 @@ const inicializarTarjetas = (imagenesJuegos, coloresSagas) => {
  * Inicializa la lógica de los botones de filtrado de la galería.
  * Al hacer clic en un filtro, alterna la visibilidad de las tarjetas añadiendo o
  * retirando la clase de estado correspondiente, según su atributo data-categoria.
+ * 
+ *  @param {HTMLElement} galeria - La galería de tarjetas de juegos favoritos. 
  */
-const inicializarFiltros = () => {
+const inicializarFiltros = (galeria) => {
   const botonesFiltro = document.querySelectorAll(".boton-filtro");
-  const galeria = document.querySelector("#favoritos");
 
   if (!galeria || botonesFiltro.length === 0) return;
 
@@ -362,9 +363,9 @@ const inicializarAnchorsInicio = () => {
   }
 };
 
-/* ============================================================
+/* =============================================================
       INICIALIZACIÓN Y VALIDACIÓN TIEMPO REAL FORMULARIO FAVORITOS 
-      ============================================================= */
+   ============================================================= */
 
 /**
  * Configura la validación y el envío del formulario de favoritos.
@@ -517,11 +518,12 @@ const inicializarFormularioYValidacion = () => {
  * Evalúa el estado de la galería de favoritos. Si determina que no hay nodos
  * de tipo tarjeta , inyecta en el DOM un cuadro de texto
  * para informar al usuario y sugerir una redirección al formulario.
+ * 
+ *  @param {HTMLElement} galeria - La galería de tarjetas de juegos favoritos. 
  */
-const inicializarTextoFavoritosVacio = () => {
-  const galeriaFavoritos = document.querySelector("#favoritos");
+const inicializarTextoFavoritosVacio = (galeria) => {
 
-  if (!galeriaFavoritos) return;
+  if (!galeria) return;
 
   if (!document.querySelector(".tarjeta-juego")) {
     const tarjetaVacia = document.createElement("article");
@@ -533,13 +535,19 @@ const inicializarTextoFavoritosVacio = () => {
             <a href="./comparativas.html#gestor-juegos" class="mensaje-vacio__boton">Añadir un juego</a>
         `;
 
-    galeriaFavoritos.append(tarjetaVacia);
+    galeria.append(tarjetaVacia);
   }
 };
 
 /* ============================================================
       VALIDACIÓN TIEMPO REAL FORMULARIO CONTACTO
   =============================================================== */
+
+/**
+ * Configura la validación en tiempo real del formulario de contacto.
+ * Aplica validación visual al salir de cada campo (blur) y validación completa en el submit.
+ * Muestra mensajes de error específicos y bloquea el envío si hay errores.
+ */
 
 const validacionFormularioContacto = () => {
   const formularioContacto = document.querySelector(".contacto__formulario");
@@ -716,11 +724,18 @@ const validacionFormularioContacto = () => {
 /* ============================================================
       VALIDACIÓN TIEMPO REAL NEWSLETTER
   ============================================================= */
+/**
+ * Configura la validación en tiempo real del formulario de newsletter.
+ * Valida el formato del correo electrónico al salir del campo y verifica
+ * todos los campos requeridos en el submit antes de mostrar confirmación.
+ * */
 
 const validacionNewsletter = () => {
   const newsletter = document.querySelector(".newsletter__formulario");
   const campoCorreo = document.querySelector(".newsletter__formulario--input");
-  const checkbox = document.querySelector('.newsletter__formulario input[type="checkbox"]');
+  const checkbox = document.querySelector(
+    '.newsletter__formulario input[type="checkbox"]',
+  );
   const botonNewsletter = document.querySelector(".newsletter__boton");
 
   if (!newsletter || !campoCorreo || !checkbox || !botonNewsletter) return;
