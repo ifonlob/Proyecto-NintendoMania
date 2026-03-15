@@ -800,10 +800,10 @@ const validacionNewsletter = () => {
 interactividadHamburguesa(cabecera);
 modoOscuro(cabecera, cuerpoPagina);
 inicializarDesplegables();
-inicializarTarjetas(imagenesJuegos, coloresSagas);
+inicializarTarjetas(galeria,imagenesJuegos, coloresSagas);
 inicializarFormularioYValidacion();
-inicializarFiltros();
+inicializarFiltros(galeria);
 inicializarAnchorsInicio();
-inicializarTextoFavoritosVacio();
+inicializarTextoFavoritosVacio(galeria);
 validacionFormularioContacto();
 validacionNewsletter();
