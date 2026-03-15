@@ -1343,7 +1343,7 @@ Al final, JavaScript puro nos da velocidad instantánea sin instalar nada extra,
 
 ### Evolución ECMAScript (ES6+)
 
-JavaScript ha mejorado un montón desde 2015 con ES6, y nosotros usamos esas novedades para que el código sea más limpio y fácil de leer, como si fuera español en vez de chino. Antes era más lioso con 'var' y funciones largas, ahora todo fluye mejor. Aquí la comparación que nos ayudó a decidir.
+JavaScript ha mejorado un montón desde 2015 con ES6, y nosotros usamos esas novedades para que el código sea más limpio y fácil de leer. Antes era más lioso con 'var' y funciones largas, ahora todo fluye mejor. Aquí la comparación que nos ayudó a decidir.
 
 
 | Antes (ES5 viejo) | Ahora (ES6+) | Por qué lo elegimos | Cómo lo usamos en app.js |
@@ -1378,11 +1378,10 @@ Esto asegura que un fan de Splatoon vea su lista igual en móvil o PC, sin sorpr
 | Mantenimiento | Depende de updates | Siempre funciona | 5 años sin tocar, listo |
 | Tamaño proyecto | Archivos gordos | app.js solo 27KB | Fácil subir a GitHub  |
 
-Resultado: Usuarios felices con portal que vuela, y nosotros sin dolores de cabeza futuros.
 
 ### Implementación Práctica
 
-Aquí está el meollo: cómo pusimos todo en marcha en app.js y favoritos.html. Creamos menús que aparecen en móvil, cambiamos colores oscuro/claro, filtramos juegos por saga y guardamos reseñas. Todo manipulando la página directamente, paso a paso.
+Creamos menús que aparecen en móvil, cambiamos colores oscuro/claro, filtramos juegos por saga y guardamos reseñas. Todo manipulando la página directamente, paso a paso.
 
 Empezamos capturando partes de la página así: `const cabecera = document.querySelector('header')`. Luego creamos elementos nuevos como el menú hamburguesa: hacemos un `nav` vacío, le copiamos los enlaces del menú normal con `querySelectorAll('li a')`, y lo insertamos después del botón con `.after()`. Cuando clicas, calculamos su altura y movemos el resto de la página con `style.transform = 'translateY(altura px)'` para que parezca que se desliza.
 
